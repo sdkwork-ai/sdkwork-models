@@ -88,3 +88,12 @@ sdks/*/*/package-lock.json
 **/.sdkwork/build-runtime/
 **/.sdkwork/build-runtime-stale-bak/
 **/.sdkwork/manual-backups/
+sdks/**/*.js
+sdks/**/*.js.map
+sdks/**/*.d.ts.map
+/tools/_dev_*
+
+# Local build artifacts / workspace junk (auto-sync)
+sdks/**/generated/**/*.d.ts
+*.d.ts
+!**/node-shims.d.ts
