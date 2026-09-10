@@ -2426,7 +2426,7 @@ dependencies = [
 
 [[package]]
 name = "sdkwork-cloudrouter-config"
-version = "0.3.0"
+version = "0.4.1"
 dependencies = [
  "sdkwork-cloudrouter-provider-adapter-contract",
  "sdkwork-cloudrouter-provider-adapter-registry",
@@ -2439,7 +2439,7 @@ dependencies = [
 
 [[package]]
 name = "sdkwork-cloudrouter-contract"
-version = "0.3.0"
+version = "0.4.1"
 dependencies = [
  "serde",
  "serde_json",
@@ -2447,7 +2447,7 @@ dependencies = [
 
 [[package]]
 name = "sdkwork-cloudrouter-health"
-version = "0.3.0"
+version = "0.4.1"
 dependencies = [
  "sdkwork-cloudrouter-config",
  "serde",
@@ -2455,7 +2455,7 @@ dependencies = [
 
 [[package]]
 name = "sdkwork-cloudrouter-http"
-version = "0.3.0"
+version = "0.4.1"
 dependencies = [
  "async-trait",
  "axum",
@@ -2490,7 +2490,7 @@ dependencies = [
 
 [[package]]
 name = "sdkwork-cloudrouter-paas-plugin"
-version = "0.3.0"
+version = "0.4.1"
 dependencies = [
  "serde",
  "serde_json",
@@ -2498,7 +2498,7 @@ dependencies = [
 
 [[package]]
 name = "sdkwork-cloudrouter-provider-adapter-contract"
-version = "0.3.0"
+version = "0.4.1"
 dependencies = [
  "serde",
  "serde_json",
@@ -2506,7 +2506,7 @@ dependencies = [
 
 [[package]]
 name = "sdkwork-cloudrouter-provider-adapter-registry"
-version = "0.3.0"
+version = "0.4.1"
 dependencies = [
  "sdkwork-cloudrouter-provider-adapter-contract",
  "serde",
@@ -2515,7 +2515,7 @@ dependencies = [
 
 [[package]]
 name = "sdkwork-cloudrouter-security"
-version = "0.3.0"
+version = "0.4.1"
 dependencies = [
  "base64",
  "ed25519-dalek",
