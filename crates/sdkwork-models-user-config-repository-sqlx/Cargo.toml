@@ -1,9 +1,13 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-models-user-config-repository-sqlx"
 version = "0.1.0"
 edition = "2021"
 description = "Client-local user model configuration repository (sqlite)"
 
+
+[lints]
+workspace = true
 [dependencies]
 keyring = { workspace = true }
 serde = { workspace = true }

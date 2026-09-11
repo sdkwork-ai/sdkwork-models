@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-models-catalog-service"
 version = "0.1.0"
 edition = "2021"
 license = "Apache-2.0"
 description = "SDKWork intelligence model catalog application services and HTTP handlers."
 
+
+[lints]
+workspace = true
 [lib]
 path = "src/lib.rs"
 

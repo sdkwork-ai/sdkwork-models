@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-models-service-host"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
 description = "In-process Models database and catalog service container."
 
+
+[lints]
+workspace = true
 [dependencies]
 chrono = { version = "0.4", default-features = false, features = ["std"] }
 chrono-tz = "0.10.4"

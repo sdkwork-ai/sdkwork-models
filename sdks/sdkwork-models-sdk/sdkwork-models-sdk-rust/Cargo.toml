@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-models"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
 description = "Sdkwork vendor-scoped AI model catalog loader and query SDK"
 
+
+[lints]
+workspace = true
 [dependencies]
 chrono = { version = "0.4", default-features = false, features = ["std"] }
 chrono-tz = "0.10.4"

@@ -1,10 +1,14 @@
 [package]
+rust-version.workspace = true
 name = "sdkwork-api-models-standalone-gateway"
 version = "0.1.0"
 edition = "2021"
 license = "Apache-2.0"
 description = "SDKWork canonical intelligence catalog HTTP route composition for local/private deployments."
 
+
+[lints]
+workspace = true
 [lib]
 path = "src/lib.rs"
 
