@@ -428,7 +428,7 @@ reinstall:
 ```powershell
 sdkwork-cloudrouter-installer refresh-catalog
 sdkwork-cloudrouter-installer refresh-catalog --vendor openai
-sdkwork-cloudrouter-installer refresh-catalog --catalog-root D:\release\sdkwork-models --catalog-version 2026.06.24.3
+sdkwork-cloudrouter-installer refresh-catalog --catalog-root <catalog-root> --catalog-version 2026.06.24.3
 sdkwork-cloudrouter-installer refresh-catalog --vendor alibaba --dry-run
 ```
 
