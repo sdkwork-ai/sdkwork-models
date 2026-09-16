@@ -1,0 +1,298 @@
+{
+  "catalogVersion": "2026.09.06.1",
+  "freshnessReport": {
+    "asOf": "2026-09-06",
+    "generatedAt": "2026-09-06T00:00:00Z",
+    "ok": true,
+    "staleSources": [],
+    "warnings": []
+  },
+  "generatedAt": "2026-09-06T00:00:00Z",
+  "indexSha256": "082c91eceeda4f26650b29ff3bfb464fead787de71d9867ec94d5a08c8ac0426",
+  "schemaVersion": "1.1.0",
+  "sourceAudit": {
+    "errorCount": 0,
+    "officialVerifiedSourceRegionCount": 6,
+    "officialVerifiedSourceRegions": [
+      "deepseek/cn",
+      "deepseek/global",
+      "minimax/cn",
+      "minimax/global",
+      "moonshot/cn",
+      "moonshot/global"
+    ],
+    "ok": true,
+    "regionCount": 34,
+    "requiredVerifiedRegionCount": 6,
+    "requiredVerifiedRegions": [
+      "deepseek/cn",
+      "deepseek/global",
+      "minimax/cn",
+      "minimax/global",
+      "moonshot/cn",
+      "moonshot/global"
+    ],
+    "vendorCount": 25,
+    "warningCount": 0
+  },
+  "sourceEvidenceSha256": {
+    "officialModelSnapshots": "226e4ef1eb862545edc347401b948d22c200d4e645bce66cccdf594663a7ec15",
+    "officialSnapshotHashes": {
+      "deepseek/cn": "ba7eda385bf76d3bf3a4f6e3daaab0154cb02d2ce4ddd2811eaf649bda97a671",
+      "deepseek/global": "2c32bdf1724bd596d92615149998ebc1c9b7b42930b0df078ed73b372ec88594",
+      "minimax/cn": "7f73c8beebca731e3c7d512f2614a47e481a12668d0789e678ab1b1ea4b37551",
+      "minimax/global": "f28b0ef731c722cebb8394b15dbe89093c351b124a52a26f6998877acccb00e7",
+      "moonshot/cn": "68cb15206e2997d6f0ef1d5b5e302f0939ba9fc1a4c8f95db5c2841d5e4732ad",
+      "moonshot/global": "4ec0b52abb45eefce0dc1023a89bd9c77ff22034421d1b686b7d1d8c4136d80c",
+      "xiaomi/cn": "7c66b8fe9b867aaf1edd0d3f430f7c3f3fa680a8306258af44ee3046ab939c4e",
+      "xiaomi/global": "91661baded98ecdee5933af30b29676ee244a819e6f4eab273ff38e3c98ac1fa",
+      "zhipu/cn": "7189fd3ac03c9d62446477825d1a8b54891ac1f24cd89637b72a66fb6b349da6"
+    },
+    "officialVerificationPolicy": "f77b7a660fbedf56fd511071508e91c5f94efc98030b39cc6bfd11df70d63427",
+    "vendorSources": "8f50e9f8103a4b7a07c1a6ce396f0af9f8d3e4f32f183f62f413020fbe421703"
+  },
+  "validation": {
+    "issueCount": 0,
+    "ok": true
+  },
+  "vendorChanges": [
+    {
+      "modelCount": 11,
+      "pricingFileCount": 11,
+      "regionCode": "cn",
+      "sha256": "67b7261db5e81c31ac94f0339b9db624cbaf1ef2f75e1ce88a55bed6c2425bbd",
+      "vendorCode": "alibaba"
+    },
+    {
+      "modelCount": 3,
+      "pricingFileCount": 3,
+      "regionCode": "global",
+      "sha256": "22f8b17c682f57e95530560b7d497f5377f0cab9f1d849296c3a15cb21cb6670",
+      "vendorCode": "alibaba"
+    },
+    {
+      "modelCount": 10,
+      "pricingFileCount": 10,
+      "regionCode": "global",
+      "sha256": "c894545158bfeb82c4dd2922260c671afb472242372cc40baa3016433bc99be8",
+      "vendorCode": "anthropic"
+    },
+    {
+      "modelCount": 4,
+      "pricingFileCount": 4,
+      "regionCode": "cn",
+      "sha256": "7894bb7b8749b7dc55f28ed1e08543e8b501bc07d1a13d697d5289538ddc8614",
+      "vendorCode": "baidu"
+    },
+    {
+      "modelCount": 6,
+      "pricingFileCount": 6,
+      "regionCode": "global",
+      "sha256": "fc5e1120f38dfe63ac2237a138615d61bd4c59d5625a7753d2e87ffc582d3f15",
+      "vendorCode": "black_forest_labs"
+    },
+    {
+      "modelCount": 14,
+      "pricingFileCount": 14,
+      "regionCode": "cn",
+      "sha256": "315f0daf9a26ce2b64d2a1d21a4fb3f214d3c6a2f2531167ef3ac35c23b52968",
+      "vendorCode": "bytedance"
+    },
+    {
+      "modelCount": 8,
+      "pricingFileCount": 8,
+      "regionCode": "global",
+      "sha256": "62b4138ef0666ca1ede2bac8c6d0f36e14e3e365c83724d85dd2ebccc6f1aca3",
+      "vendorCode": "bytedance"
+    },
+    {
+      "modelCount": 3,
+      "pricingFileCount": 3,
+      "regionCode": "cn",
+      "sha256": "fbef498e870b8de0741d97b42143380c47a54d385a5a6e50c7b7ff3bea050d63",
+      "vendorCode": "deepseek"
+    },
+    {
+      "modelCount": 3,
+      "pricingFileCount": 3,
+      "regionCode": "global",
+      "sha256": "9ab0aaaeb6e48508fa02bd0b811cf376c4d88187c2177d3da4b55ccb4fefa90f",
+      "vendorCode": "deepseek"
+    },
+    {
+      "modelCount": 11,
+      "pricingFileCount": 11,
+      "regionCode": "global",
+      "sha256": "139d9b38334d7a9c6e00ebac7f67e40f47bf2e4e59004ceb4ca821e7f221390a",
+      "vendorCode": "elevenlabs"
+    },
+    {
+      "modelCount": 28,
+      "pricingFileCount": 28,
+      "regionCode": "global",
+      "sha256": "0f0d61cf86d191428084b09be0869e0abbefed1c172e70f745fb6489b54a7090",
+      "vendorCode": "google"
+    },
+    {
+      "modelCount": 5,
+      "pricingFileCount": 5,
+      "regionCode": "cn",
+      "sha256": "650878f58d6b2c7b544bc5d844df81c7f6ae126644f4922454fa99f01c3d415a",
+      "vendorCode": "kuaishou"
+    },
+    {
+      "modelCount": 5,
+      "pricingFileCount": 5,
+      "regionCode": "global",
+      "sha256": "d946809e5056de8a31b800335433d4fc2ccb1682fd3c58caedd131a58de3755a",
+      "vendorCode": "kuaishou"
+    },
+    {
+      "modelCount": 5,
+      "pricingFileCount": 5,
+      "regionCode": "global",
+      "sha256": "dad8aa26c0986a9d44db540ea52ee03b2573b38a4fbd5adc3d260d8ab43dd464",
+      "vendorCode": "luma_ai"
+    },
+    {
+      "modelCount": 2,
+      "pricingFileCount": 2,
+      "regionCode": "cn",
+      "sha256": "3a2970926d48b1d54362d39bdc41fe9df36911e0f7198da38e18c62fb5ed5cad",
+      "vendorCode": "meituan"
+    },
+    {
+      "modelCount": 11,
+      "pricingFileCount": 11,
+      "regionCode": "cn",
+      "sha256": "c95fdef0d2ff1a6dcab82627f897ba3fff55504689fa982c694b5322bdf7f297",
+      "vendorCode": "minimax"
+    },
+    {
+      "modelCount": 16,
+      "pricingFileCount": 16,
+      "regionCode": "global",
+      "sha256": "d67ce08fc0d3744276eb0fdab90e653768a53e8e2e21e272dcf2fecc831a9069",
+      "vendorCode": "minimax"
+    },
+    {
+      "modelCount": 6,
+      "pricingFileCount": 6,
+      "regionCode": "cn",
+      "sha256": "975fcf4f2e458dfa36c53447ed1ef7c30acc52bf1f97d9afea53f081ec796b97",
+      "vendorCode": "moonshot"
+    },
+    {
+      "modelCount": 6,
+      "pricingFileCount": 6,
+      "regionCode": "global",
+      "sha256": "7b256f0892ce04392e96d5dcb098e8d89471a58eeabbc5ee57102803928952d2",
+      "vendorCode": "moonshot"
+    },
+    {
+      "modelCount": 8,
+      "pricingFileCount": 8,
+      "regionCode": "global",
+      "sha256": "2f34792d088d6c70e7edf23bee550f9e86ca1d49b23b5eb82aef57d61a44b3dc",
+      "vendorCode": "mureka"
+    },
+    {
+      "modelCount": 31,
+      "pricingFileCount": 31,
+      "regionCode": "global",
+      "sha256": "44e3da823d9a0be6f419bf236697ae5e9d5a675c8b165ec75a0733bd983e3244",
+      "vendorCode": "openai"
+    },
+    {
+      "modelCount": 2,
+      "pricingFileCount": 2,
+      "regionCode": "cn",
+      "sha256": "bd5f066ebc0e368f5952b04b918e612ca143f6fd7f0f5a18e4b5a917b34ddfcb",
+      "vendorCode": "pixverse"
+    },
+    {
+      "modelCount": 1,
+      "pricingFileCount": 1,
+      "regionCode": "global",
+      "sha256": "1583e608e364f360281171b34244cbfb49b92c77a7fa55be1febd0a0ebd4a132",
+      "vendorCode": "pixverse"
+    },
+    {
+      "modelCount": 4,
+      "pricingFileCount": 4,
+      "regionCode": "global",
+      "sha256": "787e0bc8b8f5729f9deff99c337759ed2857fa99a151083e736934c476e2b6c7",
+      "vendorCode": "runway"
+    },
+    {
+      "modelCount": 5,
+      "pricingFileCount": 5,
+      "regionCode": "global",
+      "sha256": "f413ba1a687342a9bcac6e4c72f48757bdfdab681fe7a20b7b22db11579b439f",
+      "vendorCode": "stability_ai"
+    },
+    {
+      "modelCount": 3,
+      "pricingFileCount": 3,
+      "regionCode": "cn",
+      "sha256": "fd8114268483fab26a0bfa4677a61d362d4a508d0033c79882cc87e8303d42f4",
+      "vendorCode": "stepfun"
+    },
+    {
+      "modelCount": 2,
+      "pricingFileCount": 2,
+      "regionCode": "global",
+      "sha256": "5dcc787b48c7637d46f004651e080a00de33225afea20e88c76c3e817efbcd37",
+      "vendorCode": "suno"
+    },
+    {
+      "modelCount": 5,
+      "pricingFileCount": 5,
+      "regionCode": "cn",
+      "sha256": "93bbf947a8ad9b6919ddce50a3bf7a2186ca47db7a51526bf089d78913928fab",
+      "vendorCode": "tencent"
+    },
+    {
+      "modelCount": 6,
+      "pricingFileCount": 6,
+      "regionCode": "cn",
+      "sha256": "15ea8ef15bd466a713dc3c689cfe379b4ee3988f40e5620d1ecb96b0ae4fd268",
+      "vendorCode": "vidu"
+    },
+    {
+      "modelCount": 6,
+      "pricingFileCount": 6,
+      "regionCode": "global",
+      "sha256": "ba761759afa606c853e2e49325980384ff0b86072d96dda12e7d465ccabab352",
+      "vendorCode": "vidu"
+    },
+    {
+      "modelCount": 12,
+      "pricingFileCount": 12,
+      "regionCode": "global",
+      "sha256": "f1b443bce52c71e29c09112b5b5dca698c4a66b673509a77cf7252d0a661dca4",
+      "vendorCode": "xai"
+    },
+    {
+      "modelCount": 5,
+      "pricingFileCount": 5,
+      "regionCode": "cn",
+      "sha256": "40013a8d3c6068135256f5368ca563004f5f69008db127f580c7fdfcbd752977",
+      "vendorCode": "xiaomi"
+    },
+    {
+      "modelCount": 5,
+      "pricingFileCount": 5,
+      "regionCode": "global",
+      "sha256": "1dc5dc276cbfae3fe2f29c2ceb0e93b85a9f87a3c76fbd3470c056aee1ae9393",
+      "vendorCode": "xiaomi"
+    },
+    {
+      "modelCount": 7,
+      "pricingFileCount": 7,
+      "regionCode": "cn",
+      "sha256": "0811b527936c153065c4545208b1f06e8284a5d0e34710dd2e19c9b4bd549b86",
+      "vendorCode": "zhipu"
+    }
+  ]
+}
