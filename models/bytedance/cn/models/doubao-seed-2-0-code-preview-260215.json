@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "bytedance/doubao-seed-2-0-code-preview-260215",
+  "codingVisible": true,
   "colorToken": "#b91c1c",
   "contextTokens": 256000,
   "description": "Doubao Seed 2.0 Code model optimized for software engineering, debugging, and agentic coding workflows.",
@@ -28,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://www.volcengine.com/docs/82379"
   },
   "strengths": [
@@ -41,13 +42,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.900000",
-  "vendorCode": "bytedance",
-  "vendorName": "ByteDance",
-  "winRate": "0.860000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance",
+  "winRate": "0.860000"
 }

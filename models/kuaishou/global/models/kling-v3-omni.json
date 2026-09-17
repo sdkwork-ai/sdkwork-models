@@ -4,6 +4,7 @@
     "video"
   ],
   "catalogKey": "kuaishou/kling-v3-omni",
+  "codingVisible": false,
   "colorToken": "#5b21b6",
   "description": "Kling Video 3.0 Omni unified multimodal video generation and editing with reference video, elements, and multi-shot direction.",
   "displayName": "Kling v3 Omni",
@@ -30,7 +31,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://app.klingai.com/global/dev/document-api"
   },
   "strengths": [
@@ -43,9 +44,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.970000",
+  "usageScopes": [],
   "vendorCode": "kuaishou",
   "vendorName": "Kuaishou",
-  "winRate": "0.920000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.920000"
 }

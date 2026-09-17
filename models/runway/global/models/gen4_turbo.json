@@ -4,6 +4,7 @@
     "video"
   ],
   "catalogKey": "runway/gen4_turbo",
+  "codingVisible": false,
   "colorToken": "#0f172a",
   "description": "Runway Gen-4 Turbo video generation model for fast text-to-video and image-to-video at lower credit cost.",
   "displayName": "Gen-4 Turbo",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
   },
   "strengths": [
@@ -39,9 +40,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.910000",
+  "usageScopes": [],
   "vendorCode": "runway",
   "vendorName": "Runway",
-  "winRate": "0.860000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.860000"
 }

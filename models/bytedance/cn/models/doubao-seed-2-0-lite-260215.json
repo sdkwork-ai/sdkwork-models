@@ -5,6 +5,7 @@
     "reasoning"
   ],
   "catalogKey": "bytedance/doubao-seed-2-0-lite-260215",
+  "codingVisible": true,
   "colorToken": "#3b82f6",
   "contextTokens": 256000,
   "description": "Seed 2.0 Lite balances output quality and response speed. Ideal as a general-purpose, production-grade model with omni-modal understanding.",
@@ -31,7 +32,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://seed.bytedance.com/en/seed2"
   },
   "strengths": [
@@ -44,12 +45,11 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.890000",
-  "vendorCode": "bytedance",
-  "vendorName": "ByteDance",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
 }

@@ -1,0 +1,42 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "tencent/hy-role-latest",
+  "codingVisible": false,
+  "colorToken": "#0f766e",
+  "description": "Tencent Hunyuan Hy-Role-Latest role-play dialogue model listed on the official TokenHub model price page at CNY 2.4 per 1M input tokens and CNY 9.6 per 1M output tokens. Context window is not stated on the official price page.",
+  "displayName": "Hy-Role-Latest",
+  "familyCode": "hunyuan",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "hy-role-latest",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://cloud.tencent.com/document/product/1823/130055"
+  },
+  "strengths": [
+    "Role play",
+    "Dialogue",
+    "Chinese"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [
+    "chat"
+  ],
+  "vendorCode": "tencent"
+}

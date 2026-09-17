@@ -4,6 +4,7 @@
     "audio"
   ],
   "catalogKey": "elevenlabs/scribe_v2",
+  "codingVisible": false,
   "colorToken": "#7c2d12",
   "description": "ElevenLabs Scribe v2 speech-to-text model with high-accuracy transcription.",
   "displayName": "Scribe v2",
@@ -26,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://elevenlabs.io/docs/overview/models"
   },
   "strengths": [
@@ -38,9 +39,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.880000",
+  "usageScopes": [],
   "vendorCode": "elevenlabs",
   "vendorName": "ElevenLabs",
-  "winRate": "0.870000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.870000"
 }

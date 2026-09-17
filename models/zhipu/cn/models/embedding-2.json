@@ -1,0 +1,42 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "embedding"
+  ],
+  "catalogKey": "zhipu/embedding-2",
+  "codingVisible": false,
+  "colorToken": "#64748b",
+  "contextTokens": 8192,
+  "description": "Zhipu Embedding-2 second generation text vectorization model. Official model overview lists 8K context; official pricing is CNY 0.5 per 1M tokens with a Batch API rate of CNY 0.25 per 1M tokens.",
+  "displayName": "Embedding-2",
+  "familyCode": "zhipu-embedding",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 8192,
+  "modelId": "embedding-2",
+  "outputModalities": [
+    "embedding"
+  ],
+  "primaryCapability": "embedding",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/model-overview"
+  },
+  "strengths": [
+    "Embedding",
+    "Retrieval",
+    "Semantic search"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "zhipu"
+}

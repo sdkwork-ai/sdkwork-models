@@ -1,0 +1,42 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "stability_ai/stable-diffusion-3-5-medium",
+  "codingVisible": false,
+  "colorToken": "#0d9488",
+  "description": "The 2 and 2.5 billion parameter variants of Stable Diffusion 3.5. Officially billed at 3.5 credits per image ($0.035).",
+  "displayName": "Stable Diffusion 3.5 Medium",
+  "familyCode": "stable-image",
+  "inputModalities": [
+    "text"
+  ],
+  "latencyP50Ms": 2200,
+  "latencyP95Ms": 7500,
+  "lifecycle": "active",
+  "modelId": "stable-diffusion-3-5-medium",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "740.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.stability.ai/pricing"
+  },
+  "strengths": [
+    "Image generation",
+    "Prompt adherence"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.860000",
+  "usageScopes": [],
+  "vendorCode": "stability_ai",
+  "vendorName": "Stability AI",
+  "winRate": "0.850000"
+}

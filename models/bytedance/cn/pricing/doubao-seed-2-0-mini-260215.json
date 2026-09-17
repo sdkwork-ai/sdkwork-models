@@ -4,60 +4,319 @@
   "modelId": "doubao-seed-2-0-mini-260215",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_le_32k"
+        }
+      ],
       "currency": "CNY",
-      "effectiveFrom": "2026-06-14T00:00:00Z",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
       "meterCode": "llm_input_token",
       "minimumQuantity": "0",
-      "priceId": "bytedance-cn-seed-2-0-mini-input",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seed-2-0-mini-260215-input-input_le_32k",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "80dc6579eff768777ece3f194373394c0b6c862ec042978c1ae1e4b9bd73da54",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
       },
-      "unitPrice": "0.800000",
-      "unitSize": "1000000",
-      "priceBookCode": "models.bytedance.cn.official",
-      "productCode": "models.bytedance.chat",
-      "operationCode": "inference.generate",
-      "billability": "chargeable",
-      "chargeTiming": "usage_reported",
-      "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [],
-      "rateHash": "22836a77dab7fe83cae62ce85f6e13181f2d49031718fe6d4d6cfa9b88ad3fe5",
-      "priority": 100,
-      "rateVariant": "standard",
-      "schedule": null
+      "tierCode": "input_le_32k",
+      "unitPrice": "0.2",
+      "unitSize": "1000000"
     },
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_le_32k"
+        }
+      ],
       "currency": "CNY",
-      "effectiveFrom": "2026-06-14T00:00:00Z",
-      "meterCode": "llm_output_token",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
       "minimumQuantity": "0",
-      "priceId": "bytedance-cn-seed-2-0-mini-output",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seed-2-0-mini-260215-cache-read-input_le_32k",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "487d730b9123079a9d6213c13b5797886a5e24cc41c4cd6f315d6577b2a0b0eb",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
       },
-      "unitPrice": "4.000000",
-      "unitSize": "1000000",
-      "priceBookCode": "models.bytedance.cn.official",
-      "productCode": "models.bytedance.chat",
-      "operationCode": "inference.generate",
+      "tierCode": "input_le_32k",
+      "unitPrice": "0.04",
+      "unitSize": "1000000"
+    },
+    {
       "billability": "chargeable",
-      "chargeTiming": "usage_reported",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [],
-      "rateHash": "b833c44aa20d93e5f3e2753a709a6690fdf1ee251389c9226e9ebeefaae15158",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_le_32k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seed-2-0-mini-260215-output-input_le_32k",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "66c45aac9133038343e8d00082c8f8c4b2a0d25e9b3b3d1162b67f28299ba643",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "tierCode": "input_le_32k",
+      "unitPrice": "2.0",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_32k_128k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seed-2-0-mini-260215-input-input_32k_128k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "c8d6de307e55b88ad3b1547263911b3a1e8cca5aa333c1bba7d3b875b5b49931",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "tierCode": "input_32k_128k",
+      "unitPrice": "0.4",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_32k_128k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seed-2-0-mini-260215-cache-read-input_32k_128k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "677c45f0f3f31487c57e6062eb9fe85403250d059ba8907a35e7b3879dff69d4",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "tierCode": "input_32k_128k",
+      "unitPrice": "0.08",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_32k_128k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seed-2-0-mini-260215-output-input_32k_128k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a561d3710bba6dd0ac9d7a3eedf986dc7dc5754561c88d8d01c6b53fe0caba6a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "tierCode": "input_32k_128k",
+      "unitPrice": "4.0",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_128k_256k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seed-2-0-mini-260215-input-input_128k_256k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5fcf32874cdc8ae2922cf1b8f26d17f2ea4bc79a74f73b469749ae880637a002",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "tierCode": "input_128k_256k",
+      "unitPrice": "0.8",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_128k_256k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seed-2-0-mini-260215-cache-read-input_128k_256k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "1ffad5dbc6f09c9be57f9a0d2b38bbcef5c3443800e3cc74ba4a20fb01363298",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "tierCode": "input_128k_256k",
+      "unitPrice": "0.16",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_128k_256k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seed-2-0-mini-260215-output-input_128k_256k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "12662424956a3120c081840a1bcbc95faf0e829596c12fcd869f93a378593e86",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "tierCode": "input_128k_256k",
+      "unitPrice": "8.0",
+      "unitSize": "1000000"
     }
   ],
   "regionCode": "cn",

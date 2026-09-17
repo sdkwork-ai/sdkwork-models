@@ -4,6 +4,7 @@
     "sfx"
   ],
   "catalogKey": "vidu/audio1.0-timing2audio",
+  "codingVisible": false,
   "colorToken": "#6d28d9",
   "description": "Vidu audio1.0 timing-to-audio API for timeline-controlled sound-effect events with overlapping cues on a 2 to 10 second clip.",
   "displayName": "Vidu Audio 1.0 Timing to Audio",
@@ -26,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.vidu.com/docs/timing-to-audio"
   },
   "strengths": [
@@ -39,9 +40,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.950000",
+  "usageScopes": [],
   "vendorCode": "vidu",
   "vendorName": "Vidu",
-  "winRate": "0.920000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.920000"
 }

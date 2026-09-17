@@ -1,0 +1,36 @@
+{
+  "apiFormat": "openai_compatible",
+  "catalogKey": "alibaba/qwen3.7-plus",
+  "codingVisible": true,
+  "description": "百炼首推的能力与成本均衡文本模型，1M 上下文、完整工具调用支持，适合大型代码库与办公场景；基础定价为限时 8 折优惠。",
+  "displayName": "Qwen3.7 Plus",
+  "familyCode": "qwen",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "qwen3.7-plus",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/text-generation-model"
+  },
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "chat",
+    "coding",
+    "agent"
+  ],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud"
+}

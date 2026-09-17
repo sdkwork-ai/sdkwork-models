@@ -1,0 +1,150 @@
+{
+  "catalogKey": "bytedance/dreamina-seedance-2-0-260128",
+  "currency": "USD",
+  "modelId": "dreamina-seedance-2-0-260128",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "480p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.bytedance.global.official",
+      "priceId": "bytedance-global-dreamina-seedance-2-0-260128-second-480p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "94f94566626f79a279498f01a8e1aac56670c21b32b05b50bbd30cf0566c24b2",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+      },
+      "tierCode": "480p",
+      "unitPrice": "0.070000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.bytedance.global.official",
+      "priceId": "bytedance-global-dreamina-seedance-2-0-260128-second-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "503d7641301de5adb58b2f900f6c939b9dd1e72f20b77ae7c7c6cfb7d958239e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+      },
+      "tierCode": "720p",
+      "unitPrice": "0.150000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.bytedance.global.official",
+      "priceId": "bytedance-global-dreamina-seedance-2-0-260128-second-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "baa0993785c9d98a00f5bb88654d8688125f532ed5e582bfcfde0e8a39043081",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+      },
+      "tierCode": "1080p",
+      "unitPrice": "0.370000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "4k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.bytedance.global.official",
+      "priceId": "bytedance-global-dreamina-seedance-2-0-260128-second-4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "38d5cf3afbfd95953374a8bc10d83ad30c2de4fd628599b1d2ce22289358ddc0",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+      },
+      "tierCode": "4k",
+      "unitPrice": "0.780000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "bytedance"
+}

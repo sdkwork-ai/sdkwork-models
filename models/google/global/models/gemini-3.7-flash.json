@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "google/gemini-3.7-flash",
+  "codingVisible": true,
   "colorToken": "#1d4ed8",
   "contextTokens": 1048576,
   "description": "Gemini 3.7 Flash workhorse model with improved agentic coding, tool use and long-context knowledge workflows. GA since 2026-08-12.",
@@ -32,7 +33,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-09-05T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-7-flash/"
   },
   "strengths": [
@@ -45,13 +46,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.997000",
-  "vendorCode": "google",
-  "vendorName": "Google",
-  "winRate": "0.970000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "google",
+  "vendorName": "Google",
+  "winRate": "0.970000"
 }

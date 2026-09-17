@@ -17,7 +17,6 @@
       "sortOrder": 15
     },
     {
-      "defaultModel": "gemini-3.1-flash-image-preview",
       "displayName": "Imagen",
       "familyCode": "imagen",
       "familyType": "image",
@@ -41,7 +40,7 @@
       "sortOrder": 35
     },
     {
-      "defaultModel": "lyria-3",
+      "defaultModel": "lyria-3.5",
       "displayName": "Lyria",
       "familyCode": "lyria",
       "familyType": "music",

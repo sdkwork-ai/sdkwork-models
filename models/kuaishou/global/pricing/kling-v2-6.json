@@ -1,0 +1,220 @@
+{
+  "catalogKey": "kuaishou/kling-v2-6",
+  "currency": "USD",
+  "modelId": "kling-v2-6",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-v2-6-second-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "bfb7d794e19ce090f10adff6b0f046f36c3c8095baef740fb50c31ad7119e774",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "res_720p",
+      "unitPrice": "0.042000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-v2-6-second-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "19fc094bee34cc581c1e244c2165e386a133f077a8038eb9e300303f851a9c46",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "0.070000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "audio_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-v2-6-second-audio-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "e4fe56ce43ad5b9a5d8b17f2c7a4c3595165a89167f08c8ad4cd4569d13bae3b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "audio_1080p",
+      "unitPrice": "0.140000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "audio_voice_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-v2-6-second-audio-voice-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "404294a75c8271bf3e3d3d83b7d252dfcf3898c941a6888885777f4ea9cbf5ed",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "audio_voice_1080p",
+      "unitPrice": "0.168000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "motion_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-v2-6-second-motion-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "304e86ea8a145e74151159646f7098c5c24dee76bcd8df96d1a0dd81417fb502",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "motion_720p",
+      "unitPrice": "0.070000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "motion_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-v2-6-second-motion-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "804cf6ba267808ecc03b4eb6826e309e5fdad2128f4474f4ae265eda7fc8d3a8",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "motion_1080p",
+      "unitPrice": "0.112000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "kuaishou"
+}

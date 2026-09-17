@@ -1,0 +1,37 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "openai/gpt-image-2.5-flare",
+  "codingVisible": false,
+  "colorToken": "#0f766e",
+  "description": "Fast, high-quality everyday image generation.",
+  "displayName": "GPT Image 2.5 Flare",
+  "familyCode": "gpt-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "gpt-image-2.5-flare",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-image-2.5-flare"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "openai",
+  "vendorName": "OpenAI"
+}

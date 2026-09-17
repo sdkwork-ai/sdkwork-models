@@ -4,6 +4,7 @@
     "music"
   ],
   "catalogKey": "mureka/mureka-v9.5",
+  "codingVisible": false,
   "colorToken": "#9333ea",
   "description": "Mureka V9.5 flagship music generation base model released July 19, 2026 at WAIC 2026. Branded as the least AI-flavored music model: improved vocal-arrangement-emotion balance, breathable arrangement instead of vocal stacking, and tightened prompt adherence. 100-song blind evaluation raised instruction precision from 6.92 to 7.62 with across-the-board gains in melody, vocal, audio quality, and arrangement.",
   "displayName": "Mureka V9.5",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.mureka.ai/docs/"
   },
   "strengths": [
@@ -41,9 +42,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.980000",
+  "usageScopes": [],
   "vendorCode": "mureka",
   "vendorName": "Mureka",
-  "winRate": "0.940000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.940000"
 }

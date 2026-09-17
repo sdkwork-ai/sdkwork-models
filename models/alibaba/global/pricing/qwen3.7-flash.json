@@ -1,0 +1,171 @@
+{
+  "catalogKey": "alibaba/qwen3.7-flash",
+  "currency": "USD",
+  "modelId": "qwen3.7-flash",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen3.7-flash-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "7d90fa08a7e5fac579c4e34dffb322af603bd0f89b967ab08cbee2dd6d224a49",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-flash"
+      },
+      "unitPrice": "0.030000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen3.7-flash-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "c9b7c4cba81a86fbd1c02580ac9f4d67fe1595d343197235069b13efe6dc8115",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-flash"
+      },
+      "unitPrice": "0.130000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "explicit_cache_write"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen3.7-flash-cache-write",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "15366b8af2752c4de4e615f2d230a82516997b9d73b74392e0de0cfd7b64bec8",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-flash"
+      },
+      "tierCode": "explicit_cache_write",
+      "unitPrice": "0.038000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "explicit_cache_read"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen3.7-flash-cache-read",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "bb4add42a278cd2a08891fc7d5f41e1cb35d47892d8d475d9eca10b9dab9a9b4",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-flash"
+      },
+      "tierCode": "explicit_cache_read",
+      "unitPrice": "0.003000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "implicit_cache"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen3.7-flash-cache-read-implicit",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5f6783634f9bbdf37cd05c5730c4981cd63bf431b4cd75274f6dc7ebe97e31ce",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-flash"
+      },
+      "tierCode": "implicit_cache",
+      "unitPrice": "0.006000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

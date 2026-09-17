@@ -6,7 +6,7 @@
   "catalogKey": "openai/gpt-4o-transcribe",
   "codingVisible": false,
   "colorToken": "#6366f1",
-  "description": "Speech-to-text model for transcription and audio understanding.",
+  "description": "Speech-to-text model powered by GPT-4o. Officially deprecated on 2026-08-26, removal from the API on February 26, 2027; official replacement: gpt-live-transcribe or gpt-transcribe. Kept listed/enabled because it is the default model of the \"audio\" family.",
   "displayName": "GPT-4o transcribe",
   "familyCode": "audio",
   "inputModalities": [
@@ -14,7 +14,7 @@
   ],
   "latencyP50Ms": 700,
   "latencyP95Ms": 2400,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "gpt-4o-transcribe",
   "outputModalities": [
     "text"
@@ -22,12 +22,12 @@
   "primaryCapability": "audio",
   "rankScore": "500.000000",
   "regionCode": "global",
-  "releaseStage": "active",
+  "releaseStage": "deprecated",
   "routingState": "enabled",
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-13T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.openai.com/docs/models/gpt-4o-transcribe"
   },
   "strengths": [

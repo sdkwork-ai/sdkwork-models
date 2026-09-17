@@ -4,32 +4,74 @@
   "modelId": "doubao-seedance-2-0-fast-260128",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "480p"
+        }
+      ],
       "currency": "CNY",
-      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
-      "priceId": "bytedance-cn-doubao-seedance-2-0-fast-260128-second",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seedance-2-0-fast-260128-second-480p",
       "priceSide": "official",
       "pricingScope": "model",
-      "quantityStep": "1",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://www.volcengine.com/docs/82379"
-      },
-      "unitPrice": "0.580000",
-      "unitSize": "1",
-      "priceBookCode": "models.bytedance.cn.official",
-      "productCode": "models.bytedance.video",
-      "operationCode": "video.generate",
-      "billability": "chargeable",
-      "chargeTiming": "successful_result",
-      "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [],
-      "rateHash": "a13e966af288faeb880408b47d567ed4e4ad3d8977eced0f2a27a483446a2897",
       "priority": 100,
+      "productCode": "models.bytedance.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "75af40cfa0d73ea88e49a2078d1b923453071bc565dd979ebde79ed0be54c70d",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "tierCode": "480p",
+      "unitPrice": "0.370000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "720p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seedance-2-0-fast-260128-second-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5ec20432061a704a240cca1534ab4ed1e5886ef4028d8ba41b0be09607719d64",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "tierCode": "720p",
+      "unitPrice": "0.800000",
+      "unitSize": "1"
     }
   ],
   "regionCode": "cn",

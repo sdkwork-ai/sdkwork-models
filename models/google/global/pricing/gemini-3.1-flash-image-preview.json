@@ -4,56 +4,37 @@
   "modelId": "gemini-3.1-flash-image-preview",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
       "currency": "USD",
       "effectiveFrom": "2026-05-07T00:00:00Z",
       "meterCode": "llm_input_token",
       "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.google.global.official",
       "priceId": "google-gemini-3.1-flash-image-preview-text-input",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.google.image",
+      "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "a0fe56b6fdc79f06ac5844227e2674b445fc1accab90fbd5c2b2fa389f47fd2a",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "unitPrice": "0.300000",
-      "unitSize": "1000000",
-      "priceBookCode": "models.google.global.official",
-      "productCode": "models.google.image",
-      "operationCode": "image.generate",
-      "billability": "chargeable",
-      "chargeTiming": "usage_reported",
-      "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [],
-      "rateHash": "a0fe56b6fdc79f06ac5844227e2674b445fc1accab90fbd5c2b2fa389f47fd2a",
-      "priority": 100,
-      "rateVariant": "standard",
-      "schedule": null
+      "unitSize": "1000000"
     },
     {
-      "currency": "USD",
-      "effectiveFrom": "2026-05-07T00:00:00Z",
-      "meterCode": "image_output_token",
-      "minimumQuantity": "0",
-      "outputType": "image",
-      "priceId": "google-gemini-3.1-flash-image-preview-image-output",
-      "priceSide": "official",
-      "pricingScope": "model",
-      "quantityStep": "1",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
-      },
-      "unitPrice": "30.000000",
-      "unitSize": "1000000",
-      "priceBookCode": "models.google.global.official",
-      "productCode": "models.google.image",
-      "operationCode": "image.generate",
       "billability": "chargeable",
-      "chargeTiming": "usage_reported",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
+      "chargeTiming": "usage_reported",
       "conditions": [
         {
           "dimensionCode": "output_type",
@@ -61,10 +42,29 @@
           "value": "image"
         }
       ],
-      "rateHash": "42c1b7d410ea4b70e23c87de77be35e89bb609735d730579fa2c7a7b2381bfe6",
+      "currency": "USD",
+      "effectiveFrom": "2026-05-07T00:00:00Z",
+      "meterCode": "image_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "outputType": "image",
+      "priceBookCode": "models.google.global.official",
+      "priceId": "google-gemini-3.1-flash-image-preview-image-output",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
+      "productCode": "models.google.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "42c1b7d410ea4b70e23c87de77be35e89bb609735d730579fa2c7a7b2381bfe6",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "unitPrice": "30.000000",
+      "unitSize": "1000000"
     }
   ],
   "regionCode": "global",

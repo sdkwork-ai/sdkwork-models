@@ -5,6 +5,7 @@
     "reasoning"
   ],
   "catalogKey": "zhipu/glm-5.2",
+  "codingVisible": true,
   "colorToken": "#7c2d12",
   "contextTokens": 1000000,
   "description": "GLM-5.2 flagship coding and agent model with 1M context and open-weight lineage.",
@@ -28,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/text/glm-5.2"
   },
   "strengths": [
@@ -41,13 +42,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.960000",
-  "vendorCode": "zhipu",
-  "vendorName": "Zhipu AI",
-  "winRate": "0.910000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "zhipu",
+  "vendorName": "Zhipu AI",
+  "winRate": "0.910000"
 }

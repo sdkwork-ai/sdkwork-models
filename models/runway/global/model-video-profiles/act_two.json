@@ -1,0 +1,71 @@
+{
+  "catalogKey": "runway/act_two",
+  "modelId": "act_two",
+  "profiles": [
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/act_two/i2v_discrete_720p",
+      "displayName": "Image to Video · 5/10s · 720p",
+      "durationOptions": [
+        5,
+        10
+      ],
+      "durationPolicy": "discrete",
+      "durationTierCodes": [
+        "dur_5s",
+        "dur_10s"
+      ],
+      "generationMode": "image_to_video",
+      "isDefault": true,
+      "outputAudio": false,
+      "profileCode": "i2v_discrete_720p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 10,
+      "wireParameters": {
+        "duration": "5,10",
+        "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/act_two/r2v_discrete_720p",
+      "displayName": "Reference to Video · 5/10s · 720p",
+      "durationOptions": [
+        5,
+        10
+      ],
+      "durationPolicy": "discrete",
+      "durationTierCodes": [
+        "dur_5s",
+        "dur_10s"
+      ],
+      "generationMode": "reference_to_video",
+      "isDefault": false,
+      "outputAudio": false,
+      "profileCode": "r2v_discrete_720p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "5,10",
+        "resolution": "720p"
+      }
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+  },
+  "vendorCode": "runway"
+}

@@ -4,184 +4,184 @@
   "modelId": "gpt-image-2",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "media_type",
+          "operator": "eq",
+          "value": "text"
+        },
+        {
+          "dimensionCode": "input_type",
+          "operator": "eq",
+          "value": "text"
+        }
+      ],
       "currency": "USD",
       "effectiveFrom": "2026-05-07T00:00:00Z",
       "inputType": "text",
       "mediaType": "text",
       "meterCode": "image_input_token",
       "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.openai.global.official",
       "priceId": "openai-gpt-image-2-text-input",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.image",
+      "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "518e3fd6fcc586d8f1671701eb577aa12867992466d229730ac62108197705ca",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://openai.com/api/pricing/"
       },
       "unitPrice": "5.000000",
-      "unitSize": "1000000",
-      "priceBookCode": "models.openai.global.official",
-      "productCode": "models.openai.image",
-      "operationCode": "image.generate",
+      "unitSize": "1000000"
+    },
+    {
       "billability": "chargeable",
-      "chargeTiming": "usage_reported",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
+      "chargeTiming": "usage_reported",
       "conditions": [
         {
           "dimensionCode": "media_type",
           "operator": "eq",
           "value": "text"
-        },
-        {
-          "dimensionCode": "input_type",
-          "operator": "eq",
-          "value": "text"
         }
       ],
-      "rateHash": "518e3fd6fcc586d8f1671701eb577aa12867992466d229730ac62108197705ca",
-      "priority": 100,
-      "rateVariant": "standard",
-      "schedule": null
-    },
-    {
       "currency": "USD",
       "effectiveFrom": "2026-05-07T00:00:00Z",
       "mediaType": "text",
       "meterCode": "llm_cache_read_token",
       "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.openai.global.official",
       "priceId": "openai-gpt-image-2-text-cache-read",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.image",
+      "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "83f6b2b6ca26464a0b955fedbfffb0e7bbfe687321484c944e96df978e6d9278",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://openai.com/api/pricing/"
       },
       "unitPrice": "1.250000",
-      "unitSize": "1000000",
-      "priceBookCode": "models.openai.global.official",
-      "productCode": "models.openai.image",
-      "operationCode": "image.generate",
+      "unitSize": "1000000"
+    },
+    {
       "billability": "chargeable",
-      "chargeTiming": "usage_reported",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
+      "chargeTiming": "usage_reported",
       "conditions": [
         {
           "dimensionCode": "media_type",
           "operator": "eq",
-          "value": "text"
+          "value": "image"
+        },
+        {
+          "dimensionCode": "input_type",
+          "operator": "eq",
+          "value": "image"
         }
       ],
-      "rateHash": "83f6b2b6ca26464a0b955fedbfffb0e7bbfe687321484c944e96df978e6d9278",
-      "priority": 100,
-      "rateVariant": "standard",
-      "schedule": null
-    },
-    {
       "currency": "USD",
       "effectiveFrom": "2026-05-07T00:00:00Z",
       "inputType": "image",
       "mediaType": "image",
       "meterCode": "image_input_token",
       "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.openai.global.official",
       "priceId": "openai-gpt-image-2-image-input",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.image",
+      "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "c51a696a39eca4641c0e1d8d89ed428c84e155ca2436f80234be7702092f5ca5",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://openai.com/api/pricing/"
       },
       "unitPrice": "8.000000",
-      "unitSize": "1000000",
-      "priceBookCode": "models.openai.global.official",
-      "productCode": "models.openai.image",
-      "operationCode": "image.generate",
+      "unitSize": "1000000"
+    },
+    {
       "billability": "chargeable",
-      "chargeTiming": "usage_reported",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
+      "chargeTiming": "usage_reported",
       "conditions": [
         {
           "dimensionCode": "media_type",
           "operator": "eq",
           "value": "image"
-        },
-        {
-          "dimensionCode": "input_type",
-          "operator": "eq",
-          "value": "image"
         }
       ],
-      "rateHash": "c51a696a39eca4641c0e1d8d89ed428c84e155ca2436f80234be7702092f5ca5",
-      "priority": 100,
-      "rateVariant": "standard",
-      "schedule": null
-    },
-    {
       "currency": "USD",
       "effectiveFrom": "2026-05-07T00:00:00Z",
       "mediaType": "image",
       "meterCode": "llm_cache_read_token",
       "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.openai.global.official",
       "priceId": "openai-gpt-image-2-image-cache-read",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.image",
+      "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "9a79b08ce3b83f34c483f8c633e09260ebe8a0af54e35c6e8d8d07136554eb96",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://openai.com/api/pricing/"
       },
       "unitPrice": "2.000000",
-      "unitSize": "1000000",
-      "priceBookCode": "models.openai.global.official",
-      "productCode": "models.openai.image",
-      "operationCode": "image.generate",
-      "billability": "chargeable",
-      "chargeTiming": "usage_reported",
-      "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [
-        {
-          "dimensionCode": "media_type",
-          "operator": "eq",
-          "value": "image"
-        }
-      ],
-      "rateHash": "9a79b08ce3b83f34c483f8c633e09260ebe8a0af54e35c6e8d8d07136554eb96",
-      "priority": 100,
-      "rateVariant": "standard",
-      "schedule": null
+      "unitSize": "1000000"
     },
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
       "currency": "USD",
       "effectiveFrom": "2026-05-07T00:00:00Z",
       "meterCode": "image_output_token",
       "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.openai.global.official",
       "priceId": "openai-gpt-image-2-output",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.image",
+      "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "ae3b06a53cf0149277b167f5364cae40ddaacc3a3dd5842df7c0bc864de5db45",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://openai.com/api/pricing/"
       },
       "unitPrice": "30.000000",
-      "unitSize": "1000000",
-      "priceBookCode": "models.openai.global.official",
-      "productCode": "models.openai.image",
-      "operationCode": "image.generate",
-      "billability": "chargeable",
-      "chargeTiming": "usage_reported",
-      "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [],
-      "rateHash": "ae3b06a53cf0149277b167f5364cae40ddaacc3a3dd5842df7c0bc864de5db45",
-      "priority": 100,
-      "rateVariant": "standard",
-      "schedule": null
+      "unitSize": "1000000"
     }
   ],
   "regionCode": "global",

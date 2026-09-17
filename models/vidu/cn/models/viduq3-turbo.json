@@ -4,6 +4,7 @@
     "video"
   ],
   "catalogKey": "vidu/viduq3-turbo",
+  "codingVisible": false,
   "colorToken": "#7c3aed",
   "description": "Vidu Q3 Turbo for faster video generation with lower credit cost than Q3 Pro.",
   "displayName": "Vidu Q3 Turbo",
@@ -28,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.vidu.cn/docs/text-to-video"
   },
   "strengths": [
@@ -40,9 +41,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.930000",
+  "usageScopes": [],
   "vendorCode": "vidu",
   "vendorName": "Vidu",
-  "winRate": "0.880000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.880000"
 }

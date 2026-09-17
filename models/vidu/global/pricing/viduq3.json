@@ -1,0 +1,220 @@
+{
+  "catalogKey": "vidu/viduq3",
+  "currency": "USD",
+  "modelId": "viduq3",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "ref_res_540p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-04-13T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq3-second-ref-res-540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d8147a1100d946ac539c8d4f69a55ccf29b0fba10dec9d384cec07a596ac362a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "ref_res_540p",
+      "unitPrice": "0.035000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "ref_res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-04-13T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq3-second-ref-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "144cf767b4c41cd27e693defd74a4852aa2a46a334528a84e7ca7aeeafc63e1f",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "ref_res_720p",
+      "unitPrice": "0.060000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "ref_res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-04-13T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq3-second-ref-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "f6ce44d06d0a647f39ae95157c1c3e34d408b777ce8e3810a776bf3b0100039c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "ref_res_1080p",
+      "unitPrice": "0.075000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "ref_offpeak_res_540p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-04-13T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq3-second-ref-offpeak-res-540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "8476c393b1f6b59c075c5cdeb66920928785855c7fb808be3755917466cc7ddb",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "ref_offpeak_res_540p",
+      "unitPrice": "0.020000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "ref_offpeak_res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-04-13T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq3-second-ref-offpeak-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "6396f434d3106af49a3ce90c74059fea3cff2f859055062738c276a6ea11ebd9",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "ref_offpeak_res_720p",
+      "unitPrice": "0.030000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "ref_offpeak_res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-04-13T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq3-second-ref-offpeak-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "c8186ba85cf4eb071fee5e1e113eb9e2ef32292e9b90ce2b1abd8a38a3344d81",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "ref_offpeak_res_1080p",
+      "unitPrice": "0.035000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "vidu"
+}

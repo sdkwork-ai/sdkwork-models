@@ -1,0 +1,48 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "bytedance/doubao-seedance-2-5-260628",
+  "codingVisible": false,
+  "colorToken": "#dc2626",
+  "description": "Doubao Seedance 2.5 260628 revision, the only Seedance 2.5 id on the Volcengine Ark model list (480p/720p 8-bit, 1080p 10-bit, 24 fps, 4-30s). Replaces the previous 260623 build.",
+  "displayName": "Doubao Seedance 2.5 (260628)",
+  "familyCode": "seedance",
+  "inputModalities": [
+    "text",
+    "image",
+    "video",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "maxOutputSeconds": 30,
+  "modelId": "doubao-seedance-2-5-260628",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://www.volcengine.com/docs/82379/1330310"
+  },
+  "strengths": [
+    "Multimodal reference-to-video",
+    "Video editing",
+    "Video extension",
+    "First/last frame to video",
+    "Text to video"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
+}

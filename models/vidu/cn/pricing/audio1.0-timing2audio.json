@@ -4,29 +4,9 @@
   "modelId": "audio1.0-timing2audio",
   "prices": [
     {
-      "currency": "CNY",
-      "effectiveFrom": "2026-07-03T00:00:00Z",
-      "meterCode": "sfx_result",
-      "minimumQuantity": "0",
-      "notes": "Official bucket for audio1.0 timing2audio output shorter than 5 seconds (10 credits at 0.03125 CNY/credit).",
-      "priceId": "vidu-cn-audio1-0-timing2audio-under-5s",
-      "priceSide": "official",
-      "pricingScope": "model",
-      "quantityStep": "1",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
-      },
-      "tierCode": "under_5s",
-      "unitPrice": "0.312500",
-      "unitSize": "1",
-      "priceBookCode": "models.vidu.cn.official",
-      "productCode": "models.vidu.sfx",
-      "operationCode": "sound.generate",
       "billability": "chargeable",
-      "chargeTiming": "successful_result",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
+      "chargeTiming": "successful_result",
       "conditions": [
         {
           "dimensionCode": "tier_code",
@@ -34,35 +14,35 @@
           "value": "under_5s"
         }
       ],
-      "rateHash": "b3b41c4d374372915c8cf47253ffe84b6ebc5a27a6f3e136879ad05df15ae701",
-      "priority": 100,
-      "rateVariant": "standard",
-      "schedule": null
-    },
-    {
       "currency": "CNY",
       "effectiveFrom": "2026-07-03T00:00:00Z",
       "meterCode": "sfx_result",
       "minimumQuantity": "0",
-      "notes": "Official bucket for audio1.0 timing2audio output shorter than 10 seconds (20 credits at 0.03125 CNY/credit).",
-      "priceId": "vidu-cn-audio1-0-timing2audio-under-10s",
+      "notes": "Official bucket for audio1.0 timing2audio output shorter than 5 seconds (10 credits at 0.03125 CNY/credit).",
+      "operationCode": "sound.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-audio1-0-timing2audio-under-5s",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.sfx",
+      "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "b3b41c4d374372915c8cf47253ffe84b6ebc5a27a6f3e136879ad05df15ae701",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://platform.vidu.cn/docs/pricing"
       },
-      "tierCode": "under_10s",
-      "unitPrice": "0.625000",
-      "unitSize": "1",
-      "priceBookCode": "models.vidu.cn.official",
-      "productCode": "models.vidu.sfx",
-      "operationCode": "sound.generate",
+      "tierCode": "under_5s",
+      "unitPrice": "0.312500",
+      "unitSize": "1"
+    },
+    {
       "billability": "chargeable",
-      "chargeTiming": "successful_result",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
+      "chargeTiming": "successful_result",
       "conditions": [
         {
           "dimensionCode": "tier_code",
@@ -70,10 +50,30 @@
           "value": "under_10s"
         }
       ],
-      "rateHash": "88b14dfa099b4c3caa9faea275fea2f6865b9b4d0d73ae844390a190dec55f1e",
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-03T00:00:00Z",
+      "meterCode": "sfx_result",
+      "minimumQuantity": "0",
+      "notes": "Official bucket for audio1.0 timing2audio output shorter than 10 seconds (20 credits at 0.03125 CNY/credit).",
+      "operationCode": "sound.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-audio1-0-timing2audio-under-10s",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
+      "productCode": "models.vidu.sfx",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "88b14dfa099b4c3caa9faea275fea2f6865b9b4d0d73ae844390a190dec55f1e",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+      },
+      "tierCode": "under_10s",
+      "unitPrice": "0.625000",
+      "unitSize": "1"
     }
   ],
   "regionCode": "cn",

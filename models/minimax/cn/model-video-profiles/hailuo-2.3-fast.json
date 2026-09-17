@@ -1,0 +1,61 @@
+{
+  "catalogKey": "minimax/hailuo-2.3-fast",
+  "modelId": "hailuo-2.3-fast",
+  "profiles": [
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "minimax/hailuo-2.3-fast/t2v_range_768p",
+      "displayName": "Text to Video · 6–6s · 768p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": true,
+      "maxDurationSeconds": 6,
+      "minDurationSeconds": 6,
+      "outputAudio": false,
+      "profileCode": "t2v_range_768p",
+      "resolution": "768p",
+      "resolutionTierCode": "res_768p",
+      "sortOrder": 10,
+      "wireParameters": {
+        "duration": "6-6",
+        "resolution": "768p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "minimax/hailuo-2.3-fast/i2v_range_768p",
+      "displayName": "Image to Video · 6–6s · 768p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 6,
+      "minDurationSeconds": 6,
+      "outputAudio": false,
+      "profileCode": "i2v_range_768p",
+      "resolution": "768p",
+      "resolutionTierCode": "res_768p",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "6-6",
+        "resolution": "768p"
+      }
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+  },
+  "vendorCode": "minimax"
+}

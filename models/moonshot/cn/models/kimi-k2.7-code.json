@@ -6,13 +6,16 @@
     "reasoning"
   ],
   "catalogKey": "moonshot/kimi-k2.7-code",
+  "codingVisible": true,
   "colorToken": "#1e293b",
   "contextTokens": 262144,
   "description": "Kimi K2.7 Code is Kimi's strongest Coding model, following instructions more reliably in long contexts and completing coding tasks with higher success rates.",
   "displayName": "Kimi K2.7 Code",
   "familyCode": "kimi",
   "inputModalities": [
-    "text"
+    "text",
+    "image",
+    "video"
   ],
   "latencyP50Ms": 740,
   "latencyP95Ms": 2400,
@@ -31,8 +34,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
-    "sourceUrl": "https://platform.kimi.com/"
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.kimi.com/docs/models"
   },
   "strengths": [
     "Coding",
@@ -44,13 +47,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.920000",
-  "vendorCode": "moonshot",
-  "vendorName": "Moonshot Kimi",
-  "winRate": "0.890000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "moonshot",
+  "vendorName": "Moonshot Kimi",
+  "winRate": "0.890000"
 }

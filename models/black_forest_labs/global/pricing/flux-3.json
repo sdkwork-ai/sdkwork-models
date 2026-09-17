@@ -4,32 +4,544 @@
   "modelId": "flux-3",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "t2v_hd"
+        }
+      ],
       "currency": "USD",
-      "effectiveFrom": "2026-08-05T00:00:00Z",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
-      "priceId": "bfl-flux-3-video-second",
+      "notes": "FLUX 3 Text to Video (t2v) hd — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-t2v-hd-second",
       "priceSide": "official",
       "pricingScope": "model",
-      "quantityStep": "1",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
-      },
-      "unitPrice": "0.170000",
-      "unitSize": "1",
-      "priceBookCode": "models.black_forest_labs.global.official",
+      "priority": 100,
       "productCode": "models.black_forest_labs.video",
-      "operationCode": "video.generate",
-      "billability": "chargeable",
-      "chargeTiming": "successful_result",
-      "calculationMode": "per_unit",
       "quantityAggregation": "sum",
-      "conditions": [],
+      "quantityStep": "1",
+      "rateHash": "052cfd44e2ff5b450909d722a519862d36e34612c1753a5ce26752e9a0e895bc",
       "rateVariant": "standard",
       "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "t2v_hd",
+      "unitPrice": "0.170000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "t2v_fhd"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Text to Video (t2v) fhd — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-t2v-fhd-second",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
-      "rateHash": "49b5334d96e0f93082ff53c2daf9f5cdca7b58aebb10e4723936e5900a3cbc56"
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "4031584ecdd7163630026ed971c25ae721a9f816d3717f3f4e4675f27f671117",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "t2v_fhd",
+      "unitPrice": "0.290000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "t2v_qhd"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Text to Video (t2v) qhd — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-t2v-qhd-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5357c1bdef9d816b394744191a30ba4befcbdb492529cac958c47707e8552dcb",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "t2v_qhd",
+      "unitPrice": "0.400000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "t2v_uhd"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Text to Video (t2v) uhd — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-t2v-uhd-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "881cd009575938c5adc0c67201e44ceb1c7cb332c046a7d6c9426a7e6be8304e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "t2v_uhd",
+      "unitPrice": "0.800000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "t2v_draft"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Text to Video (t2v) draft — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-t2v-draft-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "f4c6e011149d1ede3813c30063b1dc653e6ce291ff3465bbe93a663f1a115675",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "t2v_draft",
+      "unitPrice": "0.060000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "i2v_hd"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Image to Video (i2v) hd — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-i2v-hd-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ebf25805d72d164cc5d5982da382bac563af71a68365286571a4a2e3b6765b23",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "i2v_hd",
+      "unitPrice": "0.170000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "i2v_fhd"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Image to Video (i2v) fhd — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-i2v-fhd-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5f20bfe374e18714f08b67de1de87ec288c58510461d35e12529721529f25411",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "i2v_fhd",
+      "unitPrice": "0.290000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "i2v_qhd"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Image to Video (i2v) qhd — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-i2v-qhd-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "4ff6b70c85c9e3367009458f9a3752dbee563aeb4c98ddb9362f0729aa64c959",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "i2v_qhd",
+      "unitPrice": "0.400000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "i2v_uhd"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Image to Video (i2v) uhd — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-i2v-uhd-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "e14a6cd2357af41bb77bb07b6e7e28d4e499a2f7f54e22af47271f30099d56b0",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "i2v_uhd",
+      "unitPrice": "0.800000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "i2v_draft"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Image to Video (i2v) draft — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-i2v-draft-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d582904f4cf49cb0db1b59fe6dbfc12dfc0a37c97b2b6d9347311ff4efe499a8",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "i2v_draft",
+      "unitPrice": "0.060000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "v2v_hd"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Video Continuation (v2v) hd — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-v2v-hd-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "77932c90750aafc635b5071d4f427a7bd7d16464db7027ef98e812850085f234",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "v2v_hd",
+      "unitPrice": "0.410000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "v2v_fhd"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Video Continuation (v2v) fhd — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-v2v-fhd-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ff29e8b70a3a94103b900c2bf08fa3c1490514efac40802913cae025b1d847a1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "v2v_fhd",
+      "unitPrice": "0.530000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "v2v_qhd"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Video Continuation (v2v) qhd — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-v2v-qhd-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "374d90cf96f27d611900ff899b1d8a42ed174ffa502299ac5f6d314e582c6dd7",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "v2v_qhd",
+      "unitPrice": "0.650000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "v2v_uhd"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Video Continuation (v2v) uhd — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-v2v-uhd-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "9b80d129b8dedf2ab28ee3e8ab983727d2f750cf0285c5ecad7ccd2d334a8fc4",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "v2v_uhd",
+      "unitPrice": "0.950000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "v2v_draft"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Video Continuation (v2v) draft — official per-second output rate.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-v2v-draft-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "b88b43af2f5d19e08ffbb84f6202730efc950583b79ff5bd578d7f39571c5cc1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "v2v_draft",
+      "unitPrice": "0.120000",
+      "unitSize": "1"
     }
   ],
   "regionCode": "global",

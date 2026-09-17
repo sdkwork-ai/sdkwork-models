@@ -1,0 +1,33 @@
+{
+  "apiFormat": "google_gemini",
+  "catalogKey": "google/lyria-3-pro-preview",
+  "codingVisible": false,
+  "description": "面向完整歌曲的上一代 Lyria 3 音乐生成模型。",
+  "displayName": "Lyria 3 Pro Preview",
+  "familyCode": "lyria",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "preview",
+  "modelId": "lyria-3-pro-preview",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "music",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "google",
+  "vendorName": "Google"
+}

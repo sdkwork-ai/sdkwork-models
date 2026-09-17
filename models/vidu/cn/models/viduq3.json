@@ -1,0 +1,38 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video",
+    "audio"
+  ],
+  "catalogKey": "vidu/viduq3",
+  "codingVisible": false,
+  "description": "Vidu Q3 基座模型（参考生视频，3-16 秒，540p/720p/1080p，默认 720p、默认 5 秒，默认 audio=true）。官方「模型地图」未列出该 id，但定价页「参考生视频」积分表与接口参数「模型名称可选值：viduq3-mix、viduq3-turbo、viduq3、…」均给出 viduq3 及按秒单价。",
+  "displayName": "Vidu Q3",
+  "familyCode": "vidu-video",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "viduq3",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "vidu",
+  "vendorName": "Vidu"
+}

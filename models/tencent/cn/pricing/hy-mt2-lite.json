@@ -1,0 +1,66 @@
+{
+  "catalogKey": "tencent/hy-mt2-lite",
+  "currency": "CNY",
+  "modelId": "hy-mt2-lite",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.tencent.cn.official",
+      "priceId": "tencent-cn-hy-mt2-lite-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.tencent.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "88b25fded4d26c258d1aeb7501b4c65feebbe11ce984f22fd2bd293b998f420c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://cloud.tencent.com/document/product/1823/130055"
+      },
+      "unitPrice": "0.300000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.tencent.cn.official",
+      "priceId": "tencent-cn-hy-mt2-lite-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.tencent.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "fe2036faafcd1d328a053cd5f410dbbce91430546071477898d89b21c8664286",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://cloud.tencent.com/document/product/1823/130055"
+      },
+      "unitPrice": "1.200000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "tencent"
+}

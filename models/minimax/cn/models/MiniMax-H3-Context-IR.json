@@ -1,0 +1,47 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "chat",
+    "video"
+  ],
+  "catalogKey": "minimax/MiniMax-H3-Context-IR",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "MiniMax-H3-Context-IR 任务：深度理解多模态上下文，生成结构化、语义更丰富的视频提示词，按 token 计费。",
+  "displayName": "MiniMax H3 Context IR",
+  "familyCode": "minimax-video",
+  "inputModalities": [
+    "text",
+    "image",
+    "video",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "MiniMax-H3-Context-IR",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "780.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+  },
+  "strengths": [
+    "多模态上下文理解",
+    "视频提示词生成"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "trendScore": "0.890000",
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax",
+  "winRate": "0.870000"
+}

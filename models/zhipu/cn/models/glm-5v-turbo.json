@@ -1,0 +1,50 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat",
+    "reasoning"
+  ],
+  "catalogKey": "zhipu/glm-5v-turbo",
+  "codingVisible": true,
+  "colorToken": "#7c2d12",
+  "contextTokens": 200000,
+  "description": "Zhipu GLM-5V-Turbo multimodal coding base model. Official model overview lists it under visual understanding models with 200K context and 128K max output; the official pricing page lists tiered input/output/cache-hit rates below and above 32K input tokens.",
+  "displayName": "GLM-5V-Turbo",
+  "familyCode": "glm",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 200000,
+  "maxOutputTokens": 131072,
+  "modelId": "glm-5v-turbo",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/model-overview"
+  },
+  "strengths": [
+    "Multimodal",
+    "Coding",
+    "Visual understanding",
+    "Agents"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "zhipu"
+}

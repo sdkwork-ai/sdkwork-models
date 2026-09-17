@@ -4,8 +4,9 @@
     "music"
   ],
   "catalogKey": "minimax/music-2.6",
+  "codingVisible": false,
   "colorToken": "#2563eb",
-  "description": "MiniMax Music 2.6 generates full-length songs with vocals or instrumental tracks from prompts and lyrics.",
+  "description": "music-2.6 is marked \"Discontinued\" by MiniMax. Starting August 20, 2026 the paid music generation APIs are no longer available to new users; existing paying users can continue to use the current API services. Official alternatives are MiniMax Audio or the open-source MiniMax Music 3 model.",
   "displayName": "MiniMax Music 2.6",
   "familyCode": "minimax-music",
   "inputModalities": [
@@ -13,7 +14,7 @@
   ],
   "latencyP50Ms": 25000,
   "latencyP95Ms": 90000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "music-2.6",
   "outputModalities": [
     "music"
@@ -21,13 +22,13 @@
   "primaryCapability": "music",
   "rankScore": "780.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
-    "sourceUrl": "https://platform.minimax.io/docs/api-reference/music-generation"
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
   },
   "strengths": [
     "Song generation",
@@ -39,9 +40,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.930000",
+  "usageScopes": [],
   "vendorCode": "minimax",
   "vendorName": "MiniMax",
-  "winRate": "0.880000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.880000"
 }

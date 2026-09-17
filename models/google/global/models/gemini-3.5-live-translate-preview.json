@@ -1,0 +1,32 @@
+{
+  "apiFormat": "google_gemini",
+  "catalogKey": "google/gemini-3.5-live-translate-preview",
+  "codingVisible": false,
+  "description": "低延迟实时语音到语音翻译模型，支持 70+ 语言。",
+  "displayName": "Gemini 3.5 Live Translate",
+  "familyCode": "gemini",
+  "inputModalities": [
+    "audio"
+  ],
+  "lifecycle": "preview",
+  "modelId": "gemini-3.5-live-translate-preview",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
+  },
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [],
+  "vendorCode": "google",
+  "vendorName": "Google"
+}

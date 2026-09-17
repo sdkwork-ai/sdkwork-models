@@ -1,0 +1,51 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "minimax/MiniMax-M2.1-highspeed",
+  "codingVisible": true,
+  "colorToken": "#818cf8",
+  "contextTokens": 204800,
+  "description": "MiniMax M2.1-Highspeed text model, listed by the official docs as a legacy model that is still served.",
+  "displayName": "MiniMax M2.1-Highspeed",
+  "familyCode": "minimax",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 204800,
+  "maxOutputTokens": 32768,
+  "modelId": "MiniMax-M2.1-highspeed",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "765.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/guides/text-generation"
+  },
+  "strengths": [
+    "Low latency",
+    "Code",
+    "Value"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.780000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax",
+  "winRate": "0.775000"
+}

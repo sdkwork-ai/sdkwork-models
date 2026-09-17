@@ -4,32 +4,74 @@
   "modelId": "viduq3-mix",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "ref_res_720p"
+        }
+      ],
       "currency": "CNY",
-      "effectiveFrom": "2026-07-14T00:00:00Z",
+      "effectiveFrom": "2026-04-13T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
-      "priceId": "vidu-cn-viduq3-mix-second-720p",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq3-mix-second-ref-res-720p",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "06ea587283ab16debae9647555da7e92e74e5f9206cd60af83992a39d42d815d",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://platform.vidu.cn/docs/pricing"
       },
-      "unitPrice": "0.375000",
-      "unitSize": "1",
-      "priceBookCode": "models.vidu.cn.official",
-      "productCode": "models.vidu.video",
-      "operationCode": "video.generate",
+      "tierCode": "ref_res_720p",
+      "unitPrice": "0.750000",
+      "unitSize": "1"
+    },
+    {
       "billability": "chargeable",
-      "chargeTiming": "successful_result",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [],
-      "rateHash": "888b41addf2aa32e9111ce91e7371035b11db3ba2e25a033ef803071bb53bef0",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "ref_res_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-04-13T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq3-mix-second-ref-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ef3749fa1d7cf923756463745b9d81d68c2ca071a95c36be05217f40e3cddfe9",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+      },
+      "tierCode": "ref_res_1080p",
+      "unitPrice": "0.906250",
+      "unitSize": "1"
     }
   ],
   "regionCode": "cn",

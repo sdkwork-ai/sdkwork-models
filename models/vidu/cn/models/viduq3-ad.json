@@ -1,0 +1,37 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video",
+    "audio"
+  ],
+  "catalogKey": "vidu/viduq3-ad",
+  "codingVisible": false,
+  "description": "官方模型地图「ViduQ3 系列」中的广告行业模型：参考生视频、720p/1080p、3-15 秒，适合 5-8 秒短视频广告，支持智能分镜。官方定价页未公布按秒单价。",
+  "displayName": "Vidu Q3 Ad",
+  "familyCode": "vidu-video",
+  "inputModalities": [
+    "image"
+  ],
+  "lifecycle": "preview",
+  "modelId": "viduq3-ad",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "cn",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.vidu.cn/docs/model-map"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "vidu",
+  "vendorName": "Vidu"
+}

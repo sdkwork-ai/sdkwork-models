@@ -1,0 +1,45 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "minimax/hailuo-2.3-fast",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "MiniMax Hailuo 2.3 Fast 图生视频模型（官方历史模型，仍在售）：768P 6s/10s 与 1080P 6s，按视频计价。",
+  "displayName": "Hailuo 2.3 Fast",
+  "familyCode": "minimax-video",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "hailuo-2.3-fast",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "810.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+  },
+  "strengths": [
+    "图生视频",
+    "更快更优惠",
+    "物理表现"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.920000",
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax",
+  "winRate": "0.880000"
+}

@@ -1,0 +1,220 @@
+{
+  "catalogKey": "alibaba/qwen3.7-flash",
+  "currency": "CNY",
+  "modelId": "qwen3.7-flash",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "tier_32k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "qwen-cn-qwen3.7-flash-input-32k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "0acbad98be7aaba941ae1fbc270ba05104002cdcda35910050775119e1d25a8b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+      },
+      "tierCode": "tier_32k",
+      "unitPrice": "0.200000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "tier_32k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "qwen-cn-qwen3.7-flash-output-32k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "dc5ac96124ead23f2a439f39192662b18451df9be4a0bdebf4add8d5d36f55a4",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+      },
+      "tierCode": "tier_32k",
+      "unitPrice": "0.800000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "tier_256k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "qwen-cn-qwen3.7-flash-input-256k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a4c765c0ef4941b2858a20d9eb9fa83d09f0147f45ce6f3d8032b8b760bfc0b7",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+      },
+      "tierCode": "tier_256k",
+      "unitPrice": "0.600000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "tier_256k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "qwen-cn-qwen3.7-flash-output-256k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "94ac34a4e5257a0c102b7d745d180ad9b7383f2457c7e2bce96fcfbb1bd76281",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+      },
+      "tierCode": "tier_256k",
+      "unitPrice": "2.400000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "tier_1m"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "qwen-cn-qwen3.7-flash-input-1m",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "65b2228842359c5abbbde3b72fa22c574b6040f9b24d28e043251d55d396f074",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+      },
+      "tierCode": "tier_1m",
+      "unitPrice": "1.200000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "tier_1m"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "qwen-cn-qwen3.7-flash-output-1m",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "63d75e8c7a58106fc45cf6f1cd2422cd85db2ae4bc1d78f5e9e1f942304aa766",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+      },
+      "tierCode": "tier_1m",
+      "unitPrice": "4.800000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

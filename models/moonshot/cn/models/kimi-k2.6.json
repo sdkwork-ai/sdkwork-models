@@ -4,13 +4,16 @@
     "chat"
   ],
   "catalogKey": "moonshot/kimi-k2.6",
+  "codingVisible": true,
   "colorToken": "#334155",
   "contextTokens": 262144,
   "description": "Kimi K2.6 model for long-context Chinese, multilingual, and agent workloads.",
   "displayName": "Kimi K2.6",
   "familyCode": "kimi",
   "inputModalities": [
-    "text"
+    "text",
+    "image",
+    "video"
   ],
   "latencyP50Ms": 760,
   "latencyP95Ms": 2600,
@@ -29,8 +32,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
-    "sourceUrl": "https://platform.kimi.com/"
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.kimi.com/docs/models"
   },
   "strengths": [
     "Long context",
@@ -42,13 +45,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.880000",
-  "vendorCode": "moonshot",
-  "vendorName": "Moonshot Kimi",
-  "winRate": "0.875000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "moonshot",
+  "vendorName": "Moonshot Kimi",
+  "winRate": "0.875000"
 }

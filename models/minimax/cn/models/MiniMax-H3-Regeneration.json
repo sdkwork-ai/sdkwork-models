@@ -1,0 +1,43 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "minimax/MiniMax-H3-Regeneration",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "MiniMax-H3-Regeneration 视频再生成任务：将已生成的 768P 视频进一步生成为 2K 视频，按视频再生成输出秒数计费。",
+  "displayName": "MiniMax H3 Regeneration",
+  "familyCode": "minimax-video",
+  "inputModalities": [
+    "video"
+  ],
+  "lifecycle": "active",
+  "modelId": "MiniMax-H3-Regeneration",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "790.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+  },
+  "strengths": [
+    "768P → 2K 再生成",
+    "按再生成输出秒数计费"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.900000",
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax",
+  "winRate": "0.880000"
+}

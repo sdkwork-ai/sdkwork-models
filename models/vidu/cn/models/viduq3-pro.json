@@ -4,6 +4,7 @@
     "video"
   ],
   "catalogKey": "vidu/viduq3-pro",
+  "codingVisible": false,
   "colorToken": "#7c3aed",
   "description": "Vidu Q3 Pro flagship model for text-to-video, image-to-video, and start-end frame generation with native audio up to 1080p.",
   "displayName": "Vidu Q3 Pro",
@@ -28,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.vidu.cn/docs/text-to-video"
   },
   "strengths": [
@@ -41,9 +42,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.950000",
+  "usageScopes": [],
   "vendorCode": "vidu",
   "vendorName": "Vidu",
-  "winRate": "0.910000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.910000"
 }

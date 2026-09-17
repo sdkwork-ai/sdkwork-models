@@ -1,0 +1,43 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "elevenlabs/scribe_v2_medical",
+  "codingVisible": false,
+  "colorToken": "#1d4ed8",
+  "description": "Speech recognition fine-tuned for clinical audio: 18% fewer transcription errors on clinical audio than Scribe v2, the same accuracy on everyday speech, and the same features, languages, pricing and API as Scribe v2.",
+  "displayName": "Scribe v2 Medical",
+  "familyCode": "elevenlabs-stt",
+  "inputModalities": [
+    "audio"
+  ],
+  "latencyP50Ms": 1500,
+  "latencyP95Ms": 5000,
+  "lifecycle": "active",
+  "modelId": "scribe_v2_medical",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "rankScore": "790.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://elevenlabs.io/docs/models"
+  },
+  "strengths": [
+    "Clinical audio transcription",
+    "Entity detection",
+    "Word-level timestamps"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.910000",
+  "usageScopes": [],
+  "vendorCode": "elevenlabs",
+  "vendorName": "ElevenLabs",
+  "winRate": "0.900000"
+}

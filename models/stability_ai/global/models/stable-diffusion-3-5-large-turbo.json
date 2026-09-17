@@ -1,0 +1,42 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "stability_ai/stable-diffusion-3-5-large-turbo",
+  "codingVisible": false,
+  "colorToken": "#0d9488",
+  "description": "Turbo variant of Stable Diffusion 3.5 Large, for fast high-quality images. Officially billed at 4 credits per image ($0.040).",
+  "displayName": "Stable Diffusion 3.5 Large Turbo",
+  "familyCode": "stable-image",
+  "inputModalities": [
+    "text"
+  ],
+  "latencyP50Ms": 1800,
+  "latencyP95Ms": 6000,
+  "lifecycle": "active",
+  "modelId": "stable-diffusion-3-5-large-turbo",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "760.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.stability.ai/pricing"
+  },
+  "strengths": [
+    "Image generation",
+    "Prompt adherence"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.880000",
+  "usageScopes": [],
+  "vendorCode": "stability_ai",
+  "vendorName": "Stability AI",
+  "winRate": "0.870000"
+}

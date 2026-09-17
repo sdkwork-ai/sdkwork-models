@@ -1,0 +1,150 @@
+{
+  "catalogKey": "kuaishou/kling-video-o1",
+  "currency": "CNY",
+  "modelId": "kling-video-o1",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "noref_720p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.cn.official",
+      "priceId": "kuaishou-cn-kling-video-o1-second-noref-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "8dfd4e12e324b4205e3422b78b907a1eb3af2a679e518a31a90f76902d2e4e65",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
+      },
+      "tierCode": "noref_720p",
+      "unitPrice": "0.600000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "noref_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.cn.official",
+      "priceId": "kuaishou-cn-kling-video-o1-second-noref-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "79d6ff3fa94d1e5153163c39dc0e150d3a26af2b6d8f2f4902d0cb50c4cea91b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
+      },
+      "tierCode": "noref_1080p",
+      "unitPrice": "0.800000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "ref_720p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.cn.official",
+      "priceId": "kuaishou-cn-kling-video-o1-second-ref-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ab8dc2073de4413637155a30f764695486fdd487fab7c0d7afab4a22b83620f8",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
+      },
+      "tierCode": "ref_720p",
+      "unitPrice": "0.900000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "ref_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.cn.official",
+      "priceId": "kuaishou-cn-kling-video-o1-second-ref-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "c1df0efb6ee94169bfc613f06e7aade3a5180e01c5f5d94bd044a39186cc2ab2",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
+      },
+      "tierCode": "ref_1080p",
+      "unitPrice": "1.200000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "kuaishou"
+}

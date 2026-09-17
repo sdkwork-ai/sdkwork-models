@@ -1,0 +1,66 @@
+{
+  "catalogKey": "minimax/MiniMax-H3-Context-IR",
+  "currency": "CNY",
+  "modelId": "MiniMax-H3-Context-IR",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.minimax.cn.official",
+      "priceId": "minimax-cn-h3-context-ir-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "105846791c57a1d7c7349c241f8beee1a73616ac6124acd3d1c06c44be4986fe",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+      },
+      "unitPrice": "5.800000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.minimax.cn.official",
+      "priceId": "minimax-cn-h3-context-ir-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "609906fe7086e0178084e673328015fd401365f8d4fd1b0f3ef65f03ee0fd242",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+      },
+      "unitPrice": "23.000000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "minimax"
+}

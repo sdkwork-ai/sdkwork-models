@@ -1,0 +1,220 @@
+{
+  "catalogKey": "bytedance/seed-2-0-mini-260428",
+  "currency": "USD",
+  "modelId": "seed-2-0-mini-260428",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_le_128k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.global.official",
+      "priceId": "bytedance-global-seed-2-0-mini-260428-input-input_le_128k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "0f5a365032e7ef96ffa18761fddd3c3037e70556b2ac66f7d3eded8b842fe707",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+      },
+      "tierCode": "input_le_128k",
+      "unitPrice": "0.10",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_le_128k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.global.official",
+      "priceId": "bytedance-global-seed-2-0-mini-260428-cache-read-input_le_128k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d9449a224986c4950ebdfc092ce5d98822ef1e37d4b2a52c60af2de2dd5f7a1c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+      },
+      "tierCode": "input_le_128k",
+      "unitPrice": "0.02",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_le_128k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.global.official",
+      "priceId": "bytedance-global-seed-2-0-mini-260428-output-input_le_128k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "7fec7a7611c0cf917ffb646a4e70ee556effa9840259b51aa27ad209c9fccd28",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+      },
+      "tierCode": "input_le_128k",
+      "unitPrice": "0.40",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_128k_256k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.global.official",
+      "priceId": "bytedance-global-seed-2-0-mini-260428-input-input_128k_256k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "2dabf0acbcf709c83816de77aa4b1b3830c17e94a4184ff786533e1f51d64d8a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+      },
+      "tierCode": "input_128k_256k",
+      "unitPrice": "0.20",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_128k_256k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.global.official",
+      "priceId": "bytedance-global-seed-2-0-mini-260428-cache-read-input_128k_256k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "68cf0fc6b5024a7da066c8da1d876be3027acf9ec7f41c3587f6ab5f15fee014",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+      },
+      "tierCode": "input_128k_256k",
+      "unitPrice": "0.04",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_128k_256k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.global.official",
+      "priceId": "bytedance-global-seed-2-0-mini-260428-output-input_128k_256k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "47f4864a53fba3bae3525372672e8085934eb209c71780e7c6b014f6bf064aff",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+      },
+      "tierCode": "input_128k_256k",
+      "unitPrice": "0.80",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "bytedance"
+}

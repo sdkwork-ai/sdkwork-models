@@ -1,0 +1,80 @@
+{
+  "catalogKey": "bytedance/dreamina-seedance-2-0-fast-260128",
+  "currency": "USD",
+  "modelId": "dreamina-seedance-2-0-fast-260128",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "480p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.bytedance.global.official",
+      "priceId": "bytedance-global-dreamina-seedance-2-0-fast-260128-second-480p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "86a9f8ea8f12818711565d430f7e73c038021f19f3f86fd10e014642161ce392",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+      },
+      "tierCode": "480p",
+      "unitPrice": "0.060000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.bytedance.global.official",
+      "priceId": "bytedance-global-dreamina-seedance-2-0-fast-260128-second-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "fc49a230546093548f3ccc6b05d44346844bc6b2697a8f3e6fb33d80369b4d25",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+      },
+      "tierCode": "720p",
+      "unitPrice": "0.120000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "bytedance"
+}

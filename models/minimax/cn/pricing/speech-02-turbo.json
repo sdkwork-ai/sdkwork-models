@@ -1,0 +1,38 @@
+{
+  "catalogKey": "minimax/speech-02-turbo",
+  "currency": "CNY",
+  "modelId": "speech-02-turbo",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "operationCode": "speech.synthesize",
+      "priceBookCode": "models.minimax.cn.official",
+      "priceId": "minimax-cn-speech-02-turbo-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ae009779aec50d7c493c567f33287965fb626a59d81da41cd82d7b81df3ca917",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+      },
+      "unitPrice": "0.200000",
+      "unitSize": "1000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "minimax"
+}

@@ -1,0 +1,41 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "xiaomi/mimo-v2.5-tts-voicedesign",
+  "codingVisible": false,
+  "contextTokens": 8192,
+  "description": "Xiaomi MiMo V2.5 TTS voice design: define and generate a brand new timbre from a single sentence. The official pay-as-you-go page states the TTS series is free for a limited time (限时免费), so no per-unit rate is published.",
+  "displayName": "MiMo V2.5 TTS Voice Design",
+  "familyCode": "mimo-v2.5",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "catalog_only",
+  "maxOutputTokens": 8192,
+  "modelId": "mimo-v2.5-tts-voicedesign",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://mimo.mi.com/docs/en-US/quick-start/summary/model"
+  },
+  "strengths": [
+    "Voice design",
+    "Prompt-defined timbre"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "xiaomi",
+  "vendorName": "Xiaomi MiMo"
+}

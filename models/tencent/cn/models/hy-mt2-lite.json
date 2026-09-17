@@ -1,0 +1,42 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "tencent/hy-mt2-lite",
+  "codingVisible": false,
+  "colorToken": "#0f766e",
+  "description": "Tencent Hunyuan Hy-MT2-Lite translation model listed on the official TokenHub model price page at CNY 0.3 per 1M input tokens and CNY 1.2 per 1M output tokens. Context window is not stated on the official price page.",
+  "displayName": "Hy-MT2-Lite",
+  "familyCode": "hunyuan",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "hy-mt2-lite",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://cloud.tencent.com/document/product/1823/130055"
+  },
+  "strengths": [
+    "Translation",
+    "Multilingual",
+    "Cost efficient"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [
+    "chat"
+  ],
+  "vendorCode": "tencent"
+}

@@ -6,7 +6,7 @@
   "catalogKey": "openai/sora-2-pro",
   "codingVisible": false,
   "colorToken": "#0d9488",
-  "description": "OpenAI Sora 2 Pro high-fidelity video generation model up to 1080p resolution. Deprecated, Videos API closes 2026-09-24; plan migration before that date.",
+  "description": "Most advanced synced-audio video generation: $0.30/s at 720p, $0.50/s at 1024p, $0.70/s at 1080p. Deprecated 2026-03-24 with shutdown on 2026-09-24; the official deprecations page lists no replacement model.",
   "displayName": "Sora 2 Pro",
   "familyCode": "sora",
   "inputModalities": [
@@ -28,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-09-05T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://developers.openai.ac.cn/api/docs/guides/video-generation"
   },
   "strengths": [

@@ -6,7 +6,7 @@
   "catalogKey": "openai/gpt-4o-transcribe-diarize",
   "codingVisible": false,
   "colorToken": "#6366f1",
-  "description": "Speech-to-text model with speaker diarization for multi-speaker transcription.",
+  "description": "Transcription model that identifies who is speaking when. Officially deprecated on 2026-08-26, removal from the API on February 26, 2027; official replacement: gpt-live-transcribe or gpt-transcribe.",
   "displayName": "GPT-4o transcribe diarize",
   "familyCode": "audio",
   "inputModalities": [
@@ -14,7 +14,7 @@
   ],
   "latencyP50Ms": 900,
   "latencyP95Ms": 3000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "gpt-4o-transcribe-diarize",
   "outputModalities": [
     "text"
@@ -22,12 +22,12 @@
   "primaryCapability": "audio",
   "rankScore": "540.000000",
   "regionCode": "global",
-  "releaseStage": "active",
+  "releaseStage": "deprecated",
   "routingState": "enabled",
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-13T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-4o-transcribe-diarize"
   },
   "strengths": [

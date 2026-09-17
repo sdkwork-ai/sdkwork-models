@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "bytedance/doubao-seedance-2-0-mini-260615",
+  "codingVisible": false,
+  "colorToken": "#dc2626",
+  "description": "Doubao Seedance 2.0 Mini on Volcengine Ark (480p/720p 8-bit, 24 fps, 4-15s), the low-cost tier of the Seedance 2.0 series.",
+  "displayName": "Doubao Seedance 2.0 Mini",
+  "familyCode": "seedance",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "active",
+  "maxOutputSeconds": 15,
+  "modelId": "doubao-seedance-2-0-mini-260615",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://www.volcengine.com/docs/82379/1330310"
+  },
+  "strengths": [
+    "Multimodal reference-to-video",
+    "Video editing",
+    "Video extension",
+    "First/last frame to video",
+    "Text to video"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
+}

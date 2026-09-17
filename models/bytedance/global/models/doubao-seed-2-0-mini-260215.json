@@ -4,15 +4,16 @@
     "chat"
   ],
   "catalogKey": "bytedance/doubao-seed-2-0-mini-260215",
+  "codingVisible": true,
   "colorToken": "#3b82f6",
   "contextTokens": 128000,
-  "description": "Seed 2.0 Mini is optimized for inference throughput and deployment density. Designed for high concurrency and batch generation scenarios.",
+  "description": "Not present on the official BytePlus ModelArk model list as of 2026-09-17. BytePlus ModelArk publishes seed-2-0-mini-260215; the doubao- prefix is not used internationally.",
   "displayName": "Doubao Seed 2.0 Mini",
   "familyCode": "doubao-seed",
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 128000,
   "maxOutputTokens": 16384,
   "modelId": "doubao-seed-2-0-mini-260215",
@@ -22,12 +23,12 @@
   "primaryCapability": "chat",
   "rankScore": "830.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://seed.bytedance.com/en/seed2"
   },
   "strengths": [
@@ -39,11 +40,10 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.780000",
-  "vendorCode": "bytedance",
-  "vendorName": "ByteDance",
   "usageScopes": [
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
 }

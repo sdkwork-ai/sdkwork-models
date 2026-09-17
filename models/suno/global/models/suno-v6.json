@@ -1,0 +1,44 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "suno/suno-v6",
+  "codingVisible": false,
+  "colorToken": "#b91c1c",
+  "description": "Suno's top-tier advanced music model, available to Pro and Premier subscribers. Officially listed next to v6-wild as one of Suno's two advanced models; no official per-generation or per-second API price is published, so no price row is recorded.",
+  "displayName": "Suno v6",
+  "familyCode": "suno",
+  "inputModalities": [
+    "text",
+    "audio"
+  ],
+  "latencyP50Ms": 65000,
+  "latencyP95Ms": 190000,
+  "lifecycle": "catalog_only",
+  "modelId": "suno-v6",
+  "outputModalities": [
+    "music"
+  ],
+  "primaryCapability": "music",
+  "rankScore": "800.000000",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://suno.com/pricing"
+  },
+  "strengths": [
+    "Music generation",
+    "Song creation",
+    "Advanced model tier"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.940000",
+  "usageScopes": [],
+  "vendorCode": "suno",
+  "vendorName": "Suno",
+  "winRate": "0.900000"
+}

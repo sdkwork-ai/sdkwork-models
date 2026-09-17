@@ -4,8 +4,9 @@
     "music"
   ],
   "catalogKey": "minimax/music-3.0",
+  "codingVisible": false,
   "colorToken": "#1d4ed8",
-  "description": "MiniMax Music 3.0 flagship music generation model released July 16, 2026. Delivers full-length songs with vocals or instrumental tracks, improved vocal clarity, richer arrangements, and tighter prompt adherence over Music 2.6. Supports lyrics optimizer, BPM and key control, and reference audio conditioning.",
+  "description": "music-3.0 已由 MiniMax 官方标注「已下线」：自 2026 年 8 月 20 日起付费接口（音乐生成、歌词生成）不再面向新用户提供服务，历史付费用户仍可继续使用现有 API。替代方案见官方指引的 MiniMax Audio 或开源的 MiniMax Music 3（Hugging Face / ModelScope）。",
   "displayName": "MiniMax Music 3.0",
   "familyCode": "minimax-music",
   "inputModalities": [
@@ -14,7 +15,7 @@
   ],
   "latencyP50Ms": 22000,
   "latencyP95Ms": 80000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "music-3.0",
   "outputModalities": [
     "music"
@@ -22,13 +23,13 @@
   "primaryCapability": "music",
   "rankScore": "820.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
-    "sourceUrl": "https://platform.minimaxi.com/docs/guides/music-generation"
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
   },
   "strengths": [
     "Song generation",
@@ -41,9 +42,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.950000",
+  "usageScopes": [],
   "vendorCode": "minimax",
   "vendorName": "MiniMax",
-  "winRate": "0.900000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.900000"
 }

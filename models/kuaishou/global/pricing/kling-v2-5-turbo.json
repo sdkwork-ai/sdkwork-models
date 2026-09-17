@@ -1,0 +1,80 @@
+{
+  "catalogKey": "kuaishou/kling-v2-5-turbo",
+  "currency": "USD",
+  "modelId": "kling-v2-5-turbo",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-v2-5-turbo-second-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3255487c820b356809f52dfbda40612dbc09b2f0c17b11c4066c5964ec982283",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "res_720p",
+      "unitPrice": "0.042000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-v2-5-turbo-second-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "0fbbad5f650530ed7764cc85353172664c16e3b7a0a76cfdb573f81d858d7e41",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "0.070000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "kuaishou"
+}

@@ -1,0 +1,43 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "bytedance/doubao-seedream-4-5-251128",
+  "codingVisible": false,
+  "colorToken": "#dc2626",
+  "description": "Doubao Seedream 4.5 on Volcengine Ark. Supports single-image generation and group image generation from text, a single image, or multiple reference images.",
+  "displayName": "Doubao Seedream 4.5",
+  "familyCode": "seedream",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "doubao-seedream-4-5-251128",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://www.volcengine.com/docs/82379/1330310"
+  },
+  "strengths": [
+    "Text to image",
+    "Single image to image",
+    "Multi-reference image to image",
+    "Group image generation"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
+}

@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "zhipu/glm-5.1",
+  "codingVisible": true,
   "colorToken": "#7c2d12",
   "contextTokens": 200000,
   "description": "GLM model for Chinese and multimodal assistance.",
@@ -29,7 +30,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/text/glm-5.1"
   },
   "strengths": [
@@ -41,12 +42,11 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.830000",
-  "vendorCode": "zhipu",
-  "vendorName": "Zhipu AI",
-  "winRate": "0.840000",
   "usageScopes": [
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "zhipu",
+  "vendorName": "Zhipu AI",
+  "winRate": "0.840000"
 }

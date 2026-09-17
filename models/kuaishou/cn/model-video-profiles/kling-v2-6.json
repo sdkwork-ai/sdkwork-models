@@ -1,0 +1,109 @@
+{
+  "catalogKey": "kuaishou/kling-v2-6",
+  "modelId": "kling-v2-6",
+  "profiles": [
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "kuaishou/kling-v2-6/t2v_range_1080p",
+      "displayName": "Text to Video · 3–15s · 1080p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": true,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": true,
+      "profileCode": "t2v_range_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 10,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "kuaishou/kling-v2-6/i2v_range_1080p",
+      "displayName": "Image to Video · 3–15s · 1080p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": true,
+      "profileCode": "i2v_range_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "kuaishou/kling-v2-6/r2v_range_1080p",
+      "displayName": "Reference to Video · 3–15s · 1080p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "reference_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": true,
+      "profileCode": "r2v_range_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 30,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "kuaishou/kling-v2-6/multi_range_1080p",
+      "displayName": "Multi-shot · 3–15s · 1080p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "multi_shot",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": true,
+      "profileCode": "multi_range_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 40,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "1080p"
+      }
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://klingai.com/document-api/guides/capability-map/video"
+  },
+  "vendorCode": "kuaishou"
+}

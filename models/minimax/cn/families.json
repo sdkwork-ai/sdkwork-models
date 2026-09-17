@@ -9,7 +9,6 @@
       "sortOrder": 10
     },
     {
-      "defaultModel": "music-3.0",
       "displayName": "MiniMax Music",
       "familyCode": "minimax-music",
       "familyType": "music",
@@ -31,6 +30,14 @@
       "familyType": "image",
       "primaryModality": "image",
       "sortOrder": 40
+    },
+    {
+      "defaultModel": "hailuo-2.3",
+      "displayName": "MiniMax Video",
+      "familyCode": "minimax-video",
+      "familyType": "video",
+      "primaryModality": "video",
+      "sortOrder": 50
     }
   ],
   "regionCode": "cn",

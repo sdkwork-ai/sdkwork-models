@@ -1,0 +1,61 @@
+{
+  "catalogKey": "pixverse/pixverse-c1",
+  "modelId": "pixverse-c1",
+  "profiles": [
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "pixverse/pixverse-c1/t2v_range_720p",
+      "displayName": "Text to Video · 5–8s · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": true,
+      "maxDurationSeconds": 8,
+      "minDurationSeconds": 5,
+      "outputAudio": false,
+      "profileCode": "t2v_range_720p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 10,
+      "wireParameters": {
+        "duration": "5-8",
+        "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "pixverse/pixverse-c1/i2v_range_720p",
+      "displayName": "Image to Video · 5–8s · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 8,
+      "minDurationSeconds": 5,
+      "outputAudio": false,
+      "profileCode": "i2v_range_720p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "5-8",
+        "resolution": "720p"
+      }
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.platform.pixverse.ai/model-overview-2140345m0"
+  },
+  "vendorCode": "pixverse"
+}

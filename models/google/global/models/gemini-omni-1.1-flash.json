@@ -1,29 +1,34 @@
 {
-  "modelId": "gemini-omni-1.1-flash",
-  "catalogKey": "google/gemini-omni-1.1-flash",
   "apiFormat": "google_gemini",
   "capabilities": [
     "video"
   ],
-  "familyCode": "gemini",
-  "displayName": "Gemini Omni 1.1 Flash",
+  "catalogKey": "google/gemini-omni-1.1-flash",
+  "codingVisible": false,
   "colorToken": "#1d4ed8",
-  "primaryCapability": "video",
   "description": "Google Gemini Omni 1.1 Flash video generation model generally available since 2026-08-27, successor to the Omni Flash preview.",
+  "displayName": "Gemini Omni 1.1 Flash",
+  "familyCode": "gemini",
   "inputModalities": [
     "text",
     "image"
   ],
-  "outputModalities": [
-    "video"
-  ],
   "latencyP50Ms": 60000,
   "latencyP95Ms": 240000,
   "lifecycle": "active",
+  "modelId": "gemini-omni-1.1-flash",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
   "releaseStage": "active",
   "routingState": "enabled",
   "shelfState": "listed",
-  "regionCode": "global",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini"
+  },
   "strengths": [
     "Video generation",
     "Text to video",
@@ -32,14 +37,9 @@
   "supportsJsonSchema": false,
   "supportsStreaming": false,
   "supportsTools": false,
-  "codingVisible": false,
   "trendScore": "0.950000",
   "usageScopes": [],
   "vendorCode": "google",
   "vendorName": "Google",
-  "winRate": "0.920000",
-  "source": {
-    "observedAt": "2026-09-06T00:00:00Z",
-    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini"
-  }
+  "winRate": "0.920000"
 }

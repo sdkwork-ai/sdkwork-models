@@ -4,6 +4,7 @@
     "music"
   ],
   "catalogKey": "mureka/mureka-o2",
+  "codingVisible": false,
   "colorToken": "#5b21b6",
   "description": "Mureka O2 premium music reasoning model with enhanced composition quality and multilingual support. Successor to Mureka O1.",
   "displayName": "Mureka O2",
@@ -26,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.mureka.ai/docs/"
   },
   "strengths": [
@@ -38,9 +39,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.950000",
+  "usageScopes": [],
   "vendorCode": "mureka",
   "vendorName": "Mureka",
-  "winRate": "0.910000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.910000"
 }

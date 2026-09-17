@@ -1,0 +1,39 @@
+{
+  "catalogKey": "stability_ai/stable-diffusion-3-5-large-turbo",
+  "currency": "USD",
+  "modelId": "stable-diffusion-3-5-large-turbo",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "notes": "Official Stability Developer Platform Generate rate (4 credits at $0.01/credit).",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.stability_ai.global.official",
+      "priceId": "stability-ai-global-stable-diffusion-3-5-large-turbo-result",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.stability_ai.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "adfae21113911a91d2e0ffc682515059891a0bc8ac1e2d95ad08f34147f0654c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.stability.ai/pricing"
+      },
+      "unitPrice": "0.040000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "stability_ai"
+}

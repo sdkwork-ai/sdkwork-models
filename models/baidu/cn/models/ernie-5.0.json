@@ -1,0 +1,36 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "baidu/ernie-5.0",
+  "codingVisible": true,
+  "description": "文心 5.0 原生全模态旗舰大模型（非思考基础版），128k 上下文、最大输出 65536 tokens。",
+  "displayName": "ERNIE 5.0",
+  "familyCode": "ernie",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "ernie-5.0",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
+  },
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "baidu",
+  "vendorName": "Baidu"
+}

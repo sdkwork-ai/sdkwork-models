@@ -1,0 +1,35 @@
+{
+  "apiFormat": "openai_compatible",
+  "catalogKey": "alibaba/qwen3.7-flash",
+  "codingVisible": true,
+  "description": "低延迟高性价比文本模型，1M 上下文、支持思考模式与先进工具调用；适用大规模高吞吐场景。",
+  "displayName": "Qwen3.7 Flash",
+  "familyCode": "qwen",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "qwen3.7-flash",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/text-generation-model"
+  },
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "chat",
+    "coding"
+  ],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud"
+}

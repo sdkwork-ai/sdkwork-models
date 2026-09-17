@@ -1,0 +1,80 @@
+{
+  "catalogKey": "kuaishou/kling-3.0-turbo",
+  "currency": "CNY",
+  "modelId": "kling-3.0-turbo",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "audio_res_720p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.cn.official",
+      "priceId": "kuaishou-cn-kling-3.0-turbo-second-audio-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "7a40b1d8f92bbbef07230b9f7affcb6e661297c8161139534db48543498c3d13",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
+      },
+      "tierCode": "audio_res_720p",
+      "unitPrice": "0.800000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "audio_res_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.cn.official",
+      "priceId": "kuaishou-cn-kling-3.0-turbo-second-audio-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a8fa5dd74ef7972d2647037d2660914b22fd619daef95a29a34ba878b9c273c0",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
+      },
+      "tierCode": "audio_res_1080p",
+      "unitPrice": "1.000000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "kuaishou"
+}

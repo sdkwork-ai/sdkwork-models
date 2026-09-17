@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "kuaishou/kling-video-o1",
+  "codingVisible": false,
+  "colorToken": "#6d28d9",
+  "description": "Kling O1 大一统视频模型：全能多模态指令输入，生成 3~10s、720P/1080P 视频，参考视频输入另按更高档位计价。",
+  "displayName": "Kling O1",
+  "familyCode": "kling",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "active",
+  "modelId": "kling-video-o1",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "845.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://klingai.com/document-api/guides/capability-map/video"
+  },
+  "strengths": [
+    "大一统视频模型",
+    "全能多模态指令",
+    "超高一致性"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.940000",
+  "usageScopes": [],
+  "vendorCode": "kuaishou",
+  "vendorName": "Kuaishou",
+  "winRate": "0.900000"
+}

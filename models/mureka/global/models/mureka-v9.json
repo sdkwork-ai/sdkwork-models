@@ -4,6 +4,7 @@
     "music"
   ],
   "catalogKey": "mureka/mureka-v9",
+  "codingVisible": false,
   "colorToken": "#a855f7",
   "description": "Mureka V9 flagship music generation model with more lyric control, cleaner mix, and faster generation.",
   "displayName": "Mureka V9",
@@ -26,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.mureka.ai/docs/"
   },
   "strengths": [
@@ -39,9 +40,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.970000",
+  "usageScopes": [],
   "vendorCode": "mureka",
   "vendorName": "Mureka",
-  "winRate": "0.930000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.930000"
 }

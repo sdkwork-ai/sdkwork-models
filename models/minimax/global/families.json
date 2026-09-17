@@ -9,7 +9,7 @@
       "sortOrder": 10
     },
     {
-      "defaultModel": "music-3.0",
+      "defaultModel": "music-cover",
       "displayName": "MiniMax Music",
       "familyCode": "minimax-music",
       "familyType": "music",

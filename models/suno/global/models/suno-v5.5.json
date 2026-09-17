@@ -4,8 +4,9 @@
     "music"
   ],
   "catalogKey": "suno/suno-v5.5",
+  "codingVisible": false,
   "colorToken": "#b91c1c",
-  "description": "Most expressive Suno music generation model with Voices, Custom models, and My Taste personalization.",
+  "description": "Superseded by the Suno v6 family (v6, v6-wild, v6-mini), which the official plans comparison at https://suno.com/pricing now lists as the available models for free, Pro and Premier tiers. Retained for callers that still pin the v5.5 model id; migrate to suno-v6 / suno-v6-wild.",
   "displayName": "Suno v5.5",
   "familyCode": "suno",
   "inputModalities": [
@@ -14,7 +15,7 @@
   ],
   "latencyP50Ms": 65000,
   "latencyP95Ms": 190000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "suno-v5.5",
   "outputModalities": [
     "music"
@@ -22,12 +23,12 @@
   "primaryCapability": "music",
   "rankScore": "780.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://suno.com/blog/v5-5"
   },
   "strengths": [
@@ -40,9 +41,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.920000",
+  "usageScopes": [],
   "vendorCode": "suno",
   "vendorName": "Suno",
-  "winRate": "0.880000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.880000"
 }

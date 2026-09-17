@@ -4,6 +4,7 @@
     "sfx"
   ],
   "catalogKey": "elevenlabs/eleven_text_to_sound_v2",
+  "codingVisible": false,
   "colorToken": "#7c2d12",
   "description": "ElevenLabs Text to Sound v2 for cinematic sound-effect generation from text prompts with up to 30 seconds output.",
   "displayName": "Eleven Text to Sound v2",
@@ -26,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://elevenlabs.io/docs/models"
   },
   "strengths": [
@@ -39,9 +40,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.820000",
+  "usageScopes": [],
   "vendorCode": "elevenlabs",
   "vendorName": "ElevenLabs",
-  "winRate": "0.820000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.820000"
 }

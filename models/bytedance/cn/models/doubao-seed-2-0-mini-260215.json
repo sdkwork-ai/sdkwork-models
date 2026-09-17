@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "bytedance/doubao-seed-2-0-mini-260215",
+  "codingVisible": true,
   "colorToken": "#3b82f6",
   "contextTokens": 128000,
   "description": "Seed 2.0 Mini is optimized for inference throughput and deployment density. Designed for high concurrency and batch generation scenarios.",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://seed.bytedance.com/en/seed2"
   },
   "strengths": [
@@ -39,11 +40,10 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.780000",
-  "vendorCode": "bytedance",
-  "vendorName": "ByteDance",
   "usageScopes": [
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
 }

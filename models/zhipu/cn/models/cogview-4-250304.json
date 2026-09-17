@@ -4,6 +4,7 @@
     "image"
   ],
   "catalogKey": "zhipu/cogview-4-250304",
+  "codingVisible": false,
   "colorToken": "#2563eb",
   "description": "CogView-4 text-to-image model with strong Chinese character rendering and flexible resolution output.",
   "displayName": "CogView 4",
@@ -26,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/image-generation/cogview-4"
   },
   "strengths": [
@@ -38,9 +39,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.880000",
+  "usageScopes": [],
   "vendorCode": "zhipu",
   "vendorName": "Zhipu AI",
-  "winRate": "0.860000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.860000"
 }

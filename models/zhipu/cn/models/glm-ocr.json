@@ -1,0 +1,45 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "zhipu/glm-ocr",
+  "codingVisible": false,
+  "colorToken": "#7c2d12",
+  "contextTokens": 32768,
+  "description": "Zhipu GLM-OCR lightweight document and image parsing model. Official model overview lists 32K context, single image <= 10 MB, PDF <= 50 MB and up to 100 pages; official pricing lists CNY 0.2 per 1M input and output tokens with cache hits unsupported.",
+  "displayName": "GLM-OCR",
+  "familyCode": "glm",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 32768,
+  "modelId": "glm-ocr",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/model-overview"
+  },
+  "strengths": [
+    "OCR",
+    "Document parsing",
+    "Image understanding"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [
+    "chat"
+  ],
+  "vendorCode": "zhipu"
+}

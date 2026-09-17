@@ -1,0 +1,38 @@
+{
+  "catalogKey": "elevenlabs/music_v2_5",
+  "currency": "USD",
+  "modelId": "music_v2_5",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "music_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "music.generate",
+      "priceBookCode": "models.elevenlabs.global.official",
+      "priceId": "elevenlabs-music-v2-5-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.elevenlabs.music",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3678fd7f0bc2c17054f6fd9b1e874854bba9c5a3c860cd3c4e836d8b6a3f8c2d",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://elevenlabs.io/pricing/api"
+      },
+      "unitPrice": "0.002500",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "elevenlabs"
+}

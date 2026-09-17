@@ -1,0 +1,150 @@
+{
+  "catalogKey": "baidu/ernie-5.0",
+  "currency": "CNY",
+  "modelId": "ernie-5.0",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "tier_32k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5.0-input-32k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "4c671a5945f298367566a953503c7579b0bade96b8edfcb9dad7986a90e4c21d",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a"
+      },
+      "tierCode": "tier_32k",
+      "unitPrice": "6.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "tier_32k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5.0-output-32k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "6219eb418e59e697ccaf99f03fcf0e90df34a41c4e0e6ba7d9012f40776919d2",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a"
+      },
+      "tierCode": "tier_32k",
+      "unitPrice": "24.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "tier_128k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5.0-input-128k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "cbbf2d3716f84f77a7352752a4b20002da97a128a8c90c209f8927c23d019521",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a"
+      },
+      "tierCode": "tier_128k",
+      "unitPrice": "10.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "tier_128k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5.0-output-128k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "b7bac2e3a2d03b1950efa69191b484bbacb93c157b193e42eef810fdf0555ec8",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a"
+      },
+      "tierCode": "tier_128k",
+      "unitPrice": "40.000000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "baidu"
+}

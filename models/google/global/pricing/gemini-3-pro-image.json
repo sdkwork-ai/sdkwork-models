@@ -4,56 +4,37 @@
   "modelId": "gemini-3-pro-image",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
       "currency": "USD",
       "effectiveFrom": "2026-07-02T00:00:00Z",
       "meterCode": "llm_input_token",
       "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.google.global.official",
       "priceId": "google-gemini-3-pro-image-text-input",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.google.image",
+      "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "3c3c74f6217d79f77039298885483cd4f5c093bcae85a0ff0e2a607c98e9d50d",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
       },
       "unitPrice": "2.000000",
-      "unitSize": "1000000",
-      "priceBookCode": "models.google.global.official",
-      "productCode": "models.google.image",
-      "operationCode": "image.generate",
-      "billability": "chargeable",
-      "chargeTiming": "usage_reported",
-      "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [],
-      "rateHash": "3c3c74f6217d79f77039298885483cd4f5c093bcae85a0ff0e2a607c98e9d50d",
-      "priority": 100,
-      "rateVariant": "standard",
-      "schedule": null
+      "unitSize": "1000000"
     },
     {
-      "currency": "USD",
-      "effectiveFrom": "2026-07-02T00:00:00Z",
-      "meterCode": "image_output_token",
-      "minimumQuantity": "0",
-      "outputType": "image",
-      "priceId": "google-gemini-3-pro-image-image-output",
-      "priceSide": "official",
-      "pricingScope": "model",
-      "quantityStep": "1",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
-      },
-      "unitPrice": "120.000000",
-      "unitSize": "1000000",
-      "priceBookCode": "models.google.global.official",
-      "productCode": "models.google.image",
-      "operationCode": "image.generate",
       "billability": "chargeable",
-      "chargeTiming": "usage_reported",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
+      "chargeTiming": "usage_reported",
       "conditions": [
         {
           "dimensionCode": "output_type",
@@ -61,10 +42,29 @@
           "value": "image"
         }
       ],
-      "rateHash": "a429a5b788a311a0b18c2cdb864292c53612f21990be5c1ad05e4ec41cc001f8",
+      "currency": "USD",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "image_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "outputType": "image",
+      "priceBookCode": "models.google.global.official",
+      "priceId": "google-gemini-3-pro-image-image-output",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
+      "productCode": "models.google.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a429a5b788a311a0b18c2cdb864292c53612f21990be5c1ad05e4ec41cc001f8",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "unitPrice": "120.000000",
+      "unitSize": "1000000"
     }
   ],
   "regionCode": "global",

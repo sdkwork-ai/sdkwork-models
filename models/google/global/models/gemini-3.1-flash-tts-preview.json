@@ -4,6 +4,7 @@
     "audio"
   ],
   "catalogKey": "google/gemini-3.1-flash-tts-preview",
+  "codingVisible": false,
   "colorToken": "#7c3aed",
   "contextTokens": 32768,
   "description": "Gemini 3.1 Flash preview text-to-speech model.",
@@ -29,7 +30,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
   },
   "strengths": [
@@ -40,9 +41,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.900000",
+  "usageScopes": [],
   "vendorCode": "google",
   "vendorName": "Google",
-  "winRate": "0.850000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.850000"
 }

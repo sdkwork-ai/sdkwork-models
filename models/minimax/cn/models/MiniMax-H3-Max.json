@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "minimax/MiniMax-H3-Max",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "MiniMax H3 Max 由 fal.ai 基于 MiniMax H3 后训练的极速视频生成模型，仅支持文生 / 图生（首帧、尾帧），480P / 768P 分辨率，5–15s 时长，24 FPS。",
+  "displayName": "MiniMax H3 Max",
+  "familyCode": "minimax-video",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "MiniMax-H3-Max",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "840.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/api-reference/video-generation-v2-create"
+  },
+  "strengths": [
+    "极速生成",
+    "文生视频",
+    "图生视频（首帧 / 尾帧）",
+    "480P / 768P"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.930000",
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax",
+  "winRate": "0.900000"
+}

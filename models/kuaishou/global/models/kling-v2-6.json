@@ -1,0 +1,47 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "kuaishou/kling-v2-6",
+  "codingVisible": false,
+  "colorToken": "#5b21b6",
+  "description": "Kling 2.6：官方能力地图标注「音画同步生成，有声音更精彩」，支持 3~10s、720P/1080P，含动作控制与指定音色。",
+  "displayName": "Kling 2.6",
+  "familyCode": "kling",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "active",
+  "modelId": "kling-v2-6",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "815.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://kling.ai/document-api/guides/capability-map/video"
+  },
+  "strengths": [
+    "音画同步生成",
+    "有声角色驱动",
+    "动作控制"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.930000",
+  "usageScopes": [],
+  "vendorCode": "kuaishou",
+  "vendorName": "Kuaishou",
+  "winRate": "0.890000"
+}

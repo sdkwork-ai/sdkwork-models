@@ -4,6 +4,7 @@
     "video"
   ],
   "catalogKey": "luma_ai/ray-3",
+  "codingVisible": false,
   "colorToken": "#6366f1",
   "description": "Luma first native-reasoning video model; superseded by Ray 3.14 and Ray 3.2.",
   "displayName": "Ray 3",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-09-06T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://docs.lumalabs.ai/docs/video-generation"
   },
   "strengths": [
@@ -40,9 +41,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.950000",
+  "usageScopes": [],
   "vendorCode": "luma_ai",
   "vendorName": "Luma AI",
-  "winRate": "0.900000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.900000"
 }

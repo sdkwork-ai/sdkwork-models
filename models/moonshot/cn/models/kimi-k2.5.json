@@ -4,9 +4,10 @@
     "chat"
   ],
   "catalogKey": "moonshot/kimi-k2.5",
+  "codingVisible": true,
   "colorToken": "#334155",
   "contextTokens": 262144,
-  "description": "Previous Kimi K2.5 generation superseded by Kimi K3 on July 16, 2026; kept for migration reference.",
+  "description": "Kimi K2.5 was officially discontinued on 2026-08-31 and is no longer maintained or supported; the official model list marks it as offline and points to kimi-k3 for continued support.",
   "displayName": "Kimi K2.5",
   "familyCode": "kimi",
   "inputModalities": [
@@ -14,7 +15,7 @@
   ],
   "latencyP50Ms": 780,
   "latencyP95Ms": 2700,
-  "lifecycle": "deprecated",
+  "lifecycle": "retired",
   "maxInputTokens": 262144,
   "maxOutputTokens": 32768,
   "modelId": "kimi-k2.5",
@@ -24,14 +25,14 @@
   "primaryCapability": "chat",
   "rankScore": "860.000000",
   "regionCode": "cn",
-  "releaseStage": "deprecated",
+  "releaseStage": "retired",
   "replacementModel": "kimi-k3",
-  "routingState": "catalog_only",
+  "routingState": "disabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "hidden",
+  "shelfState": "archived",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
-    "sourceUrl": "https://www.kimi.com/blog/kimi-k3"
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.kimi.com/docs/models"
   },
   "strengths": [
     "Long context",
@@ -42,12 +43,11 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.850000",
-  "vendorCode": "moonshot",
-  "vendorName": "Moonshot Kimi",
-  "winRate": "0.860000",
   "usageScopes": [
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "moonshot",
+  "vendorName": "Moonshot Kimi",
+  "winRate": "0.860000"
 }

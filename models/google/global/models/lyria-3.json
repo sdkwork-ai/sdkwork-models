@@ -4,15 +4,16 @@
     "music"
   ],
   "catalogKey": "google/lyria-3",
+  "codingVisible": false,
   "colorToken": "#4285f4",
   "contextTokens": 4096,
-  "description": "Lyria 3 is Google's latest music generation model, creating high-quality music from text prompts.",
+  "description": "官方已无 lyria-3 这一 id，实际端点为 lyria-3-clip-preview 与 lyria-3-pro-preview。",
   "displayName": "Lyria 3",
   "familyCode": "lyria",
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 4096,
   "modelId": "lyria-3",
   "outputModalities": [
@@ -20,12 +21,12 @@
   ],
   "primaryCapability": "music",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
   },
   "strengths": [
@@ -35,8 +36,7 @@
   "supportsJsonSchema": false,
   "supportsStreaming": false,
   "supportsTools": false,
-  "vendorCode": "google",
-  "vendorName": "Google",
   "usageScopes": [],
-  "codingVisible": false
+  "vendorCode": "google",
+  "vendorName": "Google"
 }

@@ -4,6 +4,7 @@
     "image"
   ],
   "catalogKey": "google/gemini-3.1-flash-image",
+  "codingVisible": false,
   "colorToken": "#4285f4",
   "contextTokens": 32768,
   "description": "Gemini 3.1 Flash Image provides fast image generation from text prompts.",
@@ -29,7 +30,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
   },
   "strengths": [
@@ -41,11 +42,10 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.920000",
-  "vendorCode": "google",
-  "vendorName": "Google",
-  "winRate": "0.880000",
   "usageScopes": [
     "agent"
   ],
-  "codingVisible": false
+  "vendorCode": "google",
+  "vendorName": "Google",
+  "winRate": "0.880000"
 }

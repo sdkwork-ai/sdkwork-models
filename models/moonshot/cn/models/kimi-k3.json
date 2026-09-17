@@ -4,19 +4,21 @@
     "chat"
   ],
   "catalogKey": "moonshot/kimi-k3",
+  "codingVisible": true,
   "colorToken": "#334155",
-  "contextTokens": 1000000,
+  "contextTokens": 1048576,
   "description": "Kimi K3 flagship released on July 16, 2026 at WAIC 2026; 2.8T-parameter Stable LatentMoE with 16-of-896 expert activation, native multimodal vision, and 1M context for long-horizon agent coding.",
   "displayName": "Kimi K3",
   "familyCode": "kimi",
   "inputModalities": [
     "text",
-    "image"
+    "image",
+    "video"
   ],
   "latencyP50Ms": 820,
   "latencyP95Ms": 2900,
   "lifecycle": "active",
-  "maxInputTokens": 1000000,
+  "maxInputTokens": 1048576,
   "maxOutputTokens": 65536,
   "modelId": "kimi-k3",
   "outputModalities": [
@@ -30,8 +32,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
-    "sourceUrl": "https://www.kimi.com/blog/kimi-k3"
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
   },
   "strengths": [
     "Native multimodal",
@@ -44,13 +46,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.995000",
-  "vendorCode": "moonshot",
-  "vendorName": "Moonshot Kimi",
-  "winRate": "0.950000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "moonshot",
+  "vendorName": "Moonshot Kimi",
+  "winRate": "0.950000"
 }

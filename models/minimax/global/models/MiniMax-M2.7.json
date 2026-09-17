@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "minimax/MiniMax-M2.7",
+  "codingVisible": true,
   "colorToken": "#4f46e5",
   "contextTokens": 204800,
   "description": "MiniMax M2.7 text model for long-context coding, office, agent and tool workflows.",
@@ -29,7 +30,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation"
   },
   "strengths": [
@@ -41,13 +42,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.820000",
-  "vendorCode": "minimax",
-  "vendorName": "MiniMax",
-  "winRate": "0.805000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax",
+  "winRate": "0.805000"
 }

@@ -4,32 +4,109 @@
   "modelId": "hailuo-2.3-fast",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_768p_dur_6s"
+        }
+      ],
       "currency": "USD",
-      "effectiveFrom": "2026-07-02T00:00:00Z",
-      "meterCode": "video_output_second",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_result",
       "minimumQuantity": "0",
-      "priceId": "minimax-global-hailuo-2-3-fast-second-768p",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.minimax.global.official",
+      "priceId": "minimax-global-hailuo-2-3-fast-result-res-768p-dur-6s",
       "priceSide": "official",
       "pricingScope": "model",
-      "quantityStep": "1",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-video"
-      },
-      "unitPrice": "0.031000",
-      "unitSize": "1",
-      "priceBookCode": "models.minimax.global.official",
-      "productCode": "models.minimax.video",
-      "operationCode": "video.generate",
-      "billability": "chargeable",
-      "chargeTiming": "successful_result",
-      "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [],
-      "rateHash": "80bcb4171f810eb07f03e92e5f34cb41e1312fe4571f62850164e29b07867d30",
       "priority": 100,
+      "productCode": "models.minimax.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "830c12a0c557143859913def61c459311c1a0d72c7ffa4e21a52ce32e6b1f6c3",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "tierCode": "res_768p_dur_6s",
+      "unitPrice": "0.190000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_768p_dur_10s"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.minimax.global.official",
+      "priceId": "minimax-global-hailuo-2-3-fast-result-res-768p-dur-10s",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5ed9cc0dad10c52a9404bd55f52533e9509b7c85f374da86e042f44413e8a34c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "tierCode": "res_768p_dur_10s",
+      "unitPrice": "0.320000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p_dur_6s"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.minimax.global.official",
+      "priceId": "minimax-global-hailuo-2-3-fast-result-res-1080p-dur-6s",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "6f9d568aed2d4622f802e37c21cae1ef0fd1275d029a15e3e3e811dd736099e4",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "tierCode": "res_1080p_dur_6s",
+      "unitPrice": "0.330000",
+      "unitSize": "1"
     }
   ],
   "regionCode": "global",

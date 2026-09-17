@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#7c2d12",
   "contextTokens": 1000000,
-  "description": "Claude Fable 5.1, Anthropic's flagship successor to Claude Fable 5 released on 2026-09-01, with 1M token context and adaptive thinking for the most demanding reasoning and long-horizon agentic work.",
+  "description": "Anthropic top model for demanding reasoning and long-horizon agentic work. 1M-token context, 128K max output. Cache hits priced at 0.025x base input ($0.25 / MTok).",
   "displayName": "Claude Fable 5.1",
   "familyCode": "claude",
   "inputModalities": [
@@ -31,7 +31,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-09-05T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
   },
   "strengths": [

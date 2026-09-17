@@ -1,0 +1,35 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "runway/magnific_video_upscaler_creative",
+  "codingVisible": false,
+  "description": "Magnific video upscaling model available through the Runway Dev API. Official pricing is per output frame, which has no matching meterCode in this catalog.",
+  "displayName": "Magnific Video Upscaler Creative",
+  "familyCode": "runway-video",
+  "inputModalities": [
+    "video"
+  ],
+  "lifecycle": "preview",
+  "modelId": "magnific_video_upscaler_creative",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "runway",
+  "vendorName": "Runway"
+}

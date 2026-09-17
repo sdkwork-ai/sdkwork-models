@@ -1,0 +1,37 @@
+{
+  "catalogKey": "vidu/viduq3-pro-fast",
+  "modelId": "viduq3-pro-fast",
+  "profiles": [
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "vidu/viduq3-pro-fast/i2v_range_720p",
+      "displayName": "Image to Video · 5–10s · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": true,
+      "maxDurationSeconds": 10,
+      "minDurationSeconds": 5,
+      "outputAudio": true,
+      "profileCode": "i2v_range_720p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 10,
+      "wireParameters": {
+        "duration": "5-10",
+        "resolution": "720p"
+      }
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.vidu.com/docs/model-map"
+  },
+  "vendorCode": "vidu"
+}

@@ -1,0 +1,37 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "openai/gpt-rosalind-research",
+  "codingVisible": false,
+  "colorToken": "#111827",
+  "description": "Life sciences reasoning model for approved organizations only (trusted-access program). Billing begins October 5, 2026; cache-write pricing does not apply. Kept catalog_only/hidden because access is restricted.",
+  "displayName": "GPT-Rosalind Research",
+  "familyCode": "gpt-5",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "gpt-rosalind-research",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+  },
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [],
+  "vendorCode": "openai",
+  "vendorName": "OpenAI"
+}

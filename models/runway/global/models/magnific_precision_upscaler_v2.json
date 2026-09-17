@@ -1,0 +1,35 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "runway/magnific_precision_upscaler_v2",
+  "codingVisible": false,
+  "description": "Magnific Precision Upscaler V2 image upscaling model available through the Runway Dev API.",
+  "displayName": "Magnific Precision Upscaler V2",
+  "familyCode": "runway-image",
+  "inputModalities": [
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "magnific_precision_upscaler_v2",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "runway",
+  "vendorName": "Runway"
+}

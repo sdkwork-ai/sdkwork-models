@@ -1,0 +1,38 @@
+{
+  "catalogKey": "google/lyria-3-pro-preview",
+  "currency": "USD",
+  "modelId": "lyria-3-pro-preview",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "api_result",
+      "minimumQuantity": "0",
+      "operationCode": "music.generate",
+      "priceBookCode": "models.google.global.official",
+      "priceId": "google-lyria-3-pro-preview-song",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.google.music",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "8d9e0c57c42080bd6c9d225f97555dd358c99a25aeb0d29a7b7ec8456261d0a9",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "unitPrice": "0.080000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "google"
+}

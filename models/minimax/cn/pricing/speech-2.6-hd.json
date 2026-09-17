@@ -1,0 +1,38 @@
+{
+  "catalogKey": "minimax/speech-2.6-hd",
+  "currency": "CNY",
+  "modelId": "speech-2.6-hd",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "operationCode": "speech.synthesize",
+      "priceBookCode": "models.minimax.cn.official",
+      "priceId": "minimax-cn-speech-2-6-hd-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "64aadbf831b27bfb6b5ed5f7285e6105dd1bd5df8ecb250087db4d430f3cd9b4",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+      },
+      "unitPrice": "0.350000",
+      "unitSize": "1000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "minimax"
+}

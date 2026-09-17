@@ -4,9 +4,10 @@
     "chat"
   ],
   "catalogKey": "xiaomi/mimo-v2.5-pro-fp4-dflash",
+  "codingVisible": true,
   "colorToken": "#FF6900",
   "contextTokens": 1048576,
-  "description": "Xiaomi MiMo V2.5 Pro FP4 DFlash - 554B parameter MoE model with FP4 quantization, optimized for high-speed inference.",
+  "description": "Not part of the official Xiaomi MiMo API model list or pay-as-you-go price list as of 2026-09-17 (the catalog source was a Hugging Face model card). Kept in the catalog but hidden from the shelf; membership of the public API surface is unconfirmed.",
   "displayName": "MiMo V2.5 Pro FP4 DFlash",
   "familyCode": "mimo-v2.5",
   "inputModalities": [
@@ -25,11 +26,11 @@
   "rankScore": "1095.000000",
   "regionCode": "global",
   "releaseStage": "active",
-  "routingState": "enabled",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash"
   },
   "strengths": [
@@ -42,13 +43,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.960000",
-  "vendorCode": "xiaomi",
-  "vendorName": "Xiaomi MiMo",
-  "winRate": "0.930000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "xiaomi",
+  "vendorName": "Xiaomi MiMo",
+  "winRate": "0.930000"
 }

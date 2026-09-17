@@ -5,9 +5,10 @@
     "chat"
   ],
   "catalogKey": "google/gemini-3.1-flash-image-preview",
+  "codingVisible": true,
   "colorToken": "#0891b2",
   "contextTokens": 32768,
-  "description": "Gemini 3.1 Flash preview model for image generation and multimodal image editing.",
+  "description": "官方已下线（changelog 2026-05-26：Deprecated and shut down on June 25, 2026）。替代模型 gemini-3.1-flash-image。",
   "displayName": "Gemini 3.1 Flash Image Preview",
   "familyCode": "gemini-image",
   "inputModalities": [
@@ -16,7 +17,7 @@
   ],
   "latencyP50Ms": 2500,
   "latencyP95Ms": 9000,
-  "lifecycle": "preview",
+  "lifecycle": "retired",
   "maxInputTokens": 32768,
   "maxOutputTokens": 8192,
   "modelId": "gemini-3.1-flash-image-preview",
@@ -27,12 +28,12 @@
   "primaryCapability": "image",
   "rankScore": "880.000000",
   "regionCode": "global",
-  "releaseStage": "preview",
-  "routingState": "enabled",
+  "releaseStage": "retired",
+  "routingState": "disabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "archived",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
   },
   "strengths": [
@@ -44,12 +45,11 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.930000",
-  "vendorCode": "google",
-  "vendorName": "Google",
-  "winRate": "0.880000",
   "usageScopes": [
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "google",
+  "vendorName": "Google",
+  "winRate": "0.880000"
 }

@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "google/gemini-3.5-flash",
+  "codingVisible": true,
   "colorToken": "#1d4ed8",
   "contextTokens": 1048576,
   "description": "Current Gemini 3.5 Flash main-tier model, GA since May 19, 2026; Gemini 3.6 Flash remains a faster sibling tier, not a replacement.",
@@ -32,7 +33,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
   },
   "strengths": [
@@ -45,13 +46,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.990000",
-  "vendorCode": "google",
-  "vendorName": "Google",
-  "winRate": "0.950000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "google",
+  "vendorName": "Google",
+  "winRate": "0.950000"
 }

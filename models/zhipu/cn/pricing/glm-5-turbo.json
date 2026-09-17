@@ -1,0 +1,199 @@
+{
+  "catalogKey": "zhipu/glm-5-turbo",
+  "currency": "CNY",
+  "modelId": "glm-5-turbo",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.zhipu.cn.official",
+      "priceId": "zhipu-cn-glm-5-turbo-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.zhipu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "9fc97be50c8e5aaafea23d360a8969974920e71f9974db30edbc73bce7230832",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
+      },
+      "unitPrice": "5.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "context_tokens",
+          "operator": "gt",
+          "value": "32000"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "32000",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.zhipu.cn.official",
+      "priceId": "zhipu-cn-glm-5-turbo-input-above-32k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.zhipu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "7bb3c9f31d1f70ca8d4dd6211cc67c3401230d46e40f3b56a63252a236132016",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
+      },
+      "thresholdTokens": 32000,
+      "unitPrice": "7.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.zhipu.cn.official",
+      "priceId": "zhipu-cn-glm-5-turbo-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.zhipu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "41ef5e0ff757efcd5214ade0f84ad2e48910b6c5f7d82c916b0061e096258a2e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
+      },
+      "unitPrice": "22.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "context_tokens",
+          "operator": "gt",
+          "value": "32000"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "32000",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.zhipu.cn.official",
+      "priceId": "zhipu-cn-glm-5-turbo-output-above-32k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.zhipu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a6d1fab876399aa88acd748a3a6bbdd690ff58a2bd17a9c0e6d168c8a05fb113",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
+      },
+      "thresholdTokens": 32000,
+      "unitPrice": "26.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.zhipu.cn.official",
+      "priceId": "zhipu-cn-glm-5-turbo-cache-read",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.zhipu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "e1aa54db5862654c146b0b52570c3ed99c38498ec7241cda50eb5a5128b2232b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
+      },
+      "unitPrice": "1.200000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "context_tokens",
+          "operator": "gt",
+          "value": "32000"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "32000",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.zhipu.cn.official",
+      "priceId": "zhipu-cn-glm-5-turbo-cache-read-above-32k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.zhipu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "13af1bfaa53481960dcdba3fe18ce3e0028768ba7a30283d329908182b925115",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
+      },
+      "thresholdTokens": 32000,
+      "unitPrice": "1.800000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "zhipu"
+}

@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "google/gemini-3.5-flash-lite",
+  "codingVisible": true,
   "colorToken": "#1d4ed8",
   "contextTokens": 1048576,
   "description": "Fastest, most cost-efficient Gemini 3.5 Flash Lite for high-throughput agentic search and document processing at 350 tokens/sec.",
@@ -32,7 +33,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
   },
   "strengths": [
@@ -45,12 +46,11 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.970000",
-  "vendorCode": "google",
-  "vendorName": "Google",
-  "winRate": "0.910000",
   "usageScopes": [
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "google",
+  "vendorName": "Google",
+  "winRate": "0.910000"
 }

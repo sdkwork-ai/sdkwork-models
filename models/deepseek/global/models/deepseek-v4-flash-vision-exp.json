@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#0f766e",
   "contextTokens": 1048576,
-  "description": "DeepSeek V4 Flash Vision experimental model adding image input and visual understanding to the V4 Flash text tier. API since 2026-08-21.",
+  "description": "DeepSeek V4 Flash Vision (Exp) is no longer a standalone model: the official pricing page states the legacy name deepseek-v4-flash-vision-exp is still accepted but the corresponding model has been retired, and requests are served by DeepSeek-V4.1-Flash at the Flash price. Vision input is now provided by deepseek-flash itself.",
   "displayName": "DeepSeek V4 Flash Vision (Exp)",
   "familyCode": "deepseek",
   "inputModalities": [
@@ -16,7 +16,7 @@
   ],
   "latencyP50Ms": 500,
   "latencyP95Ms": 1900,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1048576,
   "maxOutputTokens": 393216,
   "modelId": "deepseek-v4-flash-vision-exp",
@@ -26,13 +26,14 @@
   "primaryCapability": "chat",
   "rankScore": "870.000000",
   "regionCode": "global",
-  "releaseStage": "preview",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "deepseek-flash",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-09-05T00:00:00Z",
-    "sourceUrl": "https://api-docs.deepseek.com/zh-cn/updates/"
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing"
   },
   "strengths": [
     "Vision understanding",

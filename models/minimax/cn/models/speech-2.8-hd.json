@@ -4,6 +4,7 @@
     "audio"
   ],
   "catalogKey": "minimax/speech-2.8-hd",
+  "codingVisible": false,
   "colorToken": "#1d4ed8",
   "description": "MiniMax Speech 2.8 HD text-to-speech model with high-fidelity multilingual voice synthesis.",
   "displayName": "MiniMax Speech 2.8 HD",
@@ -26,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
   },
   "strengths": [
@@ -38,9 +39,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.900000",
+  "usageScopes": [],
   "vendorCode": "minimax",
   "vendorName": "MiniMax",
-  "winRate": "0.880000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.880000"
 }

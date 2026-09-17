@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "tencent/hy4-preview",
+  "codingVisible": true,
   "colorToken": "#0052d9",
   "contextTokens": 1000000,
   "description": "Tencent Hunyuan Hy4 preview model released on August 28, 2026 with 770B-parameter MoE (49B activated) and 1M context.",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-09-05T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://cloud.tencent.com.cn/product/tclm"
   },
   "strengths": [
@@ -39,12 +40,11 @@
   "supportsJsonSchema": true,
   "supportsStreaming": true,
   "supportsTools": true,
-  "vendorCode": "tencent",
-  "vendorName": "Tencent Cloud",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "tencent",
+  "vendorName": "Tencent Cloud"
 }

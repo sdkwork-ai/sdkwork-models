@@ -1,0 +1,38 @@
+{
+  "catalogKey": "minimax/speech-2.6-turbo",
+  "currency": "USD",
+  "modelId": "speech-2.6-turbo",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "operationCode": "speech.synthesize",
+      "priceBookCode": "models.minimax.global.official",
+      "priceId": "minimax-global-speech-2-6-turbo-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "cb3557beed94a48a137d52a738d555917cbe0873f5e84cfaa1eb0c06449c8064",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "unitPrice": "0.060000",
+      "unitSize": "1000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "minimax"
+}

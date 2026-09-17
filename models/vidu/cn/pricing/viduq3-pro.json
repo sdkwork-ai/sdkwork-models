@@ -4,32 +4,214 @@
   "modelId": "viduq3-pro",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq3-pro-second-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "bd956019571adabdd8c962ee26710f6613f1675e90b649f1db6a67609ecd1447",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "0.750000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
       "currency": "CNY",
       "effectiveFrom": "2026-07-02T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
-      "priceId": "vidu-cn-viduq3-pro-second-720p",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq3-pro-second-res-720p",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "109f26557972fe40fc6b9312a382eb539f8d1f6ed99dfcbd9bf4d6ccbd678b37",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://platform.vidu.cn/docs/pricing"
       },
+      "tierCode": "res_720p",
       "unitPrice": "0.625000",
-      "unitSize": "1",
-      "priceBookCode": "models.vidu.cn.official",
-      "productCode": "models.vidu.video",
-      "operationCode": "video.generate",
+      "unitSize": "1"
+    },
+    {
       "billability": "chargeable",
-      "chargeTiming": "successful_result",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [],
-      "rateHash": "e3e8c2d7e5e076c89d5554e29d898dc6485ffb23cb1f9e37624f38b87e96d24b",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_540p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq3-pro-second-res-540p",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "0c052d2e3dc5153825881ac34d84c380a30814c6894ce7c6b1faed05943d6e73",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+      },
+      "tierCode": "res_540p",
+      "unitPrice": "0.281250",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "offpeak_res_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq3-pro-second-offpeak-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ea294a190d138211a60ad066ff6b149bd9809b821adaee8ae0eb89ae86aabb04",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+      },
+      "tierCode": "offpeak_res_1080p",
+      "unitPrice": "0.375000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "offpeak_res_720p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq3-pro-second-offpeak-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "286eed3f4991126d04bc7658eb56a0094aff5227041288f07dd4056401595306",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+      },
+      "tierCode": "offpeak_res_720p",
+      "unitPrice": "0.312500",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "offpeak_res_540p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq3-pro-second-offpeak-res-540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ada3d26c1a62c8c93cdaec621ad9bea67013d7a58e117aeafd2c5c74df60efcb",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+      },
+      "tierCode": "offpeak_res_540p",
+      "unitPrice": "0.156250",
+      "unitSize": "1"
     }
   ],
   "regionCode": "cn",

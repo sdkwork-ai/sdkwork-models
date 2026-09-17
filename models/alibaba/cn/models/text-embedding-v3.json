@@ -6,7 +6,7 @@
   "catalogKey": "alibaba/text-embedding-v3",
   "codingVisible": false,
   "colorToken": "#64748b",
-  "description": "Qwen text embedding model for retrieval, semantic search, and RAG pipelines on Alibaba Model Studio.",
+  "description": "官方计费页标注「免费额度用完后不可调用，推荐使用 text-embedding-v4 作为替代模型」。",
   "displayName": "Text Embedding V3",
   "familyCode": "qwen-embedding",
   "inputModalities": [
@@ -14,7 +14,7 @@
   ],
   "latencyP50Ms": 180,
   "latencyP95Ms": 600,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "text-embedding-v3",
   "outputModalities": [
     "embedding"
@@ -22,12 +22,12 @@
   "primaryCapability": "embedding",
   "rankScore": "720.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-13T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://help.aliyun.com/zh/model-studio/embedding"
   },
   "strengths": [

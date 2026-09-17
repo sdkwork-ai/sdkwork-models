@@ -1,6 +1,6 @@
 {
-  "catalogVersion": "2026.09.06.1",
-  "observedAt": "2026-09-06T00:00:00Z",
+  "catalogVersion": "2026.09.17.1",
+  "observedAt": "2026-09-17T00:00:00Z",
   "policy": {
     "officialFirst": true,
     "referenceRule": "external/new-api and external/sub2api may be used as cross-check references; official vendor URLs remain the preferred source for official price rows.",
@@ -29,8 +29,8 @@
   "schemaVersion": "1.1.0",
   "vendors": [
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Alibaba Cloud mainland China operation with Qwen LLM, Wanxiang image/video, and text embedding models. Qwen3.8-Max generally available since 2026-08-03 with CNY 12/36 per 1M tokens.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "2026-09-17 重新核对百炼「文本生成」模型页（更新于 2026-07-13 的模型列表）与模型调用计费页。新增 qwen3.7-plus / qwen3.7-flash / qwen3.7-text-embedding / -flash；qwen3.8-max-preview 与 text-embedding-v3 降级；wan2.6-r2v 价格由 1.2 修正为官方 720P 0.6 元/秒。qwen3.8-max、qwen3.8-flash 的缓存命中价官方未公开（「请参见百炼控制台」）→ 未确认。",
       "official": {
         "additionalUrls": [
           "https://help.aliyun.com/zh/model-studio/",
@@ -49,30 +49,38 @@
       ],
       "regionCode": "cn",
       "requiredModels": [
+        "qwen3.8-max",
+        "qwen3.7-plus",
+        "qwen3.8-flash",
+        "qwen3.7-flash",
         "qwen3.7-max",
+        "text-embedding-v4",
+        "qwen3.7-text-embedding",
         "wan2.6-t2i",
         "wan2.6-t2v",
         "wan2.6-i2v",
-        "wan2.6-r2v",
-        "text-embedding-v3",
-        "text-embedding-v4",
-        "qwen3.8-max"
+        "wan2.6-r2v"
       ],
       "supportedModels": [
         "qwen3.6-max-preview",
-        "qwen3.8-max-preview"
+        "qwen3.8-max-preview",
+        "text-embedding-v3",
+        "qwen3.7-text-embedding-flash"
       ],
       "vendorCode": "alibaba",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Alibaba Cloud international Qwen operation modeled as the global region with USD billing from QwenCloud/DashScope. Qwen3.8-Max generally available since 2026-08-03 with USD 2/6 per 1M tokens. The mainland cn region keeps its independent CNY deployment and pricing.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "2026-09-17 重新核对 QwenCloud 官方模型详情页（USD 计价）。新增 qwen3.7-plus / qwen3.7-flash；补齐显式缓存创建与隐式缓存输入两档计费项。模型市场页当前展示 Qwen3.8-Max、Qwen3.8-Flash、Qwen-Image-3.0-Pro、Wan3.0-Video、GLM-5.3、DeepSeek-V4-Flash、Kimi K3、Qwen-Audio-TTS/ASR，其中非 qwen family 与需新增 family 的模型未入库（见报告）。",
       "official": {
         "additionalUrls": [
           "https://dashscope-intl.aliyuncs.com/api/v1",
-          "https://www.qwencloud.com/models/qwen3.8-max",
-          "https://platform.qianwenai.com/docs/changelog/models"
+          "https://platform.qianwenai.com/docs/changelog/models",
+          "https://www.qwencloud.com/models/qwen3.7-flash",
+          "https://www.qwencloud.com/models/qwen3.7-plus",
+          "https://www.qwencloud.com/models/qwen3.8-flash",
+          "https://www.qwencloud.com/models/qwen3.8-max"
         ],
         "modelsUrl": "https://www.qwencloud.com/models/qwen3.7-max",
         "pricingUrl": "https://www.qwencloud.com/models/qwen3.7-max"
@@ -80,28 +88,33 @@
       "references": [],
       "regionCode": "global",
       "requiredModels": [
+        "qwen3.8-max",
+        "qwen3.8-flash",
         "qwen3.7-max",
-        "qwen3.8-max"
+        "qwen3.7-plus",
+        "qwen3.7-flash"
       ],
+      "supportedModels": [],
       "vendorCode": "alibaba",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Official Claude families including Sonnet 5 (June 2026 GA) and Opus 5 (July 24, 2026). The planned Sonnet 5 price increase to $3/$15 on 2026-09-01 was canceled on 2026-08-11; $2/$10 remains the long-term price. Claude Fable 5 public API access restored globally on 2026-07-01; Claude Mythos 5 remains limited to Project Glasswing approved organizations.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "官方 models overview/pricing 页核对：4 个当前主力模型（Fable 5.1 / Opus 5 / Sonnet 5 / Haiku 4.5）+ 7 个 legacy-but-available 模型价格全部与官方一致，无价格变更；新增 Opus 4.6 / Opus 4.5 / Sonnet 4.5，补齐 Fable 5.1、Mythos 5.1 的 cache write 档与 Opus 5 的 Fast mode 档。Mythos 5 / 5.1 为 Glasswing 限定可用，归入 supportedModels。",
       "official": {
         "additionalUrls": [
-          "https://www.anthropic.com/pricing",
-          "https://www.anthropic.com/news/claude-opus-4-7",
+          "https://docs.anthropic.com/en/docs/about-claude/models",
+          "https://docs.anthropic.com/en/docs/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
+          "https://platform.claude.com/docs/en/about-claude/models/overview",
+          "https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5",
+          "https://platform.claude.com/docs/en/about-claude/pricing",
           "https://platform.claude.com/docs/en/docs/about-claude/models/overview",
           "https://platform.claude.com/docs/en/docs/about-claude/pricing",
+          "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "https://www.anthropic.com/news/claude-opus-4-7",
           "https://www.anthropic.com/news/claude-opus-4-8",
-          "https://platform.claude.com/docs/en/about-claude/pricing",
-          "https://docs.anthropic.com/en/docs/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
-          "https://docs.anthropic.com/en/docs/about-claude/models",
           "https://www.anthropic.com/news/claude-sonnet-5",
-          "https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5",
-          "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+          "https://www.anthropic.com/pricing"
         ],
         "modelsUrl": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
         "pricingUrl": "https://docs.anthropic.com/en/docs/about-claude/pricing"
@@ -122,23 +135,28 @@
       ],
       "regionCode": "global",
       "requiredModels": [
-        "claude-opus-4-8",
+        "claude-fable-5-1",
+        "claude-opus-5",
         "claude-sonnet-5",
-        "claude-opus-4-7",
-        "claude-sonnet-4-6",
         "claude-haiku-4-5",
-        "claude-opus-5"
+        "claude-fable-5",
+        "claude-opus-4-8",
+        "claude-opus-4-7",
+        "claude-opus-4-6",
+        "claude-opus-4-5",
+        "claude-sonnet-4-6",
+        "claude-sonnet-4-5"
       ],
       "supportedModels": [
-        "claude-fable-5",
-        "claude-mythos-5"
+        "claude-mythos-5",
+        "claude-mythos-5-1"
       ],
       "vendorCode": "anthropic",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Baidu AI Cloud mainland China operation is modeled as the cn region of the vendor with CNY billing; ERNIE/Qianfan product names are not vendor identities.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "2026-09-17 重新核对千帆模型列表页与价格页（文本生成）。新增 ernie-5.0；ernie-4.5-turbo-128k 补齐命中缓存价 0.0002 元/千 tokens；ernie-5.1 / ernie-5.0-thinking-preview / ernie-x1.1 价格与目录一致，无变更。",
       "official": {
         "additionalUrls": [
           "https://cloud.baidu.com/doc/WENXINWORKSHOP/",
@@ -156,8 +174,9 @@
       ],
       "regionCode": "cn",
       "requiredModels": [
-        "ernie-5.0-thinking-preview",
-        "ernie-5.1"
+        "ernie-5.1",
+        "ernie-5.0",
+        "ernie-5.0-thinking-preview"
       ],
       "supportedModels": [
         "ernie-4.5-turbo-128k",
@@ -167,8 +186,8 @@
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "FLUX.2 Pro pricing uses official per-megapixel BFL rows rather than synthetic per-result pricing. Pending independent official snapshot re-verification before official_verified status.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "Re-verified 2026-09-17 against https://docs.bfl.ai/quick_start/pricing (page lastModified 2026-09-15). Official basis: \"1 credit = $0.01 USD\". FLUX 3 video is now tiered by mode (t2v / i2v / v2v) and resolution class (hd / fhd / qhd / uhd) plus a draft rate; the catalog flux-3 pricing was replaced with the full official 3x5 table (t2v and i2v hd $0.17/s, fhd $0.29/s, qhd $0.40/s, uhd $0.80/s, draft $0.06/s; v2v hd $0.41/s, fhd $0.53/s, qhd $0.65/s, uhd $0.95/s, draft $0.12/s). FLUX.2 pricing is per output megapixel: klein 4B and klein 9B were restructured into first-megapixel / additional-megapixel tiers matching the official Klein example, flux-2-pro now carries separate text_to_image ($0.03) and image_editing ($0.045) rows, and flux-2-max ($0.07) and flux-2-flex ($0.05) keep a single row because BFL prices text-to-image and editing identically. The previously recorded input-side megapixel rows for pro/max had no support on the official page and were dropped. Added the five officially priced FLUX.1 previous-generation models (Kontext pro $0.04, Kontext max $0.08, FLUX1.1 pro $0.04, FLUX1.1 pro Ultra $0.06, Fill pro $0.05) and FLUX.2 [dev] as catalog_only (official: \"Local only ... no hosted API\"). Not added: FLUX Video Upscale ($0.07/$0.10 per megapixel-second), FLUX Video Edit [fast] ($0.03 per second) and the flux-tools endpoints, which are tools rather than models; the /v1/flux-dev and /v1/flux-2-pro-preview endpoints, which the pricing page does not price as separate models; and flux-2-klein-9b-kv-finetuned, a public-beta fine-tuned endpoint billed identically to its base model.",
       "official": {
         "additionalUrls": [
           "https://bfl.ai/pricing",
@@ -180,21 +199,27 @@
       "references": [],
       "regionCode": "global",
       "requiredModels": [
-        "flux-2-pro",
-        "flux-2-max"
-      ],
-      "supportedModels": [
-        "flux-2-flex",
         "flux-2-klein-4b",
         "flux-2-klein-9b",
-        "flux-3"
+        "flux-2-pro",
+        "flux-2-max",
+        "flux-2-flex",
+        "flux-3",
+        "flux-kontext-pro",
+        "flux-kontext-max",
+        "flux-pro-1.1",
+        "flux-pro-1.1-ultra",
+        "flux-pro-1.0-fill"
+      ],
+      "supportedModels": [
+        "flux-2-dev"
       ],
       "vendorCode": "black_forest_labs",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "ByteDance mainland China operation is modeled as the cn region of the vendor with CNY billing. Doubao Seed 2.1 Pro/Turbo (260628) launched on 2026-06-23 via Volcengine Ark. Seedance 2.0 standard and fast models are listed for cn with official CNY per-second pricing.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "2026-09-17 re-verified against https://docs.volcengine.com/docs/82379/1330310 (模型列表) and https://docs.volcengine.com/docs/82379/1544106 (模型价格, page revision 2026.09.16). Added Seed Evolving, Seed 2.1 Pro 260915, Seed 2.0 Lite/Mini 260428, Seedance 2.5 260628, Seedance 2.0 Mini, Seedream 5.0 / 4.5. Seedance 2.5 260623 is no longer listed and was demoted. Doubao 2.0 LLM prices are now written as the official three-tier input-length ladder. Speech (TTS) and music prices are not present on either reachable page and remain unconfirmed.",
       "official": {
         "additionalUrls": [
           "https://www.volcengine.com/docs/",
@@ -212,35 +237,45 @@
       ],
       "regionCode": "cn",
       "requiredModels": [
+        "doubao-seed-evolving",
+        "doubao-seed-2-1-pro-260915",
         "doubao-seed-2-1-pro-260628",
         "doubao-seed-2-1-turbo-260628",
+        "doubao-seedance-2-5-260628",
         "doubao-seedance-2-0-260128",
         "doubao-seedance-2-0-fast-260128",
+        "doubao-seedream-5-0-pro-260628",
+        "doubao-seedream-5-0-lite-260128",
+        "doubao-seedream-4-0-250828",
         "seed-tts-2.0-standard",
         "seed-tts-2.0-expressive",
-        "doubao-seedream-4-0-250828",
-        "seed-music-gensong-v4",
-        "doubao-seedance-2-5-260623"
+        "seed-music-gensong-v4"
       ],
       "supportedModels": [
-        "doubao-seed-2-0-code-preview-260215",
+        "doubao-seed-2-0-lite-260428",
+        "doubao-seed-2-0-mini-260428",
+        "doubao-seed-2-0-pro-260215",
         "doubao-seed-2-0-lite-260215",
         "doubao-seed-2-0-mini-260215",
-        "doubao-seed-2-0-pro-260215"
+        "doubao-seed-2-0-code-preview-260215",
+        "doubao-seedance-2-0-mini-260615",
+        "doubao-seedream-4-5-251128",
+        "doubao-seedance-2-5-260623"
       ],
       "vendorCode": "bytedance",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "ByteDance international operation with Doubao Seed LLM and Seedance video families billed in USD.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "2026-09-17 re-verified against https://docs.byteplus.com/en/docs/ModelArk/1330310 (Model list) and https://docs.byteplus.com/en/docs/ModelArk/1544106 (Pricing, USD). The pre-existing global ids (doubao-seed-2-0-*, doubao-seed-2-1-*, doubao-seedance-2-0-*) match no official global model id and their USD prices equal the mainland CNY price divided by about 7.23, so they were demoted to hidden/catalog_only and replaced by the official BytePlus ids. BytePlus also publishes seed-1-8-251228, seed-1-6-250915, seed-1-6-flash-250715, seedance-1-5-pro-251215, seedance-1-0-pro-250528, seedance-1-0-pro-fast-251015 and the seedream image family (dola-seedream-5-0-pro-260628, seedream-5-0-lite-260128, seedream-4-5-251128, seedream-4-0-250828); they were not cataloged because this region declares capabilities chat/reasoning/video only.",
       "official": {
         "additionalUrls": [
-          "https://www.volcengine.com/docs/82379",
-          "https://seed.bytedance.com/en/seed2"
+          "https://docs.byteplus.com/en/docs/ModelArk",
+          "https://seed.bytedance.com/en/seed2",
+          "https://www.volcengine.com/docs/82379"
         ],
-        "modelsUrl": "https://seed.bytedance.com/en/seed2",
-        "pricingUrl": "https://www.volcengine.com/docs/82379"
+        "modelsUrl": "https://docs.byteplus.com/en/docs/ModelArk/1330310",
+        "pricingUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
       },
       "references": [
         {
@@ -250,27 +285,25 @@
       ],
       "regionCode": "global",
       "requiredModels": [
-        "doubao-seed-2-1-pro-260628",
-        "doubao-seed-2-1-turbo-260628",
-        "doubao-seed-2-0-code-preview-260215",
-        "doubao-seed-2-0-lite-260215",
-        "doubao-seed-2-0-mini-260215",
-        "doubao-seed-2-0-pro-260215",
-        "doubao-seedance-2-0-260128",
-        "doubao-seedance-2-0-fast-260128"
+        "dola-seed-2-1-turbo-260628",
+        "seed-2-0-lite-260428",
+        "seed-2-0-mini-260428",
+        "seed-2-0-pro-260328",
+        "seed-2-0-lite-260228",
+        "seed-2-0-mini-260215",
+        "seed-2-0-code-preview-260328",
+        "dreamina-seedance-2-5-260628",
+        "dreamina-seedance-2-0-260128",
+        "dreamina-seedance-2-0-fast-260128",
+        "dreamina-seedance-2-0-mini-260615"
       ],
-      "supportedModels": [
-        "doubao-seed-2-0-code-preview-260215",
-        "doubao-seed-2-0-lite-260215",
-        "doubao-seed-2-0-mini-260215",
-        "doubao-seed-2-0-pro-260215"
-      ],
+      "supportedModels": [],
       "vendorCode": "bytedance",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "DeepSeek international API operation is modeled as the global region of the vendor with USD billing. Official English pricing page provides USD cache-hit, cache-miss input, and output prices. Peak/off-peak billing effective 2026-08-16 16:00 UTC (peak 01:00-04:00 and 06:00-10:00 UTC); DeepSeek V4 Pro GA (V4-Pro-0813) announced 2026-08-13.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "Official English pricing page lists deepseek-flash (DeepSeek-V4.1-Flash) and deepseek-v4-pro (DeepSeek-V4-Pro-0813) only. Legacy names deepseek-v4-flash and deepseek-v4-flash-vision-exp are still accepted but the models are retired and served by DeepSeek-V4.1-Flash at Flash pricing; DeepSeek V4 Pro keeps serving after 2026-09-14 with unchanged billing. Off-peak rates are half of peak rates; peak hours are 01:00-04:00 and 06:00-10:00 UTC Monday through Friday, modelled in the catalog as Asia/Shanghai 09:00-12:00 and 14:00-18:00.",
       "official": {
         "additionalUrls": [
           "https://api-docs.deepseek.com/"
@@ -290,15 +323,16 @@
       ],
       "regionCode": "global",
       "requiredModels": [
-        "deepseek-v4-flash",
+        "deepseek-flash",
         "deepseek-v4-pro"
       ],
+      "supportedModels": [],
       "vendorCode": "deepseek",
       "verificationStatus": "official_verified"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "DeepSeek mainland China API operation is modeled as the cn region of the vendor with CNY billing. Official Chinese pricing page provides CNY cache-hit, cache-miss input, and output prices. Peak/off-peak billing effective 2026-08-17 00:00 Beijing time (peak 09:00-12:00 and 14:00-18:00 Beijing); DeepSeek V4 Pro GA (V4-Pro-0813) announced 2026-08-13.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "官方定价页（中文）在售模型为 deepseek-flash（DeepSeek-V4.1-Flash）与 deepseek-v4-pro（DeepSeek-V4-Pro-0813）。旧模型名 deepseek-v4-flash、deepseek-v4-flash-vision-exp 仍可调用但模型已下线，请求由 DeepSeek-V4.1-Flash 承接并按 Flash 价计费；deepseek-v4-pro 官方明确 2026-09-14 之后继续提供 API 且计费不变。分时价格：空闲价为高峰价一半，高峰时段为北京时间周一至周五 09:00-12:00、14:00-18:00。",
       "official": {
         "additionalUrls": [
           "https://api-docs.deepseek.com/zh-cn/"
@@ -318,15 +352,16 @@
       ],
       "regionCode": "cn",
       "requiredModels": [
-        "deepseek-v4-flash",
+        "deepseek-flash",
         "deepseek-v4-pro"
       ],
+      "supportedModels": [],
       "vendorCode": "deepseek",
       "verificationStatus": "official_verified"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "ElevenLabs audio model catalog source. Added Flash v2.5, Multilingual v2 TTS, Scribe v2 Realtime STT, and Text-to-Sound v2 SFX with official API pricing.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "Re-verified 2026-09-17 against https://elevenlabs.io/docs/models (Models overview + Deprecated models tables) and https://elevenlabs.io/pricing/api. API pricing is billed in US dollars, not credits: Text to Speech $0.10 per 1K characters for v3 and v2 Multilingual, $0.05 for v3 Conversational and the Flash/Turbo tier; Speech to Text $0.22 per hour for Scribe v2 and Scribe v2 Medical, $0.39 per hour for Scribe v2 Realtime; Eleven Music $0.15 per minute; Sound Effects $0.12 per minute. All pre-existing catalog prices match these rates exactly and were left unchanged. Added music_v2_5, music_v1, scribe_v2_medical and eleven_flash_v2. Voice Changer (eleven_multilingual_sts_v2, eleven_english_sts_v2) and Text to Voice (eleven_ttv_v3, eleven_multilingual_ttv_v2) are officially listed but have no reusable family in families.json, so they were not added.",
       "official": {
         "additionalUrls": [
           "https://elevenlabs.io/docs/",
@@ -341,19 +376,29 @@
       "regionCode": "global",
       "requiredModels": [
         "eleven_v3",
-        "eleven_flash_v2_5",
+        "eleven_v3_conversational",
         "eleven_multilingual_v2",
+        "eleven_flash_v2_5",
+        "music_v2_5",
         "music_v2",
         "scribe_v2",
         "scribe_v2_realtime",
+        "scribe_v2_medical",
         "eleven_text_to_sound_v2"
+      ],
+      "supportedModels": [
+        "eleven_flash_v2",
+        "music_v1",
+        "scribe_v1",
+        "eleven_monolingual_v1",
+        "eleven_multilingual_v1"
       ],
       "vendorCode": "elevenlabs",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Gemini 3.6 Flash and 3.5 Flash Lite GA July 21, 2026. Gemini 3.5 Flash and 3.1 Flash Lite remain active stable models. Imagen 4.0 family shuts down 2026-08-17 (Nano Banana 2 / gemini-3.1-flash-image-preview replaces it); Gemini 2.5 Flash Image shuts down 2026-10-02.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "2026-09-17 重新核对：官方 models 页 2026-09-15、pricing 页 2026-09-16、changelog 2026-09-15。新增 12 个在售模型；gemini-3.1-flash-image-preview / gemini-3.1-flash-lite-preview 已 shutdown，Imagen 4.0 三端点 2026-08-17 关停（pricing 页已无 Imagen 条目）→ retired；gemini-3.1-pro / lyria-2 / lyria-3 官方清单无此 id → catalog_only。",
       "official": {
         "additionalUrls": [
           "https://ai.google.dev/pricing",
@@ -385,46 +430,65 @@
       ],
       "regionCode": "global",
       "requiredModels": [
+        "gemini-3.8-flash",
+        "gemini-3.8-live",
+        "gemini-3.8-live-extended-thinking",
+        "gemini-3.7-flash",
+        "gemini-3.6-flash",
         "gemini-3.5-flash",
+        "gemini-3.5-flash-lite",
+        "gemini-3.1-flash-lite",
         "gemini-3.1-pro-preview",
         "gemini-3-flash-preview",
-        "gemini-3.1-flash-lite",
-        "gemini-3.1-flash-lite-preview",
-        "gemini-3.1-flash-live-preview",
-        "gemini-3.1-flash-image-preview",
-        "gemini-3.1-flash-tts-preview",
-        "gemini-2.5-flash-preview-tts",
-        "gemini-2.5-pro-preview-tts",
         "gemini-3.1-flash-image",
+        "gemini-3.1-flash-lite-image",
         "gemini-3-pro-image",
-        "gemini-2.5-flash-image",
+        "gemini-3.1-flash-tts-preview",
+        "gemini-3.1-flash-live-preview",
+        "gemini-3.5-live-translate-preview",
+        "gemini-3.5-transcribe",
+        "gemini-3.5-transcribe-live",
+        "gemini-omni-1.1-flash",
+        "gemini-omni-flash-preview",
         "veo-3.1-generate-preview",
         "veo-3.1-fast-generate-preview",
         "veo-3.1-lite-generate-preview",
-        "gemini-3.5-flash-lite",
-        "gemini-3.6-flash"
+        "lyria-3.5",
+        "lyria-3-clip-preview",
+        "lyria-3-pro-preview",
+        "gemini-2.5-flash-preview-tts",
+        "gemini-2.5-pro-preview-tts",
+        "gemini-embedding-2"
       ],
       "supportedModels": [
+        "gemini-robotics-er-2-preview",
+        "gemini-robotics-er-2-streaming-preview",
+        "gemini-2.5-flash-image",
         "gemini-3.1-pro",
-        "gemini-embedding-2",
-        "imagen-4.0-fast-generate-001",
-        "imagen-4.0-ultra-generate-001",
         "lyria-2",
         "lyria-3",
-        "imagen-4.0-generate-001"
+        "gemini-3.1-flash-image-preview",
+        "gemini-3.1-flash-lite-preview",
+        "imagen-4.0-generate-001",
+        "imagen-4.0-fast-generate-001",
+        "imagen-4.0-ultra-generate-001"
       ],
       "vendorCode": "google",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Kuaishou international operation is modeled as the global region of the vendor with USD billing; Kling is a model family, not the vendor identity. Kling Video 3.0 and Kling Sound text-to-audio / video-to-audio SFX APIs.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "2026-09-17 复核（global）：新增 6 个官方在售模型（含 Kling 3.0 Turbo / O1 / 2.6 / 2.5 Turbo 与 2 个图片模型），kling-v3-0-preview 官方已下架，音效 API 单价下调。视频价格由单一 $0.12/秒 展开为官方 8~9 档（Kling 3.0 1080P 无声 $0.112/秒）。",
       "official": {
         "additionalUrls": [
-          "https://klingai.com",
           "https://app.klingai.com/global/dev/document-api/apiReference/model/textToAudio",
           "https://app.klingai.com/global/dev/document-api/apiReference/model/videoToAudio",
-          "https://app.klingai.com/global/dev/document-api/consumptionTable"
+          "https://app.klingai.com/global/dev/document-api/consumptionTable",
+          "https://kling.ai/document-api/guides/capability-map/image",
+          "https://kling.ai/document-api/guides/capability-map/video",
+          "https://kling.ai/document-api/pricing/base/image",
+          "https://kling.ai/document-api/pricing/base/video",
+          "https://klingai.com"
         ],
         "modelsUrl": "https://app.klingai.com/global/dev/document-api",
         "pricingUrl": "https://app.klingai.com/global/dev/document-api/consumptionTable"
@@ -432,10 +496,16 @@
       "references": [],
       "regionCode": "global",
       "requiredModels": [
+        "kling-3.0-turbo",
         "kling-v3",
         "kling-v3-omni",
+        "kling-video-o1",
+        "kling-v2-6",
+        "kling-v2-5-turbo",
         "kling-sound-t2a",
-        "kling-sound-v2a"
+        "kling-sound-v2a",
+        "kling-image-o1",
+        "kling-v2-1"
       ],
       "supportedModels": [
         "kling-v3-0-preview"
@@ -444,14 +514,18 @@
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Kuaishou mainland China operation with Kling Video 3.0 models, Kling Sound SFX APIs, and official CNY per-task pricing.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "2026-09-17 复核（cn）：新增 6 个官方在售模型（含 Kling 3.0 Turbo / O1 / 2.6 / 2.5 Turbo 与 2 个图片模型），kling-v3-0-preview 官方已下架，音效 API 单价下调。视频价格由单一 ¥0.6/秒 展开为官方 8~9 档。",
       "official": {
         "additionalUrls": [
-          "https://klingai.kuaishou.com",
           "https://app.klingai.com/cn/dev/document-api/apiReference/model/textToAudio",
           "https://app.klingai.com/cn/dev/document-api/apiReference/model/videoToAudio",
-          "https://app.klingai.com/cn/dev/document-api/consumptionTable"
+          "https://app.klingai.com/cn/dev/document-api/consumptionTable",
+          "https://klingai.com/document-api/guides/capability-map/image",
+          "https://klingai.com/document-api/guides/capability-map/video",
+          "https://klingai.com/document-api/pricing/base/image",
+          "https://klingai.com/document-api/pricing/base/video",
+          "https://klingai.kuaishou.com"
         ],
         "modelsUrl": "https://app.klingai.com/cn/dev/document-api/",
         "pricingUrl": "https://app.klingai.com/cn/dev/document-api/consumptionTable"
@@ -459,19 +533,26 @@
       "references": [],
       "regionCode": "cn",
       "requiredModels": [
+        "kling-3.0-turbo",
         "kling-v3",
         "kling-v3-omni",
-        "kling-v3-0-preview",
+        "kling-video-o1",
+        "kling-v2-6",
+        "kling-v2-5-turbo",
         "kling-sound-t2a",
-        "kling-sound-v2a"
+        "kling-sound-v2a",
+        "kling-image-o1",
+        "kling-v2-1"
       ],
-      "supportedModels": [],
+      "supportedModels": [
+        "kling-v3-0-preview"
+      ],
       "vendorCode": "kuaishou",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Luma Dream Machine video models. Ray 2 and Ray 2 Flash officially deprecated; Ray 3.2 is the current flagship (June 9, 2026).",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "Ray3.2 为当前旗舰（官方 API 页「Build with Ray3.2」），按 540p/720p/1080p × 5s/10s 计价，HDR 为 SDR 的 2 倍、HDR+EXR 为 3 倍；V2V 与 Reframe 另有独立价格。Ray 2/Flash 2/3/3.14 仍为 deprecated 且官方已无价格可核。",
       "official": {
         "additionalUrls": [
           "https://docs.agents.lumalabs.ai/guides/pricing",
@@ -494,8 +575,8 @@
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "MiniMax international operation with M3, Hailuo video, Music 3.0, Speech 2.8, and Image models. MiniMax H3 unified video model released 2026-07-31.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "2026-09-17 复核：新增 H3-Max / H3-Regeneration / H3-Context-IR、speech-2.6/02 与 M2.1/M2.1-highspeed/M2；H3 补齐 768P 档；Hailuo 历史系列改为官方「按视频」计价；music-3.0 与 music-2.6 官方标注 Discontinued，降级为 catalog_only。",
       "official": {
         "additionalUrls": [
           "https://platform.minimax.io/docs/guides/text-generation",
@@ -524,34 +605,45 @@
         "MiniMax-M2.7-highspeed",
         "MiniMax-M2.5",
         "MiniMax-M2.5-highspeed",
+        "MiniMax-M2.1",
+        "MiniMax-M2.1-highspeed",
+        "MiniMax-M2",
         "M2-her",
-        "music-2.6",
+        "MiniMax-H3",
+        "MiniMax-H3-Max",
+        "MiniMax-H3-Regeneration",
+        "MiniMax-H3-Context-IR",
+        "hailuo-2.3",
+        "hailuo-2.3-fast",
+        "hailuo-02",
+        "speech-2.8-hd",
         "speech-2.8-turbo",
-        "image-01",
-        "hailuo-2.3"
+        "speech-2.6-hd",
+        "speech-2.6-turbo",
+        "speech-02-hd",
+        "speech-02-turbo",
+        "image-01"
       ],
       "supportedModels": [
-        "music-cover",
         "music-3.0",
-        "speech-2.8-hd",
-        "hailuo-02",
-        "hailuo-2.3-fast",
-        "MiniMax-H3"
+        "music-2.6",
+        "music-cover"
       ],
       "vendorCode": "minimax",
       "verificationStatus": "official_verified"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "MiniMax mainland China operation is modeled as the cn region of the vendor with CNY billing. Added Speech 2.8 Turbo/HD, Music 2.6, and Music 3.0 with official pay-as-you-go pricing.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "2026-09-17 复核：新增 H3 / H3-Max / H3-Regeneration / H3-Context-IR、image-01-live、speech-2.6/02 与 M2.1/M2.1-highspeed/M2；music-3.0 与 music-2.6 官方标注已下线，降级为 catalog_only。已确认在售模型价格无变化。cn region 需同步补入 minimax-video family 与 vendor.json 的 video capability（见报告）。",
       "official": {
         "additionalUrls": [
-          "https://platform.minimaxi.com/docs/guides/text-generation",
-          "https://platform.minimaxi.com/docs/guides/text-chat",
           "https://platform.minimaxi.com/docs/api-reference/api-overview",
-          "https://www.minimaxi.com/",
+          "https://platform.minimaxi.com/docs/api-reference/video-generation-v2-create",
+          "https://platform.minimaxi.com/docs/guides/music-generation",
           "https://platform.minimaxi.com/docs/guides/pricing-paygo",
-          "https://platform.minimaxi.com/docs/guides/music-generation"
+          "https://platform.minimaxi.com/docs/guides/text-chat",
+          "https://platform.minimaxi.com/docs/guides/text-generation",
+          "https://www.minimaxi.com/"
         ],
         "modelsUrl": "https://platform.minimaxi.com/docs/guides/models-intro",
         "pricingUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
@@ -569,21 +661,36 @@
         "MiniMax-M2.7-highspeed",
         "MiniMax-M2.5",
         "MiniMax-M2.5-highspeed",
+        "MiniMax-M2.1",
+        "MiniMax-M2.1-highspeed",
+        "MiniMax-M2",
         "M2-her",
-        "speech-2.8-turbo",
+        "MiniMax-H3",
+        "MiniMax-H3-Max",
+        "MiniMax-H3-Regeneration",
+        "MiniMax-H3-Context-IR",
+        "hailuo-2.3",
+        "hailuo-2.3-fast",
+        "hailuo-02",
         "speech-2.8-hd",
-        "music-2.6",
-        "image-01"
+        "speech-2.8-turbo",
+        "speech-2.6-hd",
+        "speech-2.6-turbo",
+        "speech-02-hd",
+        "speech-02-turbo",
+        "image-01",
+        "image-01-live"
       ],
       "supportedModels": [
-        "music-3.0"
+        "music-3.0",
+        "music-2.6"
       ],
       "vendorCode": "minimax",
       "verificationStatus": "official_verified"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Meituan mainland China operation is modeled as the cn region of the vendor with CNY billing. LongCat (Longmao) is tracked as the default model family entry pending richer official price-table snapshots.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "Re-verified 2026-09-17 against longcat.chat official docs. LongCat-2.0 is the only officially supported API model and its currently effective discounted rates (CNY 2 / 0.04 / 8 per 1M tokens for cache-miss input, cache-hit input and output) match the catalog exactly, with 1M context and 128K max output confirmed. LongCat-1.0 has no official counterpart on the platform's supported-model, pay-as-you-go or pricing pages, so it was downgraded to deprecated/hidden/catalog_only. The official list price before the limited-time discount (CNY 5 / 0.10 / 20) is intentionally not recorded as a price row because it is not the currently settled rate.",
       "official": {
         "additionalUrls": [
           "https://longcat.chat/platform/docs/zh/",
@@ -595,15 +702,15 @@
       "references": [],
       "regionCode": "cn",
       "requiredModels": [
-        "longcat-1.0",
         "longcat-2.0"
       ],
+      "supportedModels": [],
       "vendorCode": "meituan",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Moonshot/Kimi international API operation is modeled as the global region of the vendor with USD billing. Official international landing and pricing pages list K2.6 and K2.5 token prices.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "国际区官方模型列表在售四个 id：kimi-k3、kimi-k2.7-code、kimi-k2.7-code-highspeed、kimi-k2.6；价格表（cache hit / cache miss / output，USD 每百万 tokens）为 k3 0.30/3.00/15.00、k2.7-code 0.19/0.95/4.00、k2.7-code-highspeed 0.38/1.90/8.00、k2.6 0.16/0.95/4.00，与目录一致故无价格变更。上下文窗口：k3 为 1,048,576，其余为 262,144。kimi-k2.5 已于 2026-08-31 下线。kimi-k2.7-code-01hw 未出现在官方模型列表与价格表中，本次未做改动，标记为未确认。",
       "official": {
         "additionalUrls": [
           "https://platform.kimi.ai/docs/pricing/chat-k26",
@@ -623,21 +730,20 @@
       ],
       "regionCode": "global",
       "requiredModels": [
+        "kimi-k3",
         "kimi-k2.7-code",
-        "kimi-k2.6",
-        "kimi-k3"
+        "kimi-k2.6"
       ],
       "supportedModels": [
-        "kimi-k2.7-code-01hw",
         "kimi-k2.7-code-highspeed",
-        "kimi-k2.5"
+        "kimi-k2.7-code-01hw"
       ],
       "vendorCode": "moonshot",
       "verificationStatus": "official_verified"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Moonshot/Kimi mainland China API operation is modeled as the cn region of the vendor with CNY billing. Official Chinese landing and pricing pages list K2.6 and K2.5 token prices.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "中国区官方模型列表在售四个 id：kimi-k3、kimi-k2.7-code、kimi-k2.7-code-highspeed、kimi-k2.6；价格表（缓存命中/未命中/输出，CNY 每百万 tokens）为 k3 2.00/20.00/100.00、k2.7-code 1.30/6.50/27.00、k2.7-code-highspeed 2.60/13.00/54.00、k2.6 1.10/6.50/27.00，与目录一致故无价格变更。上下文窗口：k3 为 1,048,576，其余为 262,144。kimi-k2.5 已于 2026-08-31 下线。kimi-k2.7-code-01hw 未出现在官方模型列表与价格表中，本次未做改动，标记为未确认。",
       "official": {
         "additionalUrls": [
           "https://platform.kimi.com/docs/pricing/chat-k26",
@@ -657,39 +763,39 @@
       ],
       "regionCode": "cn",
       "requiredModels": [
+        "kimi-k3",
         "kimi-k2.7-code",
-        "kimi-k2.6",
-        "kimi-k3"
+        "kimi-k2.6"
       ],
       "supportedModels": [
-        "kimi-k2.7-code-01hw",
         "kimi-k2.7-code-highspeed",
-        "kimi-k2.5"
+        "kimi-k2.7-code-01hw"
       ],
       "vendorCode": "moonshot",
       "verificationStatus": "official_verified"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "OpenAI official API model and pricing docs. GPT-5.6 Sol/Terra/Luna are the flagship family (GA 2026-07-09); Terra and Luna price cuts on 2026-07-30; Fast mode extended to long-context requests on 2026-08-05. GPT-5.5/5.4 families superseded and kept as legacy reference.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "官方 models/pricing/deprecations 页（.md 版）核对：新增 9 个在售模型；更正 gpt-image-1.5（image input 7→8、output 30→32，补 text cache read）、gpt-audio-1.5（0.60/12.00 → 官方 Text 2.50/10.00 + Audio 32/64）、gpt-realtime-mini 与 gpt-realtime-2.1-mini（2.00/8.00 → 官方 Text 0.60/2.40 + Audio 10/20 + Image 0.80）、gpt-4o-mini-transcribe（1.00/4.00 → 1.25/5.00）；补齐 cache write 与长上下文档；按 deprecations 页给 whisper-1/gpt-4o-transcribe/4o-mini-transcribe/4o-transcribe-diarize/gpt-realtime-mini 加 deprecated 标注。Batch/Flex/Fast mode 档官方另有整表，除已收录的 fast_mode 外未展开。",
       "official": {
         "additionalUrls": [
-          "https://platform.openai.com/docs/pricing",
+          "https://developers.openai.ac.cn/api/docs/guides/video-generation",
+          "https://developers.openai.com/api/docs/deprecations",
+          "https://developers.openai.com/api/docs/models/",
+          "https://developers.openai.com/api/docs/models/gpt-5.4-pro",
+          "https://developers.openai.com/api/docs/models/gpt-5.5-pro",
+          "https://developers.openai.com/api/docs/models/gpt-realtime-2",
+          "https://developers.openai.com/api/docs/pricing",
+          "https://openai.com/index/gpt-6-astra/",
+          "https://openai.com/index/previewing-gpt-5-6-sol/",
+          "https://platform.openai.com/docs/api-reference",
           "https://platform.openai.com/docs/guides/embeddings",
+          "https://platform.openai.com/docs/guides/speech-to-text",
+          "https://platform.openai.com/docs/guides/text-to-speech",
+          "https://platform.openai.com/docs/models",
           "https://platform.openai.com/docs/models/gpt-4o-transcribe",
           "https://platform.openai.com/docs/models/gpt-5.2",
-          "https://developers.openai.com/api/docs/models/",
-          "https://developers.openai.com/api/docs/models/gpt-5.5-pro",
-          "https://developers.openai.com/api/docs/models/gpt-5.4-pro",
-          "https://developers.openai.com/api/docs/models/gpt-realtime-2",
-          "https://platform.openai.com/docs/models",
-          "https://platform.openai.com/docs/api-reference",
-          "https://developers.openai.com/api/docs/deprecations",
-          "https://platform.openai.com/docs/guides/text-to-speech",
-          "https://platform.openai.com/docs/guides/speech-to-text",
-          "https://openai.com/index/previewing-gpt-5-6-sol/",
-          "https://openai.com/index/gpt-6-astra/",
-          "https://developers.openai.ac.cn/api/docs/guides/video-generation"
+          "https://platform.openai.com/docs/pricing"
         ],
         "modelsUrl": "https://platform.openai.com/docs/models",
         "pricingUrl": "https://openai.com/api/pricing/"
@@ -710,16 +816,37 @@
       ],
       "regionCode": "global",
       "requiredModels": [
+        "gpt-6-astra",
         "gpt-5.6-sol",
         "gpt-5.6-terra",
         "gpt-5.6-luna",
+        "gpt-5.6-cyber",
+        "gpt-5.5-cyber",
+        "gpt-5.3-codex",
         "gpt-image-2",
-        "gpt-realtime-2",
-        "gpt-4o-mini-tts",
+        "gpt-image-2.5-flare",
+        "gpt-image-2.5-sunburst",
         "sora-2",
+        "sora-2-pro",
+        "gpt-realtime-2",
+        "gpt-realtime-2.1",
+        "gpt-realtime-2.1-mini",
+        "gpt-realtime-1.5",
+        "gpt-realtime-mini",
+        "gpt-realtime-translate",
+        "gpt-realtime-whisper",
+        "gpt-live-1",
+        "gpt-live-transcribe",
+        "gpt-transcribe",
+        "gpt-audio-1.5",
+        "gpt-4o-mini-tts",
+        "tts-1-hd",
+        "gpt-4o-transcribe",
+        "gpt-4o-mini-transcribe",
+        "gpt-4o-transcribe-diarize",
+        "whisper-1",
         "text-embedding-3-small",
-        "text-embedding-3-large",
-        "gpt-4o-transcribe"
+        "text-embedding-3-large"
       ],
       "supportedModels": [
         "gpt-5.5",
@@ -729,23 +856,15 @@
         "gpt-5.4-mini",
         "gpt-5.4-nano",
         "gpt-5.2",
-        "gpt-realtime-1.5",
         "gpt-image-1.5",
-        "gpt-4o-mini-transcribe",
-        "gpt-4o-transcribe-diarize",
-        "tts-1-hd",
-        "whisper-1",
-        "sora-2-pro",
-        "gpt-realtime-mini",
-        "gpt-realtime-translate",
-        "gpt-realtime-whisper"
+        "gpt-rosalind-research"
       ],
       "vendorCode": "openai",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Stability AI image and audio API public docs. Added Stable Audio 2.5 music generation and text-to-audio SFX mode.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "Re-verified 2026-09-17. platform.stability.ai/pricing is a Cloudflare-protected JS SPA that returns only a shell, so the official pricing table was extracted from the same site's data bundle (https://platform.stability.ai/assets/index-eklWmhUz.js, IMAGE_SERVICES / AUDIO_SERVICES / THREE_D_SERVICES arrays) and cross-checked against the docs billing note \"additional credits can be purchased ... at a rate of $1 USD per 100 credits\" (1 credit = $0.01). Audio: Stable Audio 3.0 26 credits, Stable Audio 2.5 20 credits — both match the catalog unchanged. Generate: Stable Image Ultra 8 credits and Stable Image Core 3 credits — both match unchanged; Stable Diffusion 3.5 Large 6.5, Large Turbo 4, Medium 3.5 and Flash 2.5 credits were added as new models with per-image USD rows; SDXL 1.0 is listed only as \"From 0.9\" credits with variable steps, so it is catalog_only + hidden with no price row. No Stability model was retired: the July 24 2025 deprecation notice removed only the Stable Video and Stable Diffusion 1.6 endpoints, neither of which is in this catalog. Unconfirmed: the official audio table has no separate SFX SKU (only Stable Audio 3.0 and Stable Audio 2.5 text-to-audio), so stable-audio-2.5-sfx keeps its existing 20-credit-derived $0.20 row; and Upscale / Edit / Control operations plus the 3D services (Stable Fast 3D 10 credits, Stable Point Aware 3D 4 credits) were not added because they are operations/models whose capability is outside this region's declared vendor capabilities.",
       "official": {
         "additionalUrls": [
           "https://platform.stability.ai/docs/",
@@ -760,19 +879,24 @@
       "regionCode": "global",
       "requiredModels": [
         "stable-image-ultra",
+        "stable-image-core",
+        "stable-audio-3.0",
         "stable-audio-2.5",
         "stable-audio-2.5-sfx",
-        "stable-audio-3.0"
+        "stable-diffusion-3-5-large",
+        "stable-diffusion-3-5-large-turbo",
+        "stable-diffusion-3-5-medium",
+        "stable-diffusion-3-5-flash"
       ],
       "supportedModels": [
-        "stable-image-core"
+        "sdxl-1-0"
       ],
       "vendorCode": "stability_ai",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Mureka official API platform from Kunlun Tech for song and instrumental generation. Added V9.5 base and O3 reasoning model released at WAIC 2026.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "Re-verified 2026-09-17 against the official Mureka API platform documentation (https://platform.mureka.ai/docs/, /docs/en/quickstart.html, /docs/en/faq.html, /docs/en/changelog.html and the api-reference operation pages). The OpenAPI model enum embedded in the docs bundle is the authoritative on-sale list: song / easy-generate / soundtrack accept auto, mureka-7.6, mureka-o2, mureka-8, mureka-9, mureka-9.5; instrumental accepts auto, mureka-7.6, mureka-8, mureka-9, mureka-9.5. Catalog ids match those vendor ids 1:1 for the o-series (mureka-o2) but prefix the versioned ids with a \"v\" (catalog mureka-v7.6 vs vendor mureka-7.6, and likewise v8 / v9 / v9.5); this pre-existing naming convention was left untouched and the vendor-side strings are quote-able from the official signature and response examples. mureka-v7.5, mureka-o1 and mureka-o3 were downgraded to deprecated/hidden/catalog_only because their vendor ids are absent from the current enum (mureka-o3 has no occurrence anywhere on the official site). No official monetary price list exists on any reachable Mureka page (the FAQ pricing section only covers top-up validity, and /v1/account/billing returns account balances rather than rates), so all eight existing api_result rates are left untouched and reported as unconfirmed.",
       "official": {
         "additionalUrls": [
           "https://platform.mureka.ai/docs/en/quickstart.html",
@@ -784,23 +908,23 @@
       "references": [],
       "regionCode": "global",
       "requiredModels": [
-        "mureka-v7.5",
+        "mureka-v7.6",
         "mureka-v8",
         "mureka-v9",
-        "mureka-o1",
+        "mureka-v9.5",
         "mureka-o2"
       ],
       "supportedModels": [
-        "mureka-v7.6",
-        "mureka-v9.5",
+        "mureka-v7.5",
+        "mureka-o1",
         "mureka-o3"
       ],
       "vendorCode": "mureka",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Runway generative video and image API with Gen-4 video and image models billed per second or per image.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "官方 /guides/models/ 列出全部在售模型，价格页给出 credit 单价与 1 credit = $0.01。新增了 Runway 自有模型（aleph2、act_two）与经 Model Router 转售的第三方模型；gen4_image 支持 720p/1080p 两档。新增 video 模型待补 model-video-profiles 文件。",
       "official": {
         "additionalUrls": [
           "https://docs.dev.runwayml.com/"
@@ -813,37 +937,55 @@
       "requiredModels": [
         "gen4.5",
         "gen4_turbo",
-        "gen4_image"
+        "gen4_image",
+        "aleph2",
+        "act_two"
       ],
       "supportedModels": [
-        "gen4_image_turbo"
+        "gen4_image_turbo",
+        "veo3.1",
+        "veo3.1_fast",
+        "seedance2_5",
+        "wan3",
+        "hailuo3",
+        "grok_imagine_1_5",
+        "muse_image",
+        "gpt_image_2",
+        "seedream5_pro",
+        "gemini_image3_pro",
+        "ruby"
       ],
       "vendorCode": "runway",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Suno API source.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "Re-verified 2026-09-17 against https://suno.com/pricing. The plans comparison lists \"Best free model (v6-mini)\" for Free and \"Advanced models (v6 and v6-wild)\" for Pro and Premier, and the model-version FAQ states \"v6 and v6-wild are our top models, available only to Pro and Premier users. v6-mini is a faster, more efficient model available to free users.\" The v6 family is therefore recorded, but only subscription credits (Pro 2,500/month, Premier 10,000/month) are published — there is no official per-second or per-generation API rate, so no pricing files were created and the three v6 models are catalog_only + hidden per the patch contract. suno-v5 and suno-v5.5 are downgraded to deprecated/hidden/catalog_only; their existing music_output_second rates (0.025000 and 0.020000 USD) could not be corroborated by any official price page and are flagged as unconfirmed rather than changed. Note that the marketing FAQ on https://suno.com/api still advertises v5.5, which conflicts with the plans page; the plans page was treated as authoritative.",
       "official": {
         "additionalUrls": [
           "https://docs.suno.com/",
-          "https://suno.com/blog/v5-5"
+          "https://suno.com/blog/v5-5",
+          "https://suno.com/pricing"
         ],
         "modelsUrl": "https://suno.com/api",
-        "pricingUrl": "https://suno.com/api"
+        "pricingUrl": "https://suno.com/pricing"
       },
       "references": [],
       "regionCode": "global",
-      "requiredModels": [
-        "suno-v5",
-        "suno-v5.5"
+      "requiredModels": [],
+      "supportedModels": [
+        "suno-v6",
+        "suno-v6-wild",
+        "suno-v6-mini",
+        "suno-v5.5",
+        "suno-v5"
       ],
       "vendorCode": "suno",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Tencent Hunyuan legacy models (HY 2.0 Instruct/Think, turbos-latest) shut down 2026-06-26; Hunyuan 3 (hy3) is the current model.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "Re-verified 2026-09-17. The legacy product/1729 Hunyuan platform is migrating to TokenHub and no longer adds model capabilities or supports new purchases, so TokenHub (product/1823/130055, updated 2026-09-15) is the authoritative model and price source. Hy3 (CNY 1 / 4 / 0.25) and Hy4 preview (CNY 6 / 18 / 0.3) per 1M tokens are unchanged. Added five Tencent-owned language models: Hy-MT2-Pro, Hy-MT2-Plus, Hy-MT2-Lite, Hy-Role, Hy-Role-Latest. The legacy hunyuan-2.0-instruct-20251111, hunyuan-2.0-thinking-20251109 and hunyuan-turbos-latest entries are already deprecated/hidden/catalog_only and were dropped from supportedModels because the official platform no longer offers them. Hy-Image-3.0, Hy-Video-1.5 and Hy-ASR-3.0-Preview are not added: their capabilities are absent from models/tencent/cn/vendor.json and families.json declares only the hunyuan family. TokenHub also resells third-party models (GLM, Kimi, MiniMax, Qwen, MiMo, DeepSeek, WAND, Seedream, Vidu, Kling, PixVerse) which belong to their own vendor-regions and were not added here.",
       "official": {
         "additionalUrls": [
           "https://cloud.tencent.com/document/product/1729/",
@@ -861,19 +1003,22 @@
       ],
       "regionCode": "cn",
       "requiredModels": [
-        "hy3"
+        "hy3",
+        "hy4-preview"
       ],
       "supportedModels": [
-        "hunyuan-2.0-instruct-20251111",
-        "hunyuan-2.0-thinking-20251109",
-        "hunyuan-turbos-latest"
+        "hy-mt2-pro",
+        "hy-mt2-plus",
+        "hy-mt2-lite",
+        "hy-role",
+        "hy-role-latest"
       ],
       "vendorCode": "tencent",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "StepFun (阶跃星辰) mainland China operation is modeled as the cn region of the vendor with CNY billing. Step Flash and Step multimodal families are product lines, not vendor identities.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "Re-verified 2026-09-17 against platform.stepfun.com model overview and pricing pages. All three catalog entries are the official current reasoning models, and the official per-1M-token rates (input cache-miss / input cache-hit / output) match the catalog exactly: step-3.5-flash and step-3.5-flash-2603 at CNY 0.7 / 0.14 / 2.1, step-3.7-flash at CNY 1.35 / 0.27 / 8.1. No additions, retirements, renames or price changes. Officially listed audio, vision and image models (StepAudio 3 Realtime, StepAudio 2.5 Chat, StepAudio 3 TTS, StepAudio 2.5 ASR, Step TTS Mini, Step-1o Turbo Vision, Step Image Edit 2, Step 2X Large, Step 1X Edit) are not added: their capabilities are absent from models/stepfun/cn/vendor.json and families.json has no reusable family for them. Extending this region requires a coordinated vendor.json capabilities + families.json update.",
       "official": {
         "additionalUrls": [
           "https://platform.stepfun.com/docs/zh/guides/models/step-3.5-flash",
@@ -889,17 +1034,19 @@
         "step-3.5-flash-2603",
         "step-3.7-flash"
       ],
+      "supportedModels": [],
       "vendorCode": "stepfun",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "ShengShu Technology Vidu mainland China API with Q3 video models, Audio 1.0 text-to-audio / timing-to-audio SFX APIs billed in CNY credits, and S1 real-time streaming interactive video model released July 3, 2026.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "Vidu Q3 系列为当前主推（视频 + 音频 + 错峰定价，含参考生视频另一套价目表）；Vidu S2 取代 Vidu S1 成为流式数字人产品线，但官方未给出 S2 各版本的模型 id。Vidu Q2/Q1/2.0 系列、图像生成与 Upscale-Pro 等官方仍在售，本次未纳入目录范围。新增 4 个 video 模型待补 model-video-profiles 文件；vidu-s1 降级后需同步调整 families[2].defaultModel。",
       "official": {
         "additionalUrls": [
-          "https://platform.vidu.cn/docs/text-to-video",
           "https://platform.vidu.cn/docs/image-to-video",
+          "https://platform.vidu.cn/docs/model-map",
           "https://platform.vidu.cn/docs/text-to-audio",
+          "https://platform.vidu.cn/docs/text-to-video",
           "https://platform.vidu.cn/docs/timing-to-audio",
           "https://www.shengshu.com/zh/news/"
         ],
@@ -911,18 +1058,22 @@
       "requiredModels": [
         "viduq3-pro",
         "viduq3-turbo",
+        "viduq3-mix",
+        "viduq3-pro-fast",
+        "viduq3",
         "audio1.0-text2audio",
         "audio1.0-timing2audio"
       ],
       "supportedModels": [
-        "vidu-s1"
+        "viduq3-drama",
+        "viduq3-ad"
       ],
       "vendorCode": "vidu",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "ShengShu Technology Vidu international API with Q3 video models, Audio 1.0 text-to-audio / timing-to-audio SFX APIs billed in USD credits, and S1 real-time streaming interactive video model released July 3, 2026.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "Vidu Q3 系列为当前主推（视频 + 音频 + 错峰定价，含参考生视频另一套价目表）；Vidu S2 取代 Vidu S1 成为流式数字人产品线，但官方未给出 S2 各版本的模型 id。Vidu Q2/Q1/2.0 系列、图像生成与 Upscale-Pro 等官方仍在售，本次未纳入目录范围。新增 4 个 video 模型待补 model-video-profiles 文件；vidu-s1 降级后需同步调整 families[2].defaultModel。",
       "official": {
         "additionalUrls": [
           "https://platform.vidu.com/docs",
@@ -938,18 +1089,22 @@
       "requiredModels": [
         "viduq3-pro",
         "viduq3-turbo",
+        "viduq3-mix",
+        "viduq3-pro-fast",
+        "viduq3",
         "audio1.0-text2audio",
         "audio1.0-timing2audio"
       ],
       "supportedModels": [
-        "vidu-s1"
+        "viduq3-drama",
+        "viduq3-ad"
       ],
       "vendorCode": "vidu",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "AIsphere PixVerse (拍我AI) mainland China video models via Alibaba DashScope and domestic open platform.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "官方 API 参考列出 pixverse-c1-t2v / pixverse-v6-t2v / pixverse-v5.6-t2v 三个可选模型值；官方未在该页或定价入口公布 CNY 单价，既有价格未复核。",
       "official": {
         "additionalUrls": [
           "https://help.aliyun.com/zh/model-studio/pixverse-text-to-video-api-reference"
@@ -963,13 +1118,15 @@
         "pixverse-v6-t2v",
         "pixverse-c1-t2v"
       ],
-      "supportedModels": [],
+      "supportedModels": [
+        "pixverse-v5.6-t2v"
+      ],
       "vendorCode": "pixverse",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "AIsphere PixVerse international open API with V6 text-to-video, image-to-video, and reference-to-video.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "官方推荐生成模型为 C1 与 V6；价格全部以 credit 表示，且官方内部存在两套互相矛盾的 credit→USD 口径（$10/1,000 Credits 与 $1=5 条 v6 720p 5s 视频），故未做货币换算，既有 USD 单价待确认。",
       "official": {
         "additionalUrls": [
           "https://docs.platform.pixverse.ai/"
@@ -982,13 +1139,15 @@
       "requiredModels": [
         "pixverse-v6"
       ],
-      "supportedModels": [],
+      "supportedModels": [
+        "pixverse-c1"
+      ],
       "vendorCode": "pixverse",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "xAI official docs list Grok 4.6 (released 2026-08-12), Grok 4.5, Grok 4.3, 4.20 series, Build 0.1, and Grok Imagine image/video models. Grok 4.6 reprices whole requests above 200K input tokens at doubled rates.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "官方 docs.x.ai models/pricing 页核对：全部 12 个在售模型确认在列；价格修正 2 条（grok-4.5 cache read、grok-imagine-image-2.0），补齐 5 个文本模型的 cached input 与长上下文档。官方 Voice Pricing 另列 grok-voice-think-fast-2.0 等语音能力，但目录无 audio 能力与 voice 家族，未新增（见报告未确认项）。",
       "official": {
         "additionalUrls": [
           "https://docs.x.ai/",
@@ -1007,43 +1166,49 @@
       ],
       "regionCode": "global",
       "requiredModels": [
+        "grok-4.6",
+        "grok-4.5",
+        "grok-4.3",
         "grok-4.20-0309-reasoning",
         "grok-4.20-0309-non-reasoning",
         "grok-4.20-multi-agent-0309",
-        "grok-4.3",
-        "grok-4.5",
         "grok-build-0.1",
         "grok-imagine-image",
-        "grok-imagine-video",
-        "grok-4.6"
-      ],
-      "supportedModels": [
         "grok-imagine-image-quality",
+        "grok-imagine-image-2.0",
+        "grok-imagine-video",
         "grok-imagine-video-1.5"
       ],
+      "supportedModels": [],
       "vendorCode": "xai",
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Xiaomi MiMo open platform (platform.xiaomimimo.com). MiMo V2 Flash retired 2026-06-30 with requests routed to MiMo V2.5; MiMo V2.5 series is current.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "2026-09-17 re-verified from https://mimo.mi.com/docs/en-US/quick-start/summary/model and https://mimo.mi.com/docs/en-US/price/pay-as-you-go (overseas pricing table, page updated 2026-08-06). Overseas rates are USD: mimo-v2.5-pro 0.435 input / 0.0036 cache hit / 0.87 output, mimo-v2.5 0.14 / 0.0028 / 0.28 per million tokens, mimo-v2.5-asr 0.074 per hour of input audio. mimo-v2.5-asr and the three TTS models were added; the TTS series is officially free for a limited time so it is catalog-only with no price file.",
       "official": {
         "additionalUrls": [
-          "https://mimo.xiaomi.com",
+          "https://mimo.mi.com/docs/en-US",
+          "https://mimo.mi.com",
           "https://platform.xiaomimimo.com",
+          "https://mimo.xiaomi.com",
           "https://huggingface.co/XiaomiMiMo"
         ],
-        "modelsUrl": "https://mimo.xiaomi.com",
-        "pricingUrl": "https://platform.xiaomimimo.com"
+        "modelsUrl": "https://mimo.mi.com/docs/en-US/quick-start/summary/model",
+        "pricingUrl": "https://mimo.mi.com/docs/en-US/price/pay-as-you-go"
       },
       "references": [],
       "regionCode": "global",
       "requiredModels": [
         "mimo-v2.5-pro",
         "mimo-v2.5",
-        "mimo-v2.5-pro-fp4-dflash"
+        "mimo-v2.5-asr"
       ],
       "supportedModels": [
+        "mimo-v2.5-tts",
+        "mimo-v2.5-tts-voiceclone",
+        "mimo-v2.5-tts-voicedesign",
+        "mimo-v2.5-pro-fp4-dflash",
         "mimo-v2.5-pro-ultraspeed",
         "mimo-v2-flash"
       ],
@@ -1051,25 +1216,31 @@
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Xiaomi MiMo open platform (platform.xiaomimimo.com). MiMo V2 Flash retired 2026-06-30 with requests routed to MiMo V2.5; MiMo V2.5 series is current.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "2026-09-17 re-verified from https://mimo.mi.com/docs/zh-CN/quick-start/summary/model (模型列表) and https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go (按量计费 API, page updated 2026-08-06), which are the server-rendered documentation pages behind platform.xiaomimimo.com. The official cn pay-as-you-go table lists mimo-v2.5-pro at CNY 3.00 input / 0.025 cache hit / 6.00 output and mimo-v2.5 at CNY 1.00 / 0.02 / 2.00 per million tokens, plus mimo-v2.5-asr at CNY 0.5 per hour of input audio. mimo-v2.5-asr and the three TTS models were added; the TTS series is officially free for a limited time so it is catalog-only with no price file.",
       "official": {
         "additionalUrls": [
-          "https://mimo.xiaomi.com",
+          "https://mimo.mi.com/docs/zh-CN",
+          "https://mimo.mi.com",
           "https://platform.xiaomimimo.com",
+          "https://mimo.xiaomi.com",
           "https://huggingface.co/XiaomiMiMo"
         ],
-        "modelsUrl": "https://platform.xiaomimimo.com",
-        "pricingUrl": "https://platform.xiaomimimo.com"
+        "modelsUrl": "https://mimo.mi.com/docs/zh-CN/quick-start/summary/model",
+        "pricingUrl": "https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go"
       },
       "references": [],
       "regionCode": "cn",
       "requiredModels": [
         "mimo-v2.5-pro",
         "mimo-v2.5",
-        "mimo-v2.5-pro-fp4-dflash"
+        "mimo-v2.5-asr"
       ],
       "supportedModels": [
+        "mimo-v2.5-tts",
+        "mimo-v2.5-tts-voiceclone",
+        "mimo-v2.5-tts-voicedesign",
+        "mimo-v2.5-pro-fp4-dflash",
         "mimo-v2.5-pro-ultraspeed",
         "mimo-v2-flash"
       ],
@@ -1077,8 +1248,8 @@
       "verificationStatus": "official_url_declared"
     },
     {
-      "lastCheckedAt": "2026-08-13T00:00:00Z",
-      "notes": "Zhipu AI mainland China operation with GLM chat, CogView image, CogVideoX video, and Embedding-3 models.",
+      "lastCheckedAt": "2026-09-17T00:00:00Z",
+      "notes": "Re-verified 2026-09-17 against docs.bigmodel.cn model overview and API pricing. Official recommended core set is 9 models: GLM-5.3, GLM-5.3-Flash, GLM-5.2, GLM-Image, GLM-OCR, GLM-ASR-2512, GLM-TTS, CogVideoX-3, Embedding-3. GLM-5.3-Flash cache-hit price corrected to CNY 0.23 per 1M tokens. GLM-ASR-2512 / GLM-TTS / GLM-TTS-Clone / CodeGeeX-4 / Rerank remain out of scope: their capability (audio, code, rerank) is not declared in models/zhipu/cn/vendor.json and no matching family exists in families.json.",
       "official": {
         "additionalUrls": [
           "https://docs.bigmodel.cn/",
@@ -1095,11 +1266,21 @@
       ],
       "regionCode": "cn",
       "requiredModels": [
+        "glm-5.3",
+        "glm-5.3-flash",
         "glm-5.2",
-        "glm-5.1",
-        "cogview-4-250304",
+        "glm-image",
+        "glm-ocr",
         "cogvideox-3",
         "embedding-3"
+      ],
+      "supportedModels": [
+        "glm-5.1",
+        "glm-5",
+        "glm-5-turbo",
+        "glm-5v-turbo",
+        "cogview-4-250304",
+        "embedding-2"
       ],
       "vendorCode": "zhipu",
       "verificationStatus": "official_url_declared"

@@ -4,8 +4,9 @@
     "music"
   ],
   "catalogKey": "minimax/music-2.6",
+  "codingVisible": false,
   "colorToken": "#2563eb",
-  "description": "MiniMax Music 2.6 generates full-length songs with vocals or instrumental tracks from prompts and lyrics.",
+  "description": "music-2.6 已由 MiniMax 官方标注「已下线」：自 2026 年 8 月 20 日起付费接口（音乐生成、歌词生成）不再面向新用户提供服务，历史付费用户仍可继续使用现有 API。替代方案见官方指引的 MiniMax Audio 或开源的 MiniMax Music 3（Hugging Face / ModelScope）。",
   "displayName": "MiniMax Music 2.6",
   "familyCode": "minimax-music",
   "inputModalities": [
@@ -13,7 +14,7 @@
   ],
   "latencyP50Ms": 25000,
   "latencyP95Ms": 90000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "music-2.6",
   "outputModalities": [
     "music"
@@ -21,12 +22,12 @@
   "primaryCapability": "music",
   "rankScore": "780.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
   },
   "strengths": [
@@ -39,9 +40,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.930000",
+  "usageScopes": [],
   "vendorCode": "minimax",
   "vendorName": "MiniMax",
-  "winRate": "0.880000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.880000"
 }

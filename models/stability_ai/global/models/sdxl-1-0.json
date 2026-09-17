@@ -1,0 +1,42 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "stability_ai/sdxl-1-0",
+  "codingVisible": false,
+  "colorToken": "#0d9488",
+  "description": "Legacy base model for straightforward image generation. Official pricing is variable — the pricing table lists \"From 0.9\" credits, tooltipped as \"Based on a 1024x1024 generation and variable steps\" — so no fixed price row is recorded and the model is catalog-only.",
+  "displayName": "SDXL 1.0",
+  "familyCode": "stable-image",
+  "inputModalities": [
+    "text"
+  ],
+  "latencyP50Ms": 3000,
+  "latencyP95Ms": 11000,
+  "lifecycle": "catalog_only",
+  "modelId": "sdxl-1-0",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "640.000000",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.stability.ai/pricing"
+  },
+  "strengths": [
+    "Image generation",
+    "Prompt adherence"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.620000",
+  "usageScopes": [],
+  "vendorCode": "stability_ai",
+  "vendorName": "Stability AI",
+  "winRate": "0.680000"
+}

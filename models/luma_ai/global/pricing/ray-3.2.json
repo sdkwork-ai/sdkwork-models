@@ -4,74 +4,214 @@
   "modelId": "ray-3.2",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_540p_dur_5s"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.luma_ai.global.official",
+      "priceId": "luma-ai-global-ray-3-2-second-540p-5s",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.luma_ai.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "488004b16d283591b946c1f4ff269667d59b198f384b4236aaa614e733a685b1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api"
+      },
+      "tierCode": "res_540p_dur_5s",
+      "unitPrice": "0.030000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p_dur_5s"
+        }
+      ],
       "currency": "USD",
       "effectiveFrom": "2026-07-14T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-720p-5s",
       "priceSide": "official",
       "pricingScope": "model",
-      "quantityStep": "1",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://docs.agents.lumalabs.ai/guides/pricing"
-      },
-      "tierCode": "dur_5s",
-      "unitPrice": "0.060000",
-      "unitSize": "1",
-      "priceBookCode": "models.luma_ai.global.official",
+      "priority": 100,
       "productCode": "models.luma_ai.video",
-      "operationCode": "video.generate",
-      "billability": "chargeable",
-      "chargeTiming": "successful_result",
-      "calculationMode": "per_unit",
       "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d8fe79aea9b43293d32a9ed01a49dd2e748a2d81c1e41eca17b4a4fa6c04299f",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api"
+      },
+      "tierCode": "res_720p_dur_5s",
+      "unitPrice": "0.060000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
       "conditions": [
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "dur_5s"
+          "value": "res_1080p_dur_5s"
         }
       ],
-      "rateHash": "8b815a08e120756ec6205501e20249a3c4116e3f293c241afc6b01939fa039e1",
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.luma_ai.global.official",
+      "priceId": "luma-ai-global-ray-3-2-second-1080p-5s",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
+      "productCode": "models.luma_ai.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "692502291c1b955563228a46d28ac58a24b64536bc9cd4e98ed691166733ac00",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api"
+      },
+      "tierCode": "res_1080p_dur_5s",
+      "unitPrice": "0.240000",
+      "unitSize": "1"
     },
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_540p_dur_10s"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.luma_ai.global.official",
+      "priceId": "luma-ai-global-ray-3-2-second-540p-10s",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.luma_ai.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "832f4c1e290178e7a2e825c48c1c7b62210a88a97eb95abe231d2780e4176f97",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api"
+      },
+      "tierCode": "res_540p_dur_10s",
+      "unitPrice": "0.045000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p_dur_10s"
+        }
+      ],
       "currency": "USD",
       "effectiveFrom": "2026-07-14T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-720p-10s",
       "priceSide": "official",
       "pricingScope": "model",
-      "quantityStep": "1",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://docs.agents.lumalabs.ai/guides/pricing"
-      },
-      "tierCode": "dur_10s",
-      "unitPrice": "0.090000",
-      "unitSize": "1",
-      "priceBookCode": "models.luma_ai.global.official",
+      "priority": 100,
       "productCode": "models.luma_ai.video",
-      "operationCode": "video.generate",
-      "billability": "chargeable",
-      "chargeTiming": "successful_result",
-      "calculationMode": "per_unit",
       "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3df9b6fa51e78d3f5356eb0f45b8e893b71f0f9614ae9ff3a9f642006e5284a6",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api"
+      },
+      "tierCode": "res_720p_dur_10s",
+      "unitPrice": "0.090000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
       "conditions": [
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "dur_10s"
+          "value": "res_1080p_dur_10s"
         }
       ],
-      "rateHash": "7b221042a936abf5275e6beba147d991ea5babc507c4bdf21e9982d29d93eb69",
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.luma_ai.global.official",
+      "priceId": "luma-ai-global-ray-3-2-second-1080p-10s",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
+      "productCode": "models.luma_ai.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "432784d827ad41302c15caa8bba5befbae8bf015d1577856280086f605ab3560",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api"
+      },
+      "tierCode": "res_1080p_dur_10s",
+      "unitPrice": "0.360000",
+      "unitSize": "1"
     }
   ],
   "regionCode": "global",

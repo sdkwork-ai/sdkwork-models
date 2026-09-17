@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "baidu/ernie-5.0-thinking-preview",
+  "codingVisible": true,
   "colorToken": "#1d4ed8",
   "contextTokens": 128000,
   "description": "ERNIE thinking preview model for Chinese reasoning workloads.",
@@ -30,7 +31,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
   },
   "strengths": [
@@ -42,12 +43,11 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.840000",
-  "vendorCode": "baidu",
-  "vendorName": "Baidu AI Cloud",
-  "winRate": "0.820000",
   "usageScopes": [
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "baidu",
+  "vendorName": "Baidu AI Cloud",
+  "winRate": "0.820000"
 }

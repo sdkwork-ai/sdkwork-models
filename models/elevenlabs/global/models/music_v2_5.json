@@ -1,0 +1,45 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "elevenlabs/music_v2_5",
+  "codingVisible": false,
+  "colorToken": "#ca8a04",
+  "description": "ElevenLabs most advanced music model. Studio-grade generation from text prompts, composition plans and previously generated songs, with improved quality and prompt adherence over music_v2.",
+  "displayName": "Eleven Music v2.5",
+  "familyCode": "elevenlabs-music",
+  "inputModalities": [
+    "text",
+    "audio"
+  ],
+  "latencyP50Ms": 45000,
+  "latencyP95Ms": 150000,
+  "lifecycle": "active",
+  "modelId": "music_v2_5",
+  "outputModalities": [
+    "music"
+  ],
+  "primaryCapability": "music",
+  "rankScore": "780.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://elevenlabs.io/docs/models"
+  },
+  "strengths": [
+    "Music generation",
+    "Improved prompt adherence",
+    "Richer melodies",
+    "More layered instruments"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.930000",
+  "usageScopes": [],
+  "vendorCode": "elevenlabs",
+  "vendorName": "ElevenLabs",
+  "winRate": "0.890000"
+}

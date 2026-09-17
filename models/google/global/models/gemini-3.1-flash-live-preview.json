@@ -5,6 +5,7 @@
     "audio"
   ],
   "catalogKey": "google/gemini-3.1-flash-live-preview",
+  "codingVisible": true,
   "colorToken": "#0f766e",
   "contextTokens": 131072,
   "description": "Gemini 3.1 Flash Live preview model for low-latency multimodal realtime sessions.",
@@ -33,7 +34,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
   },
   "strengths": [
@@ -45,12 +46,11 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.930000",
-  "vendorCode": "google",
-  "vendorName": "Google",
-  "winRate": "0.870000",
   "usageScopes": [
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "google",
+  "vendorName": "Google",
+  "winRate": "0.870000"
 }

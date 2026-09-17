@@ -4,6 +4,7 @@
     "image"
   ],
   "catalogKey": "black_forest_labs/flux-2-max",
+  "codingVisible": false,
   "colorToken": "#18181b",
   "description": "FLUX.2 Max image generation model with highest visual fidelity, grounding search, and up to 4MP output for commercial production work.",
   "displayName": "FLUX.2 Max",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://docs.bfl.ai/flux_2/flux2_overview"
   },
   "strengths": [
@@ -39,9 +40,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.900000",
+  "usageScopes": [],
   "vendorCode": "black_forest_labs",
   "vendorName": "Black Forest Labs",
-  "winRate": "0.890000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.890000"
 }

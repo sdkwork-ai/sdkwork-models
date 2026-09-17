@@ -4,74 +4,76 @@
   "modelId": "flux-2-klein-4b",
   "prices": [
     {
-      "currency": "USD",
-      "effectiveFrom": "2026-07-14T00:00:00Z",
-      "mediaDirection": "output",
-      "meterCode": "image_megapixel",
-      "minimumQuantity": "0",
-      "priceId": "bfl-flux-2-klein-4b-output-megapixel",
-      "priceSide": "official",
-      "pricingScope": "model",
-      "quantityStep": "0.001",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
-      },
-      "unitPrice": "0.014000",
-      "unitSize": "1",
-      "priceBookCode": "models.black_forest_labs.global.official",
-      "productCode": "models.black_forest_labs.image",
-      "operationCode": "image.generate",
       "billability": "chargeable",
-      "chargeTiming": "successful_result",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
+      "chargeTiming": "successful_result",
       "conditions": [
         {
-          "dimensionCode": "media_direction",
+          "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "output"
+          "value": "first_megapixel"
         }
       ],
-      "rateHash": "5b98f2c3a3d7ee3c2ec6a4ab9cdba017f8f86a30acbf000ed84af19ebc853931",
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_megapixel",
+      "minimumQuantity": "0",
+      "notes": "FLUX.2 [klein] 4B first output megapixel — official \"from $0.014\".",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-2-klein-4b-first-megapixel",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
+      "productCode": "models.black_forest_labs.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "0.001",
+      "rateHash": "99e71994aa049886e5acd45c9e95a3bbc8584351b97750f076084fe16c61748f",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "first_megapixel",
+      "unitPrice": "0.014000",
+      "unitSize": "1"
     },
     {
-      "currency": "USD",
-      "effectiveFrom": "2026-07-14T00:00:00Z",
-      "mediaDirection": "input",
-      "meterCode": "image_megapixel",
-      "minimumQuantity": "0",
-      "priceId": "bfl-flux-2-klein-4b-input-megapixel",
-      "priceSide": "official",
-      "pricingScope": "model",
-      "quantityStep": "0.001",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
-      },
-      "unitPrice": "0.001000",
-      "unitSize": "1",
-      "priceBookCode": "models.black_forest_labs.global.official",
-      "productCode": "models.black_forest_labs.image",
-      "operationCode": "image.generate",
       "billability": "chargeable",
-      "chargeTiming": "successful_result",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
+      "chargeTiming": "successful_result",
       "conditions": [
         {
-          "dimensionCode": "media_direction",
+          "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "input"
+          "value": "additional_megapixel"
         }
       ],
-      "rateHash": "c862df2abda38191f97caf3660533ec0e1412567b6c7b420a5dea6ac0776a629",
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_megapixel",
+      "minimumQuantity": "0",
+      "notes": "Each additional output megapixel. Official example: a 2MP image with Klein 4B costs $0.014 + $0.001 = $0.015.",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-2-klein-4b-additional-megapixel",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
+      "productCode": "models.black_forest_labs.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "0.001",
+      "rateHash": "a8fb2185aa0710decb89ece64af67005e59e88651e5951bcf0acf75cf9950f97",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "additional_megapixel",
+      "unitPrice": "0.001000",
+      "unitSize": "1"
     }
   ],
   "regionCode": "global",

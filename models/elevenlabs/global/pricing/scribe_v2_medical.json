@@ -1,0 +1,38 @@
+{
+  "catalogKey": "elevenlabs/scribe_v2_medical",
+  "currency": "USD",
+  "modelId": "scribe_v2_medical",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "stt_audio_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.transcribe",
+      "priceBookCode": "models.elevenlabs.global.official",
+      "priceId": "elevenlabs-scribe-v2-medical-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.elevenlabs.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "9f6aaa8f951c33a7f8ca80736be92dbae1931ad64c76c79d539940045bc1b762",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://elevenlabs.io/pricing/api"
+      },
+      "unitPrice": "0.003667",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "elevenlabs"
+}

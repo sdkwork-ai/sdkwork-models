@@ -1,0 +1,36 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "openai/gpt-transcribe",
+  "codingVisible": false,
+  "colorToken": "#6366f1",
+  "description": "High-accuracy speech-to-text model for file and Realtime input transcription. Official replacement for the deprecating whisper-1 and gpt-4o-transcribe family.",
+  "displayName": "GPT Transcribe",
+  "familyCode": "audio",
+  "inputModalities": [
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "gpt-transcribe",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-transcribe"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "openai",
+  "vendorName": "OpenAI"
+}

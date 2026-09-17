@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "tencent/hunyuan-turbos-latest",
+  "codingVisible": true,
   "colorToken": "#0f766e",
   "contextTokens": 32768,
   "description": "Tencent Hunyuan legacy model shut down on 2026-06-26 per official announcement; migrate to Hunyuan 3 (hy3). Kept for migration reference.",
@@ -29,7 +30,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://cloud.tencent.com/document/product/1729/104753"
   },
   "strengths": [
@@ -41,12 +42,11 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.800000",
-  "vendorCode": "tencent",
-  "vendorName": "Tencent Cloud",
-  "winRate": "0.800000",
   "usageScopes": [
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "tencent",
+  "vendorName": "Tencent Cloud",
+  "winRate": "0.800000"
 }

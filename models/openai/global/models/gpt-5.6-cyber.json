@@ -1,0 +1,41 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "openai/gpt-5.6-cyber",
+  "codingVisible": true,
+  "colorToken": "#111827",
+  "description": "Our most advanced cybersecurity model for authorized vulnerability research and security testing. Recommended replacement for the deprecating gpt-5.4-cyber (API removal October 1, 2026).",
+  "displayName": "GPT-5.6 Cyber",
+  "familyCode": "gpt-5",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "gpt-5.6-cyber",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-5.6-cyber"
+  },
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "agent",
+    "chat"
+  ],
+  "vendorCode": "openai",
+  "vendorName": "OpenAI"
+}

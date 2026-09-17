@@ -4,6 +4,7 @@
     "image"
   ],
   "catalogKey": "minimax/image-01",
+  "codingVisible": false,
   "colorToken": "#2563eb",
   "description": "MiniMax Image-01 text-to-image and image-to-image model with 1K/2K output and batch generation.",
   "displayName": "MiniMax Image 01",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
   },
   "strengths": [
@@ -39,9 +40,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.880000",
+  "usageScopes": [],
   "vendorCode": "minimax",
   "vendorName": "MiniMax",
-  "winRate": "0.860000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.860000"
 }

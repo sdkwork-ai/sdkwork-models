@@ -1,0 +1,43 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "xiaomi/mimo-v2.5-asr",
+  "codingVisible": false,
+  "contextTokens": 8192,
+  "description": "Xiaomi MiMo V2.5 ASR speech recognition model (released 2026-06-02). Chinese/English plus dialects (Wu, Cantonese, Hokkien, Sichuan), lyric transcription, robust in noisy far-field multi-speaker conditions. Billed by input audio duration.",
+  "displayName": "MiMo V2.5 ASR",
+  "familyCode": "mimo-v2.5",
+  "inputModalities": [
+    "audio"
+  ],
+  "lifecycle": "active",
+  "maxOutputTokens": 2048,
+  "modelId": "mimo-v2.5-asr",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://mimo.mi.com/docs/en-US/quick-start/summary/model"
+  },
+  "strengths": [
+    "Chinese/English ASR",
+    "Dialect support",
+    "Lyric transcription",
+    "Noisy environment robustness"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "xiaomi",
+  "vendorName": "Xiaomi MiMo"
+}

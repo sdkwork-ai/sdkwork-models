@@ -7,13 +7,13 @@
   "codingVisible": false,
   "colorToken": "#10a37f",
   "contextTokens": 128000,
-  "description": "Speech-to-text model powered by GPT-4o mini for audio transcription.",
+  "description": "Speech-to-text model powered by GPT-4o Mini. Officially deprecated on 2026-08-26, removal from the API on February 26, 2027; official replacement: gpt-live-transcribe or gpt-transcribe.",
   "displayName": "GPT-4o mini Transcribe",
   "familyCode": "audio",
   "inputModalities": [
     "audio"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 128000,
   "modelId": "gpt-4o-mini-transcribe",
   "outputModalities": [
@@ -21,12 +21,12 @@
   ],
   "primaryCapability": "audio",
   "regionCode": "global",
-  "releaseStage": "active",
+  "releaseStage": "deprecated",
   "routingState": "enabled",
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-13T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.openai.com/docs/models"
   },
   "strengths": [

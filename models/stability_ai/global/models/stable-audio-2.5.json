@@ -4,6 +4,7 @@
     "music"
   ],
   "catalogKey": "stability_ai/stable-audio-2.5",
+  "codingVisible": false,
   "colorToken": "#0f766e",
   "description": "Stability AI Stable Audio 2.5 enterprise music and sound generation with multi-part composition and audio inpainting.",
   "displayName": "Stable Audio 2.5",
@@ -28,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.stability.ai/docs"
   },
   "strengths": [
@@ -40,9 +41,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.880000",
+  "usageScopes": [],
   "vendorCode": "stability_ai",
   "vendorName": "Stability AI",
-  "winRate": "0.850000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.850000"
 }

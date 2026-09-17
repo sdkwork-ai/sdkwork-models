@@ -4,6 +4,7 @@
     "video"
   ],
   "catalogKey": "runway/gen4.5",
+  "codingVisible": false,
   "colorToken": "#0f172a",
   "description": "Runway Gen-4.5 flagship video generation model with improved motion fidelity and prompt adherence.",
   "displayName": "Gen-4.5",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
   },
   "strengths": [
@@ -39,9 +40,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.940000",
+  "usageScopes": [],
   "vendorCode": "runway",
   "vendorName": "Runway",
-  "winRate": "0.900000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.900000"
 }

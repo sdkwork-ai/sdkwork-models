@@ -1,0 +1,43 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "elevenlabs/eleven_flash_v2",
+  "codingVisible": false,
+  "colorToken": "#7c2d12",
+  "description": "ElevenLabs English-only ultra-fast speech synthesis model optimized for real-time use (~75ms latency), billed on the shared Flash/Turbo tier at $0.05 per 1K characters.",
+  "displayName": "Eleven Flash v2",
+  "familyCode": "elevenlabs-tts",
+  "inputModalities": [
+    "text"
+  ],
+  "latencyP50Ms": 75,
+  "latencyP95Ms": 300,
+  "lifecycle": "active",
+  "modelId": "eleven_flash_v2",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "rankScore": "740.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://elevenlabs.io/docs/models"
+  },
+  "strengths": [
+    "Text to speech",
+    "Ultra-low latency",
+    "English only"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.860000",
+  "usageScopes": [],
+  "vendorCode": "elevenlabs",
+  "vendorName": "ElevenLabs",
+  "winRate": "0.840000"
+}

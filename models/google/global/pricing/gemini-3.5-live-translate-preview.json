@@ -1,0 +1,66 @@
+{
+  "catalogKey": "google/gemini-3.5-live-translate-preview",
+  "currency": "USD",
+  "modelId": "gemini-3.5-live-translate-preview",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "audio_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.google.global.official",
+      "priceId": "google-gemini-3.5-live-translate-preview-audio-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.google.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "8b6c84fb2e2bbc1a29ecde04ecac4b5e618f3ff6799753847dad15056e8d3b54",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "unitPrice": "3.500000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "audio_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.google.global.official",
+      "priceId": "google-gemini-3.5-live-translate-preview-audio-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.google.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "efff121cf15afff7cbc8ad9ee7e3d728f1328b93e03c291c2c78e14ca34c55c7",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "unitPrice": "21.000000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "google"
+}

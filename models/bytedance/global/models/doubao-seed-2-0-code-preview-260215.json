@@ -4,16 +4,17 @@
     "chat"
   ],
   "catalogKey": "bytedance/doubao-seed-2-0-code-preview-260215",
+  "codingVisible": true,
   "colorToken": "#b91c1c",
   "contextTokens": 256000,
-  "description": "Doubao Seed 2.0 Code model optimized for software engineering, debugging, and agentic coding workflows.",
+  "description": "Not present on the official BytePlus ModelArk model list as of 2026-09-17. BytePlus ModelArk publishes seed-2-0-code-preview-260328 instead; no 260215 Code Preview id is listed.",
   "displayName": "Doubao Seed 2.0 Code",
   "familyCode": "doubao-seed",
   "inputModalities": [
     "text",
     "image"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 256000,
   "maxOutputTokens": 32768,
   "modelId": "doubao-seed-2-0-code-preview-260215",
@@ -23,12 +24,12 @@
   "primaryCapability": "chat",
   "rankScore": "870.000000",
   "regionCode": "global",
-  "releaseStage": "preview",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://seed.bytedance.com/en/seed2"
   },
   "strengths": [
@@ -40,12 +41,11 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.900000",
-  "vendorCode": "bytedance",
-  "vendorName": "ByteDance",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
 }

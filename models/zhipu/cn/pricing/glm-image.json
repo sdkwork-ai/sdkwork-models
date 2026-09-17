@@ -1,0 +1,38 @@
+{
+  "catalogKey": "zhipu/glm-image",
+  "currency": "CNY",
+  "modelId": "glm-image",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.zhipu.cn.official",
+      "priceId": "zhipu-cn-glm-image-result",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.zhipu.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "715ac2e695dec9bc30f2f24d88b42b13049f0102111ed436398b8443469ad9bb",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
+      },
+      "unitPrice": "0.100000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "zhipu"
+}

@@ -4,6 +4,7 @@
     "audio"
   ],
   "catalogKey": "elevenlabs/eleven_flash_v2_5",
+  "codingVisible": false,
   "colorToken": "#7c2d12",
   "description": "ElevenLabs Flash v2.5 ultra-low latency text-to-speech model.",
   "displayName": "Eleven Flash v2.5",
@@ -26,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://elevenlabs.io/docs/overview/models"
   },
   "strengths": [
@@ -38,9 +39,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.930000",
+  "usageScopes": [],
   "vendorCode": "elevenlabs",
   "vendorName": "ElevenLabs",
-  "winRate": "0.890000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.890000"
 }

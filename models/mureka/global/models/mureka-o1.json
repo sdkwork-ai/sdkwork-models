@@ -4,8 +4,9 @@
     "music"
   ],
   "catalogKey": "mureka/mureka-o1",
+  "codingVisible": false,
   "colorToken": "#6d28d9",
-  "description": "Mureka O1 premium music generation model with multilingual composition and contextual BGM creation.",
+  "description": "Not present in the current official model enum; only referenced in a legacy streaming note. The Mureka OpenAPI model field now accepts only auto, mureka-7.6, mureka-o2, mureka-8, mureka-9 and mureka-9.5. Migrate to mureka-o2.",
   "displayName": "Mureka O1",
   "familyCode": "mureka",
   "inputModalities": [
@@ -13,7 +14,7 @@
   ],
   "latencyP50Ms": 50000,
   "latencyP95Ms": 140000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "mureka-o1",
   "outputModalities": [
     "music"
@@ -21,12 +22,12 @@
   "primaryCapability": "music",
   "rankScore": "810.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.mureka.ai/docs/"
   },
   "strengths": [
@@ -38,9 +39,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.940000",
+  "usageScopes": [],
   "vendorCode": "mureka",
   "vendorName": "Mureka",
-  "winRate": "0.900000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.900000"
 }

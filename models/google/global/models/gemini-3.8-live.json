@@ -1,0 +1,38 @@
+{
+  "apiFormat": "google_gemini",
+  "catalogKey": "google/gemini-3.8-live",
+  "codingVisible": false,
+  "description": "默认 Live API 音频到音频模型，用于低延迟语音智能体，2026-09-15 GA。官方同价组：Gemini 3.8 Live / Gemini 3.8 Live Extended Thinking / Gemini 3.1 Flash Live Preview。",
+  "displayName": "Gemini 3.8 Live",
+  "familyCode": "gemini",
+  "inputModalities": [
+    "text",
+    "audio",
+    "video"
+  ],
+  "lifecycle": "active",
+  "modelId": "gemini-3.8-live",
+  "outputModalities": [
+    "text",
+    "audio"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
+  },
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "google",
+  "vendorName": "Google"
+}

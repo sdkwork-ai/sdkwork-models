@@ -1,0 +1,43 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "suno/suno-v6-mini",
+  "codingVisible": false,
+  "colorToken": "#b91c1c",
+  "description": "Suno's faster, more efficient model available to free users and officially listed as the best free model on the plans comparison. No official API price is published, so no price row is recorded.",
+  "displayName": "Suno v6 Mini",
+  "familyCode": "suno",
+  "inputModalities": [
+    "text"
+  ],
+  "latencyP50Ms": 40000,
+  "latencyP95Ms": 120000,
+  "lifecycle": "catalog_only",
+  "modelId": "suno-v6-mini",
+  "outputModalities": [
+    "music"
+  ],
+  "primaryCapability": "music",
+  "rankScore": "720.000000",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://suno.com/pricing"
+  },
+  "strengths": [
+    "Music generation",
+    "Fast generation",
+    "Free tier"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.880000",
+  "usageScopes": [],
+  "vendorCode": "suno",
+  "vendorName": "Suno",
+  "winRate": "0.820000"
+}

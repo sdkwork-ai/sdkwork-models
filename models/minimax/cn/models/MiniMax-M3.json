@@ -5,6 +5,7 @@
     "code"
   ],
   "catalogKey": "minimax/MiniMax-M3",
+  "codingVisible": true,
   "colorToken": "#6366f1",
   "contextTokens": 1000000,
   "description": "MiniMax M3 frontier multimodal coding model with 1M context window, frontier coding capabilities, and multimodal support.",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.minimaxi.com/docs/guides/models-intro"
   },
   "strengths": [
@@ -39,12 +40,11 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.910000",
-  "vendorCode": "minimax",
-  "vendorName": "MiniMax",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax"
 }

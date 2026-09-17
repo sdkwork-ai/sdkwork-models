@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#111827",
   "contextTokens": 1050000,
-  "description": "GPT-5.6 Sol flagship model with max reasoning and ultra sub-agent modes. Generally available as of July 2026.",
+  "description": "GPT-5.6 Sol flagship model with max reasoning and ultra sub-agent modes. Generally available as of July 2026. Official pricing page notes promotional pricing is available at least through November 21, 2026.",
   "displayName": "GPT-5.6 Sol",
   "familyCode": "gpt-5",
   "inputModalities": [
@@ -31,7 +31,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-13T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://openai.com/index/previewing-gpt-5-6-sol/"
   },
   "strengths": [

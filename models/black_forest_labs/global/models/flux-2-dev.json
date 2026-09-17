@@ -1,0 +1,41 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "black_forest_labs/flux-2-dev",
+  "codingVisible": false,
+  "colorToken": "#18181b",
+  "description": "FLUX.2 [dev] with open weights, non-commercial. The official pricing table marks it \"Local only\" for both text-to-image and image editing and explicitly states there is no hosted API, so it is catalog-only with no price row.",
+  "displayName": "FLUX.2 [dev]",
+  "familyCode": "flux",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "catalog_only",
+  "modelId": "flux-2-dev",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "700.000000",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+  },
+  "strengths": [
+    "Open weights",
+    "Local deployment"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.830000",
+  "usageScopes": [],
+  "vendorCode": "black_forest_labs",
+  "vendorName": "Black Forest Labs",
+  "winRate": "0.800000"
+}

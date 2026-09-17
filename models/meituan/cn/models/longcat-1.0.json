@@ -5,15 +5,16 @@
     "reasoning"
   ],
   "catalogKey": "meituan/longcat-1.0",
+  "codingVisible": true,
   "colorToken": "#0284c7",
   "contextTokens": 256000,
-  "description": "Meituan LongCat (Longmao) general-purpose reasoning model for Chinese enterprise and application workflows.",
+  "description": "Meituan LongCat pre-2.0 generation model. The official LongCat API platform now lists LongCat-2.0 as the only supported model in its quick start, pay-as-you-go and pricing pages, and the changelog records that the pre-2.0 LongCat model services were discontinued on 2026-05-29. Kept for migration reference; migrate to LongCat 2.0 (longcat-2.0).",
   "displayName": "LongCat 1.0",
   "familyCode": "longcat",
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 256000,
   "maxOutputTokens": 32768,
   "modelId": "longcat-1.0",
@@ -23,12 +24,12 @@
   "primaryCapability": "chat",
   "rankScore": "890.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://longcat.chat/platform/docs/zh/"
   },
   "strengths": [
@@ -40,12 +41,11 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.880000",
-  "vendorCode": "meituan",
-  "vendorName": "Meituan",
-  "winRate": "0.860000",
   "usageScopes": [
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "meituan",
+  "vendorName": "Meituan",
+  "winRate": "0.860000"
 }

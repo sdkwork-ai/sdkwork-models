@@ -1,0 +1,33 @@
+{
+  "apiFormat": "google_gemini",
+  "catalogKey": "google/gemini-omni-flash-preview",
+  "codingVisible": false,
+  "description": "Gemini Omni Flash 预览端点，2026-06-30 发布；官方公告 gemini-omni-flash-preview 将于 2026-09-30 弃用。",
+  "displayName": "Gemini Omni Flash Preview",
+  "familyCode": "gemini",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "preview",
+  "modelId": "gemini-omni-flash-preview",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "google",
+  "vendorName": "Google"
+}

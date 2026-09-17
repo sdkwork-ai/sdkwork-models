@@ -1,0 +1,41 @@
+{
+  "apiFormat": "anthropic_messages",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "anthropic/claude-sonnet-4-5",
+  "codingVisible": true,
+  "colorToken": "#c2410c",
+  "description": "Claude Sonnet 4.5 (legacy but still available per the official models overview). Listed at $3/$15 per MTok.",
+  "displayName": "Claude Sonnet 4.5",
+  "familyCode": "claude",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "claude-sonnet-4-5",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.claude.com/docs/en/about-claude/models/overview"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "anthropic",
+  "vendorName": "Anthropic"
+}

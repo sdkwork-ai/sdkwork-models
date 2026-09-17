@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#2563eb",
   "contextTokens": 1000000,
-  "description": "Qwen3.8-Max preview flagship unveiled at WAIC 2026 on July 19, 2026; 2.4T-parameter MoE with 350B activated, native multimodal (text/image/video/document) and 1M context. Apache 2.0 weights planned.",
+  "description": "官方模型清单已只保留 qwen3.8-max 及其快照 qwen3.8-max-0902，预览版已不再推荐。",
   "displayName": "Qwen3.8 Max Preview",
   "familyCode": "qwen",
   "inputModalities": [
@@ -18,7 +18,7 @@
   ],
   "latencyP50Ms": 720,
   "latencyP95Ms": 2400,
-  "lifecycle": "preview",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1000000,
   "maxOutputTokens": 65536,
   "modelId": "qwen3.8-max-preview",
@@ -28,12 +28,12 @@
   "primaryCapability": "chat",
   "rankScore": "1090.000000",
   "regionCode": "cn",
-  "releaseStage": "preview",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-13T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://qwenlm.github.io/blog/qwen3.8-max-preview/"
   },
   "strengths": [

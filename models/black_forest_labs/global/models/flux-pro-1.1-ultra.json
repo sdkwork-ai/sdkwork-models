@@ -1,0 +1,43 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "black_forest_labs/flux-pro-1.1-ultra",
+  "codingVisible": false,
+  "colorToken": "#18181b",
+  "description": "Ultra-high-resolution image creation with more pixels in every picture, including Raw mode for candid photography. Official previous-generation rate: 6 credits / $0.06 per image (Ultra and Raw are both priced at 6 credits).",
+  "displayName": "FLUX1.1 [pro] Ultra",
+  "familyCode": "flux",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 4000,
+  "latencyP95Ms": 15000,
+  "lifecycle": "active",
+  "modelId": "flux-pro-1.1-ultra",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "705.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+  },
+  "strengths": [
+    "Image generation",
+    "FLUX.1 previous generation"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.700000",
+  "usageScopes": [],
+  "vendorCode": "black_forest_labs",
+  "vendorName": "Black Forest Labs",
+  "winRate": "0.760000"
+}

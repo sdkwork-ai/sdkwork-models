@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "xiaomi/mimo-v2-flash",
+  "codingVisible": true,
   "colorToken": "#FF6900",
   "contextTokens": 262144,
   "description": "Xiaomi MiMo V2 Flash model retired on 2026-06-30; requests route to MiMo V2.5. Kept for migration reference.",
@@ -29,7 +30,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://mimo.xiaomi.com"
   },
   "strengths": [
@@ -42,13 +43,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.920000",
-  "vendorCode": "xiaomi",
-  "vendorName": "Xiaomi MiMo",
-  "winRate": "0.910000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "xiaomi",
+  "vendorName": "Xiaomi MiMo",
+  "winRate": "0.910000"
 }

@@ -1,0 +1,45 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "kuaishou/kling-v2-1",
+  "codingVisible": false,
+  "colorToken": "#3b82f6",
+  "description": "Kling Image 2.1：官方图片能力地图标注「指令遵循强，文字强化，出图稳定」，1K/2K，含多图参考生图档位。",
+  "displayName": "Kling Image 2.1",
+  "familyCode": "kling-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "kling-v2-1",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "780.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://klingai.com/document-api/guides/capability-map/image"
+  },
+  "strengths": [
+    "指令遵循强",
+    "文字强化",
+    "出图稳定"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.900000",
+  "usageScopes": [],
+  "vendorCode": "kuaishou",
+  "vendorName": "Kuaishou",
+  "winRate": "0.870000"
+}

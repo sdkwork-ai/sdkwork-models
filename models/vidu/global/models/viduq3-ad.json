@@ -1,0 +1,37 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video",
+    "audio"
+  ],
+  "catalogKey": "vidu/viduq3-ad",
+  "codingVisible": false,
+  "description": "Advertising industry model in the official ViduQ3 series: reference-to-video, 720p/1080p, 3-15s, suited to 5-8s short-form ads. No per-second rate is published on the official pricing page.",
+  "displayName": "Vidu Q3 Ad",
+  "familyCode": "vidu-video",
+  "inputModalities": [
+    "image"
+  ],
+  "lifecycle": "preview",
+  "modelId": "viduq3-ad",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.vidu.com/docs/model-map"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "vidu",
+  "vendorName": "Vidu"
+}

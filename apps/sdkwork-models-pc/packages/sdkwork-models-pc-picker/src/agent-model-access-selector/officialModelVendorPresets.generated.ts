@@ -10,22 +10,46 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "OpenAI direct",
     "models": [
       {
+        "catalogKey": "openai/gpt-5.3-codex",
+        "model": "gpt-5.3-codex",
+        "displayName": "GPT-5.3 Codex",
+        "sortOrder": 5
+      },
+      {
+        "catalogKey": "openai/gpt-5.5-cyber",
+        "model": "gpt-5.5-cyber",
+        "displayName": "GPT-5.5 Cyber",
+        "sortOrder": 10
+      },
+      {
+        "catalogKey": "openai/gpt-5.6-cyber",
+        "model": "gpt-5.6-cyber",
+        "displayName": "GPT-5.6 Cyber",
+        "sortOrder": 13
+      },
+      {
         "catalogKey": "openai/gpt-5.6-luna",
         "model": "gpt-5.6-luna",
         "displayName": "GPT-5.6 Luna",
-        "sortOrder": 11
+        "sortOrder": 14
       },
       {
         "catalogKey": "openai/gpt-5.6-sol",
         "model": "gpt-5.6-sol",
         "displayName": "GPT-5.6 Sol",
-        "sortOrder": 12
+        "sortOrder": 15
       },
       {
         "catalogKey": "openai/gpt-5.6-terra",
         "model": "gpt-5.6-terra",
         "displayName": "GPT-5.6 Terra",
-        "sortOrder": 13
+        "sortOrder": 16
+      },
+      {
+        "catalogKey": "openai/gpt-6-astra",
+        "model": "gpt-6-astra",
+        "displayName": "GPT-6 Astra",
+        "sortOrder": 17
       }
     ],
     "sortOrder": 0,
@@ -40,46 +64,76 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "Anthropic direct",
     "models": [
       {
+        "catalogKey": "anthropic/claude-fable-5-1",
+        "model": "claude-fable-5-1",
+        "displayName": "Claude Fable 5.1",
+        "sortOrder": 0
+      },
+      {
         "catalogKey": "anthropic/claude-fable-5",
         "model": "claude-fable-5",
         "displayName": "Claude Fable 5",
-        "sortOrder": 0
+        "sortOrder": 1
       },
       {
         "catalogKey": "anthropic/claude-haiku-4-5",
         "model": "claude-haiku-4-5",
         "displayName": "Claude Haiku 4.5",
-        "sortOrder": 1
+        "sortOrder": 2
+      },
+      {
+        "catalogKey": "anthropic/claude-mythos-5-1",
+        "model": "claude-mythos-5-1",
+        "displayName": "Claude Mythos 5.1",
+        "sortOrder": 3
+      },
+      {
+        "catalogKey": "anthropic/claude-opus-4-5",
+        "model": "claude-opus-4-5",
+        "displayName": "Claude Opus 4.5",
+        "sortOrder": 5
+      },
+      {
+        "catalogKey": "anthropic/claude-opus-4-6",
+        "model": "claude-opus-4-6",
+        "displayName": "Claude Opus 4.6",
+        "sortOrder": 6
       },
       {
         "catalogKey": "anthropic/claude-opus-4-7",
         "model": "claude-opus-4-7",
         "displayName": "Claude Opus 4.7",
-        "sortOrder": 3
+        "sortOrder": 7
       },
       {
         "catalogKey": "anthropic/claude-opus-4-8",
         "model": "claude-opus-4-8",
         "displayName": "Claude Opus 4.8",
-        "sortOrder": 4
+        "sortOrder": 8
       },
       {
         "catalogKey": "anthropic/claude-opus-5",
         "model": "claude-opus-5",
         "displayName": "Claude Opus 5",
-        "sortOrder": 5
+        "sortOrder": 9
+      },
+      {
+        "catalogKey": "anthropic/claude-sonnet-4-5",
+        "model": "claude-sonnet-4-5",
+        "displayName": "Claude Sonnet 4.5",
+        "sortOrder": 10
       },
       {
         "catalogKey": "anthropic/claude-sonnet-4-6",
         "model": "claude-sonnet-4-6",
         "displayName": "Claude Sonnet 4.6",
-        "sortOrder": 6
+        "sortOrder": 11
       },
       {
         "catalogKey": "anthropic/claude-sonnet-5",
         "model": "claude-sonnet-5",
         "displayName": "Claude Sonnet 5",
-        "sortOrder": 7
+        "sortOrder": 12
       }
     ],
     "sortOrder": 1,
@@ -100,52 +154,76 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 3
       },
       {
-        "catalogKey": "google/gemini-3.1-flash-lite-preview",
-        "model": "gemini-3.1-flash-lite-preview",
-        "displayName": "Gemini 3.1 Flash Lite Preview",
-        "sortOrder": 7
-      },
-      {
         "catalogKey": "google/gemini-3.1-flash-lite",
         "model": "gemini-3.1-flash-lite",
         "displayName": "Gemini 3.1 Flash Lite",
-        "sortOrder": 8
+        "sortOrder": 9
       },
       {
         "catalogKey": "google/gemini-3.1-flash-live-preview",
         "model": "gemini-3.1-flash-live-preview",
         "displayName": "Gemini 3.1 Flash Live Preview",
-        "sortOrder": 9
+        "sortOrder": 10
       },
       {
         "catalogKey": "google/gemini-3.1-pro-preview",
         "model": "gemini-3.1-pro-preview",
         "displayName": "Gemini 3.1 Pro Preview",
-        "sortOrder": 11
-      },
-      {
-        "catalogKey": "google/gemini-3.1-pro",
-        "model": "gemini-3.1-pro",
-        "displayName": "Gemini 3.1 Pro",
         "sortOrder": 12
       },
       {
         "catalogKey": "google/gemini-3.5-flash-lite",
         "model": "gemini-3.5-flash-lite",
         "displayName": "Gemini 3.5 Flash Lite",
-        "sortOrder": 13
+        "sortOrder": 14
       },
       {
         "catalogKey": "google/gemini-3.5-flash",
         "model": "gemini-3.5-flash",
         "displayName": "Gemini 3.5 Flash",
-        "sortOrder": 14
+        "sortOrder": 15
       },
       {
         "catalogKey": "google/gemini-3.6-flash",
         "model": "gemini-3.6-flash",
         "displayName": "Gemini 3.6 Flash",
-        "sortOrder": 15
+        "sortOrder": 19
+      },
+      {
+        "catalogKey": "google/gemini-3.7-flash",
+        "model": "gemini-3.7-flash",
+        "displayName": "Gemini 3.7 Flash",
+        "sortOrder": 20
+      },
+      {
+        "catalogKey": "google/gemini-3.8-flash",
+        "model": "gemini-3.8-flash",
+        "displayName": "Gemini 3.8 Flash",
+        "sortOrder": 21
+      },
+      {
+        "catalogKey": "google/gemini-3.8-live-extended-thinking",
+        "model": "gemini-3.8-live-extended-thinking",
+        "displayName": "Gemini 3.8 Live Extended Thinking",
+        "sortOrder": 22
+      },
+      {
+        "catalogKey": "google/gemini-3.8-live",
+        "model": "gemini-3.8-live",
+        "displayName": "Gemini 3.8 Live",
+        "sortOrder": 23
+      },
+      {
+        "catalogKey": "google/gemini-robotics-er-2-preview",
+        "model": "gemini-robotics-er-2-preview",
+        "displayName": "Gemini Robotics ER 2 Preview",
+        "sortOrder": 27
+      },
+      {
+        "catalogKey": "google/gemini-robotics-er-2-streaming-preview",
+        "model": "gemini-robotics-er-2-streaming-preview",
+        "displayName": "Gemini Robotics ER 2 Streaming Preview",
+        "sortOrder": 28
       }
     ],
     "sortOrder": 2,
@@ -160,16 +238,34 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "Alibaba Cloud",
     "models": [
       {
+        "catalogKey": "alibaba/qwen3.7-flash",
+        "model": "qwen3.7-flash",
+        "displayName": "Qwen3.7 Flash",
+        "sortOrder": 0
+      },
+      {
         "catalogKey": "alibaba/qwen3.7-max",
         "model": "qwen3.7-max",
         "displayName": "Qwen3.7 Max",
-        "sortOrder": 0
+        "sortOrder": 1
+      },
+      {
+        "catalogKey": "alibaba/qwen3.7-plus",
+        "model": "qwen3.7-plus",
+        "displayName": "Qwen3.7 Plus",
+        "sortOrder": 2
+      },
+      {
+        "catalogKey": "alibaba/qwen3.8-flash",
+        "model": "qwen3.8-flash",
+        "displayName": "Qwen3.8 Flash",
+        "sortOrder": 3
       },
       {
         "catalogKey": "alibaba/qwen3.8-max",
         "model": "qwen3.8-max",
         "displayName": "Qwen3.8 Max",
-        "sortOrder": 1
+        "sortOrder": 4
       }
     ],
     "sortOrder": 3,
@@ -196,10 +292,16 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 1
       },
       {
+        "catalogKey": "baidu/ernie-5.0",
+        "model": "ernie-5.0",
+        "displayName": "ERNIE 5.0",
+        "sortOrder": 2
+      },
+      {
         "catalogKey": "baidu/ernie-5.1",
         "model": "ernie-5.1",
         "displayName": "ERNIE 5.1",
-        "sortOrder": 2
+        "sortOrder": 3
       }
     ],
     "sortOrder": 5,
@@ -214,40 +316,46 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "ByteDance",
     "models": [
       {
-        "catalogKey": "bytedance/doubao-seed-2-0-code-preview-260215",
-        "model": "doubao-seed-2-0-code-preview-260215",
-        "displayName": "Doubao Seed 2.0 Code",
+        "catalogKey": "bytedance/dola-seed-2-1-turbo-260628",
+        "model": "dola-seed-2-1-turbo-260628",
+        "displayName": "Dola Seed 2.1 Turbo",
         "sortOrder": 0
       },
       {
-        "catalogKey": "bytedance/doubao-seed-2-0-lite-260215",
-        "model": "doubao-seed-2-0-lite-260215",
-        "displayName": "Doubao Seed 2.0 Lite",
-        "sortOrder": 1
+        "catalogKey": "bytedance/seed-2-0-code-preview-260328",
+        "model": "seed-2-0-code-preview-260328",
+        "displayName": "Dola Seed 2.0 Code Preview",
+        "sortOrder": 13
       },
       {
-        "catalogKey": "bytedance/doubao-seed-2-0-mini-260215",
-        "model": "doubao-seed-2-0-mini-260215",
-        "displayName": "Doubao Seed 2.0 Mini",
-        "sortOrder": 2
+        "catalogKey": "bytedance/seed-2-0-lite-260228",
+        "model": "seed-2-0-lite-260228",
+        "displayName": "Dola Seed 2.0 Lite (260228)",
+        "sortOrder": 14
       },
       {
-        "catalogKey": "bytedance/doubao-seed-2-0-pro-260215",
-        "model": "doubao-seed-2-0-pro-260215",
-        "displayName": "Doubao Seed 2.0 Pro",
-        "sortOrder": 3
+        "catalogKey": "bytedance/seed-2-0-lite-260428",
+        "model": "seed-2-0-lite-260428",
+        "displayName": "Dola Seed 2.0 Lite (260428)",
+        "sortOrder": 15
       },
       {
-        "catalogKey": "bytedance/doubao-seed-2-1-pro-260628",
-        "model": "doubao-seed-2-1-pro-260628",
-        "displayName": "Doubao Seed 2.1 Pro",
-        "sortOrder": 4
+        "catalogKey": "bytedance/seed-2-0-mini-260215",
+        "model": "seed-2-0-mini-260215",
+        "displayName": "Dola Seed 2.0 Mini (260215)",
+        "sortOrder": 16
       },
       {
-        "catalogKey": "bytedance/doubao-seed-2-1-turbo-260628",
-        "model": "doubao-seed-2-1-turbo-260628",
-        "displayName": "Doubao Seed 2.1 Turbo",
-        "sortOrder": 5
+        "catalogKey": "bytedance/seed-2-0-mini-260428",
+        "model": "seed-2-0-mini-260428",
+        "displayName": "Dola Seed 2.0 Mini (260428)",
+        "sortOrder": 17
+      },
+      {
+        "catalogKey": "bytedance/seed-2-0-pro-260328",
+        "model": "seed-2-0-pro-260328",
+        "displayName": "Dola Seed 2.0 Pro",
+        "sortOrder": 18
       }
     ],
     "sortOrder": 6,
@@ -262,16 +370,16 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "DeepSeek",
     "models": [
       {
-        "catalogKey": "deepseek/deepseek-v4-flash",
-        "model": "deepseek-v4-flash",
-        "displayName": "DeepSeek V4 Flash",
+        "catalogKey": "deepseek/deepseek-flash",
+        "model": "deepseek-flash",
+        "displayName": "DeepSeek V4.1 Flash",
         "sortOrder": 0
       },
       {
         "catalogKey": "deepseek/deepseek-v4-pro",
         "model": "deepseek-v4-pro",
         "displayName": "DeepSeek V4 Pro",
-        "sortOrder": 1
+        "sortOrder": 3
       }
     ],
     "sortOrder": 7,
@@ -285,12 +393,6 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerCode": "meituan.direct",
     "providerDisplayName": "Meituan",
     "models": [
-      {
-        "catalogKey": "meituan/longcat-1.0",
-        "model": "longcat-1.0",
-        "displayName": "LongCat 1.0",
-        "sortOrder": 0
-      },
       {
         "catalogKey": "meituan/longcat-2.0",
         "model": "longcat-2.0",
@@ -316,28 +418,52 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 4
       },
       {
+        "catalogKey": "minimax/MiniMax-H3-Context-IR",
+        "model": "MiniMax-H3-Context-IR",
+        "displayName": "MiniMax H3 Context IR",
+        "sortOrder": 5
+      },
+      {
+        "catalogKey": "minimax/MiniMax-M2.1-highspeed",
+        "model": "MiniMax-M2.1-highspeed",
+        "displayName": "MiniMax M2.1-Highspeed",
+        "sortOrder": 9
+      },
+      {
+        "catalogKey": "minimax/MiniMax-M2.1",
+        "model": "MiniMax-M2.1",
+        "displayName": "MiniMax M2.1",
+        "sortOrder": 10
+      },
+      {
         "catalogKey": "minimax/MiniMax-M2.5-highspeed",
         "model": "MiniMax-M2.5-highspeed",
         "displayName": "MiniMax M2.5 Highspeed",
-        "sortOrder": 6
+        "sortOrder": 11
       },
       {
         "catalogKey": "minimax/MiniMax-M2.5",
         "model": "MiniMax-M2.5",
         "displayName": "MiniMax M2.5",
-        "sortOrder": 7
+        "sortOrder": 12
       },
       {
         "catalogKey": "minimax/MiniMax-M2.7-highspeed",
         "model": "MiniMax-M2.7-highspeed",
         "displayName": "MiniMax M2.7 Highspeed",
-        "sortOrder": 8
+        "sortOrder": 13
       },
       {
         "catalogKey": "minimax/MiniMax-M2.7",
         "model": "MiniMax-M2.7",
         "displayName": "MiniMax M2.7",
-        "sortOrder": 9
+        "sortOrder": 14
+      },
+      {
+        "catalogKey": "minimax/MiniMax-M2",
+        "model": "MiniMax-M2",
+        "displayName": "MiniMax M2",
+        "sortOrder": 15
       }
     ],
     "sortOrder": 10,
@@ -406,10 +532,46 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "Tencent Cloud",
     "models": [
       {
+        "catalogKey": "tencent/hy-mt2-lite",
+        "model": "hy-mt2-lite",
+        "displayName": "Hy-MT2-Lite",
+        "sortOrder": 3
+      },
+      {
+        "catalogKey": "tencent/hy-mt2-plus",
+        "model": "hy-mt2-plus",
+        "displayName": "Hy-MT2-Plus",
+        "sortOrder": 4
+      },
+      {
+        "catalogKey": "tencent/hy-mt2-pro",
+        "model": "hy-mt2-pro",
+        "displayName": "Hy-MT2-Pro",
+        "sortOrder": 5
+      },
+      {
+        "catalogKey": "tencent/hy-role-latest",
+        "model": "hy-role-latest",
+        "displayName": "Hy-Role-Latest",
+        "sortOrder": 6
+      },
+      {
+        "catalogKey": "tencent/hy-role",
+        "model": "hy-role",
+        "displayName": "Hy-Role",
+        "sortOrder": 7
+      },
+      {
         "catalogKey": "tencent/hy3",
         "model": "hy3",
         "displayName": "Hy3",
-        "sortOrder": 3
+        "sortOrder": 8
+      },
+      {
+        "catalogKey": "tencent/hy4-preview",
+        "model": "hy4-preview",
+        "displayName": "Hy4 Preview",
+        "sortOrder": 9
       }
     ],
     "sortOrder": 14,
@@ -466,28 +628,16 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "Xiaomi MiMo",
     "models": [
       {
-        "catalogKey": "xiaomi/mimo-v2.5-pro-fp4-dflash",
-        "model": "mimo-v2.5-pro-fp4-dflash",
-        "displayName": "MiMo V2.5 Pro FP4 DFlash",
-        "sortOrder": 1
-      },
-      {
-        "catalogKey": "xiaomi/mimo-v2.5-pro-ultraspeed",
-        "model": "mimo-v2.5-pro-ultraspeed",
-        "displayName": "MiMo V2.5 Pro UltraSpeed",
-        "sortOrder": 2
-      },
-      {
         "catalogKey": "xiaomi/mimo-v2.5-pro",
         "model": "mimo-v2.5-pro",
         "displayName": "MiMo V2.5 Pro",
-        "sortOrder": 3
+        "sortOrder": 4
       },
       {
         "catalogKey": "xiaomi/mimo-v2.5",
         "model": "mimo-v2.5",
         "displayName": "MiMo V2.5",
-        "sortOrder": 4
+        "sortOrder": 8
       }
     ],
     "sortOrder": 16,
@@ -502,16 +652,52 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "Zhipu AI",
     "models": [
       {
+        "catalogKey": "zhipu/glm-5-turbo",
+        "model": "glm-5-turbo",
+        "displayName": "GLM-5-Turbo",
+        "sortOrder": 4
+      },
+      {
         "catalogKey": "zhipu/glm-5.1",
         "model": "glm-5.1",
         "displayName": "GLM-5.1",
-        "sortOrder": 3
+        "sortOrder": 5
       },
       {
         "catalogKey": "zhipu/glm-5.2",
         "model": "glm-5.2",
         "displayName": "GLM-5.2",
-        "sortOrder": 4
+        "sortOrder": 6
+      },
+      {
+        "catalogKey": "zhipu/glm-5.3-flash",
+        "model": "glm-5.3-flash",
+        "displayName": "GLM-5.3 Flash",
+        "sortOrder": 7
+      },
+      {
+        "catalogKey": "zhipu/glm-5.3",
+        "model": "glm-5.3",
+        "displayName": "GLM-5.3",
+        "sortOrder": 8
+      },
+      {
+        "catalogKey": "zhipu/glm-5",
+        "model": "glm-5",
+        "displayName": "GLM-5",
+        "sortOrder": 9
+      },
+      {
+        "catalogKey": "zhipu/glm-5v-turbo",
+        "model": "glm-5v-turbo",
+        "displayName": "GLM-5V-Turbo",
+        "sortOrder": 10
+      },
+      {
+        "catalogKey": "zhipu/glm-ocr",
+        "model": "glm-ocr",
+        "displayName": "GLM-OCR",
+        "sortOrder": 12
       }
     ],
     "sortOrder": 17,

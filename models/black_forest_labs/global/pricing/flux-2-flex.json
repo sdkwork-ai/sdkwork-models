@@ -4,74 +4,33 @@
   "modelId": "flux-2-flex",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
       "currency": "USD",
-      "effectiveFrom": "2026-07-14T00:00:00Z",
-      "mediaDirection": "output",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "image_megapixel",
       "minimumQuantity": "0",
-      "priceId": "bfl-flux-2-flex-output-megapixel",
+      "notes": "Official FLUX.2 [flex] rate is \"from $0.05\" per output megapixel for both text-to-image and image editing.",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-2-flex-megapixel",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.image",
+      "quantityAggregation": "sum",
       "quantityStep": "0.001",
+      "rateHash": "e353e4a44d746e42c91dadc12a05c36c4ccf89b94cb1c93e4947332865de21a0",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
       },
       "unitPrice": "0.050000",
-      "unitSize": "1",
-      "priceBookCode": "models.black_forest_labs.global.official",
-      "productCode": "models.black_forest_labs.image",
-      "operationCode": "image.generate",
-      "billability": "chargeable",
-      "chargeTiming": "successful_result",
-      "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [
-        {
-          "dimensionCode": "media_direction",
-          "operator": "eq",
-          "value": "output"
-        }
-      ],
-      "rateHash": "a3739a69a107b866d7793341ce8a186ada773493d98f0653b564c78ea756bcf1",
-      "priority": 100,
-      "rateVariant": "standard",
-      "schedule": null
-    },
-    {
-      "currency": "USD",
-      "effectiveFrom": "2026-07-14T00:00:00Z",
-      "mediaDirection": "input",
-      "meterCode": "image_megapixel",
-      "minimumQuantity": "0",
-      "priceId": "bfl-flux-2-flex-input-megapixel",
-      "priceSide": "official",
-      "pricingScope": "model",
-      "quantityStep": "0.001",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
-      },
-      "unitPrice": "0.050000",
-      "unitSize": "1",
-      "priceBookCode": "models.black_forest_labs.global.official",
-      "productCode": "models.black_forest_labs.image",
-      "operationCode": "image.generate",
-      "billability": "chargeable",
-      "chargeTiming": "successful_result",
-      "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [
-        {
-          "dimensionCode": "media_direction",
-          "operator": "eq",
-          "value": "input"
-        }
-      ],
-      "rateHash": "c10a3fda212c1c9284723fc64a5c533bce2adfd6a66264f76bce7a03ae32d098",
-      "priority": 100,
-      "rateVariant": "standard",
-      "schedule": null
+      "unitSize": "1"
     }
   ],
   "regionCode": "global",

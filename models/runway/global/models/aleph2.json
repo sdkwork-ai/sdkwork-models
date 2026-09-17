@@ -1,0 +1,37 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "runway/aleph2",
+  "codingVisible": false,
+  "description": "Runway Aleph 2.0 in-context video model; one of the two Runway flagship models that support ProRes / PNG sequence / 10-bit SDR editorial output formats.",
+  "displayName": "Aleph 2.0",
+  "familyCode": "runway-video",
+  "inputModalities": [
+    "video",
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "aleph2",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "runway",
+  "vendorName": "Runway"
+}

@@ -1,0 +1,43 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "bytedance/doubao-seedream-5-0-lite-260128",
+  "codingVisible": false,
+  "colorToken": "#dc2626",
+  "description": "Doubao Seedream 5.0 Lite on Volcengine Ark, the Seedream 5.0 generation offered in the official price table (the plain doubao-seedream-5-0-260128 id is listed but carries no published price). Supports single-image generation and group image generation from text, a single image, or multiple reference images.",
+  "displayName": "Doubao Seedream 5.0 Lite",
+  "familyCode": "seedream",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "doubao-seedream-5-0-lite-260128",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://www.volcengine.com/docs/82379/1330310"
+  },
+  "strengths": [
+    "Text to image",
+    "Single image to image",
+    "Multi-reference image to image",
+    "Group image generation"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
+}

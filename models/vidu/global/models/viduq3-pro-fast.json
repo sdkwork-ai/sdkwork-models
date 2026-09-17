@@ -1,0 +1,35 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "vidu/viduq3-pro-fast",
+  "codingVisible": false,
+  "description": "Faster variant of Vidu Q3 Pro. The official pricing table lists image-to-video only (1-16s, 1080P/720P) with a separate off-peak credit rate.",
+  "displayName": "Vidu Q3 Pro Fast",
+  "familyCode": "vidu-video",
+  "inputModalities": [
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "viduq3-pro-fast",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.vidu.com/docs/model-map"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "vidu",
+  "vendorName": "Vidu"
+}

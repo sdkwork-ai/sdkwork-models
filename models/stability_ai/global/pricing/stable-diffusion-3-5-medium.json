@@ -1,0 +1,39 @@
+{
+  "catalogKey": "stability_ai/stable-diffusion-3-5-medium",
+  "currency": "USD",
+  "modelId": "stable-diffusion-3-5-medium",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "notes": "Official Stability Developer Platform Generate rate (3.5 credits at $0.01/credit).",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.stability_ai.global.official",
+      "priceId": "stability-ai-global-stable-diffusion-3-5-medium-result",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.stability_ai.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ecea392921405eca065dba5f011f0117fddd48fbf43bfe6d623a0c37bd1e3bff",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.stability.ai/pricing"
+      },
+      "unitPrice": "0.035000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "stability_ai"
+}

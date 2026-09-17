@@ -6,7 +6,7 @@
   "catalogKey": "openai/whisper-1",
   "codingVisible": false,
   "colorToken": "#6366f1",
-  "description": "OpenAI Whisper speech-to-text model for transcription.",
+  "description": "General-purpose speech recognition model. Officially deprecated on 2026-08-26 and scheduled for removal from the API on February 26, 2027; official replacement: gpt-live-transcribe or gpt-transcribe.",
   "displayName": "Whisper 1",
   "familyCode": "audio",
   "inputModalities": [
@@ -14,7 +14,7 @@
   ],
   "latencyP50Ms": 1200,
   "latencyP95Ms": 4000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "whisper-1",
   "outputModalities": [
     "text"
@@ -22,12 +22,12 @@
   "primaryCapability": "audio",
   "rankScore": "480.000000",
   "regionCode": "global",
-  "releaseStage": "active",
+  "releaseStage": "deprecated",
   "routingState": "enabled",
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-13T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.openai.com/docs/guides/speech-to-text"
   },
   "strengths": [

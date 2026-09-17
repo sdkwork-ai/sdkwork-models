@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "kuaishou/kling-3.0-turbo",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "Kling 3.0 Turbo：官方能力地图标注「效果稳定出色，性价比更优」，支持 3~15s、720P/1080P 的单镜头视频生成与音画同出。",
+  "displayName": "Kling 3.0 Turbo",
+  "familyCode": "kling",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "kling-3.0-turbo",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "860.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://klingai.com/document-api/guides/capability-map/video"
+  },
+  "strengths": [
+    "生成更快、成本更低",
+    "音画同步精准",
+    "批量输出质量稳定"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.950000",
+  "usageScopes": [],
+  "vendorCode": "kuaishou",
+  "vendorName": "Kuaishou",
+  "winRate": "0.910000"
+}

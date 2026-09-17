@@ -1,0 +1,45 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "kuaishou/kling-image-o1",
+  "codingVisible": false,
+  "colorToken": "#2563eb",
+  "description": "Kling Image O1：官方图片能力地图标注「高特征一致性，精准细节修改，风格迁移准确」，支持文生图与图生图，1K/2K。",
+  "displayName": "Kling Image O1",
+  "familyCode": "kling-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "kling-image-o1",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "800.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://kling.ai/document-api/guides/capability-map/image"
+  },
+  "strengths": [
+    "高特征一致性",
+    "精准细节修改",
+    "风格迁移准确"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.920000",
+  "usageScopes": [],
+  "vendorCode": "kuaishou",
+  "vendorName": "Kuaishou",
+  "winRate": "0.890000"
+}

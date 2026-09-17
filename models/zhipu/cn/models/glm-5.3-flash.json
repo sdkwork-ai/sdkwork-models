@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "zhipu/glm-5.3-flash",
+  "codingVisible": true,
   "colorToken": "#7c2d12",
   "contextTokens": 1000000,
   "description": "GLM-5.3-Flash open-weight native multimodal MoE model released on August 26, 2026 with 1M context.",
@@ -11,11 +12,12 @@
   "familyCode": "glm",
   "inputModalities": [
     "text",
-    "image"
+    "image",
+    "video"
   ],
   "lifecycle": "active",
   "maxInputTokens": 1000000,
-  "maxOutputTokens": 65536,
+  "maxOutputTokens": 131072,
   "modelId": "glm-5.3-flash",
   "outputModalities": [
     "text"
@@ -28,7 +30,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-09-05T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://open.bigmodel.cn/pricing"
   },
   "strengths": [
@@ -41,13 +43,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.975000",
-  "vendorCode": "zhipu",
-  "vendorName": "Zhipu AI",
-  "winRate": "0.905000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "zhipu",
+  "vendorName": "Zhipu AI",
+  "winRate": "0.905000"
 }

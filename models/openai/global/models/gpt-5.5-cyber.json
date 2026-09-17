@@ -1,0 +1,40 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "openai/gpt-5.5-cyber",
+  "codingVisible": true,
+  "colorToken": "#111827",
+  "description": "Cybersecurity model listed in the official Cyber models pricing group (Daybreak program) at $12.50 input / $75.00 output per 1M tokens.",
+  "displayName": "GPT-5.5 Cyber",
+  "familyCode": "gpt-5",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "gpt-5.5-cyber",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+  },
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "agent",
+    "chat"
+  ],
+  "vendorCode": "openai",
+  "vendorName": "OpenAI"
+}

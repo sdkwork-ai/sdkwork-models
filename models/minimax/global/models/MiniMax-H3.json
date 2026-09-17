@@ -4,6 +4,7 @@
     "video"
   ],
   "catalogKey": "minimax/MiniMax-H3",
+  "codingVisible": false,
   "colorToken": "#7c3aed",
   "description": "MiniMax H3 unified multimodal video model released July 31, 2026 with up to 15 seconds of 2K resolution at 24 FPS and native stereo sound.",
   "displayName": "MiniMax H3",
@@ -30,7 +31,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-video"
   },
   "strengths": [
@@ -44,9 +45,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.950000",
+  "usageScopes": [],
   "vendorCode": "minimax",
   "vendorName": "MiniMax",
-  "winRate": "0.920000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.920000"
 }

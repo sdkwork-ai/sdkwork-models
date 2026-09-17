@@ -7,6 +7,7 @@
     "video"
   ],
   "catalogKey": "xiaomi/mimo-v2.5",
+  "codingVisible": true,
   "colorToken": "#FF6900",
   "contextTokens": 1048576,
   "description": "Xiaomi MiMo V2.5 - Native omnimodal model supporting text, image, video, and audio understanding with 310B total / 15B active parameters.",
@@ -22,7 +23,7 @@
   "latencyP95Ms": 2200,
   "lifecycle": "active",
   "maxInputTokens": 1048576,
-  "maxOutputTokens": 262144,
+  "maxOutputTokens": 131072,
   "modelId": "mimo-v2.5",
   "outputModalities": [
     "text"
@@ -35,7 +36,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://mimo.xiaomi.com"
   },
   "strengths": [
@@ -49,13 +50,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.930000",
-  "vendorCode": "xiaomi",
-  "vendorName": "Xiaomi MiMo",
-  "winRate": "0.920000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "xiaomi",
+  "vendorName": "Xiaomi MiMo",
+  "winRate": "0.920000"
 }

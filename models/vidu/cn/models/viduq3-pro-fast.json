@@ -1,0 +1,35 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "vidu/viduq3-pro-fast",
+  "codingVisible": false,
+  "description": "Vidu Q3 Pro 的加速变体。官方定价表「ViduQ3」段仅列出图生视频能力（1-16 秒，1080P/720P），并给出错峰积分消耗。",
+  "displayName": "Vidu Q3 Pro Fast",
+  "familyCode": "vidu-video",
+  "inputModalities": [
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "viduq3-pro-fast",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.vidu.cn/docs/model-map"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "vidu",
+  "vendorName": "Vidu"
+}

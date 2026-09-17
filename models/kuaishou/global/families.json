@@ -15,6 +15,14 @@
       "familyType": "sfx",
       "primaryModality": "sfx",
       "sortOrder": 20
+    },
+    {
+      "defaultModel": "kling-image-o1",
+      "displayName": "Kling Image",
+      "familyCode": "kling-image",
+      "familyType": "image",
+      "primaryModality": "image",
+      "sortOrder": 40
     }
   ],
   "regionCode": "global",

@@ -1,0 +1,38 @@
+{
+  "catalogKey": "xiaomi/mimo-v2.5-asr",
+  "currency": "CNY",
+  "modelId": "mimo-v2.5-asr",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-08-06T00:00:00Z",
+      "meterCode": "stt_audio_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.transcribe",
+      "priceBookCode": "models.xiaomi.cn.official",
+      "priceId": "xiaomi-cn-mimo-v2-5-asr-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xiaomi.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "68da0a71624295da68916e4a33f7f369259cb6f1b2e0a7999d06d61afab59570",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go"
+      },
+      "unitPrice": "0.008333",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "xiaomi"
+}

@@ -1,0 +1,42 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "stability_ai/stable-diffusion-3-5-flash",
+  "codingVisible": false,
+  "colorToken": "#0d9488",
+  "description": "The distilled version of Stable Diffusion 3.5 Medium, for fast high-quality images. Officially billed at 2.5 credits per image ($0.025).",
+  "displayName": "Stable Diffusion 3.5 Flash",
+  "familyCode": "stable-image",
+  "inputModalities": [
+    "text"
+  ],
+  "latencyP50Ms": 1200,
+  "latencyP95Ms": 4000,
+  "lifecycle": "active",
+  "modelId": "stable-diffusion-3-5-flash",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "720.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.stability.ai/pricing"
+  },
+  "strengths": [
+    "Image generation",
+    "Prompt adherence"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.840000",
+  "usageScopes": [],
+  "vendorCode": "stability_ai",
+  "vendorName": "Stability AI",
+  "winRate": "0.830000"
+}

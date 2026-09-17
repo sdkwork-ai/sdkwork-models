@@ -4,6 +4,7 @@
     "image"
   ],
   "catalogKey": "black_forest_labs/flux-2-pro",
+  "codingVisible": false,
   "colorToken": "#18181b",
   "description": "FLUX image generation model.",
   "displayName": "FLUX.2 Pro",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://docs.bfl.ai"
   },
   "strengths": [
@@ -38,9 +39,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.870000",
+  "usageScopes": [],
   "vendorCode": "black_forest_labs",
   "vendorName": "Black Forest Labs",
-  "winRate": "0.880000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.880000"
 }

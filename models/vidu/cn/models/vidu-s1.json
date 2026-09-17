@@ -5,8 +5,9 @@
     "streaming"
   ],
   "catalogKey": "vidu/vidu-s1",
+  "codingVisible": false,
   "colorToken": "#6d28d9",
-  "description": "Vidu S1 real-time interactive video generation model released July 3, 2026 at the 2026 Global Digital Economy Conference. Uses AR+Diffusion autoregressive streaming to drive full-body character motion from voice input in real time, with interruptible commands, stable hour-long interactions at 540P/25FPS (peak 42FPS), and one-shot digital human generation from a single image. Built on TurboDiffusion, SageAttention, SLA, SpargeAttention, and TurboServe acceleration for consumer-GPU deployment.",
+  "description": "Vidu S1 real-time interactive video model released July 3, 2026. Superseded by the Vidu S2 digital-character family (Avatar Real-Time / Avatar Component / Avatar Offline / Editing), announced in the official update notice dated September 15, 2026; the S2 edition model ids are not published on the official pages.",
   "displayName": "Vidu S1",
   "familyCode": "vidu-stream",
   "inputModalities": [
@@ -16,7 +17,7 @@
   ],
   "latencyP50Ms": 280,
   "latencyP95Ms": 600,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxOutputSeconds": 3600,
   "modelId": "vidu-s1",
   "outputModalities": [
@@ -26,13 +27,13 @@
   "primaryCapability": "streaming",
   "rankScore": "860.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
-    "sourceUrl": "https://www.shengshu.com/zh/news/"
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.vidu.cn/docs/model-map"
   },
   "strengths": [
     "Real-time streaming interaction",
@@ -46,9 +47,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.940000",
+  "usageScopes": [],
   "vendorCode": "vidu",
   "vendorName": "Vidu",
-  "winRate": "0.880000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.880000"
 }

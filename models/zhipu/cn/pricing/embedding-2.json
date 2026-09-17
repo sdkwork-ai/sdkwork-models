@@ -1,0 +1,38 @@
+{
+  "catalogKey": "zhipu/embedding-2",
+  "currency": "CNY",
+  "modelId": "embedding-2",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "embedding_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "embedding.create",
+      "priceBookCode": "models.zhipu.cn.official",
+      "priceId": "zhipu-cn-embedding-2-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.zhipu.embedding",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "722d2178ce5f8b40777f977294e1c85f42f75db8b686b5d8bcded09973cf1836",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
+      },
+      "unitPrice": "0.500000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "zhipu"
+}

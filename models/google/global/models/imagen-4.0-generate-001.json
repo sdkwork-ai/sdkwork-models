@@ -4,8 +4,9 @@
     "image"
   ],
   "catalogKey": "google/imagen-4.0-generate-001",
+  "codingVisible": false,
   "colorToken": "#0891b2",
-  "description": "Imagen 4.0 Generate shuts down on 2026-08-17; migrate to Nano Banana 2 (gemini-3.1-flash-image-preview). Kept for migration reference.",
+  "description": "官方公告 2026-08-17 关停（imagen 文档与 changelog 2026-06-15），且 pricing 页已删除全部 Imagen 定价条目。替代模型 gemini-3.1-flash-image。",
   "displayName": "Imagen 4.0 Generate",
   "familyCode": "imagen",
   "inputModalities": [
@@ -14,7 +15,7 @@
   ],
   "latencyP50Ms": 4800,
   "latencyP95Ms": 18000,
-  "lifecycle": "deprecated",
+  "lifecycle": "retired",
   "modelId": "imagen-4.0-generate-001",
   "outputModalities": [
     "image"
@@ -22,12 +23,12 @@
   "primaryCapability": "image",
   "rankScore": "760.000000",
   "regionCode": "global",
-  "releaseStage": "deprecated",
-  "routingState": "catalog_only",
+  "releaseStage": "retired",
+  "routingState": "disabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "hidden",
+  "shelfState": "archived",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://cloud.google.com/vertex-ai/generative-ai/docs/models"
   },
   "strengths": [
@@ -38,9 +39,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.880000",
+  "usageScopes": [],
   "vendorCode": "google",
   "vendorName": "Google",
-  "winRate": "0.900000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.900000"
 }

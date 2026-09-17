@@ -1,0 +1,52 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat",
+    "reasoning"
+  ],
+  "catalogKey": "bytedance/seed-2-0-code-preview-260328",
+  "codingVisible": true,
+  "colorToken": "#b91c1c",
+  "contextTokens": 262144,
+  "description": "Seed 2.0 Code Preview 260328 on BytePlus ModelArk. 256K context window, 128K max output including CoT.",
+  "displayName": "Dola Seed 2.0 Code Preview",
+  "familyCode": "seed-2-0",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 262144,
+  "maxOutputTokens": 131072,
+  "modelId": "seed-2-0-code-preview-260328",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1330310"
+  },
+  "strengths": [
+    "Deep reasoning",
+    "Text generation",
+    "Multi-modal understanding",
+    "Tool use",
+    "Structured output"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
+}

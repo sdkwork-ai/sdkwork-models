@@ -1,0 +1,45 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "kuaishou/kling-v2-5-turbo",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "Kling 2.5 Turbo：官方能力地图标注「超绝想象力，极具性价比」，文本/图片输入，5s 或 10s、720P/1080P 输出。",
+  "displayName": "Kling 2.5 Turbo",
+  "familyCode": "kling",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "kling-v2-5-turbo",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "790.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://klingai.com/document-api/guides/capability-map/video"
+  },
+  "strengths": [
+    "极具性价比",
+    "超绝想象力",
+    "5s / 10s 时长"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.910000",
+  "usageScopes": [],
+  "vendorCode": "kuaishou",
+  "vendorName": "Kuaishou",
+  "winRate": "0.880000"
+}

@@ -4,6 +4,7 @@
     "audio"
   ],
   "catalogKey": "bytedance/seed-tts-2.0-standard",
+  "codingVisible": false,
   "colorToken": "#dc2626",
   "description": "Doubao Seed TTS 2.0 standard voice synthesis with low latency via Volcengine speech API.",
   "displayName": "Seed TTS 2.0 Standard",
@@ -26,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://www.volcengine.com/docs/6561/1598757"
   },
   "strengths": [
@@ -38,9 +39,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.880000",
+  "usageScopes": [],
   "vendorCode": "bytedance",
   "vendorName": "ByteDance",
-  "winRate": "0.840000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.840000"
 }

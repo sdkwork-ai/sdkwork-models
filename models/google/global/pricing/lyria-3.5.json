@@ -1,0 +1,38 @@
+{
+  "catalogKey": "google/lyria-3.5",
+  "currency": "USD",
+  "modelId": "lyria-3.5",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "api_result",
+      "minimumQuantity": "0",
+      "operationCode": "music.generate",
+      "priceBookCode": "models.google.global.official",
+      "priceId": "google-lyria-3.5-song",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.google.music",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "2630fac10c24b666963ff27be3e4d4dea79a3e86fedb4af8669a68a12aae60ed",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "unitPrice": "0.080000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "google"
+}

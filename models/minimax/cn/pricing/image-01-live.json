@@ -1,0 +1,38 @@
+{
+  "catalogKey": "minimax/image-01-live",
+  "currency": "CNY",
+  "modelId": "image-01-live",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.minimax.cn.official",
+      "priceId": "minimax-cn-image-01-live-result",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "98caacf764b8afb5d9716697ac9bab8dbddbcce4048cc2c0ffa8d87254c36ea0",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+      },
+      "unitPrice": "0.025000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "minimax"
+}

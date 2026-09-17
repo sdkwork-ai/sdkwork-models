@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "xiaomi/mimo-v2.5-pro",
+  "codingVisible": true,
   "colorToken": "#FF6900",
   "contextTokens": 1048576,
   "description": "Xiaomi MiMo V2.5 Pro - 1T parameter MoE model with 42B active parameters, optimized for agentic and long-horizon tasks.",
@@ -16,7 +17,7 @@
   "latencyP95Ms": 2800,
   "lifecycle": "active",
   "maxInputTokens": 1048576,
-  "maxOutputTokens": 262144,
+  "maxOutputTokens": 131072,
   "modelId": "mimo-v2.5-pro",
   "outputModalities": [
     "text"
@@ -29,7 +30,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://mimo.xiaomi.com"
   },
   "strengths": [
@@ -42,13 +43,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.950000",
-  "vendorCode": "xiaomi",
-  "vendorName": "Xiaomi MiMo",
-  "winRate": "0.940000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "xiaomi",
+  "vendorName": "Xiaomi MiMo",
+  "winRate": "0.940000"
 }

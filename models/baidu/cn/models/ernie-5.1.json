@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "baidu/ernie-5.1",
+  "codingVisible": true,
   "colorToken": "#1e40af",
   "contextTokens": 128000,
   "description": "ERNIE 5.1 flagship model built on the 2.4 trillion parameter ERNIE 5.0 foundation, optimized for Chinese reasoning, knowledge, and search-augmented workloads.",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://cloud.baidu.com/doc/qianfan/s/wmh4sv6ya"
   },
   "strengths": [
@@ -38,11 +39,10 @@
   "supportsJsonSchema": true,
   "supportsStreaming": true,
   "supportsTools": true,
-  "vendorCode": "baidu",
-  "vendorName": "Baidu AI Cloud",
   "usageScopes": [
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "baidu",
+  "vendorName": "Baidu AI Cloud"
 }

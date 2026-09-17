@@ -4,33 +4,32 @@
   "modelId": "kling-sound-v2a",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
       "currency": "CNY",
-      "effectiveFrom": "2026-07-03T00:00:00Z",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "sfx_result",
       "minimumQuantity": "0",
-      "notes": "Per video-to-sound generation task on the Kling Open Platform cn API.",
+      "operationCode": "sound.generate",
+      "priceBookCode": "models.kuaishou.cn.official",
       "priceId": "kuaishou-cn-kling-sound-v2a-result",
       "priceSide": "official",
       "pricingScope": "model",
-      "quantityStep": "1",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://app.klingai.com/cn/dev/document-api/consumptionTable"
-      },
-      "unitPrice": "0.350000",
-      "unitSize": "1",
-      "priceBookCode": "models.kuaishou.cn.official",
-      "productCode": "models.kuaishou.sfx",
-      "operationCode": "sound.generate",
-      "billability": "chargeable",
-      "chargeTiming": "successful_result",
-      "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [],
-      "rateHash": "9cc1c2d482c7e7b8e80ec772553b2ad7da05024194f1021b4258199271d52ad7",
       "priority": 100,
+      "productCode": "models.kuaishou.sfx",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "bae5f313fcdfb5f29c4ba46279a5089905ec77088b50f12487eb14801c158ff7",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
+      },
+      "unitPrice": "0.250000",
+      "unitSize": "1"
     }
   ],
   "regionCode": "cn",

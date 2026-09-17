@@ -4,6 +4,7 @@
     "video"
   ],
   "catalogKey": "google/veo-3.1-generate-preview",
+  "codingVisible": false,
   "colorToken": "#7c3aed",
   "description": "Google Veo 3.1 preview video generation model.",
   "displayName": "Veo 3.1 Generate Preview",
@@ -28,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
   },
   "strengths": [
@@ -39,9 +40,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.920000",
+  "usageScopes": [],
   "vendorCode": "google",
   "vendorName": "Google",
-  "winRate": "0.900000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.900000"
 }

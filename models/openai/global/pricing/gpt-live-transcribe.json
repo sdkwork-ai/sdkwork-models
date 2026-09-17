@@ -1,0 +1,38 @@
+{
+  "catalogKey": "openai/gpt-live-transcribe",
+  "currency": "USD",
+  "modelId": "gpt-live-transcribe",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "stt_audio_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.transcribe",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-live-transcribe-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ebaf665974e364c0cdbb77b17b063ad6e1a81e73a989ee797d9671e4e7753ebd",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "unitPrice": "0.017000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "openai"
+}

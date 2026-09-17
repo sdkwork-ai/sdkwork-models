@@ -1,0 +1,38 @@
+{
+  "catalogKey": "alibaba/qwen3.7-text-embedding-flash",
+  "currency": "CNY",
+  "modelId": "qwen3.7-text-embedding-flash",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "embedding_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "embedding.create",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "qwen-cn-qwen3.7-text-embedding-flash-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.embedding",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d42fda86f9b85b701e4002b4a088012ff8be42b88e4281650188f7fbabbae4dd",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+      },
+      "unitPrice": "0.125000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

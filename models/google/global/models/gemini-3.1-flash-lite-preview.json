@@ -4,9 +4,10 @@
     "chat"
   ],
   "catalogKey": "google/gemini-3.1-flash-lite-preview",
+  "codingVisible": true,
   "colorToken": "#2563eb",
   "contextTokens": 1048576,
-  "description": "Preview Gemini 3.1 Flash Lite model for low-cost multimodal chat.",
+  "description": "官方已下线（changelog 2026-05-25：The gemini-3.1-flash-lite-preview model has been shut down）。替代模型 gemini-3.1-flash-lite。",
   "displayName": "Gemini 3.1 Flash Lite Preview",
   "familyCode": "gemini",
   "inputModalities": [
@@ -17,7 +18,7 @@
   ],
   "latencyP50Ms": 360,
   "latencyP95Ms": 1400,
-  "lifecycle": "preview",
+  "lifecycle": "retired",
   "maxInputTokens": 1048576,
   "maxOutputTokens": 65535,
   "modelId": "gemini-3.1-flash-lite-preview",
@@ -27,12 +28,12 @@
   "primaryCapability": "chat",
   "rankScore": "925.000000",
   "regionCode": "global",
-  "releaseStage": "preview",
-  "routingState": "enabled",
+  "releaseStage": "retired",
+  "routingState": "disabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "archived",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
   },
   "strengths": [
@@ -44,12 +45,11 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.920000",
-  "vendorCode": "google",
-  "vendorName": "Google",
-  "winRate": "0.875000",
   "usageScopes": [
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "google",
+  "vendorName": "Google",
+  "winRate": "0.875000"
 }

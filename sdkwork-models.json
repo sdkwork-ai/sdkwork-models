@@ -1,7 +1,7 @@
 {
-  "catalogVersion": "2026.09.06.1",
+  "catalogVersion": "2026.09.17.1",
   "defaultLocale": "en-US",
-  "generatedAt": "2026-09-06T00:00:00Z",
+  "generatedAt": "2026-09-17T00:00:00Z",
   "license": "MIT",
   "modelsRoot": "models",
   "name": "sdkwork-models",

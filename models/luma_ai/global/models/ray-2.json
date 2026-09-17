@@ -4,6 +4,7 @@
     "video"
   ],
   "catalogKey": "luma_ai/ray-2",
+  "codingVisible": false,
   "colorToken": "#6366f1",
   "description": "Luma Ray 2 Dream Machine model officially deprecated; use Ray 3.2 for new projects. Kept for migration reference.",
   "displayName": "Ray 2",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://docs.lumalabs.ai/docs/video-generation"
   },
   "strengths": [
@@ -39,9 +40,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.930000",
+  "usageScopes": [],
   "vendorCode": "luma_ai",
   "vendorName": "Luma AI",
-  "winRate": "0.880000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.880000"
 }

@@ -1,0 +1,38 @@
+{
+  "catalogKey": "google/lyria-3-clip-preview",
+  "currency": "USD",
+  "modelId": "lyria-3-clip-preview",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "api_result",
+      "minimumQuantity": "0",
+      "operationCode": "music.generate",
+      "priceBookCode": "models.google.global.official",
+      "priceId": "google-lyria-3-clip-preview-song",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.google.music",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "eebb96d3e4ae2d71b100e4e1fb102d7f08114171bf2d64589fe06c047c1d3cf9",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "unitPrice": "0.040000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "google"
+}

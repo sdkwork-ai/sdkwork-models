@@ -5,6 +5,7 @@
     "reasoning"
   ],
   "catalogKey": "tencent/hy3",
+  "codingVisible": true,
   "colorToken": "#0052d9",
   "contextTokens": 256000,
   "description": "Tencent Hy3 fast/slow thinking fusion model with MoE architecture (295B total params, 21B activated). Supports 256K context. Successor to Hunyuan 2.0 with significant improvements in complex reasoning, instruction following, context learning, code generation, and agent capabilities.",
@@ -28,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://cloud.tencent.com/document/product/1823/130055"
   },
   "strengths": [
@@ -41,12 +42,11 @@
   "supportsJsonSchema": true,
   "supportsStreaming": true,
   "supportsTools": true,
-  "vendorCode": "tencent",
-  "vendorName": "Tencent Cloud",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "tencent",
+  "vendorName": "Tencent Cloud"
 }

@@ -5,9 +5,10 @@
     "reasoning"
   ],
   "catalogKey": "google/gemini-3.1-pro",
+  "codingVisible": true,
   "colorToken": "#4285f4",
   "contextTokens": 1048576,
-  "description": "Gemini 3.1 Pro preview-tier model for complex reasoning, coding, and multimodal tasks; still preview on the official API.",
+  "description": "官方 models/pricing 清单只有 gemini-3.1-pro-preview，无 gemini-3.1-pro 这一 id。",
   "displayName": "Gemini 3.1 Pro",
   "familyCode": "gemini",
   "inputModalities": [
@@ -16,7 +17,7 @@
     "audio",
     "video"
   ],
-  "lifecycle": "preview",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1048576,
   "modelId": "gemini-3.1-pro",
   "outputModalities": [
@@ -25,12 +26,12 @@
   "primaryCapability": "chat",
   "rankScore": "935.000000",
   "regionCode": "global",
-  "releaseStage": "preview",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
   },
   "strengths": [
@@ -43,13 +44,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.930000",
-  "vendorCode": "google",
-  "vendorName": "Google",
-  "winRate": "0.920000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "google",
+  "vendorName": "Google",
+  "winRate": "0.920000"
 }

@@ -1,0 +1,38 @@
+{
+  "catalogKey": "bytedance/doubao-seedream-4-5-251128",
+  "currency": "CNY",
+  "modelId": "doubao-seedream-4-5-251128",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seedream-4-5-251128-result",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "4a1b0c56edd5537788a11eaad4b56bf8b9fdb099dffc61b92c1e04b24c4dfcd5",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "unitPrice": "0.250000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "bytedance"
+}

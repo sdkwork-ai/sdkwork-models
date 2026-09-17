@@ -4,8 +4,9 @@
     "music"
   ],
   "catalogKey": "mureka/mureka-v7.5",
+  "codingVisible": false,
   "colorToken": "#7c3aed",
-  "description": "Mureka V7.5 music generation model with improved melody, arrangement, and vocal realism.",
+  "description": "Vendor model id mureka-7.5 is no longer accepted by the official API. The Mureka OpenAPI model field now accepts only auto, mureka-7.6, mureka-o2, mureka-8, mureka-9 and mureka-9.5; the changelog entry of 2025.12.9 records mureka-7.6 as the successor to mureka-7.5. Migrate to mureka-v7.6.",
   "displayName": "Mureka V7.5",
   "familyCode": "mureka",
   "inputModalities": [
@@ -13,7 +14,7 @@
   ],
   "latencyP50Ms": 45000,
   "latencyP95Ms": 120000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "mureka-v7.5",
   "outputModalities": [
     "music"
@@ -21,12 +22,12 @@
   "primaryCapability": "music",
   "rankScore": "790.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.mureka.ai/docs/"
   },
   "strengths": [
@@ -38,9 +39,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.920000",
+  "usageScopes": [],
   "vendorCode": "mureka",
   "vendorName": "Mureka",
-  "winRate": "0.890000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.890000"
 }

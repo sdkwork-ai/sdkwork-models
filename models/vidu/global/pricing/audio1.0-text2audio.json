@@ -4,29 +4,9 @@
   "modelId": "audio1.0-text2audio",
   "prices": [
     {
-      "currency": "USD",
-      "effectiveFrom": "2026-07-03T00:00:00Z",
-      "meterCode": "sfx_result",
-      "minimumQuantity": "0",
-      "notes": "Official bucket for audio1.0 text2audio output shorter than 5 seconds (10 credits).",
-      "priceId": "vidu-global-audio1-0-text2audio-under-5s",
-      "priceSide": "official",
-      "pricingScope": "model",
-      "quantityStep": "1",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
-      },
-      "tierCode": "under_5s",
-      "unitPrice": "0.050000",
-      "unitSize": "1",
-      "priceBookCode": "models.vidu.global.official",
-      "productCode": "models.vidu.sfx",
-      "operationCode": "sound.generate",
       "billability": "chargeable",
-      "chargeTiming": "successful_result",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
+      "chargeTiming": "successful_result",
       "conditions": [
         {
           "dimensionCode": "tier_code",
@@ -34,35 +14,35 @@
           "value": "under_5s"
         }
       ],
-      "rateHash": "c95fab278d1e326bdd33b0c9cc37e2fcb4939385b1b8645c03e82616d7303706",
-      "priority": 100,
-      "rateVariant": "standard",
-      "schedule": null
-    },
-    {
       "currency": "USD",
       "effectiveFrom": "2026-07-03T00:00:00Z",
       "meterCode": "sfx_result",
       "minimumQuantity": "0",
-      "notes": "Official bucket for audio1.0 text2audio output shorter than 10 seconds (20 credits).",
-      "priceId": "vidu-global-audio1-0-text2audio-under-10s",
+      "notes": "Official bucket for audio1.0 text2audio output shorter than 5 seconds (10 credits).",
+      "operationCode": "sound.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-audio1-0-text2audio-under-5s",
       "priceSide": "official",
       "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.sfx",
+      "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "c95fab278d1e326bdd33b0c9cc37e2fcb4939385b1b8645c03e82616d7303706",
+      "rateVariant": "standard",
+      "schedule": null,
       "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://platform.vidu.com/docs/pricing"
       },
-      "tierCode": "under_10s",
-      "unitPrice": "0.100000",
-      "unitSize": "1",
-      "priceBookCode": "models.vidu.global.official",
-      "productCode": "models.vidu.sfx",
-      "operationCode": "sound.generate",
+      "tierCode": "under_5s",
+      "unitPrice": "0.050000",
+      "unitSize": "1"
+    },
+    {
       "billability": "chargeable",
-      "chargeTiming": "successful_result",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
+      "chargeTiming": "successful_result",
       "conditions": [
         {
           "dimensionCode": "tier_code",
@@ -70,10 +50,30 @@
           "value": "under_10s"
         }
       ],
-      "rateHash": "92f0e50c5c8ed6d098f2e6cb8f93d112d52fad5c68812b54153f151f4dfef78f",
+      "currency": "USD",
+      "effectiveFrom": "2026-07-03T00:00:00Z",
+      "meterCode": "sfx_result",
+      "minimumQuantity": "0",
+      "notes": "Official bucket for audio1.0 text2audio output shorter than 10 seconds (20 credits).",
+      "operationCode": "sound.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-audio1-0-text2audio-under-10s",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
+      "productCode": "models.vidu.sfx",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "92f0e50c5c8ed6d098f2e6cb8f93d112d52fad5c68812b54153f151f4dfef78f",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "under_10s",
+      "unitPrice": "0.100000",
+      "unitSize": "1"
     }
   ],
   "regionCode": "global",

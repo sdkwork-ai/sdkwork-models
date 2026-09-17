@@ -5,6 +5,7 @@
     "reasoning"
   ],
   "catalogKey": "stepfun/step-3.5-flash-2603",
+  "codingVisible": true,
   "colorToken": "#0284c7",
   "contextTokens": 256000,
   "description": "Agent-optimized Step 3.5 Flash variant with faster inference and reasoning_effort controls.",
@@ -28,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/step-3.5-flash"
   },
   "strengths": [
@@ -41,13 +42,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.930000",
-  "vendorCode": "stepfun",
-  "vendorName": "StepFun",
-  "winRate": "0.900000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "stepfun",
+  "vendorName": "StepFun",
+  "winRate": "0.900000"
 }

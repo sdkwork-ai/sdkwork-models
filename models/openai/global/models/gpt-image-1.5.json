@@ -6,7 +6,7 @@
   "catalogKey": "openai/gpt-image-1.5",
   "codingVisible": false,
   "colorToken": "#0f766e",
-  "description": "Previous GPT Image generation kept for historical pricing and migration reference.",
+  "description": "Previous OpenAI image generation model. Officially deprecated on 2026-06-02, removal from the API on December 1, 2026; official replacement: gpt-image-2.",
   "displayName": "GPT Image 1.5",
   "familyCode": "gpt-image",
   "inputModalities": [
@@ -29,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-13T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.openai.com/docs/models"
   },
   "strengths": [

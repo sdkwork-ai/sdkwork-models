@@ -4,6 +4,7 @@
     "music"
   ],
   "catalogKey": "minimax/music-cover",
+  "codingVisible": false,
   "colorToken": "#1d4ed8",
   "description": "MiniMax Music Cover generates cover versions from reference audio with style prompts and optional lyric edits.",
   "displayName": "MiniMax Music Cover",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.minimax.io/docs/api-reference/music-generation"
   },
   "strengths": [
@@ -39,9 +40,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.900000",
+  "usageScopes": [],
   "vendorCode": "minimax",
   "vendorName": "MiniMax",
-  "winRate": "0.860000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.860000"
 }

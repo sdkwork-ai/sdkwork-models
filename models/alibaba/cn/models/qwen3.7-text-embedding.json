@@ -1,0 +1,32 @@
+{
+  "apiFormat": "openai_compatible",
+  "catalogKey": "alibaba/qwen3.7-text-embedding",
+  "codingVisible": false,
+  "description": "百炼文本向量模型，按输入 Token 计费，输出不计费。",
+  "displayName": "Qwen3.7 Text Embedding",
+  "familyCode": "qwen-embedding",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "qwen3.7-text-embedding",
+  "outputModalities": [
+    "embedding"
+  ],
+  "primaryCapability": "embedding",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/text-generation-model"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud"
+}

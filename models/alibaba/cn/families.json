@@ -25,7 +25,7 @@
       "sortOrder": 30
     },
     {
-      "defaultModel": "text-embedding-v3",
+      "defaultModel": "text-embedding-v4",
       "displayName": "Qwen Embedding",
       "familyCode": "qwen-embedding",
       "familyType": "embedding",

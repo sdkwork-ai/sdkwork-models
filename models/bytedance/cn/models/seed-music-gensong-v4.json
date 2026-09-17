@@ -4,6 +4,7 @@
     "music"
   ],
   "catalogKey": "bytedance/seed-music-gensong-v4",
+  "codingVisible": false,
   "colorToken": "#dc2626",
   "description": "ByteDance Seed-Music GenSong V4 song generation with vocals, lyrics, and multilingual support via Volcengine OpenAPI.",
   "displayName": "Seed Music GenSong V4",
@@ -26,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://www.volcengine.com/docs/84992/1404668"
   },
   "strengths": [
@@ -38,9 +39,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.870000",
+  "usageScopes": [],
   "vendorCode": "bytedance",
   "vendorName": "ByteDance",
-  "winRate": "0.850000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.850000"
 }

@@ -7,14 +7,14 @@
   "codingVisible": false,
   "colorToken": "#10a37f",
   "contextTokens": 128000,
-  "description": "Cost-efficient version of GPT-Realtime for voice interactions.",
+  "description": "Cost-efficient version of GPT-Realtime. Officially deprecated on 2026-07-20, removal from the API on January 20, 2027; official replacement: gpt-realtime-2.1-mini. Kept listed/enabled until the shutdown date.",
   "displayName": "GPT-Realtime mini",
   "familyCode": "gpt-realtime",
   "inputModalities": [
     "audio",
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 128000,
   "modelId": "gpt-realtime-mini",
   "outputModalities": [
@@ -23,12 +23,12 @@
   ],
   "primaryCapability": "audio",
   "regionCode": "global",
-  "releaseStage": "active",
+  "releaseStage": "deprecated",
   "routingState": "enabled",
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-13T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.openai.com/docs/models"
   },
   "strengths": [

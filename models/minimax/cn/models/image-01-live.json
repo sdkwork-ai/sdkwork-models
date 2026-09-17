@@ -1,0 +1,45 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "minimax/image-01-live",
+  "codingVisible": false,
+  "colorToken": "#2563eb",
+  "description": "MiniMax image-01-live image generation model with enhanced hand-drawn/cartoon style coverage; supports text-to-image with style settings.",
+  "displayName": "MiniMax Image 01 Live",
+  "familyCode": "minimax-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "image-01-live",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "735.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/guides/models-intro"
+  },
+  "strengths": [
+    "Text to image",
+    "Style presets",
+    "Hand-drawn and cartoon styles"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.870000",
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax",
+  "winRate": "0.850000"
+}

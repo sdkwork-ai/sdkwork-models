@@ -4,32 +4,144 @@
   "modelId": "doubao-seedream-5-0-pro-260628",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "single_image_le_2_61mp"
+        }
+      ],
       "currency": "CNY",
-      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
       "meterCode": "image_result",
       "minimumQuantity": "0",
-      "priceId": "bytedance-cn-seedream-4-0-250828-result",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seedream-5-0-pro-260628-result-single_image_le_2_61mp",
       "priceSide": "official",
       "pricingScope": "model",
-      "quantityStep": "1",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://www.volcengine.com/docs/82379"
-      },
-      "unitPrice": "0.200000",
-      "unitSize": "1",
-      "priceBookCode": "models.bytedance.cn.official",
-      "productCode": "models.bytedance.image",
-      "operationCode": "image.generate",
-      "billability": "chargeable",
-      "chargeTiming": "successful_result",
-      "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [],
-      "rateHash": "5eb39d51820e5d7fc53ac712f77bfb2784e421d7735d447b779d1648cadda0b4",
       "priority": 100,
+      "productCode": "models.bytedance.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d99fb5f370d03cc20d6ce7386651c48b69edf23591c3cba95d7f9d59e3dd8865",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "tierCode": "single_image_le_2_61mp",
+      "unitPrice": "0.300000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "single_image_gt_2_61mp"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seedream-5-0-pro-260628-result-single_image_gt_2_61mp",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "4e021b2ca174006084c9d84a69b27887b8275a436f380caba4eb40ebf6fde55b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "tierCode": "single_image_gt_2_61mp",
+      "unitPrice": "0.600000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "layer_split_le_2_61mp"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seedream-5-0-pro-260628-result-layer_split_le_2_61mp",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "b0190ff1e2abe63f8953814a436732858b08fd14d806f34321251bcd55902ef2",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "tierCode": "layer_split_le_2_61mp",
+      "unitPrice": "0.150000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "layer_split_gt_2_61mp"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seedream-5-0-pro-260628-result-layer_split_gt_2_61mp",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "6128d4ae3a4e7e8e1d75265696cbb3bd2c79735994a0e00251684ea434c1a9c9",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "tierCode": "layer_split_gt_2_61mp",
+      "unitPrice": "0.300000",
+      "unitSize": "1"
     }
   ],
   "regionCode": "cn",

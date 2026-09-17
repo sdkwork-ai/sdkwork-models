@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "tencent/hunyuan-2.0-instruct-20251111",
+  "codingVisible": true,
   "colorToken": "#0052d9",
   "contextTokens": 128000,
   "description": "Tencent HY 2.0 Instruct model shut down on 2026-06-26 per official announcement; migrate to Hunyuan 3 (hy3). Kept for migration reference.",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://cloud.tencent.com/document/product/1729/104753"
   },
   "strengths": [
@@ -39,12 +40,11 @@
   "supportsJsonSchema": true,
   "supportsStreaming": true,
   "supportsTools": true,
-  "vendorCode": "tencent",
-  "vendorName": "Tencent Cloud",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "tencent",
+  "vendorName": "Tencent Cloud"
 }

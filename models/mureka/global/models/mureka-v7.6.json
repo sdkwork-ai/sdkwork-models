@@ -4,6 +4,7 @@
     "music"
   ],
   "catalogKey": "mureka/mureka-v7.6",
+  "codingVisible": false,
   "colorToken": "#8b5cf6",
   "description": "Mureka V7.6 music generation model with enhanced melody, arrangement, and vocal realism. Successor to Mureka V7.5.",
   "displayName": "Mureka V7.6",
@@ -26,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.mureka.ai/docs/"
   },
   "strengths": [
@@ -38,9 +39,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.930000",
+  "usageScopes": [],
   "vendorCode": "mureka",
   "vendorName": "Mureka",
-  "winRate": "0.900000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.900000"
 }

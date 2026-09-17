@@ -1,0 +1,38 @@
+{
+  "catalogKey": "openai/gpt-live-1",
+  "currency": "USD",
+  "modelId": "gpt-live-1",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "audio_output_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-live-1-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "2d64fd40e7a7d2baf1b28046ca6d3d96830981ff9d00d9c54a41db5b1f5270d4",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "unitPrice": "0.050000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "openai"
+}

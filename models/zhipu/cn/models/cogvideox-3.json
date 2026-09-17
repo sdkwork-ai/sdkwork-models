@@ -4,6 +4,7 @@
     "video"
   ],
   "catalogKey": "zhipu/cogvideox-3",
+  "codingVisible": false,
   "colorToken": "#1a56db",
   "description": "Zhipu CogVideoX-3 video generation model with text-to-video, image-to-video, and first-last-frame generation up to 4K.",
   "displayName": "CogVideoX-3",
@@ -28,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/video-generation/cogvideox-3"
   },
   "strengths": [
@@ -41,9 +42,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.910000",
+  "usageScopes": [],
   "vendorCode": "zhipu",
   "vendorName": "Zhipu AI",
-  "winRate": "0.870000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.870000"
 }

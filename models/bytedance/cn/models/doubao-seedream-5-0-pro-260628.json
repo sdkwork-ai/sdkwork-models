@@ -4,6 +4,7 @@
     "image"
   ],
   "catalogKey": "bytedance/doubao-seedream-5-0-pro-260628",
+  "codingVisible": false,
   "colorToken": "#dc2626",
   "description": "ByteDance Doubao Seedream 5.0 Pro image generation model released 2026-07-08, current Seedream flagship.",
   "displayName": "Doubao Seedream 5.0 Pro",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-09-06T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://www.volcengine.com/docs/82379"
   },
   "strengths": [
@@ -40,9 +41,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.930000",
+  "usageScopes": [],
   "vendorCode": "bytedance",
   "vendorName": "ByteDance",
-  "winRate": "0.890000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.890000"
 }

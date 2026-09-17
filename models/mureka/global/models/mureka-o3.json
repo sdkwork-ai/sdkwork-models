@@ -4,8 +4,9 @@
     "music"
   ],
   "catalogKey": "mureka/mureka-o3",
+  "codingVisible": false,
   "colorToken": "#4c1d95",
-  "description": "Mureka O3 premium music reasoning model released July 19, 2026 at WAIC 2026. Built on the V9.5 base, O3 extends MusiCoT with test-time scaling: the model continuously extends the composition, reviews deviations, and corrects subsequent decisions. Achieves emotion expression score 7.88 and arrangement structure score 7.20 in blind evaluation. Successor to Mureka O2.",
+  "description": "Not present anywhere in the current official Mureka API surface: the OpenAPI model enum lists only auto, mureka-7.6, mureka-o2, mureka-8, mureka-9 and mureka-9.5, and the official changelog has no O3 release entry. Kept for reference only; migrate to mureka-o2 for reasoning-style generation or mureka-v9.5 for the current base model.",
   "displayName": "Mureka O3",
   "familyCode": "mureka",
   "inputModalities": [
@@ -14,7 +15,7 @@
   ],
   "latencyP50Ms": 46000,
   "latencyP95Ms": 125000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "mureka-o3",
   "outputModalities": [
     "music"
@@ -22,12 +23,12 @@
   "primaryCapability": "music",
   "rankScore": "850.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.mureka.ai/docs/"
   },
   "strengths": [
@@ -41,9 +42,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.970000",
+  "usageScopes": [],
   "vendorCode": "mureka",
   "vendorName": "Mureka",
-  "winRate": "0.930000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.930000"
 }

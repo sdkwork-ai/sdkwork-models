@@ -1,0 +1,43 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "minimax/MiniMax-H3-Regeneration",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "MiniMax-H3-Regeneration turns a previously produced 768P video into 2K, billed per second of the regenerated output.",
+  "displayName": "MiniMax H3 Regeneration",
+  "familyCode": "minimax-video",
+  "inputModalities": [
+    "video"
+  ],
+  "lifecycle": "active",
+  "modelId": "MiniMax-H3-Regeneration",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "790.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+  },
+  "strengths": [
+    "768P → 2K regeneration",
+    "Billed per output second"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.900000",
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax",
+  "winRate": "0.880000"
+}

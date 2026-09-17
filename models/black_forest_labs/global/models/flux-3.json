@@ -6,6 +6,7 @@
     "audio"
   ],
   "catalogKey": "black_forest_labs/flux-3",
+  "codingVisible": false,
   "colorToken": "#18181b",
   "description": "FLUX 3 unified multimodal frontier video model generally available since August 5, 2026, with native synchronised audio, up to 20s video, HD/Full HD 1080p and public per-second API pricing.",
   "displayName": "FLUX.3",
@@ -31,7 +32,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-09-05T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
   },
   "strengths": [
@@ -44,9 +45,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.940000",
+  "usageScopes": [],
   "vendorCode": "black_forest_labs",
   "vendorName": "Black Forest Labs",
-  "winRate": "0.900000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.900000"
 }

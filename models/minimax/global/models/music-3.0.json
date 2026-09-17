@@ -4,8 +4,9 @@
     "music"
   ],
   "catalogKey": "minimax/music-3.0",
+  "codingVisible": false,
   "colorToken": "#1d4ed8",
-  "description": "MiniMax Music 3.0 flagship music generation model released July 16, 2026. Delivers full-length songs with vocals or instrumental tracks, improved vocal clarity, richer arrangements, and tighter prompt adherence over Music 2.6. Supports lyrics optimizer, BPM and key control, and reference audio conditioning.",
+  "description": "music-3.0 is marked \"Discontinued\" by MiniMax. Starting August 20, 2026 the paid music generation APIs are no longer available to new users; existing paying users can continue to use the current API services. Official alternatives are MiniMax Audio or the open-source MiniMax Music 3 model.",
   "displayName": "MiniMax Music 3.0",
   "familyCode": "minimax-music",
   "inputModalities": [
@@ -14,7 +15,7 @@
   ],
   "latencyP50Ms": 22000,
   "latencyP95Ms": 80000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "music-3.0",
   "outputModalities": [
     "music"
@@ -22,13 +23,13 @@
   "primaryCapability": "music",
   "rankScore": "820.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
-    "sourceUrl": "https://platform.minimax.io/docs/guides/music-generation"
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
   },
   "strengths": [
     "Song generation",
@@ -41,9 +42,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.950000",
+  "usageScopes": [],
   "vendorCode": "minimax",
   "vendorName": "MiniMax",
-  "winRate": "0.900000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.900000"
 }

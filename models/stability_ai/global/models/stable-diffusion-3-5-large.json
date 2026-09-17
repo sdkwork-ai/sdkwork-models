@@ -1,0 +1,42 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "stability_ai/stable-diffusion-3-5-large",
+  "codingVisible": false,
+  "colorToken": "#0d9488",
+  "description": "SD 3.5 is Stability AI most powerful 8 billion parameter base model with superior quality and prompt adherence. Officially billed at 6.5 credits per image ($0.065 at $1 USD per 100 credits).",
+  "displayName": "Stable Diffusion 3.5 Large",
+  "familyCode": "stable-image",
+  "inputModalities": [
+    "text"
+  ],
+  "latencyP50Ms": 3500,
+  "latencyP95Ms": 12000,
+  "lifecycle": "active",
+  "modelId": "stable-diffusion-3-5-large",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "790.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.stability.ai/pricing"
+  },
+  "strengths": [
+    "Image generation",
+    "Prompt adherence"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.910000",
+  "usageScopes": [],
+  "vendorCode": "stability_ai",
+  "vendorName": "Stability AI",
+  "winRate": "0.900000"
+}

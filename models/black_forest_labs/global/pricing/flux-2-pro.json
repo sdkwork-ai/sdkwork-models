@@ -4,74 +4,76 @@
   "modelId": "flux-2-pro",
   "prices": [
     {
-      "currency": "USD",
-      "effectiveFrom": "2026-05-07T00:00:00Z",
-      "mediaDirection": "output",
-      "meterCode": "image_megapixel",
-      "minimumQuantity": "0",
-      "priceId": "bfl-flux-2-pro-output-megapixel",
-      "priceSide": "official",
-      "pricingScope": "model",
-      "quantityStep": "0.001",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
-      },
-      "unitPrice": "0.030000",
-      "unitSize": "1",
-      "priceBookCode": "models.black_forest_labs.global.official",
-      "productCode": "models.black_forest_labs.image",
-      "operationCode": "image.generate",
       "billability": "chargeable",
-      "chargeTiming": "successful_result",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
+      "chargeTiming": "successful_result",
       "conditions": [
         {
-          "dimensionCode": "media_direction",
+          "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "output"
+          "value": "text_to_image"
         }
       ],
-      "rateHash": "23c89c8a1d2038b6c40db29e509e9cfe91c3773997eac9ae3afa7aba480bcb7f",
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_megapixel",
+      "minimumQuantity": "0",
+      "notes": "Official FLUX.2 [pro] text-to-image \"from $0.03\" per output megapixel.",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-2-pro-text-to-image-megapixel",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
+      "productCode": "models.black_forest_labs.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "0.001",
+      "rateHash": "f2f2013c10457113f0ea813b645e659e3fa86d6e6eedb264b34fdd66824e4fde",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "text_to_image",
+      "unitPrice": "0.030000",
+      "unitSize": "1"
     },
     {
-      "currency": "USD",
-      "effectiveFrom": "2026-05-07T00:00:00Z",
-      "mediaDirection": "input",
-      "meterCode": "image_megapixel",
-      "minimumQuantity": "0",
-      "priceId": "bfl-flux-2-pro-input-megapixel",
-      "priceSide": "official",
-      "pricingScope": "model",
-      "quantityStep": "0.001",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
-      },
-      "unitPrice": "0.015000",
-      "unitSize": "1",
-      "priceBookCode": "models.black_forest_labs.global.official",
-      "productCode": "models.black_forest_labs.image",
-      "operationCode": "image.generate",
       "billability": "chargeable",
-      "chargeTiming": "successful_result",
       "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
+      "chargeTiming": "successful_result",
       "conditions": [
         {
-          "dimensionCode": "media_direction",
+          "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "input"
+          "value": "image_editing"
         }
       ],
-      "rateHash": "e346ba478230219c6983b39439b11de6f049dacf4578d85265630c50ff83f6b9",
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_megapixel",
+      "minimumQuantity": "0",
+      "notes": "Official FLUX.2 [pro] image editing \"from $0.045\" per output megapixel.",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-2-pro-image-editing-megapixel",
+      "priceSide": "official",
+      "pricingScope": "model",
       "priority": 100,
+      "productCode": "models.black_forest_labs.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "0.001",
+      "rateHash": "cd5d16a261536ef29bc85eb64ea1ae9a5ec463789b37303abb0569cdeb9aa955",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+      },
+      "tierCode": "image_editing",
+      "unitPrice": "0.045000",
+      "unitSize": "1"
     }
   ],
   "regionCode": "global",

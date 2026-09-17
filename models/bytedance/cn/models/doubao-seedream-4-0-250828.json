@@ -4,6 +4,7 @@
     "image"
   ],
   "catalogKey": "bytedance/doubao-seedream-4-0-250828",
+  "codingVisible": false,
   "colorToken": "#dc2626",
   "description": "Doubao Seedream 4.0 unified image generation and editing model with multi-reference support up to 4K.",
   "displayName": "Seedream 4.0",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://www.volcengine.com/docs/6561/1598757"
   },
   "strengths": [
@@ -40,9 +41,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.930000",
+  "usageScopes": [],
   "vendorCode": "bytedance",
   "vendorName": "ByteDance",
-  "winRate": "0.890000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.890000"
 }

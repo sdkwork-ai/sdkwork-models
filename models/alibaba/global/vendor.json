@@ -27,32 +27,7 @@
         "mappingType": "custom",
         "rules": [
           {
-            "sourceModel": "deepseek-v4-pro",
-            "targetModel": "claude-sonnet-4-6",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "deepseek-v4-flash",
-            "targetModel": "claude-haiku-4-5",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "mimo-v2.5-pro",
-            "targetModel": "claude-sonnet-4-6",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "mimo-v2.5",
-            "targetModel": "claude-sonnet-4-6",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "mimo-v2.5-pro-fp4-dflash",
-            "targetModel": "claude-haiku-4-5",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "mimo-v2-flash",
+            "sourceModel": "qwen3.7-flash",
             "targetModel": "claude-haiku-4-5",
             "transform": "custom"
           },
@@ -62,7 +37,17 @@
             "transform": "custom"
           },
           {
-            "sourceModel": "qwen3.6-max-preview",
+            "sourceModel": "qwen3.7-plus",
+            "targetModel": "claude-sonnet-4-6",
+            "transform": "custom"
+          },
+          {
+            "sourceModel": "qwen3.8-flash",
+            "targetModel": "claude-haiku-4-5",
+            "transform": "custom"
+          },
+          {
+            "sourceModel": "qwen3.8-max",
             "targetModel": "claude-sonnet-4-6",
             "transform": "custom"
           }
@@ -76,7 +61,7 @@
         "api.anthropic.claude_code"
       ],
       "source": {
-        "observedAt": "2026-08-13T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-max"
       },
       "supportStatus": "partial"
@@ -90,32 +75,7 @@
         "mappingType": "custom",
         "rules": [
           {
-            "sourceModel": "deepseek-v4-pro",
-            "targetModel": "gpt-5.5",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "deepseek-v4-flash",
-            "targetModel": "gpt-5.4",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "mimo-v2.5-pro",
-            "targetModel": "gpt-5.5",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "mimo-v2.5",
-            "targetModel": "gpt-5.5",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "mimo-v2.5-pro-fp4-dflash",
-            "targetModel": "gpt-5.4",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "mimo-v2-flash",
+            "sourceModel": "qwen3.7-flash",
             "targetModel": "gpt-5.4",
             "transform": "custom"
           },
@@ -125,7 +85,17 @@
             "transform": "custom"
           },
           {
-            "sourceModel": "qwen3.6-max-preview",
+            "sourceModel": "qwen3.7-plus",
+            "targetModel": "gpt-5.5",
+            "transform": "custom"
+          },
+          {
+            "sourceModel": "qwen3.8-flash",
+            "targetModel": "gpt-5.4",
+            "transform": "custom"
+          },
+          {
+            "sourceModel": "qwen3.8-max",
             "targetModel": "gpt-5.5",
             "transform": "custom"
           }
@@ -135,7 +105,7 @@
       "protocolCodes": [],
       "resourceCodes": [],
       "source": {
-        "observedAt": "2026-08-13T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
       },
       "supportStatus": "convert"
@@ -149,32 +119,7 @@
         "mappingType": "custom",
         "rules": [
           {
-            "sourceModel": "deepseek-v4-pro",
-            "targetModel": "gemini-3.1-pro-preview",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "deepseek-v4-flash",
-            "targetModel": "gemini-3-flash-preview",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "mimo-v2.5-pro",
-            "targetModel": "gemini-3.1-pro-preview",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "mimo-v2.5",
-            "targetModel": "gemini-3.1-pro-preview",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "mimo-v2.5-pro-fp4-dflash",
-            "targetModel": "gemini-3-flash-preview",
-            "transform": "custom"
-          },
-          {
-            "sourceModel": "mimo-v2-flash",
+            "sourceModel": "qwen3.7-flash",
             "targetModel": "gemini-3-flash-preview",
             "transform": "custom"
           },
@@ -184,7 +129,17 @@
             "transform": "custom"
           },
           {
-            "sourceModel": "qwen3.6-max-preview",
+            "sourceModel": "qwen3.7-plus",
+            "targetModel": "gemini-3.1-pro-preview",
+            "transform": "custom"
+          },
+          {
+            "sourceModel": "qwen3.8-flash",
+            "targetModel": "gemini-3-flash-preview",
+            "transform": "custom"
+          },
+          {
+            "sourceModel": "qwen3.8-max",
             "targetModel": "gemini-3.1-pro-preview",
             "transform": "custom"
           }
@@ -194,7 +149,7 @@
       "protocolCodes": [],
       "resourceCodes": [],
       "source": {
-        "observedAt": "2026-08-13T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
       },
       "supportStatus": "convert"
@@ -231,7 +186,7 @@
   "schemaVersion": "1.0.0",
   "sortOrder": 51,
   "source": {
-    "observedAt": "2026-08-13T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-max"
   },
   "supportedProtocols": [

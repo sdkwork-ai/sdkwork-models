@@ -1,0 +1,43 @@
+{
+  "apiFormat": "anthropic_messages",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "anthropic/claude-opus-4-6",
+  "codingVisible": true,
+  "colorToken": "#c2410c",
+  "contextTokens": 1000000,
+  "description": "Claude Opus 4.6 (legacy but still available per the official models overview). Listed at $5/$25 per MTok with 1M-token context at standard pricing.",
+  "displayName": "Claude Opus 4.6",
+  "familyCode": "claude",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1000000,
+  "modelId": "claude-opus-4-6",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.claude.com/docs/en/about-claude/models/overview"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "anthropic",
+  "vendorName": "Anthropic"
+}

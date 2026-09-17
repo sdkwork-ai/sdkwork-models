@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "bytedance/doubao-seed-2-0-pro-260215",
+  "codingVisible": true,
   "colorToken": "#dc2626",
   "contextTokens": 256000,
   "description": "Doubao Seed 2.0 Pro model for Chinese multimodal assistance.",
@@ -30,7 +31,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://seed.bytedance.com/en/seed2"
   },
   "strengths": [
@@ -42,13 +43,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.870000",
-  "vendorCode": "bytedance",
-  "vendorName": "ByteDance",
-  "winRate": "0.850000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance",
+  "winRate": "0.850000"
 }

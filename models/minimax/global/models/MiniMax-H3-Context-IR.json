@@ -1,0 +1,47 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "chat",
+    "video"
+  ],
+  "catalogKey": "minimax/MiniMax-H3-Context-IR",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "MiniMax-H3-Context-IR deeply understands multimodal context and produces structured, semantically richer video prompts; billed per token.",
+  "displayName": "MiniMax H3 Context IR",
+  "familyCode": "minimax-video",
+  "inputModalities": [
+    "text",
+    "image",
+    "video",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "MiniMax-H3-Context-IR",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "780.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+  },
+  "strengths": [
+    "Multimodal context understanding",
+    "Video prompt generation"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "trendScore": "0.890000",
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax",
+  "winRate": "0.870000"
+}

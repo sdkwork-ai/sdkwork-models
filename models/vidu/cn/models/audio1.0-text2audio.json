@@ -4,6 +4,7 @@
     "sfx"
   ],
   "catalogKey": "vidu/audio1.0-text2audio",
+  "codingVisible": false,
   "colorToken": "#7c3aed",
   "description": "Vidu audio1.0 文生音频 API，通过文本提示生成 2 至 10 秒音效或背景音乐。",
   "displayName": "Vidu Audio 1.0 Text to Audio",
@@ -26,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.vidu.cn/docs/text-to-audio"
   },
   "strengths": [
@@ -39,9 +40,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.940000",
+  "usageScopes": [],
   "vendorCode": "vidu",
   "vendorName": "Vidu",
-  "winRate": "0.910000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.910000"
 }

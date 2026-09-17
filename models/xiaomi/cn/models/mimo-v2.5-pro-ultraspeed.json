@@ -4,9 +4,10 @@
     "chat"
   ],
   "catalogKey": "xiaomi/mimo-v2.5-pro-ultraspeed",
+  "codingVisible": true,
   "colorToken": "#FF6900",
   "contextTokens": 1048576,
-  "description": "Xiaomi MiMo V2.5 Pro UltraSpeed - Ultra-speed inference mode of the 1T parameter MiMo-V2.5-Pro, delivering ~10x output speed (1000 TPS) through model-system codesign.",
+  "description": "UltraSpeed is documented by Xiaomi as a serving mode of MiMo-V2.5-Pro rather than an API model id; it is absent from the official model list and pay-as-you-go price list as of 2026-09-17. Kept in the catalog but hidden from the shelf.",
   "displayName": "MiMo V2.5 Pro UltraSpeed",
   "familyCode": "mimo-v2.5",
   "inputModalities": [
@@ -25,11 +26,11 @@
   "rankScore": "1110.000000",
   "regionCode": "cn",
   "releaseStage": "active",
-  "routingState": "enabled",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://mimo.xiaomi.com"
   },
   "strengths": [
@@ -42,13 +43,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.970000",
-  "vendorCode": "xiaomi",
-  "vendorName": "Xiaomi MiMo",
-  "winRate": "0.940000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "xiaomi",
+  "vendorName": "Xiaomi MiMo",
+  "winRate": "0.940000"
 }

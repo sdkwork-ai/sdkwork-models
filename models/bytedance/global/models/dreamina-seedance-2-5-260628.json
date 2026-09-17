@@ -1,0 +1,48 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "bytedance/dreamina-seedance-2-5-260628",
+  "codingVisible": false,
+  "colorToken": "#dc2626",
+  "description": "BytePlus ModelArk mainline video generation model. 480p/720p 8-bit and 1080p 10-bit, 24 fps, 4-30s, .mp4/.mov output.",
+  "displayName": "Dreamina Seedance 2.5",
+  "familyCode": "dreamina-seedance",
+  "inputModalities": [
+    "text",
+    "image",
+    "video",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "maxOutputSeconds": 30,
+  "modelId": "dreamina-seedance-2-5-260628",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1330310"
+  },
+  "strengths": [
+    "Multimodal reference-to-video",
+    "Video editing",
+    "Video extension",
+    "First/last frame to video",
+    "Text to video"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
+}

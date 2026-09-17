@@ -4,6 +4,7 @@
     "chat"
   ],
   "catalogKey": "minimax/M2-her",
+  "codingVisible": true,
   "colorToken": "#a855f7",
   "contextTokens": 65536,
   "description": "MiniMax M2-her text chat model for role-playing and long-horizon multi-turn dialogue.",
@@ -29,7 +30,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.minimaxi.com/docs/guides/text-chat"
   },
   "strengths": [
@@ -41,11 +42,10 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.760000",
-  "vendorCode": "minimax",
-  "vendorName": "MiniMax",
-  "winRate": "0.735000",
   "usageScopes": [
     "chat"
   ],
-  "codingVisible": true
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax",
+  "winRate": "0.735000"
 }

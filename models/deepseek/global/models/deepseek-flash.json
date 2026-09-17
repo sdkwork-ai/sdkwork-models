@@ -1,0 +1,55 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "deepseek/deepseek-flash",
+  "codingVisible": true,
+  "colorToken": "#0f766e",
+  "contextTokens": 1048576,
+  "description": "DeepSeek-V4.1-Flash, the official model name is deepseek-flash. Current Flash tier; legacy ids deepseek-v4-flash and deepseek-v4-flash-vision-exp are still accepted but their models are retired and now served by this model at Flash pricing. 1M context, 384K max output, Vision, JSON Output, Tool Calls, Responses API and Anthropic API.",
+  "displayName": "DeepSeek V4.1 Flash",
+  "familyCode": "deepseek",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 420,
+  "latencyP95Ms": 1600,
+  "lifecycle": "active",
+  "maxInputTokens": 1048576,
+  "maxOutputTokens": 393216,
+  "modelId": "deepseek-flash",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "860.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing"
+  },
+  "strengths": [
+    "Low latency",
+    "Cost efficient",
+    "Vision understanding",
+    "Coding"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.900000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "deepseek",
+  "vendorName": "DeepSeek",
+  "winRate": "0.860000"
+}

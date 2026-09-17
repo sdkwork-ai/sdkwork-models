@@ -1,0 +1,40 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "zhipu/glm-image",
+  "codingVisible": false,
+  "colorToken": "#2563eb",
+  "description": "Zhipu GLM-Image flagship text-to-image model. Official model overview lists it as the flagship image generation model with strong instruction following, knowledge-intensive generation and text rendering, multi-resolution; official pricing is CNY 0.1 per generated image. Grouped under the existing cogview image family because families.json declares no GLM image family and it is not editable in this patch.",
+  "displayName": "GLM-Image",
+  "familyCode": "cogview",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "glm-image",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/model-overview"
+  },
+  "strengths": [
+    "Text to image",
+    "Text rendering",
+    "Multi-resolution"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "zhipu"
+}

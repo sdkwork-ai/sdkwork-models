@@ -19,7 +19,7 @@ Production catalog repository for Sdkwork model intelligence. The catalog ships 
 versioned JSON under `models/`, consumed by `@sdkwork/models` SDKs, the standalone
 gateway, and CloudRouter catalog sync.
 
-Current catalog version: **2026.07.05.3** (see `sdkwork-models.json`). TTS voice
+Current catalog version: **2026.09.17.1** (see `sdkwork-models.json`). TTS voice
 (speaker) catalog uses `voices.json` and `model-voices/` bindings; video generation
 profiles use `model-video-profiles/` per model. See `specs/voice-catalog.spec.json`
 and `specs/video-generation-profile.spec.json`.

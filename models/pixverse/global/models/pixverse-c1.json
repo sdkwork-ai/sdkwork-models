@@ -1,0 +1,38 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video",
+    "audio"
+  ],
+  "catalogKey": "pixverse/pixverse-c1",
+  "codingVisible": false,
+  "description": "PixVerse 官方推荐生成模型之一（Model Overview: Recommended Models 列出 C1 与 V6），支持文生视频、图生视频、首尾帧、参考生视频/Fusion，最大 15 秒 / 1080p。官方以 credit 计价，credit→USD 换算口径存在冲突，未换算价格。",
+  "displayName": "PixVerse C1",
+  "familyCode": "pixverse-video",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "preview",
+  "modelId": "pixverse-c1",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.platform.pixverse.ai/model-overview-2140345m0"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "pixverse",
+  "vendorName": "PixVerse"
+}

@@ -1,0 +1,32 @@
+{
+  "apiFormat": "google_gemini",
+  "catalogKey": "google/gemini-3.5-transcribe-live",
+  "codingVisible": false,
+  "description": "基于 Live API 的双向流式语音转文本模型（WebSocket），2026-08-26 GA。",
+  "displayName": "Gemini 3.5 Transcribe Live",
+  "familyCode": "gemini",
+  "inputModalities": [
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "gemini-3.5-transcribe-live",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [],
+  "vendorCode": "google",
+  "vendorName": "Google"
+}

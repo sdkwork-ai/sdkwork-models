@@ -1,0 +1,43 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "black_forest_labs/flux-pro-1.0-fill",
+  "codingVisible": false,
+  "colorToken": "#18181b",
+  "description": "Targeted and fast text-driven image inpainting and outpainting. Official previous-generation FLUX.1 rate: 5 credits / $0.05 per image.",
+  "displayName": "FLUX.1 Fill [pro]",
+  "familyCode": "flux",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 4000,
+  "latencyP95Ms": 15000,
+  "lifecycle": "active",
+  "modelId": "flux-pro-1.0-fill",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "680.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+  },
+  "strengths": [
+    "Image generation",
+    "FLUX.1 previous generation"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.680000",
+  "usageScopes": [],
+  "vendorCode": "black_forest_labs",
+  "vendorName": "Black Forest Labs",
+  "winRate": "0.730000"
+}

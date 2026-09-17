@@ -1,0 +1,52 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat",
+    "reasoning"
+  ],
+  "catalogKey": "bytedance/doubao-seed-2-1-pro-260915",
+  "codingVisible": true,
+  "colorToken": "#b91c1c",
+  "contextTokens": 1048576,
+  "description": "Doubao Seed 2.1 Pro 260915 revision on Volcengine Ark: 1024K context window, 1024K max input, 256K max answer and 256K max CoT. Listed under 推荐模型 alongside the 260628 revision.",
+  "displayName": "Doubao Seed 2.1 Pro (260915)",
+  "familyCode": "doubao-seed",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1048576,
+  "maxOutputTokens": 262144,
+  "modelId": "doubao-seed-2-1-pro-260915",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://www.volcengine.com/docs/82379/1330310"
+  },
+  "strengths": [
+    "Deep thinking",
+    "Multimodal understanding",
+    "GUI tasks",
+    "Tool use",
+    "Long context"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
+}

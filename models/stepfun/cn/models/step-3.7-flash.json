@@ -5,6 +5,7 @@
     "reasoning"
   ],
   "catalogKey": "stepfun/step-3.7-flash",
+  "codingVisible": true,
   "colorToken": "#0369a1",
   "contextTokens": 256000,
   "description": "StepFun flagship multimodal reasoning model with native image and video understanding.",
@@ -30,7 +31,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/step-3.5-flash"
   },
   "strengths": [
@@ -43,13 +44,12 @@
   "supportsStreaming": true,
   "supportsTools": true,
   "trendScore": "0.950000",
-  "vendorCode": "stepfun",
-  "vendorName": "StepFun",
-  "winRate": "0.920000",
   "usageScopes": [
     "coding",
     "chat",
     "agent"
   ],
-  "codingVisible": true
+  "vendorCode": "stepfun",
+  "vendorName": "StepFun",
+  "winRate": "0.920000"
 }

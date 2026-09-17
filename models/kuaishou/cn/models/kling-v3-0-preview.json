@@ -4,8 +4,9 @@
     "video"
   ],
   "catalogKey": "kuaishou/kling-v3-0-preview",
+  "codingVisible": false,
   "colorToken": "#6d28d9",
-  "description": "Kling preview video generation model.",
+  "description": "Kling v3.0 Preview 已不在可灵官方文档站的视频/图片能力地图与计费页中。官方当前在售的第三代模型为 Kling 3.0（kling-v3）、Kling 3.0 Omni（kling-v3-omni）与 Kling 3.0 Turbo（kling-3.0-turbo），请迁移到上述模型。",
   "displayName": "Kling v3.0 Preview",
   "familyCode": "kling",
   "inputModalities": [
@@ -15,7 +16,7 @@
   ],
   "latencyP50Ms": 54000,
   "latencyP95Ms": 160000,
-  "lifecycle": "preview",
+  "lifecycle": "deprecated",
   "modelId": "kling-v3-0-preview",
   "outputModalities": [
     "video"
@@ -23,13 +24,13 @@
   "primaryCapability": "video",
   "rankScore": "790.000000",
   "regionCode": "cn",
-  "releaseStage": "preview",
+  "releaseStage": "deprecated",
   "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
-    "sourceUrl": "https://app.klingai.com/cn/dev/document-api/"
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://klingai.com/document-api/guides/capability-map/video"
   },
   "strengths": [
     "Video generation",
@@ -39,9 +40,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.900000",
+  "usageScopes": [],
   "vendorCode": "kuaishou",
   "vendorName": "Kuaishou",
-  "winRate": "0.880000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.880000"
 }

@@ -1,0 +1,38 @@
+{
+  "catalogKey": "alibaba/qwen3.7-text-embedding",
+  "currency": "CNY",
+  "modelId": "qwen3.7-text-embedding",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "embedding_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "embedding.create",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "qwen-cn-qwen3.7-text-embedding-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.embedding",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "85fa863e79331c14d096e04f017e614d4c5cc3acaba6686deb5824068c7e7d37",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+      },
+      "unitPrice": "0.500000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

@@ -1,0 +1,33 @@
+{
+  "apiFormat": "google_gemini",
+  "catalogKey": "google/lyria-3.5",
+  "codingVisible": false,
+  "description": "旗舰音乐生成模型，支持完整歌曲、44.1kHz 立体声，2026-09-03 GA。",
+  "displayName": "Lyria 3.5",
+  "familyCode": "lyria",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "lyria-3.5",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "music",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "google",
+  "vendorName": "Google"
+}

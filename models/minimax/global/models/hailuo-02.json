@@ -4,6 +4,7 @@
     "video"
   ],
   "catalogKey": "minimax/hailuo-02",
+  "codingVisible": false,
   "colorToken": "#7c3aed",
   "description": "MiniMax Hailuo 02 video generation model with 768p and 1080p text-to-video and image-to-video.",
   "displayName": "Hailuo 02",
@@ -27,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-video"
   },
   "strengths": [
@@ -39,9 +40,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.920000",
+  "usageScopes": [],
   "vendorCode": "minimax",
   "vendorName": "MiniMax",
-  "winRate": "0.880000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.880000"
 }

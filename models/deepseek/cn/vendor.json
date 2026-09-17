@@ -23,7 +23,7 @@
       "protocolCodes": [],
       "resourceCodes": [],
       "source": {
-        "observedAt": "2026-08-13T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
       },
       "supportStatus": "unsupported"
@@ -36,7 +36,7 @@
       "protocolCodes": [],
       "resourceCodes": [],
       "source": {
-        "observedAt": "2026-08-13T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
       },
       "supportStatus": "unsupported"
@@ -49,7 +49,7 @@
       "protocolCodes": [],
       "resourceCodes": [],
       "source": {
-        "observedAt": "2026-08-13T00:00:00Z",
+        "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
       },
       "supportStatus": "unsupported"
@@ -86,7 +86,7 @@
   "schemaVersion": "1.0.0",
   "sortOrder": 60,
   "source": {
-    "observedAt": "2026-08-13T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
   },
   "supportedProtocols": [

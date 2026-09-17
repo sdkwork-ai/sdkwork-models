@@ -1,0 +1,33 @@
+{
+  "apiFormat": "google_gemini",
+  "catalogKey": "google/gemini-3.1-flash-lite-image",
+  "codingVisible": false,
+  "description": "Nano Banana 2 Lite，面向超低延迟与低成本图像生成/编辑，2026-06-30 GA。",
+  "displayName": "Gemini 3.1 Flash Lite Image (Nano Banana 2 Lite)",
+  "familyCode": "gemini-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "gemini-3.1-flash-lite-image",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "google",
+  "vendorName": "Google"
+}

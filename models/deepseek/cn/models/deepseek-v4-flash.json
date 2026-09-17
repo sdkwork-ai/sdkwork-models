@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#0f766e",
   "contextTokens": 1048576,
-  "description": "Fast DeepSeek V4 model for cost-sensitive reasoning and coding traffic.",
+  "description": "DeepSeek V4 Flash is no longer a standalone model: the official pricing page states the legacy name deepseek-v4-flash is still accepted but the corresponding model has been retired, and requests are served by DeepSeek-V4.1-Flash at the Flash price. Use deepseek-flash.",
   "displayName": "DeepSeek V4 Flash",
   "familyCode": "deepseek",
   "inputModalities": [
@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 420,
   "latencyP95Ms": 1600,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1048576,
   "maxOutputTokens": 393216,
   "modelId": "deepseek-v4-flash",
@@ -25,12 +25,13 @@
   "primaryCapability": "chat",
   "rankScore": "860.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "deepseek-flash",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-13T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
   },
   "strengths": [

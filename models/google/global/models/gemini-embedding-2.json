@@ -4,6 +4,7 @@
     "embedding"
   ],
   "catalogKey": "google/gemini-embedding-2",
+  "codingVisible": false,
   "colorToken": "#4285f4",
   "contextTokens": 8192,
   "description": "Gemini Embedding 2 generates high-quality text embeddings for semantic search, clustering, and retrieval.",
@@ -25,7 +26,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
   },
   "strengths": [
@@ -36,8 +37,7 @@
   "supportsJsonSchema": false,
   "supportsStreaming": false,
   "supportsTools": false,
-  "vendorCode": "google",
-  "vendorName": "Google",
   "usageScopes": [],
-  "codingVisible": false
+  "vendorCode": "google",
+  "vendorName": "Google"
 }

@@ -1,0 +1,38 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video",
+    "audio"
+  ],
+  "catalogKey": "vidu/viduq3",
+  "codingVisible": false,
+  "description": "Base Vidu Q3 model (reference-to-video, 3-16s, 540p/720p/1080p, default 720p / 5s, audio defaults to true). The official model map does not list this id, but the pricing page reference2video table and the API parameter list (Accepted values: viduq3-turbo viduq3 viduq2 viduq1 vidu2.0) publish viduq3 with a per-second rate.",
+  "displayName": "Vidu Q3",
+  "familyCode": "vidu-video",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "viduq3",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://platform.vidu.com/docs/pricing"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "vidu",
+  "vendorName": "Vidu"
+}

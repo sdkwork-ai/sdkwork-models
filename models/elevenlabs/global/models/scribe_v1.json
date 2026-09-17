@@ -4,6 +4,7 @@
     "audio"
   ],
   "catalogKey": "elevenlabs/scribe_v1",
+  "codingVisible": false,
   "colorToken": "#7c2d12",
   "description": "Legacy ElevenLabs Scribe v1 transcription model removed 2026-07-09; migrate to Scribe v2.",
   "displayName": "Scribe v1",
@@ -26,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-09-06T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://elevenlabs.io/docs/changelog/2026/6/8"
   },
   "strengths": [
@@ -38,9 +39,8 @@
   "supportsStreaming": true,
   "supportsTools": false,
   "trendScore": "0.900000",
+  "usageScopes": [],
   "vendorCode": "elevenlabs",
   "vendorName": "ElevenLabs",
-  "winRate": "0.880000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.880000"
 }

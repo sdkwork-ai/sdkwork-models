@@ -8,7 +8,7 @@
   "codingVisible": true,
   "colorToken": "#7c2d12",
   "contextTokens": 1000000,
-  "description": "Claude Opus 5 frontier model released July 24, 2026; step-change improvement over Claude Opus 4.8 with 1M token context window, 128k max output, thinking on by default, and the full effort ladder (low/medium/high/xhigh/max).",
+  "description": "Claude flagship for complex agentic coding and enterprise work. 1M-token context, 128K max output. Fast mode (research preview) available at $10 input / $50 output per MTok.",
   "displayName": "Claude Opus 5",
   "familyCode": "claude",
   "inputModalities": [
@@ -32,7 +32,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-08-13T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5"
   },
   "strengths": [

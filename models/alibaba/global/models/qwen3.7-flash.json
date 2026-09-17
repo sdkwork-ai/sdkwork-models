@@ -1,0 +1,35 @@
+{
+  "apiFormat": "openai_compatible",
+  "catalogKey": "alibaba/qwen3.7-flash",
+  "codingVisible": true,
+  "description": "QwenCloud 上在售的 Qwen3.7 低延迟档模型，1M 上下文。",
+  "displayName": "Qwen3.7 Flash",
+  "familyCode": "qwen",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "qwen3.7-flash",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-flash"
+  },
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "chat",
+    "coding"
+  ],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud"
+}

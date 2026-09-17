@@ -1,0 +1,85 @@
+{
+  "catalogKey": "bytedance/doubao-seedance-2-0-mini-260615",
+  "modelId": "doubao-seedance-2-0-mini-260615",
+  "profiles": [
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "bytedance/doubao-seedance-2-0-mini-260615/t2v_range_720p",
+      "displayName": "Text to Video · 2–12s · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": true,
+      "maxDurationSeconds": 12,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "profileCode": "t2v_range_720p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 10,
+      "wireParameters": {
+        "duration": "2-12",
+        "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "bytedance/doubao-seedance-2-0-mini-260615/i2v_range_720p",
+      "displayName": "Image to Video · 2–12s · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 12,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "profileCode": "i2v_range_720p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "2-12",
+        "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "bytedance/doubao-seedance-2-0-mini-260615/r2v_range_720p",
+      "displayName": "Reference to Video · 2–12s · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "reference_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 12,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "profileCode": "r2v_range_720p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 30,
+      "wireParameters": {
+        "duration": "2-12",
+        "resolution": "720p"
+      }
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://www.volcengine.com/docs/82379/1330310"
+  },
+  "vendorCode": "bytedance"
+}

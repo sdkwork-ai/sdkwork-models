@@ -4,8 +4,9 @@
     "video"
   ],
   "catalogKey": "bytedance/doubao-seedance-2-5-260623",
+  "codingVisible": false,
   "colorToken": "#dc2626",
-  "description": "ByteDance Seedance 2.5 flagship video generation model released June 23, 2026 at the Volcano Engine FORCE Conference. Delivers up to 30 seconds of native 4K 10-bit video in a single forward pass with unified joint audio-video generation architecture. Supports up to 50 multimodal reference inputs (images, videos, audio) for character and brand identity consistency, native local scene editing without re-generation, and 3D white-box previs for cinematic previsualization. Skipped versions 2.1-2.4 to signal a generational architectural leap over Seedance 2.0.",
+  "description": "Superseded build of Doubao Seedance 2.5. The Volcengine Ark 模型列表 (2026-09-16 revision) only lists doubao-seedance-2-5-260628 for Seedance 2.5; use doubao-seedance-2-5-260628 instead.",
   "displayName": "Doubao Seedance 2.5",
   "familyCode": "seedance",
   "inputModalities": [
@@ -16,7 +17,7 @@
   ],
   "latencyP50Ms": 80000,
   "latencyP95Ms": 240000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxOutputSeconds": 30,
   "maxReferenceInputs": 50,
   "modelId": "doubao-seedance-2-5-260623",
@@ -27,12 +28,12 @@
   "primaryCapability": "video",
   "rankScore": "880.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-08-03T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
   },
   "strengths": [
@@ -47,9 +48,8 @@
   "supportsStreaming": false,
   "supportsTools": false,
   "trendScore": "0.940000",
+  "usageScopes": [],
   "vendorCode": "bytedance",
   "vendorName": "ByteDance",
-  "winRate": "0.900000",
-  "usageScopes": [],
-  "codingVisible": false
+  "winRate": "0.900000"
 }

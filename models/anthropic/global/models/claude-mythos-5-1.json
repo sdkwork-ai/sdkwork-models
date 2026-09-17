@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#7c2d12",
   "contextTokens": 1000000,
-  "description": "Claude Mythos 5.1, the restricted-access flagship modeled on Claude Fable 5.1 released on 2026-09-01, limited to Project Glasswing invitees, with 1M token context and $10/$50 per 1M tokens.",
+  "description": "Limited-availability Claude model for Project Glasswing approved organizations. 1M-token context, 128K max output. Cache hits priced at 0.025x base input ($0.25 / MTok).",
   "displayName": "Claude Mythos 5.1",
   "familyCode": "claude",
   "inputModalities": [
@@ -31,7 +31,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-09-06T00:00:00Z",
+    "observedAt": "2026-09-17T00:00:00Z",
     "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
   },
   "strengths": [

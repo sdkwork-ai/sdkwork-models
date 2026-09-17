@@ -4,33 +4,32 @@
   "modelId": "wan2.6-r2v",
   "prices": [
     {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
       "currency": "CNY",
-      "effectiveFrom": "2026-07-03T00:00:00Z",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
-      "notes": "Combined input and output reference video seconds at 720p (0.6 CNY/s each per official billing).",
-      "priceId": "alibaba-cn-wan2-6-r2v-second-720p-combined",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "qwen-cn-wan2.6-r2v-video-second",
       "priceSide": "official",
       "pricingScope": "model",
-      "quantityStep": "1",
-      "source": {
-        "observedAt": "2026-09-05T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/choose-a-model"
-      },
-      "unitPrice": "1.200000",
-      "unitSize": "1",
-      "priceBookCode": "models.alibaba.cn.official",
-      "productCode": "models.alibaba.video",
-      "operationCode": "video.generate",
-      "billability": "chargeable",
-      "chargeTiming": "successful_result",
-      "calculationMode": "per_unit",
-      "quantityAggregation": "sum",
-      "conditions": [],
-      "rateHash": "78a69ce0943fbb39e9a5c4c4d8aba5231be170b1990f3599691a57301f3c23e0",
       "priority": 100,
+      "productCode": "models.alibaba.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "74661c3dadbcdafc9de96ae8f50c704eebfd19140295dd528f1d4912d124dc02",
       "rateVariant": "standard",
-      "schedule": null
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-17T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+      },
+      "unitPrice": "0.600000",
+      "unitSize": "1"
     }
   ],
   "regionCode": "cn",
