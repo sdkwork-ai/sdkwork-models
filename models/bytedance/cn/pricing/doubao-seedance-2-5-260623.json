@@ -11,7 +11,7 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "4k_native"
+          "value": "res_4k_native"
         }
       ],
       "currency": "CNY",
@@ -27,14 +27,14 @@
       "productCode": "models.bytedance.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "27ed48312428fe9f620a8daf213654efbf8640532387f88b2665317aa34f8a5d",
+      "rateHash": "82016444d956c1d1f462e0d3c45778635dcfd3a1080a2f07d43af6fa670afaa3",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
       },
-      "tierCode": "4k_native",
+      "tierCode": "res_4k_native",
       "unitPrice": "1.500000",
       "unitSize": "1"
     },
@@ -46,7 +46,7 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "1080p"
+          "value": "res_1080p"
         }
       ],
       "currency": "CNY",
@@ -62,14 +62,14 @@
       "productCode": "models.bytedance.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "b913105d72824cca48d0eb3f3bb04f97ae0cdf7cac70049836bbd1563b99b11d",
+      "rateHash": "b34bc90f8fb7ca65792b04e877d96651984291e89c4c3e6a33873ba4ec80fbbc",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
       },
-      "tierCode": "1080p",
+      "tierCode": "res_1080p",
       "unitPrice": "1.000000",
       "unitSize": "1"
     },
@@ -81,7 +81,7 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "720p"
+          "value": "res_720p"
         }
       ],
       "currency": "CNY",
@@ -97,14 +97,14 @@
       "productCode": "models.bytedance.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "dc915415b511ca007e1ad9863832e47d06757c3eb9dfbe8a876fdd69f15e5cb8",
+      "rateHash": "f10406b32a76594537a67489efcbd651fd7a8a03028936f8ca06cfa4d446199f",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
       },
-      "tierCode": "720p",
+      "tierCode": "res_720p",
       "unitPrice": "0.600000",
       "unitSize": "1"
     }

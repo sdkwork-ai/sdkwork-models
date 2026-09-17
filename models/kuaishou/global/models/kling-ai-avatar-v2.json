@@ -1,0 +1,43 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "kuaishou/kling-ai-avatar-v2",
+  "codingVisible": false,
+  "colorToken": "#5b21b6",
+  "description": "Kling Avatar (kling-ai-avatar-v2): the official capability map lists it as a model-version-independent base capability, so the catalog books it as a capability entry rather than a model-version entry. Official API is POST /v1/videos/avatar/image2video with image (required), audio_id or sound_file (mutually exclusive), prompt, and mode (std|pro, default std). The official price table quotes two columns for this row (0.4 and 0.8 units per second, the 4K column empty) matching the two modes; the official docs do not spell out which mode maps to 720P/1080P, so this catalog pairs them by official column order = ascending unit price = mode std then pro, and prices the mode as a dimension.",
+  "displayName": "Kling Avatar",
+  "familyCode": "kling-avatar",
+  "inputModalities": [
+    "text",
+    "image",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "kling-ai-avatar-v2",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://kling.ai/document-api/api/video/avatar"
+  },
+  "strengths": [
+    "Audio-driven lip sync",
+    "Single-image avatar generation"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "kuaishou",
+  "vendorName": "Kuaishou"
+}

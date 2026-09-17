@@ -814,6 +814,72 @@ fn resolves_condition_specific_rate_by_vendor_region_api_and_model() {
     assert_eq!(CATALOG_KEY, identity.catalog_key);
 }
 
+/// The digital-human catalog prices two quality modes off one meter: an unconditional rate at
+/// the vendor's documented default (`std`) and a `quality eq pro` rate for the dearer mode,
+/// both at priority 100. Condition count is therefore the *only* thing separating them, so
+/// this pins the ordering in `select_rate` that lets the override win. Without it a pro request
+/// settles at the default-mode price — half the published rate — and nothing else in the
+/// pipeline would notice, because a rate did resolve.
+#[test]
+fn a_conditioned_rate_outranks_an_unconditional_one_at_equal_priority() {
+    let default_mode = official_price(
+        BillingMeter::VideoOutputSecond,
+        "1",
+        "0.400000",
+        metadata(
+            "avatar-default-mode-std",
+            "chargeable",
+            "per_unit",
+            "0",
+            None,
+            100,
+            vec![],
+        ),
+    );
+    let pro_mode = official_price(
+        BillingMeter::VideoOutputSecond,
+        "1",
+        "0.800000",
+        metadata(
+            "avatar-mode-pro",
+            "chargeable",
+            "per_unit",
+            "0",
+            None,
+            100,
+            vec![PricingRateCondition {
+                dimension_code: "quality".to_owned(),
+                operator_code: "eq".to_owned(),
+                value: json!("pro"),
+            }],
+        ),
+    );
+    let catalog = TestPricingCatalog::with_prices(vec![default_mode, pro_mode]);
+
+    let with_pro = resource(BillingMeter::VideoOutputSecond)
+        .with_dimensions(PricingDimensionContext::new().with_value("quality", json!("pro")));
+    let resolution = PriceService::new()
+        .resolve(&catalog, with_pro)
+        .expect("price resolution succeeds");
+    assert_eq!(PriceResolutionStatus::Quoted, resolution.status);
+    let identity = resolution.rate_identity.expect("resolved rate identity");
+    assert_eq!(Some("avatar-mode-pro"), identity.rate_hash.as_deref());
+
+    // An omitted `mode` is the vendor's default, so it must keep matching the default-mode
+    // rate rather than the override.
+    let without_mode =
+        resource(BillingMeter::VideoOutputSecond).with_dimensions(PricingDimensionContext::new());
+    let resolution = PriceService::new()
+        .resolve(&catalog, without_mode)
+        .expect("price resolution succeeds");
+    assert_eq!(PriceResolutionStatus::Quoted, resolution.status);
+    let identity = resolution.rate_identity.expect("resolved rate identity");
+    assert_eq!(
+        Some("avatar-default-mode-std"),
+        identity.rate_hash.as_deref()
+    );
+}
+
 #[test]
 fn active_sales_rule_overrides_the_official_reference_price() {
     let official = official_price(

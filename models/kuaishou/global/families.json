@@ -23,6 +23,14 @@
       "familyType": "image",
       "primaryModality": "image",
       "sortOrder": 40
+    },
+    {
+      "defaultModel": "kling-ai-avatar-v2",
+      "displayName": "Kling Avatar",
+      "familyCode": "kling-avatar",
+      "familyType": "video",
+      "primaryModality": "video",
+      "sortOrder": 50
     }
   ],
   "regionCode": "global",

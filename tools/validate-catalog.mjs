@@ -41,6 +41,30 @@ const DURATION_TIER_CODES = new Set([
 
 const USAGE_SCOPES = new Set(["coding", "chat", "agent"]);
 
+/**
+ * Meters whose rates the Cloud Router bills against a `tier_code` condition for
+ * video generation. `tier_code` is the only dimension the router resolves from
+ * `ai_model_video_profile`, so a profile whose declared tiers do not intersect
+ * this vocabulary can never be priced.
+ */
+const VIDEO_PRICING_METERS = new Set(["video_output_second", "video_result", "video_input_second"]);
+
+/**
+ * Of `VIDEO_PRICING_METERS`, the ones that bill the generation *output*. The
+ * ambiguity rule only compares tiers inside a single meter: `video_input_second`
+ * prices the source clip (`input_res_720p`), so mixing it in would flag a
+ * correctly declared `res_720p` as if the model also quoted it dearer.
+ */
+const VIDEO_OUTPUT_PRICING_METERS = new Set(["video_output_second", "video_result"]);
+
+/**
+ * A rate keyed by resolution alone (`res_720p`). `res_4k_native` and `res_480p_720p` are
+ * excluded: their extra segment carries a vendor distinction a resolution token cannot
+ * express, so demanding a profile for them would be a guess. `tools/validate-catalog.mjs`
+ * reports those through the `tier.unreachable` rule instead.
+ */
+const PLAIN_RESOLUTION_TIER_CODE = /^res_([^_]+)$/;
+
 function compareDecimalStrings(left, right) {
   if (!isDecimalString(left) || !isDecimalString(right)) {
     throw new TypeError("decimal comparison requires canonical non-negative decimal strings");
@@ -64,6 +88,24 @@ function isZeroDecimal(value) {
 
 function isPositiveDecimal(value) {
   return isDecimalString(value) && compareDecimalStrings(value, "0") > 0;
+}
+
+/**
+ * Largest member of a set of unit-price strings, or `null` when none of them is
+ * a comparable decimal. Comparison goes through `compareDecimalStrings` so the
+ * ranking never depends on float rounding.
+ */
+function maxDecimalString(values) {
+  let best = null;
+  for (const value of values) {
+    if (!isDecimalString(value)) {
+      continue;
+    }
+    if (best === null || compareDecimalStrings(value, best) > 0) {
+      best = value;
+    }
+  }
+  return best;
 }
 
 function validatePriceSchedule(price, pricingPath, index, issues) {
@@ -659,6 +701,10 @@ export function validateCatalog(root) {
 
     const modelById = new Map(bundle.models.map((model) => [model.modelId, model]));
     const pricingTierCodesByModel = new Map();
+    // modelId -> meterCode -> Map<tierCode, Set<unitPrice>>. Kept per meter
+    // because the two rules below need different scopes: reachability unions the
+    // meters, the ambiguity rule must stay inside one.
+    const videoPricingByMeter = new Map();
     for (const pricing of bundle.pricing ?? []) {
       const tiers = new Set(
         (pricing.prices ?? [])
@@ -666,7 +712,38 @@ export function validateCatalog(root) {
           .filter((tierCode) => typeof tierCode === "string" && tierCode.length > 0),
       );
       pricingTierCodesByModel.set(pricing.modelId, tiers);
+      const byMeter = videoPricingByMeter.get(pricing.modelId) ?? new Map();
+      for (const price of pricing.prices ?? []) {
+        if (!VIDEO_PRICING_METERS.has(price.meterCode)) {
+          continue;
+        }
+        if (typeof price.tierCode !== "string" || price.tierCode.length === 0) {
+          continue;
+        }
+        const meterTiers = byMeter.get(price.meterCode) ?? new Map();
+        const prices = meterTiers.get(price.tierCode) ?? new Set();
+        prices.add(String(price.unitPrice ?? ""));
+        meterTiers.set(price.tierCode, prices);
+        byMeter.set(price.meterCode, meterTiers);
+      }
+      videoPricingByMeter.set(pricing.modelId, byMeter);
     }
+    // Union across the meters — the scope the reachability rule compares against.
+    const videoPricingByModel = new Map(
+      [...videoPricingByMeter].map(([modelId, byMeter]) => {
+        const merged = new Map();
+        for (const meterTiers of byMeter.values()) {
+          for (const [tierCode, prices] of meterTiers) {
+            const seen = merged.get(tierCode) ?? new Set();
+            for (const price of prices) {
+              seen.add(price);
+            }
+            merged.set(tierCode, seen);
+          }
+        }
+        return [modelId, merged];
+      }),
+    );
 
     for (const profileFile of bundle.modelVideoProfiles ?? []) {
       const profilePath = `${pathPrefix}/model-video-profiles/${safeModelIdPath(profileFile.modelId, issues, `${pathPrefix}/model-video-profiles`)}.json`;
@@ -755,9 +832,177 @@ export function validateCatalog(root) {
             issues.push(issue("model_video_profile.pricing.tier.missing", `${itemPath}/pricingTierCodes`, `${tierCode} is not declared on ${expectedModelKey} pricing`));
           }
         }
+        // The Cloud Router bills a video request against the rate whose
+        // `tier_code` condition equals a tier the profile declares. When the
+        // profile's declared tiers and the model's video pricing tiers do not
+        // intersect, that profile is unreachable: the router reports a pricing
+        // gap instead of guessing a tier.
+        //
+        // Severity follows what the catalog can actually do about it:
+        //
+        // * `error` — the price book quotes the same resolution under another
+        //   spelling and every such code costs the same, so linking them is
+        //   mechanical and leaving it undone is simply drift (bytedance quoted
+        //   `720p` while every other vendor quoted `res_720p`).
+        // * `warning` — the price book splits that resolution by a dimension the
+        //   profile cannot express (`res_768p_dur_6s`, `audio` vs `no_audio`,
+        //   `over_4mp`), or quotes no resolution token at all. Recording one
+        //   would be a guess, so the mapping needs a product decision.
+        //
+        // A model whose video rates carry no `tier_code` at all is exempt —
+        // there the rate applies unconditionally.
+        const pricedByTier = videoPricingByModel.get(profileFile.modelId) ?? new Map();
+        if (pricedByTier.size > 0) {
+          const declaredTiers = [
+            profile.resolutionTierCode,
+            profile.durationTierCode,
+            ...(profile.durationTierCodes ?? []),
+            ...(profile.pricingTierCodes ?? []),
+          ].filter((tierCode) => typeof tierCode === "string" && tierCode.length > 0);
+          if (!declaredTiers.some((tierCode) => pricedByTier.has(tierCode))) {
+            const token = (profile.resolutionTierCode ?? "").startsWith("res_")
+              ? profile.resolutionTierCode.slice(4)
+              : profile.resolution ?? "";
+            const candidates = [...pricedByTier.keys()].filter(
+              (tierCode) => token.length > 0 && tierCode.split("_").includes(token),
+            );
+            const candidatePrices = new Set(
+              candidates.map((tierCode) => [...pricedByTier.get(tierCode)].sort().join("|")),
+            );
+            const mechanical = candidates.length > 0 && candidatePrices.size === 1;
+            issues.push(
+              issue(
+                "model_video_profile.pricing.tier.unreachable",
+                `${itemPath}`,
+                `${expectedModelKey} bills ${[...pricedByTier.keys()].sort().join(", ")} but this profile declares `
+                  + `${declaredTiers.length > 0 ? declaredTiers.join(", ") : "no tier code"}`
+                  + (mechanical
+                    ? `; set pricingTierCodes to ${candidates.sort().join(", ")}`
+                    : "; the price book splits this tier by a dimension the profile cannot express"),
+                mechanical ? "error" : "warning",
+              ),
+            );
+          } else if ((profile.pricingTierCodes ?? []).length === 0) {
+            // The declared tier resolves, so `unreachable` stays silent — but the
+            // model may still quote *dearer* variants of the same resolution on
+            // the same output meter. With no `pricingTierCodes` the router settles
+            // on the cheapest match, which under-bills whenever the request
+            // carries the dimension the profile cannot name. Measured case:
+            // `kuaishou/kling-v3` declares `res_1080p` while `audio_res_1080p` /
+            // `motion_res_1080p` cost 1.5x more, and `kuaishou/kling-v2-6`
+            // declares `res_1080p` while `audio_voice_1080p` costs 2.4x more.
+            //
+            // Kling publishes those variants as first-class tiers — the vendor
+            // price page reads `无声` (0.8), `有声 x 未指定音色` (1.2) and
+            // `动作控制` (1.2) for 1080p on `kling-v3` — so the cheapest tier is
+            // *correct* for a silent request and wrong for an audio one. The
+            // dimension therefore cannot be decided here: it belongs to the
+            // request, and the runtime reads no such fact out of the
+            // vendor-native body. Report the gap instead of pinning a tier.
+            const declaredResolution = profile.resolutionTierCode;
+            if (typeof declaredResolution === "string" && declaredResolution.startsWith("res_")) {
+              const token = declaredResolution.slice(4);
+              const byMeter = videoPricingByMeter.get(profileFile.modelId) ?? new Map();
+              const declaredScopes = [];
+              const dearerVariants = [];
+              for (const [meterCode, meterTiers] of byMeter) {
+                if (!VIDEO_OUTPUT_PRICING_METERS.has(meterCode)) {
+                  continue;
+                }
+                const declaredMax = maxDecimalString(meterTiers.get(declaredResolution) ?? new Set());
+                if (declaredMax === null) {
+                  continue;
+                }
+                declaredScopes.push(`${declaredResolution} = ${declaredMax} on ${meterCode}`);
+                for (const [tierCode, prices] of meterTiers) {
+                  if (tierCode === declaredResolution || !tierCode.split("_").includes(token)) {
+                    continue;
+                  }
+                  const variantMax = maxDecimalString(prices);
+                  if (variantMax === null || compareDecimalStrings(variantMax, declaredMax) <= 0) {
+                    continue;
+                  }
+                  dearerVariants.push(`${tierCode} (${[...prices].sort().join(", ")} on ${meterCode})`);
+                }
+              }
+              if (dearerVariants.length > 0) {
+                const audioClaim = profile.outputAudio === true
+                  ? " This profile also declares outputAudio, so the catalog claims audio output while the "
+                    + "only tier the router can reach is the silent one."
+                  : "";
+                issues.push(
+                  issue(
+                    "model_video_profile.pricing.tier.ambiguous",
+                    `${itemPath}`,
+                    `${expectedModelKey} prices ${declaredScopes.sort().join(", ")} and also quotes a dearer variant `
+                      + `for the same resolution — ${dearerVariants.sort().join(", ")}; with no pricingTierCodes the `
+                      + "router settles on the cheapest tier."
+                      + audioClaim
+                      + " Pinning pricingTierCodes is only right when every routed request shares one variant; "
+                      + "otherwise the variant must come from the request instead of the cheapest tier.",
+                    "warning",
+                  ),
+                );
+              }
+            }
+          }
+        }
       }
       if (defaultCount > 1) {
         issues.push(issue("model_video_profile.default.duplicate", `${profilePath}#/profiles`, "at most one profile may set isDefault"));
+      }
+
+      // Coverage rather than expressiveness. A plain `res_<token>` rate the book carries is
+      // declarable in principle, and when no profile of the model declares it the request can
+      // never be priced: `decide_video_pricing_tier` filters the profile set by the requested
+      // resolution *before* it looks for a tier, so naming an undeclared resolution yields an
+      // empty candidate list and `DeclaredTierNotPriced` — refused before dispatch although
+      // the rate sits in the book. Reported once per file; `unreachable` above covers the other
+      // direction (a profile declaring something the book cannot price).
+      const pricedResolutionTokens = new Set();
+      const byOutputMeter = videoPricingByMeter.get(profileFile.modelId) ?? new Map();
+      for (const [meterCode, meterTiers] of byOutputMeter) {
+        if (!VIDEO_OUTPUT_PRICING_METERS.has(meterCode)) {
+          continue;
+        }
+        for (const tierCode of meterTiers.keys()) {
+          const match = PLAIN_RESOLUTION_TIER_CODE.exec(tierCode);
+          if (match) {
+            pricedResolutionTokens.add(match[1]);
+          }
+        }
+      }
+      const declaredResolutionTokens = new Set();
+      for (const profile of profileFile.profiles ?? []) {
+        if (typeof profile.resolution === "string" && profile.resolution.length > 0) {
+          declaredResolutionTokens.add(profile.resolution);
+        }
+        for (const code of [
+          profile.resolutionTierCode,
+          ...(profile.pricingTierCodes ?? []),
+          profile.durationTierCode,
+          ...(profile.durationTierCodes ?? []),
+        ]) {
+          const match = typeof code === "string" ? PLAIN_RESOLUTION_TIER_CODE.exec(code) : null;
+          if (match) {
+            declaredResolutionTokens.add(match[1]);
+          }
+        }
+      }
+      const undeclaredResolutions = [...pricedResolutionTokens]
+        .filter((token) => !declaredResolutionTokens.has(token))
+        .sort();
+      if (undeclaredResolutions.length > 0) {
+        issues.push(
+          issue(
+            "model_video_profile.pricing.tier.undeclared_resolution",
+            `${profilePath}#/profiles`,
+            `${expectedModelKey} can be billed at ${undeclaredResolutions.join(", ")} but no profile declares `
+              + `${undeclaredResolutions.length === 1 ? "that resolution" : "those resolutions"}; a request naming `
+              + "one of them matches no profile and is refused before dispatch. Run "
+              + "`node tools/sync-video-profile-resolutions.mjs --write` to add them.",
+          ),
+        );
       }
     }
 

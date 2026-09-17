@@ -59,6 +59,12 @@ function conditions(price) {
     ["mediaType", "media_type"],
     ["inputType", "input_type"],
     ["outputType", "output_type"],
+    // Vendor quality modes whose price differs by level but which are not a resolution or a
+    // modality. Kling's digital human is the first: `mode` is `std`/`pro`, the official price
+    // table quotes 0.4 and 0.8 per second for the two levels, and the router reads the value
+    // off `mode` into the `quality` dimension. Appended last so the generated `conditions`
+    // array of every existing rate keeps its exact previous bytes and rateHash.
+    ["quality", "quality"],
   ]) {
     if (price[field] !== undefined) {
       result.push({ dimensionCode, operator: "eq", value: price[field] });

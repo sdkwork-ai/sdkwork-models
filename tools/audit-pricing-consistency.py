@@ -64,7 +64,7 @@ def conditions_of(price):
         result.append({"dimensionCode": "context_tokens", "operator": "gt", "value": str(price["thresholdTokens"])})
     for field, dim in [("tierCode", "tier_code"), ("mediaDirection", "media_direction"),
                        ("mediaType", "media_type"), ("inputType", "input_type"),
-                       ("outputType", "output_type")]:
+                       ("outputType", "output_type"), ("quality", "quality")]:
         if price.get(field) is not None:
             result.append({"dimensionCode": dim, "operator": "eq", "value": price[field]})
     return result
@@ -259,13 +259,30 @@ for pricing_path in sorted(glob.glob(os.path.join(MODELS, "*", "*", "pricing", "
                 issue(rel, f"AMBIGUOUS at runtime: {a.get('priceId')} vs {b.get('priceId')} (identical conditions/coverage, different hash)")
 
 # ---- model <-> pricing pairing ----
+# Mirrors validate-catalog.mjs' "model.pricing.required" rule: only a model that
+# is routable, listable or active must carry a pricing file. A routingState of
+# "catalog_only" (shelfState "hidden") is a deliberate display-only entry, so an
+# absent pricing file is expected there rather than a defect. Without this
+# distinction the check emits a permanent, unfixable false positive for every
+# catalog-only entry, which devalues the whole report.
 model_files = {os.path.relpath(p, MODELS).replace(os.sep, "/")
                for p in glob.glob(os.path.join(MODELS, "*", "*", "models", "*.json"))}
 pricing_files = {os.path.relpath(p, MODELS).replace(os.sep, "/")
                  for p in glob.glob(os.path.join(MODELS, "*", "*", "pricing", "*.json"))}
+catalog_only_unpriced = []
 for mf in sorted(model_files):
-    if mf.replace("/models/", "/pricing/") not in pricing_files:
-        issue(mf, "model file has no matching pricing file")
+    if mf.replace("/models/", "/pricing/") in pricing_files:
+        continue
+    try:
+        model = json.load(open(os.path.join(MODELS, mf), encoding="utf-8"))
+    except Exception as e:
+        issue(mf, f"unreadable: {e}")
+        continue
+    if (model.get("routingState") == "enabled" or model.get("shelfState") == "listed"
+            or model.get("releaseStage") == "active"):
+        issue(mf, "model is enabled/listed/active but has no matching pricing file")
+    else:
+        catalog_only_unpriced.append(mf)
 for pf in sorted(pricing_files):
     if pf.replace("/pricing/", "/models/") not in model_files:
         issue(pf, "pricing file has no matching model file")
@@ -282,7 +299,14 @@ else:
     ):
         if actual != declared:
             issue("index.json", f"{label} mismatch: directory={actual}, index={declared}")
-    actual_regions = len(set(p.split("/")[1] for p in pricing_files))
+    # index.json's regionCount counts "vendor x region catalog directories"
+    # (catalog-lib.mjs: regionCount = vendors.length, one entry per region dir
+    # that carries a vendor.json), NOT the number of distinct region names.
+    # Comparing it against distinct names ("cn"/"global" -> 2) can never pass.
+    actual_regions = sum(
+        1 for p in glob.glob(os.path.join(MODELS, "*", "*"))
+        if os.path.isfile(os.path.join(p, "vendor.json"))
+    )
     if actual_regions != index.get("regionCount"):
         issue("index.json", f"regionCount mismatch: directory={actual_regions}, index={index.get('regionCount')}")
 
@@ -291,6 +315,12 @@ for path, msg in issues:
     by_path.setdefault(path, []).append(msg)
 
 print(f"TOTAL ISSUES: {len(issues)} in {len(by_path)} files\n")
+if catalog_only_unpriced:
+    print(f"NOTE: {len(catalog_only_unpriced)} catalog-only model(s) carry no pricing file by design "
+          f"(routingState not enabled / shelfState not listed / releaseStage not active):")
+    for mf in catalog_only_unpriced:
+        print(f"    {mf}")
+    print()
 for path in sorted(by_path):
     print(f"--- {path} ({len(by_path[path])}) ---")
     for m in by_path[path]:

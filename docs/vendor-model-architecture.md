@@ -242,6 +242,7 @@ Generated: 2026-09-17
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
 | kling-3.0-turbo | N/A | video | N/A |
+| kling-ai-avatar-v2 | N/A | video | N/A |
 | kling-image-o1 | N/A | image | N/A |
 | kling-sound-t2a | N/A | sfx | N/A |
 | kling-sound-v2a | N/A | sfx | N/A |
@@ -257,6 +258,7 @@ Generated: 2026-09-17
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
 | kling-3.0-turbo | N/A | video | N/A |
+| kling-ai-avatar-v2 | N/A | video | N/A |
 | kling-image-o1 | N/A | image | N/A |
 | kling-sound-t2a | N/A | sfx | N/A |
 | kling-sound-v2a | N/A | sfx | N/A |
@@ -603,8 +605,8 @@ Generated: 2026-09-17
 
 | Region | Vendors | Models | Pricing Files |
 |--------|---------|--------|---------------|
-| CN | 14 | 139 | 133 |
-| GLOBAL | 20 | 284 | 271 |
+| CN | 14 | 140 | 134 |
+| GLOBAL | 20 | 285 | 272 |
 
 ### Client API Support
 

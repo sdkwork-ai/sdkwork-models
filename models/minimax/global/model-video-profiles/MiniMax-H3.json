@@ -41,8 +41,8 @@
       "minDurationSeconds": 5,
       "outputAudio": true,
       "profileCode": "t2v_range_2k",
-      "resolution": "1080p",
-      "resolutionTierCode": "res_1080p",
+      "resolution": "2k",
+      "resolutionTierCode": "res_2k",
       "sortOrder": 20,
       "wireParameters": {
         "duration": "5-15",

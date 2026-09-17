@@ -444,8 +444,15 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "OK"
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteConfirmationResponse"
+                }
+              }
+            }
           },
           "400": {
             "content": {
@@ -1716,8 +1723,15 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "OK"
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteConfirmationResponse"
+                }
+              }
+            }
           },
           "400": {
             "content": {
@@ -3815,7 +3829,10 @@
             "maxLength": 64
           },
           "maxOutputTokens": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
@@ -4269,7 +4286,10 @@
         "description": "Request body for patching an AI model catalog entry.",
         "properties": {
           "vendorId": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
@@ -4326,7 +4346,10 @@
             ]
           },
           "contextTokens": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
@@ -4422,7 +4445,10 @@
             "maxLength": 64
           },
           "maxOutputTokens": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
@@ -4634,7 +4660,10 @@
             ]
           },
           "sortOrder": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^(0|[1-9][0-9]*)$",
             "x-sdkwork-int64-string": true,
@@ -4700,7 +4729,10 @@
             "maxLength": 512
           },
           "sortOrder": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^(0|[1-9][0-9]*)$",
             "x-sdkwork-int64-string": true,
@@ -4802,7 +4834,10 @@
             "maxItems": 128
           },
           "sortOrder": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^(0|[1-9][0-9]*)$",
             "x-sdkwork-int64-string": true,
@@ -4863,7 +4898,10 @@
             ]
           },
           "sortOrder": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^(0|[1-9][0-9]*)$",
             "x-sdkwork-int64-string": true,
@@ -4892,7 +4930,10 @@
             ]
           },
           "sortOrder": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^(0|[1-9][0-9]*)$",
             "x-sdkwork-int64-string": true,
@@ -5007,7 +5048,10 @@
             ]
           },
           "sortOrder": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^(0|[1-9][0-9]*)$",
             "x-sdkwork-int64-string": true,
@@ -5082,7 +5126,10 @@
             "maxLength": 512
           },
           "sortOrder": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^(0|[1-9][0-9]*)$",
             "x-sdkwork-int64-string": true,
@@ -5293,7 +5340,10 @@
             ]
           },
           "sortOrder": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^(0|[1-9][0-9]*)$",
             "x-sdkwork-int64-string": true,
@@ -5344,7 +5394,10 @@
             "type": "boolean"
           },
           "sortOrder": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^(0|[1-9][0-9]*)$",
             "x-sdkwork-int64-string": true,
@@ -5382,7 +5435,10 @@
             "type": "boolean"
           },
           "sortOrder": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^(0|[1-9][0-9]*)$",
             "x-sdkwork-int64-string": true,
@@ -5557,7 +5613,10 @@
             ]
           },
           "sortOrder": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^(0|[1-9][0-9]*)$",
             "x-sdkwork-int64-string": true,
@@ -5628,7 +5687,10 @@
         "description": "Request body for creating a model mapping rule.",
         "properties": {
           "sourceVendorId": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
@@ -5640,7 +5702,10 @@
             "pattern": "^[A-Za-z0-9._:-]+$"
           },
           "targetVendorId": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
@@ -5761,7 +5826,10 @@
         "description": "Model mapping rule binding input.",
         "properties": {
           "id": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
@@ -5773,7 +5841,10 @@
             "pattern": "^[A-Za-z0-9._:-]+$"
           },
           "bindingId": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
@@ -5808,7 +5879,10 @@
         "description": "Model mapping rule item input.",
         "properties": {
           "id": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
@@ -5877,7 +5951,10 @@
         "description": "Request body for updating a model mapping rule.",
         "properties": {
           "sourceVendorId": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
@@ -5892,7 +5969,10 @@
             "pattern": "^[A-Za-z0-9._:-]+$"
           },
           "targetVendorId": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
@@ -6958,28 +7038,40 @@
             ]
           },
           "limit": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
             "x-sdkwork-rust-type": "i64"
           },
           "lookbackDays": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
             "x-sdkwork-rust-type": "i64"
           },
           "refreshIntervalSeconds": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,
             "x-sdkwork-rust-type": "i64"
           },
           "cacheMaxAgeSeconds": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "int64",
             "pattern": "^[1-9][0-9]*$",
             "x-sdkwork-int64-string": true,

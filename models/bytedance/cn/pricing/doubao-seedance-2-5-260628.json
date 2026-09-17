@@ -11,7 +11,7 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "480p"
+          "value": "res_480p"
         }
       ],
       "currency": "CNY",
@@ -27,14 +27,14 @@
       "productCode": "models.bytedance.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "534ce0f1eb6abb2a781363dffe09a47e57c9a02b0e01ed41bdc3be13ab2623b2",
+      "rateHash": "2a3c5e4872339ea9d66ab26638ee7abcb2e8a4b2efb4c4eb6588c7342768ae57",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
       },
-      "tierCode": "480p",
+      "tierCode": "res_480p",
       "unitPrice": "0.670000",
       "unitSize": "1"
     },
@@ -46,7 +46,7 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "720p"
+          "value": "res_720p"
         }
       ],
       "currency": "CNY",
@@ -62,14 +62,14 @@
       "productCode": "models.bytedance.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "9de3b589815bde10cd86c922675456075de1d15e5721a75b971e1831fa5be8b7",
+      "rateHash": "5d0f1db25c66db93e8fa585b270c880861f4a1debbbf96c49a13412acdc14c8b",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
       },
-      "tierCode": "720p",
+      "tierCode": "res_720p",
       "unitPrice": "1.510000",
       "unitSize": "1"
     },
@@ -81,7 +81,7 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "1080p"
+          "value": "res_1080p"
         }
       ],
       "currency": "CNY",
@@ -97,14 +97,14 @@
       "productCode": "models.bytedance.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "e6802269cc615490ab5f68d30a45f48133badde0f8b8bec71d61332a3c97f407",
+      "rateHash": "26d17197315c6c82104d909fd798bf0da733ed64fe9e10188174e0bbc3f8d001",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
       },
-      "tierCode": "1080p",
+      "tierCode": "res_1080p",
       "unitPrice": "3.740000",
       "unitSize": "1"
     }

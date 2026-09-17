@@ -11,7 +11,7 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "480p"
+          "value": "res_480p"
         }
       ],
       "currency": "CNY",
@@ -27,14 +27,14 @@
       "productCode": "models.bytedance.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "c3e895e58a1c36997b5a37a196fcf66a7e66f63eed2585ac34a970880c9abfd7",
+      "rateHash": "3d6d5c591e9c81d4972bd3bd6725ca5f293c8b2fd3a5ce7e59d2e3e7b1c3761a",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
       },
-      "tierCode": "480p",
+      "tierCode": "res_480p",
       "unitPrice": "0.230000",
       "unitSize": "1"
     },
@@ -46,7 +46,7 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "720p"
+          "value": "res_720p"
         }
       ],
       "currency": "CNY",
@@ -62,14 +62,14 @@
       "productCode": "models.bytedance.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "3d0f157afdaec7031019a411ad43db46656cfbb8d144c8aab01050c2ab219a6d",
+      "rateHash": "9d5b7e8ac1d1b7d94d5d7c752d5862878733ca1fa6dce04f6c9cdc12c6c040d8",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
       },
-      "tierCode": "720p",
+      "tierCode": "res_720p",
       "unitPrice": "0.500000",
       "unitSize": "1"
     }

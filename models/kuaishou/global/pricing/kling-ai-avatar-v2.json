@@ -1,41 +1,34 @@
 {
-  "catalogKey": "bytedance/dreamina-seedance-2-0-mini-260615",
+  "catalogKey": "kuaishou/kling-ai-avatar-v2",
   "currency": "USD",
-  "modelId": "dreamina-seedance-2-0-mini-260615",
+  "modelId": "kling-ai-avatar-v2",
   "prices": [
     {
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "successful_result",
-      "conditions": [
-        {
-          "dimensionCode": "tier_code",
-          "operator": "eq",
-          "value": "res_480p"
-        }
-      ],
+      "conditions": [],
       "currency": "USD",
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
       "operationCode": "video.generate",
-      "priceBookCode": "models.bytedance.global.official",
-      "priceId": "bytedance-global-dreamina-seedance-2-0-mini-260615-second-480p",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-ai-avatar-v2-second-default-mode-std",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
-      "productCode": "models.bytedance.video",
+      "productCode": "models.kuaishou.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "1ae6531c1f8320e25eeda87686fe663cfb74a31aada386c0c37ef9bf16a11148",
+      "rateHash": "a0a31d70a1f04c8a21289d8e3911db5073f6c79d3b6a83fb7d8d663fa8ca1756",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
-        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
       },
-      "tierCode": "res_480p",
-      "unitPrice": "0.040000",
+      "unitPrice": "0.056000",
       "unitSize": "1"
     },
     {
@@ -44,9 +37,9 @@
       "chargeTiming": "successful_result",
       "conditions": [
         {
-          "dimensionCode": "tier_code",
+          "dimensionCode": "quality",
           "operator": "eq",
-          "value": "res_720p"
+          "value": "pro"
         }
       ],
       "currency": "USD",
@@ -54,27 +47,27 @@
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
       "operationCode": "video.generate",
-      "priceBookCode": "models.bytedance.global.official",
-      "priceId": "bytedance-global-dreamina-seedance-2-0-mini-260615-second-720p",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-ai-avatar-v2-second-mode-pro",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
-      "productCode": "models.bytedance.video",
+      "productCode": "models.kuaishou.video",
+      "quality": "pro",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "48b6217088bb03576ee908db5c8a70bdec6b06603d5a10db8933d337819edd1d",
+      "rateHash": "fadd6ff26defb0d039e4e7eea91cd77e11a27db19d56fdde998f2ec65fffd7c3",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
-        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
       },
-      "tierCode": "res_720p",
-      "unitPrice": "0.080000",
+      "unitPrice": "0.112000",
       "unitSize": "1"
     }
   ],
   "regionCode": "global",
   "schemaVersion": "2.0.0",
-  "vendorCode": "bytedance"
+  "vendorCode": "kuaishou"
 }

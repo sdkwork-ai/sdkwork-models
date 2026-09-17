@@ -3077,13 +3077,13 @@
           "displayName": "Kuaishou",
           "legalName": "Kuaishou",
           "marketScope": "china_mainland",
-          "modelCount": 11,
+          "modelCount": 12,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "kuaishou/cn/vendor.json",
-          "pricingFileCount": 11,
+          "pricingFileCount": 12,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 130,
@@ -3142,13 +3142,13 @@
           "displayName": "Kuaishou",
           "legalName": "Kuaishou",
           "marketScope": "international",
-          "modelCount": 11,
+          "modelCount": 12,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "kuaishou/global/vendor.json",
-          "pricingFileCount": 11,
+          "pricingFileCount": 12,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 130,

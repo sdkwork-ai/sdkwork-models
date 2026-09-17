@@ -1,0 +1,30 @@
+{
+  "catalogKey": "kuaishou/kling-ai-avatar-v2",
+  "modelId": "kling-ai-avatar-v2",
+  "profiles": [
+    {
+      "catalogKey": "kuaishou/kling-ai-avatar-v2/i2v_continuous_720p",
+      "displayName": "Image to Video · Length follows the driving audio · 720p",
+      "durationPolicy": "continuous",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": true,
+      "maxDurationSeconds": 300,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "profileCode": "i2v_continuous_720p",
+      "resolution": "720p",
+      "sortOrder": 10,
+      "wireParameters": {
+        "mode": "std,pro"
+      }
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://kling.ai/document-api/api/video/avatar"
+  },
+  "vendorCode": "kuaishou"
+}

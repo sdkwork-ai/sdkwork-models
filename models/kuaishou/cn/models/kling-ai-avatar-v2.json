@@ -1,0 +1,43 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "kuaishou/kling-ai-avatar-v2",
+  "codingVisible": false,
+  "colorToken": "#5b21b6",
+  "description": "Kling 数字人（kling-ai-avatar-v2）：官方能力地图把它列为「不区分模型版本」的基础能力，故目录按能力条目而非模型版本条目建账。官方 API 为 POST /v1/videos/avatar/image2video，入参 image（必填）、audio_id 与 sound_file（互斥）、prompt、mode（std|pro，默认 std）。官方价目表对该行按两列报价（0.4 元/秒 与 0.8 元/秒，4K 列空），对应 mode 的两档；官方文档未显式写出 std/pro 与 720P/1080P 的对应，本目录按「官方列序 = 单价升序 = mode 由 std 到 pro」落价，并把 mode 作为计价维度。",
+  "displayName": "Kling Avatar",
+  "familyCode": "kling-avatar",
+  "inputModalities": [
+    "text",
+    "image",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "kling-ai-avatar-v2",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-17T00:00:00Z",
+    "sourceUrl": "https://klingai.com/document-api/api/video/avatar"
+  },
+  "strengths": [
+    "音频驱动口型同步",
+    "单张图片生成数字人"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "kuaishou",
+  "vendorName": "Kuaishou"
+}

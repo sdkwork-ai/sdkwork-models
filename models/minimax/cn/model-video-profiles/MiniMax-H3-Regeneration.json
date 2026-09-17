@@ -24,7 +24,10 @@
       "wireParameters": {
         "duration": "6-10",
         "resolution": "768p"
-      }
+      },
+      "pricingTierCodes": [
+        "regen_768p_to_2k"
+      ]
     }
   ],
   "regionCode": "cn",

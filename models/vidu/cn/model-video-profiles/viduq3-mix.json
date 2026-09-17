@@ -24,7 +24,10 @@
       "wireParameters": {
         "duration": "5-10",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "ref_res_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -48,7 +51,10 @@
       "wireParameters": {
         "duration": "5-10",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "ref_res_720p"
+      ]
     }
   ],
   "regionCode": "cn",

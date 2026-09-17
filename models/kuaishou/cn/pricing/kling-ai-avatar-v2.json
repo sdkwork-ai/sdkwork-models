@@ -1,41 +1,34 @@
 {
-  "catalogKey": "bytedance/doubao-seedance-2-0-fast-260128",
+  "catalogKey": "kuaishou/kling-ai-avatar-v2",
   "currency": "CNY",
-  "modelId": "doubao-seedance-2-0-fast-260128",
+  "modelId": "kling-ai-avatar-v2",
   "prices": [
     {
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "successful_result",
-      "conditions": [
-        {
-          "dimensionCode": "tier_code",
-          "operator": "eq",
-          "value": "res_480p"
-        }
-      ],
+      "conditions": [],
       "currency": "CNY",
-      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
       "operationCode": "video.generate",
-      "priceBookCode": "models.bytedance.cn.official",
-      "priceId": "bytedance-cn-doubao-seedance-2-0-fast-260128-second-480p",
+      "priceBookCode": "models.kuaishou.cn.official",
+      "priceId": "kuaishou-cn-kling-ai-avatar-v2-second-default-mode-std",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
-      "productCode": "models.bytedance.video",
+      "productCode": "models.kuaishou.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "d57c8a5df9f9084b1689e183546e5f4e0fb99b5df7e5c92b4e9800badc96d8d8",
+      "rateHash": "0f1188a783c39a6569027d9440eadb23bad998bda51986c9b7b579afdd6c517e",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
-        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
-      "tierCode": "res_480p",
-      "unitPrice": "0.370000",
+      "unitPrice": "0.400000",
       "unitSize": "1"
     },
     {
@@ -44,37 +37,37 @@
       "chargeTiming": "successful_result",
       "conditions": [
         {
-          "dimensionCode": "tier_code",
+          "dimensionCode": "quality",
           "operator": "eq",
-          "value": "res_720p"
+          "value": "pro"
         }
       ],
       "currency": "CNY",
-      "effectiveFrom": "2026-09-16T00:00:00Z",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
       "operationCode": "video.generate",
-      "priceBookCode": "models.bytedance.cn.official",
-      "priceId": "bytedance-cn-doubao-seedance-2-0-fast-260128-second-720p",
+      "priceBookCode": "models.kuaishou.cn.official",
+      "priceId": "kuaishou-cn-kling-ai-avatar-v2-second-mode-pro",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
-      "productCode": "models.bytedance.video",
+      "productCode": "models.kuaishou.video",
+      "quality": "pro",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "910299fb174ad25050fe44be6f33c08678f737e131b98a8cd52256fea1710bd5",
+      "rateHash": "5d46dd07dd25dd17124ab7e7ee96d376aafb2290d0484be1b6e94fb31c4ecf14",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
-        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
-      "tierCode": "res_720p",
       "unitPrice": "0.800000",
       "unitSize": "1"
     }
   ],
   "regionCode": "cn",
   "schemaVersion": "2.0.0",
-  "vendorCode": "bytedance"
+  "vendorCode": "kuaishou"
 }

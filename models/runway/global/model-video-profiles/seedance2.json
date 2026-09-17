@@ -17,6 +17,9 @@
       "maxDurationSeconds": 12,
       "minDurationSeconds": 2,
       "outputAudio": true,
+      "pricingTierCodes": [
+        "res_480p_720p"
+      ],
       "profileCode": "t2v_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
@@ -24,6 +27,60 @@
       "wireParameters": {
         "duration": "2-12",
         "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/seedance2/t2v_range_4k",
+      "displayName": "Text to Video · 2–12s · 4k",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 12,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "res_480p_720p"
+      ],
+      "profileCode": "t2v_range_4k",
+      "resolution": "4k",
+      "resolutionTierCode": "res_4k",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "2-12",
+        "resolution": "4k"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/seedance2/t2v_range_1080p",
+      "displayName": "Text to Video · 2–12s · 1080p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 12,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "res_480p_720p"
+      ],
+      "profileCode": "t2v_range_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 30,
+      "wireParameters": {
+        "duration": "2-12",
+        "resolution": "1080p"
       }
     },
     {
@@ -41,13 +98,70 @@
       "maxDurationSeconds": 12,
       "minDurationSeconds": 2,
       "outputAudio": true,
+      "pricingTierCodes": [
+        "res_480p_720p"
+      ],
       "profileCode": "i2v_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
-      "sortOrder": 20,
+      "sortOrder": 40,
       "wireParameters": {
         "duration": "2-12",
         "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/seedance2/i2v_range_4k",
+      "displayName": "Image to Video · 2–12s · 4k",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 12,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "res_480p_720p"
+      ],
+      "profileCode": "i2v_range_4k",
+      "resolution": "4k",
+      "resolutionTierCode": "res_4k",
+      "sortOrder": 50,
+      "wireParameters": {
+        "duration": "2-12",
+        "resolution": "4k"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/seedance2/i2v_range_1080p",
+      "displayName": "Image to Video · 2–12s · 1080p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 12,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "res_480p_720p"
+      ],
+      "profileCode": "i2v_range_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 60,
+      "wireParameters": {
+        "duration": "2-12",
+        "resolution": "1080p"
       }
     },
     {
@@ -65,13 +179,70 @@
       "maxDurationSeconds": 12,
       "minDurationSeconds": 2,
       "outputAudio": true,
+      "pricingTierCodes": [
+        "res_480p_720p"
+      ],
       "profileCode": "r2v_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
-      "sortOrder": 30,
+      "sortOrder": 70,
       "wireParameters": {
         "duration": "2-12",
         "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/seedance2/r2v_range_4k",
+      "displayName": "Reference to Video · 2–12s · 4k",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "reference_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 12,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "res_480p_720p"
+      ],
+      "profileCode": "r2v_range_4k",
+      "resolution": "4k",
+      "resolutionTierCode": "res_4k",
+      "sortOrder": 80,
+      "wireParameters": {
+        "duration": "2-12",
+        "resolution": "4k"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/seedance2/r2v_range_1080p",
+      "displayName": "Reference to Video · 2–12s · 1080p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "reference_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 12,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "res_480p_720p"
+      ],
+      "profileCode": "r2v_range_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 90,
+      "wireParameters": {
+        "duration": "2-12",
+        "resolution": "1080p"
       }
     }
   ],

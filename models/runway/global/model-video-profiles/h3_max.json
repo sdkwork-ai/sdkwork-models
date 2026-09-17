@@ -37,6 +37,64 @@
         "9:16",
         "1:1"
       ],
+      "catalogKey": "runway/h3_max/t2v_discrete_768p",
+      "displayName": "Text to Video · 5/10s · 768p",
+      "durationOptions": [
+        5,
+        10
+      ],
+      "durationPolicy": "discrete",
+      "durationTierCodes": [
+        "dur_5s",
+        "dur_10s"
+      ],
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "outputAudio": false,
+      "profileCode": "t2v_discrete_768p",
+      "resolution": "768p",
+      "resolutionTierCode": "res_768p",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "5,10",
+        "resolution": "768p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/h3_max/t2v_discrete_480p",
+      "displayName": "Text to Video · 5/10s · 480p",
+      "durationOptions": [
+        5,
+        10
+      ],
+      "durationPolicy": "discrete",
+      "durationTierCodes": [
+        "dur_5s",
+        "dur_10s"
+      ],
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "outputAudio": false,
+      "profileCode": "t2v_discrete_480p",
+      "resolution": "480p",
+      "resolutionTierCode": "res_480p",
+      "sortOrder": 30,
+      "wireParameters": {
+        "duration": "5,10",
+        "resolution": "480p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
       "catalogKey": "runway/h3_max/i2v_discrete_720p",
       "displayName": "Image to Video · 5/10s · 720p",
       "durationOptions": [
@@ -54,10 +112,68 @@
       "profileCode": "i2v_discrete_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
-      "sortOrder": 20,
+      "sortOrder": 40,
       "wireParameters": {
         "duration": "5,10",
         "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/h3_max/i2v_discrete_768p",
+      "displayName": "Image to Video · 5/10s · 768p",
+      "durationOptions": [
+        5,
+        10
+      ],
+      "durationPolicy": "discrete",
+      "durationTierCodes": [
+        "dur_5s",
+        "dur_10s"
+      ],
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "outputAudio": false,
+      "profileCode": "i2v_discrete_768p",
+      "resolution": "768p",
+      "resolutionTierCode": "res_768p",
+      "sortOrder": 50,
+      "wireParameters": {
+        "duration": "5,10",
+        "resolution": "768p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/h3_max/i2v_discrete_480p",
+      "displayName": "Image to Video · 5/10s · 480p",
+      "durationOptions": [
+        5,
+        10
+      ],
+      "durationPolicy": "discrete",
+      "durationTierCodes": [
+        "dur_5s",
+        "dur_10s"
+      ],
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "outputAudio": false,
+      "profileCode": "i2v_discrete_480p",
+      "resolution": "480p",
+      "resolutionTierCode": "res_480p",
+      "sortOrder": 60,
+      "wireParameters": {
+        "duration": "5,10",
+        "resolution": "480p"
       }
     }
   ],

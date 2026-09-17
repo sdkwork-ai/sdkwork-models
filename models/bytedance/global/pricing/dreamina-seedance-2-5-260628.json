@@ -11,7 +11,7 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "480p"
+          "value": "res_480p"
         }
       ],
       "currency": "USD",
@@ -27,14 +27,14 @@
       "productCode": "models.bytedance.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "57d2ee2981e175e9da1019334315a1638fcee6d2a48b0d10afefe5abf599e3f0",
+      "rateHash": "7dea2a99a9591b0bd64d1fdf60ae228e7d28f5b32754223f437e049efbbc828a",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
       },
-      "tierCode": "480p",
+      "tierCode": "res_480p",
       "unitPrice": "0.103000",
       "unitSize": "1"
     },
@@ -46,7 +46,7 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "720p"
+          "value": "res_720p"
         }
       ],
       "currency": "USD",
@@ -62,14 +62,14 @@
       "productCode": "models.bytedance.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "4f926ece6957bf555e662223ff84a3ca0e0d678b3a513eda24c3a651d30ae56b",
+      "rateHash": "48b39d2f6b0fa39a697f01b39f527517bf15bc9c0f5dd7af8ba9c41cd8c334ee",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
       },
-      "tierCode": "720p",
+      "tierCode": "res_720p",
       "unitPrice": "0.231000",
       "unitSize": "1"
     },
@@ -81,7 +81,7 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "1080p"
+          "value": "res_1080p"
         }
       ],
       "currency": "USD",
@@ -97,14 +97,14 @@
       "productCode": "models.bytedance.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "622cf83d77336aa91646397e4754434d15813582b8e07b02fe3f0eae19efcacf",
+      "rateHash": "9f78a75a38673676a6bdf1d6c60b622b22d5df09d489cc69442fe6c5ca1c82d7",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
       },
-      "tierCode": "1080p",
+      "tierCode": "res_1080p",
       "unitPrice": "0.569000",
       "unitSize": "1"
     }

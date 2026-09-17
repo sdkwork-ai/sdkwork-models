@@ -48,23 +48,64 @@ const aiResourceListOperations = [
   ],
 ];
 
+const APP_API_METHODS = ['get', 'post', 'put', 'patch', 'delete'];
+
+/**
+ * app-api operations that serve public reference data. `API_SPEC.md` §366 scopes
+ * `dual-token` to *protected* app-api routes, while §367 / §2168 require public
+ * SDK-generated operations to materialize `security: []` together with
+ * `x-sdkwork-auth-mode: anonymous` so generated clients skip credential
+ * injection. The list is pinned instead of derived: an operation silently
+ * gaining or losing public status must fail here rather than slide through.
+ *
+ * `x-route-scope` is not the discriminator — every operation in this authority
+ * declares `public` while still being dual-token.
+ */
+const publicAppApiOperations = [
+  'GET /app/v3/api/ai/model_access_channel_presets',
+  'GET /app/v3/api/ai/model_access_channels',
+  'GET /app/v3/api/ai/model_rankings',
+  'GET /app/v3/api/ai/model_vendors',
+  'GET /app/v3/api/ai/models',
+  'GET /app/v3/api/ai/models/{modelId}/video_profiles',
+  'GET /app/v3/api/ai/models/{modelId}/voices',
+  'GET /app/v3/api/ai/video_profiles',
+  'GET /app/v3/api/ai/voices',
+];
+
+const observedPublicAppApiOperations = [];
 for (const [path, pathItem] of Object.entries(appOpenApi.paths ?? {})) {
   for (const [method, operation] of Object.entries(pathItem ?? {})) {
-    if (!['get', 'post', 'put', 'patch', 'delete'].includes(method)) {
+    if (!APP_API_METHODS.includes(method)) {
+      continue;
+    }
+    const operationKey = `${method.toUpperCase()} ${path}`;
+    if (operation['x-sdkwork-auth-mode'] === 'anonymous') {
+      assert.deepEqual(
+        operation.security,
+        [],
+        `${operationKey} is public app-api and must materialize security: [] so SDKs skip credential injection`,
+      );
+      observedPublicAppApiOperations.push(operationKey);
       continue;
     }
     assert.equal(
       operation['x-sdkwork-auth-mode'],
       'dual-token',
-      `${method.toUpperCase()} ${path} must declare dual-token auth`,
+      `${operationKey} must be dual-token: only the pinned reference-data operations may be public`,
     );
     assert.deepEqual(
       operation.security,
       [{ AccessToken: [], AuthToken: [] }],
-      `${method.toUpperCase()} ${path} must require AuthToken and AccessToken together`,
+      `${operationKey} must require AuthToken and AccessToken together`,
     );
   }
 }
+assert.deepEqual(
+  observedPublicAppApiOperations.sort(),
+  [...publicAppApiOperations].sort(),
+  'the public app-api surface must match the pinned reference-data list',
+);
 
 const writeOperationRequestBodies = [
   ['modelVendors.create', 'post', '/backend/v3/api/ai/model_vendors', '#/components/schemas/AdminModelVendorCreateRequest'],

@@ -32,6 +32,30 @@
         "9:16",
         "1:1"
       ],
+      "catalogKey": "minimax/MiniMax-H3/t2v_range_2k",
+      "displayName": "Text to Video · 6–10s · 2k",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 10,
+      "minDurationSeconds": 6,
+      "outputAudio": false,
+      "profileCode": "t2v_range_2k",
+      "resolution": "2k",
+      "resolutionTierCode": "res_2k",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "6-10",
+        "resolution": "2k"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
       "catalogKey": "minimax/MiniMax-H3/i2v_range_768p",
       "displayName": "Image to Video · 6–10s · 768p",
       "durationPolicy": "range",
@@ -44,10 +68,34 @@
       "profileCode": "i2v_range_768p",
       "resolution": "768p",
       "resolutionTierCode": "res_768p",
-      "sortOrder": 20,
+      "sortOrder": 30,
       "wireParameters": {
         "duration": "6-10",
         "resolution": "768p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "minimax/MiniMax-H3/i2v_range_2k",
+      "displayName": "Image to Video · 6–10s · 2k",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 10,
+      "minDurationSeconds": 6,
+      "outputAudio": false,
+      "profileCode": "i2v_range_2k",
+      "resolution": "2k",
+      "resolutionTierCode": "res_2k",
+      "sortOrder": 40,
+      "wireParameters": {
+        "duration": "6-10",
+        "resolution": "2k"
       }
     },
     {
@@ -68,10 +116,34 @@
       "profileCode": "r2v_range_768p",
       "resolution": "768p",
       "resolutionTierCode": "res_768p",
-      "sortOrder": 30,
+      "sortOrder": 50,
       "wireParameters": {
         "duration": "6-10",
         "resolution": "768p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "minimax/MiniMax-H3/r2v_range_2k",
+      "displayName": "Reference to Video · 6–10s · 2k",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "reference_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 10,
+      "minDurationSeconds": 6,
+      "outputAudio": false,
+      "profileCode": "r2v_range_2k",
+      "resolution": "2k",
+      "resolutionTierCode": "res_2k",
+      "sortOrder": 60,
+      "wireParameters": {
+        "duration": "6-10",
+        "resolution": "2k"
       }
     }
   ],

@@ -59,6 +59,110 @@
         "9:16",
         "1:1"
       ],
+      "catalogKey": "vidu/viduq3-pro/t2v_5s_1080p",
+      "displayName": "Text to Video · 5s · 1080p",
+      "durationPolicy": "fixed",
+      "durationSeconds": 5,
+      "durationTierCode": "dur_5s",
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "dur_5s"
+      ],
+      "profileCode": "t2v_5s_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 30,
+      "wireParameters": {
+        "duration": "5",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "vidu/viduq3-pro/t2v_5s_540p",
+      "displayName": "Text to Video · 5s · 540p",
+      "durationPolicy": "fixed",
+      "durationSeconds": 5,
+      "durationTierCode": "dur_5s",
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "dur_5s"
+      ],
+      "profileCode": "t2v_5s_540p",
+      "resolution": "540p",
+      "resolutionTierCode": "res_540p",
+      "sortOrder": 40,
+      "wireParameters": {
+        "duration": "5",
+        "resolution": "540p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "vidu/viduq3-pro/t2v_10s_1080p",
+      "displayName": "Text to Video · 10s · 1080p",
+      "durationPolicy": "fixed",
+      "durationSeconds": 10,
+      "durationTierCode": "dur_10s",
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "dur_10s"
+      ],
+      "profileCode": "t2v_10s_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 50,
+      "wireParameters": {
+        "duration": "10",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "vidu/viduq3-pro/t2v_10s_540p",
+      "displayName": "Text to Video · 10s · 540p",
+      "durationPolicy": "fixed",
+      "durationSeconds": 10,
+      "durationTierCode": "dur_10s",
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "dur_10s"
+      ],
+      "profileCode": "t2v_10s_540p",
+      "resolution": "540p",
+      "resolutionTierCode": "res_540p",
+      "sortOrder": 60,
+      "wireParameters": {
+        "duration": "10",
+        "resolution": "540p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
       "catalogKey": "vidu/viduq3-pro/i2v_5s_720p",
       "displayName": "Image to Video · 5s · 720p",
       "durationPolicy": "fixed",
@@ -72,10 +176,62 @@
       "profileCode": "i2v_5s_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
-      "sortOrder": 30,
+      "sortOrder": 70,
       "wireParameters": {
         "duration": "5",
         "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "vidu/viduq3-pro/i2v_5s_1080p",
+      "displayName": "Image to Video · 5s · 1080p",
+      "durationPolicy": "fixed",
+      "durationSeconds": 5,
+      "durationTierCode": "dur_5s",
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "dur_5s"
+      ],
+      "profileCode": "i2v_5s_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 80,
+      "wireParameters": {
+        "duration": "5",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "vidu/viduq3-pro/i2v_5s_540p",
+      "displayName": "Image to Video · 5s · 540p",
+      "durationPolicy": "fixed",
+      "durationSeconds": 5,
+      "durationTierCode": "dur_5s",
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "dur_5s"
+      ],
+      "profileCode": "i2v_5s_540p",
+      "resolution": "540p",
+      "resolutionTierCode": "res_540p",
+      "sortOrder": 90,
+      "wireParameters": {
+        "duration": "5",
+        "resolution": "540p"
       }
     },
     {
@@ -97,11 +253,65 @@
       "profileCode": "se2v_5s_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
-      "sortOrder": 40,
+      "sortOrder": 100,
       "wireParameters": {
         "duration": "5",
         "mode": "start_end",
         "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "vidu/viduq3-pro/se2v_5s_1080p",
+      "displayName": "Start-End Frame · 5s · 1080p",
+      "durationPolicy": "fixed",
+      "durationSeconds": 5,
+      "durationTierCode": "dur_5s",
+      "generationMode": "start_end_frame",
+      "isDefault": false,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "dur_5s"
+      ],
+      "profileCode": "se2v_5s_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 110,
+      "wireParameters": {
+        "duration": "5",
+        "mode": "start_end",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "vidu/viduq3-pro/se2v_5s_540p",
+      "displayName": "Start-End Frame · 5s · 540p",
+      "durationPolicy": "fixed",
+      "durationSeconds": 5,
+      "durationTierCode": "dur_5s",
+      "generationMode": "start_end_frame",
+      "isDefault": false,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "dur_5s"
+      ],
+      "profileCode": "se2v_5s_540p",
+      "resolution": "540p",
+      "resolutionTierCode": "res_540p",
+      "sortOrder": 120,
+      "wireParameters": {
+        "duration": "5",
+        "mode": "start_end",
+        "resolution": "540p"
       }
     }
   ],

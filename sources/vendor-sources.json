@@ -478,13 +478,14 @@
     },
     {
       "lastCheckedAt": "2026-09-17T00:00:00Z",
-      "notes": "2026-09-17 复核（global）：新增 6 个官方在售模型（含 Kling 3.0 Turbo / O1 / 2.6 / 2.5 Turbo 与 2 个图片模型），kling-v3-0-preview 官方已下架，音效 API 单价下调。视频价格由单一 $0.12/秒 展开为官方 8~9 档（Kling 3.0 1080P 无声 $0.112/秒）。",
+      "notes": "2026-09-17 复核（global）：新增 6 个官方在售模型（含 Kling 3.0 Turbo / O1 / 2.6 / 2.5 Turbo 与 2 个图片模型），kling-v3-0-preview 官方已下架，音效 API 单价下调。视频价格由单一 $0.12/秒 展开为官方 8~9 档（Kling 3.0 1080P 无声 $0.112/秒）。补录官方「与模型版本无关」的 Avatar kling-ai-avatar-v2：官方 API 页给出 mode=std|pro 与 2~300 秒音频约束，官方价目表该行按两列报价（0.4 / 0.8 units 每秒）；因能力地图标注其「不区分模型版本」、不占模型版本位，登记在 supportedModels 而非 requiredModels。",
       "official": {
         "additionalUrls": [
           "https://app.klingai.com/global/dev/document-api/apiReference/model/textToAudio",
           "https://app.klingai.com/global/dev/document-api/apiReference/model/videoToAudio",
-          "https://app.klingai.com/global/dev/document-api/consumptionTable",
-          "https://kling.ai/document-api/guides/capability-map/image",
+      "https://app.klingai.com/global/dev/document-api/consumptionTable",
+      "https://kling.ai/document-api/api/video/avatar",
+      "https://kling.ai/document-api/guides/capability-map/image",
           "https://kling.ai/document-api/guides/capability-map/video",
           "https://kling.ai/document-api/pricing/base/image",
           "https://kling.ai/document-api/pricing/base/video",
@@ -494,34 +495,36 @@
         "pricingUrl": "https://app.klingai.com/global/dev/document-api/consumptionTable"
       },
       "references": [],
-      "regionCode": "global",
-      "requiredModels": [
-        "kling-3.0-turbo",
-        "kling-v3",
-        "kling-v3-omni",
-        "kling-video-o1",
-        "kling-v2-6",
-        "kling-v2-5-turbo",
-        "kling-sound-t2a",
-        "kling-sound-v2a",
-        "kling-image-o1",
-        "kling-v2-1"
-      ],
-      "supportedModels": [
-        "kling-v3-0-preview"
-      ],
+  "regionCode": "global",
+  "requiredModels": [
+    "kling-3.0-turbo",
+    "kling-v3",
+    "kling-v3-omni",
+    "kling-video-o1",
+    "kling-v2-6",
+    "kling-v2-5-turbo",
+    "kling-sound-t2a",
+    "kling-sound-v2a",
+    "kling-image-o1",
+    "kling-v2-1"
+  ],
+  "supportedModels": [
+    "kling-ai-avatar-v2",
+    "kling-v3-0-preview"
+  ],
       "vendorCode": "kuaishou",
       "verificationStatus": "official_url_declared"
     },
     {
       "lastCheckedAt": "2026-09-17T00:00:00Z",
-      "notes": "2026-09-17 复核（cn）：新增 6 个官方在售模型（含 Kling 3.0 Turbo / O1 / 2.6 / 2.5 Turbo 与 2 个图片模型），kling-v3-0-preview 官方已下架，音效 API 单价下调。视频价格由单一 ¥0.6/秒 展开为官方 8~9 档。",
+      "notes": "2026-09-17 复核（cn）：新增 6 个官方在售模型（含 Kling 3.0 Turbo / O1 / 2.6 / 2.5 Turbo 与 2 个图片模型），kling-v3-0-preview 官方已下架，音效 API 单价下调。视频价格由单一 ¥0.6/秒 展开为官方 8~9 档。补录官方「与模型版本无关」的数字人 kling-ai-avatar-v2：官方 API 页给出 mode=std|pro 与 2~300 秒音频约束，官方价目表该行按两列报价（0.4 / 0.8 元每秒）；因能力地图标注其「不区分模型版本」、不占模型版本位，登记在 supportedModels 而非 requiredModels。",
       "official": {
         "additionalUrls": [
           "https://app.klingai.com/cn/dev/document-api/apiReference/model/textToAudio",
           "https://app.klingai.com/cn/dev/document-api/apiReference/model/videoToAudio",
-          "https://app.klingai.com/cn/dev/document-api/consumptionTable",
-          "https://klingai.com/document-api/guides/capability-map/image",
+      "https://app.klingai.com/cn/dev/document-api/consumptionTable",
+      "https://klingai.com/document-api/api/video/avatar",
+      "https://klingai.com/document-api/guides/capability-map/image",
           "https://klingai.com/document-api/guides/capability-map/video",
           "https://klingai.com/document-api/pricing/base/image",
           "https://klingai.com/document-api/pricing/base/video",
@@ -531,22 +534,23 @@
         "pricingUrl": "https://app.klingai.com/cn/dev/document-api/consumptionTable"
       },
       "references": [],
-      "regionCode": "cn",
-      "requiredModels": [
-        "kling-3.0-turbo",
-        "kling-v3",
-        "kling-v3-omni",
-        "kling-video-o1",
-        "kling-v2-6",
-        "kling-v2-5-turbo",
-        "kling-sound-t2a",
-        "kling-sound-v2a",
-        "kling-image-o1",
-        "kling-v2-1"
-      ],
-      "supportedModels": [
-        "kling-v3-0-preview"
-      ],
+  "regionCode": "cn",
+  "requiredModels": [
+    "kling-3.0-turbo",
+    "kling-v3",
+    "kling-v3-omni",
+    "kling-video-o1",
+    "kling-v2-6",
+    "kling-v2-5-turbo",
+    "kling-sound-t2a",
+    "kling-sound-v2a",
+    "kling-image-o1",
+    "kling-v2-1"
+  ],
+  "supportedModels": [
+    "kling-ai-avatar-v2",
+    "kling-v3-0-preview"
+  ],
       "vendorCode": "kuaishou",
       "verificationStatus": "official_url_declared"
     },

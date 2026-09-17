@@ -8,7 +8,7 @@
     "warnings": []
   },
   "generatedAt": "2026-09-17T00:00:00Z",
-  "indexSha256": "99c8e0411252b28944e25e0839803a4cfcbfe6a8e5aa1c1c8b67c9e312530575",
+  "indexSha256": "e9439efbbe0ae3c87eb4304e76a7ee4f0603b30858dc8df7cd63c235012cc5f7",
   "schemaVersion": "1.1.0",
   "sourceAudit": {
     "errorCount": 0,
@@ -49,10 +49,10 @@
       "zhipu/cn": "027db8871a96c72607276c7258a6aee24d5e60ef47c0ef26d21a1bc26aff37f0"
     },
     "officialVerificationPolicy": "eea2cf698638a49a1e8a3aa776d28fa72ade148f05139c6f1e811a7f86bb3a38",
-    "vendorSources": "0ccb9d49ae14364958c9ebd8d9ab7537f25c94062846b5c6f2246e43afa726ff"
+    "vendorSources": "90106bd1e1a7d90b98a9c9b2203d6dba90b3bb39de4af0c51dd712731aa7851d"
   },
   "validation": {
-    "issueCount": 0,
+    "issueCount": 77,
     "ok": true
   },
   "vendorChanges": [
@@ -95,14 +95,14 @@
       "modelCount": 22,
       "pricingFileCount": 22,
       "regionCode": "cn",
-      "sha256": "aa873372f833371ecb280a4b4f878f731f459107149cec8d84c3339d5536518e",
+      "sha256": "a92ba5a12c5dc948c0227c582af50ec97dc0fd32e605a64f2519b5d2d64ccafe",
       "vendorCode": "bytedance"
     },
     {
       "modelCount": 19,
       "pricingFileCount": 19,
       "regionCode": "global",
-      "sha256": "150f4d0fa427a62c66a028628e0714083614dd95796477a8a2567d01945dded1",
+      "sha256": "3e0e52b8a7a372a47d081e0bcc71fd39a4ccd8d57a553ca7d6d6e72836360908",
       "vendorCode": "bytedance"
     },
     {
@@ -134,17 +134,17 @@
       "vendorCode": "google"
     },
     {
-      "modelCount": 11,
-      "pricingFileCount": 11,
+      "modelCount": 12,
+      "pricingFileCount": 12,
       "regionCode": "cn",
-      "sha256": "2c4922cfeac51b8186abd78349752528de5916ceb28d2e2d39487a69bffcaa42",
+      "sha256": "7f077dd67b10ba8d3d6b2355a80767d647cac40e486fcec04ecda56f8268030d",
       "vendorCode": "kuaishou"
     },
     {
-      "modelCount": 11,
-      "pricingFileCount": 11,
+      "modelCount": 12,
+      "pricingFileCount": 12,
       "regionCode": "global",
-      "sha256": "10c63d398e902e90bf9efd5f40e03fb90f691d5083a8ce2e8fda70129611e4ee",
+      "sha256": "f538a371e48fba540559a99a464dcc689d104fb17e4a1bbd8dca50c43495c767",
       "vendorCode": "kuaishou"
     },
     {
@@ -165,14 +165,14 @@
       "modelCount": 26,
       "pricingFileCount": 26,
       "regionCode": "cn",
-      "sha256": "15ff0a10b003e7e52cd6d3f06fb2a931c9619881e332213b5b3121abb25b624c",
+      "sha256": "38ad7c560b7e6e2cefa4732be44a40d1d7be846d2dfffd212b18c0e976d702e5",
       "vendorCode": "minimax"
     },
     {
       "modelCount": 26,
       "pricingFileCount": 26,
       "regionCode": "global",
-      "sha256": "7cd1f39b69bb9b90be1449ca0664a8db6aa26e384c99144fef04bd5e092b1886",
+      "sha256": "45eb87a7a2f84d1b0723e8a901921c6f660007a6d4f101f2d76fbf28f920696f",
       "vendorCode": "minimax"
     },
     {
@@ -221,7 +221,7 @@
       "modelCount": 32,
       "pricingFileCount": 30,
       "regionCode": "global",
-      "sha256": "134ef263d3aab5b714b7f94e1fff8ee12c85185c45ef8fe509d8206ba1622a0d",
+      "sha256": "0f7d59103e29502a2ee7b15be0052e9312076b92682684dc4af01b6f56f4ac47",
       "vendorCode": "runway"
     },
     {
@@ -256,14 +256,14 @@
       "modelCount": 10,
       "pricingFileCount": 8,
       "regionCode": "cn",
-      "sha256": "4b0bb82a3c0a2e718ad5dab3531d76c4405e303fbb5f5d9a126bfa8394d7b5ed",
+      "sha256": "81e3565ee109df179d2fbbe50152fb88d2708f0c227f30a0fb4dc2dd52ac18f4",
       "vendorCode": "vidu"
     },
     {
       "modelCount": 10,
       "pricingFileCount": 8,
       "regionCode": "global",
-      "sha256": "a6b875b14692dd0bc3a53c0266d8770789c252c93c2b8524cec014467606fc5d",
+      "sha256": "4eb3ee613657acb6e92adaae68f9dbddf180736af7db540748d876fa741f27f9",
       "vendorCode": "vidu"
     },
     {

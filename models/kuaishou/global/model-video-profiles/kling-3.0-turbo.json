@@ -24,7 +24,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "1080p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_1080p"
+      ]
     },
     {
       "aspectRatios": [
@@ -48,7 +51,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "1080p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_1080p"
+      ]
     }
   ],
   "regionCode": "global",

@@ -24,7 +24,10 @@
       "wireParameters": {
         "duration": "2-12",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "res_480p_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -48,7 +51,10 @@
       "wireParameters": {
         "duration": "2-12",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "res_480p_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -72,7 +78,10 @@
       "wireParameters": {
         "duration": "2-12",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "res_480p_720p"
+      ]
     }
   ],
   "regionCode": "global",
