@@ -22,6 +22,11 @@
     "@sdkwork/sdk-common": "^1.0.8",
     "@sdkwork/utils": "^0.11.0"
   },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "rollup": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
   "sdkwork": {
     "workspace": "sdkwork-models-backend-sdk",
     "sdkFamily": "sdkwork-models-backend-sdk",

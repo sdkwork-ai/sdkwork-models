@@ -21,7 +21,7 @@
     "build:prod:cloud": "node ../../../sdkwork-specs/tools/build-browser-client.mjs --app-root . --environment prod --deployment-profile cloud"
   },
   "dependencies": {
-    "@sdkwork/models": "workspace:*",
+    "@sdkwork/models-sdk": "workspace:*",
     "@sdkwork/models-pc-catalog": "workspace:*",
     "@sdkwork/models-pc-core": "workspace:*",
     "@sdkwork/utils": "workspace:*",

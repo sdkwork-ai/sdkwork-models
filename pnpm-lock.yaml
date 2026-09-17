@@ -7,10 +7,10 @@ settings:
 catalogs:
   default:
     '@testing-library/jest-dom':
-      specifier: ^6.9.1
-      version: 6.9.1
+      specifier: ^7.0.1
+      version: 7.0.1
     '@testing-library/react':
-      specifier: ^16.3.2
+      specifier: 16.3.2
       version: 16.3.2
     '@types/qrcode':
       specifier: ^1.5.6
@@ -22,32 +22,32 @@ catalogs:
       specifier: ^19.2.3
       version: 19.2.3
     jsdom:
-      specifier: ^29.1.1
+      specifier: 29.1.1
       version: 29.1.1
     lucide-react:
-      specifier: ^1.7.0
-      version: 1.7.0
+      specifier: ^1.31.0
+      version: 1.46.0
     qrcode:
       specifier: ^1.5.4
       version: 1.5.4
     react:
-      specifier: ^19.2.4
-      version: 19.2.4
+      specifier: ^19.2.8
+      version: 19.3.0
     react-dom:
-      specifier: ^19.2.4
-      version: 19.2.4
+      specifier: ^19.2.8
+      version: 19.3.0
     react-i18next:
-      specifier: ^17.0.7
-      version: 17.0.8
+      specifier: ^17.0.11
+      version: 17.0.14
     typescript:
-      specifier: ~6.0.2
+      specifier: ^6.0.2
       version: 6.0.3
     vite-plugin-dts:
-      specifier: ^4.5.4
-      version: 4.5.4
+      specifier: ^5.0.3
+      version: 5.1.0
     vitest:
-      specifier: ^4.1.8
-      version: 4.1.9
+      specifier: ^4.1.10
+      version: 4.1.11
 
 overrides:
   '@sdkwork/sdk-common': workspace:*
@@ -77,9 +77,6 @@ importers:
 
   ../sdkwork-appbase/packages/pc-react/foundation/sdkwork-appbase-pc-react:
     dependencies:
-      '@sdkwork/base-data-backend-sdk':
-        specifier: workspace:*
-        version: link:../../../../sdks/sdkwork-base-data-backend-sdk/sdkwork-base-data-backend-sdk-typescript
       '@sdkwork/runtime-bootstrap':
         specifier: workspace:*
         version: link:../../../common/foundation/sdkwork-runtime-bootstrap
@@ -88,11 +85,17 @@ importers:
         version: link:../../../../../sdkwork-utils/packages/sdkwork-utils-typescript
       lucide-react:
         specifier: 'catalog:'
-        version: 1.7.0(react@19.2.4)
+        version: 1.46.0(react@19.3.0)
     devDependencies:
       '@sdkwork/ui-pc-react':
         specifier: workspace:*
         version: link:../../../../../sdkwork-ui/sdkwork-ui-pc-react
+      '@types/react':
+        specifier: ^19.2.14
+        version: 19.2.14
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.14)
       typescript:
         specifier: ^6.0.2
         version: 6.0.3
@@ -107,7 +110,14 @@ importers:
         version: 26.3.4(typescript@6.0.3)
       react-i18next:
         specifier: ^17.0.7
-        version: 17.0.8(i18next@26.3.4(typescript@6.0.3))(react@19.2.4)(typescript@6.0.3)
+        version: 17.0.8(i18next@26.3.4(typescript@6.0.3))(react@19.3.0)(typescript@6.0.3)
+    devDependencies:
+      '@types/react':
+        specifier: ^19.2.14
+        version: 19.2.14
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.14)
 
   ../sdkwork-appbase/sdks/sdkwork-base-data-backend-sdk/sdkwork-base-data-backend-sdk-typescript:
     dependencies:
@@ -115,8 +125,8 @@ importers:
         specifier: workspace:*
         version: link:../../../../sdkwork-sdk-commons/sdkwork-sdk-common-typescript
       '@sdkwork/utils':
-        specifier: workspace:*
-        version: link:../../../../sdkwork-utils/packages/sdkwork-utils-typescript
+        specifier: ^0.11.0
+        version: 0.11.0
 
   ../sdkwork-core/sdkwork-core-pc-react:
     dependencies:
@@ -126,7 +136,7 @@ importers:
     devDependencies:
       '@testing-library/react':
         specifier: ^16.3.2
-        version: 16.3.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        version: 16.3.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@types/react':
         specifier: 'catalog:'
         version: 19.2.14
@@ -138,10 +148,10 @@ importers:
         version: 29.1.1
       react:
         specifier: 'catalog:'
-        version: 19.2.4
+        version: 19.3.0
       react-dom:
         specifier: 'catalog:'
-        version: 19.2.4(react@19.2.4)
+        version: 19.3.0(react@19.3.0)
       typescript:
         specifier: 'catalog:'
         version: 6.0.3
@@ -150,7 +160,7 @@ importers:
         version: 8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)
       vite-plugin-dts:
         specifier: 'catalog:'
-        version: 4.5.4(@types/node@25.9.4)(rollup@4.62.2)(typescript@6.0.3)(vite@8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0))
+        version: 5.1.0(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.62.2)(typescript@6.0.3)(vite@8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0))
       vitest:
         specifier: ^4.1.2
         version: 4.1.9(@types/node@25.9.4)(jsdom@29.1.1)(vite@8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0))
@@ -295,7 +305,7 @@ importers:
         version: link:../../../../../sdkwork-utils/packages/sdkwork-utils-typescript
       lucide-react:
         specifier: 'catalog:'
-        version: 1.7.0(react@19.2.4)
+        version: 1.46.0(react@19.3.0)
       qrcode:
         specifier: 'catalog:'
         version: 1.5.4
@@ -305,10 +315,10 @@ importers:
         version: link:../../../../../sdkwork-core/sdkwork-core-pc-react
       '@testing-library/jest-dom':
         specifier: 'catalog:'
-        version: 6.9.1
+        version: 7.0.1(vitest@4.1.11(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(jsdom@29.1.1))
       '@testing-library/react':
         specifier: 'catalog:'
-        version: 16.3.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        version: 16.3.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@types/qrcode':
         specifier: 'catalog:'
         version: 1.5.6
@@ -326,7 +336,7 @@ importers:
         version: 6.0.3
       vitest:
         specifier: 'catalog:'
-        version: 4.1.9(@types/node@25.9.4)(jsdom@29.1.1)(vite@8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0))
+        version: 4.1.11(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(jsdom@29.1.1)
 
   ../sdkwork-iam/apps/sdkwork-iam-pc/packages/sdkwork-auth-runtime-pc-react:
     dependencies:
@@ -351,13 +361,19 @@ importers:
     devDependencies:
       '@testing-library/jest-dom':
         specifier: 'catalog:'
-        version: 6.9.1
+        version: 7.0.1(vitest@4.1.11(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(jsdom@29.1.1))
+      '@types/react':
+        specifier: ^19.2.14
+        version: 19.2.14
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.14)
       typescript:
         specifier: ^6.0.2
         version: 6.0.3
       vitest:
         specifier: 'catalog:'
-        version: 4.1.9(@types/node@25.9.4)(jsdom@29.1.1)(vite@8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0))
+        version: 4.1.11(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(jsdom@29.1.1)
 
   ../sdkwork-iam/apps/sdkwork-iam-pc/packages/sdkwork-iam-react:
     dependencies:
@@ -365,16 +381,31 @@ importers:
         specifier: workspace:*
         version: link:../../../sdkwork-iam-common/packages/sdkwork-iam-runtime
     devDependencies:
+      '@types/react':
+        specifier: ^19.2.14
+        version: 19.2.14
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.14)
       typescript:
         specifier: ^6.0.2
         version: 6.0.3
 
   ../sdkwork-iam/apps/sdkwork-iam-pc/packages/sdkwork-user-center-core-pc-react:
     dependencies:
+      '@sdkwork/sdk-common':
+        specifier: workspace:*
+        version: link:../../../../../sdkwork-sdk-commons/sdkwork-sdk-common-typescript
       '@sdkwork/utils':
         specifier: workspace:*
         version: link:../../../../../sdkwork-utils/packages/sdkwork-utils-typescript
     devDependencies:
+      '@types/react':
+        specifier: ^19.2.14
+        version: 19.2.14
+      '@types/react-dom':
+        specifier: ^19.2.3
+        version: 19.2.3(@types/react@19.2.14)
       typescript:
         specifier: ^6.0.2
         version: 6.0.3
@@ -385,8 +416,8 @@ importers:
         specifier: workspace:*
         version: link:../../../../sdkwork-sdk-commons/sdkwork-sdk-common-typescript
       '@sdkwork/utils':
-        specifier: workspace:*
-        version: link:../../../../sdkwork-utils/packages/sdkwork-utils-typescript
+        specifier: ^0.11.0
+        version: 0.11.0
 
   ../sdkwork-iam/sdks/sdkwork-iam-backend-sdk/sdkwork-iam-backend-sdk-typescript:
     dependencies:
@@ -394,16 +425,23 @@ importers:
         specifier: workspace:*
         version: link:../../../../sdkwork-sdk-commons/sdkwork-sdk-common-typescript
       '@sdkwork/utils':
-        specifier: workspace:*
-        version: link:../../../../sdkwork-utils/packages/sdkwork-utils-typescript
+        specifier: ^0.11.0
+        version: 0.11.0
 
   ../sdkwork-iam/sdks/sdkwork-iam-open-sdk/sdkwork-iam-open-sdk-typescript:
     dependencies:
       '@sdkwork/sdk-common':
         specifier: workspace:*
         version: link:../../../../sdkwork-sdk-commons/sdkwork-sdk-common-typescript
+      '@sdkwork/utils':
+        specifier: ^0.11.0
+        version: 0.11.0
 
   ../sdkwork-sdk-commons/sdkwork-sdk-common-typescript:
+    dependencies:
+      '@sdkwork/utils':
+        specifier: ^0.11.0
+        version: 0.11.0
     devDependencies:
       '@types/node':
         specifier: ^25.6.0
@@ -480,6 +518,9 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ^1.2.8
         version: 1.2.11(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@sdkwork/utils':
+        specifier: ^0.11.0
+        version: 0.11.0
       '@tanstack/react-table':
         specifier: ^8.21.3
         version: 8.21.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -577,24 +618,24 @@ importers:
 
   apps/sdkwork-models-pc:
     dependencies:
-      '@sdkwork/models':
-        specifier: workspace:*
-        version: link:../../sdks/sdkwork-models-sdk/sdkwork-models-sdk-typescript
       '@sdkwork/models-pc-catalog':
         specifier: workspace:*
         version: link:packages/sdkwork-models-pc-catalog
       '@sdkwork/models-pc-core':
         specifier: workspace:*
         version: link:packages/sdkwork-models-pc-core
+      '@sdkwork/models-sdk':
+        specifier: workspace:*
+        version: link:../../sdks/sdkwork-models-sdk/sdkwork-models-sdk-typescript
       '@sdkwork/utils':
         specifier: workspace:*
         version: link:../../../sdkwork-utils/packages/sdkwork-utils-typescript
       react:
         specifier: 'catalog:'
-        version: 19.2.4
+        version: 19.3.0
       react-dom:
         specifier: 'catalog:'
-        version: 19.2.4(react@19.2.4)
+        version: 19.3.0(react@19.3.0)
     devDependencies:
       '@types/node':
         specifier: ^22.0.0
@@ -632,16 +673,16 @@ importers:
         version: 19.2.3(@types/react@19.2.14)
       lucide-react:
         specifier: 'catalog:'
-        version: 1.7.0(react@19.2.4)
+        version: 1.46.0(react@19.3.0)
       react:
         specifier: 'catalog:'
-        version: 19.2.4
+        version: 19.3.0
       react-dom:
         specifier: 'catalog:'
-        version: 19.2.4(react@19.2.4)
+        version: 19.3.0(react@19.3.0)
       react-i18next:
         specifier: 'catalog:'
-        version: 17.0.8(i18next@26.3.4(typescript@5.9.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)
+        version: 17.0.14(i18next@26.3.4(typescript@5.9.3))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@5.9.3)
       typescript:
         specifier: ^5.9.0
         version: 5.9.3
@@ -660,31 +701,31 @@ importers:
         version: 19.2.3(@types/react@19.2.14)
       lucide-react:
         specifier: 'catalog:'
-        version: 1.7.0(react@19.2.4)
+        version: 1.46.0(react@19.3.0)
       react:
         specifier: 'catalog:'
-        version: 19.2.4
+        version: 19.3.0
       react-dom:
         specifier: 'catalog:'
-        version: 19.2.4(react@19.2.4)
+        version: 19.3.0(react@19.3.0)
       react-i18next:
         specifier: 'catalog:'
-        version: 17.0.8(i18next@26.3.4(typescript@5.9.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)
+        version: 17.0.14(i18next@26.3.4(typescript@5.9.3))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@5.9.3)
       typescript:
         specifier: ^5.9.0
         version: 5.9.3
 
   apps/sdkwork-models-pc/packages/sdkwork-models-pc-catalog:
     dependencies:
-      '@sdkwork/models':
-        specifier: workspace:*
-        version: link:../../../../sdks/sdkwork-models-sdk/sdkwork-models-sdk-typescript
       '@sdkwork/models-pc-core':
         specifier: workspace:*
         version: link:../sdkwork-models-pc-core
+      '@sdkwork/models-sdk':
+        specifier: workspace:*
+        version: link:../../../../sdks/sdkwork-models-sdk/sdkwork-models-sdk-typescript
       react:
         specifier: 'catalog:'
-        version: 19.2.4
+        version: 19.3.0
     devDependencies:
       '@types/react':
         specifier: 'catalog:'
@@ -695,7 +736,7 @@ importers:
 
   apps/sdkwork-models-pc/packages/sdkwork-models-pc-core:
     dependencies:
-      '@sdkwork/models':
+      '@sdkwork/models-sdk':
         specifier: workspace:*
         version: link:../../../../sdks/sdkwork-models-sdk/sdkwork-models-sdk-typescript
       '@sdkwork/utils':
@@ -713,14 +754,14 @@ importers:
         version: link:../sdkwork-models-pc-picker
       lucide-react:
         specifier: 'catalog:'
-        version: 1.7.0(react@19.2.4)
+        version: 1.46.0(react@19.3.0)
     devDependencies:
       '@types/react':
         specifier: 'catalog:'
         version: 19.2.14
       react:
         specifier: 'catalog:'
-        version: 19.2.4
+        version: 19.3.0
       typescript:
         specifier: 'catalog:'
         version: 6.0.3
@@ -729,13 +770,13 @@ importers:
     dependencies:
       lucide-react:
         specifier: 'catalog:'
-        version: 1.7.0(react@19.2.4)
+        version: 1.46.0(react@19.3.0)
       react:
         specifier: 'catalog:'
-        version: 19.2.4
+        version: 19.3.0
       react-i18next:
         specifier: 'catalog:'
-        version: 17.0.8(i18next@26.3.4(typescript@6.0.3))(react@19.2.4)(typescript@6.0.3)
+        version: 17.0.14(i18next@26.3.4(typescript@6.0.3))(react@19.3.0)(typescript@6.0.3)
     devDependencies:
       '@types/react':
         specifier: 'catalog:'
@@ -750,8 +791,18 @@ importers:
         specifier: workspace:*
         version: link:../../../../sdkwork-sdk-commons/sdkwork-sdk-common-typescript
       '@sdkwork/utils':
-        specifier: workspace:*
-        version: link:../../../../sdkwork-utils/packages/sdkwork-utils-typescript
+        specifier: ^0.11.0
+        version: 0.11.0
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.43
+      rollup:
+        specifier: ^4.0.0
+        version: 4.62.2
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
 
   sdks/sdkwork-models-backend-sdk/sdkwork-models-backend-sdk-typescript:
     dependencies:
@@ -759,10 +810,24 @@ importers:
         specifier: workspace:*
         version: link:../../../../sdkwork-sdk-commons/sdkwork-sdk-common-typescript
       '@sdkwork/utils':
-        specifier: workspace:*
-        version: link:../../../../sdkwork-utils/packages/sdkwork-utils-typescript
+        specifier: ^0.11.0
+        version: 0.11.0
+    devDependencies:
+      '@types/node':
+        specifier: ^20.0.0
+        version: 20.19.43
+      rollup:
+        specifier: ^4.0.0
+        version: 4.62.2
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
 
   sdks/sdkwork-models-sdk/sdkwork-models-sdk-typescript:
+    dependencies:
+      '@sdkwork/sdk-common':
+        specifier: workspace:*
+        version: link:../../../../sdkwork-sdk-commons/sdkwork-sdk-common-typescript
     devDependencies:
       '@types/node':
         specifier: ^22.0.0
@@ -2221,6 +2286,9 @@ packages:
   '@rushstack/ts-command-line@5.3.10':
     resolution: {integrity: sha512-fwI076HYknC0IrMXdY6UmjDv+PH7NHhNJX3/pY2UblSE5XrXgndXZPiOe/6ZtuFpn6DvVDVNhtkIzQ+Qu/MhVQ==}
 
+  '@sdkwork/utils@0.11.0':
+    resolution: {integrity: sha512-GTW9LPBkrNy3jdzbnEGzLd1wRYZly5NNkXt2W0ZZElmsbAfkEIi9oFa1O4+E9lSDwsYRkHjNvzeAb8waacVTow==}
+
   '@shikijs/core@2.5.0':
     resolution: {integrity: sha512-uu/8RExTKtavlpH7XqnVYBrfBkUc20ngXiX9NSrBhOVZYv/7XQRKUyhtkeflY5QsxC0GbJThCerruZfsUaSldg==}
 
@@ -2361,6 +2429,16 @@ packages:
     resolution: {integrity: sha512-zIcONa+hVtVSSep9UT3jZ5rizo2BsxgyDYU7WFD5eICBE7no3881HGeb/QkGfsJs6JTkY1aQhT7rIPC7e+0nnA==}
     engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
 
+  '@testing-library/jest-dom@7.0.1':
+    resolution: {integrity: sha512-oMDTC3oA+6CXSO2JZnvOI7CA6oVub6kij5ggk9ohwye5slmkwxYDXcPOVxgMw/RQlticjtO0C1RZkR97HgrWMw==}
+    engines: {node: '>=22', npm: '>=6', yarn: '>=1'}
+    peerDependencies:
+      '@testing-library/dom': '>=10 <11'
+      vitest: '>= 0.32'
+    peerDependenciesMeta:
+      vitest:
+        optional: true
+
   '@testing-library/react@16.3.2':
     resolution: {integrity: sha512-XU5/SytQM+ykqMnAnvB2umaJNIOsLF3PVv//1Ew4CTcpz0/BRyy/af40qqrt7SjKpDdT1saBMc42CUok5gaw+g==}
     engines: {node: '>=18'}
@@ -2423,6 +2501,9 @@ packages:
 
   '@types/mdurl@2.0.0':
     resolution: {integrity: sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==}
+
+  '@types/node@20.19.43':
+    resolution: {integrity: sha512-6oYBAi5ikg4Pl+kGsoYtawUMBT2zZMCvPNF7pVLnHZfd1zf38DRiWn/gT01RYCdUqkv7Fhr+C9ot4/tb+2sVvA==}
 
   '@types/node@22.20.0':
     resolution: {integrity: sha512-QWlFW2wf3nTjC13/DqRnBpR4ZO36VJH/JVBkA/vcnmbTBNQIlnObqyqZE1tUR7+Ni23Lda8R1BxMfbXRpCUx5g==}
@@ -2535,8 +2616,22 @@ packages:
       vite: ^5.0.0 || ^6.0.0
       vue: ^3.2.25
 
+  '@vitest/expect@4.1.11':
+    resolution: {integrity: sha512-VX2x5vNJXET47KAFzwERI+KRMtTTCSWTfSMKsW7JsUsXV4psq++e3DvZpuTDOpHcxytiDs6p2nhVb2tVDiiUYw==}
+
   '@vitest/expect@4.1.9':
     resolution: {integrity: sha512-vl/rYsUKcBr3SnQn166+XR5ZQcgMx3DQhFWdfli/cWpLnLUmbxZvyrJZotLFUryib+LtArYMSTJ5RbQ57ZqrlA==}
+
+  '@vitest/mocker@4.1.11':
+    resolution: {integrity: sha512-2XJVD55d1o5AZous5CCGKS74g/riOj9odEt2bQpCVZeblHyHdnMeFl4jl0XjU21stf4mbjUkew2eXQZt65g5CQ==}
+    peerDependencies:
+      msw: ^2.4.9
+      vite: ^6.0.0 || ^7.0.0 || ^8.0.0
+    peerDependenciesMeta:
+      msw:
+        optional: true
+      vite:
+        optional: true
 
   '@vitest/mocker@4.1.9':
     resolution: {integrity: sha512-EVkXzBjrPGM+cK8/ANWgBrkUCfJfb38/EfTSO8h7pWvKkyPkpWxvR7BkD2MyItMF62C97zAEoqdpUixwR/e+Rw==}
@@ -2549,17 +2644,32 @@ packages:
       vite:
         optional: true
 
+  '@vitest/pretty-format@4.1.11':
+    resolution: {integrity: sha512-yiZzPbGTS9Sr/JpFl8zHrcIkAofNbFV6k21vIgQN/cY/oxZeXhJv5sc/MBJ5jFKWmWs+oJHw0UXLZjmf931+Vw==}
+
   '@vitest/pretty-format@4.1.9':
     resolution: {integrity: sha512-s0iufns3iIFitdgm+YR7g1whCAaGtXz459VS9/PqyKDEEFgYIhsHOQmXgIgDuYCt7DeQmiZT0Qe2OA2p4ZPu5A==}
+
+  '@vitest/runner@4.1.11':
+    resolution: {integrity: sha512-LztvUgdwMNJMIkj3hQnnxiC2Xy1zNxq928W/xhjCLaNCzqTZOudjwbQf6v9IntZGPw132i2Lq2rgTRZHD3JHNw==}
 
   '@vitest/runner@4.1.9':
     resolution: {integrity: sha512-KXLMDtc7oe70+3mJfGrPUWPesswH+3sTxAMAMl8DG7I8IUQT4XW718dY5ID3vPUcmlu27CcKfY4P3h3I29SLJg==}
 
+  '@vitest/snapshot@4.1.11':
+    resolution: {integrity: sha512-pN7ikn1ON7h8ee4gIAp4AzyK+zBtJPzVbqOgu5LCEh4VaJVbPQcgYQYJIMGQPXVeJJq1fnfazis7a5pFNPahog==}
+
   '@vitest/snapshot@4.1.9':
     resolution: {integrity: sha512-Jc7RKGNBo8Z28WYIm0Niej4xdSPByRf6mU58VpHQkd6Zh05rlnA+twjbK5HyeIGHxrzsc3mJgS43uM0CZKzaIA==}
 
+  '@vitest/spy@4.1.11':
+    resolution: {integrity: sha512-apNa/prQy2qCeywhnixOHPRCgGNhvg7T4Dapfl1GahLp/R+uhBm5cPyFoNVyqsNd2h1nJxL6BqqdIjiABL60YA==}
+
   '@vitest/spy@4.1.9':
     resolution: {integrity: sha512-fHpsS6mIi+PiEW+vcRVOMkX1oSaPKne3VOclSFICPcGOmfKgXPU5iAah+wcNcj2xPrCCmfq99IDGf+EojhhvhA==}
+
+  '@vitest/utils@4.1.11':
+    resolution: {integrity: sha512-zTCVGpyFsGWBhllOyKlTw/vnr6D9qxsfSDyfbyZmTyjHw5N/VuvzHpHoQjm2ZJzn4RJgx5w4r7V0er69CmLgPQ==}
 
   '@vitest/utils@4.1.9':
     resolution: {integrity: sha512-A51o8ymO5PpqlWNnBP9ZHPXDIpuMtTLlGSjN7la4US+LJzoUMyhwjA5QXlm39JexgwHKW4Xjs8Z2d3dLCXOeuA==}
@@ -3063,6 +3173,9 @@ packages:
     resolution: {integrity: sha512-XxwI8EOhVQgWp6iDL+3b0r86f4d6AX6zSU55HfB4ydCEuXLXc5FcYeOu+nnGftS4TEju/11rt4KJPTMgbfmv4A==}
     engines: {node: '>=10.13.0'}
 
+  glob-to-regexp@0.4.1:
+    resolution: {integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==}
+
   graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
 
@@ -3093,6 +3206,9 @@ packages:
 
   html-parse-stringify@3.0.1:
     resolution: {integrity: sha512-KknJ50kTInJ7qIScF3jeaFRpMpE8/lfiTdzf/twXyPBLAGrLRTmkz3AdTnKeh40X8k9L2fdYwEp/42WGXIRGcg==}
+
+  html-parse-stringify@4.0.1:
+    resolution: {integrity: sha512-0zHsZJrK7S3K2aucXWL6ycoYJ/iNtIcFHC/nYQgFklPtrv5LpJctIiSCroWZWeuoXvuyFdzp6KzjJQ+OT5MfFw==}
 
   html-void-elements@3.0.0:
     resolution: {integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==}
@@ -3298,6 +3414,11 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
+  lucide-react@1.46.0:
+    resolution: {integrity: sha512-Bv+FZXgZPrxc/NCl1e7JJVQFLdiCxYgxNVhqoV7X0p6I8ADJo8DxBnK1auH0fZz4AmqOJ3jgneL4f1i8LJQRAA==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
   lucide-react@1.7.0:
     resolution: {integrity: sha512-yI7BeItCLZJTXikmK4KNUGCKoGzSvbKlfCvw44bU4fXAL6v3gYS4uHD1jzsLkfwODYwI6Drw5Tu9Z5ulDe0TSg==}
     peerDependencies:
@@ -3490,11 +3611,32 @@ packages:
     peerDependencies:
       react: ^19.2.4
 
+  react-dom@19.3.0:
+    resolution: {integrity: sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q==}
+    peerDependencies:
+      react: ^19.3.0
+
   react-hook-form@7.80.0:
     resolution: {integrity: sha512-4P+fk6oXsxY+6xSj7Euhc2sumQD8zQqCuVHoJwoyp9EchP+IUW9OESB7uHFJOKsIBQ4MQqYE84INJFqUCYNoOg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
+
+  react-i18next@17.0.14:
+    resolution: {integrity: sha512-ZpMBfJL3BiXPuYHj5QMY1GwvKJNhE1vCxOJQ8BoMBdHP5XONTfi/Qss1nuRlnFdIl72PKo2jPmw+fxuLjRFgaQ==}
+    peerDependencies:
+      i18next: '>= 26.2.0'
+      react: '>= 16.8.0'
+      react-dom: '*'
+      react-native: '*'
+      typescript: ^5 || ^6 || ^7
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+      typescript:
+        optional: true
 
   react-i18next@17.0.8:
     resolution: {integrity: sha512-0ooKbGLU8JXhe1zwpQUWIeXSgLPOfwJmgheWRIUpcoA0CpyabpGhayjdG+/eA5esC1AQ8h2jWpXjJfzQzeDOCw==}
@@ -3556,6 +3698,10 @@ packages:
     resolution: {integrity: sha512-9nfp2hYpCwOjAN+8TZFGhtWEwgvWHXqESH8qT89AT/lWklpLON22Lc8pEtnpsZz7VmawabSU0gCjnj8aC0euHQ==}
     engines: {node: '>=0.10.0'}
 
+  react@19.3.0:
+    resolution: {integrity: sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog==}
+    engines: {node: '>=0.10.0'}
+
   redent@3.0.0:
     resolution: {integrity: sha512-6tDA8g98We0zd0GvVeMT9arEOnTw9qM03L9cJXaCjrip1OO764RDBLBfrB4cwzNGDj5OA5ioymC9GkizgWJDUg==}
     engines: {node: '>=8'}
@@ -3604,6 +3750,9 @@ packages:
 
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
+
+  scheduler@0.28.0:
+    resolution: {integrity: sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==}
 
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
@@ -3806,6 +3955,40 @@ packages:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
 
+  unplugin-dts@1.1.0:
+    resolution: {integrity: sha512-KZJ+qk+lmd9dJY/PJvDRFL9BUtVubKDiX7Ai/X6mlkCArcQNzwmupKjVqHbRA42uqO5ZfFRFc+o8/OCbQ1GonQ==}
+    peerDependencies:
+      '@microsoft/api-extractor': '>=7'
+      '@rspack/core': ^1
+      '@vue/language-core': ^3.1.5
+      esbuild: '*'
+      rolldown: '*'
+      rollup: '>=3'
+      typescript: '>=4'
+      vite: '>=3'
+      webpack: ^4 || ^5
+    peerDependenciesMeta:
+      '@microsoft/api-extractor':
+        optional: true
+      '@rspack/core':
+        optional: true
+      '@vue/language-core':
+        optional: true
+      esbuild:
+        optional: true
+      rolldown:
+        optional: true
+      rollup:
+        optional: true
+      vite:
+        optional: true
+      webpack:
+        optional: true
+
+  unplugin@2.3.11:
+    resolution: {integrity: sha512-5uKD0nqiYVzlmCRs01Fhs2BdkEgBS3SAVP6ndrBsuK42iC2+JHyxM05Rm9G8+5mkmRtzMZGY8Ct5+mliZxU/Ww==}
+    engines: {node: '>=18.12.0'}
+
   update-browserslist-db@1.2.3:
     resolution: {integrity: sha512-Js0m9cx+qOgDxo0eMiFGEueWztz+d4+M3rGlmKPT+T4IS/jP4ylw3Nwpu6cpTTP8R1MAC1kF4VbdLt3ARf209w==}
     hasBin: true
@@ -3852,6 +4035,20 @@ packages:
       typescript: '*'
       vite: '*'
     peerDependenciesMeta:
+      vite:
+        optional: true
+
+  vite-plugin-dts@5.1.0:
+    resolution: {integrity: sha512-MfLc2G+mXPUDGGxpHQeYbdunavFP9UpT9yxiAsTgUXRxfEd3HqysSAM4E72jhz5eIz3OOexCHkqiVlQq8ok9/A==}
+    peerDependencies:
+      '@microsoft/api-extractor': '>=7'
+      rollup: '>=3'
+      vite: '>=3'
+    peerDependenciesMeta:
+      '@microsoft/api-extractor':
+        optional: true
+      rollup:
+        optional: true
       vite:
         optional: true
 
@@ -3941,6 +4138,46 @@ packages:
       postcss:
         optional: true
 
+  vitest@4.1.11:
+    resolution: {integrity: sha512-fhACrNXUidIbGSBr5FlbuBkO7VWC1ZyLl0DO4CU2DrQoAPxX84Ysxs+HeGQpii5lZWV1Q4gBZTTu49mF+A6Edw==}
+    engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
+    hasBin: true
+    peerDependencies:
+      '@edge-runtime/vm': '*'
+      '@opentelemetry/api': ^1.9.0
+      '@types/node': ^20.0.0 || ^22.0.0 || >=24.0.0
+      '@vitest/browser-playwright': 4.1.11
+      '@vitest/browser-preview': 4.1.11
+      '@vitest/browser-webdriverio': 4.1.11
+      '@vitest/coverage-istanbul': 4.1.11
+      '@vitest/coverage-v8': 4.1.11
+      '@vitest/ui': 4.1.11
+      happy-dom: '*'
+      jsdom: '*'
+    peerDependenciesMeta:
+      '@edge-runtime/vm':
+        optional: true
+      '@opentelemetry/api':
+        optional: true
+      '@types/node':
+        optional: true
+      '@vitest/browser-playwright':
+        optional: true
+      '@vitest/browser-preview':
+        optional: true
+      '@vitest/browser-webdriverio':
+        optional: true
+      '@vitest/coverage-istanbul':
+        optional: true
+      '@vitest/coverage-v8':
+        optional: true
+      '@vitest/ui':
+        optional: true
+      happy-dom:
+        optional: true
+      jsdom:
+        optional: true
+
   vitest@4.1.9:
     resolution: {integrity: sha512-nE3/LEyc0z87uHYLZebqCUOaJr2hdtuPp7BQ4BosVFnfltxgAvMG08NyrSGlPpOUWvR27c5flSmYFTNr78L9GQ==}
     engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
@@ -4004,6 +4241,9 @@ packages:
   webidl-conversions@8.0.1:
     resolution: {integrity: sha512-BMhLD/Sw+GbJC21C/UgyaZX41nPt8bUTg+jWyDeg7e7YN4xOM05YPSIXceACnXVtqyEw/LMClUQMtMZ+PGGpqQ==}
     engines: {node: '>=20'}
+
+  webpack-virtual-modules@0.6.2:
+    resolution: {integrity: sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==}
 
   whatwg-mimetype@5.0.0:
     resolution: {integrity: sha512-sXcNcHOC51uPGF0P/D4NVtrkjSU2fNsm9iog4ZvZJsL3rjoDAzXZhkm2MWt1y+PUdggKAYVoMAIYcs78wJ51Cw==}
@@ -5371,6 +5611,8 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
 
+  '@sdkwork/utils@0.11.0': {}
+
   '@shikijs/core@2.5.0':
     dependencies:
       '@shikijs/engine-javascript': 2.5.0
@@ -5500,11 +5742,31 @@ snapshots:
       picocolors: 1.1.1
       redent: 3.0.0
 
+  '@testing-library/jest-dom@7.0.1(vitest@4.1.11(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(jsdom@29.1.1))':
+    dependencies:
+      '@adobe/css-tools': 4.5.0
+      aria-query: 5.3.2
+      css.escape: 1.5.1
+      dom-accessibility-api: 0.6.3
+      picocolors: 1.1.1
+      redent: 3.0.0
+    optionalDependencies:
+      vitest: 4.1.11(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(jsdom@29.1.1)
+
   '@testing-library/react@16.3.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
       '@babel/runtime': 7.29.7
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
+    optionalDependencies:
+      '@types/react': 19.2.14
+      '@types/react-dom': 19.2.3(@types/react@19.2.14)
+
+  '@testing-library/react@16.3.2(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      '@babel/runtime': 7.29.7
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
     optionalDependencies:
       '@types/react': 19.2.14
       '@types/react-dom': 19.2.3(@types/react@19.2.14)
@@ -5566,6 +5828,10 @@ snapshots:
       '@types/unist': 3.0.3
 
   '@types/mdurl@2.0.0': {}
+
+  '@types/node@20.19.43':
+    dependencies:
+      undici-types: 6.21.0
 
   '@types/node@22.20.0':
     dependencies:
@@ -5706,6 +5972,15 @@ snapshots:
       vite: 5.4.21(@types/node@25.9.4)(lightningcss@1.32.0)
       vue: 3.5.39(typescript@6.0.2)
 
+  '@vitest/expect@4.1.11':
+    dependencies:
+      '@standard-schema/spec': 1.1.0
+      '@types/chai': 5.2.3
+      '@vitest/spy': 4.1.11
+      '@vitest/utils': 4.1.11
+      chai: 6.2.2
+      tinyrainbow: 3.1.0
+
   '@vitest/expect@4.1.9':
     dependencies:
       '@standard-schema/spec': 1.1.0
@@ -5715,6 +5990,14 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.0
 
+  '@vitest/mocker@4.1.11(vite@8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0))':
+    dependencies:
+      '@vitest/spy': 4.1.11
+      estree-walker: 3.0.3
+      magic-string: 0.30.21
+    optionalDependencies:
+      vite: 8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)
+
   '@vitest/mocker@4.1.9(vite@8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0))':
     dependencies:
       '@vitest/spy': 4.1.9
@@ -5723,13 +6006,29 @@ snapshots:
     optionalDependencies:
       vite: 8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)
 
+  '@vitest/pretty-format@4.1.11':
+    dependencies:
+      tinyrainbow: 3.1.0
+
   '@vitest/pretty-format@4.1.9':
     dependencies:
       tinyrainbow: 3.1.0
 
+  '@vitest/runner@4.1.11':
+    dependencies:
+      '@vitest/utils': 4.1.11
+      pathe: 2.0.3
+
   '@vitest/runner@4.1.9':
     dependencies:
       '@vitest/utils': 4.1.9
+      pathe: 2.0.3
+
+  '@vitest/snapshot@4.1.11':
+    dependencies:
+      '@vitest/pretty-format': 4.1.11
+      '@vitest/utils': 4.1.11
+      magic-string: 0.30.21
       pathe: 2.0.3
 
   '@vitest/snapshot@4.1.9':
@@ -5739,7 +6038,15 @@ snapshots:
       magic-string: 0.30.21
       pathe: 2.0.3
 
+  '@vitest/spy@4.1.11': {}
+
   '@vitest/spy@4.1.9': {}
+
+  '@vitest/utils@4.1.11':
+    dependencies:
+      '@vitest/pretty-format': 4.1.11
+      convert-source-map: 2.0.0
+      tinyrainbow: 3.1.0
 
   '@vitest/utils@4.1.9':
     dependencies:
@@ -5824,19 +6131,6 @@ snapshots:
       path-browserify: 1.0.1
     optionalDependencies:
       typescript: 6.0.2
-
-  '@vue/language-core@2.2.0(typescript@6.0.3)':
-    dependencies:
-      '@volar/language-core': 2.4.28
-      '@vue/compiler-dom': 3.5.39
-      '@vue/compiler-vue2': 2.7.16
-      '@vue/shared': 3.5.39
-      alien-signals: 0.4.14
-      minimatch: 9.0.9
-      muggle-string: 0.4.1
-      path-browserify: 1.0.1
-    optionalDependencies:
-      typescript: 6.0.3
 
   '@vue/reactivity@3.5.39':
     dependencies:
@@ -6305,6 +6599,8 @@ snapshots:
     dependencies:
       is-glob: 4.0.3
 
+  glob-to-regexp@0.4.1: {}
+
   graceful-fs@4.2.11: {}
 
   has-flag@4.0.0: {}
@@ -6344,6 +6640,8 @@ snapshots:
   html-parse-stringify@3.0.1:
     dependencies:
       void-elements: 3.1.0
+
+  html-parse-stringify@4.0.1: {}
 
   html-void-elements@3.0.0: {}
 
@@ -6512,6 +6810,10 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lucide-react@1.46.0(react@19.3.0):
+    dependencies:
+      react: 19.3.0
 
   lucide-react@1.7.0(react@19.2.4):
     dependencies:
@@ -6701,28 +7003,43 @@ snapshots:
       react: 19.2.4
       scheduler: 0.27.0
 
+  react-dom@19.3.0(react@19.3.0):
+    dependencies:
+      react: 19.3.0
+      scheduler: 0.28.0
+
   react-hook-form@7.80.0(react@19.2.4):
     dependencies:
       react: 19.2.4
 
-  react-i18next@17.0.8(i18next@26.3.4(typescript@5.9.3))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3):
+  react-i18next@17.0.14(i18next@26.3.4(typescript@5.9.3))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(typescript@5.9.3):
     dependencies:
       '@babel/runtime': 7.29.7
-      html-parse-stringify: 3.0.1
+      html-parse-stringify: 4.0.1
       i18next: 26.3.4(typescript@5.9.3)
-      react: 19.2.4
-      use-sync-external-store: 1.6.0(react@19.2.4)
+      react: 19.3.0
+      use-sync-external-store: 1.6.0(react@19.3.0)
     optionalDependencies:
-      react-dom: 19.2.4(react@19.2.4)
+      react-dom: 19.3.0(react@19.3.0)
       typescript: 5.9.3
 
-  react-i18next@17.0.8(i18next@26.3.4(typescript@6.0.3))(react@19.2.4)(typescript@6.0.3):
+  react-i18next@17.0.14(i18next@26.3.4(typescript@6.0.3))(react@19.3.0)(typescript@6.0.3):
+    dependencies:
+      '@babel/runtime': 7.29.7
+      html-parse-stringify: 4.0.1
+      i18next: 26.3.4(typescript@6.0.3)
+      react: 19.3.0
+      use-sync-external-store: 1.6.0(react@19.3.0)
+    optionalDependencies:
+      typescript: 6.0.3
+
+  react-i18next@17.0.8(i18next@26.3.4(typescript@6.0.3))(react@19.3.0)(typescript@6.0.3):
     dependencies:
       '@babel/runtime': 7.29.7
       html-parse-stringify: 3.0.1
       i18next: 26.3.4(typescript@6.0.3)
-      react: 19.2.4
-      use-sync-external-store: 1.6.0(react@19.2.4)
+      react: 19.3.0
+      use-sync-external-store: 1.6.0(react@19.3.0)
     optionalDependencies:
       typescript: 6.0.3
 
@@ -6761,6 +7078,8 @@ snapshots:
       '@types/react': 19.2.14
 
   react@19.2.4: {}
+
+  react@19.3.0: {}
 
   redent@3.0.0:
     dependencies:
@@ -6849,6 +7168,8 @@ snapshots:
       xmlchars: 2.2.0
 
   scheduler@0.27.0: {}
+
+  scheduler@0.28.0: {}
 
   semver@6.3.1: {}
 
@@ -7013,6 +7334,34 @@ snapshots:
 
   universalify@2.0.1: {}
 
+  unplugin-dts@1.1.0(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.62.2)(typescript@6.0.3)(vite@8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)):
+    dependencies:
+      '@rollup/pluginutils': 5.4.0(rollup@4.62.2)
+      '@volar/typescript': 2.4.28
+      compare-versions: 6.1.1
+      debug: 4.4.3
+      glob-to-regexp: 0.4.1
+      kolorist: 1.8.0
+      local-pkg: 1.2.1
+      magic-string: 0.30.21
+      typescript: 6.0.3
+      unplugin: 2.3.11
+    optionalDependencies:
+      '@microsoft/api-extractor': 7.58.9(@types/node@25.9.4)
+      esbuild: 0.28.1
+      rolldown: 1.1.5
+      rollup: 4.62.2
+      vite: 8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)
+    transitivePeerDependencies:
+      - supports-color
+
+  unplugin@2.3.11:
+    dependencies:
+      '@jridgewell/remapping': 2.3.5
+      acorn: 8.17.0
+      picomatch: 4.0.5
+      webpack-virtual-modules: 0.6.2
+
   update-browserslist-db@1.2.3(browserslist@4.28.2):
     dependencies:
       browserslist: 4.28.2
@@ -7038,9 +7387,9 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.2.14
 
-  use-sync-external-store@1.6.0(react@19.2.4):
+  use-sync-external-store@1.6.0(react@19.3.0):
     dependencies:
-      react: 19.2.4
+      react: 19.3.0
 
   vfile-message@4.0.3:
     dependencies:
@@ -7071,24 +7420,21 @@ snapshots:
       - rollup
       - supports-color
 
-  vite-plugin-dts@4.5.4(@types/node@25.9.4)(rollup@4.62.2)(typescript@6.0.3)(vite@8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)):
+  vite-plugin-dts@5.1.0(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.62.2)(typescript@6.0.3)(vite@8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)):
     dependencies:
-      '@microsoft/api-extractor': 7.58.9(@types/node@25.9.4)
-      '@rollup/pluginutils': 5.4.0(rollup@4.62.2)
-      '@volar/typescript': 2.4.28
-      '@vue/language-core': 2.2.0(typescript@6.0.3)
-      compare-versions: 6.1.1
-      debug: 4.4.3
-      kolorist: 1.8.0
-      local-pkg: 1.2.1
-      magic-string: 0.30.21
-      typescript: 6.0.3
+      unplugin-dts: 1.1.0(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.1.5)(rollup@4.62.2)(typescript@6.0.3)(vite@8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0))
     optionalDependencies:
+      '@microsoft/api-extractor': 7.58.9(@types/node@25.9.4)
+      rollup: 4.62.2
       vite: 8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)
     transitivePeerDependencies:
-      - '@types/node'
-      - rollup
+      - '@rspack/core'
+      - '@vue/language-core'
+      - esbuild
+      - rolldown
       - supports-color
+      - typescript
+      - webpack
 
   vite@5.4.21(@types/node@22.20.0)(lightningcss@1.32.0):
     dependencies:
@@ -7172,6 +7518,45 @@ snapshots:
       - typescript
       - universal-cookie
 
+  vitest@4.1.11(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(jsdom@29.1.1):
+    dependencies:
+      '@vitest/expect': 4.1.11
+      '@vitest/mocker': 4.1.11(vite@8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0))
+      '@vitest/pretty-format': 4.1.11
+      '@vitest/runner': 4.1.11
+      '@vitest/snapshot': 4.1.11
+      '@vitest/spy': 4.1.11
+      '@vitest/utils': 4.1.11
+      es-module-lexer: 2.3.0
+      expect-type: 1.4.0
+      magic-string: 0.30.21
+      obug: 2.1.3
+      pathe: 2.0.3
+      picomatch: 4.0.5
+      std-env: 4.1.0
+      tinybench: 2.9.0
+      tinyexec: 1.2.4
+      tinyglobby: 0.2.17
+      tinyrainbow: 3.1.0
+      vite: 8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)
+      why-is-node-running: 2.3.0
+    optionalDependencies:
+      '@types/node': 25.9.4
+      jsdom: 29.1.1
+    transitivePeerDependencies:
+      - '@vitejs/devtools'
+      - esbuild
+      - jiti
+      - less
+      - msw
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - terser
+      - tsx
+      - yaml
+
   vitest@4.1.9(@types/node@25.9.4)(jsdom@29.1.1)(vite@8.1.5(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)):
     dependencies:
       '@vitest/expect': 4.1.9
@@ -7219,6 +7604,8 @@ snapshots:
       xml-name-validator: 5.0.0
 
   webidl-conversions@8.0.1: {}
+
+  webpack-virtual-modules@0.6.2: {}
 
   whatwg-mimetype@5.0.0: {}
 
