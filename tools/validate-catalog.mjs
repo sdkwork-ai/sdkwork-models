@@ -27,6 +27,16 @@ const GENERATION_MODE_INPUTS = {
   video_extension: ["video"],
   video_edit: ["video"],
   multi_shot: ["text"],
+  // Digital human (数字人): a still portrait is animated by a driving audio
+  // track. Kling's avatar endpoint takes `image` + `audio`; classifying it as
+  // `image_to_video` (its historical label) hid the audio input and made the
+  // mode indistinguishable from ordinary image-to-video, so its own pricing
+  // tiers (`motion_res_*` for motion control, the audio tiers for avatar)
+  // could never be selected.
+  avatar: ["image", "audio"],
+  // Motion mimicry (动作模仿): a reference performance video drives the person
+  // in a still image. Kling's `motion-control` endpoint takes `image` + `video`.
+  motion_control: ["image", "video"],
 };
 
 const DURATION_TIER_CODES = new Set([

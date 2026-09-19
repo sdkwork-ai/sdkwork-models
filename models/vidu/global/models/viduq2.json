@@ -1,0 +1,48 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "vidu/viduq2",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "Vidu Q2 image model served by `POST /ent/v2/reference2image`. One surface covers text-to-image (no `images`), image editing, and reference-to-image (1-7 references); the official price table bills per generated image and varies by reference count and resolution.",
+  "displayName": "Vidu Q2 Image",
+  "familyCode": "vidu-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 12000,
+  "latencyP95Ms": 45000,
+  "lifecycle": "active",
+  "modelId": "viduq2",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "820.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-18T00:00:00Z",
+    "sourceUrl": "https://platform.vidu.com/docs/reference-to-image"
+  },
+  "strengths": [
+    "Text to Image",
+    "Reference to Image",
+    "Image editing",
+    "1080p/2K/4K"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.930000",
+  "usageScopes": [],
+  "vendorCode": "vidu",
+  "vendorName": "Vidu",
+  "winRate": "0.900000"
+}

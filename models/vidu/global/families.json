@@ -17,6 +17,14 @@
       "sortOrder": 20
     },
     {
+      "defaultModel": "viduq2",
+      "displayName": "Vidu Image",
+      "familyCode": "vidu-image",
+      "familyType": "image",
+      "primaryModality": "image",
+      "sortOrder": 25
+    },
+    {
       "displayName": "Vidu S1",
       "familyCode": "vidu-stream",
       "familyType": "streaming",

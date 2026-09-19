@@ -1942,6 +1942,7 @@
     },
     {
       "capabilities": [
+        "image",
         "sfx",
         "streaming",
         "video"
@@ -2061,6 +2062,7 @@
           "billingCurrency": "USD",
           "billingJurisdiction": "GLOBAL",
           "capabilities": [
+            "image",
             "sfx",
             "streaming",
             "video"
@@ -2109,13 +2111,13 @@
           "displayName": "Vidu",
           "legalName": "ShengShu Technology",
           "marketScope": "global",
-          "modelCount": 10,
+          "modelCount": 12,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "vidu/global/vendor.json",
-          "pricingFileCount": 8,
+          "pricingFileCount": 10,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 96,

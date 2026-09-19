@@ -1369,6 +1369,58 @@ fn vendor_native_video_descriptor(vendor_code: &str) -> Option<EndpointDescripto
             streaming_supported: false,
             sort_order: 590,
         },
+        // The four vendors below each publish a video surface the catalog
+        // actually declares and whose models actually declare
+        // `apiFormat = vendor_native`, yet they had no arm here — so their
+        // native declaration was silently discarded and every model was bound
+        // to `openai.video` (`POST /v1/videos`), a route their vendor never
+        // registered. The paths are the ones the project already ships in
+        // `data/ai-routing/resources/vendor-native-resources.json`, not new
+        // claims: `alibaba.video_generation` (`wan2.6-t2v`/`i2v`/`r2v`),
+        // `luma_ai.video_generation` (Ray family), `pixverse.video_generation`
+        // and `zhipu.video_generation`.
+        //
+        // These are `vendor_native`-only on purpose: each vendor's *other*
+        // models (`alibaba` chat/embedding/image, `zhipu` chat/embedding/image)
+        // declare `openai_compatible` and stay on the generic face, so the arm
+        // is gated on `api_format == "vendor_native"` by
+        // `model_video_endpoint_descriptor` and cannot capture them.
+        "alibaba" => EndpointDescriptor {
+            endpoint_code: "alibaba.video_generation",
+            protocol_code: "vendor_native",
+            display_name: "Alibaba Video Generation",
+            method: "POST",
+            path_template: "/api/v1/services/aigc/video-generation/video-synthesis",
+            streaming_supported: false,
+            sort_order: 630,
+        },
+        "luma_ai" => EndpointDescriptor {
+            endpoint_code: "luma_ai.video_generation",
+            protocol_code: "vendor_native",
+            display_name: "Luma Video Generation",
+            method: "POST",
+            path_template: "/dream-machine/v1/generations",
+            streaming_supported: false,
+            sort_order: 640,
+        },
+        "pixverse" => EndpointDescriptor {
+            endpoint_code: "pixverse.video_generation",
+            protocol_code: "vendor_native",
+            display_name: "PixVerse Video Generation",
+            method: "POST",
+            path_template: "/openapi/v2/video/text/generate",
+            streaming_supported: false,
+            sort_order: 650,
+        },
+        "zhipu" => EndpointDescriptor {
+            endpoint_code: "zhipu.video_generation",
+            protocol_code: "vendor_native",
+            display_name: "Zhipu Video Generation",
+            method: "POST",
+            path_template: "/api/paas/v4/videos/generations",
+            streaming_supported: false,
+            sort_order: 660,
+        },
         _ => return None,
     };
     Some(descriptor)
@@ -1623,7 +1675,65 @@ fn model_music_endpoint_descriptor(model: &ModelInfo) -> EndpointDescriptor {
         };
     }
 
+    // Mureka publishes its own song surface. Same defect as the MiniMax arm
+    // one branch up: all 8 `mureka` music models declare
+    // `apiFormat = vendor_native` and the project declares
+    // `mureka.music_generation` (`POST /v1/song/generate`), but with no arm
+    // here every one of them collapsed onto the Suno compatibility face — a
+    // route that speaks Suno's song protocol, not Mureka's.
+    if model.api_format == "vendor_native" && model.vendor_code.trim() == "mureka" {
+        return EndpointDescriptor {
+            endpoint_code: "mureka.music_generation",
+            protocol_code: "vendor_native",
+            display_name: "Mureka Music Generation",
+            method: "POST",
+            path_template: "/v1/song/generate",
+            streaming_supported: false,
+            sort_order: 435,
+        };
+    }
+
     suno_compatible_music()
+}
+
+/// The vendor-native chat endpoint of a vendor, when the vendor publishes one
+/// that the catalog actually commits to.
+///
+/// Chat is the fallback face: `model_endpoint_descriptor`'s catch-all arm
+/// returns `openai.chat_completions` for `llm` / `chat` / `code` / `reasoning`
+/// and for any capability it does not recognise. That is correct for the
+/// overwhelming majority of vendors, whose chat models declare
+/// `apiFormat = openai_compatible` and whose request bodies therefore really are
+/// OpenAI-shaped.
+///
+/// `baidu` is the exception the sweep found. Its four chat models and one
+/// reasoning model (`ernie-5.0`, `ernie-5.1`, `ernie-4.5-turbo-128k`,
+/// `ernie-x1.1`, `ernie-5.0-thinking-preview`) declare
+/// `apiFormat = vendor_native`, and the project declares
+/// `baidu.chat_completions` at `POST /v2/chat/completions` — the 千帆 v2
+/// surface, which is **not** `/v1/chat/completions`. Binding them to the
+/// generic face would replay an OpenAI body to a path Baidu does not serve and
+/// discard the models' own declaration.
+///
+/// Deliberately a one-vendor table. Adding a vendor here is a claim that its
+/// models *declare* `vendor_native`; every other vendor's chat models say
+/// `openai_compatible` and must keep the generic fallback, which is why the
+/// sweep in `every_capability_binds_only_to_a_declared_vendor_native_endpoint`
+/// asserts the generic face is still reached at all.
+fn vendor_native_chat_descriptor(vendor_code: &str) -> Option<EndpointDescriptor> {
+    let descriptor = match vendor_code {
+        "baidu" => EndpointDescriptor {
+            endpoint_code: "baidu.chat_completions",
+            protocol_code: "vendor_native",
+            display_name: "Baidu Chat Completions",
+            method: "POST",
+            path_template: "/v2/chat/completions",
+            streaming_supported: true,
+            sort_order: 420,
+        },
+        _ => return None,
+    };
+    Some(descriptor)
 }
 
 fn model_endpoint_descriptor(model: &ModelInfo) -> EndpointDescriptor {
@@ -1668,6 +1778,18 @@ fn model_endpoint_descriptor(model: &ModelInfo) -> EndpointDescriptor {
             streaming_supported: false,
             sort_order: 70,
         },
+        _ if model.api_format == "vendor_native" => vendor_native_chat_descriptor(
+            model.vendor_code.trim(),
+        )
+        .unwrap_or(EndpointDescriptor {
+            endpoint_code: "openai.chat_completions",
+            protocol_code: "openai_compatible",
+            display_name: "OpenAI Chat Completions",
+            method: "POST",
+            path_template: "/v1/chat/completions",
+            streaming_supported: model.supports_streaming,
+            sort_order: 10,
+        }),
         _ if model.api_format == "openai_responses" => EndpointDescriptor {
             endpoint_code: "openai.chat_completions",
             protocol_code: "openai_compatible",
@@ -1788,6 +1910,27 @@ fn endpoint_modality_code(endpoint_code: &str) -> Option<String> {
         "gemini.generate_content" | "gemini.stream_generate_content" | "anthropic.messages"
         | "anthropic.claude_code" => Some("chat"),
         "gemini.embed_content" => Some("embedding"),
+        // The thirteen vendors that had no `api.*` entitlement at all. Their
+        // endpoints are declared in `vendor-native-resources.json` and every
+        // one of them must resolve to a modality, otherwise the
+        // `ai_modality_api_endpoint` projection loses the link and the modality
+        // view of the catalog under-reports which endpoints serve it. The code
+        // spells the modality out for all but the two obvious cases, but the
+        // map is explicit on purpose — it is the accounting side's only way to
+        // pick a meter, and a `None` here is a silent billing degradation.
+        "alibaba.image_generation" | "xai.image_generation" | "xiaomi.image_generation"
+        | "zhipu.image_generation" => Some("image"),
+        "alibaba.video_generation" | "luma_ai.video_generation" | "pixverse.video_generation"
+        | "xai.video_generation" | "xiaomi.video_generation" | "zhipu.video_generation" => {
+            Some("video")
+        }
+        "mureka.music_generation" => Some("music"),
+        "xiaomi.speech" => Some("audio"),
+        "alibaba.chat_completions" | "baidu.chat_completions" | "deepseek.chat_completions"
+        | "meituan.chat_completions" | "moonshot.chat_completions" | "stepfun.chat_completions"
+        | "tencent.chat_completions" | "xai.chat_completions" | "xiaomi.chat_completions"
+        | "zhipu.chat_completions" => Some("chat"),
+        "alibaba.embeddings" | "zhipu.embeddings" => Some("embedding"),
         _ => None,
     }
     .map(str::to_owned)
@@ -2611,6 +2754,10 @@ mod tests {
             ("bytedance", "jimeng.video_generation"),
             ("volcengine", "volcengine.video_generation"),
             ("vidu", "vidu.start_end_to_video"),
+            ("alibaba", "alibaba.video_generation"),
+            ("luma_ai", "luma_ai.video_generation"),
+            ("pixverse", "pixverse.video_generation"),
+            ("zhipu", "zhipu.video_generation"),
         ] {
             let descriptor =
                 model_endpoint_descriptor(&video_model_of(vendor_code, "vendor_native"));
@@ -2640,17 +2787,7 @@ mod tests {
         // A vendor with no declared native video API keeps the generic surface:
         // sending it to a native route the vendor never registered would plan
         // against a non-existent endpoint.
-        for vendor_code in [
-            "alibaba",
-            "black_forest_labs",
-            "luma_ai",
-            "minimax",
-            "pixverse",
-            "runway",
-            "zhipu",
-            "openai",
-            "xai",
-        ] {
+        for vendor_code in ["black_forest_labs", "minimax", "runway", "openai", "xai"] {
             assert_eq!(
                 model_endpoint_descriptor(&video_model_of(vendor_code, "vendor_native"))
                     .endpoint_code,
@@ -2765,6 +2902,77 @@ mod tests {
                 "volcengine.video_generation",
                 "/api/v3/contents/generations/tasks",
             ),
+            // The thirteen catalog vendors whose `official.<vendor>.full`
+            // resource group reached its bundled account with no `api.*`
+            // entitlement, so `account_route_allows_api_resource` failed the
+            // whole group closed on every api code it did not grant. Each
+            // endpoint below is a real declaration in the seed, not a route
+            // invented to make this table agree with it.
+            (
+                "alibaba.chat_completions",
+                "/compatible-mode/v1/chat/completions",
+            ),
+            ("alibaba.embeddings", "/compatible-mode/v1/embeddings"),
+            (
+                "alibaba.image_generation",
+                "/api/v1/services/aigc/text2image/image-synthesis",
+            ),
+            (
+                "alibaba.video_generation",
+                "/api/v1/services/aigc/video-generation/video-synthesis",
+            ),
+            (
+                "alibaba.video_generation_task_query",
+                "/api/v1/tasks/{task_id}",
+            ),
+            ("baidu.chat_completions", "/v2/chat/completions"),
+            ("deepseek.chat_completions", "/v1/chat/completions"),
+            (
+                "luma_ai.video_generation",
+                "/dream-machine/v1/generations",
+            ),
+            (
+                "luma_ai.video_generation_task_query",
+                "/dream-machine/v1/generations/{id}",
+            ),
+            ("meituan.chat_completions", "/v1/chat/completions"),
+            ("moonshot.chat_completions", "/v1/chat/completions"),
+            ("mureka.music_generation", "/v1/song/generate"),
+            (
+                "mureka.music_generation_task_query",
+                "/v1/song/query/{task_id}",
+            ),
+            (
+                "pixverse.video_generation",
+                "/openapi/v2/video/text/generate",
+            ),
+            (
+                "pixverse.video_generation_task_query",
+                "/openapi/v2/video/result/{video_id}",
+            ),
+            ("stepfun.chat_completions", "/v1/chat/completions"),
+            ("tencent.chat_completions", "/v1/chat/completions"),
+            ("xai.chat_completions", "/v1/chat/completions"),
+            ("xai.image_generation", "/v1/images/generations"),
+            ("xai.video_generation", "/v1/videos/generations"),
+            ("xiaomi.chat_completions", "/v1/chat/completions"),
+            ("xiaomi.image_generation", "/v1/images/generations"),
+            ("xiaomi.speech", "/v1/audio/speech"),
+            ("xiaomi.video_generation", "/v1/videos/generations"),
+            ("zhipu.chat_completions", "/api/paas/v4/chat/completions"),
+            ("zhipu.embeddings", "/api/paas/v4/embeddings"),
+            (
+                "zhipu.image_generation",
+                "/api/paas/v4/images/generations",
+            ),
+            (
+                "zhipu.video_generation",
+                "/api/paas/v4/videos/generations",
+            ),
+            (
+                "zhipu.video_generation_task_query",
+                "/api/paas/v4/async-result/{id}",
+            ),
         ];
 
         const GENERIC_ENDPOINTS: &[&str] = &[
@@ -2809,6 +3017,9 @@ mod tests {
         const VENDOR_ALIASES: &[&str] = &["gemini", "kling", "jimeng"];
         const API_FORMATS: &[&str] = &["vendor_native", "google_gemini", "openai_compatible"];
         const NATIVE_CAPABILITIES: &[(&str, &[&str], &[&str])] = &[
+            // `chat` is swept only because `baidu` publishes a
+            // `vendor_native` chat surface; every other vendor stays generic.
+            ("chat", &["text"], &["text"]),
             ("image", &["text"], &["image"]),
             ("video", &["text"], &["video"]),
             ("audio", &["text"], &["audio"]),
@@ -2834,11 +3045,48 @@ mod tests {
             "suno.music_generation",
             "suno.music_task_query",
             "volcengine.task_query",
+            // The five async poll surfaces added alongside their create
+            // endpoints. Reached holding a task id produced by a prior create
+            // call, so no model's `primaryCapability` selects them. Keep in
+            // step with the cloud router's copy.
+            "alibaba.video_generation_task_query",
+            "luma_ai.video_generation_task_query",
+            "mureka.music_generation_task_query",
+            "pixverse.video_generation_task_query",
+            "zhipu.video_generation_task_query",
             "gemini.nano_banana.image_generation",
             "kling.avatar",
             "kling.image_to_video",
             "kling.motion_control",
             "vidu.motion_sync",
+            // Compatibility-face surfaces. Every endpoint below is a real
+            // declaration, classified and granted, but no model binds to it
+            // because every model of its vendor declares
+            // `apiFormat = openai_compatible` — and a model's own declaration
+            // wins (`model_image_endpoint_descriptor` / `_video_` / `_audio_`).
+            // Forcing a descriptor arm would have to overwrite that
+            // declaration, which would send an OpenAI-shaped body to a vendor
+            // path that does not answer it. So the endpoint stays reachable by
+            // api code for callers that drive it explicitly, and the models
+            // stay on the generic face — the honest projection of the catalog.
+            "alibaba.chat_completions",
+            "alibaba.embeddings",
+            "alibaba.image_generation",
+            "deepseek.chat_completions",
+            "meituan.chat_completions",
+            "moonshot.chat_completions",
+            "stepfun.chat_completions",
+            "tencent.chat_completions",
+            "xai.chat_completions",
+            "xai.image_generation",
+            "xai.video_generation",
+            "xiaomi.chat_completions",
+            "xiaomi.image_generation",
+            "xiaomi.speech",
+            "xiaomi.video_generation",
+            "zhipu.chat_completions",
+            "zhipu.embeddings",
+            "zhipu.image_generation",
         ];
 
         let declared: Vec<(&str, &str)> = DECLARED_VENDOR_NATIVE_ENDPOINTS.to_vec();

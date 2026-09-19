@@ -1,0 +1,38 @@
+{
+  "catalogKey": "vidu/viduq1",
+  "currency": "USD",
+  "modelId": "viduq1",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq1-image-result-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "796602bd57fac4ec771ca84fb8c562bdb2f0b3818d7b08cb33d1f512f26da76b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-18T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "unitPrice": "0.100000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "vidu"
+}

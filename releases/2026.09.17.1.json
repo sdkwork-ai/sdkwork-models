@@ -8,7 +8,7 @@
     "warnings": []
   },
   "generatedAt": "2026-09-17T00:00:00Z",
-  "indexSha256": "e9439efbbe0ae3c87eb4304e76a7ee4f0603b30858dc8df7cd63c235012cc5f7",
+  "indexSha256": "4bd5828d922b2b925c746cc20e7e06eb77a2f4c198d80e13301f059ddbbb3b61",
   "schemaVersion": "1.1.0",
   "sourceAudit": {
     "errorCount": 0,
@@ -52,7 +52,7 @@
     "vendorSources": "90106bd1e1a7d90b98a9c9b2203d6dba90b3bb39de4af0c51dd712731aa7851d"
   },
   "validation": {
-    "issueCount": 77,
+    "issueCount": 73,
     "ok": true
   },
   "vendorChanges": [
@@ -60,7 +60,7 @@
       "modelCount": 15,
       "pricingFileCount": 15,
       "regionCode": "cn",
-      "sha256": "f7672f9869917ed9cc30c0db90130452cf001abd770af373852492b458ee0d1a",
+      "sha256": "115b55305e7651c81dfd66595f7fd870dab5cce081bc725980f49923468b1045",
       "vendorCode": "alibaba"
     },
     {
@@ -137,14 +137,14 @@
       "modelCount": 12,
       "pricingFileCount": 12,
       "regionCode": "cn",
-      "sha256": "7f077dd67b10ba8d3d6b2355a80767d647cac40e486fcec04ecda56f8268030d",
+      "sha256": "28490168ad20c3995d99b2458e09c824eab7d3534cc5c1678ac153f378bc81e7",
       "vendorCode": "kuaishou"
     },
     {
       "modelCount": 12,
       "pricingFileCount": 12,
       "regionCode": "global",
-      "sha256": "f538a371e48fba540559a99a464dcc689d104fb17e4a1bbd8dca50c43495c767",
+      "sha256": "964a243810a247a79d8efc2f234d937f06ff4ab8da545fba851ab498b0502ccb",
       "vendorCode": "kuaishou"
     },
     {
@@ -165,14 +165,14 @@
       "modelCount": 26,
       "pricingFileCount": 26,
       "regionCode": "cn",
-      "sha256": "38ad7c560b7e6e2cefa4732be44a40d1d7be846d2dfffd212b18c0e976d702e5",
+      "sha256": "0a1e7a8633049add2435f0eab7157df7bd49d9f9dfe9cd20008ffc5b0d640f51",
       "vendorCode": "minimax"
     },
     {
       "modelCount": 26,
       "pricingFileCount": 26,
       "regionCode": "global",
-      "sha256": "45eb87a7a2f84d1b0723e8a901921c6f660007a6d4f101f2d76fbf28f920696f",
+      "sha256": "75dbb7812c9658ff6189b07cdfbe99a564610e18c8ec861dbbbf7e29b3a9c0c9",
       "vendorCode": "minimax"
     },
     {
@@ -256,14 +256,14 @@
       "modelCount": 10,
       "pricingFileCount": 8,
       "regionCode": "cn",
-      "sha256": "81e3565ee109df179d2fbbe50152fb88d2708f0c227f30a0fb4dc2dd52ac18f4",
+      "sha256": "5e44c6545392408f0dba6e85166ea5702ad93a1c62782b043115280aecc25b4c",
       "vendorCode": "vidu"
     },
     {
-      "modelCount": 10,
-      "pricingFileCount": 8,
+      "modelCount": 12,
+      "pricingFileCount": 10,
       "regionCode": "global",
-      "sha256": "4eb3ee613657acb6e92adaae68f9dbddf180736af7db540748d876fa741f27f9",
+      "sha256": "ade8984c52650ab574e0baedd73b5a485bdbebb435d37c73446dfe11519a4b16",
       "vendorCode": "vidu"
     },
     {

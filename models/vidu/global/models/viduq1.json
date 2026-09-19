@@ -1,0 +1,47 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "vidu/viduq1",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "Vidu Q1 reference-to-image model served by `POST /ent/v2/reference2image`. It requires at least one reference image and supports 1080p only, so it is the cheaper-tier sibling of `viduq2` for subject-consistent generation.",
+  "displayName": "Vidu Q1 Image",
+  "familyCode": "vidu-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 15000,
+  "latencyP95Ms": 50000,
+  "lifecycle": "active",
+  "modelId": "viduq1",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "780.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-18T00:00:00Z",
+    "sourceUrl": "https://platform.vidu.com/docs/reference-to-image"
+  },
+  "strengths": [
+    "Reference to Image",
+    "Subject consistency",
+    "1080p"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.880000",
+  "usageScopes": [],
+  "vendorCode": "vidu",
+  "vendorName": "Vidu",
+  "winRate": "0.870000"
+}

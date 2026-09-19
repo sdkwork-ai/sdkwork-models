@@ -24,7 +24,10 @@
       "wireParameters": {
         "duration": "5-10",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "ref_res_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -48,7 +51,37 @@
       "wireParameters": {
         "duration": "5-10",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "ref_res_720p"
+      ]
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "vidu/viduq3/r2v_range_720p",
+      "displayName": "Reference to Video · 5–10s · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "reference_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 10,
+      "minDurationSeconds": 5,
+      "outputAudio": true,
+      "profileCode": "r2v_range_720p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 30,
+      "wireParameters": {
+        "duration": "5-10",
+        "resolution": "720p"
+      },
+      "pricingTierCodes": [
+        "ref_res_720p"
+      ]
     }
   ],
   "regionCode": "global",

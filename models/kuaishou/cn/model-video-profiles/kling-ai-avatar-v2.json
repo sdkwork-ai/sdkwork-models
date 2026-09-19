@@ -7,7 +7,7 @@
       "displayName": "Image to Video · Length follows the driving audio · 720p",
       "durationPolicy": "continuous",
       "durationStepSeconds": 1,
-      "generationMode": "image_to_video",
+      "generationMode": "avatar",
       "isDefault": true,
       "maxDurationSeconds": 300,
       "minDurationSeconds": 2,

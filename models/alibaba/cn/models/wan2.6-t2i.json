@@ -1,5 +1,5 @@
 {
-  "apiFormat": "vendor_native",
+  "apiFormat": "openai_compatible",
   "capabilities": [
     "image"
   ],

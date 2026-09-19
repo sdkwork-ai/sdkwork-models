@@ -289,6 +289,114 @@
         "duration": "3-15",
         "resolution": "720p"
       }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "kuaishou/kling-v3/avatar_range_1080p",
+      "displayName": "Digital Human · length follows the driving audio · 1080p",
+      "durationPolicy": "continuous",
+      "durationStepSeconds": 1,
+      "generationMode": "avatar",
+      "isDefault": false,
+      "maxDurationSeconds": 300,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "profileCode": "avatar_range_1080p",
+      "pricingTierCodes": [
+        "audio_res_1080p"
+      ],
+      "resolution": "1080p",
+      "resolutionTierCode": "audio_res_1080p",
+      "sortOrder": 100,
+      "wireParameters": {
+        "mode": "std",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "kuaishou/kling-v3/avatar_range_720p",
+      "displayName": "Digital Human · length follows the driving audio · 720p",
+      "durationPolicy": "continuous",
+      "durationStepSeconds": 1,
+      "generationMode": "avatar",
+      "isDefault": false,
+      "maxDurationSeconds": 300,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "profileCode": "avatar_range_720p",
+      "pricingTierCodes": [
+        "audio_res_720p"
+      ],
+      "resolution": "720p",
+      "resolutionTierCode": "audio_res_720p",
+      "sortOrder": 110,
+      "wireParameters": {
+        "mode": "std",
+        "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "kuaishou/kling-v3/motion_control_range_1080p",
+      "displayName": "Motion Mimicry · performance video drives the portrait · 1080p",
+      "durationPolicy": "continuous",
+      "durationStepSeconds": 1,
+      "generationMode": "motion_control",
+      "isDefault": false,
+      "maxDurationSeconds": 300,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "profileCode": "motion_control_range_1080p",
+      "pricingTierCodes": [
+        "motion_res_1080p"
+      ],
+      "resolution": "1080p",
+      "resolutionTierCode": "motion_res_1080p",
+      "sortOrder": 120,
+      "wireParameters": {
+        "mode": "std",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "kuaishou/kling-v3/motion_control_range_720p",
+      "displayName": "Motion Mimicry · performance video drives the portrait · 720p",
+      "durationPolicy": "continuous",
+      "durationStepSeconds": 1,
+      "generationMode": "motion_control",
+      "isDefault": false,
+      "maxDurationSeconds": 300,
+      "minDurationSeconds": 2,
+      "outputAudio": true,
+      "profileCode": "motion_control_range_720p",
+      "pricingTierCodes": [
+        "motion_res_720p"
+      ],
+      "resolution": "720p",
+      "resolutionTierCode": "motion_res_720p",
+      "sortOrder": 130,
+      "wireParameters": {
+        "mode": "std",
+        "resolution": "720p"
+      }
     }
   ],
   "regionCode": "cn",

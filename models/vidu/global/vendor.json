@@ -2,6 +2,7 @@
   "billingCurrency": "USD",
   "billingJurisdiction": "GLOBAL",
   "capabilities": [
+    "image",
     "sfx",
     "streaming",
     "video"
@@ -55,7 +56,8 @@
   "marketScope": "global",
   "modelFamilies": [
     "vidu-video",
-    "vidu-audio"
+    "vidu-audio",
+    "vidu-image"
   ],
   "openSource": false,
   "operatingRegions": [

@@ -1,0 +1,354 @@
+{
+  "catalogKey": "vidu/viduq2",
+  "currency": "USD",
+  "modelId": "viduq2",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "t2i_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq2-image-t2i-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "c718cd0f267b682cedaec4296bede01d70c0159fb4acc4d3b46913b40639bde3",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-18T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "t2i_1080p",
+      "unitPrice": "0.030000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "t2i_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq2-image-t2i-2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "be2b86917ca71ed7bfc61ad2f0a594e5aa4d4afada7e101179ddbafce839ab8e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-18T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "t2i_2k",
+      "unitPrice": "0.040000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "t2i_4k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq2-image-t2i-4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "683d9046c4d42461b42d164a300e466c2de8fd738117bbccc84d5dad3d40b372",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-18T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "t2i_4k",
+      "unitPrice": "0.050000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "r2i_ref1_3_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq2-image-r2i-ref1-3-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5d27b451a4442ccf9de3bae4ab207710cac06ff88c7e20f5f4ab2dd346b54fc0",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-18T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "r2i_ref1_3_1080p",
+      "unitPrice": "0.040000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "r2i_ref1_3_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq2-image-r2i-ref1-3-2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d63b873a9a9bd766dae47ee17c8dcda53b336ec84056f0fb0d362e7c017b26e2",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-18T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "r2i_ref1_3_2k",
+      "unitPrice": "0.060000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "r2i_ref1_3_4k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq2-image-r2i-ref1-3-4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "200bb66dc5b1489e06d068b1674479f6b358741ae10ba1b72be91318e623a359",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-18T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "r2i_ref1_3_4k",
+      "unitPrice": "0.100000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "r2i_ref4_7_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq2-image-r2i-ref4-7-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "40cd319989a0018201e41e5934e58475e58c499305778fd646ad896a5bd0f782",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-18T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "r2i_ref4_7_1080p",
+      "unitPrice": "0.050000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "r2i_ref4_7_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq2-image-r2i-ref4-7-2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "126f43bd05ea54648a7a8244bccbbd4133996a053a7536d02ffc7f754e939a11",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-18T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "r2i_ref4_7_2k",
+      "unitPrice": "0.080000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "r2i_ref4_7_4k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq2-image-r2i-ref4-7-4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "176680f1c31a1f72a22835cfb725afeedf4d1dab14939c6bbb5594f3dc23006f",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-18T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "tierCode": "r2i_ref4_7_4k",
+      "unitPrice": "0.150000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq2-image-default",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "615c685909319dbe9ae4740bc653f7e10e9b1da20df2c90a5f0dae9cd83e77d9",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-18T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+      },
+      "unitPrice": "0.030000",
+      "unitSize": "1",
+      "notes": "Default tier used when the request does not select a resolution; official list price for the entry resolution."
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "vidu"
+}

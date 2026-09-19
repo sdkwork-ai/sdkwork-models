@@ -49,7 +49,9 @@
         "start_end_frame",
         "video_extension",
         "video_edit",
-        "multi_shot"
+        "multi_shot",
+        "avatar",
+        "motion_control"
       ]
     },
     "durationPolicy": {

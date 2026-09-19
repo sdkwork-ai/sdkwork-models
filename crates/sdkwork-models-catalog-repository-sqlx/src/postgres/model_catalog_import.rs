@@ -180,8 +180,33 @@ async fn deactivate_postgres_rows_not_in(
     key_column: &'static str,
     active_keys: &[String],
 ) -> Result<(), sqlx::Error> {
+    // `status = 0` alone is not enough to retire a row.
+    //
+    // `sdkwork_model_is_publicly_active` reads `release_stage` / `shelf_state` /
+    // `routing_state` — the *catalog identity* columns — and never looks at
+    // `status`. A row that the sweep merely set `status = 0` on still carried
+    // `routing_state = 1` and therefore still passed the "is this model
+    // routable?" predicate, so a model the catalog had dropped stayed
+    // selectable while every binding that could serve it had been deactivated.
+    // Verified on the live dev DB on 2026-09-18: eight such rows
+    // (`openai/gpt-4o-transcribe`, `openai/whisper-1`, `openai/sora-2`,
+    // `kuaishou/kling-v3-probe`, …) reported `status = 0` together with
+    // `release_stage = 1, shelf_state = 1, routing_state = 1`, and the video one
+    // surfaced as the only "routable model with zero active endpoint binding"
+    // in the whole 74-model video capability.
+    //
+    // Clearing the routing flag as well makes retirement self-consistent:
+    // `status = 0` now implies "cannot be routed", which is what every caller
+    // of the predicate assumes. The columns are only touched where they exist
+    // — `ai_model` and friends carry all three, but the sweep also runs over
+    // tables such as `ai_model_pricing` that do not.
+    let routing_reset = if postgres_table_has_routing_flags(conn, table_name).await? {
+        ", routing_state = 0"
+    } else {
+        ""
+    };
     let sql = format!(
-        "UPDATE {table_name} SET status = 0, updated_at = CURRENT_TIMESTAMP WHERE tenant_id = 0 AND organization_id = 0 AND vendor_code = ANY($1) AND status = 1 AND ($2::text[] = '{{}}' OR NOT ({key_column} = ANY($2)))"
+        "UPDATE {table_name} SET status = 0{routing_reset}, updated_at = CURRENT_TIMESTAMP WHERE tenant_id = 0 AND organization_id = 0 AND vendor_code = ANY($1) AND status = 1 AND ($2::text[] = '{{}}' OR NOT ({key_column} = ANY($2)))"
     );
     sqlx::query(sqlx::AssertSqlSafe(sql))
         .bind(vendor_codes)
@@ -189,6 +214,25 @@ async fn deactivate_postgres_rows_not_in(
         .execute(&mut *conn)
         .await?;
     Ok(())
+}
+
+/// Whether `table_name` carries the catalog routing flags in the current
+/// schema, so the retirement sweep only clears columns that exist.
+///
+/// The sweep runs over a fixed list of tables from a single binary, so the
+/// answer is stable for the life of the connection; it is resolved per call
+/// rather than cached to keep this helper free of shared state.
+async fn postgres_table_has_routing_flags(
+    conn: &mut PgConnection,
+    table_name: &str,
+) -> Result<bool, sqlx::Error> {
+    let exists: Option<bool> = sqlx::query_scalar(
+        "SELECT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema = current_schema() AND table_name = $1 AND column_name = 'routing_state')",
+    )
+    .bind(table_name)
+    .fetch_one(&mut *conn)
+    .await?;
+    Ok(exists.unwrap_or(false))
 }
 
 async fn import_meters(conn: &mut PgConnection, catalog: &ModelCatalog) -> Result<(), sqlx::Error> {
