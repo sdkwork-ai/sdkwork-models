@@ -97,6 +97,8 @@ sdks/**/generated/**/*.d.ts
 *.d.ts
 !**/node-shims.d.ts
 
+.tmp/
+
 # Local agent workspace: resync evidence, per-vendor reports, review scripts.
 # Regenerated per resync; kept out of the repo so gates never scan it.
 .workbuddy/
