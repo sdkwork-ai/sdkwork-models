@@ -7,13 +7,7 @@
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "usage_reported",
-      "conditions": [
-        {
-          "dimensionCode": "tier_code",
-          "operator": "eq",
-          "value": "off_peak"
-        }
-      ],
+      "conditions": [],
       "currency": "CNY",
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "llm_cache_read_token",
@@ -27,7 +21,7 @@
       "productCode": "models.deepseek.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "4aedb6800cf8e18a2e2c7e39148260706be167ad081a5664e242fc4baa34d52a",
+      "rateHash": "627ab891b31899a7644d953244214f2fedc4f43c010508af319c7b52fadaf8cd",
       "rateVariant": "time_window",
       "schedule": {
         "excludeDates": [],
@@ -89,7 +83,6 @@
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
       },
-      "tierCode": "off_peak",
       "unitPrice": "0.020000",
       "unitSize": "1000000"
     },
@@ -97,13 +90,7 @@
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "usage_reported",
-      "conditions": [
-        {
-          "dimensionCode": "tier_code",
-          "operator": "eq",
-          "value": "off_peak"
-        }
-      ],
+      "conditions": [],
       "currency": "CNY",
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "llm_input_token",
@@ -117,7 +104,7 @@
       "productCode": "models.deepseek.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "b839f223f3135aeb6dcf0408c2e300bc35cb9d4e6aa21d6946fdb042fe87503d",
+      "rateHash": "ec0fcabe16c22db1f11b63ad38f10f6ffe923b8d2282a6ed0c72670927009bed",
       "rateVariant": "time_window",
       "schedule": {
         "excludeDates": [],
@@ -179,7 +166,6 @@
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
       },
-      "tierCode": "off_peak",
       "unitPrice": "1.000000",
       "unitSize": "1000000"
     },
@@ -187,13 +173,7 @@
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "usage_reported",
-      "conditions": [
-        {
-          "dimensionCode": "tier_code",
-          "operator": "eq",
-          "value": "off_peak"
-        }
-      ],
+      "conditions": [],
       "currency": "CNY",
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "llm_output_token",
@@ -207,7 +187,7 @@
       "productCode": "models.deepseek.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "40cc997194628161b581b3946df0422e8fd8a7cdf4963b7da0e990979fd67b35",
+      "rateHash": "7ea434a1a036c3fb3470a9a424854cea5b4ed67cd7229071d6e716831a0bd114",
       "rateVariant": "time_window",
       "schedule": {
         "excludeDates": [],
@@ -269,7 +249,6 @@
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
       },
-      "tierCode": "off_peak",
       "unitPrice": "4.000000",
       "unitSize": "1000000"
     },
@@ -277,13 +256,7 @@
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "usage_reported",
-      "conditions": [
-        {
-          "dimensionCode": "tier_code",
-          "operator": "eq",
-          "value": "peak"
-        }
-      ],
+      "conditions": [],
       "currency": "CNY",
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "llm_cache_read_token",
@@ -297,7 +270,7 @@
       "productCode": "models.deepseek.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "ad5bd3619ac0183da5a1fc7ece0c307f39fbdd53ed6bd95681d940d86b1f2543",
+      "rateHash": "79169394156eb05ba8b77065baadd245cb0dde4d1eb98ac7e5a2d6f065f45ff2",
       "rateVariant": "time_window",
       "schedule": {
         "excludeDates": [],
@@ -336,7 +309,6 @@
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
       },
-      "tierCode": "peak",
       "unitPrice": "0.040000",
       "unitSize": "1000000"
     },
@@ -344,13 +316,7 @@
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "usage_reported",
-      "conditions": [
-        {
-          "dimensionCode": "tier_code",
-          "operator": "eq",
-          "value": "peak"
-        }
-      ],
+      "conditions": [],
       "currency": "CNY",
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "llm_input_token",
@@ -364,7 +330,7 @@
       "productCode": "models.deepseek.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "10ffc70ac66f55d0f792664348d3f6994d6ec2e5e97dd80735dc9bade486fd64",
+      "rateHash": "e8631a2bffb817738373a73479a46e63db0627fbad7b9180382ed9307dec52e1",
       "rateVariant": "time_window",
       "schedule": {
         "excludeDates": [],
@@ -403,7 +369,6 @@
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
       },
-      "tierCode": "peak",
       "unitPrice": "2.000000",
       "unitSize": "1000000"
     },
@@ -411,13 +376,7 @@
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "usage_reported",
-      "conditions": [
-        {
-          "dimensionCode": "tier_code",
-          "operator": "eq",
-          "value": "peak"
-        }
-      ],
+      "conditions": [],
       "currency": "CNY",
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "llm_output_token",
@@ -431,7 +390,7 @@
       "productCode": "models.deepseek.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "7c2e99ecb3748f43dc2497049cb04787159358bbc03822ebcd91cee4bdeb941a",
+      "rateHash": "67afe1965acfecb7360b11c33add1260835b3eb66e96446223cc365f054a384e",
       "rateVariant": "time_window",
       "schedule": {
         "excludeDates": [],
@@ -470,7 +429,6 @@
         "observedAt": "2026-09-17T00:00:00Z",
         "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
       },
-      "tierCode": "peak",
       "unitPrice": "8.000000",
       "unitSize": "1000000"
     }

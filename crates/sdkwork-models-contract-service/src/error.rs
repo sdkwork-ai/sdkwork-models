@@ -14,6 +14,11 @@ pub enum DomainErrorKind {
     Conflict,
     NotFound,
     BadRequest,
+    /// The wallet, account, or plan backing the request cannot fund it and the
+    /// caller can self-heal by recharging. Distinct from `BadRequest` because
+    /// the correct HTTP status is 402 (Payment Required) and the surfaced
+    /// problem must carry a funding action, not a validation hint.
+    InsufficientBalance,
 }
 
 impl DomainError {
@@ -58,6 +63,19 @@ impl DomainError {
 
     pub fn is_bad_request(&self) -> bool {
         self.kind == DomainErrorKind::BadRequest
+    }
+
+    /// Builds an insufficient-balance rejection. Surfaces as HTTP 402 with a
+    /// recharge action so clients can route the user to funding.
+    pub fn insufficient_balance(message: impl Into<String>) -> Self {
+        Self {
+            message: message.into(),
+            kind: DomainErrorKind::InsufficientBalance,
+        }
+    }
+
+    pub fn is_insufficient_balance(&self) -> bool {
+        self.kind == DomainErrorKind::InsufficientBalance
     }
 }
 

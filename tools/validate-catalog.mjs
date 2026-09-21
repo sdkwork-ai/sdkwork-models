@@ -180,6 +180,43 @@ function validatePriceSchedule(price, pricingPath, index, issues) {
   }
 }
 
+/**
+ * A `time_window` rate must not also carry a `tier_code` condition.
+ *
+ * The Cloud Router selects a `time_window` rate purely through
+ * `PricingSchedule.matched_window_code()`: `PricingRateMetadata::matches_at`
+ * takes the `TimeWindow` arm and never consults the request dimensions for the
+ * window. The only `tier_code` producer in the runtime is the video path, which
+ * intersects `ai_model_video_profile.pricingTierCodes` with the model's priced
+ * tiers - and no video profile exists for an LLM/audio/image meter.
+ *
+ * So a rate carrying both keys can never be selected: the schedule already
+ * encodes the tier as its window-code prefix (`peak_weekday_morning` ->
+ * `peak`), and the redundant condition filters the rate out instead. Leaving
+ * both in place is not a harmless belt-and-braces overlap; it is a hard outage.
+ * All four DeepSeek models published on 2026-09-17 were unrouteable this way.
+ *
+ * See `ROUTING_PRICING_SPEC.md` section 5.4.
+ */
+function validateTimeWindowTierRedundancy(price, pricingPath, index, issues) {
+  const variant = price.rateVariant ?? "standard";
+  if (variant !== "time_window") return;
+  const tierCondition = (price.conditions ?? []).find(
+    (condition) => (condition.dimensionCode ?? "").toLowerCase() === "tier_code",
+  );
+  if (!tierCondition) return;
+  const path = `${pricingPath}#/prices/${index}`;
+  issues.push(
+    issue(
+      "price.time_window.tier_code.redundant",
+      `${path}/conditions`,
+      "a time_window rate is selected by its schedule's window codes and must not also "
+        + `condition on tier_code (found tier_code eq ${JSON.stringify(tierCondition.value)}); `
+        + "remove the condition - the runtime has no tier_code producer for this rate",
+    ),
+  );
+}
+
 export function validateCatalog(root) {
   const issues = [];
 
@@ -480,6 +517,18 @@ export function validateCatalog(root) {
         }
         seenPriceIds.add(price.priceId);
 
+        // The effective pricing key is what makes two rows mutually exclusive:
+        // same book, same resource, same meter, same currency, same window.
+        //
+        // `rateVariant` and `schedule` belong in the key for exactly the reason
+        // `conditions` does. A `time_window` rate is discriminated by *when* it
+        // applies, not by a request dimension, so the peak/off-peak pair of a
+        // model shares every other field and is separated only by its schedule.
+        // Keying on `conditions` alone would report that legitimate pair as a
+        // duplicate and, worse, would push an author toward re-adding a
+        // `tier_code` condition to silence it - reintroducing the
+        // unreachable-rate outage described in
+        // `validateTimeWindowTierRedundancy`.
         const priceKey = [
           price.priceBookCode,
           price.productCode,
@@ -495,6 +544,8 @@ export function validateCatalog(root) {
           price.currency ?? pricing.currency,
           price.minimumQuantity ?? "0",
           price.effectiveFrom,
+          price.rateVariant ?? "standard",
+          stableJson(price.schedule ?? null),
           stableJson(price.conditions ?? []),
         ].join("|");
         if (seenPriceKeys.has(priceKey)) {
@@ -511,6 +562,7 @@ export function validateCatalog(root) {
           issues.push(issue("price.unit_size.invalid", `${pricingPath}#/prices/${index}/unitSize`, "unitSize must be positive"));
         }
         validatePriceSchedule(price, pricingPath, index, issues);
+        validateTimeWindowTierRedundancy(price, pricingPath, index, issues);
         if (price.quantityStep !== undefined && (!isDecimalString(price.quantityStep) || !isPositiveDecimal(price.quantityStep))) {
           issues.push(issue("price.quantity_step.invalid", `${pricingPath}#/prices/${index}/quantityStep`, "quantityStep must be a positive decimal string"));
         }

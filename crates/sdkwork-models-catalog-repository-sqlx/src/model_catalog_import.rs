@@ -1180,7 +1180,10 @@ fn vendor_native_image_descriptor(vendor_code: &str) -> Option<EndpointDescripto
             streaming_supported: false,
             sort_order: 440,
         },
-        "bytedance" | "jimeng" => EndpointDescriptor {
+        // Jimeng's own image surface (`jimeng.jianying.com`), which is not the
+        // same host or path as ByteDance's catalog surface — see the
+        // `bytedance` arm below.
+        "jimeng" => EndpointDescriptor {
             endpoint_code: "jimeng.image_generation",
             protocol_code: "vendor_native",
             display_name: "Jimeng Image Generation",
@@ -1188,6 +1191,20 @@ fn vendor_native_image_descriptor(vendor_code: &str) -> Option<EndpointDescripto
             path_template: "/v1/images/generations",
             streaming_supported: false,
             sort_order: 510,
+        },
+        // ByteDance's catalog surface is Volcengine Ark, whose image models are
+        // the `doubao-seedream-*` family. Those models currently declare
+        // `openai_compatible`, so this arm is the honest declaration for the day
+        // one declares `vendor_native` — the same split as the video arm, where
+        // the missing split was a live routing defect.
+        "bytedance" => EndpointDescriptor {
+            endpoint_code: "bytedance.image_generation",
+            protocol_code: "vendor_native",
+            display_name: "ByteDance Image Generation",
+            method: "POST",
+            path_template: "/api/v3/images/generations",
+            streaming_supported: false,
+            sort_order: 511,
         },
         "kuaishou" | "kling" => EndpointDescriptor {
             endpoint_code: "kling.image_generation",
@@ -1341,7 +1358,11 @@ fn vendor_native_video_descriptor(vendor_code: &str) -> Option<EndpointDescripto
             streaming_supported: false,
             sort_order: 470,
         },
-        "bytedance" | "jimeng" => EndpointDescriptor {
+        // Jimeng is ByteDance's standalone consumer surface
+        // (`jimeng.jianying.com`), reached through its own `/v1` API. It is
+        // *not* interchangeable with `bytedance`'s catalog surface, which is
+        // Volcengine Ark — see the `bytedance` arm below.
+        "jimeng" => EndpointDescriptor {
             endpoint_code: "jimeng.video_generation",
             protocol_code: "vendor_native",
             display_name: "Jimeng Video Generation",
@@ -1349,6 +1370,27 @@ fn vendor_native_video_descriptor(vendor_code: &str) -> Option<EndpointDescripto
             path_template: "/v1/videos/generations",
             streaming_supported: false,
             sort_order: 520,
+        },
+        // ByteDance's catalog surface is Volcengine Ark
+        // (`ark.cn-beijing.volces.com/api/v3`, per
+        // `models/bytedance/<region>/vendor.json`), whose video models are the
+        // `doubao-seedance-*` family. Ark submits an async task and polls it, so
+        // a seedance video model binds to the
+        // `/api/v3/contents/generations/tasks` surface.
+        //
+        // Splitting this arm from `jimeng` fixes a real routing defect: the two
+        // were aliased together, so all 8 `vendor_native` seedance models were
+        // bound to jimeng's `/v1/videos/generations` while Ark's own endpoint
+        // carried **zero** video models. A seedance request therefore dialled a
+        // path the Ark host does not serve.
+        "bytedance" => EndpointDescriptor {
+            endpoint_code: "bytedance.video_generation",
+            protocol_code: "vendor_native",
+            display_name: "ByteDance Video Generation",
+            method: "POST",
+            path_template: "/api/v3/contents/generations/tasks",
+            streaming_supported: false,
+            sort_order: 525,
         },
         // Volcengine Ark submits an async task and polls it.
         "volcengine" => EndpointDescriptor {
@@ -1896,12 +1938,21 @@ fn endpoint_modality_code(endpoint_code: &str) -> Option<String> {
         // `ai_modality_api_endpoint` projection loses the link, so the modality
         // view of the catalog under-reports which endpoints serve it.
         "gemini.image_generation" | "gemini.nano_banana.image_generation" => Some("image"),
-        "jimeng.image_generation" | "kling.image_generation" | "volcengine.image_generation"
-        | "vidu.reference_to_image" | "black_forest_labs.image_generation"
-        | "runway.image_generation" | "stability_ai.image_generation" => Some("image"),
-        "gemini.video_generation" | "jimeng.video_generation" | "volcengine.video_generation"
-        | "kling.text_to_video" | "kling.image_to_video" | "kling.avatar"
-        | "kling.motion_control" | "vidu.start_end_to_video" | "vidu.motion_sync" => Some("video"),
+        // `bytedance` (Volcengine Ark) and `jimeng` are separate surfaces with
+        // separate hosts and paths, so they get separate endpoints — see the
+        // split note on `vendor_native_image_descriptor`.
+        "bytedance.image_generation" | "jimeng.image_generation" | "kling.image_generation"
+        | "volcengine.image_generation" | "vidu.reference_to_image"
+        | "black_forest_labs.image_generation" | "runway.image_generation"
+        | "stability_ai.image_generation" => Some("image"),
+        "gemini.video_generation" | "bytedance.video_generation" | "jimeng.video_generation"
+        | "volcengine.video_generation" | "kling.text_to_video" | "kling.image_to_video"
+        | "kling.avatar" | "kling.motion_control" | "vidu.start_end_to_video"
+        | "vidu.motion_sync" => Some("video"),
+        // Task/polling surfaces carry the modality of the job they track, so the
+        // accounting side can meter the poll the way it meters the submit.
+        "bytedance.task_query" | "jimeng.task_query" | "volcengine.task_query"
+        | "kling.task_query" => Some("video"),
         "minimax.music_generation" | "suno.music_generation" => Some("music"),
         "elevenlabs.text_to_speech" | "volcengine.speech" => Some("audio"),
         "elevenlabs.sound_generation" | "sfx.sound" => Some("audio"),
@@ -2651,7 +2702,8 @@ mod tests {
 
         for (vendor_code, expected) in [
             ("google", "gemini.image_generation"),
-            ("bytedance", "jimeng.image_generation"),
+            ("bytedance", "bytedance.image_generation"),
+            ("jimeng", "jimeng.image_generation"),
             ("kuaishou", "kling.image_generation"),
             ("volcengine", "volcengine.image_generation"),
             ("vidu", "vidu.reference_to_image"),
@@ -2748,10 +2800,15 @@ mod tests {
         };
 
         // Catalog vendor code -> the native endpoint its video models must use.
+        // `bytedance` resolves to Ark's async task surface; `jimeng` keeps its
+        // own host spelling. This split is what makes a `doubao-seedance-*`
+        // request reach `/api/v3/contents/generations/tasks` instead of the
+        // Jimeng consumer path it used to be pinned to.
         for (vendor_code, expected) in [
             ("google", "gemini.video_generation"),
             ("kuaishou", "kling.text_to_video"),
-            ("bytedance", "jimeng.video_generation"),
+            ("bytedance", "bytedance.video_generation"),
+            ("jimeng", "jimeng.video_generation"),
             ("volcengine", "volcengine.video_generation"),
             ("vidu", "vidu.start_end_to_video"),
             ("alibaba", "alibaba.video_generation"),
@@ -2816,6 +2873,7 @@ mod tests {
             "kling.image_to_video",
             "kling.avatar",
             "kling.motion_control",
+            "bytedance.video_generation",
             "jimeng.video_generation",
             "volcengine.video_generation",
             "vidu.start_end_to_video",
@@ -2850,10 +2908,12 @@ mod tests {
     #[test]
     fn every_capability_binds_only_to_a_declared_vendor_native_endpoint() {
         const DECLARED_VENDOR_NATIVE_ENDPOINTS: &[(&str, &str)] = &[
+            ("alibaba.anthropic_messages", "/v1/messages"),
             ("anthropic.claude_code", "/v1/claude-code/sessions"),
             ("anthropic.messages", "/v1/messages"),
             ("black_forest_labs.image_generation", "/v1/flux-{model}"),
             ("black_forest_labs.task_query", "/v1/get_result"),
+            ("deepseek.anthropic_messages", "/v1/messages"),
             ("elevenlabs.sound_generation", "/v1/sound-generation"),
             ("elevenlabs.text_to_speech", "/v1/text-to-speech/{voice_id}"),
             ("gemini.embed_content", "/v1beta/models/{model}:embedContent"),
@@ -2869,6 +2929,14 @@ mod tests {
                 "/v1beta/models/{model}:streamGenerateContent",
             ),
             ("gemini.video_generation", "/v1beta/models/{model}:generateVideos"),
+            // ByteDance's catalog surface (Volcengine Ark), separate from
+            // `jimeng` — see the split note on `vendor_native_video_descriptor`.
+            ("bytedance.image_generation", "/api/v3/images/generations"),
+            ("bytedance.task_query", "/api/v3/contents/generations/tasks/{taskId}"),
+            (
+                "bytedance.video_generation",
+                "/api/v3/contents/generations/tasks",
+            ),
             ("jimeng.image_generation", "/v1/images/generations"),
             ("jimeng.task_query", "/v1/tasks/{taskId}"),
             ("jimeng.video_generation", "/v1/videos/generations"),
@@ -2878,7 +2946,9 @@ mod tests {
             ("kling.motion_control", "/v1/videos/motion-control"),
             ("kling.task_query", "/v1/videos/generations/{taskId}"),
             ("kling.text_to_video", "/v1/videos/text2video"),
+            ("meituan.anthropic_messages", "/v1/messages"),
             ("minimax.music_generation", "/v1/music/generations"),
+            ("moonshot.anthropic_messages", "/v1/messages"),
             ("runway.image_generation", "/v1/text_to_image"),
             ("runway.task_query", "/v1/tasks/{id}"),
             ("sfx.sound", "/v1/sound/generate"),
@@ -2886,9 +2956,11 @@ mod tests {
                 "stability_ai.image_generation",
                 "/v2beta/stable-image/generate/{mode}",
             ),
+            ("stepfun.anthropic_messages", "/v1/messages"),
             ("suno.music", "/v1/music"),
             ("suno.music_generation", "/v1/music/generations"),
             ("suno.music_task_query", "/v1/music/generations/{taskId}"),
+            ("tencent.anthropic_messages", "/v1/messages"),
             ("vidu.motion_sync", "/ent/v2/template"),
             ("vidu.reference_to_image", "/ent/v2/reference2image"),
             ("vidu.start_end_to_video", "/ent/v2/start-end2video"),
@@ -2955,10 +3027,12 @@ mod tests {
             ("xai.chat_completions", "/v1/chat/completions"),
             ("xai.image_generation", "/v1/images/generations"),
             ("xai.video_generation", "/v1/videos/generations"),
+            ("xiaomi.anthropic_messages", "/v1/messages"),
             ("xiaomi.chat_completions", "/v1/chat/completions"),
             ("xiaomi.image_generation", "/v1/images/generations"),
             ("xiaomi.speech", "/v1/audio/speech"),
             ("xiaomi.video_generation", "/v1/videos/generations"),
+            ("zhipu.anthropic_messages", "/v1/messages"),
             ("zhipu.chat_completions", "/api/paas/v4/chat/completions"),
             ("zhipu.embeddings", "/api/paas/v4/embeddings"),
             (
@@ -3035,10 +3109,32 @@ mod tests {
         const NOT_BOUND_BY_DESCRIPTOR: &[&str] = &[
             "anthropic.claude_code",
             "anthropic.messages",
+            // Anthropic Messages as served by vendors other than Anthropic.
+            // A caller selects the protocol by pointing its client at the
+            // gateway's `/anthropic/` namespace, not by any model's
+            // `primaryCapability`, so no descriptor selects them. Each has a
+            // classifier arm in both copies and a grant in its
+            // `official.<vendor>.full` group; they are declared for the
+            // classifier, not bound. Same shape as `anthropic.messages` and
+            // `anthropic.claude_code` above.
+            "alibaba.anthropic_messages",
+            "deepseek.anthropic_messages",
+            "meituan.anthropic_messages",
+            "moonshot.anthropic_messages",
+            "stepfun.anthropic_messages",
+            "tencent.anthropic_messages",
+            "xiaomi.anthropic_messages",
+            "zhipu.anthropic_messages",
             "gemini.embed_content",
             "gemini.generate_content",
             "gemini.stream_generate_content",
             "black_forest_labs.task_query",
+            // `bytedance.task_query` polls the Ark async video task created by
+            // `bytedance.video_generation`. Same shape as the other poll
+            // surfaces: the caller arrives holding a task id, so no model's
+            // `primaryCapability` selects it. It has a classifier arm in both
+            // copies and a grant in `relay.bytedance.media`.
+            "bytedance.task_query",
             "jimeng.task_query",
             "kling.task_query",
             "runway.task_query",

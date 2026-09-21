@@ -5,477 +5,258 @@ whose discriminator dimension the runtime never populates -> the meter
 resolves no price at runtime. Fixing requires either a runtime dimension
 or merging tiers - a product decision, so nothing here is auto-applied.
 
-| file | priceId | meter | price | currency | unitSize | dimension | tier | thresholdTokens |
-|---|---|---|---|---|---|---|---|---|
-| alibaba/cn/pricing/qwen3.7-flash.json | qwen-cn-qwen3.7-flash-input-1m | llm_input_token | 1.200000 | CNY | 1000000 | tier_code | tier_1m | - |
-| alibaba/cn/pricing/qwen3.7-flash.json | qwen-cn-qwen3.7-flash-input-256k | llm_input_token | 0.600000 | CNY | 1000000 | tier_code | tier_256k | - |
-| alibaba/cn/pricing/qwen3.7-flash.json | qwen-cn-qwen3.7-flash-input-32k | llm_input_token | 0.200000 | CNY | 1000000 | tier_code | tier_32k | - |
-| alibaba/cn/pricing/qwen3.7-flash.json | qwen-cn-qwen3.7-flash-output-1m | llm_output_token | 4.800000 | CNY | 1000000 | tier_code | tier_1m | - |
-| alibaba/cn/pricing/qwen3.7-flash.json | qwen-cn-qwen3.7-flash-output-256k | llm_output_token | 2.400000 | CNY | 1000000 | tier_code | tier_256k | - |
-| alibaba/cn/pricing/qwen3.7-flash.json | qwen-cn-qwen3.7-flash-output-32k | llm_output_token | 0.800000 | CNY | 1000000 | tier_code | tier_32k | - |
-| alibaba/cn/pricing/qwen3.7-plus.json | qwen-cn-qwen3.7-plus-input-1m | llm_input_token | 6.000000 | CNY | 1000000 | tier_code | tier_1m | - |
-| alibaba/cn/pricing/qwen3.7-plus.json | qwen-cn-qwen3.7-plus-input-256k | llm_input_token | 2.000000 | CNY | 1000000 | tier_code | tier_256k | - |
-| alibaba/cn/pricing/qwen3.7-plus.json | qwen-cn-qwen3.7-plus-output-1m | llm_output_token | 24.000000 | CNY | 1000000 | tier_code | tier_1m | - |
-| alibaba/cn/pricing/qwen3.7-plus.json | qwen-cn-qwen3.7-plus-output-256k | llm_output_token | 8.000000 | CNY | 1000000 | tier_code | tier_256k | - |
-| alibaba/global/pricing/qwen3.7-flash.json | qwen-global-qwen3.7-flash-cache-read | llm_cache_read_token | 0.003000 | USD | 1000000 | tier_code | explicit_cache_read | - |
-| alibaba/global/pricing/qwen3.7-flash.json | qwen-global-qwen3.7-flash-cache-read-implicit | llm_cache_read_token | 0.006000 | USD | 1000000 | tier_code | implicit_cache | - |
-| alibaba/global/pricing/qwen3.7-flash.json | qwen-global-qwen3.7-flash-cache-write | llm_cache_write_token | 0.038000 | USD | 1000000 | tier_code | explicit_cache_write | - |
-| alibaba/global/pricing/qwen3.7-max.json | qwen-global-qwen3.7-max-cache-read | llm_cache_read_token | 0.250000 | USD | 1000000 | tier_code | explicit_cache_read | - |
-| alibaba/global/pricing/qwen3.7-max.json | qwen-global-qwen3.7-max-cache-read-implicit | llm_cache_read_token | 0.500000 | USD | 1000000 | tier_code | implicit_cache | - |
-| alibaba/global/pricing/qwen3.7-max.json | qwen-global-qwen3.7-max-cache-write | llm_cache_write_token | 3.125000 | USD | 1000000 | tier_code | explicit_cache_write | - |
-| alibaba/global/pricing/qwen3.7-plus.json | qwen-global-qwen3.7-plus-cache-read | llm_cache_read_token | 0.040000 | USD | 1000000 | tier_code | explicit_cache_read | - |
-| alibaba/global/pricing/qwen3.7-plus.json | qwen-global-qwen3.7-plus-cache-read-implicit | llm_cache_read_token | 0.080000 | USD | 1000000 | tier_code | implicit_cache | - |
-| alibaba/global/pricing/qwen3.7-plus.json | qwen-global-qwen3.7-plus-cache-write | llm_cache_write_token | 0.500000 | USD | 1000000 | tier_code | explicit_cache_write | - |
-| alibaba/global/pricing/qwen3.8-flash.json | qwen-global-qwen3.8-flash-cache-read | llm_cache_read_token | 0.016000 | USD | 1000000 | tier_code | explicit_cache_read | - |
-| alibaba/global/pricing/qwen3.8-flash.json | qwen-global-qwen3.8-flash-cache-read-implicit | llm_cache_read_token | 0.016000 | USD | 1000000 | tier_code | implicit_cache | - |
-| alibaba/global/pricing/qwen3.8-flash.json | qwen-global-qwen3.8-flash-cache-write | llm_cache_write_token | 0.200000 | USD | 1000000 | tier_code | explicit_cache_write | - |
-| alibaba/global/pricing/qwen3.8-max.json | qwen-global-qwen3.8-max-cache-read | llm_cache_read_token | 0.170000 | USD | 1000000 | tier_code | explicit_cache_read | - |
-| alibaba/global/pricing/qwen3.8-max.json | qwen-global-qwen3.8-max-cache-read-implicit | llm_cache_read_token | 0.250000 | USD | 1000000 | tier_code | implicit_cache | - |
-| alibaba/global/pricing/qwen3.8-max.json | qwen-global-qwen3.8-max-cache-write | llm_cache_write_token | 2.500000 | USD | 1000000 | tier_code | explicit_cache_write | - |
-| anthropic/global/pricing/claude-fable-5-1.json | anthropic-claude-fable-5-1-cache-write | llm_cache_write_token | 12.500000 | USD | 1000000 | tier_code | cache_write_5m | - |
-| anthropic/global/pricing/claude-fable-5-1.json | anthropic-claude-fable-5-1-cache-write-1h | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | cache_write_1h | - |
-| anthropic/global/pricing/claude-fable-5.json | anthropic-claude-fable-5-cache-write | llm_cache_write_token | 12.500000 | USD | 1000000 | tier_code | cache_write_5m | - |
-| anthropic/global/pricing/claude-fable-5.json | anthropic-claude-fable-5-cache-write-1h | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | cache_write_1h | - |
-| anthropic/global/pricing/claude-haiku-4-5.json | anthropic-claude-haiku-4-5-cache-write | llm_cache_write_token | 1.250000 | USD | 1000000 | tier_code | cache_write_5m | - |
-| anthropic/global/pricing/claude-haiku-4-5.json | anthropic-claude-haiku-4-5-cache-write-1h | llm_cache_write_token | 2.000000 | USD | 1000000 | tier_code | cache_write_1h | - |
-| anthropic/global/pricing/claude-mythos-5-1.json | anthropic-claude-mythos-5-1-cache-write | llm_cache_write_token | 12.500000 | USD | 1000000 | tier_code | cache_write_5m | - |
-| anthropic/global/pricing/claude-mythos-5-1.json | anthropic-claude-mythos-5-1-cache-write-1h | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | cache_write_1h | - |
-| anthropic/global/pricing/claude-mythos-5.json | anthropic-claude-mythos-5-cache-write | llm_cache_write_token | 12.500000 | USD | 1000000 | tier_code | cache_write_5m | - |
-| anthropic/global/pricing/claude-mythos-5.json | anthropic-claude-mythos-5-cache-write-1h | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | cache_write_1h | - |
-| anthropic/global/pricing/claude-opus-4-5.json | anthropic-claude-opus-4-5-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | cache_write_5m | - |
-| anthropic/global/pricing/claude-opus-4-5.json | anthropic-claude-opus-4-5-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | cache_write_1h | - |
-| anthropic/global/pricing/claude-opus-4-6.json | anthropic-claude-opus-4-6-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | cache_write_5m | - |
-| anthropic/global/pricing/claude-opus-4-6.json | anthropic-claude-opus-4-6-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | cache_write_1h | - |
-| anthropic/global/pricing/claude-opus-4-7.json | anthropic-claude-opus-4-7-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | cache_write_5m | - |
-| anthropic/global/pricing/claude-opus-4-7.json | anthropic-claude-opus-4-7-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | cache_write_1h | - |
-| anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | cache_write_5m | - |
-| anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | cache_write_1h | - |
-| anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-fast-input | llm_input_token | 10.000000 | USD | 1000000 | tier_code | fast_mode | - |
-| anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-fast-output | llm_output_token | 50.000000 | USD | 1000000 | tier_code | fast_mode | - |
-| anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | cache_write_5m | - |
-| anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | cache_write_1h | - |
-| anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-fast-mode-input | llm_input_token | 10.000000 | USD | 1000000 | tier_code | fast_mode | - |
-| anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-fast-mode-output | llm_output_token | 50.000000 | USD | 1000000 | tier_code | fast_mode | - |
-| anthropic/global/pricing/claude-sonnet-4-5.json | anthropic-claude-sonnet-4-5-cache-write | llm_cache_write_token | 3.750000 | USD | 1000000 | tier_code | cache_write_5m | - |
-| anthropic/global/pricing/claude-sonnet-4-5.json | anthropic-claude-sonnet-4-5-cache-write-1h | llm_cache_write_token | 6.000000 | USD | 1000000 | tier_code | cache_write_1h | - |
-| anthropic/global/pricing/claude-sonnet-4-6.json | anthropic-claude-sonnet-4-6-cache-write | llm_cache_write_token | 3.750000 | USD | 1000000 | tier_code | cache_write_5m | - |
-| anthropic/global/pricing/claude-sonnet-4-6.json | anthropic-claude-sonnet-4-6-cache-write-1h | llm_cache_write_token | 6.000000 | USD | 1000000 | tier_code | cache_write_1h | - |
-| anthropic/global/pricing/claude-sonnet-5.json | anthropic-claude-sonnet-5-cache-write | llm_cache_write_token | 2.500000 | USD | 1000000 | tier_code | cache_write_5m | - |
-| anthropic/global/pricing/claude-sonnet-5.json | anthropic-claude-sonnet-5-cache-write-1h | llm_cache_write_token | 4.000000 | USD | 1000000 | tier_code | cache_write_1h | - |
-| baidu/cn/pricing/ernie-5.0.json | baidu-cn-ernie-5.0-input-128k | llm_input_token | 10.000000 | CNY | 1000000 | tier_code | tier_128k | - |
-| baidu/cn/pricing/ernie-5.0.json | baidu-cn-ernie-5.0-input-32k | llm_input_token | 6.000000 | CNY | 1000000 | tier_code | tier_32k | - |
-| baidu/cn/pricing/ernie-5.0.json | baidu-cn-ernie-5.0-output-128k | llm_output_token | 40.000000 | CNY | 1000000 | tier_code | tier_128k | - |
-| baidu/cn/pricing/ernie-5.0.json | baidu-cn-ernie-5.0-output-32k | llm_output_token | 24.000000 | CNY | 1000000 | tier_code | tier_32k | - |
-| black_forest_labs/global/pricing/flux-2-klein-4b.json | bfl-flux-2-klein-4b-additional-megapixel | image_megapixel | 0.001000 | USD | 1 | tier_code | additional_megapixel | - |
-| black_forest_labs/global/pricing/flux-2-klein-4b.json | bfl-flux-2-klein-4b-first-megapixel | image_megapixel | 0.014000 | USD | 1 | tier_code | first_megapixel | - |
-| black_forest_labs/global/pricing/flux-2-klein-9b.json | bfl-flux-2-klein-9b-additional-megapixel | image_megapixel | 0.002000 | USD | 1 | tier_code | additional_megapixel | - |
-| black_forest_labs/global/pricing/flux-2-klein-9b.json | bfl-flux-2-klein-9b-first-megapixel | image_megapixel | 0.015000 | USD | 1 | tier_code | first_megapixel | - |
-| black_forest_labs/global/pricing/flux-2-pro.json | bfl-flux-2-pro-image-editing-megapixel | image_megapixel | 0.045000 | USD | 1 | tier_code | image_editing | - |
-| black_forest_labs/global/pricing/flux-2-pro.json | bfl-flux-2-pro-text-to-image-megapixel | image_megapixel | 0.030000 | USD | 1 | tier_code | text_to_image | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-i2v-draft-second | video_output_second | 0.060000 | USD | 1 | tier_code | i2v_draft | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-i2v-fhd-second | video_output_second | 0.290000 | USD | 1 | tier_code | i2v_fhd | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-i2v-hd-second | video_output_second | 0.170000 | USD | 1 | tier_code | i2v_hd | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-i2v-qhd-second | video_output_second | 0.400000 | USD | 1 | tier_code | i2v_qhd | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-i2v-uhd-second | video_output_second | 0.800000 | USD | 1 | tier_code | i2v_uhd | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-t2v-draft-second | video_output_second | 0.060000 | USD | 1 | tier_code | t2v_draft | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-t2v-fhd-second | video_output_second | 0.290000 | USD | 1 | tier_code | t2v_fhd | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-t2v-hd-second | video_output_second | 0.170000 | USD | 1 | tier_code | t2v_hd | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-t2v-qhd-second | video_output_second | 0.400000 | USD | 1 | tier_code | t2v_qhd | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-t2v-uhd-second | video_output_second | 0.800000 | USD | 1 | tier_code | t2v_uhd | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-v2v-draft-second | video_output_second | 0.120000 | USD | 1 | tier_code | v2v_draft | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-v2v-fhd-second | video_output_second | 0.530000 | USD | 1 | tier_code | v2v_fhd | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-v2v-hd-second | video_output_second | 0.410000 | USD | 1 | tier_code | v2v_hd | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-v2v-qhd-second | video_output_second | 0.650000 | USD | 1 | tier_code | v2v_qhd | - |
-| black_forest_labs/global/pricing/flux-3.json | bfl-flux-3-v2v-uhd-second | video_output_second | 0.950000 | USD | 1 | tier_code | v2v_uhd | - |
-| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-cache-read-input_128k_256k | llm_cache_read_token | 1.92 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-cache-read-input_32k_128k | llm_cache_read_token | 0.96 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-cache-read-input_le_32k | llm_cache_read_token | 0.64 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-input-input_128k_256k | llm_input_token | 9.6 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-input-input_32k_128k | llm_input_token | 4.8 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-input-input_le_32k | llm_input_token | 3.2 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-output-input_128k_256k | llm_output_token | 48.0 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-output-input_32k_128k | llm_output_token | 24.0 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-output-input_le_32k | llm_output_token | 16.0 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-cache-read-input_128k_256k | llm_cache_read_token | 0.36 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-cache-read-input_32k_128k | llm_cache_read_token | 0.18 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-cache-read-input_le_32k | llm_cache_read_token | 0.12 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-input-input_128k_256k | llm_input_token | 1.8 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-input-input_32k_128k | llm_input_token | 0.9 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-input-input_le_32k | llm_input_token | 0.6 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-output-input_128k_256k | llm_output_token | 10.8 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-output-input_32k_128k | llm_output_token | 5.4 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-output-input_le_32k | llm_output_token | 3.6 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-cache-read-input_128k_256k | llm_cache_read_token | 0.36 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-cache-read-input_32k_128k | llm_cache_read_token | 0.18 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-cache-read-input_le_32k | llm_cache_read_token | 0.12 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-input-input_128k_256k | llm_input_token | 1.8 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-input-input_32k_128k | llm_input_token | 0.9 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-input-input_le_32k | llm_input_token | 0.6 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-output-input_128k_256k | llm_output_token | 10.8 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-output-input_32k_128k | llm_output_token | 5.4 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-output-input_le_32k | llm_output_token | 3.6 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-cache-read-input_128k_256k | llm_cache_read_token | 0.16 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-cache-read-input_32k_128k | llm_cache_read_token | 0.08 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-cache-read-input_le_32k | llm_cache_read_token | 0.04 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-input-input_128k_256k | llm_input_token | 0.8 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-input-input_32k_128k | llm_input_token | 0.4 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-input-input_le_32k | llm_input_token | 0.2 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-output-input_128k_256k | llm_output_token | 8.0 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-output-input_32k_128k | llm_output_token | 4.0 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-output-input_le_32k | llm_output_token | 2.0 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-cache-read-input_128k_256k | llm_cache_read_token | 0.16 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-cache-read-input_32k_128k | llm_cache_read_token | 0.08 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-cache-read-input_le_32k | llm_cache_read_token | 0.04 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-input-input_128k_256k | llm_input_token | 0.8 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-input-input_32k_128k | llm_input_token | 0.4 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-input-input_le_32k | llm_input_token | 0.2 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-output-input_128k_256k | llm_output_token | 8.0 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-output-input_32k_128k | llm_output_token | 4.0 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-output-input_le_32k | llm_output_token | 2.0 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-cache-read-input_128k_256k | llm_cache_read_token | 1.92 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-cache-read-input_32k_128k | llm_cache_read_token | 0.96 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-cache-read-input_le_32k | llm_cache_read_token | 0.64 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-input-input_128k_256k | llm_input_token | 9.6 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-input-input_32k_128k | llm_input_token | 4.8 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-input-input_le_32k | llm_input_token | 3.2 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-output-input_128k_256k | llm_output_token | 48.0 | CNY | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-output-input_32k_128k | llm_output_token | 24.0 | CNY | 1000000 | tier_code | input_32k_128k | - |
-| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-output-input_le_32k | llm_output_token | 16.0 | CNY | 1000000 | tier_code | input_le_32k | - |
-| bytedance/cn/pricing/doubao-seedance-2-0-260128.json | bytedance-cn-doubao-seedance-2-0-260128-second-1080p | video_output_second | 2.480000 | CNY | 1 | tier_code | res_1080p | - |
-| bytedance/cn/pricing/doubao-seedance-2-0-260128.json | bytedance-cn-doubao-seedance-2-0-260128-second-480p | video_output_second | 0.460000 | CNY | 1 | tier_code | res_480p | - |
-| bytedance/cn/pricing/doubao-seedance-2-0-260128.json | bytedance-cn-doubao-seedance-2-0-260128-second-4k | video_output_second | 5.050000 | CNY | 1 | tier_code | res_4k | - |
-| bytedance/cn/pricing/doubao-seedance-2-0-260128.json | bytedance-cn-doubao-seedance-2-0-260128-second-720p | video_output_second | 0.990000 | CNY | 1 | tier_code | res_720p | - |
-| bytedance/cn/pricing/doubao-seedance-2-0-fast-260128.json | bytedance-cn-doubao-seedance-2-0-fast-260128-second-480p | video_output_second | 0.370000 | CNY | 1 | tier_code | res_480p | - |
-| bytedance/cn/pricing/doubao-seedance-2-0-fast-260128.json | bytedance-cn-doubao-seedance-2-0-fast-260128-second-720p | video_output_second | 0.800000 | CNY | 1 | tier_code | res_720p | - |
-| bytedance/cn/pricing/doubao-seedance-2-0-mini-260615.json | bytedance-cn-doubao-seedance-2-0-mini-260615-second-480p | video_output_second | 0.230000 | CNY | 1 | tier_code | res_480p | - |
-| bytedance/cn/pricing/doubao-seedance-2-0-mini-260615.json | bytedance-cn-doubao-seedance-2-0-mini-260615-second-720p | video_output_second | 0.500000 | CNY | 1 | tier_code | res_720p | - |
-| bytedance/cn/pricing/doubao-seedance-2-5-260623.json | bytedance-cn-doubao-seedance-2-5-260623-second-1080p | video_output_second | 1.000000 | CNY | 1 | tier_code | res_1080p | - |
-| bytedance/cn/pricing/doubao-seedance-2-5-260623.json | bytedance-cn-doubao-seedance-2-5-260623-second-4k | video_output_second | 1.500000 | CNY | 1 | tier_code | res_4k_native | - |
-| bytedance/cn/pricing/doubao-seedance-2-5-260623.json | bytedance-cn-doubao-seedance-2-5-260623-second-720p | video_output_second | 0.600000 | CNY | 1 | tier_code | res_720p | - |
-| bytedance/cn/pricing/doubao-seedance-2-5-260628.json | bytedance-cn-doubao-seedance-2-5-260628-second-1080p | video_output_second | 3.740000 | CNY | 1 | tier_code | res_1080p | - |
-| bytedance/cn/pricing/doubao-seedance-2-5-260628.json | bytedance-cn-doubao-seedance-2-5-260628-second-480p | video_output_second | 0.670000 | CNY | 1 | tier_code | res_480p | - |
-| bytedance/cn/pricing/doubao-seedance-2-5-260628.json | bytedance-cn-doubao-seedance-2-5-260628-second-720p | video_output_second | 1.510000 | CNY | 1 | tier_code | res_720p | - |
-| bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-layer_split_gt_2_61mp | image_result | 0.300000 | CNY | 1 | tier_code | layer_split_gt_2_61mp | - |
-| bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-layer_split_le_2_61mp | image_result | 0.150000 | CNY | 1 | tier_code | layer_split_le_2_61mp | - |
-| bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-single_image_gt_2_61mp | image_result | 0.600000 | CNY | 1 | tier_code | single_image_gt_2_61mp | - |
-| bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-single_image_le_2_61mp | image_result | 0.300000 | CNY | 1 | tier_code | single_image_le_2_61mp | - |
-| bytedance/global/pricing/dreamina-seedance-2-0-260128.json | bytedance-global-dreamina-seedance-2-0-260128-second-1080p | video_output_second | 0.370000 | USD | 1 | tier_code | res_1080p | - |
-| bytedance/global/pricing/dreamina-seedance-2-0-260128.json | bytedance-global-dreamina-seedance-2-0-260128-second-480p | video_output_second | 0.070000 | USD | 1 | tier_code | res_480p | - |
-| bytedance/global/pricing/dreamina-seedance-2-0-260128.json | bytedance-global-dreamina-seedance-2-0-260128-second-4k | video_output_second | 0.780000 | USD | 1 | tier_code | res_4k | - |
-| bytedance/global/pricing/dreamina-seedance-2-0-260128.json | bytedance-global-dreamina-seedance-2-0-260128-second-720p | video_output_second | 0.150000 | USD | 1 | tier_code | res_720p | - |
-| bytedance/global/pricing/dreamina-seedance-2-0-fast-260128.json | bytedance-global-dreamina-seedance-2-0-fast-260128-second-480p | video_output_second | 0.060000 | USD | 1 | tier_code | res_480p | - |
-| bytedance/global/pricing/dreamina-seedance-2-0-fast-260128.json | bytedance-global-dreamina-seedance-2-0-fast-260128-second-720p | video_output_second | 0.120000 | USD | 1 | tier_code | res_720p | - |
-| bytedance/global/pricing/dreamina-seedance-2-0-mini-260615.json | bytedance-global-dreamina-seedance-2-0-mini-260615-second-480p | video_output_second | 0.040000 | USD | 1 | tier_code | res_480p | - |
-| bytedance/global/pricing/dreamina-seedance-2-0-mini-260615.json | bytedance-global-dreamina-seedance-2-0-mini-260615-second-720p | video_output_second | 0.080000 | USD | 1 | tier_code | res_720p | - |
-| bytedance/global/pricing/dreamina-seedance-2-5-260628.json | bytedance-global-dreamina-seedance-2-5-260628-second-1080p | video_output_second | 0.569000 | USD | 1 | tier_code | res_1080p | - |
-| bytedance/global/pricing/dreamina-seedance-2-5-260628.json | bytedance-global-dreamina-seedance-2-5-260628-second-480p | video_output_second | 0.103000 | USD | 1 | tier_code | res_480p | - |
-| bytedance/global/pricing/dreamina-seedance-2-5-260628.json | bytedance-global-dreamina-seedance-2-5-260628-second-720p | video_output_second | 0.231000 | USD | 1 | tier_code | res_720p | - |
-| bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-cache-read-input_128k_256k | llm_cache_read_token | 0.20 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-cache-read-input_le_128k | llm_cache_read_token | 0.10 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-input-input_128k_256k | llm_input_token | 1.00 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-input-input_le_128k | llm_input_token | 0.50 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-output-input_128k_256k | llm_output_token | 6.00 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-output-input_le_128k | llm_output_token | 3.00 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-lite-260228.json | bytedance-global-seed-2-0-lite-260228-cache-read-input_128k_256k | llm_cache_read_token | 0.10 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-lite-260228.json | bytedance-global-seed-2-0-lite-260228-cache-read-input_le_128k | llm_cache_read_token | 0.05 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-lite-260228.json | bytedance-global-seed-2-0-lite-260228-input-input_128k_256k | llm_input_token | 0.50 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-lite-260228.json | bytedance-global-seed-2-0-lite-260228-input-input_le_128k | llm_input_token | 0.25 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-lite-260228.json | bytedance-global-seed-2-0-lite-260228-output-input_128k_256k | llm_output_token | 4.00 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-lite-260228.json | bytedance-global-seed-2-0-lite-260228-output-input_le_128k | llm_output_token | 2.00 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-lite-260428.json | bytedance-global-seed-2-0-lite-260428-cache-read-input_128k_256k | llm_cache_read_token | 0.10 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-lite-260428.json | bytedance-global-seed-2-0-lite-260428-cache-read-input_le_128k | llm_cache_read_token | 0.05 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-lite-260428.json | bytedance-global-seed-2-0-lite-260428-input-input_128k_256k | llm_input_token | 0.50 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-lite-260428.json | bytedance-global-seed-2-0-lite-260428-input-input_le_128k | llm_input_token | 0.25 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-lite-260428.json | bytedance-global-seed-2-0-lite-260428-output-input_128k_256k | llm_output_token | 4.00 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-lite-260428.json | bytedance-global-seed-2-0-lite-260428-output-input_le_128k | llm_output_token | 2.00 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-mini-260215.json | bytedance-global-seed-2-0-mini-260215-cache-read-input_128k_256k | llm_cache_read_token | 0.04 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-mini-260215.json | bytedance-global-seed-2-0-mini-260215-cache-read-input_le_128k | llm_cache_read_token | 0.02 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-mini-260215.json | bytedance-global-seed-2-0-mini-260215-input-input_128k_256k | llm_input_token | 0.20 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-mini-260215.json | bytedance-global-seed-2-0-mini-260215-input-input_le_128k | llm_input_token | 0.10 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-mini-260215.json | bytedance-global-seed-2-0-mini-260215-output-input_128k_256k | llm_output_token | 0.80 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-mini-260215.json | bytedance-global-seed-2-0-mini-260215-output-input_le_128k | llm_output_token | 0.40 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-mini-260428.json | bytedance-global-seed-2-0-mini-260428-cache-read-input_128k_256k | llm_cache_read_token | 0.04 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-mini-260428.json | bytedance-global-seed-2-0-mini-260428-cache-read-input_le_128k | llm_cache_read_token | 0.02 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-mini-260428.json | bytedance-global-seed-2-0-mini-260428-input-input_128k_256k | llm_input_token | 0.20 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-mini-260428.json | bytedance-global-seed-2-0-mini-260428-input-input_le_128k | llm_input_token | 0.10 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-mini-260428.json | bytedance-global-seed-2-0-mini-260428-output-input_128k_256k | llm_output_token | 0.80 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-mini-260428.json | bytedance-global-seed-2-0-mini-260428-output-input_le_128k | llm_output_token | 0.40 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-cache-read-input_128k_256k | llm_cache_read_token | 0.20 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-cache-read-input_le_128k | llm_cache_read_token | 0.10 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-input-input_128k_256k | llm_input_token | 1.00 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-input-input_le_128k | llm_input_token | 0.50 | USD | 1000000 | tier_code | input_le_128k | - |
-| bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-output-input_128k_256k | llm_output_token | 6.00 | USD | 1000000 | tier_code | input_128k_256k | - |
-| bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-output-input_le_128k | llm_output_token | 3.00 | USD | 1000000 | tier_code | input_le_128k | - |
-| google/global/pricing/gemini-3.1-flash-lite.json | google-gemini-3.1-flash-lite-cache-read-audio | llm_cache_read_token | 0.050000 | USD | 1000000 | tier_code | audio | - |
-| kuaishou/cn/pricing/kling-3.0-turbo.json | kuaishou-cn-kling-3.0-turbo-second-audio-res-1080p | video_output_second | 1.000000 | CNY | 1 | tier_code | audio_res_1080p | - |
-| kuaishou/cn/pricing/kling-3.0-turbo.json | kuaishou-cn-kling-3.0-turbo-second-audio-res-720p | video_output_second | 0.800000 | CNY | 1 | tier_code | audio_res_720p | - |
-| kuaishou/cn/pricing/kling-image-o1.json | kuaishou-cn-kling-image-o1-result-1k-2k | image_result | 0.200000 | CNY | 1 | tier_code | res_1k_2k | - |
-| kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-i2i | image_result | 0.200000 | CNY | 1 | tier_code | i2i_1k_2k | - |
-| kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-multi-ref | image_result | 0.400000 | CNY | 1 | tier_code | multi_ref_1k_2k | - |
-| kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-t2i | image_result | 0.100000 | CNY | 1 | tier_code | t2i_1k_2k | - |
-| kuaishou/cn/pricing/kling-v2-5-turbo.json | kuaishou-cn-kling-v2-5-turbo-second-res-1080p | video_output_second | 0.500000 | CNY | 1 | tier_code | res_1080p | - |
-| kuaishou/cn/pricing/kling-v2-5-turbo.json | kuaishou-cn-kling-v2-5-turbo-second-res-720p | video_output_second | 0.300000 | CNY | 1 | tier_code | res_720p | - |
-| kuaishou/cn/pricing/kling-v2-6.json | kuaishou-cn-kling-v2-6-second-audio-1080p | video_output_second | 1.000000 | CNY | 1 | tier_code | audio_1080p | - |
-| kuaishou/cn/pricing/kling-v2-6.json | kuaishou-cn-kling-v2-6-second-audio-voice-1080p | video_output_second | 1.200000 | CNY | 1 | tier_code | audio_voice_1080p | - |
-| kuaishou/cn/pricing/kling-v2-6.json | kuaishou-cn-kling-v2-6-second-motion-1080p | video_output_second | 0.800000 | CNY | 1 | tier_code | motion_1080p | - |
-| kuaishou/cn/pricing/kling-v2-6.json | kuaishou-cn-kling-v2-6-second-motion-720p | video_output_second | 0.500000 | CNY | 1 | tier_code | motion_720p | - |
-| kuaishou/cn/pricing/kling-v2-6.json | kuaishou-cn-kling-v2-6-second-res-1080p | video_output_second | 0.500000 | CNY | 1 | tier_code | res_1080p | - |
-| kuaishou/cn/pricing/kling-v2-6.json | kuaishou-cn-kling-v2-6-second-res-720p | video_output_second | 0.300000 | CNY | 1 | tier_code | res_720p | - |
-| kuaishou/cn/pricing/kling-v3-omni.json | kuaishou-cn-kling-v3-omni-second-noref-audio-1080p | video_output_second | 1.000000 | CNY | 1 | tier_code | noref_audio_1080p | - |
-| kuaishou/cn/pricing/kling-v3-omni.json | kuaishou-cn-kling-v3-omni-second-noref-audio-4k | video_output_second | 3.000000 | CNY | 1 | tier_code | noref_audio_4k | - |
-| kuaishou/cn/pricing/kling-v3-omni.json | kuaishou-cn-kling-v3-omni-second-noref-audio-720p | video_output_second | 0.800000 | CNY | 1 | tier_code | noref_audio_720p | - |
-| kuaishou/cn/pricing/kling-v3-omni.json | kuaishou-cn-kling-v3-omni-second-noref-silent-1080p | video_output_second | 0.800000 | CNY | 1 | tier_code | noref_silent_1080p | - |
-| kuaishou/cn/pricing/kling-v3-omni.json | kuaishou-cn-kling-v3-omni-second-noref-silent-4k | video_output_second | 3.000000 | CNY | 1 | tier_code | noref_silent_4k | - |
-| kuaishou/cn/pricing/kling-v3-omni.json | kuaishou-cn-kling-v3-omni-second-ref-silent-1080p | video_output_second | 1.200000 | CNY | 1 | tier_code | ref_silent_1080p | - |
-| kuaishou/cn/pricing/kling-v3-omni.json | kuaishou-cn-kling-v3-omni-second-ref-silent-4k | video_output_second | 3.000000 | CNY | 1 | tier_code | ref_silent_4k | - |
-| kuaishou/cn/pricing/kling-v3-omni.json | kuaishou-cn-kling-v3-omni-second-ref-silent-720p | video_output_second | 0.900000 | CNY | 1 | tier_code | ref_silent_720p | - |
-| kuaishou/cn/pricing/kling-v3-omni.json | kuaishou-cn-kling-v3-omni-second-std | video_output_second | 0.600000 | CNY | 1 | tier_code | noref_silent_720p | - |
-| kuaishou/cn/pricing/kling-v3.json | kuaishou-cn-kling-v3-second-audio-res-1080p | video_output_second | 1.200000 | CNY | 1 | tier_code | audio_res_1080p | - |
-| kuaishou/cn/pricing/kling-v3.json | kuaishou-cn-kling-v3-second-audio-res-4k | video_output_second | 3.000000 | CNY | 1 | tier_code | audio_res_4k | - |
-| kuaishou/cn/pricing/kling-v3.json | kuaishou-cn-kling-v3-second-audio-res-720p | video_output_second | 0.900000 | CNY | 1 | tier_code | audio_res_720p | - |
-| kuaishou/cn/pricing/kling-v3.json | kuaishou-cn-kling-v3-second-motion-res-1080p | video_output_second | 1.200000 | CNY | 1 | tier_code | motion_res_1080p | - |
-| kuaishou/cn/pricing/kling-v3.json | kuaishou-cn-kling-v3-second-motion-res-720p | video_output_second | 0.900000 | CNY | 1 | tier_code | motion_res_720p | - |
-| kuaishou/cn/pricing/kling-v3.json | kuaishou-cn-kling-v3-second-res-1080p | video_output_second | 0.800000 | CNY | 1 | tier_code | res_1080p | - |
-| kuaishou/cn/pricing/kling-v3.json | kuaishou-cn-kling-v3-second-res-4k | video_output_second | 3.000000 | CNY | 1 | tier_code | res_4k | - |
-| kuaishou/cn/pricing/kling-v3.json | kuaishou-cn-kling-v3-second-std | video_output_second | 0.600000 | CNY | 1 | tier_code | res_720p | - |
-| kuaishou/cn/pricing/kling-video-o1.json | kuaishou-cn-kling-video-o1-second-noref-1080p | video_output_second | 0.800000 | CNY | 1 | tier_code | noref_1080p | - |
-| kuaishou/cn/pricing/kling-video-o1.json | kuaishou-cn-kling-video-o1-second-noref-720p | video_output_second | 0.600000 | CNY | 1 | tier_code | noref_720p | - |
-| kuaishou/cn/pricing/kling-video-o1.json | kuaishou-cn-kling-video-o1-second-ref-1080p | video_output_second | 1.200000 | CNY | 1 | tier_code | ref_1080p | - |
-| kuaishou/cn/pricing/kling-video-o1.json | kuaishou-cn-kling-video-o1-second-ref-720p | video_output_second | 0.900000 | CNY | 1 | tier_code | ref_720p | - |
-| kuaishou/global/pricing/kling-3.0-turbo.json | kuaishou-global-kling-3.0-turbo-second-audio-res-1080p | video_output_second | 0.140000 | USD | 1 | tier_code | audio_res_1080p | - |
-| kuaishou/global/pricing/kling-3.0-turbo.json | kuaishou-global-kling-3.0-turbo-second-audio-res-720p | video_output_second | 0.112000 | USD | 1 | tier_code | audio_res_720p | - |
-| kuaishou/global/pricing/kling-image-o1.json | kuaishou-global-kling-image-o1-result-1k-2k | image_result | 0.028000 | USD | 1 | tier_code | res_1k_2k | - |
-| kuaishou/global/pricing/kling-v2-1.json | kuaishou-global-kling-v2-1-result-i2i | image_result | 0.028000 | USD | 1 | tier_code | i2i_1k_2k | - |
-| kuaishou/global/pricing/kling-v2-1.json | kuaishou-global-kling-v2-1-result-multi-ref | image_result | 0.056000 | USD | 1 | tier_code | multi_ref_1k_2k | - |
-| kuaishou/global/pricing/kling-v2-1.json | kuaishou-global-kling-v2-1-result-t2i | image_result | 0.014000 | USD | 1 | tier_code | t2i_1k_2k | - |
-| kuaishou/global/pricing/kling-v2-5-turbo.json | kuaishou-global-kling-v2-5-turbo-second-res-1080p | video_output_second | 0.070000 | USD | 1 | tier_code | res_1080p | - |
-| kuaishou/global/pricing/kling-v2-5-turbo.json | kuaishou-global-kling-v2-5-turbo-second-res-720p | video_output_second | 0.042000 | USD | 1 | tier_code | res_720p | - |
-| kuaishou/global/pricing/kling-v2-6.json | kuaishou-global-kling-v2-6-second-audio-1080p | video_output_second | 0.140000 | USD | 1 | tier_code | audio_1080p | - |
-| kuaishou/global/pricing/kling-v2-6.json | kuaishou-global-kling-v2-6-second-audio-voice-1080p | video_output_second | 0.168000 | USD | 1 | tier_code | audio_voice_1080p | - |
-| kuaishou/global/pricing/kling-v2-6.json | kuaishou-global-kling-v2-6-second-motion-1080p | video_output_second | 0.112000 | USD | 1 | tier_code | motion_1080p | - |
-| kuaishou/global/pricing/kling-v2-6.json | kuaishou-global-kling-v2-6-second-motion-720p | video_output_second | 0.070000 | USD | 1 | tier_code | motion_720p | - |
-| kuaishou/global/pricing/kling-v2-6.json | kuaishou-global-kling-v2-6-second-res-1080p | video_output_second | 0.070000 | USD | 1 | tier_code | res_1080p | - |
-| kuaishou/global/pricing/kling-v2-6.json | kuaishou-global-kling-v2-6-second-res-720p | video_output_second | 0.042000 | USD | 1 | tier_code | res_720p | - |
-| kuaishou/global/pricing/kling-v3-omni.json | kuaishou-global-kling-v3-omni-second | video_output_second | 0.084000 | USD | 1 | tier_code | noref_silent_720p | - |
-| kuaishou/global/pricing/kling-v3-omni.json | kuaishou-global-kling-v3-omni-second-noref-audio-1080p | video_output_second | 0.140000 | USD | 1 | tier_code | noref_audio_1080p | - |
-| kuaishou/global/pricing/kling-v3-omni.json | kuaishou-global-kling-v3-omni-second-noref-audio-4k | video_output_second | 0.420000 | USD | 1 | tier_code | noref_audio_4k | - |
-| kuaishou/global/pricing/kling-v3-omni.json | kuaishou-global-kling-v3-omni-second-noref-audio-720p | video_output_second | 0.112000 | USD | 1 | tier_code | noref_audio_720p | - |
-| kuaishou/global/pricing/kling-v3-omni.json | kuaishou-global-kling-v3-omni-second-noref-silent-1080p | video_output_second | 0.112000 | USD | 1 | tier_code | noref_silent_1080p | - |
-| kuaishou/global/pricing/kling-v3-omni.json | kuaishou-global-kling-v3-omni-second-noref-silent-4k | video_output_second | 0.420000 | USD | 1 | tier_code | noref_silent_4k | - |
-| kuaishou/global/pricing/kling-v3-omni.json | kuaishou-global-kling-v3-omni-second-ref-silent-1080p | video_output_second | 0.168000 | USD | 1 | tier_code | ref_silent_1080p | - |
-| kuaishou/global/pricing/kling-v3-omni.json | kuaishou-global-kling-v3-omni-second-ref-silent-4k | video_output_second | 0.420000 | USD | 1 | tier_code | ref_silent_4k | - |
-| kuaishou/global/pricing/kling-v3-omni.json | kuaishou-global-kling-v3-omni-second-ref-silent-720p | video_output_second | 0.126000 | USD | 1 | tier_code | ref_silent_720p | - |
-| kuaishou/global/pricing/kling-v3.json | kuaishou-global-kling-v3-second | video_output_second | 0.084000 | USD | 1 | tier_code | res_720p | - |
-| kuaishou/global/pricing/kling-v3.json | kuaishou-global-kling-v3-second-audio-res-1080p | video_output_second | 0.168000 | USD | 1 | tier_code | audio_res_1080p | - |
-| kuaishou/global/pricing/kling-v3.json | kuaishou-global-kling-v3-second-audio-res-4k | video_output_second | 0.420000 | USD | 1 | tier_code | audio_res_4k | - |
-| kuaishou/global/pricing/kling-v3.json | kuaishou-global-kling-v3-second-audio-res-720p | video_output_second | 0.126000 | USD | 1 | tier_code | audio_res_720p | - |
-| kuaishou/global/pricing/kling-v3.json | kuaishou-global-kling-v3-second-motion-res-1080p | video_output_second | 0.168000 | USD | 1 | tier_code | motion_res_1080p | - |
-| kuaishou/global/pricing/kling-v3.json | kuaishou-global-kling-v3-second-motion-res-720p | video_output_second | 0.126000 | USD | 1 | tier_code | motion_res_720p | - |
-| kuaishou/global/pricing/kling-v3.json | kuaishou-global-kling-v3-second-res-1080p | video_output_second | 0.112000 | USD | 1 | tier_code | res_1080p | - |
-| kuaishou/global/pricing/kling-v3.json | kuaishou-global-kling-v3-second-res-4k | video_output_second | 0.420000 | USD | 1 | tier_code | res_4k | - |
-| kuaishou/global/pricing/kling-video-o1.json | kuaishou-global-kling-video-o1-second-noref-1080p | video_output_second | 0.112000 | USD | 1 | tier_code | noref_1080p | - |
-| kuaishou/global/pricing/kling-video-o1.json | kuaishou-global-kling-video-o1-second-noref-720p | video_output_second | 0.084000 | USD | 1 | tier_code | noref_720p | - |
-| kuaishou/global/pricing/kling-video-o1.json | kuaishou-global-kling-video-o1-second-ref-1080p | video_output_second | 0.168000 | USD | 1 | tier_code | ref_1080p | - |
-| kuaishou/global/pricing/kling-video-o1.json | kuaishou-global-kling-video-o1-second-ref-720p | video_output_second | 0.126000 | USD | 1 | tier_code | ref_720p | - |
-| luma_ai/global/pricing/ray-3.14.json | luma-ai-global-ray-3-2-second-720p-10s | video_output_second | 0.090000 | USD | 1 | tier_code | dur_10s | - |
-| luma_ai/global/pricing/ray-3.14.json | luma-ai-global-ray-3-2-second-720p-5s | video_output_second | 0.060000 | USD | 1 | tier_code | dur_5s | - |
-| luma_ai/global/pricing/ray-3.2.json | luma-ai-global-ray-3-2-second-1080p-10s | video_output_second | 0.360000 | USD | 1 | tier_code | res_1080p_dur_10s | - |
-| luma_ai/global/pricing/ray-3.2.json | luma-ai-global-ray-3-2-second-1080p-5s | video_output_second | 0.240000 | USD | 1 | tier_code | res_1080p_dur_5s | - |
-| luma_ai/global/pricing/ray-3.2.json | luma-ai-global-ray-3-2-second-540p-10s | video_output_second | 0.045000 | USD | 1 | tier_code | res_540p_dur_10s | - |
-| luma_ai/global/pricing/ray-3.2.json | luma-ai-global-ray-3-2-second-540p-5s | video_output_second | 0.030000 | USD | 1 | tier_code | res_540p_dur_5s | - |
-| luma_ai/global/pricing/ray-3.2.json | luma-ai-global-ray-3-2-second-720p-10s | video_output_second | 0.090000 | USD | 1 | tier_code | res_720p_dur_10s | - |
-| luma_ai/global/pricing/ray-3.2.json | luma-ai-global-ray-3-2-second-720p-5s | video_output_second | 0.060000 | USD | 1 | tier_code | res_720p_dur_5s | - |
-| luma_ai/global/pricing/ray-3.json | luma-ai-global-ray-3-2-second-720p-10s | video_output_second | 0.090000 | USD | 1 | tier_code | dur_10s | - |
-| luma_ai/global/pricing/ray-3.json | luma-ai-global-ray-3-2-second-720p-5s | video_output_second | 0.060000 | USD | 1 | tier_code | dur_5s | - |
-| minimax/cn/pricing/MiniMax-H3-Max.json | minimax-cn-h3-max-second-res-480p | video_output_second | 0.330000 | CNY | 1 | tier_code | res_480p | - |
-| minimax/cn/pricing/MiniMax-H3-Max.json | minimax-cn-h3-max-second-res-768p | video_output_second | 0.500000 | CNY | 1 | tier_code | res_768p | - |
-| minimax/cn/pricing/MiniMax-H3-Regeneration.json | minimax-cn-h3-regeneration-second-768p-to-2k | video_output_second | 0.300000 | CNY | 1 | tier_code | regen_768p_to_2k | - |
-| minimax/cn/pricing/MiniMax-H3.json | minimax-cn-h3-second-res-2k | video_output_second | 0.800000 | CNY | 1 | tier_code | res_2k | - |
-| minimax/cn/pricing/MiniMax-H3.json | minimax-cn-h3-second-res-768p | video_output_second | 0.500000 | CNY | 1 | tier_code | res_768p | - |
-| minimax/cn/pricing/hailuo-02.json | minimax-cn-hailuo-02-result-res-1080p-dur-6s | video_result | 3.500000 | CNY | 1 | tier_code | res_1080p_dur_6s | - |
-| minimax/cn/pricing/hailuo-02.json | minimax-cn-hailuo-02-result-res-512p-dur-10s | video_result | 1.000000 | CNY | 1 | tier_code | res_512p_dur_10s | - |
-| minimax/cn/pricing/hailuo-02.json | minimax-cn-hailuo-02-result-res-512p-dur-6s | video_result | 0.600000 | CNY | 1 | tier_code | res_512p_dur_6s | - |
-| minimax/cn/pricing/hailuo-02.json | minimax-cn-hailuo-02-result-res-768p-dur-10s | video_result | 4.000000 | CNY | 1 | tier_code | res_768p_dur_10s | - |
-| minimax/cn/pricing/hailuo-02.json | minimax-cn-hailuo-02-result-res-768p-dur-6s | video_result | 2.000000 | CNY | 1 | tier_code | res_768p_dur_6s | - |
-| minimax/cn/pricing/hailuo-2.3-fast.json | minimax-cn-hailuo-2-3-fast-result-res-1080p-dur-6s | video_result | 2.310000 | CNY | 1 | tier_code | res_1080p_dur_6s | - |
-| minimax/cn/pricing/hailuo-2.3-fast.json | minimax-cn-hailuo-2-3-fast-result-res-768p-dur-10s | video_result | 2.250000 | CNY | 1 | tier_code | res_768p_dur_10s | - |
-| minimax/cn/pricing/hailuo-2.3-fast.json | minimax-cn-hailuo-2-3-fast-result-res-768p-dur-6s | video_result | 1.350000 | CNY | 1 | tier_code | res_768p_dur_6s | - |
-| minimax/cn/pricing/hailuo-2.3.json | minimax-cn-hailuo-2-3-result-res-1080p-dur-6s | video_result | 3.500000 | CNY | 1 | tier_code | res_1080p_dur_6s | - |
-| minimax/cn/pricing/hailuo-2.3.json | minimax-cn-hailuo-2-3-result-res-768p-dur-10s | video_result | 4.000000 | CNY | 1 | tier_code | res_768p_dur_10s | - |
-| minimax/cn/pricing/hailuo-2.3.json | minimax-cn-hailuo-2-3-result-res-768p-dur-6s | video_result | 2.000000 | CNY | 1 | tier_code | res_768p_dur_6s | - |
-| minimax/global/pricing/MiniMax-H3-Max.json | minimax-global-h3-max-second-res-480p | video_output_second | 0.050000 | USD | 1 | tier_code | res_480p | - |
-| minimax/global/pricing/MiniMax-H3-Max.json | minimax-global-h3-max-second-res-768p | video_output_second | 0.080000 | USD | 1 | tier_code | res_768p | - |
-| minimax/global/pricing/MiniMax-H3-Regeneration.json | minimax-global-h3-regeneration-second-768p-to-2k | video_output_second | 0.050000 | USD | 1 | tier_code | regen_768p_to_2k | - |
-| minimax/global/pricing/MiniMax-H3.json | minimax-global-h3-second-2k | video_output_second | 0.130000 | USD | 1 | tier_code | res_2k | - |
-| minimax/global/pricing/MiniMax-H3.json | minimax-global-h3-second-res-768p | video_output_second | 0.080000 | USD | 1 | tier_code | res_768p | - |
-| minimax/global/pricing/hailuo-02.json | minimax-global-hailuo-02-result-res-1080p-dur-6s | video_result | 0.490000 | USD | 1 | tier_code | res_1080p_dur_6s | - |
-| minimax/global/pricing/hailuo-02.json | minimax-global-hailuo-02-result-res-512p-dur-10s | video_result | 0.150000 | USD | 1 | tier_code | res_512p_dur_10s | - |
-| minimax/global/pricing/hailuo-02.json | minimax-global-hailuo-02-result-res-512p-dur-6s | video_result | 0.100000 | USD | 1 | tier_code | res_512p_dur_6s | - |
-| minimax/global/pricing/hailuo-02.json | minimax-global-hailuo-02-result-res-768p-dur-10s | video_result | 0.560000 | USD | 1 | tier_code | res_768p_dur_10s | - |
-| minimax/global/pricing/hailuo-02.json | minimax-global-hailuo-02-result-res-768p-dur-6s | video_result | 0.280000 | USD | 1 | tier_code | res_768p_dur_6s | - |
-| minimax/global/pricing/hailuo-2.3-fast.json | minimax-global-hailuo-2-3-fast-result-res-1080p-dur-6s | video_result | 0.330000 | USD | 1 | tier_code | res_1080p_dur_6s | - |
-| minimax/global/pricing/hailuo-2.3-fast.json | minimax-global-hailuo-2-3-fast-result-res-768p-dur-10s | video_result | 0.320000 | USD | 1 | tier_code | res_768p_dur_10s | - |
-| minimax/global/pricing/hailuo-2.3-fast.json | minimax-global-hailuo-2-3-fast-result-res-768p-dur-6s | video_result | 0.190000 | USD | 1 | tier_code | res_768p_dur_6s | - |
-| minimax/global/pricing/hailuo-2.3.json | minimax-global-hailuo-2-3-result-res-1080p-dur-6s | video_result | 0.490000 | USD | 1 | tier_code | res_1080p_dur_6s | - |
-| minimax/global/pricing/hailuo-2.3.json | minimax-global-hailuo-2-3-result-res-768p-dur-10s | video_result | 0.560000 | USD | 1 | tier_code | res_768p_dur_10s | - |
-| minimax/global/pricing/hailuo-2.3.json | minimax-global-hailuo-2-3-result-res-768p-dur-6s | video_result | 0.280000 | USD | 1 | tier_code | res_768p_dur_6s | - |
-| openai/global/pricing/gpt-5.3-codex.json | openai-gpt-5-3-codex-fast-mode-cache-read | llm_cache_read_token | 0.350000 | USD | 1000000 | tier_code | fast_mode | - |
-| openai/global/pricing/gpt-5.3-codex.json | openai-gpt-5-3-codex-fast-mode-input | llm_input_token | 3.500000 | USD | 1000000 | tier_code | fast_mode | - |
-| openai/global/pricing/gpt-5.3-codex.json | openai-gpt-5-3-codex-fast-mode-output | llm_output_token | 28.000000 | USD | 1000000 | tier_code | fast_mode | - |
-| openai/global/pricing/gpt-5.6-luna.json | openai-gpt-5-6-luna-cache-read-long-context | llm_cache_read_token | 0.040000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-5.6-luna.json | openai-gpt-5-6-luna-cache-write-long-context | llm_cache_write_token | 0.500000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-5.6-luna.json | openai-gpt-5-6-luna-input-long-context | llm_input_token | 0.400000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-5.6-luna.json | openai-gpt-5-6-luna-output-long-context | llm_output_token | 1.800000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-5.6-sol.json | openai-gpt-5-6-sol-cache-read-long-context | llm_cache_read_token | 0.800000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-5.6-sol.json | openai-gpt-5-6-sol-cache-write-long-context | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-5.6-sol.json | openai-gpt-5-6-sol-input-long-context | llm_input_token | 8.000000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-5.6-sol.json | openai-gpt-5-6-sol-output-long-context | llm_output_token | 30.000000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-5.6-terra.json | openai-gpt-5-6-terra-cache-read-long-context | llm_cache_read_token | 0.400000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-5.6-terra.json | openai-gpt-5-6-terra-cache-write-long-context | llm_cache_write_token | 5.000000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-5.6-terra.json | openai-gpt-5-6-terra-input-long-context | llm_input_token | 4.000000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-5.6-terra.json | openai-gpt-5-6-terra-output-long-context | llm_output_token | 18.000000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-cache-read-long-context | llm_cache_read_token | 2.000000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-cache-write-long-context | llm_cache_write_token | 25.000000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-input-long-context | llm_input_token | 20.000000 | USD | 1000000 | tier_code | long_context | - |
-| openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-output-long-context | llm_output_token | 75.000000 | USD | 1000000 | tier_code | long_context | - |
-| runway/global/pricing/gemini_image3_pro.json | runway-global-gemini_image3_pro-image-res_1k_2k | image_result | 0.200000 | USD | 1 | tier_code | res_1k_2k | - |
-| runway/global/pricing/gemini_image3_pro.json | runway-global-gemini_image3_pro-image-res_4k | image_result | 0.400000 | USD | 1 | tier_code | res_4k | - |
-| runway/global/pricing/gemini_omni_flash.json | runway-global-gemini-omni-flash-input-second | video_input_second | 0.110000 | USD | 1 | tier_code | video_to_video | - |
-| runway/global/pricing/gen4_image.json | runway-global-gen4-image-result-1080p | image_result | 0.080000 | USD | 1 | tier_code | res_1080p | - |
-| runway/global/pricing/gen4_image.json | runway-global-gen4-image-result-720p | image_result | 0.050000 | USD | 1 | tier_code | res_720p | - |
-| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_auto_1k_2k | image_result | 0.200000 | USD | 1 | tier_code | q_auto_1k_2k | - |
-| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_auto_4k | image_result | 0.410000 | USD | 1 | tier_code | q_auto_4k | - |
-| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_high_1k_2k | image_result | 0.200000 | USD | 1 | tier_code | q_high_1k_2k | - |
-| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_high_4k | image_result | 0.410000 | USD | 1 | tier_code | q_high_4k | - |
-| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_low_1k_2k | image_result | 0.010000 | USD | 1 | tier_code | q_low_1k_2k | - |
-| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_low_4k | image_result | 0.020000 | USD | 1 | tier_code | q_low_4k | - |
-| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_medium_1k_2k | image_result | 0.050000 | USD | 1 | tier_code | q_medium_1k_2k | - |
-| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_medium_4k | image_result | 0.110000 | USD | 1 | tier_code | q_medium_4k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_high_1k_2k | image_result | 0.160000 | USD | 1 | tier_code | q_high_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_high_4k | image_result | 0.190000 | USD | 1 | tier_code | q_high_4k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_low_1k_2k | image_result | 0.010000 | USD | 1 | tier_code | q_low_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_low_4k | image_result | 0.020000 | USD | 1 | tier_code | q_low_4k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_max_1k_2k | image_result | 0.630000 | USD | 1 | tier_code | q_max_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_max_4k | image_result | 0.760000 | USD | 1 | tier_code | q_max_4k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_medium_1k_2k | image_result | 0.050000 | USD | 1 | tier_code | q_medium_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_medium_4k | image_result | 0.110000 | USD | 1 | tier_code | q_medium_4k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_xhigh_1k_2k | image_result | 0.280000 | USD | 1 | tier_code | q_xhigh_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_xhigh_4k | image_result | 0.340000 | USD | 1 | tier_code | q_xhigh_4k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_high_1k_2k | image_result | 0.160000 | USD | 1 | tier_code | q_high_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_high_4k | image_result | 0.190000 | USD | 1 | tier_code | q_high_4k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_low_1k_2k | image_result | 0.010000 | USD | 1 | tier_code | q_low_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_low_4k | image_result | 0.020000 | USD | 1 | tier_code | q_low_4k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_max_1k_2k | image_result | 0.630000 | USD | 1 | tier_code | q_max_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_max_4k | image_result | 0.760000 | USD | 1 | tier_code | q_max_4k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_medium_1k_2k | image_result | 0.050000 | USD | 1 | tier_code | q_medium_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_medium_4k | image_result | 0.110000 | USD | 1 | tier_code | q_medium_4k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_xhigh_1k_2k | image_result | 0.280000 | USD | 1 | tier_code | q_xhigh_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_xhigh_4k | image_result | 0.340000 | USD | 1 | tier_code | q_xhigh_4k | - |
-| runway/global/pricing/grok_imagine_1_5.json | runway-global-grok_imagine_1_5-second-res_1080p | video_output_second | 0.290000 | USD | 1 | tier_code | res_1080p | - |
-| runway/global/pricing/grok_imagine_1_5.json | runway-global-grok_imagine_1_5-second-res_480p | video_output_second | 0.100000 | USD | 1 | tier_code | res_480p | - |
-| runway/global/pricing/grok_imagine_1_5.json | runway-global-grok_imagine_1_5-second-res_720p | video_output_second | 0.160000 | USD | 1 | tier_code | res_720p | - |
-| runway/global/pricing/grok_imagine_image_2.json | runway-global-grok_imagine_image_2-image-low_1k | image_result | 0.040000 | USD | 1 | tier_code | low_1k | - |
-| runway/global/pricing/grok_imagine_image_2.json | runway-global-grok_imagine_image_2-image-low_2k | image_result | 0.060000 | USD | 1 | tier_code | low_2k | - |
-| runway/global/pricing/grok_imagine_image_2.json | runway-global-grok_imagine_image_2-image-medium_1k | image_result | 0.060000 | USD | 1 | tier_code | medium_1k | - |
-| runway/global/pricing/grok_imagine_image_2.json | runway-global-grok_imagine_image_2-image-medium_2k | image_result | 0.080000 | USD | 1 | tier_code | medium_2k | - |
-| runway/global/pricing/gwm1_avatars.json | runway-global-gwm1-avatars-second-6s-block | video_output_second | 0.020000 | USD | 6 | tier_code | per_6s_block | - |
-| runway/global/pricing/h3_max.json | runway-global-h3_max-second-res_480p | video_output_second | 0.050000 | USD | 1 | tier_code | res_480p | - |
-| runway/global/pricing/h3_max.json | runway-global-h3_max-second-res_768p | video_output_second | 0.080000 | USD | 1 | tier_code | res_768p | - |
-| runway/global/pricing/hailuo3.json | runway-global-hailuo3-second-res_2k | video_output_second | 0.150000 | USD | 1 | tier_code | res_2k | - |
-| runway/global/pricing/hailuo3.json | runway-global-hailuo3-second-res_768p | video_output_second | 0.100000 | USD | 1 | tier_code | res_768p | - |
-| runway/global/pricing/happyhorse_1_0.json | runway-global-happyhorse_1_0-second-res_1080p | video_output_second | 0.300000 | USD | 1 | tier_code | res_1080p | - |
-| runway/global/pricing/happyhorse_1_0.json | runway-global-happyhorse_1_0-second-res_720p | video_output_second | 0.150000 | USD | 1 | tier_code | res_720p | - |
-| runway/global/pricing/magnific_precision_upscaler_v2.json | runway-global-magnific_precision_upscaler_v2-image-over_4096px | image_result | 1.500000 | USD | 1 | tier_code | over_4096px | - |
-| runway/global/pricing/magnific_precision_upscaler_v2.json | runway-global-magnific_precision_upscaler_v2-image-upto_4096px | image_result | 0.250000 | USD | 1 | tier_code | upto_4096px | - |
-| runway/global/pricing/ruby.json | runway-global-ruby-second-over-4mp | video_output_second | 0.400000 | USD | 1 | tier_code | over_4mp | - |
-| runway/global/pricing/ruby.json | runway-global-ruby-second-upto-4mp | video_output_second | 0.200000 | USD | 1 | tier_code | upto_4mp | - |
-| runway/global/pricing/seedance2.json | runway-global-seedance2-second-res_1080p | video_output_second | 0.400000 | USD | 1 | tier_code | res_1080p | - |
-| runway/global/pricing/seedance2.json | runway-global-seedance2-second-res_480p_720p | video_output_second | 0.360000 | USD | 1 | tier_code | res_480p_720p | - |
-| runway/global/pricing/seedance2.json | runway-global-seedance2-second-res_4k | video_output_second | 1.500000 | USD | 1 | tier_code | res_4k | - |
-| runway/global/pricing/seedance2_5.json | runway-global-seedance2-5-input-second-res_1080p | video_input_second | 0.340000 | USD | 1 | tier_code | input_res_1080p | - |
-| runway/global/pricing/seedance2_5.json | runway-global-seedance2-5-input-second-res_480p | video_input_second | 0.100000 | USD | 1 | tier_code | input_res_480p | - |
-| runway/global/pricing/seedance2_5.json | runway-global-seedance2-5-input-second-res_720p | video_input_second | 0.150000 | USD | 1 | tier_code | input_res_720p | - |
-| runway/global/pricing/seedance2_5.json | runway-global-seedance2_5-second-res_1080p | video_output_second | 0.680000 | USD | 1 | tier_code | res_1080p | - |
-| runway/global/pricing/seedance2_5.json | runway-global-seedance2_5-second-res_480p | video_output_second | 0.200000 | USD | 1 | tier_code | res_480p | - |
-| runway/global/pricing/seedance2_5.json | runway-global-seedance2_5-second-res_720p | video_output_second | 0.300000 | USD | 1 | tier_code | res_720p | - |
-| runway/global/pricing/seedance2_fast.json | runway-global-seedance2_fast-second-res_480p_720p | video_output_second | 0.290000 | USD | 1 | tier_code | res_480p_720p | - |
-| runway/global/pricing/seedance2_mini.json | runway-global-seedance2_mini-second-res_480p_720p | video_output_second | 0.160000 | USD | 1 | tier_code | res_480p_720p | - |
-| runway/global/pricing/seedream5_pro.json | runway-global-seedream5_pro-image-res_1k | image_result | 0.050000 | USD | 1 | tier_code | res_1k | - |
-| runway/global/pricing/seedream5_pro.json | runway-global-seedream5_pro-image-res_2k | image_result | 0.090000 | USD | 1 | tier_code | res_2k | - |
-| runway/global/pricing/veo3.1.json | runway-global-veo3-1-second-audio | video_output_second | 0.400000 | USD | 1 | tier_code | audio | - |
-| runway/global/pricing/veo3.1.json | runway-global-veo3-1-second-no_audio | video_output_second | 0.200000 | USD | 1 | tier_code | no_audio | - |
-| runway/global/pricing/veo3.1_fast.json | runway-global-veo3-1_fast-second-audio | video_output_second | 0.150000 | USD | 1 | tier_code | audio | - |
-| runway/global/pricing/veo3.1_fast.json | runway-global-veo3-1_fast-second-no_audio | video_output_second | 0.100000 | USD | 1 | tier_code | no_audio | - |
-| runway/global/pricing/wan3.json | runway-global-wan3-second-res_1080p | video_output_second | 0.200000 | USD | 1 | tier_code | res_1080p | - |
-| runway/global/pricing/wan3.json | runway-global-wan3-second-res_480p | video_output_second | 0.050000 | USD | 1 | tier_code | res_480p | - |
-| runway/global/pricing/wan3.json | runway-global-wan3-second-res_720p | video_output_second | 0.100000 | USD | 1 | tier_code | res_720p | - |
-| vidu/cn/pricing/audio1.0-text2audio.json | vidu-cn-audio1-0-text2audio-under-10s | sfx_result | 0.625000 | CNY | 1 | tier_code | under_10s | - |
-| vidu/cn/pricing/audio1.0-text2audio.json | vidu-cn-audio1-0-text2audio-under-5s | sfx_result | 0.312500 | CNY | 1 | tier_code | under_5s | - |
-| vidu/cn/pricing/audio1.0-timing2audio.json | vidu-cn-audio1-0-timing2audio-under-10s | sfx_result | 0.625000 | CNY | 1 | tier_code | under_10s | - |
-| vidu/cn/pricing/audio1.0-timing2audio.json | vidu-cn-audio1-0-timing2audio-under-5s | sfx_result | 0.312500 | CNY | 1 | tier_code | under_5s | - |
-| vidu/cn/pricing/viduq3-mix.json | vidu-cn-viduq3-mix-second-ref-res-1080p | video_output_second | 0.906250 | CNY | 1 | tier_code | ref_res_1080p | - |
-| vidu/cn/pricing/viduq3-mix.json | vidu-cn-viduq3-mix-second-ref-res-720p | video_output_second | 0.750000 | CNY | 1 | tier_code | ref_res_720p | - |
-| vidu/cn/pricing/viduq3-pro-fast.json | vidu-cn-viduq3-pro-fast-second-offpeak-res-1080p | video_output_second | 0.250000 | CNY | 1 | tier_code | offpeak_res_1080p | - |
-| vidu/cn/pricing/viduq3-pro-fast.json | vidu-cn-viduq3-pro-fast-second-offpeak-res-720p | video_output_second | 0.187500 | CNY | 1 | tier_code | offpeak_res_720p | - |
-| vidu/cn/pricing/viduq3-pro-fast.json | vidu-cn-viduq3-pro-fast-second-res-1080p | video_output_second | 0.468750 | CNY | 1 | tier_code | res_1080p | - |
-| vidu/cn/pricing/viduq3-pro-fast.json | vidu-cn-viduq3-pro-fast-second-res-720p | video_output_second | 0.375000 | CNY | 1 | tier_code | res_720p | - |
-| vidu/cn/pricing/viduq3-pro.json | vidu-cn-viduq3-pro-second-offpeak-res-1080p | video_output_second | 0.375000 | CNY | 1 | tier_code | offpeak_res_1080p | - |
-| vidu/cn/pricing/viduq3-pro.json | vidu-cn-viduq3-pro-second-offpeak-res-540p | video_output_second | 0.156250 | CNY | 1 | tier_code | offpeak_res_540p | - |
-| vidu/cn/pricing/viduq3-pro.json | vidu-cn-viduq3-pro-second-offpeak-res-720p | video_output_second | 0.312500 | CNY | 1 | tier_code | offpeak_res_720p | - |
-| vidu/cn/pricing/viduq3-pro.json | vidu-cn-viduq3-pro-second-res-1080p | video_output_second | 0.750000 | CNY | 1 | tier_code | res_1080p | - |
-| vidu/cn/pricing/viduq3-pro.json | vidu-cn-viduq3-pro-second-res-540p | video_output_second | 0.281250 | CNY | 1 | tier_code | res_540p | - |
-| vidu/cn/pricing/viduq3-pro.json | vidu-cn-viduq3-pro-second-res-720p | video_output_second | 0.625000 | CNY | 1 | tier_code | res_720p | - |
-| vidu/cn/pricing/viduq3-turbo.json | vidu-cn-viduq3-turbo-second-offpeak-res-1080p | video_output_second | 0.218750 | CNY | 1 | tier_code | offpeak_res_1080p | - |
-| vidu/cn/pricing/viduq3-turbo.json | vidu-cn-viduq3-turbo-second-offpeak-res-540p | video_output_second | 0.125000 | CNY | 1 | tier_code | offpeak_res_540p | - |
-| vidu/cn/pricing/viduq3-turbo.json | vidu-cn-viduq3-turbo-second-offpeak-res-720p | video_output_second | 0.187500 | CNY | 1 | tier_code | offpeak_res_720p | - |
-| vidu/cn/pricing/viduq3-turbo.json | vidu-cn-viduq3-turbo-second-ref-offpeak-res-1080p | video_output_second | 0.218750 | CNY | 1 | tier_code | ref_offpeak_res_1080p | - |
-| vidu/cn/pricing/viduq3-turbo.json | vidu-cn-viduq3-turbo-second-ref-offpeak-res-540p | video_output_second | 0.062500 | CNY | 1 | tier_code | ref_offpeak_res_540p | - |
-| vidu/cn/pricing/viduq3-turbo.json | vidu-cn-viduq3-turbo-second-ref-offpeak-res-720p | video_output_second | 0.156250 | CNY | 1 | tier_code | ref_offpeak_res_720p | - |
-| vidu/cn/pricing/viduq3-turbo.json | vidu-cn-viduq3-turbo-second-ref-res-1080p | video_output_second | 0.406250 | CNY | 1 | tier_code | ref_res_1080p | - |
-| vidu/cn/pricing/viduq3-turbo.json | vidu-cn-viduq3-turbo-second-ref-res-540p | video_output_second | 0.125000 | CNY | 1 | tier_code | ref_res_540p | - |
-| vidu/cn/pricing/viduq3-turbo.json | vidu-cn-viduq3-turbo-second-ref-res-720p | video_output_second | 0.312500 | CNY | 1 | tier_code | ref_res_720p | - |
-| vidu/cn/pricing/viduq3-turbo.json | vidu-cn-viduq3-turbo-second-res-1080p | video_output_second | 0.406250 | CNY | 1 | tier_code | res_1080p | - |
-| vidu/cn/pricing/viduq3-turbo.json | vidu-cn-viduq3-turbo-second-res-540p | video_output_second | 0.218750 | CNY | 1 | tier_code | res_540p | - |
-| vidu/cn/pricing/viduq3-turbo.json | vidu-cn-viduq3-turbo-second-res-720p | video_output_second | 0.375000 | CNY | 1 | tier_code | res_720p | - |
-| vidu/cn/pricing/viduq3.json | vidu-cn-viduq3-second-ref-offpeak-res-1080p | video_output_second | 0.218750 | CNY | 1 | tier_code | ref_offpeak_res_1080p | - |
-| vidu/cn/pricing/viduq3.json | vidu-cn-viduq3-second-ref-offpeak-res-540p | video_output_second | 0.125000 | CNY | 1 | tier_code | ref_offpeak_res_540p | - |
-| vidu/cn/pricing/viduq3.json | vidu-cn-viduq3-second-ref-offpeak-res-720p | video_output_second | 0.187500 | CNY | 1 | tier_code | ref_offpeak_res_720p | - |
-| vidu/cn/pricing/viduq3.json | vidu-cn-viduq3-second-ref-res-1080p | video_output_second | 0.468750 | CNY | 1 | tier_code | ref_res_1080p | - |
-| vidu/cn/pricing/viduq3.json | vidu-cn-viduq3-second-ref-res-540p | video_output_second | 0.218750 | CNY | 1 | tier_code | ref_res_540p | - |
-| vidu/cn/pricing/viduq3.json | vidu-cn-viduq3-second-ref-res-720p | video_output_second | 0.375000 | CNY | 1 | tier_code | ref_res_720p | - |
-| vidu/global/pricing/audio1.0-text2audio.json | vidu-global-audio1-0-text2audio-under-10s | sfx_result | 0.100000 | USD | 1 | tier_code | under_10s | - |
-| vidu/global/pricing/audio1.0-text2audio.json | vidu-global-audio1-0-text2audio-under-5s | sfx_result | 0.050000 | USD | 1 | tier_code | under_5s | - |
-| vidu/global/pricing/audio1.0-timing2audio.json | vidu-global-audio1-0-timing2audio-under-10s | sfx_result | 0.100000 | USD | 1 | tier_code | under_10s | - |
-| vidu/global/pricing/audio1.0-timing2audio.json | vidu-global-audio1-0-timing2audio-under-5s | sfx_result | 0.050000 | USD | 1 | tier_code | under_5s | - |
-| vidu/global/pricing/viduq3-mix.json | vidu-global-viduq3-mix-second-ref-res-1080p | video_output_second | 0.145000 | USD | 1 | tier_code | ref_res_1080p | - |
-| vidu/global/pricing/viduq3-mix.json | vidu-global-viduq3-mix-second-ref-res-720p | video_output_second | 0.120000 | USD | 1 | tier_code | ref_res_720p | - |
-| vidu/global/pricing/viduq3-pro-fast.json | vidu-global-viduq3-pro-fast-second-offpeak-res-1080p | video_output_second | 0.065000 | USD | 1 | tier_code | offpeak_res_1080p | - |
-| vidu/global/pricing/viduq3-pro-fast.json | vidu-global-viduq3-pro-fast-second-offpeak-res-720p | video_output_second | 0.050000 | USD | 1 | tier_code | offpeak_res_720p | - |
-| vidu/global/pricing/viduq3-pro-fast.json | vidu-global-viduq3-pro-fast-second-res-1080p | video_output_second | 0.125000 | USD | 1 | tier_code | res_1080p | - |
-| vidu/global/pricing/viduq3-pro-fast.json | vidu-global-viduq3-pro-fast-second-res-720p | video_output_second | 0.100000 | USD | 1 | tier_code | res_720p | - |
-| vidu/global/pricing/viduq3-pro.json | vidu-global-viduq3-pro-result-10s-720p | video_result | 1.000000 | USD | 1 | tier_code | dur_10s | - |
-| vidu/global/pricing/viduq3-pro.json | vidu-global-viduq3-pro-result-5s-720p | video_result | 0.500000 | USD | 1 | tier_code | dur_5s | - |
-| vidu/global/pricing/viduq3-pro.json | vidu-global-viduq3-pro-second-offpeak-res-1080p | video_output_second | 0.060000 | USD | 1 | tier_code | offpeak_res_1080p | - |
-| vidu/global/pricing/viduq3-pro.json | vidu-global-viduq3-pro-second-offpeak-res-540p | video_output_second | 0.025000 | USD | 1 | tier_code | offpeak_res_540p | - |
-| vidu/global/pricing/viduq3-pro.json | vidu-global-viduq3-pro-second-offpeak-res-720p | video_output_second | 0.050000 | USD | 1 | tier_code | offpeak_res_720p | - |
-| vidu/global/pricing/viduq3-pro.json | vidu-global-viduq3-pro-second-res-1080p | video_output_second | 0.120000 | USD | 1 | tier_code | res_1080p | - |
-| vidu/global/pricing/viduq3-pro.json | vidu-global-viduq3-pro-second-res-540p | video_output_second | 0.045000 | USD | 1 | tier_code | res_540p | - |
-| vidu/global/pricing/viduq3-pro.json | vidu-global-viduq3-pro-second-res-720p | video_output_second | 0.100000 | USD | 1 | tier_code | res_720p | - |
-| vidu/global/pricing/viduq3-turbo.json | vidu-global-viduq3-turbo-second-offpeak-res-1080p | video_output_second | 0.035000 | USD | 1 | tier_code | offpeak_res_1080p | - |
-| vidu/global/pricing/viduq3-turbo.json | vidu-global-viduq3-turbo-second-offpeak-res-540p | video_output_second | 0.020000 | USD | 1 | tier_code | offpeak_res_540p | - |
-| vidu/global/pricing/viduq3-turbo.json | vidu-global-viduq3-turbo-second-offpeak-res-720p | video_output_second | 0.030000 | USD | 1 | tier_code | offpeak_res_720p | - |
-| vidu/global/pricing/viduq3-turbo.json | vidu-global-viduq3-turbo-second-ref-offpeak-res-1080p | video_output_second | 0.035000 | USD | 1 | tier_code | ref_offpeak_res_1080p | - |
-| vidu/global/pricing/viduq3-turbo.json | vidu-global-viduq3-turbo-second-ref-offpeak-res-540p | video_output_second | 0.010000 | USD | 1 | tier_code | ref_offpeak_res_540p | - |
-| vidu/global/pricing/viduq3-turbo.json | vidu-global-viduq3-turbo-second-ref-offpeak-res-720p | video_output_second | 0.025000 | USD | 1 | tier_code | ref_offpeak_res_720p | - |
-| vidu/global/pricing/viduq3-turbo.json | vidu-global-viduq3-turbo-second-ref-res-1080p | video_output_second | 0.065000 | USD | 1 | tier_code | ref_res_1080p | - |
-| vidu/global/pricing/viduq3-turbo.json | vidu-global-viduq3-turbo-second-ref-res-540p | video_output_second | 0.020000 | USD | 1 | tier_code | ref_res_540p | - |
-| vidu/global/pricing/viduq3-turbo.json | vidu-global-viduq3-turbo-second-ref-res-720p | video_output_second | 0.050000 | USD | 1 | tier_code | ref_res_720p | - |
-| vidu/global/pricing/viduq3-turbo.json | vidu-global-viduq3-turbo-second-res-1080p | video_output_second | 0.065000 | USD | 1 | tier_code | res_1080p | - |
-| vidu/global/pricing/viduq3-turbo.json | vidu-global-viduq3-turbo-second-res-540p | video_output_second | 0.035000 | USD | 1 | tier_code | res_540p | - |
-| vidu/global/pricing/viduq3-turbo.json | vidu-global-viduq3-turbo-second-res-720p | video_output_second | 0.055000 | USD | 1 | tier_code | res_720p | - |
-| vidu/global/pricing/viduq3.json | vidu-global-viduq3-second-ref-offpeak-res-1080p | video_output_second | 0.035000 | USD | 1 | tier_code | ref_offpeak_res_1080p | - |
-| vidu/global/pricing/viduq3.json | vidu-global-viduq3-second-ref-offpeak-res-540p | video_output_second | 0.020000 | USD | 1 | tier_code | ref_offpeak_res_540p | - |
-| vidu/global/pricing/viduq3.json | vidu-global-viduq3-second-ref-offpeak-res-720p | video_output_second | 0.030000 | USD | 1 | tier_code | ref_offpeak_res_720p | - |
-| vidu/global/pricing/viduq3.json | vidu-global-viduq3-second-ref-res-1080p | video_output_second | 0.075000 | USD | 1 | tier_code | ref_res_1080p | - |
-| vidu/global/pricing/viduq3.json | vidu-global-viduq3-second-ref-res-540p | video_output_second | 0.035000 | USD | 1 | tier_code | ref_res_540p | - |
-| vidu/global/pricing/viduq3.json | vidu-global-viduq3-second-ref-res-720p | video_output_second | 0.060000 | USD | 1 | tier_code | ref_res_720p | - |
+| reason | count |
+|---|---|
+| dimension_never_populated | 244 |
+
+`dimension_never_populated`: the runtime has no producer for the dimension at all.
+`time_window_tier_redundant`: a `time_window` rate conditioned on `tier_code`; the
+schedule's window codes already encode the tier, so the extra condition only makes
+the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
+
+| file | priceId | meter | price | currency | unitSize | dimension | reason | tier | thresholdTokens |
+|---|---|---|---|---|---|---|---|---|---|
+| alibaba/cn/pricing/qwen3.7-flash.json | qwen-cn-qwen3.7-flash-input-1m | llm_input_token | 1.200000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_1m | - |
+| alibaba/cn/pricing/qwen3.7-flash.json | qwen-cn-qwen3.7-flash-input-256k | llm_input_token | 0.600000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_256k | - |
+| alibaba/cn/pricing/qwen3.7-flash.json | qwen-cn-qwen3.7-flash-input-32k | llm_input_token | 0.200000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_32k | - |
+| alibaba/cn/pricing/qwen3.7-flash.json | qwen-cn-qwen3.7-flash-output-1m | llm_output_token | 4.800000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_1m | - |
+| alibaba/cn/pricing/qwen3.7-flash.json | qwen-cn-qwen3.7-flash-output-256k | llm_output_token | 2.400000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_256k | - |
+| alibaba/cn/pricing/qwen3.7-flash.json | qwen-cn-qwen3.7-flash-output-32k | llm_output_token | 0.800000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_32k | - |
+| alibaba/cn/pricing/qwen3.7-plus.json | qwen-cn-qwen3.7-plus-input-1m | llm_input_token | 6.000000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_1m | - |
+| alibaba/cn/pricing/qwen3.7-plus.json | qwen-cn-qwen3.7-plus-input-256k | llm_input_token | 2.000000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_256k | - |
+| alibaba/cn/pricing/qwen3.7-plus.json | qwen-cn-qwen3.7-plus-output-1m | llm_output_token | 24.000000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_1m | - |
+| alibaba/cn/pricing/qwen3.7-plus.json | qwen-cn-qwen3.7-plus-output-256k | llm_output_token | 8.000000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_256k | - |
+| alibaba/global/pricing/qwen3.7-flash.json | qwen-global-qwen3.7-flash-cache-read | llm_cache_read_token | 0.003000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_read | - |
+| alibaba/global/pricing/qwen3.7-flash.json | qwen-global-qwen3.7-flash-cache-read-implicit | llm_cache_read_token | 0.006000 | USD | 1000000 | tier_code | dimension_never_populated | implicit_cache | - |
+| alibaba/global/pricing/qwen3.7-flash.json | qwen-global-qwen3.7-flash-cache-write | llm_cache_write_token | 0.038000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_write | - |
+| alibaba/global/pricing/qwen3.7-max.json | qwen-global-qwen3.7-max-cache-read | llm_cache_read_token | 0.250000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_read | - |
+| alibaba/global/pricing/qwen3.7-max.json | qwen-global-qwen3.7-max-cache-read-implicit | llm_cache_read_token | 0.500000 | USD | 1000000 | tier_code | dimension_never_populated | implicit_cache | - |
+| alibaba/global/pricing/qwen3.7-max.json | qwen-global-qwen3.7-max-cache-write | llm_cache_write_token | 3.125000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_write | - |
+| alibaba/global/pricing/qwen3.7-plus.json | qwen-global-qwen3.7-plus-cache-read | llm_cache_read_token | 0.040000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_read | - |
+| alibaba/global/pricing/qwen3.7-plus.json | qwen-global-qwen3.7-plus-cache-read-implicit | llm_cache_read_token | 0.080000 | USD | 1000000 | tier_code | dimension_never_populated | implicit_cache | - |
+| alibaba/global/pricing/qwen3.7-plus.json | qwen-global-qwen3.7-plus-cache-write | llm_cache_write_token | 0.500000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_write | - |
+| alibaba/global/pricing/qwen3.8-flash.json | qwen-global-qwen3.8-flash-cache-read | llm_cache_read_token | 0.016000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_read | - |
+| alibaba/global/pricing/qwen3.8-flash.json | qwen-global-qwen3.8-flash-cache-read-implicit | llm_cache_read_token | 0.016000 | USD | 1000000 | tier_code | dimension_never_populated | implicit_cache | - |
+| alibaba/global/pricing/qwen3.8-flash.json | qwen-global-qwen3.8-flash-cache-write | llm_cache_write_token | 0.200000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_write | - |
+| alibaba/global/pricing/qwen3.8-max.json | qwen-global-qwen3.8-max-cache-read | llm_cache_read_token | 0.170000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_read | - |
+| alibaba/global/pricing/qwen3.8-max.json | qwen-global-qwen3.8-max-cache-read-implicit | llm_cache_read_token | 0.250000 | USD | 1000000 | tier_code | dimension_never_populated | implicit_cache | - |
+| alibaba/global/pricing/qwen3.8-max.json | qwen-global-qwen3.8-max-cache-write | llm_cache_write_token | 2.500000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_write | - |
+| anthropic/global/pricing/claude-fable-5-1.json | anthropic-claude-fable-5-1-cache-write | llm_cache_write_token | 12.500000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-fable-5-1.json | anthropic-claude-fable-5-1-cache-write-1h | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-fable-5.json | anthropic-claude-fable-5-cache-write | llm_cache_write_token | 12.500000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-fable-5.json | anthropic-claude-fable-5-cache-write-1h | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-haiku-4-5.json | anthropic-claude-haiku-4-5-cache-write | llm_cache_write_token | 1.250000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-haiku-4-5.json | anthropic-claude-haiku-4-5-cache-write-1h | llm_cache_write_token | 2.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-mythos-5-1.json | anthropic-claude-mythos-5-1-cache-write | llm_cache_write_token | 12.500000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-mythos-5-1.json | anthropic-claude-mythos-5-1-cache-write-1h | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-mythos-5.json | anthropic-claude-mythos-5-cache-write | llm_cache_write_token | 12.500000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-mythos-5.json | anthropic-claude-mythos-5-cache-write-1h | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-opus-4-5.json | anthropic-claude-opus-4-5-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-opus-4-5.json | anthropic-claude-opus-4-5-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-opus-4-6.json | anthropic-claude-opus-4-6-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-opus-4-6.json | anthropic-claude-opus-4-6-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-opus-4-7.json | anthropic-claude-opus-4-7-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-opus-4-7.json | anthropic-claude-opus-4-7-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-fast-input | llm_input_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | fast_mode | - |
+| anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-fast-output | llm_output_token | 50.000000 | USD | 1000000 | tier_code | dimension_never_populated | fast_mode | - |
+| anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-fast-mode-input | llm_input_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | fast_mode | - |
+| anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-fast-mode-output | llm_output_token | 50.000000 | USD | 1000000 | tier_code | dimension_never_populated | fast_mode | - |
+| anthropic/global/pricing/claude-sonnet-4-5.json | anthropic-claude-sonnet-4-5-cache-write | llm_cache_write_token | 3.750000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-sonnet-4-5.json | anthropic-claude-sonnet-4-5-cache-write-1h | llm_cache_write_token | 6.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-sonnet-4-6.json | anthropic-claude-sonnet-4-6-cache-write | llm_cache_write_token | 3.750000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-sonnet-4-6.json | anthropic-claude-sonnet-4-6-cache-write-1h | llm_cache_write_token | 6.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-sonnet-5.json | anthropic-claude-sonnet-5-cache-write | llm_cache_write_token | 2.500000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-sonnet-5.json | anthropic-claude-sonnet-5-cache-write-1h | llm_cache_write_token | 4.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| baidu/cn/pricing/ernie-5.0.json | baidu-cn-ernie-5.0-input-128k | llm_input_token | 10.000000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_128k | - |
+| baidu/cn/pricing/ernie-5.0.json | baidu-cn-ernie-5.0-input-32k | llm_input_token | 6.000000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_32k | - |
+| baidu/cn/pricing/ernie-5.0.json | baidu-cn-ernie-5.0-output-128k | llm_output_token | 40.000000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_128k | - |
+| baidu/cn/pricing/ernie-5.0.json | baidu-cn-ernie-5.0-output-32k | llm_output_token | 24.000000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_32k | - |
+| black_forest_labs/global/pricing/flux-2-klein-4b.json | bfl-flux-2-klein-4b-additional-megapixel | image_megapixel | 0.001000 | USD | 1 | tier_code | dimension_never_populated | additional_megapixel | - |
+| black_forest_labs/global/pricing/flux-2-klein-4b.json | bfl-flux-2-klein-4b-first-megapixel | image_megapixel | 0.014000 | USD | 1 | tier_code | dimension_never_populated | first_megapixel | - |
+| black_forest_labs/global/pricing/flux-2-klein-9b.json | bfl-flux-2-klein-9b-additional-megapixel | image_megapixel | 0.002000 | USD | 1 | tier_code | dimension_never_populated | additional_megapixel | - |
+| black_forest_labs/global/pricing/flux-2-klein-9b.json | bfl-flux-2-klein-9b-first-megapixel | image_megapixel | 0.015000 | USD | 1 | tier_code | dimension_never_populated | first_megapixel | - |
+| black_forest_labs/global/pricing/flux-2-pro.json | bfl-flux-2-pro-image-editing-megapixel | image_megapixel | 0.045000 | USD | 1 | tier_code | dimension_never_populated | image_editing | - |
+| black_forest_labs/global/pricing/flux-2-pro.json | bfl-flux-2-pro-text-to-image-megapixel | image_megapixel | 0.030000 | USD | 1 | tier_code | dimension_never_populated | text_to_image | - |
+| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-cache-read-input_128k_256k | llm_cache_read_token | 1.92 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-cache-read-input_32k_128k | llm_cache_read_token | 0.96 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-cache-read-input_le_32k | llm_cache_read_token | 0.64 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-input-input_128k_256k | llm_input_token | 9.6 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-input-input_32k_128k | llm_input_token | 4.8 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-input-input_le_32k | llm_input_token | 3.2 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-output-input_128k_256k | llm_output_token | 48.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-output-input_32k_128k | llm_output_token | 24.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-code-preview-260215.json | bytedance-cn-doubao-seed-2-0-code-preview-260215-output-input_le_32k | llm_output_token | 16.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-cache-read-input_128k_256k | llm_cache_read_token | 0.36 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-cache-read-input_32k_128k | llm_cache_read_token | 0.18 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-cache-read-input_le_32k | llm_cache_read_token | 0.12 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-input-input_128k_256k | llm_input_token | 1.8 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-input-input_32k_128k | llm_input_token | 0.9 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-input-input_le_32k | llm_input_token | 0.6 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-output-input_128k_256k | llm_output_token | 10.8 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-output-input_32k_128k | llm_output_token | 5.4 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260215.json | bytedance-cn-doubao-seed-2-0-lite-260215-output-input_le_32k | llm_output_token | 3.6 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-cache-read-input_128k_256k | llm_cache_read_token | 0.36 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-cache-read-input_32k_128k | llm_cache_read_token | 0.18 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-cache-read-input_le_32k | llm_cache_read_token | 0.12 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-input-input_128k_256k | llm_input_token | 1.8 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-input-input_32k_128k | llm_input_token | 0.9 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-input-input_le_32k | llm_input_token | 0.6 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-output-input_128k_256k | llm_output_token | 10.8 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-output-input_32k_128k | llm_output_token | 5.4 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-lite-260428.json | bytedance-cn-doubao-seed-2-0-lite-260428-output-input_le_32k | llm_output_token | 3.6 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-cache-read-input_128k_256k | llm_cache_read_token | 0.16 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-cache-read-input_32k_128k | llm_cache_read_token | 0.08 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-cache-read-input_le_32k | llm_cache_read_token | 0.04 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-input-input_128k_256k | llm_input_token | 0.8 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-input-input_32k_128k | llm_input_token | 0.4 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-input-input_le_32k | llm_input_token | 0.2 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-output-input_128k_256k | llm_output_token | 8.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-output-input_32k_128k | llm_output_token | 4.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260215.json | bytedance-cn-doubao-seed-2-0-mini-260215-output-input_le_32k | llm_output_token | 2.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-cache-read-input_128k_256k | llm_cache_read_token | 0.16 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-cache-read-input_32k_128k | llm_cache_read_token | 0.08 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-cache-read-input_le_32k | llm_cache_read_token | 0.04 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-input-input_128k_256k | llm_input_token | 0.8 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-input-input_32k_128k | llm_input_token | 0.4 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-input-input_le_32k | llm_input_token | 0.2 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-output-input_128k_256k | llm_output_token | 8.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-output-input_32k_128k | llm_output_token | 4.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-mini-260428.json | bytedance-cn-doubao-seed-2-0-mini-260428-output-input_le_32k | llm_output_token | 2.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-cache-read-input_128k_256k | llm_cache_read_token | 1.92 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-cache-read-input_32k_128k | llm_cache_read_token | 0.96 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-cache-read-input_le_32k | llm_cache_read_token | 0.64 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-input-input_128k_256k | llm_input_token | 9.6 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-input-input_32k_128k | llm_input_token | 4.8 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-input-input_le_32k | llm_input_token | 3.2 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-output-input_128k_256k | llm_output_token | 48.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-output-input_32k_128k | llm_output_token | 24.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-output-input_le_32k | llm_output_token | 16.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-layer_split_gt_2_61mp | image_result | 0.300000 | CNY | 1 | tier_code | dimension_never_populated | layer_split_gt_2_61mp | - |
+| bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-layer_split_le_2_61mp | image_result | 0.150000 | CNY | 1 | tier_code | dimension_never_populated | layer_split_le_2_61mp | - |
+| bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-single_image_gt_2_61mp | image_result | 0.600000 | CNY | 1 | tier_code | dimension_never_populated | single_image_gt_2_61mp | - |
+| bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-single_image_le_2_61mp | image_result | 0.300000 | CNY | 1 | tier_code | dimension_never_populated | single_image_le_2_61mp | - |
+| bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-cache-read-input_128k_256k | llm_cache_read_token | 0.20 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-cache-read-input_le_128k | llm_cache_read_token | 0.10 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-input-input_128k_256k | llm_input_token | 1.00 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-input-input_le_128k | llm_input_token | 0.50 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-output-input_128k_256k | llm_output_token | 6.00 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-output-input_le_128k | llm_output_token | 3.00 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-lite-260228.json | bytedance-global-seed-2-0-lite-260228-cache-read-input_128k_256k | llm_cache_read_token | 0.10 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-lite-260228.json | bytedance-global-seed-2-0-lite-260228-cache-read-input_le_128k | llm_cache_read_token | 0.05 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-lite-260228.json | bytedance-global-seed-2-0-lite-260228-input-input_128k_256k | llm_input_token | 0.50 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-lite-260228.json | bytedance-global-seed-2-0-lite-260228-input-input_le_128k | llm_input_token | 0.25 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-lite-260228.json | bytedance-global-seed-2-0-lite-260228-output-input_128k_256k | llm_output_token | 4.00 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-lite-260228.json | bytedance-global-seed-2-0-lite-260228-output-input_le_128k | llm_output_token | 2.00 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-lite-260428.json | bytedance-global-seed-2-0-lite-260428-cache-read-input_128k_256k | llm_cache_read_token | 0.10 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-lite-260428.json | bytedance-global-seed-2-0-lite-260428-cache-read-input_le_128k | llm_cache_read_token | 0.05 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-lite-260428.json | bytedance-global-seed-2-0-lite-260428-input-input_128k_256k | llm_input_token | 0.50 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-lite-260428.json | bytedance-global-seed-2-0-lite-260428-input-input_le_128k | llm_input_token | 0.25 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-lite-260428.json | bytedance-global-seed-2-0-lite-260428-output-input_128k_256k | llm_output_token | 4.00 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-lite-260428.json | bytedance-global-seed-2-0-lite-260428-output-input_le_128k | llm_output_token | 2.00 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-mini-260215.json | bytedance-global-seed-2-0-mini-260215-cache-read-input_128k_256k | llm_cache_read_token | 0.04 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-mini-260215.json | bytedance-global-seed-2-0-mini-260215-cache-read-input_le_128k | llm_cache_read_token | 0.02 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-mini-260215.json | bytedance-global-seed-2-0-mini-260215-input-input_128k_256k | llm_input_token | 0.20 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-mini-260215.json | bytedance-global-seed-2-0-mini-260215-input-input_le_128k | llm_input_token | 0.10 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-mini-260215.json | bytedance-global-seed-2-0-mini-260215-output-input_128k_256k | llm_output_token | 0.80 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-mini-260215.json | bytedance-global-seed-2-0-mini-260215-output-input_le_128k | llm_output_token | 0.40 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-mini-260428.json | bytedance-global-seed-2-0-mini-260428-cache-read-input_128k_256k | llm_cache_read_token | 0.04 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-mini-260428.json | bytedance-global-seed-2-0-mini-260428-cache-read-input_le_128k | llm_cache_read_token | 0.02 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-mini-260428.json | bytedance-global-seed-2-0-mini-260428-input-input_128k_256k | llm_input_token | 0.20 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-mini-260428.json | bytedance-global-seed-2-0-mini-260428-input-input_le_128k | llm_input_token | 0.10 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-mini-260428.json | bytedance-global-seed-2-0-mini-260428-output-input_128k_256k | llm_output_token | 0.80 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-mini-260428.json | bytedance-global-seed-2-0-mini-260428-output-input_le_128k | llm_output_token | 0.40 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-cache-read-input_128k_256k | llm_cache_read_token | 0.20 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-cache-read-input_le_128k | llm_cache_read_token | 0.10 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-input-input_128k_256k | llm_input_token | 1.00 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-input-input_le_128k | llm_input_token | 0.50 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-output-input_128k_256k | llm_output_token | 6.00 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
+| bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-output-input_le_128k | llm_output_token | 3.00 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
+| google/global/pricing/gemini-3.1-flash-lite.json | google-gemini-3.1-flash-lite-cache-read-audio | llm_cache_read_token | 0.050000 | USD | 1000000 | tier_code | dimension_never_populated | audio | - |
+| kuaishou/cn/pricing/kling-image-o1.json | kuaishou-cn-kling-image-o1-result-1k-2k | image_result | 0.200000 | CNY | 1 | tier_code | dimension_never_populated | res_1k_2k | - |
+| kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-i2i | image_result | 0.200000 | CNY | 1 | tier_code | dimension_never_populated | i2i_1k_2k | - |
+| kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-multi-ref | image_result | 0.400000 | CNY | 1 | tier_code | dimension_never_populated | multi_ref_1k_2k | - |
+| kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-t2i | image_result | 0.100000 | CNY | 1 | tier_code | dimension_never_populated | t2i_1k_2k | - |
+| kuaishou/global/pricing/kling-image-o1.json | kuaishou-global-kling-image-o1-result-1k-2k | image_result | 0.028000 | USD | 1 | tier_code | dimension_never_populated | res_1k_2k | - |
+| kuaishou/global/pricing/kling-v2-1.json | kuaishou-global-kling-v2-1-result-i2i | image_result | 0.028000 | USD | 1 | tier_code | dimension_never_populated | i2i_1k_2k | - |
+| kuaishou/global/pricing/kling-v2-1.json | kuaishou-global-kling-v2-1-result-multi-ref | image_result | 0.056000 | USD | 1 | tier_code | dimension_never_populated | multi_ref_1k_2k | - |
+| kuaishou/global/pricing/kling-v2-1.json | kuaishou-global-kling-v2-1-result-t2i | image_result | 0.014000 | USD | 1 | tier_code | dimension_never_populated | t2i_1k_2k | - |
+| openai/global/pricing/gpt-5.3-codex.json | openai-gpt-5-3-codex-fast-mode-cache-read | llm_cache_read_token | 0.350000 | USD | 1000000 | tier_code | dimension_never_populated | fast_mode | - |
+| openai/global/pricing/gpt-5.3-codex.json | openai-gpt-5-3-codex-fast-mode-input | llm_input_token | 3.500000 | USD | 1000000 | tier_code | dimension_never_populated | fast_mode | - |
+| openai/global/pricing/gpt-5.3-codex.json | openai-gpt-5-3-codex-fast-mode-output | llm_output_token | 28.000000 | USD | 1000000 | tier_code | dimension_never_populated | fast_mode | - |
+| openai/global/pricing/gpt-5.6-luna.json | openai-gpt-5-6-luna-cache-read-long-context | llm_cache_read_token | 0.040000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-5.6-luna.json | openai-gpt-5-6-luna-cache-write-long-context | llm_cache_write_token | 0.500000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-5.6-luna.json | openai-gpt-5-6-luna-input-long-context | llm_input_token | 0.400000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-5.6-luna.json | openai-gpt-5-6-luna-output-long-context | llm_output_token | 1.800000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-5.6-sol.json | openai-gpt-5-6-sol-cache-read-long-context | llm_cache_read_token | 0.800000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-5.6-sol.json | openai-gpt-5-6-sol-cache-write-long-context | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-5.6-sol.json | openai-gpt-5-6-sol-input-long-context | llm_input_token | 8.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-5.6-sol.json | openai-gpt-5-6-sol-output-long-context | llm_output_token | 30.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-5.6-terra.json | openai-gpt-5-6-terra-cache-read-long-context | llm_cache_read_token | 0.400000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-5.6-terra.json | openai-gpt-5-6-terra-cache-write-long-context | llm_cache_write_token | 5.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-5.6-terra.json | openai-gpt-5-6-terra-input-long-context | llm_input_token | 4.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-5.6-terra.json | openai-gpt-5-6-terra-output-long-context | llm_output_token | 18.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-cache-read-long-context | llm_cache_read_token | 2.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-cache-write-long-context | llm_cache_write_token | 25.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-input-long-context | llm_input_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-output-long-context | llm_output_token | 75.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| runway/global/pricing/gemini_image3_pro.json | runway-global-gemini_image3_pro-image-res_1k_2k | image_result | 0.200000 | USD | 1 | tier_code | dimension_never_populated | res_1k_2k | - |
+| runway/global/pricing/gemini_image3_pro.json | runway-global-gemini_image3_pro-image-res_4k | image_result | 0.400000 | USD | 1 | tier_code | dimension_never_populated | res_4k | - |
+| runway/global/pricing/gen4_image.json | runway-global-gen4-image-result-1080p | image_result | 0.080000 | USD | 1 | tier_code | dimension_never_populated | res_1080p | - |
+| runway/global/pricing/gen4_image.json | runway-global-gen4-image-result-720p | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | res_720p | - |
+| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_auto_1k_2k | image_result | 0.200000 | USD | 1 | tier_code | dimension_never_populated | q_auto_1k_2k | - |
+| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_auto_4k | image_result | 0.410000 | USD | 1 | tier_code | dimension_never_populated | q_auto_4k | - |
+| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_high_1k_2k | image_result | 0.200000 | USD | 1 | tier_code | dimension_never_populated | q_high_1k_2k | - |
+| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_high_4k | image_result | 0.410000 | USD | 1 | tier_code | dimension_never_populated | q_high_4k | - |
+| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_low_1k_2k | image_result | 0.010000 | USD | 1 | tier_code | dimension_never_populated | q_low_1k_2k | - |
+| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_low_4k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | q_low_4k | - |
+| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_medium_1k_2k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | q_medium_1k_2k | - |
+| runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_medium_4k | image_result | 0.110000 | USD | 1 | tier_code | dimension_never_populated | q_medium_4k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_high_1k_2k | image_result | 0.160000 | USD | 1 | tier_code | dimension_never_populated | q_high_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_high_4k | image_result | 0.190000 | USD | 1 | tier_code | dimension_never_populated | q_high_4k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_low_1k_2k | image_result | 0.010000 | USD | 1 | tier_code | dimension_never_populated | q_low_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_low_4k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | q_low_4k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_max_1k_2k | image_result | 0.630000 | USD | 1 | tier_code | dimension_never_populated | q_max_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_max_4k | image_result | 0.760000 | USD | 1 | tier_code | dimension_never_populated | q_max_4k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_medium_1k_2k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | q_medium_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_medium_4k | image_result | 0.110000 | USD | 1 | tier_code | dimension_never_populated | q_medium_4k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_xhigh_1k_2k | image_result | 0.280000 | USD | 1 | tier_code | dimension_never_populated | q_xhigh_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_xhigh_4k | image_result | 0.340000 | USD | 1 | tier_code | dimension_never_populated | q_xhigh_4k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_high_1k_2k | image_result | 0.160000 | USD | 1 | tier_code | dimension_never_populated | q_high_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_high_4k | image_result | 0.190000 | USD | 1 | tier_code | dimension_never_populated | q_high_4k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_low_1k_2k | image_result | 0.010000 | USD | 1 | tier_code | dimension_never_populated | q_low_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_low_4k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | q_low_4k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_max_1k_2k | image_result | 0.630000 | USD | 1 | tier_code | dimension_never_populated | q_max_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_max_4k | image_result | 0.760000 | USD | 1 | tier_code | dimension_never_populated | q_max_4k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_medium_1k_2k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | q_medium_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_medium_4k | image_result | 0.110000 | USD | 1 | tier_code | dimension_never_populated | q_medium_4k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_xhigh_1k_2k | image_result | 0.280000 | USD | 1 | tier_code | dimension_never_populated | q_xhigh_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_xhigh_4k | image_result | 0.340000 | USD | 1 | tier_code | dimension_never_populated | q_xhigh_4k | - |
+| runway/global/pricing/grok_imagine_image_2.json | runway-global-grok_imagine_image_2-image-low_1k | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | low_1k | - |
+| runway/global/pricing/grok_imagine_image_2.json | runway-global-grok_imagine_image_2-image-low_2k | image_result | 0.060000 | USD | 1 | tier_code | dimension_never_populated | low_2k | - |
+| runway/global/pricing/grok_imagine_image_2.json | runway-global-grok_imagine_image_2-image-medium_1k | image_result | 0.060000 | USD | 1 | tier_code | dimension_never_populated | medium_1k | - |
+| runway/global/pricing/grok_imagine_image_2.json | runway-global-grok_imagine_image_2-image-medium_2k | image_result | 0.080000 | USD | 1 | tier_code | dimension_never_populated | medium_2k | - |
+| runway/global/pricing/magnific_precision_upscaler_v2.json | runway-global-magnific_precision_upscaler_v2-image-over_4096px | image_result | 1.500000 | USD | 1 | tier_code | dimension_never_populated | over_4096px | - |
+| runway/global/pricing/magnific_precision_upscaler_v2.json | runway-global-magnific_precision_upscaler_v2-image-upto_4096px | image_result | 0.250000 | USD | 1 | tier_code | dimension_never_populated | upto_4096px | - |
+| runway/global/pricing/seedream5_pro.json | runway-global-seedream5_pro-image-res_1k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | res_1k | - |
+| runway/global/pricing/seedream5_pro.json | runway-global-seedream5_pro-image-res_2k | image_result | 0.090000 | USD | 1 | tier_code | dimension_never_populated | res_2k | - |
+| vidu/cn/pricing/audio1.0-text2audio.json | vidu-cn-audio1-0-text2audio-under-10s | sfx_result | 0.625000 | CNY | 1 | tier_code | dimension_never_populated | under_10s | - |
+| vidu/cn/pricing/audio1.0-text2audio.json | vidu-cn-audio1-0-text2audio-under-5s | sfx_result | 0.312500 | CNY | 1 | tier_code | dimension_never_populated | under_5s | - |
+| vidu/cn/pricing/audio1.0-timing2audio.json | vidu-cn-audio1-0-timing2audio-under-10s | sfx_result | 0.625000 | CNY | 1 | tier_code | dimension_never_populated | under_10s | - |
+| vidu/cn/pricing/audio1.0-timing2audio.json | vidu-cn-audio1-0-timing2audio-under-5s | sfx_result | 0.312500 | CNY | 1 | tier_code | dimension_never_populated | under_5s | - |
+| vidu/global/pricing/audio1.0-text2audio.json | vidu-global-audio1-0-text2audio-under-10s | sfx_result | 0.100000 | USD | 1 | tier_code | dimension_never_populated | under_10s | - |
+| vidu/global/pricing/audio1.0-text2audio.json | vidu-global-audio1-0-text2audio-under-5s | sfx_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | under_5s | - |
+| vidu/global/pricing/audio1.0-timing2audio.json | vidu-global-audio1-0-timing2audio-under-10s | sfx_result | 0.100000 | USD | 1 | tier_code | dimension_never_populated | under_10s | - |
+| vidu/global/pricing/audio1.0-timing2audio.json | vidu-global-audio1-0-timing2audio-under-5s | sfx_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | under_5s | - |
+| vidu/global/pricing/viduq2.json | vidu-global-viduq2-image-r2i-ref1-3-1080p | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | r2i_ref1_3_1080p | - |
+| vidu/global/pricing/viduq2.json | vidu-global-viduq2-image-r2i-ref1-3-2k | image_result | 0.060000 | USD | 1 | tier_code | dimension_never_populated | r2i_ref1_3_2k | - |
+| vidu/global/pricing/viduq2.json | vidu-global-viduq2-image-r2i-ref1-3-4k | image_result | 0.100000 | USD | 1 | tier_code | dimension_never_populated | r2i_ref1_3_4k | - |
+| vidu/global/pricing/viduq2.json | vidu-global-viduq2-image-r2i-ref4-7-1080p | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | r2i_ref4_7_1080p | - |
+| vidu/global/pricing/viduq2.json | vidu-global-viduq2-image-r2i-ref4-7-2k | image_result | 0.080000 | USD | 1 | tier_code | dimension_never_populated | r2i_ref4_7_2k | - |
+| vidu/global/pricing/viduq2.json | vidu-global-viduq2-image-r2i-ref4-7-4k | image_result | 0.150000 | USD | 1 | tier_code | dimension_never_populated | r2i_ref4_7_4k | - |
+| vidu/global/pricing/viduq2.json | vidu-global-viduq2-image-t2i-1080p | image_result | 0.030000 | USD | 1 | tier_code | dimension_never_populated | t2i_1080p | - |
+| vidu/global/pricing/viduq2.json | vidu-global-viduq2-image-t2i-2k | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | t2i_2k | - |
+| vidu/global/pricing/viduq2.json | vidu-global-viduq2-image-t2i-4k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | t2i_4k | - |
