@@ -1,0 +1,199 @@
+{
+  "catalogKey": "xai/grok-4.7",
+  "currency": "USD",
+  "modelId": "grok-4.7",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-21T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-grok-4-7-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "0077affc0d0c52a262555e05bb01e75c7d54945abfc2688c394144c85a032a79",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/docs/models"
+      },
+      "unitPrice": "2.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-21T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-grok-4-7-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "14fce1ea12124f5fb33eefa7690200374ca9860cb0c48ca59bfe17711fd0b3a6",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/docs/models"
+      },
+      "unitPrice": "6.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-21T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-grok-4-7-cache-read",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "666a105857195542eb3e39eb060d75c4380db8148eb2a85bd63149cff71a29db",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/docs/models"
+      },
+      "unitPrice": "0.500000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "context_tokens",
+          "operator": "gt",
+          "value": "200000"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-21T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-grok-4-7-input-over-200k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "c0e05edbb4fad87df9062d2af161495a85ad6bc71f1247ed28eda94d9f3ea191",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/docs/models"
+      },
+      "thresholdTokens": 200000,
+      "unitPrice": "4.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "context_tokens",
+          "operator": "gt",
+          "value": "200000"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-21T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-grok-4-7-output-over-200k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "26e1d09de0fcd4582717f5ed28d0a8fd6e0832df67ac68c888dcdf04336a630c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/docs/models"
+      },
+      "thresholdTokens": 200000,
+      "unitPrice": "12.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "context_tokens",
+          "operator": "gt",
+          "value": "200000"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-21T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-grok-4-7-cache-read-over-200k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "40308e386389f2f04cbfebedc0d14a9a9a6f03f3aa88ef6a3ec816fcb308d366",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/docs/models"
+      },
+      "thresholdTokens": 200000,
+      "unitPrice": "1.000000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "xai"
+}

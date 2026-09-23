@@ -1,0 +1,44 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "typesafe/jev-1.13.0",
+  "codingVisible": false,
+  "colorToken": "#0d9488",
+  "contextTokens": 65536,
+  "description": "Jev is TypeSafe AI's System One model, served by one vendor-native endpoint: `POST https://api.typesafe.ai/v1/systemone`. It does not generate text. A caller posts a `state` plus a map of typed questions (Choice / Score / Noul) and gets back one typed decision per question, each with a calibrated probability and a confidence value that application code branches on. `jev-1.13.0` is the versioned API id TypeSafe documents for Jev 1.13, and the catalog id is written verbatim so the router puts an accepted name in the request's `model` field. Input is text only. Context is 64k tokens per request (`state` plus all questions combined) and 32k for `state` plus the single longest question. `outputModalities` reads `text` because the catalog's modality vocabulary has no token for typed structured values; the model emits no free-form string.",
+  "displayName": "Jev 1.13",
+  "familyCode": "jev",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 32768,
+  "modelId": "jev-1.13.0",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-22T00:00:00Z",
+    "sourceUrl": "https://docs.typesafe.ai/models"
+  },
+  "strengths": [
+    "Typed decisions",
+    "Calibrated confidence",
+    "70-500ms end-to-end latency",
+    "Parallel questions"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "typesafe",
+  "vendorName": "TypeSafe AI"
+}

@@ -1,0 +1,74 @@
+{
+  "billingCurrency": "USD",
+  "billingJurisdiction": "US",
+  "capabilities": [
+    "chat"
+  ],
+  "clientApiCompatibility": {
+    "claude_code": {
+      "apiCodes": [],
+      "clientApiCode": "claude_code",
+      "displayName": "Claude Code",
+      "notes": "TypeSafe AI does not expose the Claude Code client API surface: Jev answers typed decisions on a single System One endpoint rather than a tool-calling chat protocol.",
+      "protocolCodes": [],
+      "resourceCodes": [],
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
+      },
+      "supportStatus": "unsupported"
+    },
+    "codex": {
+      "apiCodes": [],
+      "clientApiCode": "codex",
+      "displayName": "Codex",
+      "notes": "TypeSafe AI does not expose the Codex client API surface: Jev returns structured decisions, not code-generation completions.",
+      "protocolCodes": [],
+      "resourceCodes": [],
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
+      },
+      "supportStatus": "unsupported"
+    },
+    "gemini_cli": {
+      "apiCodes": [],
+      "clientApiCode": "gemini_cli",
+      "displayName": "Gemini CLI",
+      "notes": "TypeSafe AI does not expose the Gemini CLI client API surface; use its declared standard protocols instead.",
+      "protocolCodes": [],
+      "resourceCodes": [],
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
+      },
+      "supportStatus": "unsupported"
+    }
+  },
+  "countryRegion": "US",
+  "description": "TypeSafe AI publishes Jev, a System One model that returns typed, calibrated decisions with probabilities and confidence instead of generated text. It is served by a single vendor-native endpoint (`POST /v1/systemone`) that takes a state plus a map of typed questions.",
+  "displayName": "TypeSafe AI",
+  "docsUrl": "https://docs.typesafe.ai/models",
+  "legalName": "TypeSafe AI, Inc.",
+  "marketScope": "global",
+  "modelFamilies": [
+    "jev"
+  ],
+  "openSource": false,
+  "operatingRegions": [
+    "GLOBAL"
+  ],
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "sortOrder": 185,
+  "source": {
+    "observedAt": "2026-09-22T00:00:00Z",
+    "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
+  },
+  "supportedProtocols": [
+    "vendor_native"
+  ],
+  "vendorCode": "typesafe",
+  "vendorType": "commercial",
+  "websiteUrl": "https://www.typesafe.ai"
+}

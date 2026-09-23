@@ -1,0 +1,26 @@
+{
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "snapshots": [
+    {
+      "items": [
+        {
+          "catalogKey": "typesafe/jev-1.13.0",
+          "modelId": "jev-1.13.0",
+          "pricingText": "$0.042 / 1M input tokens (output free)",
+          "rankNo": 1
+        },
+        {
+          "catalogKey": "typesafe/jev-latest",
+          "modelId": "jev-latest",
+          "pricingText": "$0.042 / 1M input tokens (output free)",
+          "rankNo": 2
+        }
+      ],
+      "rankScope": "commercial-default",
+      "snapshotDate": "2026-09-22",
+      "snapshotPeriod": "daily"
+    }
+  ],
+  "vendorCode": "typesafe"
+}

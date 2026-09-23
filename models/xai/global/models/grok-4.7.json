@@ -1,0 +1,55 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat",
+    "reasoning"
+  ],
+  "catalogKey": "xai/grok-4.7",
+  "codingVisible": true,
+  "colorToken": "#111827",
+  "contextTokens": 500000,
+  "description": "Grok 4.7 flagship, 500k context, released 2026-09.",
+  "displayName": "Grok 4.7",
+  "familyCode": "grok",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 760,
+  "latencyP95Ms": 2600,
+  "lifecycle": "active",
+  "maxInputTokens": 500000,
+  "modelId": "grok-4.7",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "970.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-22T00:00:00Z",
+    "sourceUrl": "https://docs.x.ai/docs/models"
+  },
+  "strengths": [
+    "Code",
+    "Reasoning",
+    "Agentic tool calling",
+    "Long-trajectory reliability"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.960000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "xai",
+  "vendorName": "xAI",
+  "winRate": "0.940000"
+}

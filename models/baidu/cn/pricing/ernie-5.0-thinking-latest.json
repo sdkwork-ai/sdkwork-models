@@ -1,0 +1,136 @@
+{
+  "catalogKey": "baidu/ernie-5.0-thinking-latest",
+  "currency": "CNY",
+  "modelId": "ernie-5.0-thinking-latest",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5.0-thinking-latest-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3305bad731549e6dffce9ee4e3806ce223fd6aac1b01fca070c5e334f7afb898",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
+      },
+      "unitPrice": "6.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "context_tokens",
+          "operator": "gt",
+          "value": "32000"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "32000",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5.0-thinking-latest-input-above-32k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "307ba7659091a8eaa2f087d28ed38945652ab0852cb693ad202de0bbd4ea3f11",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
+      },
+      "thresholdTokens": 32000,
+      "unitPrice": "10.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5.0-thinking-latest-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a905eb26d0d977fa6f17d20314cde9bdd6452f1a121ec820552ac293e9fae250",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
+      },
+      "unitPrice": "24.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "context_tokens",
+          "operator": "gt",
+          "value": "32000"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "32000",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5.0-thinking-latest-output-above-32k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "1245ae350f7dab45990aa43dbad80825f3bec9fd6c46d6da0a4598c248b2551e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
+      },
+      "thresholdTokens": 32000,
+      "unitPrice": "40.000000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "baidu"
+}

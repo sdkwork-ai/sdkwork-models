@@ -1,0 +1,53 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "baidu/ernie-5.0-thinking-exp",
+  "codingVisible": true,
+  "colorToken": "#1d4ed8",
+  "contextTokens": 128000,
+  "description": "ERNIE 5.0 Thinking experimental model for Chinese reasoning workloads.",
+  "displayName": "ERNIE 5.0 Thinking Exp",
+  "familyCode": "ernie",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 820,
+  "latencyP95Ms": 2800,
+  "lifecycle": "preview",
+  "maxInputTokens": 119000,
+  "maxOutputTokens": 65536,
+  "modelId": "ernie-5.0-thinking-exp",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "820.000000",
+  "regionCode": "cn",
+  "releaseStage": "preview",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-22T00:00:00Z",
+    "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
+  },
+  "strengths": [
+    "Chinese",
+    "Reasoning",
+    "Vision"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.840000",
+  "usageScopes": [
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "baidu",
+  "vendorName": "Baidu AI Cloud",
+  "winRate": "0.820000"
+}

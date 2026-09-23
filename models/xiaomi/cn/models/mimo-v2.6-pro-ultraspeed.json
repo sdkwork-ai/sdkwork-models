@@ -1,0 +1,54 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "xiaomi/mimo-v2.6-pro-ultraspeed",
+  "codingVisible": true,
+  "colorToken": "#FF6900",
+  "contextTokens": 1048576,
+  "description": "MiMo V2.6 Pro UltraSpeed - a faster serving mode of MiMo-V2.6-Pro billed at roughly three times the realtime input/output rates for low-latency inference.",
+  "displayName": "MiMo V2.6 Pro UltraSpeed",
+  "familyCode": "mimo-v2.5",
+  "inputModalities": [
+    "text"
+  ],
+  "latencyP50Ms": 200,
+  "latencyP95Ms": 700,
+  "lifecycle": "active",
+  "maxInputTokens": 1048576,
+  "maxOutputTokens": 262144,
+  "modelId": "mimo-v2.6-pro-ultraspeed",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1110.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-22T00:00:00Z",
+    "sourceUrl": "https://mimo.xiaomi.com"
+  },
+  "strengths": [
+    "Speed",
+    "Reasoning",
+    "Coding",
+    "Agents"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.970000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "xiaomi",
+  "vendorName": "Xiaomi MiMo",
+  "winRate": "0.940000"
+}

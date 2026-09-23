@@ -1,0 +1,44 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "kuaishou/kling-image-3.0",
+  "codingVisible": false,
+  "colorToken": "#2563eb",
+  "description": "Kling Image 3.0：官方图片价目表确认在售，1K/2K 每张 0.2 元。",
+  "displayName": "Kling Image 3.0",
+  "familyCode": "kling-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "kling-image-3.0",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "820.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-22T00:00:00Z",
+    "sourceUrl": "https://klingai.com/document-api/pricing/base/image"
+  },
+  "strengths": [
+    "文生图",
+    "图生图"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.930000",
+  "usageScopes": [],
+  "vendorCode": "kuaishou",
+  "vendorName": "Kuaishou",
+  "winRate": "0.900000"
+}

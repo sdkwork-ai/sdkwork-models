@@ -1,0 +1,38 @@
+{
+  "catalogKey": "typesafe/jev-latest",
+  "currency": "USD",
+  "modelId": "jev-latest",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.typesafe.global.official",
+      "priceId": "typesafe-global-jev-latest-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.typesafe.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "502c226268724501df412680d2af7d0539f91a2a9723a24a9f05d3089f537e17",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://docs.typesafe.ai/models"
+      },
+      "unitPrice": "0.042000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "typesafe"
+}

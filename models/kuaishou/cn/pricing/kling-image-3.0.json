@@ -1,0 +1,45 @@
+{
+  "catalogKey": "kuaishou/kling-image-3.0",
+  "currency": "CNY",
+  "modelId": "kling-image-3.0",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1k_2k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.kuaishou.cn.official",
+      "priceId": "kuaishou-cn-kling-image-3-0-result-1k-2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "6d0016c2625acc4e73ce44ca31360b29b25bbd8e604c461892c3ccbebc768c68",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/image"
+      },
+      "tierCode": "res_1k_2k",
+      "unitPrice": "0.200000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "kuaishou"
+}

@@ -1,0 +1,49 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "baidu/ernie-4.5-turbo-vl",
+  "codingVisible": true,
+  "colorToken": "#2932e1",
+  "contextTokens": 128000,
+  "description": "ERNIE 4.5 Turbo VL vision-language model for image understanding and long-document tasks.",
+  "displayName": "ERNIE 4.5 Turbo VL",
+  "familyCode": "ernie",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 123000,
+  "maxOutputTokens": 12288,
+  "modelId": "ernie-4.5-turbo-vl",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-22T00:00:00Z",
+    "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
+  },
+  "strengths": [
+    "Vision",
+    "Long context",
+    "Chinese",
+    "Multi-turn dialogue"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "baidu",
+  "vendorName": "Baidu AI Cloud"
+}

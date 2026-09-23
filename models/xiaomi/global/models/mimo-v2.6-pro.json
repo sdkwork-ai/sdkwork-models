@@ -1,0 +1,54 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "xiaomi/mimo-v2.6-pro",
+  "codingVisible": true,
+  "colorToken": "#FF6900",
+  "contextTokens": 1048576,
+  "description": "Xiaomi MiMo V2.6 Pro - flagship agentic MoE model continuing the V2.5 Pro line, optimized for long-horizon tasks.",
+  "displayName": "MiMo V2.6 Pro",
+  "familyCode": "mimo-v2.5",
+  "inputModalities": [
+    "text"
+  ],
+  "latencyP50Ms": 800,
+  "latencyP95Ms": 2800,
+  "lifecycle": "active",
+  "maxInputTokens": 1048576,
+  "maxOutputTokens": 131072,
+  "modelId": "mimo-v2.6-pro",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1100.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-22T00:00:00Z",
+    "sourceUrl": "https://mimo.xiaomi.com"
+  },
+  "strengths": [
+    "Reasoning",
+    "Coding",
+    "Agents",
+    "Long Context"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.950000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "xiaomi",
+  "vendorName": "Xiaomi MiMo",
+  "winRate": "0.940000"
+}

@@ -1,0 +1,44 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "typesafe/jev-latest",
+  "codingVisible": false,
+  "colorToken": "#14b8a6",
+  "contextTokens": 65536,
+  "description": "`jev-latest` is the alias TypeSafe's own client SDKs send when a caller names no model. It resolves upstream to the newest official Jev release, which is currently `jev-1.13.0`. The catalog publishes it as its own entry so an SDK-default request resolves to a price instead of answering 502 for a name the catalog does not carry. The alias moves when TypeSafe ships a release, so its answers can change without a change on this side; a workload that has tuned confidence thresholds should pin `jev-1.13.0` instead. TypeSafe also documents a `jev-preview` alias (currently resolving to the same version); it is left unpublished so traffic stays on a stable release.",
+  "displayName": "Jev Latest",
+  "familyCode": "jev",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 32768,
+  "modelId": "jev-latest",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-22T00:00:00Z",
+    "sourceUrl": "https://docs.typesafe.ai/models"
+  },
+  "strengths": [
+    "SDK default alias",
+    "Always newest version",
+    "Typed decisions",
+    "Calibrated confidence"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "typesafe",
+  "vendorName": "TypeSafe AI"
+}

@@ -1,0 +1,66 @@
+{
+  "catalogKey": "xiaomi/mimo-v2.6-pro-ultraspeed",
+  "currency": "USD",
+  "modelId": "mimo-v2.6-pro-ultraspeed",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.xiaomi.global.official",
+      "priceId": "xiaomi-global-mimo-v2-6-pro-ultraspeed-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xiaomi.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "4048b521f6c323a3bf5439230d8b49eb56542c9389ad0e8abd4dd8c71be5319d",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://platform.xiaomimimo.com"
+      },
+      "unitPrice": "1.305000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.xiaomi.global.official",
+      "priceId": "xiaomi-global-mimo-v2-6-pro-ultraspeed-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xiaomi.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "e8570be7820ac10221494b1feaf7a302d03830114645a57f4b831887a864b93e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-09-22T00:00:00Z",
+        "sourceUrl": "https://platform.xiaomimimo.com"
+      },
+      "unitPrice": "2.610000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "xiaomi"
+}

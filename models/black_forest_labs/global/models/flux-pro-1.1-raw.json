@@ -1,0 +1,43 @@
+{
+  "apiFormat": "vendor_native",
+  "catalogKey": "black_forest_labs/flux-pro-1.1-raw",
+  "codingVisible": false,
+  "colorToken": "#18181b",
+  "description": "FLUX1.1 pro Raw：专为原生写实摄影风格设计的图像生成模型，官方费率 6 credits / $0.06 per image（与 FLUX1.1 pro Ultra 同价）。",
+  "displayName": "FLUX1.1 [pro] Raw",
+  "familyCode": "flux",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 4000,
+  "latencyP95Ms": 15000,
+  "lifecycle": "active",
+  "modelId": "flux-pro-1.1-raw",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "700.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-22T00:00:00Z",
+    "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+  },
+  "strengths": [
+    "Image generation",
+    "Candid photographic style"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.700000",
+  "usageScopes": [],
+  "vendorCode": "black_forest_labs",
+  "vendorName": "Black Forest Labs",
+  "winRate": "0.750000"
+}

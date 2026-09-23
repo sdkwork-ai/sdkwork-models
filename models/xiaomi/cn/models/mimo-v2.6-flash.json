@@ -1,0 +1,61 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat",
+    "image",
+    "audio",
+    "video"
+  ],
+  "catalogKey": "xiaomi/mimo-v2.6-flash",
+  "codingVisible": true,
+  "colorToken": "#FF6900",
+  "contextTokens": 1048576,
+  "description": "Xiaomi MiMo V2.6 Flash - native omnimodal model supporting text, image, video, and audio understanding, continuing the MiMo V2.5 flash line.",
+  "displayName": "MiMo V2.6 Flash",
+  "familyCode": "mimo-v2.5",
+  "inputModalities": [
+    "text",
+    "image",
+    "audio",
+    "video"
+  ],
+  "latencyP50Ms": 650,
+  "latencyP95Ms": 2200,
+  "lifecycle": "active",
+  "maxInputTokens": 1048576,
+  "maxOutputTokens": 131072,
+  "modelId": "mimo-v2.6-flash",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1050.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-09-22T00:00:00Z",
+    "sourceUrl": "https://mimo.xiaomi.com"
+  },
+  "strengths": [
+    "Multimodal",
+    "Reasoning",
+    "Coding",
+    "Agents",
+    "Long Context"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.930000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "xiaomi",
+  "vendorName": "Xiaomi MiMo",
+  "winRate": "0.920000"
+}

@@ -1,0 +1,15 @@
+{
+  "families": [
+    {
+      "defaultModel": "jev-1.13.0",
+      "displayName": "Jev",
+      "familyCode": "jev",
+      "familyType": "llm",
+      "primaryModality": "text",
+      "sortOrder": 10
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "vendorCode": "typesafe"
+}
