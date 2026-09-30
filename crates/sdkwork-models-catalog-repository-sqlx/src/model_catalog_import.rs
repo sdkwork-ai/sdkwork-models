@@ -1948,11 +1948,12 @@ fn endpoint_modality_code(endpoint_code: &str) -> Option<String> {
         "gemini.video_generation" | "bytedance.video_generation" | "jimeng.video_generation"
         | "volcengine.video_generation" | "kling.text_to_video" | "kling.image_to_video"
         | "kling.avatar" | "kling.motion_control" | "vidu.start_end_to_video"
+        | "vidu.text_to_video" | "vidu.image_to_video" | "vidu.reference_to_video"
         | "vidu.motion_sync" => Some("video"),
         // Task/polling surfaces carry the modality of the job they track, so the
         // accounting side can meter the poll the way it meters the submit.
         "bytedance.task_query" | "jimeng.task_query" | "volcengine.task_query"
-        | "kling.task_query" => Some("video"),
+        | "kling.task_query" | "vidu.video_task_query" => Some("video"),
         "minimax.music_generation" | "suno.music_generation" => Some("music"),
         "elevenlabs.text_to_speech" | "volcengine.speech" => Some("audio"),
         "elevenlabs.sound_generation" | "sfx.sound" => Some("audio"),
@@ -2877,6 +2878,10 @@ mod tests {
             "jimeng.video_generation",
             "volcengine.video_generation",
             "vidu.start_end_to_video",
+            "vidu.text_to_video",
+            "vidu.image_to_video",
+            "vidu.reference_to_video",
+            "vidu.video_task_query",
             "vidu.motion_sync",
         ] {
             assert_eq!(
@@ -2964,6 +2969,10 @@ mod tests {
             ("vidu.motion_sync", "/ent/v2/template"),
             ("vidu.reference_to_image", "/ent/v2/reference2image"),
             ("vidu.start_end_to_video", "/ent/v2/start-end2video"),
+            ("vidu.text_to_video", "/ent/v2/text2video"),
+            ("vidu.image_to_video", "/ent/v2/img2video"),
+            ("vidu.reference_to_video", "/ent/v2/reference2video"),
+            ("vidu.video_task_query", "/ent/v2/tasks/{task_id}/creations"),
             ("volcengine.image_generation", "/api/v3/images/generations"),
             ("volcengine.speech", "/api/v3/audio/speech"),
             (
@@ -3155,6 +3164,25 @@ mod tests {
             "kling.image_to_video",
             "kling.motion_control",
             "vidu.motion_sync",
+            // Vidu's three remaining video entry points and their poll surface.
+            // `vidu.start_end_to_video` stays the *bound* video descriptor (the
+            // arm the catalog's `viduq3*` models already resolve to), because a
+            // `ModelInfo` carries no generation-mode field: one vendor can bind
+            // exactly one video endpoint, and rebinding it would silently move
+            // every existing `viduq3` model to another path.
+            //
+            // These four are therefore explicit-entry and poll surfaces, the
+            // same shape as the Kling / Gemini feature-entry arms above and
+            // every other `*.task_query`: a caller selects them by api code (the
+            // generation service drives them through `videos_vidu()`), a poll
+            // caller arrives holding a task id, and no model's
+            // `primaryCapability` selects them. Each carries a classifier arm in
+            // both copies of `provider_native_api_code_from_standard_path` and a
+            // grant in `official.vidu.full`.
+            "vidu.image_to_video",
+            "vidu.reference_to_video",
+            "vidu.text_to_video",
+            "vidu.video_task_query",
             // Compatibility-face surfaces. Every endpoint below is a real
             // declaration, classified and granted, but no model binds to it
             // because every model of its vendor declares
