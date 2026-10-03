@@ -534,13 +534,13 @@
           "displayName": "xAI",
           "legalName": "xAI",
           "marketScope": "global",
-          "modelCount": 12,
+          "modelCount": 13,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "xai/global/vendor.json",
-          "pricingFileCount": 12,
+          "pricingFileCount": 13,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 40,
@@ -1795,13 +1795,13 @@
           "displayName": "Baidu AI Cloud",
           "legalName": "Baidu AI Cloud",
           "marketScope": "china_mainland",
-          "modelCount": 5,
+          "modelCount": 11,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "baidu/cn/vendor.json",
-          "pricingFileCount": 5,
+          "pricingFileCount": 11,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 90,
@@ -3079,13 +3079,13 @@
           "displayName": "Kuaishou",
           "legalName": "Kuaishou",
           "marketScope": "china_mainland",
-          "modelCount": 12,
+          "modelCount": 14,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "kuaishou/cn/vendor.json",
-          "pricingFileCount": 12,
+          "pricingFileCount": 14,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 130,
@@ -3519,13 +3519,13 @@
           "displayName": "Black Forest Labs",
           "legalName": "Black Forest Labs",
           "marketScope": "global",
-          "modelCount": 12,
+          "modelCount": 13,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "black_forest_labs/global/vendor.json",
-          "pricingFileCount": 11,
+          "pricingFileCount": 12,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 150,
@@ -4061,13 +4061,13 @@
           "displayName": "Xiaomi MiMo",
           "legalName": "Xiaomi Corporation",
           "marketScope": "china_mainland",
-          "modelCount": 9,
+          "modelCount": 12,
           "openSource": true,
           "operatingRegions": [
             "CN"
           ],
           "path": "xiaomi/cn/vendor.json",
-          "pricingFileCount": 6,
+          "pricingFileCount": 9,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 180,
@@ -4177,13 +4177,13 @@
           "displayName": "Xiaomi MiMo",
           "legalName": "Xiaomi Corporation",
           "marketScope": "international",
-          "modelCount": 9,
+          "modelCount": 12,
           "openSource": true,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "xiaomi/global/vendor.json",
-          "pricingFileCount": 6,
+          "pricingFileCount": 9,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 180,
@@ -4199,6 +4199,127 @@
         "openai_compatible"
       ],
       "vendorCode": "xiaomi",
+      "vendorType": "commercial"
+    },
+    {
+      "capabilities": [
+        "chat"
+      ],
+      "clientApiCompatibility": {
+        "claude_code": {
+          "apiCodes": [],
+          "clientApiCode": "claude_code",
+          "displayName": "Claude Code",
+          "notes": "TypeSafe AI does not expose the Claude Code client API surface: Jev answers typed decisions on a single System One endpoint rather than a tool-calling chat protocol.",
+          "protocolCodes": [],
+          "resourceCodes": [],
+          "source": {
+            "observedAt": "2026-09-22T00:00:00Z",
+            "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
+          },
+          "supportStatus": "unsupported"
+        },
+        "codex": {
+          "apiCodes": [],
+          "clientApiCode": "codex",
+          "displayName": "Codex",
+          "notes": "TypeSafe AI does not expose the Codex client API surface: Jev returns structured decisions, not code-generation completions.",
+          "protocolCodes": [],
+          "resourceCodes": [],
+          "source": {
+            "observedAt": "2026-09-22T00:00:00Z",
+            "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
+          },
+          "supportStatus": "unsupported"
+        },
+        "gemini_cli": {
+          "apiCodes": [],
+          "clientApiCode": "gemini_cli",
+          "displayName": "Gemini CLI",
+          "notes": "TypeSafe AI does not expose the Gemini CLI client API surface; use its declared standard protocols instead.",
+          "protocolCodes": [],
+          "resourceCodes": [],
+          "source": {
+            "observedAt": "2026-09-22T00:00:00Z",
+            "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
+          },
+          "supportStatus": "unsupported"
+        }
+      },
+      "displayName": "TypeSafe AI",
+      "legalName": "TypeSafe AI, Inc.",
+      "openSource": false,
+      "regions": [
+        {
+          "billingCurrency": "USD",
+          "billingJurisdiction": "US",
+          "capabilities": [
+            "chat"
+          ],
+          "clientApiCompatibility": {
+            "claude_code": {
+              "apiCodes": [],
+              "clientApiCode": "claude_code",
+              "displayName": "Claude Code",
+              "notes": "TypeSafe AI does not expose the Claude Code client API surface: Jev answers typed decisions on a single System One endpoint rather than a tool-calling chat protocol.",
+              "protocolCodes": [],
+              "resourceCodes": [],
+              "source": {
+                "observedAt": "2026-09-22T00:00:00Z",
+                "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
+              },
+              "supportStatus": "unsupported"
+            },
+            "codex": {
+              "apiCodes": [],
+              "clientApiCode": "codex",
+              "displayName": "Codex",
+              "notes": "TypeSafe AI does not expose the Codex client API surface: Jev returns structured decisions, not code-generation completions.",
+              "protocolCodes": [],
+              "resourceCodes": [],
+              "source": {
+                "observedAt": "2026-09-22T00:00:00Z",
+                "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
+              },
+              "supportStatus": "unsupported"
+            },
+            "gemini_cli": {
+              "apiCodes": [],
+              "clientApiCode": "gemini_cli",
+              "displayName": "Gemini CLI",
+              "notes": "TypeSafe AI does not expose the Gemini CLI client API surface; use its declared standard protocols instead.",
+              "protocolCodes": [],
+              "resourceCodes": [],
+              "source": {
+                "observedAt": "2026-09-22T00:00:00Z",
+                "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
+              },
+              "supportStatus": "unsupported"
+            }
+          },
+          "displayName": "TypeSafe AI",
+          "legalName": "TypeSafe AI, Inc.",
+          "marketScope": "global",
+          "modelCount": 2,
+          "openSource": false,
+          "operatingRegions": [
+            "GLOBAL"
+          ],
+          "path": "typesafe/global/vendor.json",
+          "pricingFileCount": 2,
+          "rankingSnapshotCount": 1,
+          "regionCode": "global",
+          "sortOrder": 185,
+          "supportedProtocols": [
+            "vendor_native"
+          ]
+        }
+      ],
+      "sortOrder": 185,
+      "supportedProtocols": [
+        "vendor_native"
+      ],
+      "vendorCode": "typesafe",
       "vendorType": "commercial"
     }
   ]

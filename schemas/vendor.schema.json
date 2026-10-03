@@ -136,6 +136,10 @@
         "$ref": "#/$defs/apiEndpoint"
       }
     },
+    "nativeApiBaseUrl": {
+      "description": "Official default Base URL of the vendor's own native API surface in this region: the endpoint a caller dials for the vendor's non-compatibility APIs (image, video, audio, music, or a vendor-specific inference surface). baseUri is derived as https://{host}{pathPrefix}. Native paths are vendor-specific, so pathPrefix is not restricted to a protocol family standard set. Required for a vendor/region that publishes no standard compatibility endpoint (no protocolBaseUrls); omit it when the native surface is already expressed by a declared protocol endpoint or the vendor publishes no stable public host.",
+      "$ref": "#/$defs/apiEndpoint"
+    },
     "sortOrder": {
       "type": "integer"
     },

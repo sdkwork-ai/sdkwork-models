@@ -1,7 +1,7 @@
 {
   "apiEndpoints": {
     "openai": {
-      "host": "ark.cn-beijing.volces.com",
+      "host": "ark.ap-southeast.bytepluses.com",
       "pathPrefix": "/api/v3"
     }
   },
@@ -69,11 +69,11 @@
   ],
   "protocolBaseUrls": {
     "openai_compatible": {
-      "host": "ark.cn-beijing.volces.com",
+      "host": "ark.ap-southeast.bytepluses.com",
       "pathPrefix": "/api/v3"
     },
     "openai_responses": {
-      "host": "ark.cn-beijing.volces.com",
+      "host": "ark.ap-southeast.bytepluses.com",
       "pathPrefix": "/api/v3"
     }
   },

@@ -56,6 +56,10 @@
     "runway-video",
     "runway-image"
   ],
+  "nativeApiBaseUrl": {
+    "host": "api.dev.runwayml.com",
+    "pathPrefix": "/v1"
+  },
   "openSource": false,
   "operatingRegions": [
     "GLOBAL"

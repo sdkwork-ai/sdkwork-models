@@ -54,6 +54,10 @@
   "modelFamilies": [
     "luma-video"
   ],
+  "nativeApiBaseUrl": {
+    "host": "api.lumalabs.ai",
+    "pathPrefix": "/dream-machine/v1"
+  },
   "openSource": false,
   "operatingRegions": [
     "GLOBAL"

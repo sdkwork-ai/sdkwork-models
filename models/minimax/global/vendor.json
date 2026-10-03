@@ -1,7 +1,7 @@
 {
   "apiEndpoints": {
     "openai": {
-      "host": "api.minimaxi.com",
+      "host": "api.minimax.io",
       "pathPrefix": "/v1"
     }
   },
@@ -76,7 +76,7 @@
   ],
   "protocolBaseUrls": {
     "openai_compatible": {
-      "host": "api.minimaxi.com",
+      "host": "api.minimax.io",
       "pathPrefix": "/v1"
     }
   },

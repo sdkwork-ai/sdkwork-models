@@ -1,11 +1,11 @@
 {
   "apiEndpoints": {
     "anthropic": {
-      "host": "dashscope.aliyuncs.com",
+      "host": "dashscope-intl.aliyuncs.com",
       "pathPrefix": "/apps/anthropic"
     },
     "openai": {
-      "host": "dashscope.aliyuncs.com",
+      "host": "dashscope-intl.aliyuncs.com",
       "pathPrefix": "/compatible-mode/v1"
     }
   },
@@ -170,15 +170,15 @@
   ],
   "protocolBaseUrls": {
     "anthropic_messages": {
-      "host": "dashscope.aliyuncs.com",
+      "host": "dashscope-intl.aliyuncs.com",
       "pathPrefix": "/apps/anthropic"
     },
     "openai_compatible": {
-      "host": "dashscope.aliyuncs.com",
+      "host": "dashscope-intl.aliyuncs.com",
       "pathPrefix": "/compatible-mode/v1"
     },
     "openai_responses": {
-      "host": "dashscope.aliyuncs.com",
+      "host": "dashscope-intl.aliyuncs.com",
       "pathPrefix": "/compatible-mode/v1"
     }
   },

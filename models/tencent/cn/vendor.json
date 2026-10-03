@@ -1,11 +1,11 @@
 {
   "apiEndpoints": {
     "anthropic": {
-      "host": "api.hunyuan.cloud.tencent.com",
-      "pathPrefix": "/anthropic"
+      "host": "tokenhub.tencentmaas.com",
+      "pathPrefix": ""
     },
     "openai": {
-      "host": "api.hunyuan.cloud.tencent.com",
+      "host": "tokenhub.tencentmaas.com",
       "pathPrefix": "/v1"
     }
   },
@@ -71,11 +71,11 @@
   ],
   "protocolBaseUrls": {
     "anthropic_messages": {
-      "host": "api.hunyuan.cloud.tencent.com",
-      "pathPrefix": "/anthropic"
+      "host": "tokenhub.tencentmaas.com",
+      "pathPrefix": ""
     },
     "openai_compatible": {
-      "host": "api.hunyuan.cloud.tencent.com",
+      "host": "tokenhub.tencentmaas.com",
       "pathPrefix": "/v1"
     }
   },

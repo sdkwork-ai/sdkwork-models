@@ -57,6 +57,10 @@
     "vidu-video",
     "vidu-audio"
   ],
+  "nativeApiBaseUrl": {
+    "host": "api.vidu.cn",
+    "pathPrefix": "/ent/v2"
+  },
   "openSource": false,
   "operatingRegions": [
     "CN"

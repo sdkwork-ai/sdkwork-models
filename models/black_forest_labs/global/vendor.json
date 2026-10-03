@@ -56,6 +56,10 @@
   "modelFamilies": [
     "flux"
   ],
+  "nativeApiBaseUrl": {
+    "host": "api.bfl.ai",
+    "pathPrefix": "/v1"
+  },
   "openSource": false,
   "operatingRegions": [
     "GLOBAL"

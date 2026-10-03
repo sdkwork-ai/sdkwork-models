@@ -54,6 +54,10 @@
   "modelFamilies": [
     "mureka"
   ],
+  "nativeApiBaseUrl": {
+    "host": "api.mureka.ai",
+    "pathPrefix": "/v1"
+  },
   "openSource": false,
   "operatingRegions": [
     "GLOBAL"

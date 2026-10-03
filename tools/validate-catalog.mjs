@@ -335,6 +335,11 @@ export function validateCatalog(root) {
       pathPrefix,
       issues,
     });
+    validateNativeApiBaseUrl({
+      vendor: bundle.vendor,
+      pathPrefix,
+      issues,
+    });
     validateClientApiCompatibility({
       vendor: bundle.vendor,
       protocolCodes,
@@ -1389,9 +1394,26 @@ const LLM_PROTOCOL_CODES = new Set(["openai_compatible", "openai_responses", "an
  * - host 必须是纯小写域名(无协议、无路径)
  * - pathPrefix 必须是该协议族标准集合(models/protocols.json#/families)中的值
  * - 未收录的协议(vendor_native、google_gemini、无官方地址的声明)直接省略
+ * - 完整性:supportedProtocols 声明的每个 LLM 协议都应有对应地址。缺失时给出
+ *   warning 而不是 error,因为 schema 明确允许「无法核实的官方地址」省略;
+ *   该 warning 让缺口在 models:validate 输出里可见,而不逼迫编造地址。
  */
 function validateProtocolBaseUrls({ vendor, protocolFamilyByCode, familyPathPrefixes, pathPrefix, issues }) {
   const baseUrls = vendor.protocolBaseUrls;
+  for (const protocolCode of vendor.supportedProtocols ?? []) {
+    if (!LLM_PROTOCOL_CODES.has(protocolCode)) {
+      continue;
+    }
+    if (baseUrls !== undefined && baseUrls !== null && typeof baseUrls === "object" && !Array.isArray(baseUrls) && Object.prototype.hasOwnProperty.call(baseUrls, protocolCode)) {
+      continue;
+    }
+    issues.push(issue(
+      "vendor.protocol_base_urls.missing",
+      `${pathPrefix}/vendor.json#/protocolBaseUrls/${protocolCode}`,
+      `supportedProtocols declares ${protocolCode} but no official default Base URL is published for it; the console cannot prefill this protocol`,
+      "warning",
+    ));
+  }
   if (baseUrls === undefined || baseUrls === null) {
     // 允许缺失:非 LLM 协议厂商或无官方默认地址的厂商省略该字段
     return;
@@ -1424,6 +1446,54 @@ function validateProtocolBaseUrls({ vendor, protocolFamilyByCode, familyPathPref
       const allowed = standardPathPrefixes ? [...standardPathPrefixes].map((value) => JSON.stringify(value)).join(", ") : "(family not declared in models/protocols.json)";
       issues.push(issue("vendor.protocol_base_url.path.not_standard", `${itemPath}/pathPrefix`, `pathPrefix ${JSON.stringify(endpoint.pathPrefix)} is not in the ${family} family standard set: ${allowed}`));
     }
+  }
+}
+
+/**
+ * 校验 vendor nativeApiBaseUrl 配置(vendor 自有 native API 表面的官方默认 Base URL):
+ * - 必须是 vendor_native 协议的厂商才能声明该字段
+ * - host 必须是纯小写域名(无协议、无路径)
+ * - pathPrefix 必须为空或以 '/' 开头且不以 '/' 结尾;native 路径由厂商自定,
+ *   不受协议族标准集合约束(models/protocols.json#/families)
+ * - 完整性:既没有标准兼容端点(protocolBaseUrls)又没有 native 地址的
+ *   vendor/region 在控制台上没有任何可自动填充的官方地址。按 schema 的
+ *   「没有稳定公开主机可以省略」约定,这里给出 warning 而非 error。
+ */
+function validateNativeApiBaseUrl({ vendor, pathPrefix, issues }) {
+  const endpoint = vendor.nativeApiBaseUrl;
+  const baseUrls = vendor.protocolBaseUrls;
+  const hasCompatibilityEndpoint =
+    baseUrls !== undefined
+    && baseUrls !== null
+    && typeof baseUrls === "object"
+    && !Array.isArray(baseUrls)
+    && Object.keys(baseUrls).length > 0;
+
+  if (endpoint === undefined || endpoint === null) {
+    if (!hasCompatibilityEndpoint) {
+      issues.push(issue(
+        "vendor.native_api_base_url.missing",
+        `${pathPrefix}/vendor.json#/nativeApiBaseUrl`,
+        "vendor publishes neither a standard compatibility endpoint nor a native API Base URL; no official address can be prefilled for it",
+        "warning",
+      ));
+    }
+    return;
+  }
+
+  const itemPath = `${pathPrefix}/vendor.json#/nativeApiBaseUrl`;
+  if (typeof endpoint !== "object" || Array.isArray(endpoint)) {
+    issues.push(issue("vendor.native_api_base_url.invalid", itemPath, "nativeApiBaseUrl must be an object with host and pathPrefix"));
+    return;
+  }
+  if (!(vendor.supportedProtocols ?? []).includes("vendor_native")) {
+    issues.push(issue("vendor.native_api_base_url.undeclared_protocol", itemPath, "nativeApiBaseUrl describes the vendor_native surface, so vendor_native must be declared in supportedProtocols"));
+  }
+  if (typeof endpoint.host !== "string" || !/^[a-z0-9][a-z0-9.-]*$/.test(endpoint.host)) {
+    issues.push(issue("vendor.native_api_base_url.host.invalid", `${itemPath}/host`, "host must be a lowercase domain without scheme or path"));
+  }
+  if (typeof endpoint.pathPrefix !== "string" || (endpoint.pathPrefix !== "" && (!endpoint.pathPrefix.startsWith("/") || endpoint.pathPrefix.endsWith("/")))) {
+    issues.push(issue("vendor.native_api_base_url.path.invalid", `${itemPath}/pathPrefix`, "pathPrefix must be empty or start with '/' and not end with '/'"));
   }
 }
 

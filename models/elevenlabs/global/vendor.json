@@ -59,6 +59,10 @@
     "elevenlabs-music",
     "elevenlabs-sfx"
   ],
+  "nativeApiBaseUrl": {
+    "host": "api.elevenlabs.io",
+    "pathPrefix": "/v1"
+  },
   "openSource": false,
   "operatingRegions": [
     "GLOBAL"

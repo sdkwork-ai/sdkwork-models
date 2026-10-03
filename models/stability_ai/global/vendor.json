@@ -58,6 +58,10 @@
     "stable-audio",
     "stable-audio-sfx"
   ],
+  "nativeApiBaseUrl": {
+    "host": "api.stability.ai",
+    "pathPrefix": ""
+  },
   "openSource": false,
   "operatingRegions": [
     "GLOBAL"

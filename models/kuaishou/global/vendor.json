@@ -56,6 +56,10 @@
     "kling",
     "kling-sfx"
   ],
+  "nativeApiBaseUrl": {
+    "host": "api-singapore.klingai.com",
+    "pathPrefix": ""
+  },
   "openSource": false,
   "operatingRegions": [
     "GLOBAL"

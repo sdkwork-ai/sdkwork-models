@@ -59,6 +59,10 @@
     "vidu-audio",
     "vidu-image"
   ],
+  "nativeApiBaseUrl": {
+    "host": "api.vidu.com",
+    "pathPrefix": "/ent/v2"
+  },
   "openSource": false,
   "operatingRegions": [
     "GLOBAL"

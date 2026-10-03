@@ -127,7 +127,7 @@
     },
     "openai_responses": {
       "host": "api.deepseek.com",
-      "pathPrefix": "/v1"
+      "pathPrefix": ""
     }
   },
   "regionCode": "global",
