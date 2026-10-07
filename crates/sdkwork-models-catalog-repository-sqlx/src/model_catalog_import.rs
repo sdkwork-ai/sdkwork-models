@@ -1713,7 +1713,7 @@ fn model_music_endpoint_descriptor(model: &ModelInfo) -> EndpointDescriptor {
             method: "POST",
             path_template: "/v1/music/generations",
             streaming_supported: false,
-            sort_order: 430,
+            sort_order: 425,
         };
     }
 
@@ -1772,6 +1772,22 @@ fn vendor_native_chat_descriptor(vendor_code: &str) -> Option<EndpointDescriptor
             path_template: "/v2/chat/completions",
             streaming_supported: true,
             sort_order: 420,
+        },
+        // TypeSafe publishes no chat-completions endpoint at all: every
+        // `typesafe` model declares `apiFormat = vendor_native` and is served
+        // by the System One decision surface (`POST /v1/systemone`). The
+        // consumer bootstrap (`sdkwork-cloudrouter`) derives the same
+        // `sdk-vendor-endpoint` expectation from its own copy of this table,
+        // so a missing arm here leaves that projection unwritten and the
+        // gateway reports a permanent `ai_vendor_api_endpoint` catalog gap.
+        "typesafe" => EndpointDescriptor {
+            endpoint_code: "typesafe.systemone",
+            protocol_code: "vendor_native",
+            display_name: "TypeSafe AI Jev System One",
+            method: "POST",
+            path_template: "/v1/systemone",
+            streaming_supported: false,
+            sort_order: 430,
         },
         _ => return None,
     };
@@ -1953,7 +1969,9 @@ fn endpoint_modality_code(endpoint_code: &str) -> Option<String> {
         // Task/polling surfaces carry the modality of the job they track, so the
         // accounting side can meter the poll the way it meters the submit.
         "bytedance.task_query" | "jimeng.task_query" | "volcengine.task_query"
-        | "kling.task_query" | "vidu.video_task_query" => Some("video"),
+        | "kling.task_query" | "vidu.video_task_query" | "gemini.video_task_query" => {
+            Some("video")
+        }
         "minimax.music_generation" | "suno.music_generation" => Some("music"),
         "elevenlabs.text_to_speech" | "volcengine.speech" => Some("audio"),
         "elevenlabs.sound_generation" | "sfx.sound" => Some("audio"),
@@ -2934,6 +2952,10 @@ mod tests {
                 "/v1beta/models/{model}:streamGenerateContent",
             ),
             ("gemini.video_generation", "/v1beta/models/{model}:generateVideos"),
+            (
+                "gemini.video_task_query",
+                "/v1beta/models/{model}/operations/{operationId}",
+            ),
             // ByteDance's catalog surface (Volcengine Ark), separate from
             // `jimeng` — see the split note on `vendor_native_video_descriptor`.
             ("bytedance.image_generation", "/api/v3/images/generations"),
@@ -2965,6 +2987,10 @@ mod tests {
             ("suno.music", "/v1/music"),
             ("suno.music_generation", "/v1/music/generations"),
             ("suno.music_task_query", "/v1/music/generations/{taskId}"),
+            // TypeSafe serves no OpenAI-compatible chat surface: the vendor-
+            // native System One endpoint is the only addressable door for its
+            // models, and the seed declares it (`api.typesafe.systemone`).
+            ("typesafe.systemone", "/v1/systemone"),
             ("tencent.anthropic_messages", "/v1/messages"),
             ("vidu.motion_sync", "/ent/v2/template"),
             ("vidu.reference_to_image", "/ent/v2/reference2image"),
