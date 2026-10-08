@@ -1,0 +1,45 @@
+{
+  "catalogKey": "kuaishou/kling-image-3.0",
+  "currency": "USD",
+  "modelId": "kling-image-3.0",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1k_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-image-3-0-res-1k-2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "6814f96a15fb373a1c8b3cc776ff80333a434527f4f0f0a6961af5cf276f3d3d",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-08T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/image"
+      },
+      "tierCode": "res_1k_2k",
+      "unitPrice": "0.028169",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "kuaishou"
+}
