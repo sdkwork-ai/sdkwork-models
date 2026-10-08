@@ -31,7 +31,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
       },
       "tierCode": "noref_silent_720p",
@@ -66,7 +66,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
       },
       "tierCode": "noref_silent_1080p",
@@ -101,7 +101,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
       },
       "tierCode": "noref_silent_4k",
@@ -136,7 +136,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
       },
       "tierCode": "noref_audio_720p",
@@ -171,7 +171,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
       },
       "tierCode": "noref_audio_1080p",
@@ -206,7 +206,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
       },
       "tierCode": "noref_audio_4k",
@@ -241,7 +241,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
       },
       "tierCode": "ref_silent_720p",
@@ -276,7 +276,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
       },
       "tierCode": "ref_silent_1080p",
@@ -311,7 +311,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
       },
       "tierCode": "ref_silent_4k",

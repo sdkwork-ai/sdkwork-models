@@ -17,6 +17,9 @@
       "maxDurationSeconds": 10,
       "minDurationSeconds": 6,
       "outputAudio": false,
+      "pricingTierCodes": [
+        "regen_768p_to_2k"
+      ],
       "profileCode": "r2v_range_768p",
       "resolution": "768p",
       "resolutionTierCode": "res_768p",
@@ -24,16 +27,13 @@
       "wireParameters": {
         "duration": "6-10",
         "resolution": "768p"
-      },
-      "pricingTierCodes": [
-        "regen_768p_to_2k"
-      ]
+      }
     }
   ],
   "regionCode": "cn",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
+    "observedAt": "2026-10-08T00:00:00Z",
     "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
   },
   "vendorCode": "minimax"

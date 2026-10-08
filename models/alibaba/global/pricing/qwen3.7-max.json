@@ -25,7 +25,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-max"
       },
       "unitPrice": "2.500000",
@@ -53,7 +53,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-max"
       },
       "unitPrice": "7.500000",
@@ -87,7 +87,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-max"
       },
       "tierCode": "explicit_cache_write",
@@ -122,7 +122,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-max"
       },
       "tierCode": "explicit_cache_read",
@@ -157,7 +157,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-max"
       },
       "tierCode": "implicit_cache",

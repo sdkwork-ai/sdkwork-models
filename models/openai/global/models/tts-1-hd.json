@@ -14,7 +14,7 @@
   ],
   "latencyP50Ms": 800,
   "latencyP95Ms": 2500,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "tts-1-hd",
   "outputModalities": [
     "audio"
@@ -22,12 +22,12 @@
   "primaryCapability": "audio",
   "rankScore": "760.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
+    "observedAt": "2026-10-08T00:00:00Z",
     "sourceUrl": "https://platform.openai.com/docs/guides/text-to-speech"
   },
   "strengths": [

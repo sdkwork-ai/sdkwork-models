@@ -32,7 +32,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://platform.vidu.cn/docs/pricing"
       },
       "tierCode": "under_5s",
@@ -68,7 +68,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://platform.vidu.cn/docs/pricing"
       },
       "tierCode": "under_10s",

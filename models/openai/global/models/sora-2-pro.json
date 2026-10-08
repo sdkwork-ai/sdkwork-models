@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 90000,
   "latencyP95Ms": 240000,
-  "lifecycle": "deprecated",
+  "lifecycle": "retired",
   "modelId": "sora-2-pro",
   "outputModalities": [
     "video"
@@ -23,12 +23,12 @@
   "primaryCapability": "video",
   "rankScore": "870.000000",
   "regionCode": "global",
-  "releaseStage": "deprecated",
-  "routingState": "enabled",
+  "releaseStage": "retired",
+  "routingState": "disabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "archived",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
+    "observedAt": "2026-10-08T00:00:00Z",
     "sourceUrl": "https://developers.openai.ac.cn/api/docs/guides/video-generation"
   },
   "strengths": [

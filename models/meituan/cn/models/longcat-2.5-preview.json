@@ -1,0 +1,52 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat",
+    "reasoning"
+  ],
+  "catalogKey": "meituan/longcat-2.5-preview",
+  "codingVisible": true,
+  "colorToken": "#0284c7",
+  "contextTokens": 1048576,
+  "description": "Meituan LongCat 2.5 Preview agentic model. The official LongCat changelog (version 2026-09-25) records its launch with new image-understanding (multimodal) capability, strong coding, and Claude Code compatibility. The quick start lists it with a 1M-token context window and 128K max output tokens on both the OpenAI-compatible and Anthropic-compatible endpoints.",
+  "displayName": "LongCat 2.5 Preview",
+  "familyCode": "longcat",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "preview",
+  "maxInputTokens": 1048576,
+  "maxOutputTokens": 131072,
+  "modelId": "longcat-2.5-preview",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "preview",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-08T00:00:00Z",
+    "sourceUrl": "https://longcat.chat/platform/docs/zh/"
+  },
+  "strengths": [
+    "Chinese",
+    "Coding",
+    "Agentic",
+    "Long context",
+    "Multimodal understanding"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "meituan",
+  "vendorName": "Meituan"
+}

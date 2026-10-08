@@ -5,27 +5,27 @@
   ],
   "catalogKey": "runway/gemini_image3.1_flash",
   "codingVisible": false,
-  "description": "Google Nano Banana 2 (gemini_image3.1_flash) image model exposed by the Runway Dev API model list; no per-image rate published in the official pricing tables.",
+  "description": "Google Nano Banana 2 (gemini_image3.1_flash) image model exposed by the Runway Dev API.",
   "displayName": "Gemini Image 3.1 Flash",
   "familyCode": "runway-image",
   "inputModalities": [
     "text",
     "image"
   ],
-  "lifecycle": "preview",
+  "lifecycle": "active",
   "modelId": "gemini_image3.1_flash",
   "outputModalities": [
     "image"
   ],
   "primaryCapability": "image",
   "regionCode": "global",
-  "releaseStage": "preview",
-  "routingState": "catalog_only",
+  "releaseStage": "active",
+  "routingState": "enabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "hidden",
+  "shelfState": "listed",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
-    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+    "observedAt": "2026-10-08T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
   },
   "supportsJsonSchema": false,
   "supportsStreaming": false,

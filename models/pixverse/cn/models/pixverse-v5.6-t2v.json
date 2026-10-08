@@ -12,7 +12,7 @@
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "preview",
+  "lifecycle": "deprecated",
   "modelId": "pixverse-v5.6-t2v",
   "outputModalities": [
     "video",
@@ -20,12 +20,12 @@
   ],
   "primaryCapability": "video",
   "regionCode": "cn",
-  "releaseStage": "preview",
+  "releaseStage": "deprecated",
   "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
+    "observedAt": "2026-10-08T00:00:00Z",
     "sourceUrl": "https://help.aliyun.com/zh/model-studio/pixverse-text-to-video-api-reference"
   },
   "supportsJsonSchema": false,

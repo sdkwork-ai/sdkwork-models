@@ -21,14 +21,42 @@
       "productCode": "models.xiaomi.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "9e104658fddb3a8772a1f32265bd628c9161dc15021353aaacbdb3929a58d677",
+      "rateHash": "a839f5b84e5c1af7338abb2002cf2799e9bdf48d20702ce5a882e613216c67f1",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-22T00:00:00Z",
-        "sourceUrl": "https://platform.xiaomimimo.com"
+        "observedAt": "2026-10-08T00:00:00Z",
+        "sourceUrl": "https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go"
       },
-      "unitPrice": "9.000000",
+      "unitPrice": "30.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.xiaomi.cn.official",
+      "priceId": "xiaomi-cn-mimo-v2-6-pro-ultraspeed-cache-read",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xiaomi.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "04fd259b89308381dffb939187aa6e68e5e96eff468c266915e5332ac96ddde5",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-08T00:00:00Z",
+        "sourceUrl": "https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go"
+      },
+      "unitPrice": "0.250000",
       "unitSize": "1000000"
     },
     {
@@ -49,14 +77,14 @@
       "productCode": "models.xiaomi.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "3ba00268c58890d6f19530f0302853b385025947080344dc949d128e31ca7c27",
+      "rateHash": "94dc61354a1892649af7b22f462cb47f81e024702145abccbca183b9ef5ae0f3",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-22T00:00:00Z",
-        "sourceUrl": "https://platform.xiaomimimo.com"
+        "observedAt": "2026-10-08T00:00:00Z",
+        "sourceUrl": "https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go"
       },
-      "unitPrice": "18.000000",
+      "unitPrice": "60.000000",
       "unitSize": "1000000"
     }
   ],

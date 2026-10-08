@@ -21,14 +21,14 @@
       "productCode": "models.elevenlabs.audio",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "90648ecb527246ce70472adce6a859a3740512059062b8fac4bc1a68ed39456b",
+      "rateHash": "76e3a0525806dc0dda55566f30567998dd28490074be030de8df38476250b9f3",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://elevenlabs.io/pricing/api"
       },
-      "unitPrice": "0.050000",
+      "unitPrice": "0.040000",
       "unitSize": "1000"
     }
   ],

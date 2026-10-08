@@ -10,12 +10,6 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "OpenAI direct",
     "models": [
       {
-        "catalogKey": "openai/gpt-5.3-codex",
-        "model": "gpt-5.3-codex",
-        "displayName": "GPT-5.3 Codex",
-        "sortOrder": 5
-      },
-      {
         "catalogKey": "openai/gpt-5.5-cyber",
         "model": "gpt-5.5-cyber",
         "displayName": "GPT-5.5 Cyber",
@@ -86,6 +80,12 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "model": "claude-mythos-5-1",
         "displayName": "Claude Mythos 5.1",
         "sortOrder": 3
+      },
+      {
+        "catalogKey": "anthropic/claude-mythos-5",
+        "model": "claude-mythos-5",
+        "displayName": "Claude Mythos 5",
+        "sortOrder": 4
       },
       {
         "catalogKey": "anthropic/claude-opus-4-5",
@@ -286,22 +286,58 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 0
       },
       {
+        "catalogKey": "baidu/ernie-4.5-turbo-20260402",
+        "model": "ernie-4.5-turbo-20260402",
+        "displayName": "ERNIE 4.5 Turbo (2026-04-02)",
+        "sortOrder": 1
+      },
+      {
+        "catalogKey": "baidu/ernie-4.5-turbo-32k",
+        "model": "ernie-4.5-turbo-32k",
+        "displayName": "ERNIE 4.5 Turbo 32K",
+        "sortOrder": 2
+      },
+      {
+        "catalogKey": "baidu/ernie-4.5-turbo-vl-32k",
+        "model": "ernie-4.5-turbo-vl-32k",
+        "displayName": "ERNIE 4.5 Turbo VL 32K",
+        "sortOrder": 3
+      },
+      {
+        "catalogKey": "baidu/ernie-4.5-turbo-vl",
+        "model": "ernie-4.5-turbo-vl",
+        "displayName": "ERNIE 4.5 Turbo VL",
+        "sortOrder": 4
+      },
+      {
+        "catalogKey": "baidu/ernie-5.0-thinking-exp",
+        "model": "ernie-5.0-thinking-exp",
+        "displayName": "ERNIE 5.0 Thinking Exp",
+        "sortOrder": 5
+      },
+      {
+        "catalogKey": "baidu/ernie-5.0-thinking-latest",
+        "model": "ernie-5.0-thinking-latest",
+        "displayName": "ERNIE 5.0 Thinking Latest",
+        "sortOrder": 6
+      },
+      {
         "catalogKey": "baidu/ernie-5.0-thinking-preview",
         "model": "ernie-5.0-thinking-preview",
         "displayName": "ERNIE 5.0 Thinking Preview",
-        "sortOrder": 1
+        "sortOrder": 7
       },
       {
         "catalogKey": "baidu/ernie-5.0",
         "model": "ernie-5.0",
         "displayName": "ERNIE 5.0",
-        "sortOrder": 2
+        "sortOrder": 8
       },
       {
         "catalogKey": "baidu/ernie-5.1",
         "model": "ernie-5.1",
         "displayName": "ERNIE 5.1",
-        "sortOrder": 3
+        "sortOrder": 9
       }
     ],
     "sortOrder": 5,
@@ -398,6 +434,12 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "model": "longcat-2.0",
         "displayName": "LongCat 2.0",
         "sortOrder": 1
+      },
+      {
+        "catalogKey": "meituan/longcat-2.5-preview",
+        "model": "longcat-2.5-preview",
+        "displayName": "LongCat 2.5 Preview",
+        "sortOrder": 2
       }
     ],
     "sortOrder": 9,
@@ -518,6 +560,12 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "model": "step-3.7-flash",
         "displayName": "Step 3.7 Flash",
         "sortOrder": 2
+      },
+      {
+        "catalogKey": "stepfun/step-5-preview",
+        "model": "step-5-preview",
+        "displayName": "Step 5 Preview",
+        "sortOrder": 3
       }
     ],
     "sortOrder": 13,
@@ -580,6 +628,30 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
   },
   {
     "baseUrl": "",
+    "channelName": "TypeSafe AI",
+    "protocol": "",
+    "providerCode": "typesafe.direct",
+    "providerDisplayName": "TypeSafe AI",
+    "models": [
+      {
+        "catalogKey": "typesafe/jev-1.13.0",
+        "model": "jev-1.13.0",
+        "displayName": "Jev 1.13",
+        "sortOrder": 0
+      },
+      {
+        "catalogKey": "typesafe/jev-latest",
+        "model": "jev-latest",
+        "displayName": "Jev Latest",
+        "sortOrder": 1
+      }
+    ],
+    "sortOrder": 15,
+    "vendorCode": "typesafe",
+    "vendorName": "TypeSafe AI"
+  },
+  {
+    "baseUrl": "",
     "channelName": "xAI",
     "protocol": "",
     "providerCode": "xai.direct",
@@ -610,13 +682,19 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 5
       },
       {
+        "catalogKey": "xai/grok-4.7",
+        "model": "grok-4.7",
+        "displayName": "Grok 4.7",
+        "sortOrder": 6
+      },
+      {
         "catalogKey": "xai/grok-build-0.1",
         "model": "grok-build-0.1",
         "displayName": "Grok Build 0.1",
-        "sortOrder": 6
+        "sortOrder": 7
       }
     ],
-    "sortOrder": 15,
+    "sortOrder": 16,
     "vendorCode": "xai",
     "vendorName": "xAI"
   },
@@ -638,9 +716,27 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "model": "mimo-v2.5",
         "displayName": "MiMo V2.5",
         "sortOrder": 8
+      },
+      {
+        "catalogKey": "xiaomi/mimo-v2.6-flash",
+        "model": "mimo-v2.6-flash",
+        "displayName": "MiMo V2.6 Flash",
+        "sortOrder": 9
+      },
+      {
+        "catalogKey": "xiaomi/mimo-v2.6-pro-ultraspeed",
+        "model": "mimo-v2.6-pro-ultraspeed",
+        "displayName": "MiMo V2.6 Pro UltraSpeed",
+        "sortOrder": 10
+      },
+      {
+        "catalogKey": "xiaomi/mimo-v2.6-pro",
+        "model": "mimo-v2.6-pro",
+        "displayName": "MiMo V2.6 Pro",
+        "sortOrder": 11
       }
     ],
-    "sortOrder": 16,
+    "sortOrder": 17,
     "vendorCode": "xiaomi",
     "vendorName": "Xiaomi MiMo"
   },
@@ -700,7 +796,7 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 12
       }
     ],
-    "sortOrder": 17,
+    "sortOrder": 18,
     "vendorCode": "zhipu",
     "vendorName": "Zhipu AI"
   }

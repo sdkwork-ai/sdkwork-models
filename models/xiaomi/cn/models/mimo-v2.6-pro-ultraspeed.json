@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#FF6900",
   "contextTokens": 1048576,
-  "description": "MiMo V2.6 Pro UltraSpeed - a faster serving mode of MiMo-V2.6-Pro billed at roughly three times the realtime input/output rates for low-latency inference.",
+  "description": "MiMo V2.6 Pro UltraSpeed - a faster serving mode of MiMo-V2.6-Pro billed at roughly ten times the realtime input/output rates for low-latency inference.",
   "displayName": "MiMo V2.6 Pro UltraSpeed",
   "familyCode": "mimo-v2.5",
   "inputModalities": [
@@ -17,7 +17,7 @@
   "latencyP95Ms": 700,
   "lifecycle": "active",
   "maxInputTokens": 1048576,
-  "maxOutputTokens": 262144,
+  "maxOutputTokens": 131072,
   "modelId": "mimo-v2.6-pro-ultraspeed",
   "outputModalities": [
     "text"
@@ -30,8 +30,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-09-22T00:00:00Z",
-    "sourceUrl": "https://mimo.xiaomi.com"
+    "observedAt": "2026-10-08T00:00:00Z",
+    "sourceUrl": "https://mimo.mi.com/docs/zh-CN/quick-start/summary/model"
   },
   "strengths": [
     "Speed",

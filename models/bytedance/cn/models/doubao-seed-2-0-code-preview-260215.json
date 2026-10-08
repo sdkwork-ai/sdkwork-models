@@ -14,7 +14,7 @@
     "text",
     "image"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 256000,
   "maxOutputTokens": 32768,
   "modelId": "doubao-seed-2-0-code-preview-260215",
@@ -24,12 +24,12 @@
   "primaryCapability": "chat",
   "rankScore": "870.000000",
   "regionCode": "cn",
-  "releaseStage": "preview",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
+    "observedAt": "2026-10-08T00:00:00Z",
     "sourceUrl": "https://www.volcengine.com/docs/82379"
   },
   "strengths": [

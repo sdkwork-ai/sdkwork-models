@@ -1,6 +1,6 @@
 > Owner: SDKWork maintainers
 
-Generated: 2026-09-17
+Generated: 2026-10-08
 
 > 本文件由 `tools/generate-vendor-model-architecture-doc.mjs` 从模型目录生成，请勿手改。
 > 口径：模型表仅收录 `shelfState = listed` 的模型；`Context` = `contextTokens / 1000` 向下取整；
@@ -32,10 +32,11 @@ Generated: 2026-09-17
 | 19 | stepfun | StepFun | No | anthropic_messages, openai_compatible, openai_responses | cn | CC:unsupported / CX:unsupported / GC:unsupported |
 | 20 | suno | Suno | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
 | 21 | tencent | Tencent Cloud | No | anthropic_messages, openai_compatible | cn | CC:unsupported / CX:unsupported / GC:unsupported |
-| 22 | vidu | Vidu | No | vendor_native | cn, global | CC:unsupported / CX:unsupported / GC:unsupported |
-| 23 | xai | xAI | No | openai_compatible, openai_responses | global | CC:unsupported / CX:unsupported / GC:unsupported |
-| 24 | xiaomi | Xiaomi MiMo | Yes | anthropic_messages, openai_compatible | cn, global | CC:convert / CX:convert / GC:convert |
-| 25 | zhipu | Zhipu AI | No | anthropic_messages, openai_compatible, vendor_native | cn | CC:unsupported / CX:unsupported / GC:unsupported |
+| 22 | typesafe | TypeSafe AI | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
+| 23 | vidu | Vidu | No | vendor_native | cn, global | CC:unsupported / CX:unsupported / GC:unsupported |
+| 24 | xai | xAI | No | openai_compatible, openai_responses | global | CC:unsupported / CX:unsupported / GC:unsupported |
+| 25 | xiaomi | Xiaomi MiMo | Yes | anthropic_messages, openai_compatible | cn, global | CC:convert / CX:convert / GC:convert |
+| 26 | zhipu | Zhipu AI | No | anthropic_messages, openai_compatible, vendor_native | cn | CC:unsupported / CX:unsupported / GC:unsupported |
 
 ## Model Architecture by Region
 
@@ -95,7 +96,13 @@ Generated: 2026-09-17
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
 | ernie-4.5-turbo-128k | 128K | chat | CNY 0.80 / 3.20 |
+| ernie-4.5-turbo-20260402 | 128K | chat | CNY 0.80 / 3.20 |
+| ernie-4.5-turbo-32k | 32K | chat | CNY 0.80 / 3.20 |
+| ernie-4.5-turbo-vl | 128K | chat | CNY 0.80 / 3.20 |
+| ernie-4.5-turbo-vl-32k | 32K | chat | CNY 0.80 / 3.20 |
 | ernie-5.0 | N/A | N/A | CNY 6.00 / 24.00 |
+| ernie-5.0-thinking-exp | 128K | chat | CNY 6.00 / 24.00 |
+| ernie-5.0-thinking-latest | 128K | chat | CNY 6.00 / 24.00 |
 | ernie-5.0-thinking-preview | 128K | chat | CNY 6.00 / 24.00 |
 | ernie-5.1 | 128K | chat | CNY 4.00 / 18.00 |
 | ernie-x1.1 | 64K | chat, reasoning | CNY 1.00 / 4.00 |
@@ -116,6 +123,7 @@ Generated: 2026-09-17
 | flux-kontext-pro | N/A | N/A | N/A |
 | flux-pro-1.0-fill | N/A | N/A | N/A |
 | flux-pro-1.1 | N/A | N/A | N/A |
+| flux-pro-1.1-raw | N/A | N/A | N/A |
 | flux-pro-1.1-ultra | N/A | N/A | N/A |
 
 ### ByteDance (bytedance)
@@ -124,12 +132,8 @@ Generated: 2026-09-17
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| doubao-seed-2-0-code-preview-260215 | 256K | chat | CNY 3.20 / 16.00 |
-| doubao-seed-2-0-lite-260215 | 256K | chat, reasoning | CNY 0.60 / 3.60 |
 | doubao-seed-2-0-lite-260428 | 262K | chat, reasoning | CNY 0.60 / 3.60 |
-| doubao-seed-2-0-mini-260215 | 128K | chat | CNY 0.20 / 2.00 |
 | doubao-seed-2-0-mini-260428 | 262K | chat, reasoning | CNY 0.20 / 2.00 |
-| doubao-seed-2-0-pro-260215 | 256K | chat | CNY 3.20 / 16.00 |
 | doubao-seed-2-1-pro-260628 | 256K | chat, reasoning | CNY 6.00 / 30.00 |
 | doubao-seed-2-1-pro-260915 | 1048K | chat, reasoning | CNY 6.00 / 30.00 |
 | doubao-seed-2-1-turbo-260628 | 256K | chat, reasoning | CNY 3.00 / 15.00 |
@@ -225,7 +229,6 @@ Generated: 2026-09-17
 | gemini-3.8-live-extended-thinking | N/A | N/A | USD 0.75 / 4.50 |
 | gemini-embedding-2 | 8K | embedding | N/A |
 | gemini-omni-1.1-flash | N/A | video | USD 1.50 / 9.00 |
-| gemini-omni-flash-preview | N/A | N/A | USD 1.50 / 9.00 |
 | gemini-robotics-er-2-preview | N/A | N/A | USD 1.00 / 5.00 |
 | gemini-robotics-er-2-streaming-preview | N/A | N/A | USD 1.00 / 5.00 |
 | lyria-3-clip-preview | N/A | N/A | N/A |
@@ -243,6 +246,8 @@ Generated: 2026-09-17
 |----------|---------|------------|------------------------|
 | kling-3.0-turbo | N/A | video | N/A |
 | kling-ai-avatar-v2 | N/A | video | N/A |
+| kling-image-3.0 | N/A | image | N/A |
+| kling-image-3.0-omni | N/A | image | N/A |
 | kling-image-o1 | N/A | image | N/A |
 | kling-sound-t2a | N/A | sfx | N/A |
 | kling-sound-v2a | N/A | sfx | N/A |
@@ -284,6 +289,7 @@ Generated: 2026-09-17
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
 | longcat-2.0 | 1048K | chat, reasoning | CNY 2.00 / 8.00 |
+| longcat-2.5-preview | 1048K | chat, reasoning | CNY 2.00 / 8.00 |
 
 ### MiniMax (minimax)
 
@@ -389,7 +395,6 @@ Generated: 2026-09-17
 | gpt-4o-mini-tts | N/A | audio | N/A |
 | gpt-4o-transcribe | N/A | audio | USD 2.50 / 10.00 |
 | gpt-4o-transcribe-diarize | N/A | audio | USD 2.50 / 10.00 |
-| gpt-5.3-codex | N/A | chat | USD 1.75 / 14.00 |
 | gpt-5.5-cyber | N/A | chat | USD 12.50 / 75.00 |
 | gpt-5.6-cyber | N/A | chat | USD 12.50 / 75.00 |
 | gpt-5.6-luna | 1050K | chat | USD 0.20 / 1.20 |
@@ -410,11 +415,8 @@ Generated: 2026-09-17
 | gpt-realtime-translate | 128K | audio | USD 4.00 / 16.00 |
 | gpt-realtime-whisper | 128K | audio | USD 3.00 / 12.00 |
 | gpt-transcribe | N/A | audio | N/A |
-| sora-2 | N/A | video | N/A |
-| sora-2-pro | N/A | video | N/A |
 | text-embedding-3-large | N/A | embedding | N/A |
 | text-embedding-3-small | N/A | embedding | N/A |
-| tts-1-hd | N/A | audio | N/A |
 | whisper-1 | N/A | audio | N/A |
 
 ### PixVerse (pixverse)
@@ -442,7 +444,9 @@ Generated: 2026-09-17
 | aleph2 | N/A | video | N/A |
 | gemini_2.5_flash | N/A | image | N/A |
 | gemini_image3_pro | N/A | image | N/A |
+| gemini_image3.1_flash | N/A | image | N/A |
 | gemini_omni_flash | N/A | video | N/A |
+| gemini_omni_flash_1.1 | N/A | video | N/A |
 | gen4_image | N/A | image | N/A |
 | gen4_image_turbo | N/A | image | N/A |
 | gen4_turbo | N/A | video | N/A |
@@ -468,6 +472,7 @@ Generated: 2026-09-17
 | veo3.1 | N/A | video | N/A |
 | veo3.1_fast | N/A | video | N/A |
 | wan3 | N/A | video | N/A |
+| wan3_prime | N/A | video | N/A |
 
 ### Stability AI (stability_ai)
 
@@ -494,6 +499,7 @@ Generated: 2026-09-17
 | step-3.5-flash | 256K | chat, reasoning | CNY 0.70 / 2.10 |
 | step-3.5-flash-2603 | 256K | chat, reasoning | CNY 0.70 / 2.10 |
 | step-3.7-flash | 256K | chat, reasoning | CNY 1.35 / 8.10 |
+| step-5-preview | 1000K | chat, reasoning | CNY 7.00 / 20.00 |
 
 ### Suno (suno)
 
@@ -516,6 +522,15 @@ Generated: 2026-09-17
 | hy3 | 256K | chat, reasoning | CNY 1.00 / 4.00 |
 | hy4-preview | 1000K | chat | CNY 6.00 / 18.00 |
 
+### TypeSafe AI (typesafe)
+
+**Region: GLOBAL** (USD)
+
+| Model ID | Context | Modalities | Pricing (Input/Output) |
+|----------|---------|------------|------------------------|
+| jev-1.13.0 | 65K | chat | N/A |
+| jev-latest | 65K | chat | N/A |
+
 ### Vidu (vidu)
 
 **Region: CN** (CNY)
@@ -536,6 +551,8 @@ Generated: 2026-09-17
 |----------|---------|------------|------------------------|
 | audio1.0-text2audio | N/A | sfx | N/A |
 | audio1.0-timing2audio | N/A | sfx | N/A |
+| viduq1 | N/A | image | N/A |
+| viduq2 | N/A | image | N/A |
 | viduq3 | N/A | video, audio | N/A |
 | viduq3-mix | N/A | video | N/A |
 | viduq3-pro | N/A | video | N/A |
@@ -554,12 +571,14 @@ Generated: 2026-09-17
 | grok-4.3 | 1000K | chat | USD 1.25 / 2.50 |
 | grok-4.5 | 500K | chat, reasoning | USD 2.00 / 6.00 |
 | grok-4.6 | 500K | chat, reasoning | USD 2.00 / 6.00 |
+| grok-4.7 | 500K | chat, reasoning | USD 2.00 / 6.00 |
 | grok-build-0.1 | 256K | chat | USD 1.00 / 2.00 |
 | grok-imagine-image | N/A | image | N/A |
 | grok-imagine-image-2.0 | N/A | image | N/A |
 | grok-imagine-image-quality | N/A | image | N/A |
 | grok-imagine-video | N/A | video | N/A |
 | grok-imagine-video-1.5 | N/A | video | N/A |
+| grok-imagine-video-1.5-lite | N/A | video | N/A |
 
 ### Xiaomi MiMo (xiaomi)
 
@@ -570,6 +589,9 @@ Generated: 2026-09-17
 | mimo-v2.5 | 1048K | chat, image, audio, video | CNY 1.00 / 2.00 |
 | mimo-v2.5-asr | 8K | audio | N/A |
 | mimo-v2.5-pro | 1048K | chat | CNY 3.00 / 6.00 |
+| mimo-v2.6-flash | 1048K | chat, image, audio, video | CNY 1.00 / 2.00 |
+| mimo-v2.6-pro | 1048K | chat | CNY 3.00 / 6.00 |
+| mimo-v2.6-pro-ultraspeed | 1048K | chat | CNY 30.00 / 60.00 |
 
 **Region: GLOBAL** (USD)
 
@@ -578,6 +600,9 @@ Generated: 2026-09-17
 | mimo-v2.5 | 1048K | chat, image, audio, video | USD 0.14 / 0.28 |
 | mimo-v2.5-asr | 8K | audio | N/A |
 | mimo-v2.5-pro | 1048K | chat | USD 0.43 / 0.87 |
+| mimo-v2.6-flash | 1048K | chat, image, audio, video | USD 0.14 / 0.28 |
+| mimo-v2.6-pro | 1048K | chat | USD 0.43 / 0.87 |
+| mimo-v2.6-pro-ultraspeed | 1048K | chat | USD 4.35 / 8.70 |
 
 ### Zhipu AI (zhipu)
 
@@ -605,22 +630,22 @@ Generated: 2026-09-17
 
 | Region | Vendors | Models | Pricing Files |
 |--------|---------|--------|---------------|
-| CN | 14 | 140 | 134 |
-| GLOBAL | 20 | 285 | 272 |
+| CN | 14 | 153 | 147 |
+| GLOBAL | 21 | 297 | 285 |
 
 ### Client API Support
 
 | API | Supported | Partial | Convert | Unsupported |
 |-----|-----------|---------|---------|-------------|
-| claude_code | 1 | 1 | 2 | 21 |
-| codex | 1 | 0 | 3 | 21 |
-| gemini_cli | 1 | 0 | 3 | 21 |
+| claude_code | 1 | 1 | 2 | 22 |
+| codex | 1 | 0 | 3 | 22 |
+| gemini_cli | 1 | 0 | 3 | 22 |
 
 ### Protocol Support
 
 | Protocol | Vendors |
 |----------|---------|
-| vendor_native | 16 |
+| vendor_native | 17 |
 | openai_compatible | 14 |
 | anthropic_messages | 9 |
 | openai_responses | 6 |
@@ -630,9 +655,9 @@ Generated: 2026-09-17
 
 | Capability | Vendors |
 |------------|---------|
-| chat | 15 |
+| chat | 16 |
 | video | 14 |
-| image | 11 |
+| image | 12 |
 | reasoning | 10 |
 | audio | 7 |
 | music | 7 |

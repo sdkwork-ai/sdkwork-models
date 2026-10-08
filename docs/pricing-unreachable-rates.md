@@ -7,7 +7,7 @@ or merging tiers - a product decision, so nothing here is auto-applied.
 
 | reason | count |
 |---|---|
-| dimension_never_populated | 244 |
+| dimension_never_populated | 251 |
 
 `dimension_never_populated`: the runtime has no producer for the dimension at all.
 `time_window_tier_redundant`: a `time_window` rate conditioned on `tier_code`; the
@@ -176,6 +176,9 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-output-input_128k_256k | llm_output_token | 6.00 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
 | bytedance/global/pricing/seed-2-0-pro-260328.json | bytedance-global-seed-2-0-pro-260328-output-input_le_128k | llm_output_token | 3.00 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
 | google/global/pricing/gemini-3.1-flash-lite.json | google-gemini-3.1-flash-lite-cache-read-audio | llm_cache_read_token | 0.050000 | USD | 1000000 | tier_code | dimension_never_populated | audio | - |
+| kuaishou/cn/pricing/kling-image-3.0-omni.json | kuaishou-cn-kling-image-3-0-omni-result-1k-2k | image_result | 0.200000 | CNY | 1 | tier_code | dimension_never_populated | res_1k_2k | - |
+| kuaishou/cn/pricing/kling-image-3.0-omni.json | kuaishou-cn-kling-image-3-0-omni-result-4k | image_result | 0.400000 | CNY | 1 | tier_code | dimension_never_populated | res_4k | - |
+| kuaishou/cn/pricing/kling-image-3.0.json | kuaishou-cn-kling-image-3-0-result-1k-2k | image_result | 0.200000 | CNY | 1 | tier_code | dimension_never_populated | res_1k_2k | - |
 | kuaishou/cn/pricing/kling-image-o1.json | kuaishou-cn-kling-image-o1-result-1k-2k | image_result | 0.200000 | CNY | 1 | tier_code | dimension_never_populated | res_1k_2k | - |
 | kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-i2i | image_result | 0.200000 | CNY | 1 | tier_code | dimension_never_populated | i2i_1k_2k | - |
 | kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-multi-ref | image_result | 0.400000 | CNY | 1 | tier_code | dimension_never_populated | multi_ref_1k_2k | - |
@@ -203,6 +206,10 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-cache-write-long-context | llm_cache_write_token | 25.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-input-long-context | llm_input_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-output-long-context | llm_output_token | 75.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| runway/global/pricing/gemini_image3.1_flash.json | runway-global-gemini_image3.1_flash-image-res_1k | image_result | 0.070000 | USD | 1 | tier_code | dimension_never_populated | res_1k | - |
+| runway/global/pricing/gemini_image3.1_flash.json | runway-global-gemini_image3.1_flash-image-res_2k | image_result | 0.110000 | USD | 1 | tier_code | dimension_never_populated | res_2k | - |
+| runway/global/pricing/gemini_image3.1_flash.json | runway-global-gemini_image3.1_flash-image-res_4k | image_result | 0.160000 | USD | 1 | tier_code | dimension_never_populated | res_4k | - |
+| runway/global/pricing/gemini_image3.1_flash.json | runway-global-gemini_image3.1_flash-image-res_512p | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | res_512p | - |
 | runway/global/pricing/gemini_image3_pro.json | runway-global-gemini_image3_pro-image-res_1k_2k | image_result | 0.200000 | USD | 1 | tier_code | dimension_never_populated | res_1k_2k | - |
 | runway/global/pricing/gemini_image3_pro.json | runway-global-gemini_image3_pro-image-res_4k | image_result | 0.400000 | USD | 1 | tier_code | dimension_never_populated | res_4k | - |
 | runway/global/pricing/gen4_image.json | runway-global-gen4-image-result-1080p | image_result | 0.080000 | USD | 1 | tier_code | dimension_never_populated | res_1080p | - |

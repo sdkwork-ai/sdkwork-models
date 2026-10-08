@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 420,
   "latencyP95Ms": 1600,
-  "lifecycle": "deprecated",
+  "lifecycle": "retired",
   "maxInputTokens": 1048576,
   "maxOutputTokens": 393216,
   "modelId": "deepseek-v4-flash",
@@ -25,13 +25,13 @@
   "primaryCapability": "chat",
   "rankScore": "860.000000",
   "regionCode": "cn",
-  "releaseStage": "deprecated",
+  "releaseStage": "retired",
   "replacementModel": "deepseek-flash",
-  "routingState": "catalog_only",
+  "routingState": "disabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "hidden",
+  "shelfState": "archived",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
+    "observedAt": "2026-10-08T00:00:00Z",
     "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
   },
   "strengths": [

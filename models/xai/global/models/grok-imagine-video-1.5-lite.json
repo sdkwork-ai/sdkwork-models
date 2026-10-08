@@ -1,0 +1,47 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "xai/grok-imagine-video-1.5-lite",
+  "codingVisible": false,
+  "colorToken": "#111827",
+  "description": "Grok Imagine Video 1.5 Lite cost-efficient video generation model supporting text and image inputs.",
+  "displayName": "Grok Imagine Video 1.5 Lite",
+  "familyCode": "grok-imagine",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 45000,
+  "latencyP95Ms": 120000,
+  "lifecycle": "active",
+  "modelId": "grok-imagine-video-1.5-lite",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "790.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-08T00:00:00Z",
+    "sourceUrl": "https://docs.x.ai/developers/pricing"
+  },
+  "strengths": [
+    "Video generation",
+    "Low cost",
+    "Image to video"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.880000",
+  "usageScopes": [],
+  "vendorCode": "xai",
+  "vendorName": "xAI",
+  "winRate": "0.860000"
+}

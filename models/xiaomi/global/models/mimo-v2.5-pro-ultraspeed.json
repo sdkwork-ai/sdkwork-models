@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#FF6900",
   "contextTokens": 1048576,
-  "description": "UltraSpeed is documented by Xiaomi as a serving mode of MiMo-V2.5-Pro rather than an API model id; it is absent from the official model list and pay-as-you-go price list as of 2026-09-17. Kept in the catalog but hidden from the shelf.",
+  "description": "UltraSpeed is documented by Xiaomi as a serving mode of MiMo-V2.5-Pro rather than an API model id; it remains absent from the official model list and pay-as-you-go price list as of 2026-10-08, superseded by mimo-v2.6-pro-ultraspeed. Kept in the catalog but hidden from the shelf and deprecated.",
   "displayName": "MiMo V2.5 Pro UltraSpeed",
   "familyCode": "mimo-v2.5",
   "inputModalities": [
@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 200,
   "latencyP95Ms": 700,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1048576,
   "maxOutputTokens": 262144,
   "modelId": "mimo-v2.5-pro-ultraspeed",
@@ -25,13 +25,13 @@
   "primaryCapability": "chat",
   "rankScore": "1110.000000",
   "regionCode": "global",
-  "releaseStage": "active",
+  "releaseStage": "deprecated",
   "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
-    "sourceUrl": "https://mimo.xiaomi.com"
+    "observedAt": "2026-10-08T00:00:00Z",
+    "sourceUrl": "https://mimo.mi.com/docs/en-US/quick-start/summary/model"
   },
   "strengths": [
     "Speed",

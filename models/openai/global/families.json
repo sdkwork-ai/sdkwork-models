@@ -25,7 +25,6 @@
       "sortOrder": 20
     },
     {
-      "defaultModel": "sora-2",
       "displayName": "Sora",
       "familyCode": "sora",
       "familyType": "video",

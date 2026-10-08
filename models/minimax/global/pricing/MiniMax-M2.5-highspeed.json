@@ -25,7 +25,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
       },
       "unitPrice": "0.600000",
@@ -53,7 +53,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
       },
       "unitPrice": "0.030000",
@@ -81,7 +81,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
       },
       "unitPrice": "0.375000",
@@ -109,7 +109,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-17T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
       },
       "unitPrice": "2.400000",

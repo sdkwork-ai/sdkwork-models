@@ -305,10 +305,10 @@
       "maxDurationSeconds": 300,
       "minDurationSeconds": 2,
       "outputAudio": true,
-      "profileCode": "avatar_range_1080p",
       "pricingTierCodes": [
         "audio_res_1080p"
       ],
+      "profileCode": "avatar_range_1080p",
       "resolution": "1080p",
       "resolutionTierCode": "audio_res_1080p",
       "sortOrder": 100,
@@ -332,10 +332,10 @@
       "maxDurationSeconds": 300,
       "minDurationSeconds": 2,
       "outputAudio": true,
-      "profileCode": "avatar_range_720p",
       "pricingTierCodes": [
         "audio_res_720p"
       ],
+      "profileCode": "avatar_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "audio_res_720p",
       "sortOrder": 110,
@@ -359,10 +359,10 @@
       "maxDurationSeconds": 300,
       "minDurationSeconds": 2,
       "outputAudio": true,
-      "profileCode": "motion_control_range_1080p",
       "pricingTierCodes": [
         "motion_res_1080p"
       ],
+      "profileCode": "motion_control_range_1080p",
       "resolution": "1080p",
       "resolutionTierCode": "motion_res_1080p",
       "sortOrder": 120,
@@ -386,10 +386,10 @@
       "maxDurationSeconds": 300,
       "minDurationSeconds": 2,
       "outputAudio": true,
-      "profileCode": "motion_control_range_720p",
       "pricingTierCodes": [
         "motion_res_720p"
       ],
+      "profileCode": "motion_control_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "motion_res_720p",
       "sortOrder": 130,
@@ -402,7 +402,7 @@
   "regionCode": "cn",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
+    "observedAt": "2026-10-08T00:00:00Z",
     "sourceUrl": "https://app.klingai.com/cn/dev/document-api/"
   },
   "vendorCode": "kuaishou"

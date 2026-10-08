@@ -1,0 +1,61 @@
+{
+  "catalogKey": "xai/grok-imagine-video-1.5-lite",
+  "modelId": "grok-imagine-video-1.5-lite",
+  "profiles": [
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "xai/grok-imagine-video-1.5-lite/t2v_range_720p",
+      "displayName": "Text to Video · 5–15s · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": true,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 5,
+      "outputAudio": false,
+      "profileCode": "t2v_range_720p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 10,
+      "wireParameters": {
+        "duration": "5-15",
+        "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "xai/grok-imagine-video-1.5-lite/i2v_range_720p",
+      "displayName": "Image to Video · 5–15s · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 5,
+      "outputAudio": false,
+      "profileCode": "i2v_range_720p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "5-15",
+        "resolution": "720p"
+      }
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-10-08T00:00:00Z",
+    "sourceUrl": "https://docs.x.ai/developers/pricing"
+  },
+  "vendorCode": "xai"
+}

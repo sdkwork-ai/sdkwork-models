@@ -1,0 +1,55 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat",
+    "reasoning"
+  ],
+  "catalogKey": "stepfun/step-5-preview",
+  "codingVisible": true,
+  "colorToken": "#0369a1",
+  "contextTokens": 1000000,
+  "description": "StepFun next-generation flagship multimodal reasoning base model with 1M context and native text, image, and video understanding.",
+  "displayName": "Step 5 Preview",
+  "familyCode": "step-flash",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "preview",
+  "maxInputTokens": 1000000,
+  "maxOutputTokens": 65536,
+  "modelId": "step-5-preview",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "970.000000",
+  "regionCode": "cn",
+  "releaseStage": "preview",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-08T00:00:00Z",
+    "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/step-5-preview"
+  },
+  "strengths": [
+    "Multimodal",
+    "Reasoning",
+    "Long context",
+    "Agents"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.930000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "stepfun",
+  "vendorName": "StepFun",
+  "winRate": "0.900000"
+}

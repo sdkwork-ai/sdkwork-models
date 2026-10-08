@@ -1,0 +1,38 @@
+{
+  "catalogKey": "xai/grok-imagine-video-1.5-lite",
+  "currency": "USD",
+  "modelId": "grok-imagine-video-1.5-lite",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-08T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-global-grok-imagine-video-1-5-lite-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "656b1c396bde8bcda6b8318396eb7f3985bd7d196380f81cca3c47799af764e0",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-08T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/developers/pricing"
+      },
+      "unitPrice": "0.020000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "xai"
+}

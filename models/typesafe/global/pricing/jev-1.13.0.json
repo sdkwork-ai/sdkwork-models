@@ -21,15 +21,15 @@
       "productCode": "models.typesafe.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "cfac57a7cc4925b69d06921c8f102de981cfaddd38550597e584130aff55c035",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-09-22T00:00:00Z",
+        "observedAt": "2026-10-08T00:00:00Z",
         "sourceUrl": "https://docs.typesafe.ai/models"
       },
       "unitPrice": "0.042000",
-      "unitSize": "1000000",
-      "rateHash": "cfac57a7cc4925b69d06921c8f102de981cfaddd38550597e584130aff55c035"
+      "unitSize": "1000000"
     }
   ],
   "regionCode": "global",

@@ -13,7 +13,7 @@
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "preview",
   "maxInputTokens": 960000,
   "maxOutputTokens": 65536,
   "modelId": "hy4-preview",
@@ -28,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
+    "observedAt": "2026-10-08T00:00:00Z",
     "sourceUrl": "https://cloud.tencent.com.cn/product/tclm"
   },
   "strengths": [

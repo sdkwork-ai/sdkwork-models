@@ -17,6 +17,9 @@
       "maxDurationSeconds": 10,
       "minDurationSeconds": 5,
       "outputAudio": true,
+      "pricingTierCodes": [
+        "ref_res_720p"
+      ],
       "profileCode": "t2v_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
@@ -24,10 +27,7 @@
       "wireParameters": {
         "duration": "5-10",
         "resolution": "720p"
-      },
-      "pricingTierCodes": [
-        "ref_res_720p"
-      ]
+      }
     },
     {
       "aspectRatios": [
@@ -44,6 +44,9 @@
       "maxDurationSeconds": 10,
       "minDurationSeconds": 5,
       "outputAudio": true,
+      "pricingTierCodes": [
+        "ref_res_720p"
+      ],
       "profileCode": "i2v_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
@@ -51,16 +54,13 @@
       "wireParameters": {
         "duration": "5-10",
         "resolution": "720p"
-      },
-      "pricingTierCodes": [
-        "ref_res_720p"
-      ]
+      }
     }
   ],
   "regionCode": "cn",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
+    "observedAt": "2026-10-08T00:00:00Z",
     "sourceUrl": "https://platform.vidu.cn/docs/text-to-video"
   },
   "vendorCode": "vidu"

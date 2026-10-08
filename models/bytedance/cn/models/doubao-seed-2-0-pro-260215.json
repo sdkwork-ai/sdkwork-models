@@ -16,7 +16,7 @@
   ],
   "latencyP50Ms": 760,
   "latencyP95Ms": 2400,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 256000,
   "maxOutputTokens": 32768,
   "modelId": "doubao-seed-2-0-pro-260215",
@@ -26,12 +26,12 @@
   "primaryCapability": "chat",
   "rankScore": "850.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
+    "observedAt": "2026-10-08T00:00:00Z",
     "sourceUrl": "https://seed.bytedance.com/en/seed2"
   },
   "strengths": [

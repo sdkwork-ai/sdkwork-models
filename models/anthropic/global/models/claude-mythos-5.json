@@ -14,7 +14,7 @@
     "text",
     "image"
   ],
-  "lifecycle": "preview",
+  "lifecycle": "active",
   "maxInputTokens": 1000000,
   "maxOutputTokens": 128000,
   "modelId": "claude-mythos-5",
@@ -24,12 +24,12 @@
   "primaryCapability": "chat",
   "rankScore": "1180.000000",
   "regionCode": "global",
-  "releaseStage": "preview",
-  "routingState": "catalog_only",
+  "releaseStage": "active",
+  "routingState": "enabled",
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
+    "observedAt": "2026-10-08T00:00:00Z",
     "sourceUrl": "https://docs.anthropic.com/en/docs/about-claude/models/overview"
   },
   "strengths": [

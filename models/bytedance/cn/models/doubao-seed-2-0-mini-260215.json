@@ -13,7 +13,7 @@
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 128000,
   "maxOutputTokens": 16384,
   "modelId": "doubao-seed-2-0-mini-260215",
@@ -23,12 +23,12 @@
   "primaryCapability": "chat",
   "rankScore": "830.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-09-17T00:00:00Z",
+    "observedAt": "2026-10-08T00:00:00Z",
     "sourceUrl": "https://seed.bytedance.com/en/seed2"
   },
   "strengths": [

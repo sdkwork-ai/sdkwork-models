@@ -1,0 +1,185 @@
+{
+  "catalogKey": "runway/gemini_omni_flash_1.1",
+  "currency": "USD",
+  "modelId": "gemini_omni_flash_1.1",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_360p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-08T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-gemini_omni_flash_1.1-second-res_360p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "fc02f6bdeedceb2a3d376bf66c6c4a203f55554f45cc807bddf79d04bee7472e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-08T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_360p",
+      "unitPrice": "0.034000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-08T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-gemini_omni_flash_1.1-second-res_720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "be77c8dcfd8d7c8b5952a2fda1027ce08f0df48db1cc5c5dc2381420369aa2d0",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-08T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_720p",
+      "unitPrice": "0.100000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-08T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-gemini_omni_flash_1.1-second-res_1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5f0230c0442e0d6630653418645979039a3eb2a5f8def779b2935d67fd905707",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-08T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "0.150000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_4k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-08T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-gemini_omni_flash_1.1-second-res_4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "2ee56d853b9973bdee12c49d049cc21de18eb8cf4a626353d2aa16627c8f80ae",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-08T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_4k",
+      "unitPrice": "0.300000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "video_to_video"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-08T00:00:00Z",
+      "meterCode": "video_input_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-gemini_omni_flash_1.1-input-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3ff684cce11542f6f657284a6ff1209c464232a3f9586f587b374c4d49cbf124",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-08T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "video_to_video",
+      "unitPrice": "0.010000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "runway"
+}
