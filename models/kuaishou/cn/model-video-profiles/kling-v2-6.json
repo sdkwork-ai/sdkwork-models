@@ -17,6 +17,9 @@
       "maxDurationSeconds": 15,
       "minDurationSeconds": 3,
       "outputAudio": true,
+      "pricingTierCodes": [
+        "audio_1080p"
+      ],
       "profileCode": "t2v_range_1080p",
       "resolution": "1080p",
       "resolutionTierCode": "res_1080p",
@@ -40,7 +43,7 @@
       "isDefault": false,
       "maxDurationSeconds": 15,
       "minDurationSeconds": 3,
-      "outputAudio": true,
+      "outputAudio": false,
       "profileCode": "t2v_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
@@ -65,6 +68,9 @@
       "maxDurationSeconds": 15,
       "minDurationSeconds": 3,
       "outputAudio": true,
+      "pricingTierCodes": [
+        "audio_1080p"
+      ],
       "profileCode": "i2v_range_1080p",
       "resolution": "1080p",
       "resolutionTierCode": "res_1080p",
@@ -88,7 +94,7 @@
       "isDefault": false,
       "maxDurationSeconds": 15,
       "minDurationSeconds": 3,
-      "outputAudio": true,
+      "outputAudio": false,
       "profileCode": "i2v_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
@@ -113,6 +119,9 @@
       "maxDurationSeconds": 15,
       "minDurationSeconds": 3,
       "outputAudio": true,
+      "pricingTierCodes": [
+        "audio_1080p"
+      ],
       "profileCode": "r2v_range_1080p",
       "resolution": "1080p",
       "resolutionTierCode": "res_1080p",
@@ -136,7 +145,7 @@
       "isDefault": false,
       "maxDurationSeconds": 15,
       "minDurationSeconds": 3,
-      "outputAudio": true,
+      "outputAudio": false,
       "profileCode": "r2v_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
@@ -161,6 +170,9 @@
       "maxDurationSeconds": 15,
       "minDurationSeconds": 3,
       "outputAudio": true,
+      "pricingTierCodes": [
+        "audio_1080p"
+      ],
       "profileCode": "multi_range_1080p",
       "resolution": "1080p",
       "resolutionTierCode": "res_1080p",
@@ -184,7 +196,7 @@
       "isDefault": false,
       "maxDurationSeconds": 15,
       "minDurationSeconds": 3,
-      "outputAudio": true,
+      "outputAudio": false,
       "profileCode": "multi_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",

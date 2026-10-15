@@ -8,7 +8,7 @@
     "warnings": []
   },
   "generatedAt": "2026-10-08T00:00:00Z",
-  "indexSha256": "bd544b19efa71c5cb43497ce98476bd034c1aa89113e7b52a577dd9e044bc9b8",
+  "indexSha256": "ffb3fb43ff6020eb8e674a63548a9f61ad4c8e120ea9f5280c9099d189fb985f",
   "schemaVersion": "1.1.0",
   "sourceAudit": {
     "errorCount": 0,
@@ -141,10 +141,10 @@
       "vendorCode": "kuaishou"
     },
     {
-      "modelCount": 12,
-      "pricingFileCount": 12,
+      "modelCount": 13,
+      "pricingFileCount": 13,
       "regionCode": "global",
-      "sha256": "480fdf37caee8ae009235097958208123518aa331bb553a82a82653bd317d140",
+      "sha256": "225bc2695fd8ea31fc06e7faeac2fb7fac54cb463ea244e9954e39e4539b13bc",
       "vendorCode": "kuaishou"
     },
     {

@@ -7,7 +7,7 @@ or merging tiers - a product decision, so nothing here is auto-applied.
 
 | reason | count |
 |---|---|
-| dimension_never_populated | 251 |
+| dimension_never_populated | 252 |
 
 `dimension_never_populated`: the runtime has no producer for the dimension at all.
 `time_window_tier_redundant`: a `time_window` rate conditioned on `tier_code`; the
@@ -183,6 +183,7 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-i2i | image_result | 0.200000 | CNY | 1 | tier_code | dimension_never_populated | i2i_1k_2k | - |
 | kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-multi-ref | image_result | 0.400000 | CNY | 1 | tier_code | dimension_never_populated | multi_ref_1k_2k | - |
 | kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-t2i | image_result | 0.100000 | CNY | 1 | tier_code | dimension_never_populated | t2i_1k_2k | - |
+| kuaishou/global/pricing/kling-image-3.0.json | kuaishou-global-kling-image-3-0-res-1k-2k | image_result | 0.028169 | USD | 1 | tier_code | dimension_never_populated | res_1k_2k | - |
 | kuaishou/global/pricing/kling-image-o1.json | kuaishou-global-kling-image-o1-result-1k-2k | image_result | 0.028000 | USD | 1 | tier_code | dimension_never_populated | res_1k_2k | - |
 | kuaishou/global/pricing/kling-v2-1.json | kuaishou-global-kling-v2-1-result-i2i | image_result | 0.028000 | USD | 1 | tier_code | dimension_never_populated | i2i_1k_2k | - |
 | kuaishou/global/pricing/kling-v2-1.json | kuaishou-global-kling-v2-1-result-multi-ref | image_result | 0.056000 | USD | 1 | tier_code | dimension_never_populated | multi_ref_1k_2k | - |

@@ -17,6 +17,9 @@
       "maxDurationSeconds": 20,
       "minDurationSeconds": 5,
       "outputAudio": true,
+      "pricingTierCodes": [
+        "t2v_fhd"
+      ],
       "profileCode": "t2v_range_1080p",
       "resolution": "1080p",
       "resolutionTierCode": "res_1080p",
@@ -40,6 +43,9 @@
       "maxDurationSeconds": 20,
       "minDurationSeconds": 5,
       "outputAudio": true,
+      "pricingTierCodes": [
+        "i2v_fhd"
+      ],
       "profileCode": "i2v_range_1080p",
       "resolution": "1080p",
       "resolutionTierCode": "res_1080p",

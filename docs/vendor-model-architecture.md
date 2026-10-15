@@ -264,6 +264,7 @@ Generated: 2026-10-08
 |----------|---------|------------|------------------------|
 | kling-3.0-turbo | N/A | video | N/A |
 | kling-ai-avatar-v2 | N/A | video | N/A |
+| kling-image-3.0 | N/A | image | N/A |
 | kling-image-o1 | N/A | image | N/A |
 | kling-sound-t2a | N/A | sfx | N/A |
 | kling-sound-v2a | N/A | sfx | N/A |
@@ -631,7 +632,7 @@ Generated: 2026-10-08
 | Region | Vendors | Models | Pricing Files |
 |--------|---------|--------|---------------|
 | CN | 14 | 153 | 147 |
-| GLOBAL | 21 | 297 | 285 |
+| GLOBAL | 21 | 298 | 286 |
 
 ### Client API Support
 
