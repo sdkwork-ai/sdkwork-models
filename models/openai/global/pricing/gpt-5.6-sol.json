@@ -310,6 +310,34 @@
       "unitPrice": "2.500000",
       "unitSize": "1000",
       "rateHash": "44c614a714f97b80d78d099b772d09f734985e907a02835445eb1f26f866f5c1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-19T00:00:00Z",
+      "meterCode": "code_interpreter_session",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-global-gpt-5.6-sol-code-interpreter-session",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-19T00:00:00Z",
+        "sourceUrl": "https://platform.openai.com/docs/pricing"
+      },
+      "unitPrice": "0.030000",
+      "unitSize": "1",
+      "rateHash": "5b859f8985bb2a39cd785fab9636707a79bb00b735c6bdac0f6a8f8749dfcf38"
     }
   ],
   "regionCode": "global",

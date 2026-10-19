@@ -156,6 +156,34 @@
       },
       "unitPrice": "0.500000",
       "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-19T00:00:00Z",
+      "meterCode": "web_search_call",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-global-claude-opus-4-5-web-search-call",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-19T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "unitPrice": "10.000000",
+      "unitSize": "1000",
+      "rateHash": "5593442ebd297f047d3d7999619d1c58b66ffe14e6512521aa386a08406bcf90"
     }
   ],
   "regionCode": "global",

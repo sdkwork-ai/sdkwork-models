@@ -310,6 +310,34 @@
       "unitPrice": "2.500000",
       "unitSize": "1000",
       "rateHash": "1d42a74b0782491c0fe12b7787a0d59aed443e0f7c8b5a4c15211a91fac347cc"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-19T00:00:00Z",
+      "meterCode": "code_interpreter_session",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-global-gpt-5.6-terra-code-interpreter-session",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-19T00:00:00Z",
+        "sourceUrl": "https://platform.openai.com/docs/pricing"
+      },
+      "unitPrice": "0.030000",
+      "unitSize": "1",
+      "rateHash": "40ff50b29699276e0200f3b73e324134ff95ff814c91c5321ca0af58ae55fa95"
     }
   ],
   "regionCode": "global",

@@ -1,5 +1,31 @@
 # Changelog
 
+## 2026.10.19.3
+
+### Anthropic web search rate
+
+- Added `web_search_call` (`$10 / 1K searches`) to all 13 Anthropic
+  `claude-*` models.
+- Cloud Router reads the vendor-authoritative
+  `usage.server_tool_use.web_search_requests` count and bills one
+  `web_search_call` line alongside the token lines
+  (`billing_anthropic_web_search`).
+- `models/index.json` regenerated; catalog validation/audit/unreachable/index
+  checks pass.
+
+## 2026.10.19.2
+
+### OpenAI Code Interpreter session rate
+
+- Added `code_interpreter_session` (`$0.03 / session`) to the six listed
+  OpenAI chat models: `gpt-5.5-cyber`, `gpt-5.6-cyber`, `gpt-5.6-luna`,
+  `gpt-5.6-sol`, `gpt-5.6-terra`, `gpt-6-astra`.
+- A Responses call with any number of `code_interpreter_call` items bills one
+  session; the Cloud Router extraction collapses code cells to one line
+  (`billing_code_interpreter`).
+- `models/index.json` regenerated; `validate-catalog`, `catalog-audit`,
+  `report-unreachable-pricing.py --check`, and `build-index --check` pass.
+
 ## 2026.10.19.1
 
 ### Hosted tool-call rates for OpenAI

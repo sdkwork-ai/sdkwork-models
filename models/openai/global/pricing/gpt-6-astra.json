@@ -310,6 +310,34 @@
       "unitPrice": "2.500000",
       "unitSize": "1000",
       "rateHash": "bb9391b20311a86fe62250594d713284e119059a75c3e46bbc9d56ec3bfdb97d"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-19T00:00:00Z",
+      "meterCode": "code_interpreter_session",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-global-gpt-6-astra-code-interpreter-session",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-19T00:00:00Z",
+        "sourceUrl": "https://platform.openai.com/docs/pricing"
+      },
+      "unitPrice": "0.030000",
+      "unitSize": "1",
+      "rateHash": "01f1b441ccd58d01bc2c7cfd48cf7bc5a1ffadc20bec646829c57543d725d710"
     }
   ],
   "regionCode": "global",

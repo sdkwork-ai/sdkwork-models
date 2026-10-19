@@ -142,6 +142,34 @@
       "unitPrice": "2.500000",
       "unitSize": "1000",
       "rateHash": "fd7c7f9f7ee3da3a5befadbb81339a5632807985c0ad46712728eb7278d6750f"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-19T00:00:00Z",
+      "meterCode": "code_interpreter_session",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-global-gpt-5.5-cyber-code-interpreter-session",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-19T00:00:00Z",
+        "sourceUrl": "https://platform.openai.com/docs/pricing"
+      },
+      "unitPrice": "0.030000",
+      "unitSize": "1",
+      "rateHash": "b18ffe31a56f594cd078cf84d2a854cf8bb5375e24ba6b17b0b7b1bb2709111a"
     }
   ],
   "regionCode": "global",
