@@ -141,10 +141,6 @@ pub const LIST_MODELS_COUNT_WHERE_SQLITE: &str = r#"
           AND (? IS NULL OR m.routing_state = ?)
         "#;
 
-
-
-
-
 pub fn normalized_search_pattern(query: &ListAdminAiModelsQuery) -> Option<String> {
     query
         .q

@@ -4,7 +4,9 @@ use std::fmt::{Display, Formatter};
 
 use sha2::{Digest, Sha256};
 
-use sdkwork_models::{ClientApiCompatibility, ModelCatalog, ModelInfo, TtsVoice, VendorApiEndpoint, VendorCatalog};
+use sdkwork_models::{
+    ClientApiCompatibility, ModelCatalog, ModelInfo, TtsVoice, VendorApiEndpoint, VendorCatalog,
+};
 
 use sdkwork_models_contract_service::{
     AdminAiModelItem, AdminAiModelRegionPriceCommand, AdminModelSubject, AdminModelVendorItem,
@@ -1836,18 +1838,17 @@ fn model_endpoint_descriptor(model: &ModelInfo) -> EndpointDescriptor {
             streaming_supported: false,
             sort_order: 70,
         },
-        _ if model.api_format == "vendor_native" => vendor_native_chat_descriptor(
-            model.vendor_code.trim(),
-        )
-        .unwrap_or(EndpointDescriptor {
-            endpoint_code: "openai.chat_completions",
-            protocol_code: "openai_compatible",
-            display_name: "OpenAI Chat Completions",
-            method: "POST",
-            path_template: "/v1/chat/completions",
-            streaming_supported: model.supports_streaming,
-            sort_order: 10,
-        }),
+        _ if model.api_format == "vendor_native" => {
+            vendor_native_chat_descriptor(model.vendor_code.trim()).unwrap_or(EndpointDescriptor {
+                endpoint_code: "openai.chat_completions",
+                protocol_code: "openai_compatible",
+                display_name: "OpenAI Chat Completions",
+                method: "POST",
+                path_template: "/v1/chat/completions",
+                streaming_supported: model.supports_streaming,
+                sort_order: 10,
+            })
+        }
         _ if model.api_format == "openai_responses" => EndpointDescriptor {
             endpoint_code: "openai.chat_completions",
             protocol_code: "openai_compatible",
@@ -1957,29 +1958,45 @@ fn endpoint_modality_code(endpoint_code: &str) -> Option<String> {
         // `bytedance` (Volcengine Ark) and `jimeng` are separate surfaces with
         // separate hosts and paths, so they get separate endpoints — see the
         // split note on `vendor_native_image_descriptor`.
-        "bytedance.image_generation" | "jimeng.image_generation" | "kling.image_generation"
-        | "volcengine.image_generation" | "vidu.reference_to_image"
-        | "black_forest_labs.image_generation" | "runway.image_generation"
+        "bytedance.image_generation"
+        | "jimeng.image_generation"
+        | "kling.image_generation"
+        | "volcengine.image_generation"
+        | "vidu.reference_to_image"
+        | "black_forest_labs.image_generation"
+        | "runway.image_generation"
         | "stability_ai.image_generation" => Some("image"),
-        "gemini.video_generation" | "bytedance.video_generation" | "jimeng.video_generation"
-        | "volcengine.video_generation" | "kling.text_to_video" | "kling.image_to_video"
-        | "kling.avatar" | "kling.motion_control" | "vidu.start_end_to_video"
-        | "vidu.text_to_video" | "vidu.image_to_video" | "vidu.reference_to_video"
+        "gemini.video_generation"
+        | "bytedance.video_generation"
+        | "jimeng.video_generation"
+        | "volcengine.video_generation"
+        | "kling.text_to_video"
+        | "kling.image_to_video"
+        | "kling.avatar"
+        | "kling.motion_control"
+        | "vidu.start_end_to_video"
+        | "vidu.text_to_video"
+        | "vidu.image_to_video"
+        | "vidu.reference_to_video"
         | "vidu.motion_sync" => Some("video"),
         // Task/polling surfaces carry the modality of the job they track, so the
         // accounting side can meter the poll the way it meters the submit.
-        "bytedance.task_query" | "jimeng.task_query" | "volcengine.task_query"
-        | "kling.task_query" | "vidu.video_task_query" | "gemini.video_task_query" => {
-            Some("video")
-        }
+        "bytedance.task_query"
+        | "jimeng.task_query"
+        | "volcengine.task_query"
+        | "kling.task_query"
+        | "vidu.video_task_query"
+        | "gemini.video_task_query" => Some("video"),
         "minimax.music_generation" | "suno.music_generation" => Some("music"),
         "elevenlabs.text_to_speech" | "volcengine.speech" => Some("audio"),
         "elevenlabs.sound_generation" | "sfx.sound" => Some("audio"),
         // Gemini's live/translate session surface is audio-in/audio-out.
         "gemini.live" => Some("audio"),
-        "gemini.generate_content" | "gemini.stream_generate_content" | "anthropic.messages"
+        "gemini.generate_content"
+        | "gemini.stream_generate_content"
+        | "anthropic.messages"
         | "anthropic.claude_code" => Some("chat"),
-        "gemini.embed_content" => Some("embedding"),
+        "gemini.embed_content" | "gemini.batch_embed_contents" => Some("embedding"),
         // The thirteen vendors that had no `api.*` entitlement at all. Their
         // endpoints are declared in `vendor-native-resources.json` and every
         // one of them must resolve to a modality, otherwise the
@@ -1988,17 +2005,27 @@ fn endpoint_modality_code(endpoint_code: &str) -> Option<String> {
         // spells the modality out for all but the two obvious cases, but the
         // map is explicit on purpose — it is the accounting side's only way to
         // pick a meter, and a `None` here is a silent billing degradation.
-        "alibaba.image_generation" | "xai.image_generation" | "xiaomi.image_generation"
+        "alibaba.image_generation"
+        | "xai.image_generation"
+        | "xiaomi.image_generation"
         | "zhipu.image_generation" => Some("image"),
-        "alibaba.video_generation" | "luma_ai.video_generation" | "pixverse.video_generation"
-        | "xai.video_generation" | "xiaomi.video_generation" | "zhipu.video_generation" => {
-            Some("video")
-        }
+        "alibaba.video_generation"
+        | "luma_ai.video_generation"
+        | "pixverse.video_generation"
+        | "xai.video_generation"
+        | "xiaomi.video_generation"
+        | "zhipu.video_generation" => Some("video"),
         "mureka.music_generation" => Some("music"),
         "xiaomi.speech" => Some("audio"),
-        "alibaba.chat_completions" | "baidu.chat_completions" | "deepseek.chat_completions"
-        | "meituan.chat_completions" | "moonshot.chat_completions" | "stepfun.chat_completions"
-        | "tencent.chat_completions" | "xai.chat_completions" | "xiaomi.chat_completions"
+        "alibaba.chat_completions"
+        | "baidu.chat_completions"
+        | "deepseek.chat_completions"
+        | "meituan.chat_completions"
+        | "moonshot.chat_completions"
+        | "stepfun.chat_completions"
+        | "tencent.chat_completions"
+        | "xai.chat_completions"
+        | "xiaomi.chat_completions"
         | "zhipu.chat_completions" => Some("chat"),
         "alibaba.embeddings" | "zhipu.embeddings" => Some("embedding"),
         _ => None,
@@ -2746,11 +2773,8 @@ mod tests {
         // `apiFormat = "google_gemini"` is itself the native Gemini surface.
         for vendor_spelling in ["google", "gemini"] {
             assert_eq!(
-                model_endpoint_descriptor(&image_model_of(
-                    vendor_spelling,
-                    "google_gemini"
-                ))
-                .endpoint_code,
+                model_endpoint_descriptor(&image_model_of(vendor_spelling, "google_gemini"))
+                    .endpoint_code,
                 "gemini.image_generation",
                 "apiFormat google_gemini must reach the native Gemini endpoint"
             );
@@ -2939,9 +2963,22 @@ mod tests {
             ("deepseek.anthropic_messages", "/v1/messages"),
             ("elevenlabs.sound_generation", "/v1/sound-generation"),
             ("elevenlabs.text_to_speech", "/v1/text-to-speech/{voice_id}"),
-            ("gemini.embed_content", "/v1beta/models/{model}:embedContent"),
-            ("gemini.generate_content", "/v1beta/models/{model}:generateContent"),
-            ("gemini.image_generation", "/v1beta/models/{model}:generateImages"),
+            (
+                "gemini.embed_content",
+                "/v1beta/models/{model}:embedContent",
+            ),
+            (
+                "gemini.batch_embed_contents",
+                "/v1beta/models/{model}:batchEmbedContents",
+            ),
+            (
+                "gemini.generate_content",
+                "/v1beta/models/{model}:generateContent",
+            ),
+            (
+                "gemini.image_generation",
+                "/v1beta/models/{model}:generateImages",
+            ),
             ("gemini.live", "/v1beta/live/sessions"),
             (
                 "gemini.nano_banana.image_generation",
@@ -2951,7 +2988,10 @@ mod tests {
                 "gemini.stream_generate_content",
                 "/v1beta/models/{model}:streamGenerateContent",
             ),
-            ("gemini.video_generation", "/v1beta/models/{model}:generateVideos"),
+            (
+                "gemini.video_generation",
+                "/v1beta/models/{model}:generateVideos",
+            ),
             (
                 "gemini.video_task_query",
                 "/v1beta/models/{model}/operations/{operationId}",
@@ -2959,7 +2999,10 @@ mod tests {
             // ByteDance's catalog surface (Volcengine Ark), separate from
             // `jimeng` — see the split note on `vendor_native_video_descriptor`.
             ("bytedance.image_generation", "/api/v3/images/generations"),
-            ("bytedance.task_query", "/api/v3/contents/generations/tasks/{taskId}"),
+            (
+                "bytedance.task_query",
+                "/api/v3/contents/generations/tasks/{taskId}",
+            ),
             (
                 "bytedance.video_generation",
                 "/api/v3/contents/generations/tasks",
@@ -3034,10 +3077,7 @@ mod tests {
             ),
             ("baidu.chat_completions", "/v2/chat/completions"),
             ("deepseek.chat_completions", "/v1/chat/completions"),
-            (
-                "luma_ai.video_generation",
-                "/dream-machine/v1/generations",
-            ),
+            ("luma_ai.video_generation", "/dream-machine/v1/generations"),
             (
                 "luma_ai.video_generation_task_query",
                 "/dream-machine/v1/generations/{id}",
@@ -3070,14 +3110,8 @@ mod tests {
             ("zhipu.anthropic_messages", "/v1/messages"),
             ("zhipu.chat_completions", "/api/paas/v4/chat/completions"),
             ("zhipu.embeddings", "/api/paas/v4/embeddings"),
-            (
-                "zhipu.image_generation",
-                "/api/paas/v4/images/generations",
-            ),
-            (
-                "zhipu.video_generation",
-                "/api/paas/v4/videos/generations",
-            ),
+            ("zhipu.image_generation", "/api/paas/v4/images/generations"),
+            ("zhipu.video_generation", "/api/paas/v4/videos/generations"),
             (
                 "zhipu.video_generation_task_query",
                 "/api/paas/v4/async-result/{id}",
@@ -3161,6 +3195,7 @@ mod tests {
             "xiaomi.anthropic_messages",
             "zhipu.anthropic_messages",
             "gemini.embed_content",
+            "gemini.batch_embed_contents",
             "gemini.generate_content",
             "gemini.stream_generate_content",
             "black_forest_labs.task_query",

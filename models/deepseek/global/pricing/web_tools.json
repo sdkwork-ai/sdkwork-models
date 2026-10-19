@@ -1,0 +1,39 @@
+{
+  "catalogKey": "deepseek/web_tools",
+  "currency": "USD",
+  "modelId": "web_tools",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "request_accepted",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-19T00:00:00Z",
+      "meterCode": "api_request",
+      "minimumQuantity": "0",
+      "operationCode": "model.invoke",
+      "priceBookCode": "models.deepseek.global.official",
+      "priceId": "deepseek-global-web-tools-request",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.deepseek.tool",
+      "quantityAggregation": "distinct_invocation",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-19T00:00:00Z",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing"
+      },
+      "unitPrice": "0.750000",
+      "unitSize": "1000",
+      "rateHash": "5da7951376fe7be51737a397d966e0df93d7675eab63be22c9c692ac616d86f8"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "deepseek"
+}
+

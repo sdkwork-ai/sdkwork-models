@@ -1,0 +1,38 @@
+{
+  "catalogKey": "openai/vector-stores",
+  "currency": "USD",
+  "modelId": "vector-stores",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "request_accepted",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-19T00:00:00Z",
+      "meterCode": "api_request",
+      "minimumQuantity": "0",
+      "operationCode": "model.invoke",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-global-vector-stores-search-request",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.tool",
+      "quantityAggregation": "distinct_invocation",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-19T00:00:00Z",
+        "sourceUrl": "https://platform.openai.com/docs/pricing"
+      },
+      "unitPrice": "2.500000",
+      "unitSize": "1000",
+      "rateHash": "6b84de6f01f86de86eeb13f050cb579c1a2074fbcc23fbe39a426c9c9c508024"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "openai"
+}

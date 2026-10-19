@@ -1,0 +1,37 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "tool"
+  ],
+  "catalogKey": "openai/vector-stores",
+  "codingVisible": false,
+  "description": "OpenAI Vector Stores tool SKU: file search calls and vector-store-backed retrieval.",
+  "displayName": "OpenAI Vector Stores",
+  "familyCode": "openai-tools",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "vector-stores",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "tool",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-19T00:00:00Z",
+    "sourceUrl": "https://platform.openai.com/docs/assistants/tools/file-search"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": true,
+  "usageScopes": [
+    "agent"
+  ],
+  "vendorCode": "openai",
+  "vendorName": "OpenAI"
+}

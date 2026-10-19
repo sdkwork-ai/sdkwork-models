@@ -1,0 +1,39 @@
+{
+  "catalogKey": "deepseek/web_tools",
+  "currency": "CNY",
+  "modelId": "web_tools",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "request_accepted",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-19T00:00:00Z",
+      "meterCode": "api_request",
+      "minimumQuantity": "0",
+      "operationCode": "model.invoke",
+      "priceBookCode": "models.deepseek.cn.official",
+      "priceId": "deepseek-cn-web-tools-request",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.deepseek.tool",
+      "quantityAggregation": "distinct_invocation",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-19T00:00:00Z",
+        "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
+      },
+      "unitPrice": "5.000000",
+      "unitSize": "1000",
+      "rateHash": "cb300ad18a75962874fe22b75870d81a86013c54947ba187fc3dd4b0078a4990"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "deepseek"
+}
+

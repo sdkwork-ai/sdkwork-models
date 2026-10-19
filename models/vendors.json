@@ -121,13 +121,13 @@
           "displayName": "OpenAI",
           "legalName": "OpenAI, Inc.",
           "marketScope": "global",
-          "modelCount": 40,
+          "modelCount": 41,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "openai/global/vendor.json",
-          "pricingFileCount": 40,
+          "pricingFileCount": 41,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 10,
@@ -1104,13 +1104,13 @@
           "displayName": "DeepSeek",
           "legalName": "DeepSeek",
           "marketScope": "china_mainland",
-          "modelCount": 4,
+          "modelCount": 5,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "deepseek/cn/vendor.json",
-          "pricingFileCount": 4,
+          "pricingFileCount": 5,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 60,
@@ -1218,13 +1218,13 @@
           "displayName": "DeepSeek",
           "legalName": "DeepSeek",
           "marketScope": "international",
-          "modelCount": 4,
+          "modelCount": 5,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "deepseek/global/vendor.json",
-          "pricingFileCount": 4,
+          "pricingFileCount": 5,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 60,

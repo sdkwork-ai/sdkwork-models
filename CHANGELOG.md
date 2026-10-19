@@ -1,5 +1,36 @@
 # Changelog
 
+## 2026.10.19.1
+
+### Hosted tool-call rates for OpenAI
+
+- Added `web_search_call` (`$10 / 1K calls`) and `file_search_call`
+  (`$2.50 / 1K calls`) official rates to the six listed OpenAI chat models:
+  `gpt-5.5-cyber`, `gpt-5.6-cyber`, `gpt-5.6-luna`, `gpt-5.6-sol`,
+  `gpt-5.6-terra`, `gpt-6-astra`.
+- Rates use `unitSize = 1000`, `chargeTiming = usage_reported`,
+  `pricingScope = model`, `priceSide = official`, and source
+  `https://platform.openai.com/docs/pricing`.
+- `models/index.json` regenerated; `validate-catalog`, `audit-pricing-consistency`,
+  `report-unreachable-pricing.py --check`, `catalog-audit`, and `freshness-report`
+  all pass. Cloud Router consumes the rates through the Responses `output[]`
+  tool-call extraction (`billing_hosted_tools`).
+
+### DeepSeek web tools SKU
+
+- Added `deepseek/web_tools` (cn `5 CNY / 1K successful requests`,
+  global `$0.75 / 1K`) for `/v1/tools/search` and `/v1/tools/fetch`.
+- Both regions share the same model file; pricing differs by region. Cloud
+  Router pins both routes to the SKU in `billing_deepseek_web_tools`.
+
+### OpenAI Vector Stores tool SKU
+
+- Added model `openai/vector-stores` (family `openai-tools`, capability `tool`)
+  with a `$2.50 / 1K calls` `api_request` official rate, so
+  `POST /v1/vector_stores/{id}/search` is billable as one file-search call per
+  invocation. `validate-catalog` and index regeneration pass; Cloud Router binds
+  the route in `billing_vector_store_search`.
+
 ## 2026.09.17.1
 
 Full vendor-by-vendor resync: **all 34 vendor-regions** re-verified against each vendor's official

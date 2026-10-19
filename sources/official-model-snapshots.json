@@ -10,6 +10,9 @@
         },
         {
           "modelId": "deepseek-v4-pro"
+        },
+        {
+          "modelId": "web_tools"
         }
       ],
       "observedAt": "2026-10-08T00:00:00Z",
@@ -18,7 +21,7 @@
         "https://api-docs.deepseek.com/zh-cn/updates/"
       ],
       "regionCode": "cn",
-      "sourceSnapshotHash": "e822d5fa08fa0bec8867ca761fb0366757cf7beaec29eff449e3487f0b65998b",
+      "sourceSnapshotHash": "2e61ad9797c847f517e70aedb3c29197a973cc9918f6500411a93c7838bd42d7",
       "vendorCode": "deepseek"
     },
     {
@@ -28,6 +31,9 @@
         },
         {
           "modelId": "deepseek-v4-pro"
+        },
+        {
+          "modelId": "web_tools"
         }
       ],
       "observedAt": "2026-10-08T00:00:00Z",
@@ -36,7 +42,7 @@
         "https://api-docs.deepseek.com/updates/"
       ],
       "regionCode": "global",
-      "sourceSnapshotHash": "209f046ed582e4b2a6422e4f650846bd3ddaf8444755da57f681431330fa6f2d",
+      "sourceSnapshotHash": "bdcf6b3dfd7e51a2447c3ac8023651bafbb2eeece6876b5dd8673362605cd8d7",
       "vendorCode": "deepseek"
     },
     {

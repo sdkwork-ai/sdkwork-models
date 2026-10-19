@@ -62,6 +62,14 @@
       "familyType": "embedding",
       "primaryModality": "embedding",
       "sortOrder": 50
+    },
+    {
+      "defaultModel": "vector-stores",
+      "displayName": "OpenAI Tools",
+      "familyCode": "openai-tools",
+      "familyType": "multimodal",
+      "primaryModality": "text",
+      "sortOrder": 60
     }
   ],
   "regionCode": "global",
