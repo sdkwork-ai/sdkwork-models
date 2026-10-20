@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026.10.19.4
+
+### Vector store storage rate
+
+- Added `storage_gb_day` (`$0.10 / GB / day`) to `openai/vector-stores`.
+- Cloud Router bills the first storage day from the file object's `usage_bytes`
+  (`billing_vector_store_storage`); recurring daily billing remains a worker
+  follow-up.
+- `models/index.json` regenerated; catalog validation/audit/unreachable/index
+  checks pass.
+
 ## 2026.10.19.3
 
 ### Anthropic web search rate

@@ -30,6 +30,34 @@
       "unitPrice": "2.500000",
       "unitSize": "1000",
       "rateHash": "6b84de6f01f86de86eeb13f050cb579c1a2074fbcc23fbe39a426c9c9c508024"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-19T00:00:00Z",
+      "meterCode": "storage_gb_day",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-global-vector-stores-storage-gb-day",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.tool",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-19T00:00:00Z",
+        "sourceUrl": "https://platform.openai.com/docs/pricing"
+      },
+      "unitPrice": "0.100000",
+      "unitSize": "1",
+      "rateHash": "9d4f7f6d4b0e0c0e5d6a1c9b8f7e6d5c4b3a291807162534435261708192a0b1"
     }
   ],
   "regionCode": "global",

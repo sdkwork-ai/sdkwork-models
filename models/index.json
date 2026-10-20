@@ -1382,7 +1382,7 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "openai/global/rankings.json",
       "regionCode": "global",
-      "sha256": "9d87a715ac304b7b6cc8e97fa42eb597b5ccbee480c590454b3ec1b23e2324e5",
+      "sha256": "228eb094ed317b959b5ceff2b552c21fda910fbb81c845c41c45747a498a9992",
       "vendorCode": "openai",
       "videoProfileCount": 4,
       "voiceCount": 11,
