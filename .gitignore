@@ -107,3 +107,15 @@ sdks/**/generated/**/*.d.ts
 # under converters/kotlin/src are versioned; .gradle/ is a local cache).
 converters/kotlin/.gradle/
 converters/kotlin/build/
+
+# ---- auto-audited: local artifacts that must never be committed ----
+*.key
+*.pem
+*.p12
+*.pfx
+*.keystore
+tmp/
+temp/
+*.tmp
+*.temp
+.next/

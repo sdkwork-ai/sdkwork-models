@@ -60,7 +60,7 @@ This document records the **verified** alignment posture for `sdkwork-models`. I
 | Gateway production template | Aligned | Restricted CORS via `SDKWORK_MODELS_CORS_ALLOWED_ORIGINS`; cloud gateway configs validated |
 | CI dependency closure | Aligned | `.github/workflows/verify.yml` checks out platform crates |
 | Observability | Aligned | Request-scoped `traceId` on success and error via `WebRequestContext`; structured tracing on admin model list |
-| Supply-chain SBOM | Deferred | `security.sbomRequired: false` in `sdkwork.workflow.json` until release gate enables evidence |
+| Supply-chain SBOM | Deferred | `security.sbomRequired: false` in `agent.workflow.json` until release gate enables evidence |
 | PC browser catalog | Aligned | `apps/sdkwork-models-pc/` standalone catalog explorer via `@sdkwork/models` |
 | PC admin UI | Composed | Admin packages (`sdkwork-models-pc-admin-*`) mount in Cloud Router host per `APP_PC_ARCHITECTURE_SPEC` |
 | PostgreSQL contention evidence | Open | Requires an isolated `SDKWORK_DATABASE_URL` to retain concurrent writer, retryable SQLSTATE, deadlock/serialization, and pool saturation evidence |
