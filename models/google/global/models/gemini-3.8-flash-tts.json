@@ -1,0 +1,42 @@
+{
+  "apiFormat": "google_gemini",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "google/gemini-3.8-flash-tts",
+  "codingVisible": false,
+  "contextTokens": 8192,
+  "description": "Gemini 3.8 Flash TTS flagship creative TTS model for studio-grade voice fidelity, nuanced acting, regional dialects, and long-form multi-turn stability. GA 2026-09-22 (New Stable on the Gemini models list).",
+  "displayName": "Gemini 3.8 Flash TTS",
+  "familyCode": "gemini-tts",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 8192,
+  "maxOutputTokens": 16384,
+  "modelId": "gemini-3.8-flash-tts",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash-tts"
+  },
+  "strengths": [
+    "Text to speech",
+    "Expressive acting",
+    "Long-form stability"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "google"
+}

@@ -1,0 +1,50 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "minimax/MiniMax-H3-Highspeed",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "MiniMax H3 Highspeed 兼顾生成质量与速度的版本，适合日常内容创作；支持文生视频、图生视频（首帧/尾帧）与多模态参考生视频（参考图/参考视频/参考音频）；768P 分辨率（不支持 2K），时长 4–15 秒。",
+  "displayName": "MiniMax H3 Highspeed",
+  "familyCode": "minimax-video",
+  "inputModalities": [
+    "text",
+    "image",
+    "video",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "MiniMax-H3-Highspeed",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "850.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/api-reference/video-generation-v2-create"
+  },
+  "strengths": [
+    "文生视频",
+    "图生视频",
+    "首尾帧",
+    "多模态参考",
+    "768P",
+    "高速生成"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.920000",
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "winRate": "0.880000"
+}

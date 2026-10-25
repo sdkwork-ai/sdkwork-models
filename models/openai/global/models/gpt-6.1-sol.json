@@ -1,0 +1,53 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "openai/gpt-6.1-sol",
+  "codingVisible": true,
+  "contextTokens": 1050000,
+  "description": "Near-Astra performance for complex work at a lower cost for complex coding, computer use, and professional work. 1,050,000 context window; reasoning effort supports low/medium/high/xhigh/max. Published on the official GPT-6 guide alongside GPT-6 Astra and GPT-6 Luna.",
+  "displayName": "GPT-6.1 Sol",
+  "familyCode": "gpt-6",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 1100,
+  "latencyP95Ms": 3800,
+  "lifecycle": "active",
+  "maxInputTokens": 922000,
+  "maxOutputTokens": 128000,
+  "modelId": "gpt-6.1-sol",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1200.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+  },
+  "strengths": [
+    "Reasoning",
+    "Coding",
+    "Agents",
+    "Computer use"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "1.000000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "openai",
+  "winRate": "0.994000"
+}

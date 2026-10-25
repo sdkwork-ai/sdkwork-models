@@ -1,0 +1,150 @@
+{
+  "catalogKey": "runway/ideogram_4_5",
+  "currency": "USD",
+  "modelId": "ideogram_4_5",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "q_very_low"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-ideogram_4_5-image-q_very_low",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "29840369a955c4fc207916d6c33b2c4e96e651123c759bf44ca6c18231694f5d",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "q_very_low",
+      "unitPrice": "0.010000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "q_low"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-ideogram_4_5-image-q_low",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "e9e57aa876debe0794d1671d0ae07223a5b5e157f30c6fd2466fa330e3570a33",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "q_low",
+      "unitPrice": "0.040000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "q_medium"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-ideogram_4_5-image-q_medium",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "35b61f9b1149a623038d48e3bb328727b4ccbdc5f4f23572cbaee89d5f15a4af",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "q_medium",
+      "unitPrice": "0.080000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "q_high"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-ideogram_4_5-image-q_high",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ff8485f9f2e31bb0a4e12041f687fd0335446437a2063be6759d11fb006fd17c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "q_high",
+      "unitPrice": "0.250000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "runway"
+}

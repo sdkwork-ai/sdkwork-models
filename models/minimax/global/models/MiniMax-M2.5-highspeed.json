@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#818cf8",
   "contextTokens": 204800,
-  "description": "MiniMax M2.5 high-speed variant with the same model quality and faster inference.",
+  "description": "Listed under Retired Models in the official FAQ; legacy id retained only for backward compatibility. Migrate to MiniMax-M3.1-Flash.",
   "displayName": "MiniMax M2.5 Highspeed",
   "familyCode": "minimax",
   "inputModalities": [
@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 430,
   "latencyP95Ms": 1550,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 204800,
   "maxOutputTokens": 32768,
   "modelId": "MiniMax-M2.5-highspeed",
@@ -25,13 +25,14 @@
   "primaryCapability": "chat",
   "rankScore": "770.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "MiniMax-M3.1-Flash",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/faq/models"
   },
   "strengths": [
     "Low latency",

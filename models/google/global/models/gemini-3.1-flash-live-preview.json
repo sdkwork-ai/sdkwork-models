@@ -8,7 +8,7 @@
   "codingVisible": true,
   "colorToken": "#0f766e",
   "contextTokens": 131072,
-  "description": "Gemini 3.1 Flash Live preview model for low-latency multimodal realtime sessions.",
+  "description": "Legacy Live API preview model. 官方 models 页：\"Legacy Live API preview model. We recommend updating to Gemini 3.8 Live.\" 继任 gemini-3.8-live；旧端点保留迁移参考。",
   "displayName": "Gemini 3.1 Flash Live Preview",
   "familyCode": "gemini",
   "inputModalities": [
@@ -30,11 +30,12 @@
   "rankScore": "900.000000",
   "regionCode": "global",
   "releaseStage": "preview",
+  "replacementModel": "gemini-3.8-live",
   "routingState": "enabled",
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
   },
   "strengths": [

@@ -8,29 +8,221 @@
         "9:16",
         "1:1"
       ],
+      "catalogKey": "pixverse/pixverse-v6-t2v/t2v_range_360p",
+      "displayName": "Text to Video · 1–15s · 360p · Silent",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 1,
+      "outputAudio": false,
+      "pricingTierCodes": [
+        "res_360p"
+      ],
+      "profileCode": "t2v_range_360p",
+      "resolution": "360p",
+      "resolutionTierCode": "res_360p",
+      "sortOrder": 10,
+      "wireParameters": {
+        "duration": "1-15",
+        "resolution": "360p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "pixverse/pixverse-v6-t2v/t2v_range_540p",
+      "displayName": "Text to Video · 1–15s · 540p · Silent",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 1,
+      "outputAudio": false,
+      "pricingTierCodes": [
+        "res_540p"
+      ],
+      "profileCode": "t2v_range_540p",
+      "resolution": "540p",
+      "resolutionTierCode": "res_540p",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "1-15",
+        "resolution": "540p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
       "catalogKey": "pixverse/pixverse-v6-t2v/t2v_range_720p",
-      "displayName": "Text to Video · 5–8s · 720p",
+      "displayName": "Text to Video · 1–15s · 720p · Silent",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "text_to_video",
       "isDefault": true,
-      "maxDurationSeconds": 8,
-      "minDurationSeconds": 5,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 1,
       "outputAudio": false,
+      "pricingTierCodes": [
+        "res_720p"
+      ],
       "profileCode": "t2v_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
-      "sortOrder": 10,
+      "sortOrder": 30,
       "wireParameters": {
-        "duration": "5-8",
+        "duration": "1-15",
         "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "pixverse/pixverse-v6-t2v/t2v_range_1080p",
+      "displayName": "Text to Video · 1–15s · 1080p · Silent",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 1,
+      "outputAudio": false,
+      "pricingTierCodes": [
+        "res_1080p"
+      ],
+      "profileCode": "t2v_range_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 40,
+      "wireParameters": {
+        "duration": "1-15",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "pixverse/pixverse-v6-t2v/t2v_range_360p_audio",
+      "displayName": "Text to Video · 1–15s · 360p · Audio",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 1,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "audio_res_360p"
+      ],
+      "profileCode": "t2v_range_360p_audio",
+      "resolution": "360p",
+      "resolutionTierCode": "res_360p",
+      "sortOrder": 50,
+      "wireParameters": {
+        "duration": "1-15",
+        "resolution": "360p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "pixverse/pixverse-v6-t2v/t2v_range_540p_audio",
+      "displayName": "Text to Video · 1–15s · 540p · Audio",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 1,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "audio_res_540p"
+      ],
+      "profileCode": "t2v_range_540p_audio",
+      "resolution": "540p",
+      "resolutionTierCode": "res_540p",
+      "sortOrder": 60,
+      "wireParameters": {
+        "duration": "1-15",
+        "resolution": "540p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "pixverse/pixverse-v6-t2v/t2v_range_720p_audio",
+      "displayName": "Text to Video · 1–15s · 720p · Audio",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 1,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "audio_res_720p"
+      ],
+      "profileCode": "t2v_range_720p_audio",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 70,
+      "wireParameters": {
+        "duration": "1-15",
+        "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "pixverse/pixverse-v6-t2v/t2v_range_1080p_audio",
+      "displayName": "Text to Video · 1–15s · 1080p · Audio",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 1,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "audio_res_1080p"
+      ],
+      "profileCode": "t2v_range_1080p_audio",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 80,
+      "wireParameters": {
+        "duration": "1-15",
+        "resolution": "1080p"
       }
     }
   ],
   "regionCode": "cn",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://help.aliyun.com/zh/model-studio/pixverse-text-to-video-api-reference"
   },
   "vendorCode": "pixverse"

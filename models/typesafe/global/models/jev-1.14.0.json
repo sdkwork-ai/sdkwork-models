@@ -1,0 +1,43 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "typesafe/jev-1.14.0",
+  "codingVisible": false,
+  "contextTokens": 65536,
+  "description": "Jev 1.14 (`jev-1.14.0`) is TypeSafe AI's newest Jev release, available from October 14, 2026. It is served by the same vendor-native endpoint `POST https://api.typesafe.ai/v1/systemone` as the rest of the Jev family. It does not generate text: a caller posts a `state` plus a map of typed questions (Choice / Score / Noul) and gets back one typed decision per question, each with a calibrated probability and a confidence value that application code branches on. Input is text only; default context is 64k tokens per request (`state` plus all questions combined) and 32k for `state` plus the single longest question. `outputModalities` reads `text` because the catalog modality vocabulary has no token for typed structured values; the model emits no free-form string.",
+  "displayName": "Jev 1.14",
+  "familyCode": "jev",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 32768,
+  "modelId": "jev-1.14.0",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://docs.typesafe.ai/models"
+  },
+  "strengths": [
+    "Newest Jev release",
+    "Typed decisions",
+    "Calibrated confidence",
+    "Parallel questions"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "typesafe",
+  "vendorName": "TypeSafe AI"
+}

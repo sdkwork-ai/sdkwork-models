@@ -1,0 +1,36 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "runway/kling3.0_4k",
+  "codingVisible": false,
+  "description": "Kling 3.0 4K text/image to video, 3–15 seconds, with optional audio and multishot prompts; billed at the same rate whether audio is enabled or not, resold through the Runway Dev API.",
+  "displayName": "Kling 3.0 4K",
+  "familyCode": "runway-video",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "kling3.0_4k",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "runway",
+  "vendorName": "Runway"
+}

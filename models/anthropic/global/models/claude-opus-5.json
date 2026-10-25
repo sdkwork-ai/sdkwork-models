@@ -8,7 +8,7 @@
   "codingVisible": true,
   "colorToken": "#7c2d12",
   "contextTokens": 1000000,
-  "description": "Claude flagship for complex agentic coding and enterprise work. 1M-token context, 128K max output. Fast mode (research preview) available at $10 input / $50 output per MTok.",
+  "description": "Legacy Opus generation; the official model overview recommends migrating to Claude Opus 5.5. 1M-token context, 128K max output. Fast mode (research preview) available at $10 input / $50 output per MTok.",
   "displayName": "Claude Opus 5",
   "familyCode": "claude",
   "inputModalities": [
@@ -28,11 +28,12 @@
   "rankScore": "1230.000000",
   "regionCode": "global",
   "releaseStage": "active",
+  "replacementModel": "claude-opus-5-5",
   "routingState": "enabled",
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://platform.claude.com/docs/en/about-claude/models/whats-new-opus-5"
   },
   "strengths": [

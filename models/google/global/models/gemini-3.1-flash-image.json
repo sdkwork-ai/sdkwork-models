@@ -7,7 +7,7 @@
   "codingVisible": false,
   "colorToken": "#4285f4",
   "contextTokens": 32768,
-  "description": "Gemini 3.1 Flash Image provides fast image generation from text prompts.",
+  "description": "官方 2026-10-06 弃用公告（changelog）：\"The gemini-3.1-flash-image model is deprecated (no shutdown date announced). Migrate to gemini-nano-banana-2.1.\" 本模型为 gemini-image 家族 defaultModel，按家族不变式保持 listed/enabled；家族继任切换待主流程决策。",
   "displayName": "Gemini 3.1 Flash Image",
   "familyCode": "gemini-image",
   "inputModalities": [
@@ -16,7 +16,7 @@
   ],
   "latencyP50Ms": 2500,
   "latencyP95Ms": 9000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 32768,
   "modelId": "gemini-3.1-flash-image",
   "outputModalities": [
@@ -25,13 +25,14 @@
   "primaryCapability": "image",
   "rankScore": "860.000000",
   "regionCode": "global",
-  "releaseStage": "active",
+  "releaseStage": "deprecated",
+  "replacementModel": "gemini-nano-banana-2.1",
   "routingState": "enabled",
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/changelog"
   },
   "strengths": [
     "Fast image generation",

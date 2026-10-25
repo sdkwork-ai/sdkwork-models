@@ -6,26 +6,27 @@
   "catalogKey": "bytedance/doubao-seedream-4-5-251128",
   "codingVisible": false,
   "colorToken": "#dc2626",
-  "description": "Doubao Seedream 4.5 on Volcengine Ark. Supports single-image generation and group image generation from text, a single image, or multiple reference images.",
+  "description": "Marked 即将下线 on the 2026-10-24 Volcengine Ark model list; legacy id retained only for backward compatibility. New image traffic should use doubao-seedream-5-0-pro-260628 (Seedream 5.0 Pro) or doubao-seedream-5-0-flash-260915.",
   "displayName": "Doubao Seedream 4.5",
   "familyCode": "seedream",
   "inputModalities": [
     "text",
     "image"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "doubao-seedream-4-5-251128",
   "outputModalities": [
     "image"
   ],
   "primaryCapability": "image",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "doubao-seedream-5-0-pro-260628",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://www.volcengine.com/docs/82379/1330310"
   },
   "strengths": [

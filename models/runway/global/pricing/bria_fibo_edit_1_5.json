@@ -1,0 +1,38 @@
+{
+  "catalogKey": "runway/bria_fibo_edit_1_5",
+  "currency": "USD",
+  "modelId": "bria_fibo_edit_1_5",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-bria_fibo_edit_1_5-image",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "b02e131040c822fdf50c6ddc57d1a5206f10ac2def596a1da85c76449bbc633b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "unitPrice": "0.050000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "runway"
+}

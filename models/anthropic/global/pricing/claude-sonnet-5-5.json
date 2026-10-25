@@ -1,0 +1,192 @@
+{
+  "catalogKey": "anthropic/claude-sonnet-5-5",
+  "currency": "USD",
+  "modelId": "claude-sonnet-5-5",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-sonnet-5-5-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5a88b724a6a5518aa0fdd7f11b27ec5eb4920a45e00ab285ce44e195827553e4",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "unitPrice": "2.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-sonnet-5-5-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "43d5eadf385a01c44d8f8a6909be99ca7a36350b8ec6020e8e715f528fcae0f1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "unitPrice": "10.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_5m"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-sonnet-5-5-cache-write",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "1ec22e6f88260cb668425c919dcb8f60eb7e32bde8be5670f2c6c9dabad54315",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "tierCode": "cache_write_5m",
+      "unitPrice": "2.500000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_1h"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-sonnet-5-5-cache-write-1h",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "24126c21f166c429d78f8611a61c6059db0ea2d3af3c22a67ae2de628c85d601",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "tierCode": "cache_write_1h",
+      "unitPrice": "4.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-sonnet-5-5-cache-read",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "768ef5a0a15223d97e7a08a01583f0e4a0a1b570ba212a8017b468d9e06eede1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "unitPrice": "0.100000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "web_search_call",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-global-claude-sonnet-5-5-web-search-call",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "cf4e9cd130597da5205f649c54bf10f1714f285d0522c5656794ad0d7fe5b79e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "unitPrice": "10.000000",
+      "unitSize": "1000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "anthropic"
+}

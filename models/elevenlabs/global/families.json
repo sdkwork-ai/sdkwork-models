@@ -31,6 +31,14 @@
       "familyType": "sfx",
       "primaryModality": "sfx",
       "sortOrder": 40
+    },
+    {
+      "defaultModel": "eleven_realtime_v1_mini",
+      "displayName": "ElevenLabs Realtime",
+      "familyCode": "elevenlabs-realtime",
+      "familyType": "audio",
+      "primaryModality": "audio",
+      "sortOrder": 50
     }
   ],
   "regionCode": "global",

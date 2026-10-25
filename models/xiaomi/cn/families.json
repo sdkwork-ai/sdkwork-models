@@ -1,7 +1,7 @@
 {
   "families": [
     {
-      "defaultModel": "mimo-v2.5-pro",
+      "defaultModel": "mimo-v2.6-pro",
       "displayName": "MiMo V2.5",
       "familyCode": "mimo-v2.5",
       "familyType": "llm",
@@ -9,7 +9,6 @@
       "sortOrder": 10
     },
     {
-      "defaultModel": "mimo-v2.5",
       "displayName": "MiMo V2",
       "familyCode": "mimo-v2",
       "familyType": "llm",

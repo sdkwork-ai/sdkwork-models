@@ -11,31 +11,31 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "text_to_image"
+          "value": "first_megapixel"
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
       "meterCode": "image_megapixel",
       "minimumQuantity": "0",
-      "notes": "Official FLUX.2 [pro] text-to-image \"from $0.03\" per output megapixel.",
+      "notes": "FLUX.2 [pro] first megapixel — official offer feed.",
       "operationCode": "image.generate",
       "priceBookCode": "models.black_forest_labs.global.official",
-      "priceId": "bfl-flux-2-pro-text-to-image-megapixel",
+      "priceId": "bfl-flux-2-pro-mp-first_megapixel",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.black_forest_labs.image",
       "quantityAggregation": "sum",
-      "quantityStep": "0.001",
-      "rateHash": "f2f2013c10457113f0ea813b645e659e3fa86d6e6eedb264b34fdd66824e4fde",
+      "quantityStep": "1",
+      "rateHash": "6ad0188fe358cd02189a7a0a7d1381f7663d75cbc7115134242f4dfc1c68335e",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
-        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://bfl.ai/pricing"
       },
-      "tierCode": "text_to_image",
+      "tierCode": "first_megapixel",
       "unitPrice": "0.030000",
       "unitSize": "1"
     },
@@ -47,32 +47,32 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "image_editing"
+          "value": "additional_megapixel"
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
       "meterCode": "image_megapixel",
       "minimumQuantity": "0",
-      "notes": "Official FLUX.2 [pro] image editing \"from $0.045\" per output megapixel.",
+      "notes": "FLUX.2 [pro] additional megapixels — official offer feed.",
       "operationCode": "image.generate",
       "priceBookCode": "models.black_forest_labs.global.official",
-      "priceId": "bfl-flux-2-pro-image-editing-megapixel",
+      "priceId": "bfl-flux-2-pro-mp-additional_megapixel",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.black_forest_labs.image",
       "quantityAggregation": "sum",
-      "quantityStep": "0.001",
-      "rateHash": "cd5d16a261536ef29bc85eb64ea1ae9a5ec463789b37303abb0569cdeb9aa955",
+      "quantityStep": "1",
+      "rateHash": "8affb9887c7e3f42e108f01aa1eb65b1718e38ae0c66c7b6c28a5cd28d9f65e4",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
-        "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://bfl.ai/pricing"
       },
-      "tierCode": "image_editing",
-      "unitPrice": "0.045000",
+      "tierCode": "additional_megapixel",
+      "unitPrice": "0.015000",
       "unitSize": "1"
     }
   ],

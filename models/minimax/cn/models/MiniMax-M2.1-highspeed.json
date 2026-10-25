@@ -7,13 +7,13 @@
   "codingVisible": true,
   "colorToken": "#818cf8",
   "contextTokens": 204800,
-  "description": "MiniMax M2.1-Highspeed text model, listed by the official docs as a legacy model that is still served.",
+  "description": "官方 FAQ「模型列表」已将 MiniMax-M2.1-highspeed 列入历史模型（已下线），旧 id 仅作为历史兼容入口保留。新业务请迁移至 MiniMax-M3.1-Flash。",
   "displayName": "MiniMax M2.1-Highspeed",
   "familyCode": "minimax",
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 204800,
   "maxOutputTokens": 32768,
   "modelId": "MiniMax-M2.1-highspeed",
@@ -23,13 +23,14 @@
   "primaryCapability": "chat",
   "rankScore": "765.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "MiniMax-M3.1-Flash",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://platform.minimaxi.com/docs/guides/text-generation"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/faq/models"
   },
   "strengths": [
     "Low latency",

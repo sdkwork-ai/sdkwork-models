@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "kuaishou/kling-4.0",
+  "codingVisible": false,
+  "colorToken": "#6d28d9",
+  "description": "[Coming Soon · API access not yet available] Next-generation native multimodal AI video creation model: native 30s output, smoother high-dynamic motions, omni reference (up to 15 free combinations of image/video/subject/voice), up to 10 keyframes, and precise localized editing of finished videos. Capability map parameters: input text/image/video, duration 3~30s, resolution 720P/1080P/4K, dynamic range SDR/10-bit HDR, aspect ratios 21:9/16:9/1:1/9:16/adaptive. Preview billing (requests cannot be submitted at these prices before launch; final pricing subject to official announcement): no video input (total = output duration) 1.0 Unit/s at 720P, 1.5 Units/s at 1080P; with video input and input ≤ output (total = output × 2) 0.6 Unit/s (720P), 0.9 Unit/s (1080P); with video input and input > output (total = input + output) 0.6/0.9 Unit/s; 4K not priced; Kling 4.0 Flash pricing TBA. This entry records the preview status only; no pricing file was generated.",
+  "displayName": "Kling 4.0",
+  "familyCode": "kling",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "preview",
+  "modelId": "kling-4.0",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://kling.ai/document-api/guides/capability-map/video"
+  },
+  "strengths": [
+    "Native 30s generation",
+    "Dynamic motions",
+    "Omni reference",
+    "Multi-keyframe control",
+    "Video precise editing"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "kuaishou",
+  "vendorName": "Kuaishou"
+}

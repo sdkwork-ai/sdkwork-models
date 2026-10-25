@@ -23,7 +23,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-19T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing"
   },
   "supportsJsonSchema": false,
@@ -35,4 +35,3 @@
   "vendorCode": "deepseek",
   "vendorName": "DeepSeek"
 }
-

@@ -1,0 +1,52 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat",
+    "code"
+  ],
+  "catalogKey": "minimax/MiniMax-M3.1-Flash",
+  "codingVisible": true,
+  "colorToken": "#6366f1",
+  "contextTokens": 1000000,
+  "description": "原生多模态、1M 上下文的 Frontier Coding 模型，思考深度可调（reasoning_effort 可取 low/medium/high/xhigh/max，默认 max）；面向 Agent 推理、工具调用、代码与长上下文任务，支持文本、图片、视频输入。",
+  "displayName": "MiniMax-M3.1-Flash",
+  "familyCode": "minimax",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1000000,
+  "modelId": "MiniMax-M3.1-Flash",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "code",
+  "rankScore": "875.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/guides/text-generation"
+  },
+  "strengths": [
+    "Coding",
+    "Multimodal",
+    "Long context",
+    "Tool use"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.920000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "minimax"
+}

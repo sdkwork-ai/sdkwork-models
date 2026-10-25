@@ -1,0 +1,36 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "runway/gemini_image3.1_flash_lite",
+  "codingVisible": false,
+  "description": "Google Nano Banana 2 Lite (gemini_image3.1_flash_lite) image generation and reference-guided editing at 1K resolution, resold through the Runway Dev API.",
+  "displayName": "Nano Banana 2 Lite",
+  "familyCode": "runway-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "gemini_image3.1_flash_lite",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "runway",
+  "vendorName": "Runway"
+}

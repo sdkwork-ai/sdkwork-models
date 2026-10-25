@@ -1,0 +1,169 @@
+{
+  "catalogKey": "moonshot/kimi-k3.1-pro-highspeed",
+  "currency": "USD",
+  "modelId": "kimi-k3.1-pro-highspeed",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3.1 Pro Highspeed input (cache miss) price, USD per 1M tokens.",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.global.official",
+      "priceId": "moonshot-global-kimi-k3.1-pro-highspeed-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "0ef14c743f316cf98cbcdccbce654057adaac4de379cbab99398463c77c9865e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.ai/docs/pricing/chat"
+      },
+      "unitPrice": "4.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3.1 Pro Highspeed output price, USD per 1M tokens.",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.global.official",
+      "priceId": "moonshot-global-kimi-k3.1-pro-highspeed-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "9ebc18d611ca3c51a5aebf9f21ddf0f2c7eccf67b47a33fa63e7d459bc27d0d7",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.ai/docs/pricing/chat"
+      },
+      "unitPrice": "20.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3.1 Pro Highspeed cached-input price, USD per 1M tokens.",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.global.official",
+      "priceId": "moonshot-global-kimi-k3.1-pro-highspeed-cache-read",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a9fb647eb130fe33a56555b584f36053a3db810fd2360c03cab392a5e9526da1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.ai/docs/pricing/chat"
+      },
+      "unitPrice": "0.200000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_5m"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3.1 Pro Highspeed cache write (TTL 5min) price, USD per 1M tokens.",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.global.official",
+      "priceId": "moonshot-global-kimi-k3.1-pro-highspeed-cache-write-5m",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "421050633f50c3569e397a6f239613674d0c117d776cd45cd9fc433f8b468d0c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.ai/docs/pricing/chat"
+      },
+      "tierCode": "cache_write_5m",
+      "unitPrice": "4.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_1h"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3.1 Pro Highspeed cache write (TTL 1h) price, USD per 1M tokens.",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.global.official",
+      "priceId": "moonshot-global-kimi-k3.1-pro-highspeed-cache-write-1h",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "0ffc2c21d6d70bf4018ce869e87cac0cd93f6d53b6979d4cecca40732a9caca3",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.ai/docs/pricing/chat"
+      },
+      "tierCode": "cache_write_1h",
+      "unitPrice": "8.000000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "moonshot"
+}

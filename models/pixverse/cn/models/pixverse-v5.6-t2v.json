@@ -6,7 +6,7 @@
   ],
   "catalogKey": "pixverse/pixverse-v5.6-t2v",
   "codingVisible": false,
-  "description": "百炼上架的爱诗文生视频 V5.6 模型（pixverse/pixverse-v5.6-t2v），官方建议升级至 v6；360P/540P/720P 支持 5/8/10 秒，1080P 仅支持 5/8 秒。官方页面未给出 CNY 单价。",
+  "description": "百炼上架的爱诗文生视频 V5.6 模型（pixverse/pixverse-v5.6-t2v），官方选型建议直接升级至 v6；360P/540P/720P 支持 5/8/10 秒，1080P 仅支持 5/8 秒。百炼价格页今日已公布其分分辨率、有声/无声 CNY 单价，但目录按换代定位保持 deprecated/hidden/catalog_only，本轮不生成价格文件，是否回填价格或归档由主流程决策。",
   "displayName": "PixVerse V5.6 Text to Video",
   "familyCode": "pixverse-video",
   "inputModalities": [
@@ -25,7 +25,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://help.aliyun.com/zh/model-studio/pixverse-text-to-video-api-reference"
   },
   "supportsJsonSchema": false,

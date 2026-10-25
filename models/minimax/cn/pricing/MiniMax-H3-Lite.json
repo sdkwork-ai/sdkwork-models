@@ -1,0 +1,80 @@
+{
+  "catalogKey": "minimax/MiniMax-H3-Lite",
+  "currency": "CNY",
+  "modelId": "MiniMax-H3-Lite",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_768p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.minimax.cn.official",
+      "priceId": "minimax-cn-h3-lite-second-res-768p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3eae2c6ae66ab49f65a46e06031b729870433312a629ad9b5283937caf7bc3da",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+      },
+      "tierCode": "res_768p",
+      "unitPrice": "0.260000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_480p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.minimax.cn.official",
+      "priceId": "minimax-cn-h3-lite-second-res-480p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "dca14917ee2eeda507a1d361220e717e5aff99b46939fb769888845c18f18099",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+      },
+      "tierCode": "res_480p",
+      "unitPrice": "0.160000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "minimax"
+}

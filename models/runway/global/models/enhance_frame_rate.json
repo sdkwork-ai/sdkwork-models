@@ -1,0 +1,35 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "runway/enhance_frame_rate",
+  "codingVisible": false,
+  "description": "Converts a video to a target frame rate on POST /v1/video_upscale; billed per block of input seconds.",
+  "displayName": "Enhance Frame Rate",
+  "familyCode": "runway-video",
+  "inputModalities": [
+    "video"
+  ],
+  "lifecycle": "active",
+  "modelId": "enhance_frame_rate",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "runway",
+  "vendorName": "Runway"
+}

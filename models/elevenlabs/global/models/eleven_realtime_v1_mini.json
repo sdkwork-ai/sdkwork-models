@@ -1,0 +1,44 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "elevenlabs/eleven_realtime_v1_mini",
+  "codingVisible": false,
+  "colorToken": "#1d4ed8",
+  "description": "Complete voice agent optimized for fast, natural conversation: speech recognition, turn-taking, language model and text-to-speech tuned as one system; 90+ languages; available in ElevenAgents and via the OpenAI-compatible Realtime API.",
+  "displayName": "Eleven Realtime v1 Mini",
+  "familyCode": "elevenlabs-realtime",
+  "inputModalities": [
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "eleven_realtime_v1_mini",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://elevenlabs.io/docs/models"
+  },
+  "strengths": [
+    "Natural conversation",
+    "Turn-taking",
+    "Low latency",
+    "90+ languages"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [
+    "agent"
+  ],
+  "vendorCode": "elevenlabs",
+  "vendorName": "ElevenLabs"
+}

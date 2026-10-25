@@ -6,7 +6,7 @@
   "catalogKey": "luma_ai/ray-2",
   "codingVisible": false,
   "colorToken": "#6366f1",
-  "description": "Luma Ray 2 Dream Machine model officially deprecated; use Ray 3.2 for new projects. Kept for migration reference.",
+  "description": "Luma Ray 2 legacy Dream Machine video model; named in the official Agents migration guide as a retiring model. New integrations must call model \"ray-3.2\" with type: \"video\"; legacy Dream Machine model identifiers are not accepted by the Agents API.",
   "displayName": "Ray 2",
   "familyCode": "luma-video",
   "inputModalities": [
@@ -24,12 +24,13 @@
   "rankScore": "840.000000",
   "regionCode": "global",
   "releaseStage": "deprecated",
+  "replacementModel": "ray-3.2",
   "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://docs.lumalabs.ai/docs/video-generation"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://docs.agents.lumalabs.ai/guides/videos/migration/"
   },
   "strengths": [
     "Text to video",

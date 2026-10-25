@@ -1,0 +1,36 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "black_forest_labs/flux-3-image-klein",
+  "codingVisible": false,
+  "description": "A smaller, faster 5.6B open-weights FLUX 3 Image model served through the API; text-to-image and image-to-image cost the same, priced per image by output resolution tier.",
+  "displayName": "FLUX 3 Image Klein",
+  "familyCode": "flux",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "flux-3-image-klein",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://docs.bfl.ai/flux_3/flux3_image_klein"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "black_forest_labs",
+  "vendorName": "Black Forest Labs"
+}

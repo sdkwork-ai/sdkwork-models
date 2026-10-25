@@ -1,0 +1,52 @@
+{
+  "apiFormat": "anthropic_messages",
+  "capabilities": [
+    "chat",
+    "reasoning"
+  ],
+  "catalogKey": "anthropic/claude-opus-5-5",
+  "codingVisible": true,
+  "colorToken": "#7c2d12",
+  "contextTokens": 1000000,
+  "description": "Current flagship Claude Opus for long-running agentic coding and knowledge work. 1M-token context, 128K max output. Base $4 input / $20 output per MTok; cache reads at 5% of base input ($0.20 / MTok). Fast mode available at $8 input / $40 output per MTok.",
+  "displayName": "Claude Opus 5.5",
+  "familyCode": "claude",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1000000,
+  "maxOutputTokens": 128000,
+  "modelId": "claude-opus-5-5",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.claude.com/docs/en/models/opus-5-5/overview"
+  },
+  "strengths": [
+    "Reasoning",
+    "Coding",
+    "Agents",
+    "Long context",
+    "Adaptive thinking"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "anthropic",
+  "vendorName": "Anthropic"
+}

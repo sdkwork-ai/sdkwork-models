@@ -1,0 +1,45 @@
+{
+  "catalogKey": "minimax/MiniMax-H3-Highspeed",
+  "currency": "CNY",
+  "modelId": "MiniMax-H3-Highspeed",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_768p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.minimax.cn.official",
+      "priceId": "minimax-cn-h3-highspeed-second-res-768p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "336aaa91152b777d531308bfd2268c2cec5051913832fc52351cbbf43553c128",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+      },
+      "tierCode": "res_768p",
+      "unitPrice": "0.400000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "minimax"
+}

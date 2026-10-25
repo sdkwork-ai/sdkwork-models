@@ -1,0 +1,38 @@
+{
+  "catalogKey": "elevenlabs/eleven_v4_turbo",
+  "currency": "USD",
+  "modelId": "eleven_v4_turbo",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "operationCode": "speech.synthesize",
+      "priceBookCode": "models.elevenlabs.global.official",
+      "priceId": "elevenlabs-eleven-v4-turbo-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.elevenlabs.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "98e9212ebfa4fbc21b316eafa8656c08acf745fbe9ae6957a12e8ec76b8bb894",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://elevenlabs.io/pricing/api"
+      },
+      "unitPrice": "0.040000",
+      "unitSize": "1000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "elevenlabs"
+}

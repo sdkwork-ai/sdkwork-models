@@ -1,0 +1,36 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "black_forest_labs/flux-3-image",
+  "codingVisible": false,
+  "description": "FLUX 3 Image: generate images from a text prompt, edit specific details, and combine up to ten reference images; priced per image by the selected resolution tier (768² / 1K / 1.5K / 2K / 4K), with reference images and prompts included at no extra charge.",
+  "displayName": "FLUX 3 Image",
+  "familyCode": "flux",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "flux-3-image",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://docs.bfl.ai/flux_3/flux3_image_generate"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "black_forest_labs",
+  "vendorName": "Black Forest Labs"
+}

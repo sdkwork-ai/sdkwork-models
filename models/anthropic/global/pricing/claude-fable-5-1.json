@@ -25,7 +25,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "unitPrice": "10.000000",
@@ -53,7 +53,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "unitPrice": "50.000000",
@@ -87,7 +87,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "tierCode": "cache_write_5m",
@@ -122,7 +122,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "tierCode": "cache_write_1h",
@@ -151,7 +151,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "unitPrice": "0.250000",
@@ -175,15 +175,15 @@
       "productCode": "models.anthropic.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "78f77fa787abaf865036419a5185249e0b114964cf566d6373be0db5fae098bc",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-19T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
       },
       "unitPrice": "10.000000",
-      "unitSize": "1000",
-      "rateHash": "cc5bd5f0532562db02a2abdfce74864e11f9becdb59ea5ec8b391f4043304e8b"
+      "unitSize": "1000"
     }
   ],
   "regionCode": "global",

@@ -1,0 +1,40 @@
+{
+  "catalogKey": "runway/enhance_frame_rate",
+  "modelId": "enhance_frame_rate",
+  "profiles": [
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/enhance_frame_rate/video_edit_720p",
+      "displayName": "Video Edit · 2s Input Block · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "video_edit",
+      "isDefault": true,
+      "maxDurationSeconds": 2,
+      "minDurationSeconds": 2,
+      "outputAudio": false,
+      "pricingTierCodes": [
+        "per_2s_block"
+      ],
+      "profileCode": "video_edit_720p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 10,
+      "wireParameters": {
+        "duration": "2",
+        "resolution": "720p"
+      }
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+  },
+  "vendorCode": "runway"
+}

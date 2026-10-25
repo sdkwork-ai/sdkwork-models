@@ -1,0 +1,38 @@
+{
+  "catalogKey": "typesafe/jev-1.14.0",
+  "currency": "USD",
+  "modelId": "jev-1.14.0",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-14T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "notes": "Jev 1.14 输入 token 单价 $0.042 / Mtok（官方表 $42 / $0.042 per Btok / Mtok）；输出 token 免费。",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.typesafe.global.official",
+      "priceId": "typesafe-global-jev-1-14-0-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.typesafe.chat",
+      "quantityAggregation": "sum",
+      "rateHash": "482f6195658e767f3ef6b8d8e9538c97f6ec9c6cdefe2afb90a72f2db039c89b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://docs.typesafe.ai/models"
+      },
+      "unitPrice": "0.042000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "typesafe"
+}

@@ -9,7 +9,7 @@
       "chargeTiming": "usage_reported",
       "conditions": [],
       "currency": "CNY",
-      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
       "meterCode": "llm_input_token",
       "minimumQuantity": "0",
       "operationCode": "inference.generate",
@@ -21,14 +21,14 @@
       "productCode": "models.baidu.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "c5935f9ae99adbe4b5c98fb1b72401fb878b50b15d054670c27b154c895cf022",
+      "rateHash": "4854c0ac56f11d8f149e3ec3b9ec0b16c1f07f225127dd39495c72952a8cb992",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
-        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a"
       },
-      "unitPrice": "0.800000",
+      "unitPrice": "3.000000",
       "unitSize": "1000000"
     },
     {
@@ -37,7 +37,7 @@
       "chargeTiming": "usage_reported",
       "conditions": [],
       "currency": "CNY",
-      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
       "meterCode": "llm_output_token",
       "minimumQuantity": "0",
       "operationCode": "inference.generate",
@@ -49,42 +49,14 @@
       "productCode": "models.baidu.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "8d3b7a99e75b5ed872d386892393cfd11a4407e6ddf03627528bf5cdef6a0bbc",
+      "rateHash": "87540295c63ccba4f974814edc8a689112fd58a43f303c3e5d738691f627b85d",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
-        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a"
       },
-      "unitPrice": "3.200000",
-      "unitSize": "1000000"
-    },
-    {
-      "billability": "chargeable",
-      "calculationMode": "per_unit",
-      "chargeTiming": "usage_reported",
-      "conditions": [],
-      "currency": "CNY",
-      "effectiveFrom": "2026-09-22T00:00:00Z",
-      "meterCode": "llm_cache_read_token",
-      "minimumQuantity": "0",
-      "operationCode": "inference.generate",
-      "priceBookCode": "models.baidu.cn.official",
-      "priceId": "baidu-cn-ernie-4.5-turbo-vl-cache-read",
-      "priceSide": "official",
-      "pricingScope": "model",
-      "priority": 100,
-      "productCode": "models.baidu.chat",
-      "quantityAggregation": "sum",
-      "quantityStep": "1",
-      "rateHash": "2306a55b8f7f8bc46618d284c465d7735b398aafef3f3e33319ad63ef5c5ad8c",
-      "rateVariant": "standard",
-      "schedule": null,
-      "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
-        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
-      },
-      "unitPrice": "0.200000",
+      "unitPrice": "9.000000",
       "unitSize": "1000000"
     }
   ],

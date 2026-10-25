@@ -1,0 +1,50 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "minimax/MiniMax-H3-Highspeed",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "MiniMax H3 Highspeed balances generation quality and speed for everyday content creation; supports text-to-video, image-to-video (first/last frame) and reference-to-video (reference image/video/audio); 768P only (2K not supported), 4–15 seconds.",
+  "displayName": "MiniMax H3 Highspeed",
+  "familyCode": "minimax-video",
+  "inputModalities": [
+    "text",
+    "image",
+    "video",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "MiniMax-H3-Highspeed",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "850.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/api-reference/video-generation-v2-create"
+  },
+  "strengths": [
+    "Text-to-video",
+    "Image-to-video",
+    "First-and-last-frame",
+    "Multimodal reference",
+    "768P",
+    "High speed"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.920000",
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "winRate": "0.880000"
+}

@@ -1,0 +1,49 @@
+{
+  "apiFormat": "anthropic_messages",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "anthropic/claude-haiku-5-5",
+  "codingVisible": true,
+  "colorToken": "#c2410c",
+  "contextTokens": 1000000,
+  "description": "High-volume, latency-sensitive model for classification, routing, extraction, and subagent tasks. 1M-token context, 128K max output. Priced by prompt length: $0.10 input / $0.50 output per MTok for prompts up to 100,000 tokens; $0.50 / $2.50 over 100,000 tokens.",
+  "displayName": "Claude Haiku 5.5",
+  "familyCode": "claude",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1000000,
+  "maxOutputTokens": 128000,
+  "modelId": "claude-haiku-5-5",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
+  },
+  "strengths": [
+    "Low latency",
+    "Cost efficient",
+    "Vision",
+    "Tool use"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "anthropic",
+  "vendorName": "Anthropic"
+}

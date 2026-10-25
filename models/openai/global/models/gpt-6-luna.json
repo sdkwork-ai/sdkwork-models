@@ -1,0 +1,51 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "openai/gpt-6-luna",
+  "codingVisible": true,
+  "contextTokens": 1050000,
+  "description": "Our most efficient model for focused, high-volume tasks. 1,050,000 context window; reasoning effort supports none/low/medium/high/xhigh/max. Official successor tier for high-volume and cost-sensitive workloads.",
+  "displayName": "GPT-6 Luna",
+  "familyCode": "gpt-6",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 500,
+  "latencyP95Ms": 1800,
+  "lifecycle": "active",
+  "maxInputTokens": 922000,
+  "maxOutputTokens": 128000,
+  "modelId": "gpt-6-luna",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1050.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+  },
+  "strengths": [
+    "Fast inference",
+    "Low cost",
+    "High volume"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.940000",
+  "usageScopes": [
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "openai",
+  "winRate": "0.920000"
+}

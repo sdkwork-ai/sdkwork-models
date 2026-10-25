@@ -9,9 +9,10 @@
       "chargeTiming": "usage_reported",
       "conditions": [],
       "currency": "USD",
-      "effectiveFrom": "2026-07-16T00:00:00Z",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
       "meterCode": "llm_input_token",
       "minimumQuantity": "0",
+      "notes": "Kimi K3 input (cache miss) price, USD per 1M tokens; existing rate verified unchanged.",
       "operationCode": "inference.generate",
       "priceBookCode": "models.moonshot.global.official",
       "priceId": "moonshot-global-kimi-k3-input",
@@ -21,12 +22,12 @@
       "productCode": "models.moonshot.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "2cc1a90a3ad9cc24c8b1957a3dc07a06f842cec6a25ecb12f063cd2ed599ab00",
+      "rateHash": "b7d0468c39b333e2a18cea8597c27a9524918703c9c084c38f9157c444d9a89e",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
-        "sourceUrl": "https://www.kimi.com/blog/kimi-k3"
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.ai/docs/pricing/chat"
       },
       "unitPrice": "3.000000",
       "unitSize": "1000000"
@@ -37,9 +38,10 @@
       "chargeTiming": "usage_reported",
       "conditions": [],
       "currency": "USD",
-      "effectiveFrom": "2026-07-16T00:00:00Z",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
       "meterCode": "llm_output_token",
       "minimumQuantity": "0",
+      "notes": "Kimi K3 output price, USD per 1M tokens; existing rate verified unchanged.",
       "operationCode": "inference.generate",
       "priceBookCode": "models.moonshot.global.official",
       "priceId": "moonshot-global-kimi-k3-output",
@@ -49,12 +51,12 @@
       "productCode": "models.moonshot.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "f865123ccbee761d36dafa484eb86d6e761f4c20e57c533f70e285560804de16",
+      "rateHash": "15fba37ba692093c9f5869e7fd12795f141e6a8211ed1c2c8ae25aa793b2ec00",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
-        "sourceUrl": "https://www.kimi.com/blog/kimi-k3"
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.ai/docs/pricing/chat"
       },
       "unitPrice": "15.000000",
       "unitSize": "1000000"
@@ -65,9 +67,10 @@
       "chargeTiming": "usage_reported",
       "conditions": [],
       "currency": "USD",
-      "effectiveFrom": "2026-07-16T00:00:00Z",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
       "meterCode": "llm_cache_read_token",
       "minimumQuantity": "0",
+      "notes": "Kimi K3 cached-input price, USD per 1M tokens; existing rate verified unchanged.",
       "operationCode": "inference.generate",
       "priceBookCode": "models.moonshot.global.official",
       "priceId": "moonshot-global-kimi-k3-cache-read",
@@ -77,14 +80,86 @@
       "productCode": "models.moonshot.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "4ec154bbf18eac67de877a1b1f78023259c2b9c7e5195940ea2d44feb3ee7f9a",
+      "rateHash": "951ed76ea60cd8d6c759c76382f50183fb0bfe0c61dfc24b989cf091c42f11b4",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
-        "sourceUrl": "https://www.kimi.com/blog/kimi-k3"
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.ai/docs/pricing/chat"
       },
       "unitPrice": "0.300000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_5m"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3 cache write (TTL 5min) price, USD per 1M tokens; newly added billing item this round.",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.global.official",
+      "priceId": "moonshot-global-kimi-k3-cache-write-5m",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "763606d76bd6c6beb3e2d74107910da7878022986a7e0c2614c18f01cc759985",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.ai/docs/pricing/chat"
+      },
+      "tierCode": "cache_write_5m",
+      "unitPrice": "3.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_1h"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3 cache write (TTL 1h) price, USD per 1M tokens; newly added billing item this round.",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.global.official",
+      "priceId": "moonshot-global-kimi-k3-cache-write-1h",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3ea380316f4c03596aa68ec159f50530cb4149e4fb25486b2f21f91605a34729",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.ai/docs/pricing/chat"
+      },
+      "tierCode": "cache_write_1h",
+      "unitPrice": "6.000000",
       "unitSize": "1000000"
     }
   ],

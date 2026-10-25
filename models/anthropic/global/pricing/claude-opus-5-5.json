@@ -1,0 +1,262 @@
+{
+  "catalogKey": "anthropic/claude-opus-5-5",
+  "currency": "USD",
+  "modelId": "claude-opus-5-5",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-opus-5-5-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "f401bdc73bfbb009da1b0ed4d71abda5d8395c8427a716eb06879b2ac24c5daa",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "unitPrice": "4.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-opus-5-5-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d196fe31cca78c45617517fb17877f987ab8ca43c9f80b2182bcf66b0cb2800e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "unitPrice": "20.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_5m"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-opus-5-5-cache-write",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "9328ecd9f444fdb7c4857f225bcaa7efa5c32d456ca3c44ffb023c010ec1e77c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "tierCode": "cache_write_5m",
+      "unitPrice": "5.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_1h"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-opus-5-5-cache-write-1h",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "208e7f8c1425d2fd5e7f7e880f871868c2a7cf51e6606ab83d7cc5d635756860",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "tierCode": "cache_write_1h",
+      "unitPrice": "8.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-opus-5-5-cache-read",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d3c5ca0553c6efb52947cc3cf12cc93b2e8245074d50ae2a8842cd0b3de7a183",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "unitPrice": "0.200000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "fast_mode"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-opus-5-5-fast-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "6469583d716138ee26ac9f316801cb33e2df110a2b7d597b09a859a47b5c58f7",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "tierCode": "fast_mode",
+      "unitPrice": "8.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "fast_mode"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-opus-5-5-fast-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "7626cb998bcd334012d8edc7f95b01974293d09176443cb00e5c626aa7307dd3",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "tierCode": "fast_mode",
+      "unitPrice": "40.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "web_search_call",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-global-claude-opus-5-5-web-search-call",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "c7fa78b66b428e61c423fe6814dfd7ecd78858c31b619e77ad4ac009db223d1e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "unitPrice": "10.000000",
+      "unitSize": "1000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "anthropic"
+}

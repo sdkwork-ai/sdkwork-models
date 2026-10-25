@@ -6,7 +6,7 @@
   "catalogKey": "openai/tts-1-hd",
   "codingVisible": false,
   "colorToken": "#6366f1",
-  "description": "High-definition text-to-speech model for premium audio fidelity.",
+  "description": "High-definition text-to-speech model for premium audio fidelity. Officially deprecated on 2026-10-01 in the TTS group; scheduled for removal from the API on January 6, 2027; official replacement: gpt-realtime-2.1-mini.",
   "displayName": "TTS-1 HD",
   "familyCode": "gpt-tts",
   "inputModalities": [
@@ -23,12 +23,13 @@
   "rankScore": "760.000000",
   "regionCode": "global",
   "releaseStage": "deprecated",
+  "replacementModel": "gpt-realtime-2.1-mini",
   "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://platform.openai.com/docs/guides/text-to-speech"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/deprecations"
   },
   "strengths": [
     "Text to speech",

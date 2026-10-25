@@ -1,0 +1,367 @@
+{
+  "catalogKey": "anthropic/claude-haiku-5-5",
+  "currency": "USD",
+  "modelId": "claude-haiku-5-5",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-haiku-5-5-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "6e3d97eab15c419cea74952e0a35989ab59cec34185abb7e977a36aa1f629872",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "unitPrice": "0.100000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-haiku-5-5-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "82b18e425c079b6c64bae6a2db581891a7c398a93d77b042056bac9c4df28cca",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "unitPrice": "0.500000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_5m"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-haiku-5-5-cache-write",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "0a941241bd1c7df762b53c6b1acee19535fb9104ff864f87477b057822cc168a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "tierCode": "cache_write_5m",
+      "unitPrice": "0.125000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_1h"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-haiku-5-5-cache-write-1h",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5c4df82d6a8d3e8dd106bbdadf1692f7214ca20ef1f16e7b355bfc45ab298d24",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "tierCode": "cache_write_1h",
+      "unitPrice": "0.200000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-haiku-5-5-cache-read",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "9766f6a48fbffecfb4d54743af3e54a0db770c98c6d1f1f306d91ce457d8c051",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "unitPrice": "0.010000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "prompts_over_100k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-haiku-5-5-input-over-100k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "8a612419f50f6c56070fcf80905de4e3e8571cce75773e758e88f785dfc1910a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "tierCode": "prompts_over_100k",
+      "unitPrice": "0.500000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "prompts_over_100k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-haiku-5-5-output-over-100k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "cd301817bb68f10e392d3e41c6b2043d129728044a04752055965ce10edec8bb",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "tierCode": "prompts_over_100k",
+      "unitPrice": "2.500000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_5m_prompts_over_100k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-haiku-5-5-cache-write-5m-over-100k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "7decd59fc2133deff541686c8750dd47cd7eaf464f635b0c9595a1a04eb1fcb0",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "tierCode": "cache_write_5m_prompts_over_100k",
+      "unitPrice": "0.625000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_1h_prompts_over_100k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-haiku-5-5-cache-write-1h-over-100k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "2a646bbf340e48e484d454715ea2f2784ef0100668c6be3ca59b01ab986cb63d",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "tierCode": "cache_write_1h_prompts_over_100k",
+      "unitPrice": "1.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "prompts_over_100k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-haiku-5-5-cache-read-over-100k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "20a80fff9cd733b928f6a2ae2b4ee54f392097d3d92827477f21b8d7a7a2e951",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "tierCode": "prompts_over_100k",
+      "unitPrice": "0.050000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "web_search_call",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-global-claude-haiku-5-5-web-search-call",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "cedaebfc191b1362a089bdd0acdb2b9f379d070b9680e3d740ebcdb3d3f3ca55",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      "unitPrice": "10.000000",
+      "unitSize": "1000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "anthropic"
+}

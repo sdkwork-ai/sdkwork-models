@@ -7,7 +7,7 @@
   "codingVisible": false,
   "colorToken": "#0891b2",
   "contextTokens": 32768,
-  "description": "Gemini 2.5 Flash Image (Nano Banana) shuts down on 2026-10-02; migrate to Nano Banana 2 (gemini-3.1-flash-image-preview). Kept for migration reference.",
+  "description": "官方 pricing 页警告：\"Gemini 2.5 Flash Image (gemini-2.5-flash-image) is deprecated and will be shut down on October 2, 2026; migrate to Gemini 3.1 Flash Image or Gemini 3.1 Flash Lite Image.\" 持久继任取 gemini-3.1-flash-lite-image（gemini-3.1-flash-image 本身已弃用，继任 gemini-nano-banana-2.1）。条目保持 hidden/catalog_only 迁移参考。",
   "displayName": "Gemini 2.5 Flash Image",
   "familyCode": "gemini-image",
   "inputModalities": [
@@ -26,12 +26,13 @@
   "rankScore": "840.000000",
   "regionCode": "global",
   "releaseStage": "deprecated",
+  "replacementModel": "gemini-3.1-flash-lite-image",
   "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-image"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
   },
   "strengths": [
     "Image generation",

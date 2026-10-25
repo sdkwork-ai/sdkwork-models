@@ -1,0 +1,52 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "openai/gpt-6-sol",
+  "codingVisible": true,
+  "contextTokens": 1050000,
+  "description": "Built to power complex coding and agentic workflows. 1,050,000 context window. The official model page directs users to GPT-6.1 Sol as the newer Sol model, but gpt-6-sol remains listed and priced on the official Standard flagship table.",
+  "displayName": "GPT-6 Sol",
+  "familyCode": "gpt-6",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 1000,
+  "latencyP95Ms": 3500,
+  "lifecycle": "active",
+  "maxInputTokens": 922000,
+  "maxOutputTokens": 128000,
+  "modelId": "gpt-6-sol",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1180.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-sol"
+  },
+  "strengths": [
+    "Coding",
+    "Agents",
+    "Reasoning"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.970000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "openai",
+  "winRate": "0.985000"
+}

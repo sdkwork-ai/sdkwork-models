@@ -9,9 +9,10 @@
       "chargeTiming": "usage_reported",
       "conditions": [],
       "currency": "CNY",
-      "effectiveFrom": "2026-07-16T00:00:00Z",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
       "meterCode": "llm_input_token",
       "minimumQuantity": "0",
+      "notes": "Kimi K3 输入（缓存未命中）单价，CNY/百万 Tokens；既有价格核对一致。",
       "operationCode": "inference.generate",
       "priceBookCode": "models.moonshot.cn.official",
       "priceId": "moonshot-cn-kimi-k3-input",
@@ -21,12 +22,12 @@
       "productCode": "models.moonshot.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "de820145d554e3b1ebaa0b8ffd01fab9b42013c28eeba558c461aec2408de850",
+      "rateHash": "154c89b43d7855c3564ae2824139f3cf8b7357387c1ba9081e55abf9006bbab5",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
-        "sourceUrl": "https://www.kimi.com/blog/kimi-k3"
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
       },
       "unitPrice": "20.000000",
       "unitSize": "1000000"
@@ -37,9 +38,10 @@
       "chargeTiming": "usage_reported",
       "conditions": [],
       "currency": "CNY",
-      "effectiveFrom": "2026-07-16T00:00:00Z",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
       "meterCode": "llm_output_token",
       "minimumQuantity": "0",
+      "notes": "Kimi K3 输出单价，CNY/百万 Tokens；既有价格核对一致。",
       "operationCode": "inference.generate",
       "priceBookCode": "models.moonshot.cn.official",
       "priceId": "moonshot-cn-kimi-k3-output",
@@ -49,12 +51,12 @@
       "productCode": "models.moonshot.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "970ea44117d14da5001a148a751665f33f3e91aa07dfa2e21e73f39f24eab693",
+      "rateHash": "e8a9a58496b17531d38b99a6538e4f1eb9440f498d6cc00ab2871d38de97e4b9",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
-        "sourceUrl": "https://www.kimi.com/blog/kimi-k3"
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
       },
       "unitPrice": "100.000000",
       "unitSize": "1000000"
@@ -65,9 +67,10 @@
       "chargeTiming": "usage_reported",
       "conditions": [],
       "currency": "CNY",
-      "effectiveFrom": "2026-07-16T00:00:00Z",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
       "meterCode": "llm_cache_read_token",
       "minimumQuantity": "0",
+      "notes": "Kimi K3 缓存命中单价，CNY/百万 Tokens；既有价格核对一致。",
       "operationCode": "inference.generate",
       "priceBookCode": "models.moonshot.cn.official",
       "priceId": "moonshot-cn-kimi-k3-cache-read",
@@ -77,14 +80,86 @@
       "productCode": "models.moonshot.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "027e2c5e43fdfc6158c8fc96e9826004bfdda62128d17f3401eeb85f496e7266",
+      "rateHash": "6f2e3c85766565cfc313e6ca0b9beaca821f87c2f78faf7ee83681c9852794b2",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
-        "sourceUrl": "https://www.kimi.com/blog/kimi-k3"
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
       },
       "unitPrice": "2.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_5m"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3 缓存写入（TTL 5min）单价，CNY/百万 Tokens；本轮新增计费项。",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.cn.official",
+      "priceId": "moonshot-cn-kimi-k3-cache-write-5m",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "7aa563189353aabcb9acc213be1812884c932a015a2a8e43625a3778e3e3fc94",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
+      },
+      "tierCode": "cache_write_5m",
+      "unitPrice": "20.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_1h"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3 缓存写入（TTL 1h）单价，CNY/百万 Tokens；本轮新增计费项。",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.cn.official",
+      "priceId": "moonshot-cn-kimi-k3-cache-write-1h",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "0e39b2324f487d0ce4716a909f46491d148da3d95665d50286e9e38400d4059e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
+      },
+      "tierCode": "cache_write_1h",
+      "unitPrice": "40.000000",
       "unitSize": "1000000"
     }
   ],

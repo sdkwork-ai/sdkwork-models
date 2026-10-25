@@ -7,13 +7,13 @@
   "codingVisible": true,
   "colorToken": "#4f46e5",
   "contextTokens": 204800,
-  "description": "MiniMax M2.1 text model, listed by the official docs as a legacy model that is still served.",
+  "description": "Listed under Retired Models in the official FAQ; legacy id retained only for backward compatibility. Migrate to MiniMax-M3.1-Flash or MiniMax-M3.",
   "displayName": "MiniMax M2.1",
   "familyCode": "minimax",
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 204800,
   "maxOutputTokens": 32768,
   "modelId": "MiniMax-M2.1",
@@ -23,13 +23,14 @@
   "primaryCapability": "chat",
   "rankScore": "775.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "MiniMax-M3.1-Flash",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/faq/models"
   },
   "strengths": [
     "Code",

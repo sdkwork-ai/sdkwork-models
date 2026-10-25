@@ -1,0 +1,48 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "zhipu/glm-5.3-flashx-legal",
+  "codingVisible": false,
+  "colorToken": "#7c2d12",
+  "contextTokens": 1000000,
+  "description": "GLM-5.3-FlashX-Legal (GLM-Legal): legal-domain optimized model for legal retrieval, contract review and document drafting, used in Agent workflows with legal MCP tools. The API is open to enterprise customers by application only (需申请开通); 1M context, 128K max output. Tool/stream/JSON-schema flags follow the shared Chat Completion parameter set and were not separately re-verified in the Legal section.",
+  "displayName": "GLM-5.3 FlashX Legal",
+  "familyCode": "glm",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "catalog_only",
+  "maxInputTokens": 1000000,
+  "maxOutputTokens": 131072,
+  "modelId": "glm-5.3-flashx-legal",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash"
+  },
+  "strengths": [
+    "Legal domain",
+    "Contract review",
+    "Agent tool calling",
+    "Long context"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "zhipu",
+  "vendorName": "Zhipu AI"
+}

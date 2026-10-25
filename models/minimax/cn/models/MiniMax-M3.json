@@ -8,11 +8,13 @@
   "codingVisible": true,
   "colorToken": "#6366f1",
   "contextTokens": 1000000,
-  "description": "MiniMax M3 frontier multimodal coding model with 1M context window, frontier coding capabilities, and multimodal support.",
+  "description": "MiniMax M3 原生多模态、1M 上下文的 Frontier Coding 模型，支持文本、图片、视频输入，面向 Agent 推理、工具调用、代码与长上下文任务。",
   "displayName": "MiniMax-M3",
   "familyCode": "minimax",
   "inputModalities": [
-    "text"
+    "text",
+    "image",
+    "video"
   ],
   "lifecycle": "active",
   "maxInputTokens": 1000000,
@@ -28,8 +30,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://platform.minimaxi.com/docs/guides/models-intro"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/guides/text-generation"
   },
   "strengths": [
     "Coding",

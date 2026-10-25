@@ -10,7 +10,7 @@
   "codingVisible": true,
   "colorToken": "#FF6900",
   "contextTokens": 1048576,
-  "description": "Xiaomi MiMo V2.5 - Native omnimodal model supporting text, image, video, and audio understanding with 310B total / 15B active parameters.",
+  "description": "Xiaomi MiMo V2.5 was retired at 10:00 (UTC+8) on 2026-10-21; the model ID no longer works. The official model list and pay-as-you-go table no longer include it. Successor: mimo-v2.6-flash (tier-matched full-modal successor; official mapping is not enumerated, inferred from the pricing tier).",
   "displayName": "MiMo V2.5",
   "familyCode": "mimo-v2.5",
   "inputModalities": [
@@ -21,7 +21,7 @@
   ],
   "latencyP50Ms": 650,
   "latencyP95Ms": 2200,
-  "lifecycle": "active",
+  "lifecycle": "retired",
   "maxInputTokens": 1048576,
   "maxOutputTokens": 131072,
   "modelId": "mimo-v2.5",
@@ -31,13 +31,14 @@
   "primaryCapability": "chat",
   "rankScore": "1050.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "retired",
+  "replacementModel": "mimo-v2.6-flash",
+  "routingState": "disabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "archived",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://mimo.xiaomi.com"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://mimo.mi.com/docs/en-US/quick-start/summary/model"
   },
   "strengths": [
     "Multimodal",

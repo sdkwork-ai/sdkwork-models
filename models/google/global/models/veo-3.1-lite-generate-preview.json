@@ -6,7 +6,7 @@
   "catalogKey": "google/veo-3.1-lite-generate-preview",
   "codingVisible": false,
   "colorToken": "#5b21b6",
-  "description": "Cost-optimized Veo 3.1 Lite preview model for video generation.",
+  "description": "官方 Veo 模型版本表将 veo-3.1-lite-generate-preview 标记为 \"Veo 3.1 Lite Preview (Deprecated)\"（Last updated 2026-10-22）；本轮 pricing 页未列出 Veo 单价，官方未指名继任模型。旧条目仅作迁移参考。",
   "displayName": "Veo 3.1 Lite Generate Preview",
   "familyCode": "veo",
   "inputModalities": [
@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 36000,
   "latencyP95Ms": 130000,
-  "lifecycle": "preview",
+  "lifecycle": "deprecated",
   "modelId": "veo-3.1-lite-generate-preview",
   "outputModalities": [
     "video"
@@ -23,13 +23,13 @@
   "primaryCapability": "video",
   "rankScore": "740.000000",
   "regionCode": "global",
-  "releaseStage": "preview",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/veo"
   },
   "strengths": [
     "Video generation",

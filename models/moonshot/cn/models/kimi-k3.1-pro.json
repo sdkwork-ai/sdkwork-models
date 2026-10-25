@@ -1,0 +1,52 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "moonshot/kimi-k3.1-pro",
+  "codingVisible": true,
+  "colorToken": "#334155",
+  "contextTokens": 1048576,
+  "description": "Kimi K3.1 Pro：K3.1 系列首个模型，也是 Kimi 迄今能力最强的 3 万亿级参数旗舰，原生视觉理解，100 万 token 上下文；代码、3D 创作、金融研究与长程 Agent 能力显著提升。始终开启思考模式，支持 reasoning_effort low/high/max；流式输出、图片与视频输入、工具调用与 strict JSON schema。",
+  "displayName": "Kimi K3.1 Pro",
+  "familyCode": "kimi",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1048576,
+  "maxOutputTokens": 131072,
+  "modelId": "kimi-k3.1-pro",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.kimi.com/docs/models"
+  },
+  "strengths": [
+    "Native multimodal",
+    "Long context",
+    "Agent coding",
+    "Reasoning",
+    "Chinese"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "moonshot",
+  "vendorName": "Moonshot Kimi"
+}

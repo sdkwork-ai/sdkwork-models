@@ -1,0 +1,52 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "zhipu/glm-5.3-flashx",
+  "codingVisible": true,
+  "colorToken": "#7c2d12",
+  "contextTokens": 1000000,
+  "description": "GLM-5.3-FlashX: a faster GLM-5.3-Flash release at 200 tokens/s, native multimodal (video, image, text, document) with 1M context and 128K max output; native visual coding, function calling, streaming and structured output.",
+  "displayName": "GLM-5.3 FlashX",
+  "familyCode": "glm",
+  "inputModalities": [
+    "text",
+    "image",
+    "video",
+    "document"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1000000,
+  "maxOutputTokens": 131072,
+  "modelId": "glm-5.3-flashx",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash"
+  },
+  "strengths": [
+    "Multimodal",
+    "Fast inference 200 tok/s",
+    "Coding",
+    "Long context"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "zhipu",
+  "vendorName": "Zhipu AI"
+}

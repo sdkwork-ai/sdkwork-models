@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#7c2d12",
   "contextTokens": 1000000,
-  "description": "Anthropic's most capable widely released model, for the most demanding reasoning and long-horizon agentic work. Public API access restored globally on 2026-07-01 after the June 12 temporary suspension.",
+  "description": "Legacy Claude Fable 5; the official dedicated page recommends migrating to Claude Fable 5.1. 1M-token context, 128K max output; listed at $10 input / $50 output per MTok.",
   "displayName": "Claude Fable 5",
   "familyCode": "claude",
   "inputModalities": [
@@ -27,11 +27,12 @@
   "rankScore": "1200.000000",
   "regionCode": "global",
   "releaseStage": "active",
+  "replacementModel": "claude-fable-5-1",
   "routingState": "enabled",
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://docs.anthropic.com/en/docs/about-claude/models"
   },
   "strengths": [

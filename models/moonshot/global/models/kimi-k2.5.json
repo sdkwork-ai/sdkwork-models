@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#334155",
   "contextTokens": 262144,
-  "description": "Kimi K2.5 was officially discontinued on 2026-08-31 and is no longer maintained or supported; the official model list marks it as deprecated/offline and points to kimi-k3 for continued support.",
+  "description": "Kimi K2.5 was officially discontinued on 2026-08-31 and is no longer maintained or supported; the official model list migration note points to the latest flagship kimi-k3.1-pro.",
   "displayName": "Kimi K2.5",
   "familyCode": "kimi",
   "inputModalities": [
@@ -26,12 +26,12 @@
   "rankScore": "860.000000",
   "regionCode": "global",
   "releaseStage": "retired",
-  "replacementModel": "kimi-k3",
+  "replacementModel": "kimi-k3.1-pro",
   "routingState": "disabled",
   "schemaVersion": "1.0.0",
   "shelfState": "archived",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://platform.kimi.ai/docs/models"
   },
   "strengths": [

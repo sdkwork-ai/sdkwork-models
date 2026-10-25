@@ -1,0 +1,37 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video",
+    "audio"
+  ],
+  "catalogKey": "vidu/viduq4-preview",
+  "codingVisible": false,
+  "description": "Vidu Q4 系列首发预览模型 viduq4-preview：图生视频、参考生视频，3–16 秒可选，540p/720p/1080p/2K/4K，24fps；官方介绍「价格超省，传神演技，形声入戏张力镜头，燃魂特效」。定价页按秒积分计费（1 积分 = ¥0.03125，官方积分单价表）。",
+  "displayName": "Vidu Q4 Preview",
+  "familyCode": "vidu-video",
+  "inputModalities": [
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "viduq4-preview",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.vidu.cn/docs/model-map"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "vidu",
+  "vendorName": "Vidu"
+}

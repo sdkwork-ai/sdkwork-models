@@ -6,7 +6,7 @@
   "catalogKey": "google/veo-3.1-generate-preview",
   "codingVisible": false,
   "colorToken": "#7c3aed",
-  "description": "Google Veo 3.1 preview video generation model.",
+  "description": "官方 Veo 模型版本表（Last updated 2026-10-22）将 veo-3.1-generate-preview 标记为 \"Veo 3.1 Preview (Deprecated)\"；本轮 Gemini API pricing 页已不再列出 Veo 每秒单价，官方未指名继任模型。本模型为 veo 家族 defaultModel，按家族不变式保持 listed/enabled；家族继任切换与价格复核待主流程决策。",
   "displayName": "Veo 3.1 Generate Preview",
   "familyCode": "veo",
   "inputModalities": [
@@ -16,7 +16,7 @@
   ],
   "latencyP50Ms": 52000,
   "latencyP95Ms": 160000,
-  "lifecycle": "preview",
+  "lifecycle": "deprecated",
   "modelId": "veo-3.1-generate-preview",
   "outputModalities": [
     "video"
@@ -24,13 +24,13 @@
   "primaryCapability": "video",
   "rankScore": "790.000000",
   "regionCode": "global",
-  "releaseStage": "preview",
+  "releaseStage": "deprecated",
   "routingState": "enabled",
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/veo"
   },
   "strengths": [
     "Video generation",

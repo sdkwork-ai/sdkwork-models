@@ -1,0 +1,190 @@
+{
+  "catalogKey": "vidu/viduq4-preview",
+  "currency": "CNY",
+  "modelId": "viduq4-preview",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_540p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "图生、参考生 540p：每秒 9 积分，按官方 1 积分 = ¥0.03125 折算；3–16 秒。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq4-preview-second-res_540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5f23f3a82c9f0645b66de470a3a3f75032783de10e267f57a883532bf4b70c99",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+      },
+      "tierCode": "res_540p",
+      "unitPrice": "0.281250",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "图生、参考生 720p：每秒 19 积分，按官方 1 积分 = ¥0.03125 折算；3–16 秒。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq4-preview-second-res_720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a31cf1a88cf4c96e3d68d3b28db146c4e5112d9fb39c70985dc7aa7883500e5f",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+      },
+      "tierCode": "res_720p",
+      "unitPrice": "0.593750",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "图生、参考生 1080p：每秒 24 积分，按官方 1 积分 = ¥0.03125 折算；3–16 秒。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq4-preview-second-res_1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d121c806dd0ec31fd519c75055f5bac3ab9658828561a76f94c83a961c977fce",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "0.750000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_2k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "图生、参考生 2k：每秒 38 积分，按官方 1 积分 = ¥0.03125 折算；3–16 秒。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq4-preview-second-res_2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "48158fe606ac2125953f166655ae18b14400ffc926d1ee476b6c120eb0042825",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+      },
+      "tierCode": "res_2k",
+      "unitPrice": "1.187500",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_4k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "图生、参考生 4k：每秒 78 积分，按官方 1 积分 = ¥0.03125 折算；3–16 秒。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq4-preview-second-res_4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "770ace2f01def80a203e106838af0c6489042e99c90720b34d2ce23b0d23ea36",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+      },
+      "tierCode": "res_4k",
+      "unitPrice": "2.437500",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "vidu"
+}

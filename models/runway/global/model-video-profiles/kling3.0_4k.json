@@ -1,0 +1,67 @@
+{
+  "catalogKey": "runway/kling3.0_4k",
+  "modelId": "kling3.0_4k",
+  "profiles": [
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/kling3.0_4k/t2v_range_4k",
+      "displayName": "Text to Video · 3–15s · 4K",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": true,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": false,
+      "pricingTierCodes": [
+        "res_4k"
+      ],
+      "profileCode": "t2v_range_4k",
+      "resolution": "4k",
+      "resolutionTierCode": "res_4k",
+      "sortOrder": 10,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "4K"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/kling3.0_4k/i2v_range_4k",
+      "displayName": "Image to Video · 3–15s · 4K",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": false,
+      "pricingTierCodes": [
+        "res_4k"
+      ],
+      "profileCode": "i2v_range_4k",
+      "resolution": "4k",
+      "resolutionTierCode": "res_4k",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "4K"
+      }
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+  },
+  "vendorCode": "runway"
+}

@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#FF6900",
   "contextTokens": 1048576,
-  "description": "Xiaomi MiMo V2.5 Pro - 1T parameter MoE model with 42B active parameters, optimized for agentic and long-horizon tasks.",
+  "description": "Xiaomi MiMo V2.5 Pro was retired at 10:00 (UTC+8) on 2026-10-21; the model ID no longer works. The official model list and pay-as-you-go table no longer include it. Successor: mimo-v2.6-pro (V2.6 flagship).",
   "displayName": "MiMo V2.5 Pro",
   "familyCode": "mimo-v2.5",
   "inputModalities": [
@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 800,
   "latencyP95Ms": 2800,
-  "lifecycle": "active",
+  "lifecycle": "retired",
   "maxInputTokens": 1048576,
   "maxOutputTokens": 131072,
   "modelId": "mimo-v2.5-pro",
@@ -25,13 +25,14 @@
   "primaryCapability": "chat",
   "rankScore": "1100.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "retired",
+  "replacementModel": "mimo-v2.6-pro",
+  "routingState": "disabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "archived",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://mimo.xiaomi.com"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://mimo.mi.com/docs/en-US/quick-start/summary/model"
   },
   "strengths": [
     "Reasoning",

@@ -6,7 +6,7 @@
   "catalogKey": "luma_ai/ray-3",
   "codingVisible": false,
   "colorToken": "#6366f1",
-  "description": "Luma first native-reasoning video model; superseded by Ray 3.14 and Ray 3.2.",
+  "description": "Luma Ray 3 legacy Dream Machine model; listed in the official Agents migration guide as a retiring model. Migrate to model \"ray-3.2\" with type: \"video\" for text-to-video and image-to-video; legacy identifiers are not accepted by the Agents API.",
   "displayName": "Ray 3",
   "familyCode": "luma-video",
   "inputModalities": [
@@ -24,12 +24,13 @@
   "rankScore": "870.000000",
   "regionCode": "global",
   "releaseStage": "deprecated",
+  "replacementModel": "ray-3.2",
   "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://docs.lumalabs.ai/docs/video-generation"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://docs.agents.lumalabs.ai/guides/videos/migration/"
   },
   "strengths": [
     "Text to video",

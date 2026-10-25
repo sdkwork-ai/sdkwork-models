@@ -5,8 +5,8 @@
   ],
   "catalogKey": "runway/hailuo3",
   "codingVisible": false,
-  "description": "MiniMax Hailuo 3 video model resold through the Runway Dev API; reference images carry an additional per-image charge.",
-  "displayName": "MiniMax Hailuo 3",
+  "description": "MiniMax H3 multimodal video generation with text, image, video, and audio references, resold through the Runway Dev API; reference images/keyframes carry an additional per-reference charge and reference video is billed at the output per-second rate (capped at 15 seconds).",
+  "displayName": "MiniMax H3",
   "familyCode": "runway-video",
   "inputModalities": [
     "text",
@@ -25,7 +25,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
   },
   "supportsJsonSchema": false,

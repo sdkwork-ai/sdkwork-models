@@ -1,0 +1,45 @@
+{
+  "catalogKey": "runway/kling3.0_4k",
+  "currency": "USD",
+  "modelId": "kling3.0_4k",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_4k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-kling3.0_4k-second-res_4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "26b6f44c224fe9ae79b90d4bf6ddf75f621124acf296b214fa41a9b5c72159f2",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_4k",
+      "unitPrice": "0.430000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "runway"
+}

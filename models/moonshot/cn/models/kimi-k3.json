@@ -19,7 +19,7 @@
   "latencyP95Ms": 2900,
   "lifecycle": "active",
   "maxInputTokens": 1048576,
-  "maxOutputTokens": 65536,
+  "maxOutputTokens": 131072,
   "modelId": "kimi-k3",
   "outputModalities": [
     "text"
@@ -32,8 +32,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart"
   },
   "strengths": [
     "Native multimodal",

@@ -6,13 +6,16 @@
   "catalogKey": "tencent/hy-mt2-pro",
   "codingVisible": false,
   "colorToken": "#0f766e",
-  "description": "Tencent Hunyuan Hy-MT2-Pro translation model listed on the official TokenHub model price page at CNY 0.5 per 1M input tokens and CNY 2 per 1M output tokens. Context window is not stated on the official price page.",
+  "contextTokens": 8000,
+  "description": "Tencent Hunyuan Hy-MT2-Pro flagship translation model for professional domains requiring high translation quality (official list: 混元翻译旗舰模型，适合专业领域等对译文质量要求高的场景). Official TokenHub price: CNY 0.5 per 1M input tokens and CNY 2 per 1M output tokens; official list states 8K context, 4K max input, 4K max output.",
   "displayName": "Hy-MT2-Pro",
   "familyCode": "hunyuan",
   "inputModalities": [
     "text"
   ],
   "lifecycle": "active",
+  "maxInputTokens": 4000,
+  "maxOutputTokens": 4000,
   "modelId": "hy-mt2-pro",
   "outputModalities": [
     "text"
@@ -24,7 +27,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://cloud.tencent.com/document/product/1823/130055"
   },
   "strengths": [

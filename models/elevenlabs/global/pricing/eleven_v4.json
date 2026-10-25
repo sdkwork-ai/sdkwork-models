@@ -1,0 +1,38 @@
+{
+  "catalogKey": "elevenlabs/eleven_v4",
+  "currency": "USD",
+  "modelId": "eleven_v4",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "operationCode": "speech.synthesize",
+      "priceBookCode": "models.elevenlabs.global.official",
+      "priceId": "elevenlabs-eleven-v4-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.elevenlabs.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "c8c0c36cd204a2c01f62761f74a04ec349de3f2f2657f759fc3117848d09e48a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://elevenlabs.io/pricing/api"
+      },
+      "unitPrice": "0.080000",
+      "unitSize": "1000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "elevenlabs"
+}

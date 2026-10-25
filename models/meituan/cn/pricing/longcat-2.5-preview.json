@@ -25,7 +25,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://longcat.chat/platform/docs/zh/api-pay-as-you-go"
       },
       "unitPrice": "2.000000",
@@ -53,7 +53,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://longcat.chat/platform/docs/zh/api-pay-as-you-go"
       },
       "unitPrice": "0.040000",
@@ -81,7 +81,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://longcat.chat/platform/docs/zh/api-pay-as-you-go"
       },
       "unitPrice": "8.000000",

@@ -6,7 +6,7 @@
   "catalogKey": "openai/gpt-5.3-codex",
   "codingVisible": true,
   "colorToken": "#111827",
-  "description": "The most capable agentic coding model to date. Listed in the official Specialized models / Codex pricing group.",
+  "description": "The most capable agentic coding model to date (Specialized models / Codex pricing group). Officially deprecated on 2026-10-01 and scheduled for removal from the API on April 1, 2027; official replacement: gpt-6-sol.",
   "displayName": "GPT-5.3 Codex",
   "familyCode": "gpt-5",
   "inputModalities": [
@@ -21,12 +21,13 @@
   "primaryCapability": "chat",
   "regionCode": "global",
   "releaseStage": "deprecated",
+  "replacementModel": "gpt-6-sol",
   "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/deprecations"
   },
   "supportsJsonSchema": true,
   "supportsStreaming": true,

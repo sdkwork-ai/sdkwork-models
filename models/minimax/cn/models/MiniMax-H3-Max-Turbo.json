@@ -1,0 +1,45 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "minimax/MiniMax-H3-Max-Turbo",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "MiniMax H3 Max Turbo 更低生成成本，适合文生、图生及首尾帧视频创作；支持文生视频、图生视频（首帧/尾帧），不支持视频输入和参考生视频，首帧、尾帧图片免费；480P / 768P 分辨率。",
+  "displayName": "MiniMax H3 Max Turbo",
+  "familyCode": "minimax-video",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "MiniMax-H3-Max-Turbo",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "810.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+  },
+  "strengths": [
+    "极速生成",
+    "文生视频",
+    "图生视频（首帧/尾帧）",
+    "480P / 768P"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.900000",
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "winRate": "0.850000"
+}

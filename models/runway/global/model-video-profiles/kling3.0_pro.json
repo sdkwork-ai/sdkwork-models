@@ -1,0 +1,121 @@
+{
+  "catalogKey": "runway/kling3.0_pro",
+  "modelId": "kling3.0_pro",
+  "profiles": [
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/kling3.0_pro/t2v_range_1080p",
+      "displayName": "Text to Video · 3–15s · 1080p · Silent",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": true,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": false,
+      "pricingTierCodes": [
+        "no_audio"
+      ],
+      "profileCode": "t2v_range_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 10,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/kling3.0_pro/t2v_range_1080p_audio",
+      "displayName": "Text to Video · 3–15s · 1080p · Audio",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "audio"
+      ],
+      "profileCode": "t2v_range_1080p_audio",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/kling3.0_pro/i2v_range_1080p",
+      "displayName": "Image to Video · 3–15s · 1080p · Silent",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": false,
+      "pricingTierCodes": [
+        "no_audio"
+      ],
+      "profileCode": "i2v_range_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 30,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/kling3.0_pro/i2v_range_1080p_audio",
+      "displayName": "Image to Video · 3–15s · 1080p · Audio",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": true,
+      "pricingTierCodes": [
+        "audio"
+      ],
+      "profileCode": "i2v_range_1080p_audio",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 40,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "1080p"
+      }
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+  },
+  "vendorCode": "runway"
+}

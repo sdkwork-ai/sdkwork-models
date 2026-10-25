@@ -402,7 +402,7 @@
   "regionCode": "cn",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://app.klingai.com/cn/dev/document-api/"
   },
   "vendorCode": "kuaishou"

@@ -6,7 +6,7 @@
   "catalogKey": "luma_ai/ray-3.2",
   "codingVisible": false,
   "colorToken": "#6366f1",
-  "description": "Luma Ray 3.2 video model for text-to-video, image-to-video, video editing, and reframing with HDR and multi-keyframe support.",
+  "description": "Luma Ray 3.2 current video model on the Agents API: text-to-video, image-to-video, multi-keyframe i2v, video editing, single-keyframe extend, and aspect-ratio reframing, with HDR, EXR export, and seamless looping on type: \"video\".",
   "displayName": "Ray 3.2",
   "familyCode": "luma-video",
   "inputModalities": [
@@ -28,7 +28,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://docs.agents.lumalabs.ai/guides/videos/generation"
   },
   "strengths": [

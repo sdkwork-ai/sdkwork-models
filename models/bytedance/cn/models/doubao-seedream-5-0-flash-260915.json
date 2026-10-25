@@ -1,0 +1,43 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "bytedance/doubao-seedream-5-0-flash-260915",
+  "codingVisible": false,
+  "colorToken": "#dc2626",
+  "description": "Doubao Seedream 5.0 Flash 260915 on Volcengine Ark, listed under 推荐模型 for image generation: single-image generation, text-to-image, single image-to-image and multi-reference image-to-image; input images free, output image 0.12 CNY per image.",
+  "displayName": "Doubao Seedream 5.0 Flash",
+  "familyCode": "seedream",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "doubao-seedream-5-0-flash-260915",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://www.volcengine.com/docs/82379/1330310"
+  },
+  "strengths": [
+    "Text to image",
+    "Single image to image",
+    "Multi-reference image to image",
+    "Fast generation"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
+}

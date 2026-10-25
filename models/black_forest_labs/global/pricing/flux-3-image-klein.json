@@ -1,0 +1,190 @@
+{
+  "catalogKey": "black_forest_labs/flux-3-image-klein",
+  "currency": "USD",
+  "modelId": "flux-3-image-klein",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_768sq"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Image Klein 768×768 — official per-image offer rate.",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-image-klein-image-res_768sq",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "10f2d4719eb0b29f6df3085ac1423bd741fb9b67b1326359fdc62dea8a78c202",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://bfl.ai/pricing"
+      },
+      "tierCode": "res_768sq",
+      "unitPrice": "0.008000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Image Klein 1K (~1 MP) — official per-image offer rate.",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-image-klein-image-res_1k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "4506ddfda2e65ded7ce85a1f119a50348737127bf94efdd38cad6111fbe4c71c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://bfl.ai/pricing"
+      },
+      "tierCode": "res_1k",
+      "unitPrice": "0.009000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1.5k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Image Klein 1.5K (~2 MP) — official per-image offer rate.",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-image-klein-image-res_1.5k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d6d007fed6670cf4d45d6580edb73f967e5afba9e62c604f0478a54389ba1914",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://bfl.ai/pricing"
+      },
+      "tierCode": "res_1.5k",
+      "unitPrice": "0.011000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Image Klein 2K (~4 MP) — official per-image offer rate.",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-image-klein-image-res_2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "bee17addebe30d4a22b471b1a991150733a5dd6ca577275e86f7230851f6f923",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://bfl.ai/pricing"
+      },
+      "tierCode": "res_2k",
+      "unitPrice": "0.014000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_4k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Image Klein 4K (~16 MP) — official per-image offer rate.",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-image-klein-image-res_4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "19fede3652da8f09c56ca1240943b86f73c57bd5700adbdf8ec1d3c501e7561d",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://bfl.ai/pricing"
+      },
+      "tierCode": "res_4k",
+      "unitPrice": "0.036000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "black_forest_labs"
+}

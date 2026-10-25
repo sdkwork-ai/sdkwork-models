@@ -1,0 +1,80 @@
+{
+  "catalogKey": "runway/bria_fibo_1_5",
+  "currency": "USD",
+  "modelId": "bria_fibo_1_5",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1mp"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-bria_fibo_1_5-image-res_1mp",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5443b7423030c1a4a4d0a9b90b5ba42e9badd8bdd79d209a3c93e97f898cd30b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_1mp",
+      "unitPrice": "0.050000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_4mp"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-bria_fibo_1_5-image-res_4mp",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "43c0a78342e14917a401d65edb45e384c0b295695974ac7cb93f43021d0bbb96",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_4mp",
+      "unitPrice": "0.100000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "runway"
+}

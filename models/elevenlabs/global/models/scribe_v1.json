@@ -6,29 +6,30 @@
   "catalogKey": "elevenlabs/scribe_v1",
   "codingVisible": false,
   "colorToken": "#7c2d12",
-  "description": "Legacy ElevenLabs Scribe v1 transcription model removed 2026-07-09; migrate to Scribe v2.",
+  "description": "First-generation speech recognition model, outclassed by the Scribe v2 models (official Deprecated models table). Replacement: scribe_v2.",
   "displayName": "Scribe v1",
-  "familyCode": "elevenlabs-tts",
+  "familyCode": "elevenlabs-stt",
   "inputModalities": [
-    "text"
+    "audio"
   ],
   "latencyP50Ms": 280,
   "latencyP95Ms": 900,
   "lifecycle": "deprecated",
   "modelId": "scribe_v1",
   "outputModalities": [
-    "audio"
+    "text"
   ],
   "primaryCapability": "audio",
   "rankScore": "770.000000",
   "regionCode": "global",
   "releaseStage": "deprecated",
+  "replacementModel": "scribe_v2",
   "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://elevenlabs.io/docs/changelog/2026/6/8"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://elevenlabs.io/docs/models"
   },
   "strengths": [
     "Text to speech",

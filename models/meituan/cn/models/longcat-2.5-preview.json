@@ -8,16 +8,17 @@
   "codingVisible": true,
   "colorToken": "#0284c7",
   "contextTokens": 1048576,
-  "description": "Meituan LongCat 2.5 Preview agentic model. The official LongCat changelog (version 2026-09-25) records its launch with new image-understanding (multimodal) capability, strong coding, and Claude Code compatibility. The quick start lists it with a 1M-token context window and 128K max output tokens on both the OpenAI-compatible and Anthropic-compatible endpoints.",
+  "description": "Meituan LongCat 2.5 Preview agentic multimodal model. The official changelog (2026-09-25) records its launch with image-understanding, strong coding, and Claude Code compatibility; the visual understanding page confirms it accepts text plus image and video input, and the model-parameter comparison lists a 1,048,576-token context with a 262,144 (256K) max output limit.",
   "displayName": "LongCat 2.5 Preview",
   "familyCode": "longcat",
   "inputModalities": [
     "text",
-    "image"
+    "image",
+    "video"
   ],
   "lifecycle": "preview",
   "maxInputTokens": 1048576,
-  "maxOutputTokens": 131072,
+  "maxOutputTokens": 262144,
   "modelId": "longcat-2.5-preview",
   "outputModalities": [
     "text"
@@ -29,8 +30,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://longcat.chat/platform/docs/zh/"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://longcat.chat/platform/docs/zh/image-video-understanding"
   },
   "strengths": [
     "Chinese",

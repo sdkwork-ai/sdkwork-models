@@ -1,0 +1,50 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "minimax/MiniMax-H3-Lite",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "MiniMax H3 Lite 轻量版本，更低成本，适合创意尝试与批量生成；支持文生视频、图生视频（首帧/尾帧）与多模态参考生视频（参考图/参考视频/参考音频）；480P / 768P 分辨率（不支持 2K），时长 4–15 秒。",
+  "displayName": "MiniMax H3 Lite",
+  "familyCode": "minimax-video",
+  "inputModalities": [
+    "text",
+    "image",
+    "video",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "MiniMax-H3-Lite",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "820.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/api-reference/video-generation-v2-create"
+  },
+  "strengths": [
+    "文生视频",
+    "图生视频",
+    "首尾帧",
+    "多模态参考",
+    "480P / 768P",
+    "轻量低成本"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.900000",
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "winRate": "0.860000"
+}

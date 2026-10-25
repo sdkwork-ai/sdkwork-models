@@ -1,0 +1,43 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "minimax/image-01-live",
+  "codingVisible": false,
+  "colorToken": "#2563eb",
+  "description": "Listed under Image Models in the global FAQ Available Models list, but the global pay-as-you-go Image pricing table publishes a price for image-01 only ($0.0035 per image), the image generation guide examples use image-01 only, and the release notes record no global launch entry for this variant; held as a preview catalog entry (lifecycle catalog_only, shelf hidden, routing catalog_only) without a pricing file until the official USD per-image price and guide entry are published. The official FAQ does not stamp a Preview/Beta badge; preview records that this region has not yet published a billable listing for the model.",
+  "displayName": "MiniMax Image 01 Live",
+  "familyCode": "minimax-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "catalog_only",
+  "modelId": "image-01-live",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "735.000000",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/faq/models"
+  },
+  "strengths": [
+    "Text to image",
+    "Reference image",
+    "Style presets"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.870000",
+  "usageScopes": [],
+  "vendorCode": "minimax"
+}

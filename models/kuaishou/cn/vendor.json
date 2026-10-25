@@ -3,7 +3,8 @@
   "billingJurisdiction": "CN",
   "capabilities": [
     "video",
-    "sfx"
+    "sfx",
+    "image"
   ],
   "clientApiCompatibility": {
     "claude_code": {
@@ -14,7 +15,7 @@
       "protocolCodes": [],
       "resourceCodes": [],
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
       },
       "supportStatus": "unsupported"
@@ -27,7 +28,7 @@
       "protocolCodes": [],
       "resourceCodes": [],
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
       },
       "supportStatus": "unsupported"
@@ -40,7 +41,7 @@
       "protocolCodes": [],
       "resourceCodes": [],
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
       },
       "supportStatus": "unsupported"
@@ -54,7 +55,8 @@
   "marketScope": "china_mainland",
   "modelFamilies": [
     "kling",
-    "kling-sfx"
+    "kling-sfx",
+    "kling-image"
   ],
   "nativeApiBaseUrl": {
     "host": "api-beijing.klingai.com",
@@ -68,7 +70,7 @@
   "schemaVersion": "1.0.0",
   "sortOrder": 130,
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://app.klingai.com/cn/dev/document-api/"
   },
   "supportedProtocols": [

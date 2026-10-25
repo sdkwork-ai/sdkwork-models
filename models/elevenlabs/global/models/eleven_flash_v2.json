@@ -3,7 +3,7 @@
   "catalogKey": "elevenlabs/eleven_flash_v2",
   "codingVisible": false,
   "colorToken": "#7c2d12",
-  "description": "ElevenLabs English-only ultra-fast speech synthesis model optimized for real-time use (~75ms latency), billed on the shared Flash/Turbo tier at $0.05 per 1K characters.",
+  "description": "ElevenLabs English-only ultra-fast speech synthesis model optimized for real-time use (~75ms latency), billed on the shared Flash/Turbo tier at $0.04 per 1K characters.",
   "displayName": "Eleven Flash v2",
   "familyCode": "elevenlabs-tts",
   "inputModalities": [
@@ -24,7 +24,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://elevenlabs.io/docs/models"
   },
   "strengths": [

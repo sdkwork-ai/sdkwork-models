@@ -7,28 +7,288 @@
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "successful_result",
-      "conditions": [],
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_360p"
+        }
+      ],
       "currency": "CNY",
-      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "百炼爱诗文生视频 pixverse-c1-t2v，360P 无声（audio=false），单价 0.180000 元/秒。",
       "operationCode": "video.generate",
       "priceBookCode": "models.pixverse.cn.official",
-      "priceId": "pixverse-cn-c1-t2v-second-720p",
+      "priceId": "pixverse-cn-pixverse-c1-t2v-second-silent--360p",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.pixverse.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "aa026c5675742bcd8000a3383fffcdbe63069968a0ff836ce35f0bba6c87cbf7",
+      "rateHash": "51705f8b96e37523cf14805181ded5cbd160335bd27b3f8e26059f3875fdf8ce",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-08T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/pixverse-text-to-video-api-reference"
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
       },
-      "unitPrice": "0.360000",
+      "tierCode": "res_360p",
+      "unitPrice": "0.180000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_540p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼爱诗文生视频 pixverse-c1-t2v，540P 无声（audio=false），单价 0.240000 元/秒。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-c1-t2v-second-silent--540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3d7c3a555cf0add6844b311a25e935343d0a96cf7ca27bf8a7e8a41c1888bbc7",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "res_540p",
+      "unitPrice": "0.240000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼爱诗文生视频 pixverse-c1-t2v，720P 无声（audio=false），单价 0.300000 元/秒。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-c1-t2v-second-silent--720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "402b216acc57e909b94259d9f1ea60dfd2f83c90270c90ec1aec4d72609c0147",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "res_720p",
+      "unitPrice": "0.300000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼爱诗文生视频 pixverse-c1-t2v，1080P 无声（audio=false），单价 0.560000 元/秒。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-c1-t2v-second-silent--1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "b06039cf1649803584a5931372dc12e86e0d764d713152b917812bfbcf37737b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "0.560000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "audio_res_360p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼爱诗文生视频 pixverse-c1-t2v，360P 有声（audio=true），单价 0.240000 元/秒。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-c1-t2v-second-audio--360p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "26d889a7253ab4227288911470838d283fed9b377edbbed219de992d762b2486",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "audio_res_360p",
+      "unitPrice": "0.240000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "audio_res_540p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼爱诗文生视频 pixverse-c1-t2v，540P 有声（audio=true），单价 0.300000 元/秒。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-c1-t2v-second-audio--540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "82a22195a2b5f532f909aaa7a2ad74e964a8937d4957af3904097c571f29cada",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "audio_res_540p",
+      "unitPrice": "0.300000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "audio_res_720p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼爱诗文生视频 pixverse-c1-t2v，720P 有声（audio=true），单价 0.390000 元/秒。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-c1-t2v-second-audio--720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a64976d970da8fb380069af600f407ffbf3e26bf561b3a026bd1f160e7478d28",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "audio_res_720p",
+      "unitPrice": "0.390000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "audio_res_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼爱诗文生视频 pixverse-c1-t2v，1080P 有声（audio=true），单价 0.710000 元/秒。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-c1-t2v-second-audio--1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "8340bc3d0098885f132cf2a3b5ae11ecd28d9cec8a081634a41348655209d07d",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "audio_res_1080p",
+      "unitPrice": "0.710000",
       "unitSize": "1"
     }
   ],

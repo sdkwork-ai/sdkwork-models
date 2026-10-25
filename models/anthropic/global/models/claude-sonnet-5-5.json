@@ -1,0 +1,50 @@
+{
+  "apiFormat": "anthropic_messages",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "anthropic/claude-sonnet-5-5",
+  "codingVisible": true,
+  "colorToken": "#c2410c",
+  "contextTokens": 1000000,
+  "description": "Current Sonnet: the best combination of speed and intelligence for coding, tool use, and agent workflows. 1M-token context, 128K max output. Base $2 input / $10 output per MTok; cache reads at 5% of base input ($0.10 / MTok).",
+  "displayName": "Claude Sonnet 5.5",
+  "familyCode": "claude",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1000000,
+  "maxOutputTokens": 128000,
+  "modelId": "claude-sonnet-5-5",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview"
+  },
+  "strengths": [
+    "Agents",
+    "Coding",
+    "Tool use",
+    "Long context"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "anthropic",
+  "vendorName": "Anthropic"
+}

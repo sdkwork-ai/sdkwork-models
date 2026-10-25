@@ -21,15 +21,15 @@
       "productCode": "models.openai.tool",
       "quantityAggregation": "distinct_invocation",
       "quantityStep": "1",
+      "rateHash": "6b84de6f01f86de86eeb13f050cb579c1a2074fbcc23fbe39a426c9c9c508024",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-19T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://platform.openai.com/docs/pricing"
       },
       "unitPrice": "2.500000",
-      "unitSize": "1000",
-      "rateHash": "6b84de6f01f86de86eeb13f050cb579c1a2074fbcc23fbe39a426c9c9c508024"
+      "unitSize": "1000"
     },
     {
       "billability": "chargeable",
@@ -40,7 +40,7 @@
       "effectiveFrom": "2026-10-19T00:00:00Z",
       "meterCode": "storage_gb_day",
       "minimumQuantity": "0",
-      "operationCode": "inference.generate",
+      "operationCode": "model.invoke",
       "priceBookCode": "models.openai.global.official",
       "priceId": "openai-global-vector-stores-storage-gb-day",
       "priceSide": "official",
@@ -49,15 +49,15 @@
       "productCode": "models.openai.tool",
       "quantityAggregation": "sum",
       "quantityStep": "1",
+      "rateHash": "1470eb07f1bf86aed23bbb0cfc0c9ca8b1a498c40195e2a02eff7d8409d35f74",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-19T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://platform.openai.com/docs/pricing"
       },
       "unitPrice": "0.100000",
-      "unitSize": "1",
-      "rateHash": "9d4f7f6d4b0e0c0e5d6a1c9b8f7e6d5c4b3a291807162534435261708192a0b1"
+      "unitSize": "1"
     }
   ],
   "regionCode": "global",

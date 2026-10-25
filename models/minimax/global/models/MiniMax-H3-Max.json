@@ -6,12 +6,14 @@
   "catalogKey": "minimax/MiniMax-H3-Max",
   "codingVisible": false,
   "colorToken": "#7c3aed",
-  "description": "MiniMax H3 Max is a high-speed video model post-trained by fal.ai on MiniMax H3, supporting text-to-video and image-to-video (first/last frame) at 480P/768P, 5–15s, 24 FPS.",
+  "description": "MiniMax H3 Max fast generation variant post-trained on MiniMax H3; supports text-to-video, image-to-video (first/last frame) and reference-to-video (reference image/video/audio); 480P / 768P, 5–15 seconds.",
   "displayName": "MiniMax H3 Max",
   "familyCode": "minimax-video",
   "inputModalities": [
     "text",
-    "image"
+    "image",
+    "video",
+    "audio"
   ],
   "lifecycle": "active",
   "modelId": "MiniMax-H3-Max",
@@ -26,13 +28,14 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://platform.minimax.io/docs/guides/models-intro"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/api-reference/video-generation-v2-create"
   },
   "strengths": [
-    "Fast generation",
-    "Text to video",
-    "Image to video (first / last frame)",
+    "High-speed generation",
+    "Text-to-video",
+    "Image-to-video (first/last frame)",
+    "Reference (image/video/audio)",
     "480P / 768P"
   ],
   "supportsJsonSchema": false,

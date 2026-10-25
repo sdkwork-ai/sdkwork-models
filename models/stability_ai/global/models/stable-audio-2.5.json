@@ -6,7 +6,7 @@
   "catalogKey": "stability_ai/stable-audio-2.5",
   "codingVisible": false,
   "colorToken": "#0f766e",
-  "description": "Stability AI Stable Audio 2.5 enterprise music and sound generation with multi-part composition and audio inpainting.",
+  "description": "Stability AI Stable Audio 2.5 enterprise music and sound generation producing up to three minutes of high-quality, coherent audio from text prompts or audio samples, with audio-to-audio and inpainting; the stable-audio-2.5 model is billed at a flat 8 credits per successful result ($0.08 at $1 USD per 100 credits).",
   "displayName": "Stable Audio 2.5",
   "familyCode": "stable-audio",
   "inputModalities": [
@@ -29,8 +29,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://platform.stability.ai/docs"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.stability.ai/pricing"
   },
   "strengths": [
     "Music generation",

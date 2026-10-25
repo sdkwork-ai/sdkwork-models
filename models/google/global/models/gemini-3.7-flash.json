@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#1d4ed8",
   "contextTokens": 1048576,
-  "description": "Gemini 3.7 Flash workhorse model with improved agentic coding, tool use and long-context knowledge workflows. GA since 2026-08-12.",
+  "description": "官方 2026-10-08 弃用公告（changelog）：\"gemini-3.7-flash is deprecated and has been replaced by gemini-3.8-flash. It is no longer available to select in Google AI Studio, and API requests to gemini-3.7-flash are automatically routed to gemini-3.8-flash.\" 旧 id 仅作迁移参考。",
   "displayName": "Gemini 3.7 Flash",
   "familyCode": "gemini",
   "inputModalities": [
@@ -18,7 +18,7 @@
   ],
   "latencyP50Ms": 360,
   "latencyP95Ms": 1200,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1048576,
   "maxOutputTokens": 65535,
   "modelId": "gemini-3.7-flash",
@@ -28,13 +28,14 @@
   "primaryCapability": "chat",
   "rankScore": "1080.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "gemini-3.8-flash",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-7-flash/"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/changelog"
   },
   "strengths": [
     "Agents",

@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#6366f1",
   "contextTokens": 204800,
-  "description": "MiniMax M2.5 text model optimized for coding, tool use, search and office productivity.",
+  "description": "Listed under Retired Models in the official FAQ: M2.5 family stopped accepting new users on 2026-10-19 and retires on 2026-11-18; the legacy id remains only as a backward-compatible entry. Plan requests are automatically routed to MiniMax-M3.1-Flash. Migrate new traffic to MiniMax-M3.1-Flash or MiniMax-M3.",
   "displayName": "MiniMax M2.5",
   "familyCode": "minimax",
   "inputModalities": [
@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 760,
   "latencyP95Ms": 2450,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 204800,
   "maxOutputTokens": 32768,
   "modelId": "MiniMax-M2.5",
@@ -25,13 +25,14 @@
   "primaryCapability": "chat",
   "rankScore": "780.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "MiniMax-M3.1-Flash",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/faq/models"
   },
   "strengths": [
     "Code",

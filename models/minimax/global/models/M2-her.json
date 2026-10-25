@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#a855f7",
   "contextTokens": 65536,
-  "description": "MiniMax M2-her text chat model for role-playing and long-horizon multi-turn dialogue.",
+  "description": "Listed under Retired Models in the official FAQ; legacy id retained only for backward compatibility. Role-play and multi-turn dialogue use cases should migrate to MiniMax-M3.1-Flash or MiniMax-M3.",
   "displayName": "MiniMax M2-her",
   "familyCode": "minimax",
   "inputModalities": [
@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 640,
   "latencyP95Ms": 2100,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 65536,
   "maxOutputTokens": 2048,
   "modelId": "M2-her",
@@ -25,13 +25,14 @@
   "primaryCapability": "chat",
   "rankScore": "735.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "MiniMax-M3.1-Flash",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://platform.minimax.io/docs/guides/text-chat"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/faq/models"
   },
   "strengths": [
     "Role play",

@@ -1,0 +1,42 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "elevenlabs/eleven_v4_turbo",
+  "codingVisible": false,
+  "colorToken": "#7c2d12",
+  "description": "Our most expressive, real-time speech synthesis model (~100ms median inference latency); 90+ languages, audio tags for fine-grained control, tuned for realtime conversation and voice agents.",
+  "displayName": "Eleven v4 Turbo",
+  "familyCode": "elevenlabs-tts",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "eleven_v4_turbo",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://elevenlabs.io/docs/models"
+  },
+  "strengths": [
+    "Text to speech",
+    "Ultra-low latency",
+    "Real-time voice agents",
+    "Multilingual"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "elevenlabs",
+  "vendorName": "ElevenLabs"
+}

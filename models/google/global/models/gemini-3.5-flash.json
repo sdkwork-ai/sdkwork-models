@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#1d4ed8",
   "contextTokens": 1048576,
-  "description": "Current Gemini 3.5 Flash main-tier model, GA since May 19, 2026; Gemini 3.6 Flash remains a faster sibling tier, not a replacement.",
+  "description": "官方 2026-10-08 弃用公告（changelog）：\"gemini-3.5-flash is deprecated and has been replaced by gemini-3.6-flash. It is no longer available to select in Google AI Studio, and API requests to gemini-3.5-flash are automatically routed to gemini-3.6-flash.\" 旧 id 仅作迁移参考。",
   "displayName": "Gemini 3.5 Flash",
   "familyCode": "gemini",
   "inputModalities": [
@@ -18,7 +18,7 @@
   ],
   "latencyP50Ms": 420,
   "latencyP95Ms": 1500,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1048576,
   "maxOutputTokens": 65535,
   "modelId": "gemini-3.5-flash",
@@ -28,13 +28,14 @@
   "primaryCapability": "chat",
   "rankScore": "1040.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "gemini-3.6-flash",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/changelog"
   },
   "strengths": [
     "Agents",

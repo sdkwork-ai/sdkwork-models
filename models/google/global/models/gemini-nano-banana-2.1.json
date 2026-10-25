@@ -1,0 +1,43 @@
+{
+  "apiFormat": "google_gemini",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "google/gemini-nano-banana-2.1",
+  "codingVisible": false,
+  "contextTokens": 131072,
+  "description": "Nano Banana 2.1 (successor to Nano Banana 2 / gemini-3.1-flash-image), high-efficiency image generation and conversational editing; GA 2026-10-06; improved visual quality, prompt adherence, multi-turn character consistency, text rendering, wide/panoramic aspect ratios across 1K, 2K, 4K resolutions.",
+  "displayName": "Gemini Nano Banana 2.1",
+  "familyCode": "gemini-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 131072,
+  "maxOutputTokens": 32768,
+  "modelId": "gemini-nano-banana-2.1",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1"
+  },
+  "strengths": [
+    "Image generation",
+    "Conversational editing",
+    "Multi-turn consistency"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "google"
+}

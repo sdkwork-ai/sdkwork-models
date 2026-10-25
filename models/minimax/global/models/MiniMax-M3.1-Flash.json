@@ -1,0 +1,52 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat",
+    "code"
+  ],
+  "catalogKey": "minimax/MiniMax-M3.1-Flash",
+  "codingVisible": true,
+  "colorToken": "#6366f1",
+  "contextTokens": 1000000,
+  "description": "Frontier multimodal coding model with a 1M context window and tunable thinking depth (effort: low/medium/high/xhigh/max, default max); designed for agentic reasoning, tool use, coding and long-context tasks; accepts text, image and video input.",
+  "displayName": "MiniMax-M3.1-Flash",
+  "familyCode": "minimax",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1000000,
+  "modelId": "MiniMax-M3.1-Flash",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "code",
+  "rankScore": "875.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/guides/text-generation"
+  },
+  "strengths": [
+    "Coding",
+    "Multimodal",
+    "Long context",
+    "Tool use"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.920000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "minimax"
+}

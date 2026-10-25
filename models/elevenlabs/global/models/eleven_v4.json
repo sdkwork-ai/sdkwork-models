@@ -1,0 +1,43 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "elevenlabs/eleven_v4",
+  "codingVisible": false,
+  "colorToken": "#7c2d12",
+  "description": "Our most emotionally rich, expressive speech synthesis model; 90+ languages, 10,000 character limit, high-fidelity voice cloning and natural multi-speaker dialogue.",
+  "displayName": "Eleven v4",
+  "familyCode": "elevenlabs-tts",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 10000,
+  "modelId": "eleven_v4",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://elevenlabs.io/docs/models"
+  },
+  "strengths": [
+    "Text to speech",
+    "Expressive dialogue",
+    "Voice cloning",
+    "Multilingual"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "elevenlabs",
+  "vendorName": "ElevenLabs"
+}

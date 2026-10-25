@@ -1,0 +1,52 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "moonshot/kimi-k3.1-pro-highspeed",
+  "codingVisible": true,
+  "colorToken": "#334155",
+  "contextTokens": 1048576,
+  "description": "Kimi K3.1 Pro Highspeed：与 K3.1 Pro 同等智能、输出速度约 2～3 倍；100 万 token 上下文，支持图片与视频输入、工具调用与流式输出。",
+  "displayName": "Kimi K3.1 Pro Highspeed",
+  "familyCode": "kimi",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1048576,
+  "maxOutputTokens": 131072,
+  "modelId": "kimi-k3.1-pro-highspeed",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.kimi.com/docs/models"
+  },
+  "strengths": [
+    "Native multimodal",
+    "Long context",
+    "Agent coding",
+    "Reasoning",
+    "Chinese"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "moonshot",
+  "vendorName": "Moonshot Kimi"
+}

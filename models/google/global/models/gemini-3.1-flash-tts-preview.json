@@ -7,7 +7,7 @@
   "codingVisible": false,
   "colorToken": "#7c3aed",
   "contextTokens": 32768,
-  "description": "Gemini 3.1 Flash preview text-to-speech model.",
+  "description": "Legacy TTS preview model. 官方 models 页：\"Legacy TTS preview model. We recommend updating to Gemini 3.8 Flash TTS or Gemini 3.8 Flash-Lite TTS.\" 高吞吐生产继任为 gemini-3.8-flash-lite-tts；本模型为 gemini-tts 家族 defaultModel，按家族不变式保持 listed/enabled，家族继任切换待主流程决策。",
   "displayName": "Gemini 3.1 Flash TTS Preview",
   "familyCode": "gemini-tts",
   "inputModalities": [
@@ -26,11 +26,12 @@
   "rankScore": "840.000000",
   "regionCode": "global",
   "releaseStage": "preview",
+  "replacementModel": "gemini-3.8-flash-lite-tts",
   "routingState": "enabled",
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
   },
   "strengths": [

@@ -8,15 +8,15 @@
   "codingVisible": true,
   "colorToken": "#0052d9",
   "contextTokens": 256000,
-  "description": "Tencent Hy3 fast/slow thinking fusion model with MoE architecture (295B total params, 21B activated). Supports 256K context. Successor to Hunyuan 2.0 with significant improvements in complex reasoning, instruction following, context learning, code generation, and agent capabilities.",
+  "description": "Tencent Hy3 fast/slow thinking fusion MoE model (295B total params, 21B activated). Official TokenHub list: 256K context, 192K max input, 128K max output; supports retained thinking, structured output, Function Calling, cache. Successor to Hunyuan 2.0 with significant improvements in complex reasoning, instruction following, context learning, code generation, and agent capabilities.",
   "displayName": "Hy3",
   "familyCode": "hunyuan",
   "inputModalities": [
     "text"
   ],
   "lifecycle": "active",
-  "maxInputTokens": 256000,
-  "maxOutputTokens": 65536,
+  "maxInputTokens": 192000,
+  "maxOutputTokens": 128000,
   "modelId": "hy3",
   "outputModalities": [
     "text"
@@ -29,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://cloud.tencent.com/document/product/1823/130055"
   },
   "strengths": [

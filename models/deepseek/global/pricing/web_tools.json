@@ -21,19 +21,18 @@
       "productCode": "models.deepseek.tool",
       "quantityAggregation": "distinct_invocation",
       "quantityStep": "1",
+      "rateHash": "5da7951376fe7be51737a397d966e0df93d7675eab63be22c9c692ac616d86f8",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-19T00:00:00Z",
+        "observedAt": "2026-10-26T00:00:00Z",
         "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing"
       },
       "unitPrice": "0.750000",
-      "unitSize": "1000",
-      "rateHash": "5da7951376fe7be51737a397d966e0df93d7675eab63be22c9c692ac616d86f8"
+      "unitSize": "1000"
     }
   ],
   "regionCode": "global",
   "schemaVersion": "2.0.0",
   "vendorCode": "deepseek"
 }
-

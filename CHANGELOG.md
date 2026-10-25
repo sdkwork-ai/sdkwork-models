@@ -1,5 +1,72 @@
 # Changelog
 
+## 2026.10.26.1
+
+### Full catalog re-verification (2026-10-26)
+
+- Re-verified all 35 vendor-regions against official model and pricing pages as of
+  2026-10-26; `catalogVersion` 2026.10.26.1, `generatedAt` 2026-10-26T00:00:00Z.
+- Catalog size: 26 vendors / 35 regions / **507 models** (was 454) / **485 pricing
+  files** (was 436) / 462 video profiles / 14 voice bindings. All evidence
+  `observedAt`/`lastCheckedAt` stamped 2026-10-26T00:00:00Z; official model
+  snapshots recomputed for 9 vendor-regions (6 requiredVerified regions covered).
+
+### New models
+
+- **openai**: `gpt-6.1-sol`, `gpt-6-luna`, `gpt-6-sol` (gpt-6 family).
+- **google**: `gemini-4-argon`, `gemini-3.8-flash-tts`, `gemini-3.8-flash-lite-tts`,
+  `gemini-nano-banana-2.1`.
+- **anthropic**: `claude-opus-5-5`, `claude-sonnet-5-5`, `claude-haiku-5-5`.
+- **elevenlabs**: `eleven_v4`, `eleven_v4_turbo`, `eleven_realtime_v1_mini`,
+  `eleven_realtime_v1_max` (new `elevenlabs-realtime` family).
+- **minimax** cn/global: `MiniMax-M3.1-Flash`, `MiniMax-H3-Highspeed`,
+  `MiniMax-H3-Lite`, `MiniMax-H3-Max-Turbo`; global `image-01-live`
+  (catalog_only/hidden, no official USD price).
+- **bytedance/cn**: `doubao-seed-2-1-lite-260915`, `doubao-seedream-5-0-flash-260915`.
+- **moonshot** cn/global: `kimi-k3.1-pro`, `kimi-k3.1-pro-highspeed`.
+- **kuaishou** cn/global: `kling-4.0` (preview, API not yet open, catalog_only/hidden).
+- **runway**: 16 new official video models (Kling 3.0/O3 hosted, Grok Imagine,
+  frame-rate enhancement etc.).
+- **zhipu/cn**: `glm-5.3-flashx`; `glm-5.3-flashx-legal` (catalog_only/hidden).
+- **vidu** cn/global: `viduq4-preview` (cn priced, global catalog_only/hidden).
+- **black_forest_labs**: 2 new models; **typesafe**: `jev-1.14.0`.
+
+### Downgrades / retirements
+
+- **xiaomi** cn/global: `mimo-v2.5-pro`, `mimo-v2.5` retired (official 2026-10-21),
+  replaced by `mimo-v2.6-pro` / `mimo-v2.6-flash`.
+- **minimax** cn/global: M2.x line and `M2-her` deprecated (official routing to
+  M3.1 Flash from 2026-10-19); `music-cover` retired.
+- **anthropic**: `claude-sonnet-4-5` deprecated (retires 2026-11-30) with
+  `replacementModel=claude-sonnet-5-5`.
+- **google**: `gemini-3.7-flash`, `gemini-3.5-flash`, `veo-3.1-fast/lite` →
+  hidden+catalog_only; legacy models gained `replacementModel` pointers.
+- **bytedance**: seedream 4.x → `doubao-seedream-5-0-pro-260628`; global
+  `seed-2-0-lite/mini` → 260428 snapshots.
+
+### Pricing updates
+
+- **baidu/cn**: ERNIE-4.5-Turbo-VL pair corrected to official visual pricing
+  (3.0 input / 9.0 CNY per MTok; cache-hit line removed).
+- **stability_ai**: `stable-audio-3.0` / `2.5` now 8 credits per generation
+  (was 26 / 20).
+- **stepfun/cn**: `step-5-preview` cache-read 0.35 → 0.70 CNY/MTok (effective
+  2026-10-13).
+- **pixverse/cn**: `c1-t2v` / `v6-t2v` switched from flat to 8 resolution/audio
+  tiers (360P–1080P × voiced/silent).
+- New pricing rows for all newly listed models; unchanged rates re-verified
+  against official pages.
+
+### Sources & evidence
+
+- anthropic official sources migrated from `docs.anthropic.com` to
+  `platform.claude.com` (models/pricing/deprecations); tencent migrated to
+  TokenHub (`product/1823`); baidu pricing page, stability `docs.stability.ai`,
+  meituan sub-pages and openai `developers.openai.com` doc pages registered.
+- `models/index.json` / `models/vendors.json` regenerated;
+  `releases/2026.10.26.1.json` generated; validate-catalog / catalog-audit /
+  freshness-report all pass (no error-level stale).
+
 ## 2026.10.19.4
 
 ### Vector store storage rate

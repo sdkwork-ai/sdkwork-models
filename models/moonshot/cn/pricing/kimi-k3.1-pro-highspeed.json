@@ -1,0 +1,169 @@
+{
+  "catalogKey": "moonshot/kimi-k3.1-pro-highspeed",
+  "currency": "CNY",
+  "modelId": "kimi-k3.1-pro-highspeed",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3.1 Pro Highspeed 输入（缓存未命中）单价，CNY/百万 Tokens。",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.cn.official",
+      "priceId": "moonshot-cn-kimi-k3.1-pro-highspeed-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d55ebde6b0244409b4caa75537b0a674c87e0c88c668a4e3f5eaae7cf5084987",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
+      },
+      "unitPrice": "26.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3.1 Pro Highspeed 输出单价，CNY/百万 Tokens。",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.cn.official",
+      "priceId": "moonshot-cn-kimi-k3.1-pro-highspeed-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "12a4e9ea3c2244be2e00d3f27e6dceba121cd420c031b04f0625240273a2a92b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
+      },
+      "unitPrice": "136.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3.1 Pro Highspeed 缓存命中单价，CNY/百万 Tokens。",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.cn.official",
+      "priceId": "moonshot-cn-kimi-k3.1-pro-highspeed-cache-read",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "61f0e69166d326558f869392d3792c8e8e16967b581cbac78d19d9cf22e259a8",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
+      },
+      "unitPrice": "1.300000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_5m"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3.1 Pro Highspeed 缓存写入（TTL 5min）单价，CNY/百万 Tokens。",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.cn.official",
+      "priceId": "moonshot-cn-kimi-k3.1-pro-highspeed-cache-write-5m",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "4488772602d2f84905075aa92dd42482541f4ede0ef6251ac2e9ebaa9fc19871",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
+      },
+      "tierCode": "cache_write_5m",
+      "unitPrice": "26.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "cache_write_1h"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "notes": "Kimi K3.1 Pro Highspeed 缓存写入（TTL 1h）单价，CNY/百万 Tokens。",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.moonshot.cn.official",
+      "priceId": "moonshot-cn-kimi-k3.1-pro-highspeed-cache-write-1h",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.moonshot.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "fc3f62095946892aa2cc0400cce12900cda63f49480a26512317ed82e024ce7a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
+      },
+      "tierCode": "cache_write_1h",
+      "unitPrice": "52.000000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "moonshot"
+}

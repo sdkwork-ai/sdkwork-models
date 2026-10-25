@@ -6,7 +6,7 @@
   "catalogKey": "minimax/music-cover",
   "codingVisible": false,
   "colorToken": "#1d4ed8",
-  "description": "MiniMax Music Cover generates cover versions from reference audio with style prompts and optional lyric edits.",
+  "description": "Listed under Retired Models (Music) in the official FAQ. Paid music APIs stopped accepting new users on 2026-08-20; legacy paying users may keep the existing API until retirement. No direct model successor on the API platform: use MiniMax Audio (https://www.minimax.io/audio) or the open-source MiniMax Music 3 model on Hugging Face / ModelScope.",
   "displayName": "MiniMax Music Cover",
   "familyCode": "minimax-music",
   "inputModalities": [
@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 30000,
   "latencyP95Ms": 100000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "music-cover",
   "outputModalities": [
     "music"
@@ -23,13 +23,13 @@
   "primaryCapability": "music",
   "rankScore": "760.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
-    "sourceUrl": "https://platform.minimax.io/docs/api-reference/music-generation"
+    "observedAt": "2026-10-26T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/faq/models"
   },
   "strengths": [
     "Cover generation",

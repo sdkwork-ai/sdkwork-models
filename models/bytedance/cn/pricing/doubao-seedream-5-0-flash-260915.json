@@ -1,0 +1,38 @@
+{
+  "catalogKey": "bytedance/doubao-seedream-5-0-flash-260915",
+  "currency": "CNY",
+  "modelId": "doubao-seedream-5-0-flash-260915",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seedream-5-0-flash-260915-result",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "67f37cbed3da547708bc90e74bb64edfb435a48c44f20fb39c7ba40a03139b1d",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-10-26T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "unitPrice": "0.120000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "bytedance"
+}

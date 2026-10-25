@@ -8,14 +8,14 @@
   "codingVisible": true,
   "colorToken": "#b91c1c",
   "contextTokens": 262144,
-  "description": "Seed 2.0 Lite 260228 on BytePlus ModelArk. 256K context window, 128K max output including CoT.",
+  "description": "Marked retiring on the BytePlus ModelArk list; retired on 2026-11-11 per the official Retiring models section. Official recommended replacement: dola-seed-2-0-lite-260428 (catalog id seed-2-0-lite-260428). Legacy id retained for backward compatibility only.",
   "displayName": "Dola Seed 2.0 Lite (260228)",
   "familyCode": "seed-2-0",
   "inputModalities": [
     "text",
     "image"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 262144,
   "maxOutputTokens": 131072,
   "modelId": "seed-2-0-lite-260228",
@@ -24,12 +24,13 @@
   ],
   "primaryCapability": "chat",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "seed-2-0-lite-260428",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-08T00:00:00Z",
+    "observedAt": "2026-10-26T00:00:00Z",
     "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1330310"
   },
   "strengths": [
