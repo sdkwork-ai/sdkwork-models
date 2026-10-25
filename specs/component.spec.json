@@ -25,7 +25,7 @@
       "package.json",
       "pnpm-workspace.yaml",
       "Cargo.toml",
-      "sdkwork.app.config.json",
+      "agent.app.config.json",
       "database/database.manifest.json"
     ]
   },

@@ -6,7 +6,7 @@
     "name": "SDKWork Models",
     "repository": "sdkwork-ai/sdkwork-models",
     "sourcePath": ".",
-    "configPath": "sdkwork.app.config.json"
+    "configPath": "agent.app.config.json"
   },
   "release": {
     "artifactPrefix": "sdkwork-models",
