@@ -97,6 +97,11 @@ sdks/**/generated/**/*.d.ts
 *.d.ts
 !**/node-shims.d.ts
 
+# Stale tsc emit left inside the picker package src/ (declared output is dist/)
+apps/sdkwork-models-pc/packages/sdkwork-models-pc-picker/src/**/*.js
+apps/sdkwork-models-pc/packages/sdkwork-models-pc-picker/src/**/*.js.map
+apps/sdkwork-models-pc/packages/sdkwork-models-pc-picker/src/**/*.d.ts.map
+
 .tmp/
 
 # Local agent workspace: resync evidence, per-vendor reports, review scripts.
