@@ -11,31 +11,66 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "res_480p_720p"
+          "value": "res_480p"
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
       "operationCode": "video.generate",
       "priceBookCode": "models.runway.global.official",
-      "priceId": "runway-global-seedance2_fast-second-res_480p_720p",
+      "priceId": "runway-global-seedance2_fast-second-res_480p",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.runway.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "bbf123a43cf86842c35bf8327510161b76b28c55da26c83b9aa526039f57dc94",
+      "rateHash": "03b94316b16551719040e4dc1310e501015aacb56cc1a75993cb00a4fe88edc0",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
-      "tierCode": "res_480p_720p",
-      "unitPrice": "0.290000",
+      "tierCode": "res_480p",
+      "unitPrice": "0.110000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-seedance2_fast-second-res_720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "bd35a3033ab9643c059a532f1c94dade9210c67cad55bac34bb1b091ee7fc7f5",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_720p",
+      "unitPrice": "0.240000",
       "unitSize": "1"
     }
   ],

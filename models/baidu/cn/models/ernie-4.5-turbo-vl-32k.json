@@ -7,14 +7,14 @@
   "codingVisible": true,
   "colorToken": "#2932e1",
   "contextTokens": 32000,
-  "description": "ERNIE 4.5 Turbo VL 32K vision-language model for image understanding and long-document tasks.",
+  "description": "ERNIE 4.5 Turbo VL 32K is no longer listed on the official model list (updated 2026-10-29); the current 视觉理解 table only carries Qwen3-VL / Qwen2.5-VL, and no ERNIE vision model appears on the price tables. The entry is kept only for historical pricing; there is no ERNIE vision successor, ernie-5.1 is text-only in the catalog.",
   "displayName": "ERNIE 4.5 Turbo VL 32K",
   "familyCode": "ernie",
   "inputModalities": [
     "text",
     "image"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 27000,
   "maxOutputTokens": 12288,
   "modelId": "ernie-4.5-turbo-vl-32k",
@@ -23,12 +23,13 @@
   ],
   "primaryCapability": "chat",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "ernie-5.1",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
   },
   "strengths": [

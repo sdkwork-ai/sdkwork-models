@@ -32,6 +32,30 @@
         "9:16",
         "1:1"
       ],
+      "catalogKey": "minimax/MiniMax-H3-Highspeed/t2v_range_480p",
+      "displayName": "Text to Video · 6–10s · 480p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 10,
+      "minDurationSeconds": 6,
+      "outputAudio": false,
+      "profileCode": "t2v_range_480p",
+      "resolution": "480p",
+      "resolutionTierCode": "res_480p",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "6-10",
+        "resolution": "480p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
       "catalogKey": "minimax/MiniMax-H3-Highspeed/i2v_range_768p",
       "displayName": "Image to Video · 6–10s · 768p",
       "durationPolicy": "range",
@@ -44,10 +68,34 @@
       "profileCode": "i2v_range_768p",
       "resolution": "768p",
       "resolutionTierCode": "res_768p",
-      "sortOrder": 20,
+      "sortOrder": 30,
       "wireParameters": {
         "duration": "6-10",
         "resolution": "768p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "minimax/MiniMax-H3-Highspeed/i2v_range_480p",
+      "displayName": "Image to Video · 6–10s · 480p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 10,
+      "minDurationSeconds": 6,
+      "outputAudio": false,
+      "profileCode": "i2v_range_480p",
+      "resolution": "480p",
+      "resolutionTierCode": "res_480p",
+      "sortOrder": 40,
+      "wireParameters": {
+        "duration": "6-10",
+        "resolution": "480p"
       }
     },
     {
@@ -68,17 +116,41 @@
       "profileCode": "r2v_range_768p",
       "resolution": "768p",
       "resolutionTierCode": "res_768p",
-      "sortOrder": 30,
+      "sortOrder": 50,
       "wireParameters": {
         "duration": "6-10",
         "resolution": "768p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "minimax/MiniMax-H3-Highspeed/r2v_range_480p",
+      "displayName": "Reference to Video · 6–10s · 480p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "reference_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 10,
+      "minDurationSeconds": 6,
+      "outputAudio": false,
+      "profileCode": "r2v_range_480p",
+      "resolution": "480p",
+      "resolutionTierCode": "res_480p",
+      "sortOrder": 60,
+      "wireParameters": {
+        "duration": "6-10",
+        "resolution": "480p"
       }
     }
   ],
   "regionCode": "global",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://platform.minimax.io/docs/api-reference/video-generation-v2-create"
   },
   "vendorCode": "minimax"

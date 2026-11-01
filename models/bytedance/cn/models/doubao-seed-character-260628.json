@@ -1,0 +1,50 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat",
+    "reasoning"
+  ],
+  "catalogKey": "bytedance/doubao-seed-character-260628",
+  "codingVisible": false,
+  "colorToken": "#3b82f6",
+  "contextTokens": 131072,
+  "description": "Doubao Seed Character 260628 on the Volcengine Ark 模型列表 (其他模型): 128K context window, 96K max input, 32K max answer and 128K max CoT; supports deep thinking, multimodal understanding, tool use and json_schema structured output.",
+  "displayName": "Doubao Seed Character (260628)",
+  "familyCode": "doubao-seed",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 98304,
+  "maxOutputTokens": 32768,
+  "modelId": "doubao-seed-character-260628",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://www.volcengine.com/docs/82379/1330310"
+  },
+  "strengths": [
+    "Character role-play",
+    "Multimodal understanding",
+    "Deep thinking",
+    "Structured output"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
+}

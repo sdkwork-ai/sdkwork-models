@@ -1,0 +1,44 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "pixverse/pixverse-v5",
+  "codingVisible": false,
+  "colorToken": "#64748b",
+  "description": "PixVerse V5 保留既有 V5 集成与 legacy 工作流；支持 5/8 秒、360p–1080p，无有声档位，按次固定 Credits 计费。",
+  "displayName": "PixVerse V5",
+  "familyCode": "pixverse-video",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "active",
+  "modelId": "pixverse-v5",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://docs.platform.pixverse.ai/model-capability-map-2394982m0"
+  },
+  "strengths": [
+    "Text to video",
+    "Image to video",
+    "First and last frame video",
+    "Multi-transition video"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "pixverse",
+  "vendorName": "PixVerse"
+}

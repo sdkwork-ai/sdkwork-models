@@ -7,7 +7,7 @@
   "codingVisible": false,
   "colorToken": "#0891b2",
   "contextTokens": 32768,
-  "description": "官方 pricing 页警告：\"Gemini 2.5 Flash Image (gemini-2.5-flash-image) is deprecated and will be shut down on October 2, 2026; migrate to Gemini 3.1 Flash Image or Gemini 3.1 Flash Lite Image.\" 持久继任取 gemini-3.1-flash-lite-image（gemini-3.1-flash-image 本身已弃用，继任 gemini-nano-banana-2.1）。条目保持 hidden/catalog_only 迁移参考。",
+  "description": "官方 pricing 页原文（Last updated 2026-10-30 UTC）：\"Warning: Gemini 2.5 Flash Image ( gemini-2.5-flash-image ) is deprecated and will be shut down on March 15, 2027 ; migrate to Gemini 3.1 Flash Lite Image to avoid service disruption.\"（此前公告的 2026-10-02 关停日已顺延至 2027-03-15，模型仍在售。）条目保持 deprecated/hidden/catalog_only，仅作迁移参考。",
   "displayName": "Gemini 2.5 Flash Image",
   "familyCode": "gemini-image",
   "inputModalities": [
@@ -31,7 +31,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/pricing"
   },
   "strengths": [

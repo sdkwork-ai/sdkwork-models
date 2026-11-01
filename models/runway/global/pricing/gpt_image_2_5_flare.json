@@ -11,31 +11,31 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "q_low_1k_2k"
+          "value": "q_low_1k"
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "image_result",
       "minimumQuantity": "0",
       "operationCode": "image.generate",
       "priceBookCode": "models.runway.global.official",
-      "priceId": "runway-global-gpt_image_2_5_flare-image-q_low_1k_2k",
+      "priceId": "runway-global-gpt_image_2_5_flare-image-q_low_1k",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.runway.image",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "6223ab37d3eedea22eae44ea300c89d9cea02837b16781551af3ca79a9eed692",
+      "rateHash": "efe102a52e7873789dd94a17cc0a3ddd2beb4c526148d9d15162d4bd5a045dd2",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
-      "tierCode": "q_low_1k_2k",
-      "unitPrice": "0.010000",
+      "tierCode": "q_low_1k",
+      "unitPrice": "0.020000",
       "unitSize": "1"
     },
     {
@@ -46,31 +46,31 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "q_medium_1k_2k"
+          "value": "q_medium_1k"
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "image_result",
       "minimumQuantity": "0",
       "operationCode": "image.generate",
       "priceBookCode": "models.runway.global.official",
-      "priceId": "runway-global-gpt_image_2_5_flare-image-q_medium_1k_2k",
+      "priceId": "runway-global-gpt_image_2_5_flare-image-q_medium_1k",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.runway.image",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "3ce027f5e025fd757f50a11cb446e8064f5c7826421c8e0d4de5c19e85264e6a",
+      "rateHash": "624ba11ac4d29ded2d8d6d3d08a62256bae84568eff9af4fab45ed8474270af2",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
-      "tierCode": "q_medium_1k_2k",
-      "unitPrice": "0.050000",
+      "tierCode": "q_medium_1k",
+      "unitPrice": "0.030000",
       "unitSize": "1"
     },
     {
@@ -81,30 +81,205 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "q_high_1k_2k"
+          "value": "q_high_1k"
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "image_result",
       "minimumQuantity": "0",
       "operationCode": "image.generate",
       "priceBookCode": "models.runway.global.official",
-      "priceId": "runway-global-gpt_image_2_5_flare-image-q_high_1k_2k",
+      "priceId": "runway-global-gpt_image_2_5_flare-image-q_high_1k",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.runway.image",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "e3422eb972bda2a22461ce341b1519226ff10fad3ac34ed161f65203f4c470be",
+      "rateHash": "a6ff7e08da069370894473f5122dbe2988f273f6af50abaf64862d391ba2f104",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
-      "tierCode": "q_high_1k_2k",
+      "tierCode": "q_high_1k",
+      "unitPrice": "0.110000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "q_xhigh_1k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-gpt_image_2_5_flare-image-q_xhigh_1k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3d09a7b9755dca0520803714d5e8c7a031ad211eb90cc7392ce91c2a5bbf56d7",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "q_xhigh_1k",
+      "unitPrice": "0.190000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "q_max_1k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-gpt_image_2_5_flare-image-q_max_1k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "c5c753b25f85f9d0c17c5584dda89eecd5f5a860f7bbb52439f26e82f0902f43",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "q_max_1k",
+      "unitPrice": "0.420000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "q_low_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-gpt_image_2_5_flare-image-q_low_2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "351ffde9e71884c414718badf34776a41200cac9121b882bb131bbca374cadca",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "q_low_2k",
+      "unitPrice": "0.020000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "q_medium_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-gpt_image_2_5_flare-image-q_medium_2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "1644e176e03b1a5420315f41154e408efe9163de722492df8e6cacf666e0c184",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "q_medium_2k",
+      "unitPrice": "0.040000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "q_high_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-gpt_image_2_5_flare-image-q_high_2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ae84abbd097a1d6de6c4538e920d1f350495681cca21375023c86f94cad2529a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "q_high_2k",
       "unitPrice": "0.160000",
       "unitSize": "1"
     },
@@ -116,30 +291,30 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "q_xhigh_1k_2k"
+          "value": "q_xhigh_2k"
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "image_result",
       "minimumQuantity": "0",
       "operationCode": "image.generate",
       "priceBookCode": "models.runway.global.official",
-      "priceId": "runway-global-gpt_image_2_5_flare-image-q_xhigh_1k_2k",
+      "priceId": "runway-global-gpt_image_2_5_flare-image-q_xhigh_2k",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.runway.image",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "dbd86854786272202610af28b9f687c138d460e0c21a06b4949570e3d7c17834",
+      "rateHash": "e2fa2781c7fe600946804548148b4370b6d16dbb7ad901fe999452846e956432",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
-      "tierCode": "q_xhigh_1k_2k",
+      "tierCode": "q_xhigh_2k",
       "unitPrice": "0.280000",
       "unitSize": "1"
     },
@@ -151,30 +326,30 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "q_max_1k_2k"
+          "value": "q_max_2k"
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "image_result",
       "minimumQuantity": "0",
       "operationCode": "image.generate",
       "priceBookCode": "models.runway.global.official",
-      "priceId": "runway-global-gpt_image_2_5_flare-image-q_max_1k_2k",
+      "priceId": "runway-global-gpt_image_2_5_flare-image-q_max_2k",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.runway.image",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "71fa5725b0297b7c0f8833a63a36ac6bcc5bfbb279ab852b5a4a46162c7f4108",
+      "rateHash": "574231ed2080e1dcb7d60c1cdd2e4a4b52fade5801fffc09a5ae90586245c295",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
-      "tierCode": "q_max_1k_2k",
+      "tierCode": "q_max_2k",
       "unitPrice": "0.630000",
       "unitSize": "1"
     },
@@ -190,7 +365,7 @@
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "image_result",
       "minimumQuantity": "0",
       "operationCode": "image.generate",
@@ -202,15 +377,15 @@
       "productCode": "models.runway.image",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "c6e391a477cf00292f9108251648fdf79a0a2100c3be900572d1890169716897",
+      "rateHash": "7a3e54db0ba11339abf4bddf8c3821db1c92d5b9901f2877ca2ab78828eaa401",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
       "tierCode": "q_low_4k",
-      "unitPrice": "0.020000",
+      "unitPrice": "0.030000",
       "unitSize": "1"
     },
     {
@@ -225,7 +400,7 @@
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "image_result",
       "minimumQuantity": "0",
       "operationCode": "image.generate",
@@ -237,15 +412,15 @@
       "productCode": "models.runway.image",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "1f8aa09a674eb4cc7d3b6e98353bbd751e5806233db5f8110c094372e5b513a0",
+      "rateHash": "0aff4f7e813b4a9775ccd0d1fc47bed1d8c4c895fbc741727eddb8308aa7ef30",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
       "tierCode": "q_medium_4k",
-      "unitPrice": "0.110000",
+      "unitPrice": "0.050000",
       "unitSize": "1"
     },
     {
@@ -260,7 +435,7 @@
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "image_result",
       "minimumQuantity": "0",
       "operationCode": "image.generate",
@@ -272,11 +447,11 @@
       "productCode": "models.runway.image",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "56caf1685a13987fb2ba64efbb65b3f505c0cd596031b9414d727d37ab741290",
+      "rateHash": "c021f73e68c9de7065e3cd0c02bc467bd54304e05782a5150fef482e75cf45c0",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
       "tierCode": "q_high_4k",
@@ -295,7 +470,7 @@
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "image_result",
       "minimumQuantity": "0",
       "operationCode": "image.generate",
@@ -307,11 +482,11 @@
       "productCode": "models.runway.image",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "2c7d32fee68c2f13b3eba838cb2af8661e8f6e7f77cf9609bfd467c2b20dc76b",
+      "rateHash": "9e93c206d7ba338e21005d0a96dacb5dbe8b360c8096775c40eb828fb4e0a9b9",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
       "tierCode": "q_xhigh_4k",
@@ -330,7 +505,7 @@
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "image_result",
       "minimumQuantity": "0",
       "operationCode": "image.generate",
@@ -342,15 +517,15 @@
       "productCode": "models.runway.image",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "89870989a53cc285169de6039127aab3ef315fa6702297860cd2879b32b18e56",
+      "rateHash": "673842a40d72642da07b29e3ff6135808f358a14672d570235b50c2ff01e5646",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
       "tierCode": "q_max_4k",
-      "unitPrice": "0.760000",
+      "unitPrice": "0.750000",
       "unitSize": "1"
     }
   ],

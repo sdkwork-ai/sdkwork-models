@@ -1,0 +1,220 @@
+{
+  "catalogKey": "kuaishou/kling-4.0",
+  "currency": "USD",
+  "modelId": "kling-4.0",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "no_input_res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-4-0-second-no-input-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "28239c366c65372934b225f7987cd540cea12ae135869012b8ece870389fa52a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "no_input_res_720p",
+      "unitPrice": "0.140000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "no_input_res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-4-0-second-no-input-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "82c05b10620137c77959b5701563a038703470477b4b1fd57497ed1e603c1af9",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "no_input_res_1080p",
+      "unitPrice": "0.210000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_le_output_res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-4-0-second-input-le-output-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ed4557fa29c3c254bd40094905e1cb3e0d8df7d3f2ff34fcfda056ec3738aa73",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "input_le_output_res_720p",
+      "unitPrice": "0.084000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_le_output_res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-4-0-second-input-le-output-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "fa1d8896a8ae48ae856a742bd8b39f211255ab3587de4be1cb68faa67fa0cd05",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "input_le_output_res_1080p",
+      "unitPrice": "0.126000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_gt_output_res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-4-0-second-input-gt-output-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "98c9b9160ac00e1638204d21b7486dcb5eb6ee89dcd65f130158c14bb9e2cfc7",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "input_gt_output_res_720p",
+      "unitPrice": "0.084000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_gt_output_res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-4-0-second-input-gt-output-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "f89da91a77c3f65b356bd0169d1133c4c9711da6924225eb237ae77bb98d011e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+      },
+      "tierCode": "input_gt_output_res_1080p",
+      "unitPrice": "0.126000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "kuaishou"
+}

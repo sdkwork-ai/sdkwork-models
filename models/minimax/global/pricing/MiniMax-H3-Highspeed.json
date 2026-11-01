@@ -26,16 +26,49 @@
       "priority": 100,
       "productCode": "models.minimax.video",
       "quantityAggregation": "sum",
-      "quantityStep": "1",
-      "rateHash": "0f79179afe342d8bd53c37b6361216ee4143b336074ff6af9705f594409d6bb5",
+      "rateHash": "8c53feec61207377a32a8b5f280384995b79912098e3a64c4a207533f2c8e1ea",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
       },
       "tierCode": "res_768p",
       "unitPrice": "0.060000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_480p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.minimax.global.official",
+      "priceId": "minimax-global-h3-highspeed-second-res-480p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.video",
+      "quantityAggregation": "sum",
+      "rateHash": "809051513fbd8dde08a23a6ff99977f55d51200c406c09ef22e314a27e8db18a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "tierCode": "res_480p",
+      "unitPrice": "0.040000",
       "unitSize": "1"
     }
   ],

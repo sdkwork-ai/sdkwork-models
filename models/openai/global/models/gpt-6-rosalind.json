@@ -1,0 +1,35 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "openai/gpt-6-rosalind",
+  "codingVisible": false,
+  "description": "Latest Rosalind life sciences reasoning model. Access is limited to approved internal research through the trusted-access program, and the official pricing page publishes only per-token prices for this group; kept catalog_only/hidden.",
+  "displayName": "GPT-6 Rosalind",
+  "familyCode": "gpt-6",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "gpt-6-rosalind",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+  },
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [],
+  "vendorCode": "openai"
+}

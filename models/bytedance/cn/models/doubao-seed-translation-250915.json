@@ -1,0 +1,45 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "bytedance/doubao-seed-translation-250915",
+  "codingVisible": false,
+  "colorToken": "#3b82f6",
+  "contextTokens": 4096,
+  "description": "Doubao Seed Translation 250915 on the Volcengine Ark 模型列表 (其他模型): 4K context window, 1K max input and 3K max answer, positioned for translation-enhanced text generation; no cache pricing is published for this id.",
+  "displayName": "Doubao Seed Translation (250915)",
+  "familyCode": "doubao-seed",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1024,
+  "maxOutputTokens": 3072,
+  "modelId": "doubao-seed-translation-250915",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://www.volcengine.com/docs/82379/1330310"
+  },
+  "strengths": [
+    "Translation",
+    "Text generation"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [
+    "chat"
+  ],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
+}

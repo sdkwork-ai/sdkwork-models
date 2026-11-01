@@ -8,7 +8,7 @@
   "codingVisible": true,
   "colorToken": "#0284c7",
   "contextTokens": 256000,
-  "description": "Meituan LongCat pre-2.0 generation model. The official LongCat API platform now lists LongCat-2.0 as the only supported model in its quick start, pay-as-you-go and pricing pages, and the changelog records that the pre-2.0 LongCat model services were discontinued on 2026-05-29. Kept for migration reference; migrate to LongCat 2.0 (longcat-2.0).",
+  "description": "Meituan LongCat pre-2.0 generation model. The official LongCat API platform lists LongCat 2.5 Preview as the only supported model in its quick start, pay-as-you-go and pricing pages (2026-11-01), and the changelog records that the pre-2.0 LongCat model services were discontinued on 2026-05-29. Kept for migration reference; migrate to LongCat 2.5 Preview (longcat-2.5-preview).",
   "displayName": "LongCat 1.0",
   "familyCode": "longcat",
   "inputModalities": [
@@ -29,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://longcat.chat/platform/docs/zh/"
   },
   "strengths": [

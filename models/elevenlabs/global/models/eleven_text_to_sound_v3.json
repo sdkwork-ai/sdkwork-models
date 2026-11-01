@@ -1,0 +1,42 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "sfx"
+  ],
+  "catalogKey": "elevenlabs/eleven_text_to_sound_v3",
+  "codingVisible": false,
+  "colorToken": "#7c2d12",
+  "description": "SFX v3 sound-effect model (eleven_text_to_sound_v3): follows multi-part prompts more closely and handles vocal and musical sounds better than eleven_text_to_sound_v2, which remains the API default. Limited access; accounts without access get an Unknown model error. Not catalog-routed because the official pages give no model-specific price for this id.",
+  "displayName": "Eleven Text to Sound v3",
+  "familyCode": "elevenlabs-sfx",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "catalog_only",
+  "modelId": "eleven_text_to_sound_v3",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "sfx",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://elevenlabs.io/docs/models"
+  },
+  "strengths": [
+    "Sound effects",
+    "Multi-part prompt following",
+    "Musical and vocal SFX",
+    "Seamless looping"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "elevenlabs",
+  "vendorName": "ElevenLabs"
+}

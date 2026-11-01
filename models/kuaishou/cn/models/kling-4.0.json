@@ -6,7 +6,7 @@
   "catalogKey": "kuaishou/kling-4.0",
   "codingVisible": false,
   "colorToken": "#6d28d9",
-  "description": "【即将上线 · 尚未开放 API 调用】新一代原生多模态 AI 视频创作大模型：30 秒视频原生直出、大幅度动态表现更稳定、全能参考（图片/视频/主体/音色最多 15 项自由组合）、最多 10 张关键帧精准控制、对已有成片精准局部修改与风格调整。官方能力地图参数：输入文本/图片/视频，时长 3~30s，分辨率 720P/1080P/4K，动态范围 SDR/10-bit HDR，宽高比 21:9/16:9/1:1/9:16/自适应。预告计费（正式上线前不可按此价格发起请求，最终价格以公告为准）：无视频输入（总时长=输出时长）720P 1.0 积分/秒、1080P 1.5 积分/秒；有输入视频且输入时长≤输出时长（总时长=输出时长×2）0.6 积分/秒（720P）、0.9 积分/秒（1080P）；有输入视频且输入时长>输出时长（总时长=输入时长+输出时长）0.6/0.9 积分/秒；4K 未列价；Kling 4.0 Flash 价格待公布。本条目仅登记预告口径，未生成 pricing 文件。",
+  "description": "新一代原生多模态 AI 视频创作大模型，官方公告已全量上线并开放 API 接入。30 秒视频原生直出，大幅度动态表现更稳定，全能参考（图片/视频/主体/音色最多 15 项自由组合），最多 10 张关键帧精准控制，支持创意复刻与对已有成片精准局部修改。官方能力地图参数：输入文本/图片/视频，时长 3~30s，分辨率 720P/1080P/4K，动态范围 SDR/10-bit HDR，宽高比 21:9/16:9/1:1/9:16/自适应。官方计费（按秒计费）：无输入视频（总时长=输出时长）720P 1.0 积分/秒、1080P 1.5 积分/秒；有输入视频（输入时长≤输出时长时总时长=输出时长×2，输入时长>输出时长时总时长=输入时长+输出时长）720P 0.6 积分/秒、1080P 0.9 积分/秒；4K 未列价。调用前需购买旗舰版资源包或联系账户经理充值账户余额。",
   "displayName": "Kling 4.0",
   "familyCode": "kling",
   "inputModalities": [
@@ -14,7 +14,7 @@
     "image",
     "video"
   ],
-  "lifecycle": "preview",
+  "lifecycle": "active",
   "modelId": "kling-4.0",
   "outputModalities": [
     "video",
@@ -22,12 +22,12 @@
   ],
   "primaryCapability": "video",
   "regionCode": "cn",
-  "releaseStage": "preview",
-  "routingState": "catalog_only",
+  "releaseStage": "active",
+  "routingState": "enabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "hidden",
+  "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://klingai.com/document-api/guides/capability-map/video"
   },
   "strengths": [

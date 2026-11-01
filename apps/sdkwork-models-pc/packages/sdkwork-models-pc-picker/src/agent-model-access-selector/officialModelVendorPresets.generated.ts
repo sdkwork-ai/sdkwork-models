@@ -55,13 +55,19 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "catalogKey": "openai/gpt-6-sol",
         "model": "gpt-6-sol",
         "displayName": "GPT-6 Sol",
-        "sortOrder": 19
+        "sortOrder": 20
       },
       {
         "catalogKey": "openai/gpt-6.1-sol",
         "model": "gpt-6.1-sol",
         "displayName": "GPT-6.1 Sol",
-        "sortOrder": 20
+        "sortOrder": 21
+      },
+      {
+        "catalogKey": "openai/gpt-6.1-terra",
+        "model": "gpt-6.1-terra",
+        "displayName": "GPT-6.1 Terra",
+        "sortOrder": 22
       }
     ],
     "sortOrder": 0,
@@ -304,60 +310,6 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "Baidu AI Cloud",
     "models": [
       {
-        "catalogKey": "baidu/ernie-4.5-turbo-128k",
-        "model": "ernie-4.5-turbo-128k",
-        "displayName": "ERNIE 4.5 Turbo",
-        "sortOrder": 0
-      },
-      {
-        "catalogKey": "baidu/ernie-4.5-turbo-20260402",
-        "model": "ernie-4.5-turbo-20260402",
-        "displayName": "ERNIE 4.5 Turbo (2026-04-02)",
-        "sortOrder": 1
-      },
-      {
-        "catalogKey": "baidu/ernie-4.5-turbo-32k",
-        "model": "ernie-4.5-turbo-32k",
-        "displayName": "ERNIE 4.5 Turbo 32K",
-        "sortOrder": 2
-      },
-      {
-        "catalogKey": "baidu/ernie-4.5-turbo-vl-32k",
-        "model": "ernie-4.5-turbo-vl-32k",
-        "displayName": "ERNIE 4.5 Turbo VL 32K",
-        "sortOrder": 3
-      },
-      {
-        "catalogKey": "baidu/ernie-4.5-turbo-vl",
-        "model": "ernie-4.5-turbo-vl",
-        "displayName": "ERNIE 4.5 Turbo VL",
-        "sortOrder": 4
-      },
-      {
-        "catalogKey": "baidu/ernie-5.0-thinking-exp",
-        "model": "ernie-5.0-thinking-exp",
-        "displayName": "ERNIE 5.0 Thinking Exp",
-        "sortOrder": 5
-      },
-      {
-        "catalogKey": "baidu/ernie-5.0-thinking-latest",
-        "model": "ernie-5.0-thinking-latest",
-        "displayName": "ERNIE 5.0 Thinking Latest",
-        "sortOrder": 6
-      },
-      {
-        "catalogKey": "baidu/ernie-5.0-thinking-preview",
-        "model": "ernie-5.0-thinking-preview",
-        "displayName": "ERNIE 5.0 Thinking Preview",
-        "sortOrder": 7
-      },
-      {
-        "catalogKey": "baidu/ernie-5.0",
-        "model": "ernie-5.0",
-        "displayName": "ERNIE 5.0",
-        "sortOrder": 8
-      },
-      {
         "catalogKey": "baidu/ernie-5.1",
         "model": "ernie-5.1",
         "displayName": "ERNIE 5.1",
@@ -441,12 +393,6 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerCode": "meituan.direct",
     "providerDisplayName": "Meituan",
     "models": [
-      {
-        "catalogKey": "meituan/longcat-2.0",
-        "model": "longcat-2.0",
-        "displayName": "LongCat 2.0",
-        "sortOrder": 1
-      },
       {
         "catalogKey": "meituan/longcat-2.5-preview",
         "model": "longcat-2.5-preview",

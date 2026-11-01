@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#dc2626",
   "contextTokens": 256000,
-  "description": "Doubao Seed 2.0 Pro model for Chinese multimodal assistance.",
+  "description": "Doubao Seed 2.0 Pro (260215) marked 即将下线 on the 2026-10-30 Volcengine Ark model list; 256K context window, 224K max input, 128K max answer and 128K max CoT. Legacy id kept for backward compatibility; new traffic should use doubao-seed-2-1-pro-260915.",
   "displayName": "Doubao Seed 2.0 Pro",
   "familyCode": "doubao-seed",
   "inputModalities": [
@@ -17,8 +17,8 @@
   "latencyP50Ms": 760,
   "latencyP95Ms": 2400,
   "lifecycle": "deprecated",
-  "maxInputTokens": 256000,
-  "maxOutputTokens": 32768,
+  "maxInputTokens": 229376,
+  "maxOutputTokens": 131072,
   "modelId": "doubao-seed-2-0-pro-260215",
   "outputModalities": [
     "text"
@@ -27,11 +27,12 @@
   "rankScore": "850.000000",
   "regionCode": "cn",
   "releaseStage": "deprecated",
+  "replacementModel": "doubao-seed-2-1-pro-260915",
   "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://seed.bytedance.com/en/seed2"
   },
   "strengths": [

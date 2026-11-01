@@ -31,8 +31,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_res_540p",
       "unitPrice": "0.035000",
@@ -66,8 +66,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_res_720p",
       "unitPrice": "0.060000",
@@ -101,8 +101,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_res_1080p",
       "unitPrice": "0.075000",
@@ -136,8 +136,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_offpeak_res_540p",
       "unitPrice": "0.020000",
@@ -171,8 +171,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_offpeak_res_720p",
       "unitPrice": "0.030000",
@@ -206,8 +206,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_offpeak_res_1080p",
       "unitPrice": "0.035000",

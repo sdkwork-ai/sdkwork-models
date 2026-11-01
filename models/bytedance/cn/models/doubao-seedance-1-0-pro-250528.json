@@ -1,0 +1,44 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "bytedance/doubao-seedance-1-0-pro-250528",
+  "codingVisible": false,
+  "colorToken": "#dc2626",
+  "description": "Marked 即将下线 on the 2026-10-30 Volcengine Ark 模型列表; legacy Seedance 1.0 Pro (2~12s, 480p/720p/1080p, 24fps, mp4) retained only for backward compatibility. New video traffic should use doubao-seedance-2-0-260128 or doubao-seedance-2-5-260628.",
+  "displayName": "Doubao Seedance 1.0 Pro",
+  "familyCode": "seedance",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "deprecated",
+  "maxOutputSeconds": 12,
+  "modelId": "doubao-seedance-1-0-pro-250528",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "cn",
+  "releaseStage": "deprecated",
+  "replacementModel": "doubao-seedance-2-0-260128",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://www.volcengine.com/docs/82379/1330310"
+  },
+  "strengths": [
+    "First frame to video",
+    "First and last frame to video",
+    "Text to video"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
+}

@@ -7,7 +7,7 @@ or merging tiers - a product decision, so nothing here is auto-applied.
 
 | reason | count |
 |---|---|
-| dimension_never_populated | 314 |
+| dimension_never_populated | 349 |
 
 `dimension_never_populated`: the runtime has no producer for the dimension at all.
 `time_window_tier_redundant`: a `time_window` rate conditioned on `tier_code`; the
@@ -160,6 +160,18 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-output-input_128k_256k | llm_output_token | 48.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
 | bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-output-input_32k_128k | llm_output_token | 24.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
 | bytedance/cn/pricing/doubao-seed-2-0-pro-260215.json | bytedance-cn-doubao-seed-2-0-pro-260215-output-input_le_32k | llm_output_token | 16.0 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-character-251128.json | bytedance-cn-doubao-seed-character-251128-cache-read-input_32k_128k | llm_cache_read_token | 0.160000 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-character-251128.json | bytedance-cn-doubao-seed-character-251128-cache-read-input_le_32k | llm_cache_read_token | 0.160000 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-character-251128.json | bytedance-cn-doubao-seed-character-251128-input-input_32k_128k | llm_input_token | 1.200000 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-character-251128.json | bytedance-cn-doubao-seed-character-251128-input-input_le_32k | llm_input_token | 0.800000 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-character-251128.json | bytedance-cn-doubao-seed-character-251128-output-input_32k_128k | llm_output_token | 6.000000 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-character-251128.json | bytedance-cn-doubao-seed-character-251128-output-input_le_32k | llm_output_token | 2.000000 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-character-260628.json | bytedance-cn-doubao-seed-character-260628-cache-read-input_32k_128k | llm_cache_read_token | 0.160000 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-character-260628.json | bytedance-cn-doubao-seed-character-260628-cache-read-input_le_32k | llm_cache_read_token | 0.160000 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-character-260628.json | bytedance-cn-doubao-seed-character-260628-input-input_32k_128k | llm_input_token | 1.200000 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-character-260628.json | bytedance-cn-doubao-seed-character-260628-input-input_le_32k | llm_input_token | 0.800000 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
+| bytedance/cn/pricing/doubao-seed-character-260628.json | bytedance-cn-doubao-seed-character-260628-output-input_32k_128k | llm_output_token | 6.000000 | CNY | 1000000 | tier_code | dimension_never_populated | input_32k_128k | - |
+| bytedance/cn/pricing/doubao-seed-character-260628.json | bytedance-cn-doubao-seed-character-260628-output-input_le_32k | llm_output_token | 2.000000 | CNY | 1000000 | tier_code | dimension_never_populated | input_le_32k | - |
 | bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-layer_split_gt_2_61mp | image_result | 0.300000 | CNY | 1 | tier_code | dimension_never_populated | layer_split_gt_2_61mp | - |
 | bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-layer_split_le_2_61mp | image_result | 0.150000 | CNY | 1 | tier_code | dimension_never_populated | layer_split_le_2_61mp | - |
 | bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-single_image_gt_2_61mp | image_result | 0.600000 | CNY | 1 | tier_code | dimension_never_populated | single_image_gt_2_61mp | - |
@@ -248,6 +260,10 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | openai/global/pricing/gpt-6-luna.json | openai-gpt-6-luna-cache-write-long-context | llm_cache_write_token | 0.250000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-luna.json | openai-gpt-6-luna-input-long-context | llm_input_token | 0.200000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-luna.json | openai-gpt-6-luna-output-long-context | llm_output_token | 0.750000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-cache-read-long-context | llm_cache_read_token | 3.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-cache-write-long-context | llm_cache_write_token | 37.500000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-input-long-context | llm_input_token | 30.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-output-long-context | llm_output_token | 112.500000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-sol.json | openai-gpt-6-sol-cache-read-long-context | llm_cache_read_token | 0.400000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-sol.json | openai-gpt-6-sol-cache-write-long-context | llm_cache_write_token | 5.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-sol.json | openai-gpt-6-sol-input-long-context | llm_input_token | 4.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
@@ -256,6 +272,10 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | openai/global/pricing/gpt-6.1-sol.json | openai-gpt-6.1-sol-cache-write-long-context | llm_cache_write_token | 5.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6.1-sol.json | openai-gpt-6.1-sol-input-long-context | llm_input_token | 4.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6.1-sol.json | openai-gpt-6.1-sol-output-long-context | llm_output_token | 15.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.1-terra.json | openai-gpt-6.1-terra-cache-read-long-context | llm_cache_read_token | 0.100000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.1-terra.json | openai-gpt-6.1-terra-cache-write-long-context | llm_cache_write_token | 2.500000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.1-terra.json | openai-gpt-6.1-terra-input-long-context | llm_input_token | 2.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.1-terra.json | openai-gpt-6.1-terra-output-long-context | llm_output_token | 7.500000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | runway/global/pricing/bria_fibo_1_5.json | runway-global-bria_fibo_1_5-image-res_1mp | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | res_1mp | - |
 | runway/global/pricing/bria_fibo_1_5.json | runway-global-bria_fibo_1_5-image-res_4mp | image_result | 0.100000 | USD | 1 | tier_code | dimension_never_populated | res_4mp | - |
 | runway/global/pricing/gemini_image3.1_flash.json | runway-global-gemini_image3.1_flash-image-res_1k | image_result | 0.070000 | USD | 1 | tier_code | dimension_never_populated | res_1k | - |
@@ -275,25 +295,35 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_low_4k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | q_low_4k | - |
 | runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_medium_1k_2k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | q_medium_1k_2k | - |
 | runway/global/pricing/gpt_image_2.json | runway-global-gpt_image_2-image-q_medium_4k | image_result | 0.110000 | USD | 1 | tier_code | dimension_never_populated | q_medium_4k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_high_1k_2k | image_result | 0.160000 | USD | 1 | tier_code | dimension_never_populated | q_high_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_high_1k | image_result | 0.110000 | USD | 1 | tier_code | dimension_never_populated | q_high_1k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_high_2k | image_result | 0.160000 | USD | 1 | tier_code | dimension_never_populated | q_high_2k | - |
 | runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_high_4k | image_result | 0.190000 | USD | 1 | tier_code | dimension_never_populated | q_high_4k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_low_1k_2k | image_result | 0.010000 | USD | 1 | tier_code | dimension_never_populated | q_low_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_low_4k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | q_low_4k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_max_1k_2k | image_result | 0.630000 | USD | 1 | tier_code | dimension_never_populated | q_max_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_max_4k | image_result | 0.760000 | USD | 1 | tier_code | dimension_never_populated | q_max_4k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_medium_1k_2k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | q_medium_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_medium_4k | image_result | 0.110000 | USD | 1 | tier_code | dimension_never_populated | q_medium_4k | - |
-| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_xhigh_1k_2k | image_result | 0.280000 | USD | 1 | tier_code | dimension_never_populated | q_xhigh_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_low_1k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | q_low_1k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_low_2k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | q_low_2k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_low_4k | image_result | 0.030000 | USD | 1 | tier_code | dimension_never_populated | q_low_4k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_max_1k | image_result | 0.420000 | USD | 1 | tier_code | dimension_never_populated | q_max_1k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_max_2k | image_result | 0.630000 | USD | 1 | tier_code | dimension_never_populated | q_max_2k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_max_4k | image_result | 0.750000 | USD | 1 | tier_code | dimension_never_populated | q_max_4k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_medium_1k | image_result | 0.030000 | USD | 1 | tier_code | dimension_never_populated | q_medium_1k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_medium_2k | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | q_medium_2k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_medium_4k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | q_medium_4k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_xhigh_1k | image_result | 0.190000 | USD | 1 | tier_code | dimension_never_populated | q_xhigh_1k | - |
+| runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_xhigh_2k | image_result | 0.280000 | USD | 1 | tier_code | dimension_never_populated | q_xhigh_2k | - |
 | runway/global/pricing/gpt_image_2_5_flare.json | runway-global-gpt_image_2_5_flare-image-q_xhigh_4k | image_result | 0.340000 | USD | 1 | tier_code | dimension_never_populated | q_xhigh_4k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_high_1k_2k | image_result | 0.160000 | USD | 1 | tier_code | dimension_never_populated | q_high_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_high_1k | image_result | 0.110000 | USD | 1 | tier_code | dimension_never_populated | q_high_1k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_high_2k | image_result | 0.160000 | USD | 1 | tier_code | dimension_never_populated | q_high_2k | - |
 | runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_high_4k | image_result | 0.190000 | USD | 1 | tier_code | dimension_never_populated | q_high_4k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_low_1k_2k | image_result | 0.010000 | USD | 1 | tier_code | dimension_never_populated | q_low_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_low_4k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | q_low_4k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_max_1k_2k | image_result | 0.630000 | USD | 1 | tier_code | dimension_never_populated | q_max_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_max_4k | image_result | 0.760000 | USD | 1 | tier_code | dimension_never_populated | q_max_4k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_medium_1k_2k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | q_medium_1k_2k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_medium_4k | image_result | 0.110000 | USD | 1 | tier_code | dimension_never_populated | q_medium_4k | - |
-| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_xhigh_1k_2k | image_result | 0.280000 | USD | 1 | tier_code | dimension_never_populated | q_xhigh_1k_2k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_low_1k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | q_low_1k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_low_2k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | q_low_2k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_low_4k | image_result | 0.030000 | USD | 1 | tier_code | dimension_never_populated | q_low_4k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_max_1k | image_result | 0.420000 | USD | 1 | tier_code | dimension_never_populated | q_max_1k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_max_2k | image_result | 0.630000 | USD | 1 | tier_code | dimension_never_populated | q_max_2k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_max_4k | image_result | 0.750000 | USD | 1 | tier_code | dimension_never_populated | q_max_4k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_medium_1k | image_result | 0.030000 | USD | 1 | tier_code | dimension_never_populated | q_medium_1k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_medium_2k | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | q_medium_2k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_medium_4k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | q_medium_4k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_xhigh_1k | image_result | 0.190000 | USD | 1 | tier_code | dimension_never_populated | q_xhigh_1k | - |
+| runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_xhigh_2k | image_result | 0.280000 | USD | 1 | tier_code | dimension_never_populated | q_xhigh_2k | - |
 | runway/global/pricing/gpt_image_2_5_sunburst.json | runway-global-gpt_image_2_5_sunburst-image-q_xhigh_4k | image_result | 0.340000 | USD | 1 | tier_code | dimension_never_populated | q_xhigh_4k | - |
 | runway/global/pricing/grok_imagine_image_2.json | runway-global-grok_imagine_image_2-image-low_1k | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | low_1k | - |
 | runway/global/pricing/grok_imagine_image_2.json | runway-global-grok_imagine_image_2-image-low_2k | image_result | 0.060000 | USD | 1 | tier_code | dimension_never_populated | low_2k | - |
@@ -306,6 +336,11 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | runway/global/pricing/ideogram_4_5.json | runway-global-ideogram_4_5-image-q_low | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | q_low | - |
 | runway/global/pricing/ideogram_4_5.json | runway-global-ideogram_4_5-image-q_medium | image_result | 0.080000 | USD | 1 | tier_code | dimension_never_populated | q_medium | - |
 | runway/global/pricing/ideogram_4_5.json | runway-global-ideogram_4_5-image-q_very_low | image_result | 0.010000 | USD | 1 | tier_code | dimension_never_populated | q_very_low | - |
+| runway/global/pricing/ideogram_vector.json | runway-global-ideogram_vector-image-image_to_vector | image_result | 0.110000 | USD | 1 | tier_code | dimension_never_populated | image_to_vector | - |
+| runway/global/pricing/ideogram_vector.json | runway-global-ideogram_vector-image-t2v_q_high | image_result | 0.220000 | USD | 1 | tier_code | dimension_never_populated | t2v_q_high | - |
+| runway/global/pricing/ideogram_vector.json | runway-global-ideogram_vector-image-t2v_q_high_refs | image_result | 0.350000 | USD | 1 | tier_code | dimension_never_populated | t2v_q_high_refs | - |
+| runway/global/pricing/ideogram_vector.json | runway-global-ideogram_vector-image-t2v_q_low | image_result | 0.140000 | USD | 1 | tier_code | dimension_never_populated | t2v_q_low | - |
+| runway/global/pricing/ideogram_vector.json | runway-global-ideogram_vector-image-t2v_q_medium | image_result | 0.170000 | USD | 1 | tier_code | dimension_never_populated | t2v_q_medium | - |
 | runway/global/pricing/magnific_precision_upscaler_v2.json | runway-global-magnific_precision_upscaler_v2-image-over_4096px | image_result | 1.500000 | USD | 1 | tier_code | dimension_never_populated | over_4096px | - |
 | runway/global/pricing/magnific_precision_upscaler_v2.json | runway-global-magnific_precision_upscaler_v2-image-upto_4096px | image_result | 0.250000 | USD | 1 | tier_code | dimension_never_populated | upto_4096px | - |
 | runway/global/pricing/nano_banana_2.1.json | runway-global-nano_banana_2.1-image-res_1k | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | res_1k | - |

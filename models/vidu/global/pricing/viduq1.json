@@ -25,8 +25,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "unitPrice": "0.100000",
       "unitSize": "1"

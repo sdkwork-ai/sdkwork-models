@@ -6,7 +6,7 @@
   "catalogKey": "google/veo-3.1-lite-generate-preview",
   "codingVisible": false,
   "colorToken": "#5b21b6",
-  "description": "官方 Veo 模型版本表将 veo-3.1-lite-generate-preview 标记为 \"Veo 3.1 Lite Preview (Deprecated)\"（Last updated 2026-10-22）；本轮 pricing 页未列出 Veo 单价，官方未指名继任模型。旧条目仅作迁移参考。",
+  "description": "随 Veo 3.1 Preview 一并关停。官方 Veo 文档原文：\"Veo 3.1 Preview ( veo-3.1-generate-preview , veo-3.1-fast-generate-preview , and veo-3.1-lite-generate-preview ) in the Gemini API was shut down on October 22, 2026 . Migrate to Gemini Omni Flash ( gemini-omni-1.1-flash ) ...\"（Last updated 2026-10-22 UTC）旧条目与历史价格仅作迁移参考。",
   "displayName": "Veo 3.1 Lite Generate Preview",
   "familyCode": "veo",
   "inputModalities": [
@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 36000,
   "latencyP95Ms": 130000,
-  "lifecycle": "deprecated",
+  "lifecycle": "retired",
   "modelId": "veo-3.1-lite-generate-preview",
   "outputModalities": [
     "video"
@@ -23,12 +23,13 @@
   "primaryCapability": "video",
   "rankScore": "740.000000",
   "regionCode": "global",
-  "releaseStage": "deprecated",
-  "routingState": "catalog_only",
+  "releaseStage": "retired",
+  "replacementModel": "gemini-omni-1.1-flash",
+  "routingState": "disabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "hidden",
+  "shelfState": "archived",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/veo"
   },
   "strengths": [

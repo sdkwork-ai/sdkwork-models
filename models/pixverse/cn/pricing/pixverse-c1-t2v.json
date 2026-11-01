@@ -32,7 +32,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
       },
       "tierCode": "res_360p",
@@ -68,7 +68,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
       },
       "tierCode": "res_540p",
@@ -104,7 +104,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
       },
       "tierCode": "res_720p",
@@ -140,7 +140,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
       },
       "tierCode": "res_1080p",
@@ -176,7 +176,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
       },
       "tierCode": "audio_res_360p",
@@ -212,7 +212,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
       },
       "tierCode": "audio_res_540p",
@@ -248,7 +248,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
       },
       "tierCode": "audio_res_720p",
@@ -284,7 +284,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
       },
       "tierCode": "audio_res_1080p",

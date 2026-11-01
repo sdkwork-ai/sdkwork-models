@@ -11,31 +11,66 @@
         {
           "dimensionCode": "tier_code",
           "operator": "eq",
-          "value": "res_480p_720p"
+          "value": "res_480p"
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
       "operationCode": "video.generate",
       "priceBookCode": "models.runway.global.official",
-      "priceId": "runway-global-seedance2-second-res_480p_720p",
+      "priceId": "runway-global-seedance2-second-res_480p",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.runway.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "f60ad4193c90fb683e89f4fa9a54941248dfb70f49c44442ab81ee8d8aafe1ce",
+      "rateHash": "672fd43788d6f5d19f2a69ac42829fca56005f56d7276c53cea34a1ae3a54cd1",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
-      "tierCode": "res_480p_720p",
-      "unitPrice": "0.360000",
+      "tierCode": "res_480p",
+      "unitPrice": "0.140000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-seedance2-second-res_720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "9f9ec48bac49578471a5ac3ff528229852122b64901b990522b0b3ef933125fe",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_720p",
+      "unitPrice": "0.300000",
       "unitSize": "1"
     },
     {
@@ -50,7 +85,7 @@
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
       "operationCode": "video.generate",
@@ -62,11 +97,11 @@
       "productCode": "models.runway.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "79521b306bbd01018900af65d6c95969d5c1073ce51a002a87d2a49c42ce2ed5",
+      "rateHash": "47f14e0362ef83e951c22bc41b16fc2f36a6112ceb138500e99c500e911e4bc8",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
       "tierCode": "res_1080p",
@@ -85,7 +120,7 @@
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
       "operationCode": "video.generate",
@@ -97,11 +132,11 @@
       "productCode": "models.runway.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "3bf6c71b8f6a9d42d7a2fe9069bf076d45a5e4e994d81010b519e5c519c4fcbb",
+      "rateHash": "170defa0f3eff41492eb4317bce54df8d874b9290b1fba08d2174d508fc2e7c6",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
+        "observedAt": "2026-11-01T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
       "tierCode": "res_4k",

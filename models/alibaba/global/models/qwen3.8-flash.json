@@ -12,7 +12,8 @@
   "familyCode": "qwen",
   "inputModalities": [
     "text",
-    "image"
+    "image",
+    "video"
   ],
   "latencyP50Ms": 700,
   "latencyP95Ms": 2300,
@@ -31,8 +32,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
-    "sourceUrl": "https://platform.qianwenai.com/docs/changelog/models"
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://www.qwencloud.com/models/qwen3.8-flash"
   },
   "strengths": [
     "Long context",

@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#1d4ed8",
   "contextTokens": 128000,
-  "description": "ERNIE thinking preview model for Chinese reasoning workloads.",
+  "description": "ERNIE 5.0 Thinking Preview is no longer listed on the official model list (updated 2026-10-29); the current 深度思考 table carries DeepSeek / Qwen / GLM / Kimi only, and the official price tables carry no ERNIE thinking row. No ERNIE reasoning successor is listed; the entry is kept only for historical pricing.",
   "displayName": "ERNIE 5.0 Thinking Preview",
   "familyCode": "ernie",
   "inputModalities": [
@@ -16,7 +16,7 @@
   ],
   "latencyP50Ms": 820,
   "latencyP95Ms": 2800,
-  "lifecycle": "preview",
+  "lifecycle": "deprecated",
   "maxInputTokens": 119000,
   "maxOutputTokens": 65536,
   "modelId": "ernie-5.0-thinking-preview",
@@ -26,12 +26,12 @@
   "primaryCapability": "chat",
   "rankScore": "820.000000",
   "regionCode": "cn",
-  "releaseStage": "preview",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
   },
   "strengths": [

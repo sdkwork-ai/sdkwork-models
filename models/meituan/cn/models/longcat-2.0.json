@@ -8,13 +8,13 @@
   "codingVisible": true,
   "colorToken": "#0284c7",
   "contextTokens": 1048576,
-  "description": "Meituan LongCat 2.0 trillion-parameter MoE agentic model for coding, agent workflows, and ultra-long context tasks. Open-sourced under MIT license with 1M token context window.",
+  "description": "Meituan LongCat 2.0 trillion-parameter MoE agentic model for coding, agent workflows, and ultra-long context tasks. Open-sourced under MIT license with 1M token context window. The official LongCat docs of 2026-11-01 no longer list LongCat 2.0 as a supported model: the quick start supported-model table, the API pay-as-you-go page and the model-parameter comparison all cover LongCat 2.5 Preview only, and the /pricing/longcat-2.0 page survives only as an older docs build. Kept for migration reference; migrate to LongCat 2.5 Preview (longcat-2.5-preview).",
   "displayName": "LongCat 2.0",
   "familyCode": "longcat",
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1048576,
   "maxOutputTokens": 131072,
   "modelId": "longcat-2.0",
@@ -24,12 +24,12 @@
   "primaryCapability": "chat",
   "rankScore": "920.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://longcat.chat/platform/docs/zh/"
   },
   "strengths": [

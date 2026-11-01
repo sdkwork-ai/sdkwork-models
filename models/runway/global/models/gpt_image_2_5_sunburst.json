@@ -5,7 +5,7 @@
   ],
   "catalogKey": "runway/gpt_image_2_5_sunburst",
   "codingVisible": false,
-  "description": "OpenAI GPT Image 2.5 Sunburst model resold through the Runway Dev API, billed on the same table as Flare plus a per-reference-image charge.",
+  "description": "OpenAI GPT Image 2.5 Sunburst model resold through the Runway Dev API on the same rate table as Flare: per image by quality, resolution tier and aspect ratio; the 1:1 square rates are modeled here and wider or taller ratios bill lower, down to 1 credit, plus 1 credit per reference image.",
   "displayName": "GPT Image 2.5 Sunburst",
   "familyCode": "runway-image",
   "inputModalities": [
@@ -24,8 +24,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
-    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
   },
   "supportsJsonSchema": false,
   "supportsStreaming": false,

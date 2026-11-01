@@ -15,9 +15,10 @@
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "1080p: 15 credits/second per the official credit table at 1 credit = $0.005; the rounded official USD table shows $0.08/sec.",
       "operationCode": "video.generate",
       "priceBookCode": "models.vidu.global.official",
       "priceId": "vidu-global-viduq3-pro-fast-second-res-1080p",
@@ -27,15 +28,15 @@
       "productCode": "models.vidu.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "5c9258abc1b0885dd3ab32c5d3ef338e69aa068f69143c4f16a40e834e761b14",
+      "rateHash": "709d17c218ce6bd983e2224086529460b01e54a2282f94e7c196437c68aa392c",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "res_1080p",
-      "unitPrice": "0.125000",
+      "unitPrice": "0.075000",
       "unitSize": "1"
     },
     {
@@ -50,9 +51,10 @@
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "720p: 12 credits/second per the official credit table at 1 credit = $0.005; the official USD table shows $0.06/sec.",
       "operationCode": "video.generate",
       "priceBookCode": "models.vidu.global.official",
       "priceId": "vidu-global-viduq3-pro-fast-second-res-720p",
@@ -62,15 +64,15 @@
       "productCode": "models.vidu.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "28e5b26a1d7a78900db9f80c6cc2df3717881ce67356b9c3f0e4030cf074708d",
+      "rateHash": "65b288c21ad825229341073f6fb5c288625b67a11144425526f3e98dc990a675",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "res_720p",
-      "unitPrice": "0.100000",
+      "unitPrice": "0.060000",
       "unitSize": "1"
     },
     {
@@ -85,9 +87,10 @@
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "1080p off-peak: 8 credits/second per the official credit table at 1 credit = $0.005; the official USD table shows $0.04/sec.",
       "operationCode": "video.generate",
       "priceBookCode": "models.vidu.global.official",
       "priceId": "vidu-global-viduq3-pro-fast-second-offpeak-res-1080p",
@@ -97,15 +100,15 @@
       "productCode": "models.vidu.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "751542ccd814d92ad1e82b89a10595046cee32f3f55cf126af2cab0bf0cf766c",
+      "rateHash": "54101e048e402819ff9c8fcd0e1791efc3200a590a6abe136d8e1d33cab28bb8",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "offpeak_res_1080p",
-      "unitPrice": "0.065000",
+      "unitPrice": "0.040000",
       "unitSize": "1"
     },
     {
@@ -120,9 +123,10 @@
         }
       ],
       "currency": "USD",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "720p off-peak: 6 credits/second per the official credit table at 1 credit = $0.005; the official USD table shows $0.03/sec.",
       "operationCode": "video.generate",
       "priceBookCode": "models.vidu.global.official",
       "priceId": "vidu-global-viduq3-pro-fast-second-offpeak-res-720p",
@@ -132,15 +136,15 @@
       "productCode": "models.vidu.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "c1126a5de508e03d9b4ebb1577f2b0945da14bce26a7f6f29b26156620ac5824",
+      "rateHash": "8e0764a95cc53dd69ae4aadaf9b8cfdc2f6ead0b9edc263e3c2bdc79651adf7a",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "offpeak_res_720p",
-      "unitPrice": "0.050000",
+      "unitPrice": "0.030000",
       "unitSize": "1"
     }
   ],

@@ -31,8 +31,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "t2i_1080p",
       "unitPrice": "0.030000",
@@ -66,8 +66,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "t2i_2k",
       "unitPrice": "0.040000",
@@ -101,8 +101,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "t2i_4k",
       "unitPrice": "0.050000",
@@ -136,8 +136,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "r2i_ref1_3_1080p",
       "unitPrice": "0.040000",
@@ -171,8 +171,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "r2i_ref1_3_2k",
       "unitPrice": "0.060000",
@@ -206,8 +206,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "r2i_ref1_3_4k",
       "unitPrice": "0.100000",
@@ -241,8 +241,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "r2i_ref4_7_1080p",
       "unitPrice": "0.050000",
@@ -276,8 +276,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "r2i_ref4_7_2k",
       "unitPrice": "0.080000",
@@ -311,8 +311,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "r2i_ref4_7_4k",
       "unitPrice": "0.150000",
@@ -341,8 +341,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-10-26T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.com/docs/pricing"
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "unitPrice": "0.030000",
       "unitSize": "1"

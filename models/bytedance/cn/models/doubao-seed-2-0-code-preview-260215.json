@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#b91c1c",
   "contextTokens": 256000,
-  "description": "Doubao Seed 2.0 Code model optimized for software engineering, debugging, and agentic coding workflows.",
+  "description": "Doubao Seed 2.0 Code Preview (260215) marked 即将下线 on the 2026-10-30 Volcengine Ark model list; 256K context window, 224K max input, 128K max answer and 128K max CoT. Legacy id kept for backward compatibility; new coding/agent traffic should use doubao-seed-evolving.",
   "displayName": "Doubao Seed 2.0 Code",
   "familyCode": "doubao-seed",
   "inputModalities": [
@@ -15,8 +15,8 @@
     "image"
   ],
   "lifecycle": "deprecated",
-  "maxInputTokens": 256000,
-  "maxOutputTokens": 32768,
+  "maxInputTokens": 229376,
+  "maxOutputTokens": 131072,
   "modelId": "doubao-seed-2-0-code-preview-260215",
   "outputModalities": [
     "text"
@@ -25,11 +25,12 @@
   "rankScore": "870.000000",
   "regionCode": "cn",
   "releaseStage": "deprecated",
+  "replacementModel": "doubao-seed-evolving",
   "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://www.volcengine.com/docs/82379"
   },
   "strengths": [

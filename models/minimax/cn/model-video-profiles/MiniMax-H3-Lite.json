@@ -17,6 +17,9 @@
       "maxDurationSeconds": 10,
       "minDurationSeconds": 6,
       "outputAudio": false,
+      "pricingTierCodes": [
+        "res_768p"
+      ],
       "profileCode": "t2v_range_768p",
       "resolution": "768p",
       "resolutionTierCode": "res_768p",
@@ -24,10 +27,7 @@
       "wireParameters": {
         "duration": "6-10",
         "resolution": "768p"
-      },
-      "pricingTierCodes": [
-        "res_768p"
-      ]
+      }
     },
     {
       "aspectRatios": [
@@ -44,6 +44,9 @@
       "maxDurationSeconds": 10,
       "minDurationSeconds": 6,
       "outputAudio": false,
+      "pricingTierCodes": [
+        "res_768p"
+      ],
       "profileCode": "i2v_range_768p",
       "resolution": "768p",
       "resolutionTierCode": "res_768p",
@@ -51,10 +54,7 @@
       "wireParameters": {
         "duration": "6-10",
         "resolution": "768p"
-      },
-      "pricingTierCodes": [
-        "res_768p"
-      ]
+      }
     },
     {
       "aspectRatios": [
@@ -71,6 +71,9 @@
       "maxDurationSeconds": 10,
       "minDurationSeconds": 6,
       "outputAudio": false,
+      "pricingTierCodes": [
+        "res_768p"
+      ],
       "profileCode": "r2v_range_768p",
       "resolution": "768p",
       "resolutionTierCode": "res_768p",
@@ -78,10 +81,7 @@
       "wireParameters": {
         "duration": "6-10",
         "resolution": "768p"
-      },
-      "pricingTierCodes": [
-        "res_768p"
-      ]
+      }
     },
     {
       "aspectRatios": [
@@ -98,6 +98,9 @@
       "maxDurationSeconds": 10,
       "minDurationSeconds": 6,
       "outputAudio": false,
+      "pricingTierCodes": [
+        "res_480p"
+      ],
       "profileCode": "t2v_range_480p",
       "resolution": "480p",
       "resolutionTierCode": "res_480p",
@@ -105,10 +108,7 @@
       "wireParameters": {
         "duration": "6-10",
         "resolution": "480p"
-      },
-      "pricingTierCodes": [
-        "res_480p"
-      ]
+      }
     },
     {
       "aspectRatios": [
@@ -125,6 +125,9 @@
       "maxDurationSeconds": 10,
       "minDurationSeconds": 6,
       "outputAudio": false,
+      "pricingTierCodes": [
+        "res_480p"
+      ],
       "profileCode": "i2v_range_480p",
       "resolution": "480p",
       "resolutionTierCode": "res_480p",
@@ -132,10 +135,7 @@
       "wireParameters": {
         "duration": "6-10",
         "resolution": "480p"
-      },
-      "pricingTierCodes": [
-        "res_480p"
-      ]
+      }
     },
     {
       "aspectRatios": [
@@ -152,6 +152,9 @@
       "maxDurationSeconds": 10,
       "minDurationSeconds": 6,
       "outputAudio": false,
+      "pricingTierCodes": [
+        "res_480p"
+      ],
       "profileCode": "r2v_range_480p",
       "resolution": "480p",
       "resolutionTierCode": "res_480p",
@@ -159,16 +162,13 @@
       "wireParameters": {
         "duration": "6-10",
         "resolution": "480p"
-      },
-      "pricingTierCodes": [
-        "res_480p"
-      ]
+      }
     }
   ],
   "regionCode": "cn",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://platform.minimaxi.com/docs/api-reference/video-generation-v2-create"
   },
   "vendorCode": "minimax"

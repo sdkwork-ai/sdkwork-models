@@ -1,0 +1,44 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video",
+    "audio"
+  ],
+  "catalogKey": "pixverse/pixverse-v5.6",
+  "codingVisible": false,
+  "colorToken": "#8b5cf6",
+  "description": "PixVerse V5.6 平衡生成速度与成本；支持 5/8/10 秒、360p–1080p（1080p 受时长与能力组合限制）、可选有声，按次固定 Credits 计费。",
+  "displayName": "PixVerse V5.6",
+  "familyCode": "pixverse-video",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "pixverse-v5.6",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://docs.platform.pixverse.ai/model-capability-map-2394982m0"
+  },
+  "strengths": [
+    "Text to video",
+    "Image to video",
+    "First and last frame video"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "pixverse",
+  "vendorName": "PixVerse"
+}

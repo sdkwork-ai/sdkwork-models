@@ -25,13 +25,109 @@
         "duration": "5-10",
         "resolution": "720p"
       }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "vidu/viduq4-preview/i2v_range_4k",
+      "displayName": "Image to Video · 5–10s · 4k",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 10,
+      "minDurationSeconds": 5,
+      "outputAudio": true,
+      "profileCode": "i2v_range_4k",
+      "resolution": "4k",
+      "resolutionTierCode": "res_4k",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "5-10",
+        "resolution": "4k"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "vidu/viduq4-preview/i2v_range_2k",
+      "displayName": "Image to Video · 5–10s · 2k",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 10,
+      "minDurationSeconds": 5,
+      "outputAudio": true,
+      "profileCode": "i2v_range_2k",
+      "resolution": "2k",
+      "resolutionTierCode": "res_2k",
+      "sortOrder": 30,
+      "wireParameters": {
+        "duration": "5-10",
+        "resolution": "2k"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "vidu/viduq4-preview/i2v_range_1080p",
+      "displayName": "Image to Video · 5–10s · 1080p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 10,
+      "minDurationSeconds": 5,
+      "outputAudio": true,
+      "profileCode": "i2v_range_1080p",
+      "resolution": "1080p",
+      "resolutionTierCode": "res_1080p",
+      "sortOrder": 40,
+      "wireParameters": {
+        "duration": "5-10",
+        "resolution": "1080p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "vidu/viduq4-preview/i2v_range_540p",
+      "displayName": "Image to Video · 5–10s · 540p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 10,
+      "minDurationSeconds": 5,
+      "outputAudio": true,
+      "profileCode": "i2v_range_540p",
+      "resolution": "540p",
+      "resolutionTierCode": "res_540p",
+      "sortOrder": 50,
+      "wireParameters": {
+        "duration": "5-10",
+        "resolution": "540p"
+      }
     }
   ],
   "regionCode": "global",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
-    "sourceUrl": "https://platform.vidu.com/docs/model-map"
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://platform.vidu.com/docs/overview/model-map"
   },
   "vendorCode": "vidu"
 }

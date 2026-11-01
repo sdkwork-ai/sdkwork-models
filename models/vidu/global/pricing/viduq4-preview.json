@@ -1,0 +1,190 @@
+{
+  "catalogKey": "vidu/viduq4-preview",
+  "currency": "USD",
+  "modelId": "viduq4-preview",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_540p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "540p: official USD table $0.045/sec equals the 9 credits/sec in the credit table at 1 credit = $0.005.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq4-preview-second-res-540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "e95568cc8e1dc6f1282bc6c03b742afafc0c1eb95883593db124a45e2d78ec8b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
+      },
+      "tierCode": "res_540p",
+      "unitPrice": "0.045000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "720p: official USD table $0.095/sec equals the 19 credits/sec in the credit table at 1 credit = $0.005.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq4-preview-second-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "61fc9fb951a0d593efa318ebed7ee221dcdb64e2b7017ba1e208fda55f19ea49",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
+      },
+      "tierCode": "res_720p",
+      "unitPrice": "0.095000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "1080p: official USD table $0.12/sec equals the 24 credits/sec in the credit table at 1 credit = $0.005.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq4-preview-second-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "b8c22a00e9221a39f333b78e40cd270506eed9df9bcebcf88930406db4c75603",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "0.120000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "2K: official USD table $0.19/sec equals the 38 credits/sec in the credit table at 1 credit = $0.005.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq4-preview-second-res-2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "551e1b70240a144f44cd95a527934a50166d462b2daafd68c5bf4fdb41606c07",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
+      },
+      "tierCode": "res_2k",
+      "unitPrice": "0.190000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_4k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "4K: official USD table $0.39/sec equals the 78 credits/sec in the credit table at 1 credit = $0.005.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.vidu.global.official",
+      "priceId": "vidu-global-viduq4-preview-second-res-4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ba405301dd3aa06ca1f7f8760cc1d945acad9ced515b9b9245391d6557d08619",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
+      },
+      "tierCode": "res_4k",
+      "unitPrice": "0.390000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "vidu"
+}

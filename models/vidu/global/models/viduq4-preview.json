@@ -6,13 +6,13 @@
   ],
   "catalogKey": "vidu/viduq4-preview",
   "codingVisible": false,
-  "description": "Vidu Q4 Preview (viduq4-preview): next-gen flagship for expressive audio & video; image-to-video and reference-to-video, 1–16s, 540p/720p/1080p/2K/4K, 24fps. Today’s global pricing page lists only credit consumption (540p 9 / 720p 19 / 1080p 24 / 2K 38 / 4K 78 credits per second) and restates the RMB credit unit price (1 credit = RMB 0.03125); it does not publish a USD credit rate, so a verifiable USD unit price cannot be derived for this region. Kept catalog_only + hidden without a pricing file pending an official USD quote.",
+  "description": "Vidu Q4 Preview (viduq4-preview): next-gen flagship for expressive audio & video; image-to-video and reference-to-video, 24fps, 540p/720p/1080p/2K/4K. Official global USD table (1 credit = $0.005): 540p $0.045, 720p $0.095, 1080p $0.12, 2K $0.19, 4K $0.39 per second; the credit table charges 9/19/24/38/78 credits per second for the same tiers. The model map lists 1-16s selectable while the credit table lists 3-16s billing, so the minimum billable duration is not stated consistently across the two official pages.",
   "displayName": "Vidu Q4 Preview",
   "familyCode": "vidu-video",
   "inputModalities": [
     "image"
   ],
-  "lifecycle": "catalog_only",
+  "lifecycle": "active",
   "modelId": "viduq4-preview",
   "outputModalities": [
     "video",
@@ -20,13 +20,13 @@
   ],
   "primaryCapability": "video",
   "regionCode": "global",
-  "releaseStage": "preview",
-  "routingState": "catalog_only",
+  "releaseStage": "active",
+  "routingState": "enabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "hidden",
+  "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
-    "sourceUrl": "https://platform.vidu.com/docs/model-map"
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://platform.vidu.com/docs/overview/model-map"
   },
   "supportsJsonSchema": false,
   "supportsStreaming": false,

@@ -1,7 +1,7 @@
 {
   "families": [
     {
-      "defaultModel": "longcat-2.0",
+      "defaultModel": "longcat-2.5-preview",
       "displayName": "LongCat",
       "familyCode": "longcat",
       "familyType": "llm",

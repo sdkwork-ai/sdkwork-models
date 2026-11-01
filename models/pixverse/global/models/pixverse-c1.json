@@ -6,14 +6,14 @@
   ],
   "catalogKey": "pixverse/pixverse-c1",
   "codingVisible": false,
-  "description": "PixVerse 官方推荐生成模型之一（Model Overview: Recommended Models 列出 C1 与 V6），支持文生视频、图生视频、首尾帧、参考生视频/Fusion，最大 15 秒 / 1080p。官方以 credit 计价，credit→USD 换算口径存在冲突，未换算价格。",
+  "description": "PixVerse C1 为官方核心生成模型（Model Capability Map 定位：电影级画面、复杂运动与特效场景），支持文生视频、图生视频、首尾帧，360p–1080p、1–15 秒、可选有声；按生成秒计费，官方口径 225 Credits = USD 1。",
   "displayName": "PixVerse C1",
   "familyCode": "pixverse-video",
   "inputModalities": [
     "text",
     "image"
   ],
-  "lifecycle": "preview",
+  "lifecycle": "active",
   "modelId": "pixverse-c1",
   "outputModalities": [
     "video",
@@ -21,13 +21,13 @@
   ],
   "primaryCapability": "video",
   "regionCode": "global",
-  "releaseStage": "preview",
-  "routingState": "catalog_only",
+  "releaseStage": "active",
+  "routingState": "enabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "hidden",
+  "shelfState": "listed",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
-    "sourceUrl": "https://docs.platform.pixverse.ai/model-overview-2140345m0"
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://docs.platform.pixverse.ai/model-capability-map-2394982m0"
   },
   "supportsJsonSchema": false,
   "supportsStreaming": false,

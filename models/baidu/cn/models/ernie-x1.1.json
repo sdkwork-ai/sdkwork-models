@@ -8,13 +8,13 @@
   "codingVisible": true,
   "colorToken": "#2932e1",
   "contextTokens": 64000,
-  "description": "ERNIE X1.1 reasoning model with extended chain-of-thought for complex reasoning and math tasks.",
+  "description": "ERNIE X1.1 is no longer listed on the official model list (updated 2026-10-29); the current 深度思考 table carries DeepSeek / Qwen / GLM / Kimi only, and the official price tables carry no ERNIE X1 row. No ERNIE reasoning successor is listed; the entry is kept only for historical pricing.",
   "displayName": "ERNIE X1.1",
   "familyCode": "ernie",
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 55000,
   "maxOutputTokens": 65536,
   "modelId": "ernie-x1.1",
@@ -24,12 +24,12 @@
   "primaryCapability": "reasoning",
   "rankScore": "870.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
   },
   "strengths": [

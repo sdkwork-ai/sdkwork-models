@@ -6,7 +6,7 @@
   "catalogKey": "stability_ai/stable-audio-2.5-sfx",
   "codingVisible": false,
   "colorToken": "#0f766e",
-  "description": "Stability AI Stable Audio 2.5 text-to-audio mode for professional sound-effect and foley generation up to 190 seconds.",
+  "description": "Stable Audio 2.5 sound-effect prompting mode exposed through the official TrackType: SFX tag; not a separately billed SKU. The official pricing page lists only Stable Audio 3.0 and 2.5 at 8 credits per generation, so no standalone price row is recorded and this entry stays catalog-only.",
   "displayName": "Stable Audio 2.5 SFX",
   "familyCode": "stable-audio-sfx",
   "inputModalities": [
@@ -14,7 +14,7 @@
   ],
   "latencyP50Ms": 2000,
   "latencyP95Ms": 8000,
-  "lifecycle": "active",
+  "lifecycle": "catalog_only",
   "modelId": "stable-audio-2.5-sfx",
   "outputModalities": [
     "audio"
@@ -22,12 +22,12 @@
   "primaryCapability": "sfx",
   "rankScore": "750.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://stability.ai/api-pricing-update-25"
   },
   "strengths": [

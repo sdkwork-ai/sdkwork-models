@@ -1,0 +1,66 @@
+{
+  "catalogKey": "bytedance/doubao-seed-translation-250915",
+  "currency": "CNY",
+  "modelId": "doubao-seed-translation-250915",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seed-translation-250915-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "9e757b73d840cabe31d1487e2c4975e4562b04c3a91f77d7f2fc7d97f247c6a7",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "unitPrice": "1.200000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-doubao-seed-translation-250915-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "0c222f1921cf83711c5f75f6d7e7e6fdae293eda15d73b1df8ff7253a9cfb5b0",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+      },
+      "unitPrice": "3.600000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "bytedance"
+}

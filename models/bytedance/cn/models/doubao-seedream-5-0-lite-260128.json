@@ -6,26 +6,27 @@
   "catalogKey": "bytedance/doubao-seedream-5-0-lite-260128",
   "codingVisible": false,
   "colorToken": "#dc2626",
-  "description": "Doubao Seedream 5.0 Lite on Volcengine Ark, the Seedream 5.0 generation offered in the official price table (the plain doubao-seedream-5-0-260128 id is listed but carries no published price). Supports single-image generation and group image generation from text, a single image, or multiple reference images.",
+  "description": "The 2026-10-30 Volcengine Ark model list marks doubao-seedream-5-0-260128 (同时支持：doubao-seedream-5-0-lite-260128) as 即将下线; the lite id is the priced alias of that model and is kept for backward compatibility only. New image traffic should use doubao-seedream-5-0-pro-260628 or doubao-seedream-5-0-flash-260915.",
   "displayName": "Doubao Seedream 5.0 Lite",
   "familyCode": "seedream",
   "inputModalities": [
     "text",
     "image"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "doubao-seedream-5-0-lite-260128",
   "outputModalities": [
     "image"
   ],
   "primaryCapability": "image",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "doubao-seedream-5-0-pro-260628",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://www.volcengine.com/docs/82379/1330310"
   },
   "strengths": [

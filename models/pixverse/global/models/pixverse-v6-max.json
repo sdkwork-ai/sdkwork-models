@@ -1,0 +1,43 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video",
+    "audio"
+  ],
+  "catalogKey": "pixverse/pixverse-v6-max",
+  "codingVisible": false,
+  "colorToken": "#f59e0b",
+  "description": "PixVerse V6 Max（官方 model id: v6-max），当前仅支持文生视频与图生视频；支持 360p–1080p、可选有声，按生成秒计费。",
+  "displayName": "PixVerse V6 Max",
+  "familyCode": "pixverse-video",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "pixverse-v6-max",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+  },
+  "strengths": [
+    "Text to video",
+    "Image to video"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "pixverse",
+  "vendorName": "PixVerse"
+}

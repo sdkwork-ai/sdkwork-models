@@ -15,8 +15,8 @@
     "image"
   ],
   "lifecycle": "deprecated",
-  "maxInputTokens": 256000,
-  "maxOutputTokens": 32768,
+  "maxInputTokens": 229376,
+  "maxOutputTokens": 131072,
   "modelId": "doubao-seed-2-0-pro-260215",
   "outputModalities": [
     "text"
@@ -25,11 +25,12 @@
   "rankScore": "900.000000",
   "regionCode": "global",
   "releaseStage": "deprecated",
+  "replacementModel": "doubao-seed-2-1-pro-260915",
   "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://seed.bytedance.com/en/seed2"
   },
   "strengths": [

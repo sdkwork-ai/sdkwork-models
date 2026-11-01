@@ -1,0 +1,780 @@
+{
+  "catalogKey": "pixverse/pixverse-v5.6",
+  "currency": "USD",
+  "modelId": "pixverse-v5.6",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_5s_audio_off_res_360p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-5s-audio-off-res-360p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d539621cd421a493e586c952c28560ebe93f55078ef21375dc43688ed72c1232",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_5s_audio_off_res_360p",
+      "unitPrice": "0.155556",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_5s_audio_off_res_540p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-5s-audio-off-res-540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "08a3d19b8ece319e0815dc044654bdb06dc0bf15d1806c3fbfb05e5c77a1f955",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_5s_audio_off_res_540p",
+      "unitPrice": "0.155556",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_5s_audio_off_res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-5s-audio-off-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "27bf066187b9384e8bbd8a75aaf5043b77ef250985adeefbd0eb58be5000fe34",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_5s_audio_off_res_720p",
+      "unitPrice": "0.200000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_5s_audio_off_res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-5s-audio-off-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "319f001004bac37774260275c9813fa244fdd17c359d7bd1638e8a5d2464a075",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_5s_audio_off_res_1080p",
+      "unitPrice": "0.333333",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_5s_audio_on_res_360p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-5s-audio-on-res-360p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a2c8dd414e36b8c51d40a191943367c3aae82be2a9065168899e11b1b8e8d830",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_5s_audio_on_res_360p",
+      "unitPrice": "0.355556",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_5s_audio_on_res_540p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-5s-audio-on-res-540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "8dfe2f253c2a45bbce741f5d31526abdaf0daf52802097b0440a15f6de5a3821",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_5s_audio_on_res_540p",
+      "unitPrice": "0.355556",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_5s_audio_on_res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-5s-audio-on-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "f0f320a91ecd52e7895015efdc8ae05ea5fdd6242ab1568c6a56eea80965b4ce",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_5s_audio_on_res_720p",
+      "unitPrice": "0.400000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_5s_audio_on_res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-5s-audio-on-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "edf1eb1db0722326d7c780fcdae7e37713cc0a5b3422da84b18a0f99431eaaf4",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_5s_audio_on_res_1080p",
+      "unitPrice": "0.533333",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_8s_audio_off_res_360p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-8s-audio-off-res-360p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "c40977028c83ed77f96a6233624fe59ae817759fb0fb45c621486fb9358a5624",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_8s_audio_off_res_360p",
+      "unitPrice": "0.311111",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_8s_audio_off_res_540p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-8s-audio-off-res-540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "2006eb6a66f71228be646e5584237f949a3f285b31349144e634e3c7fdbfe89e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_8s_audio_off_res_540p",
+      "unitPrice": "0.311111",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_8s_audio_off_res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-8s-audio-off-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "476dcf9fc8d603a84d2704b425528f1a51dff1b8380cf01f7d1733c35cf5ae66",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_8s_audio_off_res_720p",
+      "unitPrice": "0.400000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_8s_audio_off_res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-8s-audio-off-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "30be0a3cb1f3b1f43abead25b6b694fac99aad43dd74110d33807055b7ec94b1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_8s_audio_off_res_1080p",
+      "unitPrice": "0.666667",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_8s_audio_on_res_360p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-8s-audio-on-res-360p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a43c4240d4259e76f226e08a39bbed8a3b03c49ac89c79109a98143569e0af8a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_8s_audio_on_res_360p",
+      "unitPrice": "0.511111",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_8s_audio_on_res_540p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-8s-audio-on-res-540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a52bf9755c7ff9fe63e7d06ff48075363c6af5ee2a98a15a076af1ac21a0cee4",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_8s_audio_on_res_540p",
+      "unitPrice": "0.511111",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_8s_audio_on_res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-8s-audio-on-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3cc81be3f0c471fc8e4c38a545cbc5606783b71d382ceefeab71e5ffdf7aa383",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_8s_audio_on_res_720p",
+      "unitPrice": "0.600000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_8s_audio_on_res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-8s-audio-on-res-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "907a15b389c3f4749b79d3b8aaab12c45fa3f72472d1496d1880b3df5eed972d",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_8s_audio_on_res_1080p",
+      "unitPrice": "0.866667",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_10s_audio_off_res_360p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-10s-audio-off-res-360p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "df55a53374a68657e8a9dc7fe3875d67571e3b83257d3928a2898439e49d5451",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_10s_audio_off_res_360p",
+      "unitPrice": "0.342222",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_10s_audio_off_res_540p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-10s-audio-off-res-540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "710eb19e1fc1761af7d49d91fdce2187cbfe3f8e6f1c4e7f998ce9c6ef67ef2e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_10s_audio_off_res_540p",
+      "unitPrice": "0.342222",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_10s_audio_off_res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-10s-audio-off-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ff6e441a32ab8c6f377ea1cee046a3feba64e7ff1f3485c4373f1b6410b5d62b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_10s_audio_off_res_720p",
+      "unitPrice": "0.440000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_10s_audio_on_res_360p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-10s-audio-on-res-360p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "70821ebb5a6ffe8866abfa2830632db4bfed9f322f4dbb9edf7c9538ec53d228",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_10s_audio_on_res_360p",
+      "unitPrice": "0.542222",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_10s_audio_on_res_540p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-10s-audio-on-res-540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "f37a04f83be11b09a6fb0fb631d5b6083b1a85895c52c56a307a970c07ed587c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_10s_audio_on_res_540p",
+      "unitPrice": "0.542222",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "dur_10s_audio_on_res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_result",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.global.official",
+      "priceId": "pixverse-global-v5-6-request-dur-10s-audio-on-res-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "2b36ca129a531c20c65eac69ab69f5e34adf18dc8614f0b464130c57317392e2",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-01T00:00:00Z",
+        "sourceUrl": "https://docs.platform.pixverse.ai/pixverse-api-pricing-2394995m0"
+      },
+      "tierCode": "dur_10s_audio_on_res_720p",
+      "unitPrice": "0.640000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "pixverse"
+}

@@ -7,13 +7,13 @@
   "codingVisible": true,
   "colorToken": "#2932e1",
   "contextTokens": 128000,
-  "description": "ERNIE 4.5 Turbo high-performance model optimized for multi-turn long-history dialogue and long-document understanding.",
+  "description": "ERNIE 4.5 Turbo (128K) is no longer listed on the official model list (updated 2026-10-29) or on the official price tables; the entry is kept only for historical pricing. Successor: ernie-5.1, the only ERNIE model still listed.",
   "displayName": "ERNIE 4.5 Turbo",
   "familyCode": "ernie",
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 123000,
   "maxOutputTokens": 12288,
   "modelId": "ernie-4.5-turbo-128k",
@@ -23,12 +23,13 @@
   "primaryCapability": "chat",
   "rankScore": "850.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "ernie-5.1",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
   },
   "strengths": [

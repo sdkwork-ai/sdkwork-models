@@ -6,7 +6,7 @@
   "catalogKey": "google/veo-3.1-generate-preview",
   "codingVisible": false,
   "colorToken": "#7c3aed",
-  "description": "官方 Veo 模型版本表（Last updated 2026-10-22）将 veo-3.1-generate-preview 标记为 \"Veo 3.1 Preview (Deprecated)\"；本轮 Gemini API pricing 页已不再列出 Veo 每秒单价，官方未指名继任模型。本模型为 veo 家族 defaultModel，按家族不变式保持 listed/enabled；家族继任切换与价格复核待主流程决策。",
+  "description": "官方 Veo 文档原文：\"Veo 3.1 Preview ( veo-3.1-generate-preview , veo-3.1-fast-generate-preview , and veo-3.1-lite-generate-preview ) in the Gemini API was shut down on October 22, 2026 . Migrate to Gemini Omni Flash ( gemini-omni-1.1-flash ) or the GA models available through the Gemini Enterprise Agent Platform to avoid service interruptions.\"（Last updated 2026-10-22 UTC）该端点已关停，继任为 gemini-omni-1.1-flash，条目与历史价格仅作迁移参考。注意：veo 家族 defaultModel 仍指向本模型，需主流程迁移家族默认模型。",
   "displayName": "Veo 3.1 Generate Preview",
   "familyCode": "veo",
   "inputModalities": [
@@ -16,7 +16,7 @@
   ],
   "latencyP50Ms": 52000,
   "latencyP95Ms": 160000,
-  "lifecycle": "deprecated",
+  "lifecycle": "retired",
   "modelId": "veo-3.1-generate-preview",
   "outputModalities": [
     "video"
@@ -24,12 +24,13 @@
   "primaryCapability": "video",
   "rankScore": "790.000000",
   "regionCode": "global",
-  "releaseStage": "deprecated",
-  "routingState": "enabled",
+  "releaseStage": "retired",
+  "replacementModel": "gemini-omni-1.1-flash",
+  "routingState": "disabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "archived",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
+    "observedAt": "2026-11-01T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/veo"
   },
   "strengths": [

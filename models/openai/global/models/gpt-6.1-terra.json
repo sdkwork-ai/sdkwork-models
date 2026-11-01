@@ -1,0 +1,48 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "openai/gpt-6.1-terra",
+  "codingVisible": true,
+  "contextTokens": 1050000,
+  "description": "A fast, efficient model for visual reasoning, precise computer use, and clear, natural writing. 1,050,000 context window; max input 922,000 tokens; reasoning.effort supports none/low/medium (default)/high/xhigh/max; tool calling requires the Responses API.",
+  "displayName": "GPT-6.1 Terra",
+  "familyCode": "gpt-6",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 922000,
+  "maxOutputTokens": 128000,
+  "modelId": "gpt-6.1-terra",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-terra"
+  },
+  "strengths": [
+    "Visual reasoning",
+    "Computer use",
+    "Writing",
+    "Agents"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "openai"
+}

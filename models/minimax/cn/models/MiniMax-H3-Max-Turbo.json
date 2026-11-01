@@ -6,14 +6,14 @@
   "catalogKey": "minimax/MiniMax-H3-Max-Turbo",
   "codingVisible": false,
   "colorToken": "#7c3aed",
-  "description": "MiniMax H3 Max Turbo 更低生成成本，适合文生、图生及首尾帧视频创作；支持文生视频、图生视频（首帧/尾帧），不支持视频输入和参考生视频，首帧、尾帧图片免费；480P / 768P 分辨率。",
+  "description": "MiniMax H3 Max Turbo 为上一轮（2026-10-26）计费页“H3 系列扩展模型”表中的低成本版本（768P ¥0.26 / 480P ¥0.17，不支持视频输入与参考生）。本轮官方页面已不再列出该 id：计费页“H3 系列扩展模型”仅保留 MiniMax-H3-Max；API 概览“视频生成”支持模型为 MiniMax-H3、MiniMax-H3-Highspeed、MiniMax-H3-Lite、MiniMax-H3-Max 四个；视频 V2 接口 model 字段“当前可用值”同样只列这四个；FAQ 可用模型视频表亦无该 id。降级为 catalog_only+hidden 保留历史记录与旧价，替代模型 MiniMax-H3-Max。",
   "displayName": "MiniMax H3 Max Turbo",
   "familyCode": "minimax-video",
   "inputModalities": [
     "text",
     "image"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "MiniMax-H3-Max-Turbo",
   "outputModalities": [
     "video"
@@ -21,13 +21,14 @@
   "primaryCapability": "video",
   "rankScore": "810.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "MiniMax-H3-Max",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-10-26T00:00:00Z",
-    "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+    "observedAt": "2026-11-01T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/faq/models"
   },
   "strengths": [
     "极速生成",
