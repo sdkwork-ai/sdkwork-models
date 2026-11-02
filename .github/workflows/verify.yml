@@ -1,65 +1,28 @@
-name: verify
+name: Verify Application
 
+# Thin verification entrypoint. Runner setup, dependency checkouts, toolchain
+# versions, and the install command come from the reusable SDKWork CI workflow
+# and `agent.workflow.json`; this file only selects the triggers and the gate
+# scripts. Never add inline setup, install, or gate commands here — declare them
+# in `agent.workflow.json` or the repository's package scripts instead.
 on:
   push:
     branches:
       - main
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          path: sdkwork-models
-      - uses: actions/checkout@v4
-        with:
-          repository: sdkwork-ai/sdkwork-appbase
-          path: sdkwork-appbase
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v4
-        with:
-          repository: sdkwork-ai/sdkwork-cloudrouter
-          path: sdkwork-cloudrouter
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v4
-        with:
-          repository: sdkwork-ai/sdkwork-database
-          path: sdkwork-database
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v4
-        with:
-          repository: sdkwork-ai/sdkwork-id
-          path: sdkwork-id
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v4
-        with:
-          repository: sdkwork-ai/sdkwork-utils
-          path: sdkwork-utils
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v4
-        with:
-          repository: sdkwork-ai/sdkwork-web-framework
-          path: sdkwork-web-framework
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/checkout@v4
-        with:
-          repository: sdkwork-ai/sdkwork-iam
-          path: sdkwork-iam
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10.30.2
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache-dependency-path: sdkwork-models/pnpm-lock.yaml
-      - uses: dtolnay/rust-toolchain@stable
-      - name: Install workspace dependencies
-        working-directory: sdkwork-models
-        run: pnpm install --frozen-lockfile || pnpm install
-      - name: Run SDKWork verify
-        working-directory: sdkwork-models
-        shell: pwsh
-        run: pnpm run verify
+    uses: sdkwork-ai/sdkwork-github-workflow/.github/workflows/sdkwork-ci.yml@v1
+    with:
+      config_path: agent.workflow.json
+      scripts: verify
+      install_command: pnpm install --frozen-lockfile
+      os_matrix: '["ubuntu-24.04"]'
+      framework_ref: v1
+    secrets:
+      SDKWORK_RELEASE_TOKEN: ${{ secrets.SDKWORK_RELEASE_TOKEN }}

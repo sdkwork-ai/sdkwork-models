@@ -110,13 +110,6 @@
         "run": "pnpm run build"
       }
     ],
-    "models:validate": [
-      {
-        "name": "Run SDKWork verify",
-        "shell": "pwsh",
-        "run": "pnpm run verify"
-      }
-    ],
     "package": [
       {
         "name": "Package catalog release evidence",
@@ -148,5 +141,41 @@
     "workflowArtifact": true,
     "githubRelease": false,
     "retentionDays": 30
-  }
+  },
+  "targets": [
+    {
+      "id": "linux-x64-cloud-server-tar-gz",
+      "packageId": "linux-x64-cloud-server-tar-gz",
+      "profileBinding": "fixed",
+      "deploymentProfile": "cloud",
+      "runtimeTarget": "server",
+      "profile": "server",
+      "platform": "linux",
+      "architecture": "x64",
+      "formats": [
+        "tar.gz"
+      ],
+      "runner": "ubuntu-24.04",
+      "outputGlobs": [
+        "dist/server/*.tar.gz"
+      ]
+    },
+    {
+      "id": "linux-x64-standalone-server-tar-gz",
+      "packageId": "linux-x64-standalone-server-tar-gz",
+      "profileBinding": "fixed",
+      "deploymentProfile": "standalone",
+      "runtimeTarget": "server",
+      "profile": "server",
+      "platform": "linux",
+      "architecture": "x64",
+      "formats": [
+        "tar.gz"
+      ],
+      "runner": "ubuntu-24.04",
+      "outputGlobs": [
+        "dist/server/*.tar.gz"
+      ]
+    }
+  ]
 }
