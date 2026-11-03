@@ -1,8 +1,8 @@
 use sdkwork_models_contract_service::ListAdminAiModelsQuery;
 
 pub const LIST_MODELS_BASE_WHERE_POSTGRES: &str = r#"
-        WHERE (m.tenant_id IS NULL OR m.tenant_id = 0 OR m.tenant_id = $1)
-          AND (m.organization_id IS NULL OR m.organization_id = 0 OR m.organization_id = $2)
+        WHERE (m.tenant_id = 0 OR m.tenant_id = $1)
+          AND (m.organization_id = 0 OR m.organization_id = $2)
           AND m.deleted_at IS NULL
           AND NOT EXISTS (
               SELECT 1
@@ -44,8 +44,8 @@ pub const LIST_MODELS_BASE_WHERE_POSTGRES: &str = r#"
         "#;
 
 pub const LIST_MODELS_COUNT_WHERE_POSTGRES: &str = r#"
-        WHERE (m.tenant_id IS NULL OR m.tenant_id = 0 OR m.tenant_id = $1)
-          AND (m.organization_id IS NULL OR m.organization_id = 0 OR m.organization_id = $2)
+        WHERE (m.tenant_id = 0 OR m.tenant_id = $1)
+          AND (m.organization_id = 0 OR m.organization_id = $2)
           AND m.deleted_at IS NULL
           AND NOT EXISTS (
               SELECT 1
@@ -81,8 +81,8 @@ pub const LIST_MODELS_COUNT_WHERE_POSTGRES: &str = r#"
         "#;
 
 pub const LIST_MODELS_BASE_WHERE_SQLITE: &str = r#"
-        WHERE (m.tenant_id IS NULL OR m.tenant_id = 0 OR m.tenant_id = ?)
-          AND (m.organization_id IS NULL OR m.organization_id = 0 OR m.organization_id = ?)
+        WHERE (m.tenant_id = 0 OR m.tenant_id = ?)
+          AND (m.organization_id = 0 OR m.organization_id = ?)
           AND m.deleted_at IS NULL
           AND NOT EXISTS (
               SELECT 1
@@ -116,8 +116,8 @@ pub const LIST_MODELS_ORDER_PAGE_SQLITE: &str = r#"
         "#;
 
 pub const LIST_MODELS_COUNT_WHERE_SQLITE: &str = r#"
-        WHERE (m.tenant_id IS NULL OR m.tenant_id = 0 OR m.tenant_id = ?)
-          AND (m.organization_id IS NULL OR m.organization_id = 0 OR m.organization_id = ?)
+        WHERE (m.tenant_id = 0 OR m.tenant_id = ?)
+          AND (m.organization_id = 0 OR m.organization_id = ?)
           AND m.deleted_at IS NULL
           AND NOT EXISTS (
               SELECT 1

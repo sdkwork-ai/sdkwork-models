@@ -694,8 +694,8 @@ async fn list_vendors(
 ) -> DomainResult<Vec<AdminModelVendorItem>> {
     let rows = sqlx::query(vendor_select_sql(
         r#"
-        WHERE (tenant_id IS NULL OR tenant_id = 0 OR tenant_id = $1)
-          AND (organization_id IS NULL OR organization_id = 0 OR organization_id = $2)
+        WHERE (tenant_id = 0 OR tenant_id = $1)
+          AND (organization_id = 0 OR organization_id = $2)
           AND deleted_at IS NULL
         ORDER BY
           CASE WHEN tenant_id = $3 AND organization_id = $4 THEN 0 ELSE 1 END,
@@ -1040,8 +1040,8 @@ async fn list_vendors_tx(
 ) -> DomainResult<Vec<AdminModelVendorItem>> {
     let rows = sqlx::query(vendor_select_sql(
         r#"
-        WHERE (tenant_id IS NULL OR tenant_id = 0 OR tenant_id = $1)
-          AND (organization_id IS NULL OR organization_id = 0 OR organization_id = $2)
+        WHERE (tenant_id = 0 OR tenant_id = $1)
+          AND (organization_id = 0 OR organization_id = $2)
           AND deleted_at IS NULL
         ORDER BY
           CASE WHEN tenant_id = $3 AND organization_id = $4 THEN 0 ELSE 1 END,
@@ -1067,8 +1067,8 @@ async fn list_models_tx(
 ) -> DomainResult<Vec<AdminAiModelItem>> {
     let rows = sqlx::query(model_select_sql(
         r#"
-        WHERE (m.tenant_id IS NULL OR m.tenant_id = 0 OR m.tenant_id = $1)
-          AND (m.organization_id IS NULL OR m.organization_id = 0 OR m.organization_id = $2)
+        WHERE (m.tenant_id = 0 OR m.tenant_id = $1)
+          AND (m.organization_id = 0 OR m.organization_id = $2)
           AND m.deleted_at IS NULL
           AND NOT EXISTS (
               SELECT 1
@@ -1601,8 +1601,8 @@ async fn find_vendor_by_value(
         r#"
         SELECT id, COALESCE(vendor_code, '') AS vendor_code, COALESCE(display_name, vendor_code, '') AS display_name
         FROM ai_model_vendor
-        WHERE (tenant_id IS NULL OR tenant_id = 0 OR tenant_id = $1)
-          AND (organization_id IS NULL OR organization_id = 0 OR organization_id = $2)
+        WHERE (tenant_id = 0 OR tenant_id = $1)
+          AND (organization_id = 0 OR organization_id = $2)
           AND deleted_at IS NULL
           AND (($3::bigint IS NOT NULL AND id = $4) OR vendor_code = $5 OR display_name = $6)
         ORDER BY
@@ -1644,8 +1644,8 @@ async fn find_vendor_by_id_value(
         SELECT id, COALESCE(vendor_code, '') AS vendor_code, COALESCE(display_name, vendor_code, '') AS display_name
         FROM ai_model_vendor
         WHERE id = $1
-          AND (tenant_id IS NULL OR tenant_id = 0 OR tenant_id = $2)
-          AND (organization_id IS NULL OR organization_id = 0 OR organization_id = $3)
+          AND (tenant_id = 0 OR tenant_id = $2)
+          AND (organization_id = 0 OR organization_id = $3)
           AND deleted_at IS NULL
         LIMIT 1
         "#,
@@ -2094,8 +2094,8 @@ async fn load_vendor_by_id(
     let row = sqlx::query(vendor_select_sql(
         r#"
         WHERE id = $1
-          AND (tenant_id IS NULL OR tenant_id = 0 OR tenant_id = $2)
-          AND (organization_id IS NULL OR organization_id = 0 OR organization_id = $3)
+          AND (tenant_id = 0 OR tenant_id = $2)
+          AND (organization_id = 0 OR organization_id = $3)
         LIMIT 1
         "#,
     ))
@@ -2117,8 +2117,8 @@ async fn load_model_by_id(
     let row = sqlx::query(model_select_sql(
         r#"
         WHERE m.id = $1
-          AND (m.tenant_id IS NULL OR m.tenant_id = 0 OR m.tenant_id = $2)
-          AND (m.organization_id IS NULL OR m.organization_id = 0 OR m.organization_id = $3)
+          AND (m.tenant_id = 0 OR m.tenant_id = $2)
+          AND (m.organization_id = 0 OR m.organization_id = $3)
         LIMIT 1
         "#,
         tenant_id,
@@ -2312,8 +2312,8 @@ async fn find_model_for_delete(
     let numeric_id = command.model_id.trim().parse::<i64>().ok();
     let row = sqlx::query(model_select_sql(
         r#"
-        WHERE (m.tenant_id IS NULL OR m.tenant_id = 0 OR m.tenant_id = $1)
-          AND (m.organization_id IS NULL OR m.organization_id = 0 OR m.organization_id = $2)
+        WHERE (m.tenant_id = 0 OR m.tenant_id = $1)
+          AND (m.organization_id = 0 OR m.organization_id = $2)
           AND m.deleted_at IS NULL
           AND (($3::bigint IS NOT NULL AND m.id = $4) OR m.uuid = $5)
         ORDER BY
@@ -2348,8 +2348,8 @@ async fn find_model_for_update(
     let numeric_id = command.model_id.trim().parse::<i64>().ok();
     let row = sqlx::query(model_select_sql(
         r#"
-        WHERE (m.tenant_id IS NULL OR m.tenant_id = 0 OR m.tenant_id = $1)
-          AND (m.organization_id IS NULL OR m.organization_id = 0 OR m.organization_id = $2)
+        WHERE (m.tenant_id = 0 OR m.tenant_id = $1)
+          AND (m.organization_id = 0 OR m.organization_id = $2)
           AND m.deleted_at IS NULL
           AND (($3::bigint IS NOT NULL AND m.id = $4) OR m.uuid = $5)
         ORDER BY
