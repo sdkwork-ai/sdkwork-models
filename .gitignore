@@ -131,3 +131,6 @@ temp/
 !.env.cloud.staging
 !.env.cloud.demo
 !.env.cloud.production
+
+# One-off local audit scripts (never commit)
+/.tmp-*
