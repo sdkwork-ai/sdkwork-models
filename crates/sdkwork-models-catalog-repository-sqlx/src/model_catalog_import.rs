@@ -1465,6 +1465,66 @@ fn vendor_native_video_descriptor(vendor_code: &str) -> Option<EndpointDescripto
             streaming_supported: false,
             sort_order: 660,
         },
+        // MiniMax's Hailuo family submits `POST /v1/video_generation` and is read
+        // back through `GET /v1/query/video_generation` plus
+        // `GET /v1/files/retrieve`. The catalog declares all 19 video models
+        // `vendor_native`, so without this arm they all bound to `openai.video`
+        // (`POST /v1/videos`), a route MiniMax does not serve.
+        "minimax" => EndpointDescriptor {
+            endpoint_code: "minimax.video_generation",
+            protocol_code: "vendor_native",
+            display_name: "MiniMax Video Generation",
+            method: "POST",
+            path_template: "/v1/video_generation",
+            streaming_supported: false,
+            sort_order: 670,
+        },
+        // Runway's video models are not one endpoint: the catalog's Runway
+        // family (`gen4.5`, `kling3.0_pro`, `seedance2`, `veo3.1`, `wan3`, ...)
+        // answers `POST /v1/text_to_video` and `POST /v1/image_to_video`, each
+        // returning `{id, estimatedCost}` polled through `/v1/tasks/{id}`.
+        // Without these arms every one of the 31 `vendor_native` video models
+        // bound to `openai.video` (`POST /v1/videos`), a route Runway does not
+        // serve. `text_to_video` is the bound surface because a text prompt is
+        // the minimum viable request; `image_to_video` is explicit-entry.
+        "runway" | "runwayml" => EndpointDescriptor {
+            endpoint_code: "runway.text_to_video",
+            protocol_code: "vendor_native",
+            display_name: "Runway Text To Video",
+            method: "POST",
+            path_template: "/v1/text_to_video",
+            streaming_supported: false,
+            sort_order: 680,
+        },
+        // Grok Imagine video submits `POST /v1/videos/generations` and is read
+        // back through `GET /v1/videos/{request_id}`. The path is not the
+        // OpenAI `/v1/videos` shape, so binding the catalog's `vendor_native`
+        // video models to `openai.video` planned every request against a route
+        // xAI does not serve.
+        "xai" => EndpointDescriptor {
+            endpoint_code: "xai.video_generation",
+            protocol_code: "vendor_native",
+            display_name: "xAI Video Generation",
+            method: "POST",
+            path_template: "/v1/videos/generations",
+            streaming_supported: false,
+            sort_order: 690,
+        },
+        // Black Forest Labs' first video model (`flux-3`) submits to its own
+        // per-model endpoint `POST /v1/flux-3-video` (docs.bfl.ml) and is read
+        // back through the shared `/v1/get_result` poll the image door already
+        // publishes. Without this arm the `vendor_native` flux-3 video model
+        // bound to `openai.video` (`POST /v1/videos`), a route BFL does not
+        // serve.
+        "black_forest_labs" => EndpointDescriptor {
+            endpoint_code: "black_forest_labs.video_generation",
+            protocol_code: "vendor_native",
+            display_name: "Black Forest Labs Video Generation",
+            method: "POST",
+            path_template: "/v1/flux-3-video",
+            streaming_supported: false,
+            sort_order: 700,
+        },
         _ => return None,
     };
     Some(descriptor)
@@ -1565,6 +1625,30 @@ fn vendor_native_audio_descriptor(vendor_code: &str) -> Option<EndpointDescripto
             streaming_supported: true,
             sort_order: 420,
         },
+        // ByteDance Seed TTS 2.0 (`POST /api/v3/tts/unidirectional` on
+        // openspeech). Both catalog `seed-tts-2.0-*` models are
+        // `vendor_native`; without this arm they bound to `openai.audio`.
+        "bytedance" => EndpointDescriptor {
+            endpoint_code: "bytedance.speech",
+            protocol_code: "vendor_native",
+            display_name: "ByteDance Seed TTS",
+            method: "POST",
+            path_template: "/api/v3/tts/unidirectional",
+            streaming_supported: true,
+            sort_order: 435,
+        },
+        // MiniMax Speech 2.x (`POST /v1/t2a_v2`). All 12 catalog audio models
+        // declare `vendor_native`; without this arm they bound to `openai.audio`,
+        // a path MiniMax does not serve.
+        "minimax" => EndpointDescriptor {
+            endpoint_code: "minimax.text_to_speech",
+            protocol_code: "vendor_native",
+            display_name: "MiniMax Text To Speech",
+            method: "POST",
+            path_template: "/v1/t2a_v2",
+            streaming_supported: true,
+            sort_order: 430,
+        },
         _ => return None,
     };
     Some(descriptor)
@@ -1649,6 +1733,71 @@ fn model_audio_endpoint_descriptor(model: &ModelInfo) -> EndpointDescriptor {
 /// `/v1/sound/generate` — a path ElevenLabs answers with `elevenlabs.*` codes,
 /// not `sfx.sound` — so the binding could never be honoured.
 fn model_sfx_endpoint_descriptor(model: &ModelInfo) -> EndpointDescriptor {
+    // Kling publishes two audio endpoints and names the difference in the model
+    // id: `kling-sound-t2a` is text-to-audio, `kling-sound-v2a` is
+    // video-to-audio. Vidu splits the same way: `audio1.0-text2audio` versus
+    // `audio1.0-timing2audio`.
+    if model.api_format == "vendor_native"
+        && matches!(model.vendor_code.trim(), "kling" | "kuaishou")
+    {
+        let video_to_audio = model.model_id.contains("v2a");
+        return EndpointDescriptor {
+            endpoint_code: if video_to_audio {
+                "kling.video_to_audio"
+            } else {
+                "kling.text_to_audio"
+            },
+            protocol_code: "vendor_native",
+            display_name: if video_to_audio {
+                "Kling Video To Audio"
+            } else {
+                "Kling Text To Audio"
+            },
+            method: "POST",
+            path_template: if video_to_audio {
+                "/v1/audio/video-to-audio"
+            } else {
+                "/v1/audio/text-to-audio"
+            },
+            streaming_supported: false,
+            sort_order: 405,
+        };
+    }
+    if model.api_format == "vendor_native" && model.vendor_code.trim() == "vidu" {
+        let timing = model.model_id.contains("timing");
+        return EndpointDescriptor {
+            endpoint_code: if timing {
+                "vidu.timing_to_audio"
+            } else {
+                "vidu.text_to_audio"
+            },
+            protocol_code: "vendor_native",
+            display_name: if timing {
+                "Vidu Timing To Audio"
+            } else {
+                "Vidu Text To Audio"
+            },
+            method: "POST",
+            path_template: if timing {
+                "/ent/v2/timing2audio"
+            } else {
+                "/ent/v2/text2audio"
+            },
+            streaming_supported: false,
+            sort_order: 406,
+        };
+    }
+    if model.api_format == "vendor_native" && model.vendor_code.trim() == "stability_ai" {
+        return EndpointDescriptor {
+            endpoint_code: "stability_ai.audio",
+            protocol_code: "vendor_native",
+            display_name: "Stability AI Audio",
+            method: "POST",
+            path_template: "/v2beta/audio/stable-audio-2/text-to-audio",
+            streaming_supported: false,
+            sort_order: 410,
+        };
+    }
     if model.api_format == "vendor_native" && model.vendor_code.trim() == "elevenlabs" {
         return EndpointDescriptor {
             endpoint_code: "elevenlabs.sound_generation",
@@ -1734,6 +1883,37 @@ fn model_music_endpoint_descriptor(model: &ModelInfo) -> EndpointDescriptor {
             path_template: "/v1/song/generate",
             streaming_supported: false,
             sort_order: 435,
+        };
+    }
+
+    // ElevenLabs publishes `POST /v1/music` (Eleven Music). Its music model
+    // declares `vendor_native`; without this arm it fell through to the
+    // Suno-protocol face, whose endpoint resource belongs to a different vendor
+    // (`api.suno.music`) even though the path happens to be the same.
+    if model.api_format == "vendor_native" && model.vendor_code.trim() == "elevenlabs" {
+        return EndpointDescriptor {
+            endpoint_code: "elevenlabs.music_generation",
+            protocol_code: "vendor_native",
+            display_name: "ElevenLabs Music Generation",
+            method: "POST",
+            path_template: "/v1/music",
+            streaming_supported: false,
+            sort_order: 440,
+        };
+    }
+
+    // Stability AI's music models (stable-audio-2.5 / 3.0) share the same
+    // text-to-audio endpoint as its sound-effect model; `model` selects the
+    // variant, so both families bind to one code.
+    if model.api_format == "vendor_native" && model.vendor_code.trim() == "stability_ai" {
+        return EndpointDescriptor {
+            endpoint_code: "stability_ai.audio",
+            protocol_code: "vendor_native",
+            display_name: "Stability AI Audio",
+            method: "POST",
+            path_template: "/v2beta/audio/stable-audio-2/text-to-audio",
+            streaming_supported: false,
+            sort_order: 445,
         };
     }
 
@@ -1974,6 +2154,8 @@ fn endpoint_modality_code(endpoint_code: &str) -> Option<String> {
         | "kling.image_to_video"
         | "kling.avatar"
         | "kling.motion_control"
+        | "runway.text_to_video"
+        | "runway.image_to_video"
         | "vidu.start_end_to_video"
         | "vidu.text_to_video"
         | "vidu.image_to_video"
@@ -1987,9 +2169,18 @@ fn endpoint_modality_code(endpoint_code: &str) -> Option<String> {
         | "kling.task_query"
         | "vidu.video_task_query"
         | "gemini.video_task_query" => Some("video"),
-        "minimax.music_generation" | "suno.music_generation" => Some("music"),
+        "minimax.music_generation" | "elevenlabs.music_generation" | "suno.music_generation" => {
+            Some("music")
+        }
         "elevenlabs.text_to_speech" | "volcengine.speech" => Some("audio"),
-        "elevenlabs.sound_generation" | "sfx.sound" => Some("audio"),
+        "elevenlabs.sound_generation"
+        | "sfx.sound"
+        | "stability_ai.audio"
+        | "kling.text_to_audio"
+        | "kling.video_to_audio"
+        | "vidu.text_to_audio"
+        | "vidu.timing_to_audio" => Some("audio"),
+        "kling.audio_task_query" => Some("network"),
         // Gemini's live/translate session surface is audio-in/audio-out.
         "gemini.live" => Some("audio"),
         "gemini.generate_content"
@@ -2008,15 +2199,27 @@ fn endpoint_modality_code(endpoint_code: &str) -> Option<String> {
         "alibaba.image_generation"
         | "xai.image_generation"
         | "xiaomi.image_generation"
+        | "minimax.image_generation"
+        | "xai.image_edit"
+        | "xai.image_generation_task_query"
         | "zhipu.image_generation" => Some("image"),
         "alibaba.video_generation"
+        | "black_forest_labs.video_generation"
         | "luma_ai.video_generation"
         | "pixverse.video_generation"
+        | "minimax.video_generation"
+        | "minimax.video_generation_task_query"
+        | "minimax.video_file_retrieve"
         | "xai.video_generation"
+        | "xai.video_generation_task_query"
+        | "xai.video_edit"
+        | "xai.video_extension"
         | "xiaomi.video_generation"
         | "zhipu.video_generation" => Some("video"),
         "mureka.music_generation" => Some("music"),
-        "xiaomi.speech" => Some("audio"),
+        "xiaomi.speech" | "alibaba.speech" | "minimax.text_to_speech" | "bytedance.speech" => {
+            Some("audio")
+        }
         "alibaba.chat_completions"
         | "baidu.chat_completions"
         | "deepseek.chat_completions"
@@ -2855,8 +3058,12 @@ mod tests {
             ("volcengine", "volcengine.video_generation"),
             ("vidu", "vidu.start_end_to_video"),
             ("alibaba", "alibaba.video_generation"),
+            ("black_forest_labs", "black_forest_labs.video_generation"),
             ("luma_ai", "luma_ai.video_generation"),
+            ("minimax", "minimax.video_generation"),
             ("pixverse", "pixverse.video_generation"),
+            ("runway", "runway.text_to_video"),
+            ("xai", "xai.video_generation"),
             ("zhipu", "zhipu.video_generation"),
         ] {
             let descriptor =
@@ -2886,8 +3093,13 @@ mod tests {
 
         // A vendor with no declared native video API keeps the generic surface:
         // sending it to a native route the vendor never registered would plan
-        // against a non-existent endpoint.
-        for vendor_code in ["black_forest_labs", "minimax", "runway", "openai", "xai"] {
+        // against a non-existent endpoint. `minimax` moved out of this list once
+        // its Hailuo surface (`POST /v1/video_generation`) was declared: its 19
+        // video models are all `vendor_native`, so the generic binding was the
+        // bug, not the guard. `runway` moved out for the same reason once
+        // `POST /v1/text_to_video` was declared: its 31 video models are all
+        // `vendor_native` and Runway does not serve `POST /v1/videos`.
+        for vendor_code in ["black_forest_labs", "openai"] {
             assert_eq!(
                 model_endpoint_descriptor(&video_model_of(vendor_code, "vendor_native"))
                     .endpoint_code,
@@ -2961,6 +3173,7 @@ mod tests {
             ("black_forest_labs.image_generation", "/v1/flux-{model}"),
             ("black_forest_labs.task_query", "/v1/get_result"),
             ("deepseek.anthropic_messages", "/v1/messages"),
+            ("elevenlabs.music_generation", "/v1/music"),
             ("elevenlabs.sound_generation", "/v1/sound-generation"),
             ("elevenlabs.text_to_speech", "/v1/text-to-speech/{voice_id}"),
             (
@@ -3020,8 +3233,22 @@ mod tests {
             ("minimax.music_generation", "/v1/music/generations"),
             ("moonshot.anthropic_messages", "/v1/messages"),
             ("runway.image_generation", "/v1/text_to_image"),
+            ("runway.image_to_video", "/v1/image_to_video"),
             ("runway.task_query", "/v1/tasks/{id}"),
+            ("runway.text_to_video", "/v1/text_to_video"),
             ("sfx.sound", "/v1/sound/generate"),
+            ("kling.text_to_audio", "/v1/audio/text-to-audio"),
+            ("kling.video_to_audio", "/v1/audio/video-to-audio"),
+            (
+                "kling.audio_task_query",
+                "/v1/audio/text-to-audio/{task_id}",
+            ),
+            ("vidu.text_to_audio", "/ent/v2/text2audio"),
+            ("vidu.timing_to_audio", "/ent/v2/timing2audio"),
+            (
+                "stability_ai.audio",
+                "/v2beta/audio/stable-audio-2/text-to-audio",
+            ),
             (
                 "stability_ai.image_generation",
                 "/v2beta/stable-image/generate/{mode}",
@@ -3075,6 +3302,12 @@ mod tests {
                 "alibaba.video_generation_task_query",
                 "/api/v1/tasks/{task_id}",
             ),
+            (
+                "alibaba.speech",
+                "/api/v1/services/audio/tts/speechsynthesizer",
+            ),
+            ("minimax.text_to_speech", "/v1/t2a_v2"),
+            ("bytedance.speech", "/api/v3/tts/unidirectional"),
             ("baidu.chat_completions", "/v2/chat/completions"),
             ("deepseek.chat_completions", "/v1/chat/completions"),
             ("luma_ai.video_generation", "/dream-machine/v1/generations"),
@@ -3089,6 +3322,16 @@ mod tests {
                 "mureka.music_generation_task_query",
                 "/v1/song/query/{task_id}",
             ),
+            // MiniMax's media surface: a synchronous image endpoint, the video
+            // task submit, and the two retrieval steps that turn the query's
+            // `file_id` into a download URL.
+            ("minimax.image_generation", "/v1/image_generation"),
+            ("minimax.video_generation", "/v1/video_generation"),
+            (
+                "minimax.video_generation_task_query",
+                "/v1/query/video_generation",
+            ),
+            ("minimax.video_file_retrieve", "/v1/files/retrieve"),
             (
                 "pixverse.video_generation",
                 "/openapi/v2/video/text/generate",
@@ -3100,8 +3343,13 @@ mod tests {
             ("stepfun.chat_completions", "/v1/chat/completions"),
             ("tencent.chat_completions", "/v1/chat/completions"),
             ("xai.chat_completions", "/v1/chat/completions"),
+            ("xai.image_edit", "/v1/images/edits"),
             ("xai.image_generation", "/v1/images/generations"),
+            ("xai.image_generation_task_query", "/v1/images/{request_id}"),
+            ("xai.video_edit", "/v1/videos/edits"),
+            ("xai.video_extension", "/v1/videos/extensions"),
             ("xai.video_generation", "/v1/videos/generations"),
+            ("xai.video_generation_task_query", "/v1/videos/{request_id}"),
             ("xiaomi.anthropic_messages", "/v1/messages"),
             ("xiaomi.chat_completions", "/v1/chat/completions"),
             ("xiaomi.image_generation", "/v1/images/generations"),
@@ -3199,6 +3447,18 @@ mod tests {
             "gemini.generate_content",
             "gemini.stream_generate_content",
             "black_forest_labs.task_query",
+            // Sound effects moved to per-vendor codes. `sfx.sound` stays as the
+            // generic fallback the descriptor hands out for a vendor without a
+            // native arm; no catalog model binds to it.
+            "sfx.sound",
+            // The Kling audio poll is reached with a task id, and these two are
+            // bound only by a specific model id (`kling-sound-v2a`,
+            // `audio1.0-timing2audio`). This guard probes with a fixed synthetic
+            // id per (vendor, capability), so it can only take one branch per
+            // vendor; the real catalog models reach them.
+            "kling.audio_task_query",
+            "kling.video_to_audio",
+            "vidu.timing_to_audio",
             // `bytedance.task_query` polls the Ark async video task created by
             // `bytedance.video_generation`. Same shape as the other poll
             // surfaces: the caller arrives holding a task id, so no model's
@@ -3208,6 +3468,11 @@ mod tests {
             "jimeng.task_query",
             "kling.task_query",
             "runway.task_query",
+            // Runway's image-to-video surface. `runway.text_to_video` is the
+            // *bound* video descriptor (a text prompt is the minimum viable
+            // request), and one vendor can bind exactly one video endpoint, so a
+            // caller that brings a first frame selects this one explicitly.
+            "runway.image_to_video",
             "suno.music_generation",
             "suno.music_task_query",
             "volcengine.task_query",
@@ -3220,6 +3485,13 @@ mod tests {
             "mureka.music_generation_task_query",
             "pixverse.video_generation_task_query",
             "zhipu.video_generation_task_query",
+            // MiniMax's video read-back pair, plus its image door. The query and
+            // the file retrieve are reached only by a caller holding a task id /
+            // file id; the image endpoint is a compat-face surface because every
+            // MiniMax image model declares `openai_compatible`.
+            "minimax.image_generation",
+            "minimax.video_generation_task_query",
+            "minimax.video_file_retrieve",
             "gemini.nano_banana.image_generation",
             "kling.avatar",
             "kling.image_to_video",
@@ -3257,6 +3529,10 @@ mod tests {
             "alibaba.chat_completions",
             "alibaba.embeddings",
             "alibaba.image_generation",
+            // Qwen-Audio-TTS / CosyVoice is published as a door, but the bundled
+            // catalog carries no Alibaba audio model yet, so no model binds to
+            // it; it is an explicit-entry surface.
+            "alibaba.speech",
             "deepseek.chat_completions",
             "meituan.chat_completions",
             "moonshot.chat_completions",
@@ -3264,7 +3540,17 @@ mod tests {
             "tencent.chat_completions",
             "xai.chat_completions",
             "xai.image_generation",
-            "xai.video_generation",
+            // Grok Imagine video is asynchronous: the poll is reached by a
+            // `request_id` returned by the generation call, not by any model's
+            // `primaryCapability`.
+            "xai.video_generation_task_query",
+            // xAI's other published media surfaces: image edit, the deferred-image
+            // poll, video edit and video extension. No model's
+            // `primaryCapability` selects any of them.
+            "xai.image_edit",
+            "xai.image_generation_task_query",
+            "xai.video_edit",
+            "xai.video_extension",
             "xiaomi.chat_completions",
             "xiaomi.image_generation",
             "xiaomi.speech",

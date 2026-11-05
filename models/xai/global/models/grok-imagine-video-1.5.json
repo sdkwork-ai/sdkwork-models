@@ -1,5 +1,5 @@
 {
-  "apiFormat": "openai_compatible",
+  "apiFormat": "vendor_native",
   "capabilities": [
     "video"
   ],
