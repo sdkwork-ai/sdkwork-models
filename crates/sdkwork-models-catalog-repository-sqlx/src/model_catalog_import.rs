@@ -2230,6 +2230,11 @@ fn endpoint_modality_code(endpoint_code: &str) -> Option<String> {
         | "xai.chat_completions"
         | "xiaomi.chat_completions"
         | "zhipu.chat_completions" => Some("chat"),
+        // TypeSafe AI's System One surface. `chat` is the modality the
+        // accounting side can name for it — text in, typed decisions out, on an
+        // LLM-family account — the same resolution the cloud router's copy
+        // makes.
+        "typesafe.systemone" => Some("chat"),
         "alibaba.embeddings" | "zhipu.embeddings" => Some("embedding"),
         _ => None,
     }
@@ -3400,6 +3405,10 @@ mod tests {
             "stepfun",
             "suno",
             "tencent",
+            // TypeSafe AI publishes its own vendor-native chat-shaped surface
+            // (`POST /v1/systemone`), so the chat sweep must probe it — without
+            // the vendor here the declared endpoint reads as unreachable.
+            "typesafe",
             "vidu",
             "volcengine",
             "xai",
@@ -3468,6 +3477,12 @@ mod tests {
             "bytedance.task_query",
             "jimeng.task_query",
             "kling.task_query",
+            // `gemini.video_task_query` polls the long-running operation created
+            // by `gemini.video_generation` (`GET /v1beta/models/{model}/operations/
+            // {operationId}`). No model declares a `task_query` capability, so the
+            // descriptor sweep can never reach it — same shape as every other
+            // poll surface in this list.
+            "gemini.video_task_query",
             "runway.task_query",
             // Runway's image-to-video surface. `runway.text_to_video` is the
             // *bound* video descriptor (a text prompt is the minimum viable
