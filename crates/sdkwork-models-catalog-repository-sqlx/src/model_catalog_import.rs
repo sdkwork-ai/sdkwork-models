@@ -3099,7 +3099,7 @@ mod tests {
         // bug, not the guard. `runway` moved out for the same reason once
         // `POST /v1/text_to_video` was declared: its 31 video models are all
         // `vendor_native` and Runway does not serve `POST /v1/videos`.
-        for vendor_code in ["black_forest_labs", "openai"] {
+        for vendor_code in ["openai"] {
             assert_eq!(
                 model_endpoint_descriptor(&video_model_of(vendor_code, "vendor_native"))
                     .endpoint_code,
@@ -3172,6 +3172,7 @@ mod tests {
             ("anthropic.messages", "/v1/messages"),
             ("black_forest_labs.image_generation", "/v1/flux-{model}"),
             ("black_forest_labs.task_query", "/v1/get_result"),
+            ("black_forest_labs.video_generation", "/v1/flux-3-video"),
             ("deepseek.anthropic_messages", "/v1/messages"),
             ("elevenlabs.music_generation", "/v1/music"),
             ("elevenlabs.sound_generation", "/v1/sound-generation"),
