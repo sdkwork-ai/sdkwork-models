@@ -8,7 +8,7 @@
     "warnings": []
   },
   "generatedAt": "2026-11-01T00:00:00Z",
-  "indexSha256": "7d4de9fcfe3844cdeedbe1aab8b475b1eaaab0cf0614dc1bbfd505cce42669e6",
+  "indexSha256": "c42d7425f3b18f6f5b47d32ff78be29eadfc18f0802021abbde4255232b58c8b",
   "schemaVersion": "1.1.0",
   "sourceAudit": {
     "errorCount": 0,
@@ -277,7 +277,7 @@
       "modelCount": 14,
       "pricingFileCount": 14,
       "regionCode": "global",
-      "sha256": "233c9df91f08416723e0a8f2f4357ac4766a4579a387b02480560f55c7939519",
+      "sha256": "d11ffc4f0863f83bebd4117c84636e467c3b9374c466a21b37641fba0cb21c79",
       "vendorCode": "xai"
     },
     {

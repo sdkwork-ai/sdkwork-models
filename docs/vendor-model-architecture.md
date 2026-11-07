@@ -34,7 +34,7 @@ Generated: 2026-11-01
 | 21 | tencent | Tencent Cloud | No | anthropic_messages, openai_compatible | cn | CC:unsupported / CX:unsupported / GC:unsupported |
 | 22 | typesafe | TypeSafe AI | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
 | 23 | vidu | Vidu | No | vendor_native | cn, global | CC:unsupported / CX:unsupported / GC:unsupported |
-| 24 | xai | xAI | No | openai_compatible, openai_responses | global | CC:unsupported / CX:unsupported / GC:unsupported |
+| 24 | xai | xAI | No | openai_compatible, openai_responses, vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
 | 25 | xiaomi | Xiaomi MiMo | Yes | anthropic_messages, openai_compatible | cn, global | CC:convert / CX:convert / GC:convert |
 | 26 | zhipu | Zhipu AI | No | anthropic_messages, openai_compatible, vendor_native | cn | CC:unsupported / CX:unsupported / GC:unsupported |
 
@@ -662,7 +662,7 @@ Generated: 2026-11-01
 
 | Protocol | Vendors |
 |----------|---------|
-| vendor_native | 17 |
+| vendor_native | 18 |
 | openai_compatible | 14 |
 | anthropic_messages | 9 |
 | openai_responses | 6 |

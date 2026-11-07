@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.process-database-pool",
+  "profile": {
+    "exampleFile": "config/host/postgres.env.example",
+    "database": "sdkwork_ai_dev",
+    "schema": "sdkwork_ai_dev"
+  },
+  "processes": [
+    {
+      "id": "sdkwork-api-models-standalone-gateway",
+      "entrypoint": "crates/sdkwork-api-models-standalone-gateway/src/main.rs",
+      "poolOwner": "crates/sdkwork-api-models-standalone-gateway/src/main.rs",
+      "driver": "sqlx::PgPool",
+      "poolCount": 1,
+      "databaseUrlEnv": "SDKWORK_DATABASE_URL",
+      "schemaEnv": "SDKWORK_DATABASE_SCHEMA",
+      "maxConnectionsEnv": "SDKWORK_DATABASE_MAX_CONNECTIONS",
+      "bootstrap": {
+        "poolOrchestrator": "crates/sdkwork-models-database-host/src/lib.rs",
+        "moduleLifecycleOrchestrator": "crates/sdkwork-api-models-assembly/src/bootstrap.rs",
+        "orderingAuthority": "specs/component.spec.json#apiSurfaces",
+        "integrationPoint": "sdkwork-api-models-assembly::assemble_api_router",
+        "phase": "process-pool-before-owner-assembly",
+        "ownershipPolicy": "the standalone gateway installs one process-shared pool before assembly; sdkwork-api-models-assembly owns the module database lifecycle on that pool and the readiness router reuses it",
+        "failurePolicy": "fail-closed"
+      },
+      "readiness": {
+        "path": "/readyz",
+        "poolRequiredWhenEnabled": true,
+        "check": "sdkwork_database_sqlx::DatabasePool::health_check",
+        "evidence": "crates/sdkwork-api-models-standalone-gateway/src/health_router.rs"
+      },
+      "productionSourceRoots": [
+        "crates/sdkwork-api-models-standalone-gateway/src",
+        "crates/sdkwork-api-models-assembly/src",
+        "crates/sdkwork-models-database-host/src"
+      ],
+      "consumers": [
+        {
+          "module": "sdkwork-models",
+          "ownerAssembly": "sdkwork-api-models-assembly",
+          "poolMode": "installed-process-pool",
+          "evidence": [
+            "crates/sdkwork-api-models-assembly/src/bootstrap.rs",
+            "crates/sdkwork-models-database-host/src/lib.rs"
+          ]
+        }
+      ]
+    }
+  ],
+  "verification": [
+    "node ../sdkwork-specs/tools/check-process-shared-database-pool.mjs --root .",
+    "cargo check -p sdkwork-api-models-standalone-gateway"
+  ]
+}

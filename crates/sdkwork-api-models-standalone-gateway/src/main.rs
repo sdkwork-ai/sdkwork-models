@@ -1,9 +1,9 @@
 use axum::Router;
-use sdkwork_web_bootstrap::ApiModuleRegistry;
 use sdkwork_api_models_assembly::assemble_api_router;
 use sdkwork_api_models_standalone_gateway::{
     application_cors_layer, models_health_router_with_database_pool,
 };
+use sdkwork_web_bootstrap::ApiModuleRegistry;
 use tracing::info;
 
 #[tokio::main]
@@ -14,19 +14,26 @@ async fn main() {
         info!("IAM session resolution enabled");
     }
 
+    // PROCESS-DATABASE-POOL: install the process-shared pool before the first
+    // database bootstrap. The assembly then owns the single canonical
+    // PostgreSQL pool, and the readiness router below reuses it. Creating a
+    // second pool here would double the process connection budget and run the
+    // schema lifecycle twice against the same database.
+    sdkwork_database_sqlx::enable_process_shared_database_pool();
+
     let mut module_registry = ApiModuleRegistry::new();
-    module_registry.add_module(assemble_api_router()
-        .await
-        .expect("models gateway assembly failed"));
+    module_registry.add_module(
+        assemble_api_router()
+            .await
+            .expect("models gateway assembly failed"),
+    );
     let assembly = module_registry
         .try_compose("SDKWork Models API")
         .unwrap_or_else(|error| panic!("SDKWork Models API module composition failed: {error}"));
 
-    // Gateway-owned process infrastructure (readiness probe pool); the
-    // assembly contribution carries the same role-resolved PostgreSQL config.
-    let database_pool = sdkwork_database_sqlx::create_pool_from_env("MODELS")
-        .await
-        .expect("resolve models database pool failed")
+    // Reuse the canonical pool installed by the assembly bootstrap above; the
+    // readiness probe must never open its own connection pool.
+    let database_pool = sdkwork_database_sqlx::process_shared_database_pool()
         .expect("models gateway requires SDKWORK_DATABASE_* environment configuration");
 
     let app = Router::new()

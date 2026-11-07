@@ -1,6 +1,5 @@
 //! Application API assembly bootstrap for sdkwork-models.
 
-use sdkwork_web_bootstrap::WebModule;
 use axum::Router;
 use sdkwork_database_sqlx::DatabasePool;
 use sdkwork_models_catalog_repository_sqlx::{
@@ -13,6 +12,7 @@ use sdkwork_models_contract_service::{
 };
 use sdkwork_models_service_host::ModelsServiceHost;
 pub use sdkwork_web_bootstrap::ApiAssemblyContribution;
+use sdkwork_web_bootstrap::WebModule;
 use sdkwork_web_core::HttpRouteManifest;
 use std::sync::Arc;
 

@@ -25,5 +25,7 @@ sdkwork_models_contract_service.workspace = true
 sdkwork-database-id.workspace = true
 sdkwork-database-sqlx.workspace = true
 sqlx.workspace = true
+sdkwork-models.workspace = true
+tracing.workspace = true
 sdkwork_routes_models_catalog_app_api = { workspace = true }
 sdkwork_routes_models_catalog_backend_api = { workspace = true }

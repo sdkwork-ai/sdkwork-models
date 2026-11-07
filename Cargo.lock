@@ -2658,6 +2658,7 @@ dependencies = [
  "axum",
  "sdkwork-database-id",
  "sdkwork-database-sqlx",
+ "sdkwork-models",
  "sdkwork-models-catalog-repository-sqlx",
  "sdkwork-models-contract-service",
  "sdkwork-models-database-host",
@@ -2668,6 +2669,7 @@ dependencies = [
  "sdkwork-web-core",
  "sqlx",
  "tokio",
+ "tracing",
 ]
 
 [[package]]
