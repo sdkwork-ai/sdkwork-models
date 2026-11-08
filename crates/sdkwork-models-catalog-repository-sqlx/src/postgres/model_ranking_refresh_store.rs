@@ -526,7 +526,7 @@ async fn upsert_ranking_snapshot(
              $12, $13, $14, $15, $16, $17, $18,
              $19, $20, $21, $22, $23, $24, $25,
              '[]'::jsonb, $26, $27, $28::text::numeric, $29, 0, 0,
-             1.000000, $30, $31, $32::jsonb)
+             1.000000, $30::numeric, $31::numeric, $32::jsonb)
         ON CONFLICT (tenant_id, organization_id, snapshot_date, snapshot_period, rank_scope, vendor_code, region_code, catalog_key) DO UPDATE SET
             source_type = excluded.source_type,
             source_version = excluded.source_version,

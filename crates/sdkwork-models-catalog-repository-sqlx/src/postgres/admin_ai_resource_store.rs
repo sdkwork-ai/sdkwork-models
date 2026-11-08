@@ -1478,9 +1478,9 @@ async fn delete_ai_resource_group_member(
         r#"
         UPDATE ai_resource_group_item
         SET status = -1,
-            deleted_at = $1,
+            deleted_at = CAST($1 AS TIMESTAMPTZ),
             deleted_by = $2,
-            updated_at = $1,
+            updated_at = CAST($1 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE tenant_id = $3
           AND organization_id = $4
@@ -1570,9 +1570,9 @@ async fn delete_ai_resource_group(
         r#"
         UPDATE ai_resource_group_item
         SET status = -1,
-            deleted_at = $1,
+            deleted_at = CAST($1 AS TIMESTAMPTZ),
             deleted_by = $2,
-            updated_at = $3,
+            updated_at = CAST($3 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE tenant_id = $4
           AND organization_id = $5
@@ -1593,9 +1593,9 @@ async fn delete_ai_resource_group(
         r#"
         UPDATE ai_resource_group
         SET status = -1,
-            deleted_at = $1,
+            deleted_at = CAST($1 AS TIMESTAMPTZ),
             deleted_by = $2,
-            updated_at = $3,
+            updated_at = CAST($3 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE id = $4
           AND tenant_id = $5
@@ -1764,7 +1764,7 @@ async fn upsert_hierarchy_resource(
         INSERT INTO ai_resource
             (uuid, tenant_id, organization_id, data_scope, status, created_at, updated_at, version, metadata, resource_code, resource_type, route_kind, display_name, vendor_code, modality_code, api_code, catalog_key, model, provider_native_model, resource_schema, description, sort_order, id)
         VALUES
-            ($1, $2, $3, 1, $4, $5, $6, 0, '{}'::jsonb, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17::jsonb, $18, $19, $20)
+            ($1, $2, $3, 1, $4, CAST($5 AS TIMESTAMPTZ), CAST($6 AS TIMESTAMPTZ), 0, '{}'::jsonb, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17::jsonb, $18, $19, $20)
         ON CONFLICT(tenant_id, organization_id, resource_code) DO UPDATE SET
             status = excluded.status,
             updated_at = excluded.updated_at,
@@ -1820,7 +1820,7 @@ async fn replace_hierarchy_node_members(
     sqlx::query(
         r#"
         UPDATE ai_resource_group_item
-        SET status = -1, deleted_at = $1, deleted_by = $2, updated_at = $3,
+        SET status = -1, deleted_at = CAST($1 AS TIMESTAMPTZ), deleted_by = $2, updated_at = CAST($3 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE tenant_id = $4
           AND organization_id = $5
@@ -1842,7 +1842,7 @@ async fn replace_hierarchy_node_members(
         sqlx::query(
             r#"
             UPDATE ai_resource_group
-            SET status = -1, deleted_at = $1, deleted_by = $2, updated_at = $3,
+            SET status = -1, deleted_at = CAST($1 AS TIMESTAMPTZ), deleted_by = $2, updated_at = CAST($3 AS TIMESTAMPTZ),
                 version = COALESCE(version, 0) + 1
             WHERE tenant_id = $4
               AND organization_id = $5
@@ -1884,7 +1884,7 @@ async fn replace_hierarchy_node_members(
             status = $4,
             deleted_at = NULL,
             deleted_by = NULL,
-            updated_at = $5,
+            updated_at = CAST($5 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE tenant_id = $6
           AND organization_id = $7
@@ -1942,7 +1942,7 @@ async fn retire_stale_hierarchy_resources(
         sqlx::query(
             r#"
             UPDATE ai_resource_group_item
-            SET status = -1, deleted_at = $1, deleted_by = $2, updated_at = $3,
+            SET status = -1, deleted_at = CAST($1 AS TIMESTAMPTZ), deleted_by = $2, updated_at = CAST($3 AS TIMESTAMPTZ),
                 version = COALESCE(version, 0) + 1
             WHERE tenant_id = $4
               AND organization_id = $5
@@ -1962,7 +1962,7 @@ async fn retire_stale_hierarchy_resources(
         sqlx::query(
             r#"
             UPDATE ai_resource_group
-            SET status = -1, deleted_at = $1, deleted_by = $2, updated_at = $3,
+            SET status = -1, deleted_at = CAST($1 AS TIMESTAMPTZ), deleted_by = $2, updated_at = CAST($3 AS TIMESTAMPTZ),
                 version = COALESCE(version, 0) + 1
             WHERE tenant_id = $4
               AND organization_id = $5
@@ -1982,7 +1982,7 @@ async fn retire_stale_hierarchy_resources(
         sqlx::query(
             r#"
             UPDATE ai_resource
-            SET status = -1, deleted_at = $1, deleted_by = $2, updated_at = $3,
+            SET status = -1, deleted_at = CAST($1 AS TIMESTAMPTZ), deleted_by = $2, updated_at = CAST($3 AS TIMESTAMPTZ),
                 version = COALESCE(version, 0) + 1
             WHERE tenant_id = $4
               AND organization_id = $5
@@ -2012,7 +2012,7 @@ async fn insert_ai_resource(
         INSERT INTO ai_resource
             (uuid, tenant_id, organization_id, data_scope, status, created_at, updated_at, version, metadata, resource_code, resource_type, route_kind, display_name, vendor_code, modality_code, api_code, catalog_key, model, provider_native_model, resource_schema, description, sort_order, id)
         VALUES
-            ($1, $2, $3, 1, $4, $5, $6, 0, '{}'::jsonb, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17::jsonb, $18, $19, $20)
+            ($1, $2, $3, 1, $4, CAST($5 AS TIMESTAMPTZ), CAST($6 AS TIMESTAMPTZ), 0, '{}'::jsonb, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17::jsonb, $18, $19, $20)
         RETURNING id
         "#,
     )
@@ -2050,7 +2050,7 @@ async fn insert_ai_resource_group(
         INSERT INTO ai_resource_group
             (uuid, tenant_id, organization_id, data_scope, status, created_at, updated_at, version, metadata, group_code, group_name, group_type, selection_mode, description, sort_order, id)
         VALUES
-            ($1, $2, $3, 1, $4, $5, $6, 0, '{}'::jsonb, $7, $8, $9, $10, $11, $12, $13)
+            ($1, $2, $3, 1, $4, CAST($5 AS TIMESTAMPTZ), CAST($6 AS TIMESTAMPTZ), 0, '{}'::jsonb, $7, $8, $9, $10, $11, $12, $13)
         RETURNING id
         "#,
     )
@@ -2097,7 +2097,7 @@ async fn update_ai_resource_core(
             description = CASE WHEN $19 THEN $20 ELSE description END,
             status = COALESCE($21, status),
             sort_order = CASE WHEN $22 THEN $23 ELSE sort_order END,
-            updated_at = $24,
+            updated_at = CAST($24 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE id = $25
           AND tenant_id = $26
@@ -2158,7 +2158,7 @@ async fn update_ai_resource_group_core(
             description = CASE WHEN $5 THEN $6 ELSE description END,
             sort_order = CASE WHEN $7 THEN $8 ELSE sort_order END,
             status = COALESCE($9, status),
-            updated_at = $10,
+            updated_at = CAST($10 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE id = $11
           AND tenant_id = $12
@@ -2213,7 +2213,7 @@ async fn replace_members_for_update(
     sqlx::query(
         r#"
         UPDATE ai_resource_group_item
-        SET status = -1, deleted_at = $1, deleted_by = $2, updated_at = $3,
+        SET status = -1, deleted_at = CAST($1 AS TIMESTAMPTZ), deleted_by = $2, updated_at = CAST($3 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE tenant_id = $4
           AND organization_id = $5
@@ -2274,7 +2274,7 @@ async fn replace_group_members_for_update(
     sqlx::query(
         r#"
         UPDATE ai_resource_group_item
-        SET status = -1, deleted_at = $1, deleted_by = $2, updated_at = $3,
+        SET status = -1, deleted_at = CAST($1 AS TIMESTAMPTZ), deleted_by = $2, updated_at = CAST($3 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE tenant_id = $4
           AND organization_id = $5
@@ -2316,7 +2316,7 @@ async fn rename_group_member_parent_code(
         r#"
         UPDATE ai_resource_group_item
         SET resource_group_code = $1,
-            updated_at = $2,
+            updated_at = CAST($2 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE tenant_id = $3
           AND organization_id = $4
@@ -2347,7 +2347,7 @@ async fn rename_members_for_resource_code(
     sqlx::query(
         r#"
         UPDATE ai_resource_group_item
-        SET resource_group_code = $1, updated_at = $2,
+        SET resource_group_code = $1, updated_at = CAST($2 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE tenant_id = $3
           AND organization_id = $4
@@ -2366,7 +2366,7 @@ async fn rename_members_for_resource_code(
     sqlx::query(
         r#"
         UPDATE ai_resource_group
-        SET group_code = $1, updated_at = $2,
+        SET group_code = $1, updated_at = CAST($2 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE tenant_id = $3
           AND organization_id = $4
@@ -2497,7 +2497,7 @@ async fn insert_group_resource_members(
             INSERT INTO ai_resource_group_item
                 (uuid, tenant_id, organization_id, data_scope, status, created_at, updated_at, version, metadata, resource_group_id, resource_group_code, item_type, resource_id, resource_code, child_resource_group_id, child_resource_group_code, item_role, sort_order, id)
             VALUES
-                ($1, $2, $3, 1, 1, $4, $5, 0, '{}'::jsonb, $6, $7, 'resource', $8, $9, NULL, '', $10, $11, $12)
+                ($1, $2, $3, 1, 1, CAST($4 AS TIMESTAMPTZ), CAST($5 AS TIMESTAMPTZ), 0, '{}'::jsonb, $6, $7, 'resource', $8, $9, NULL, '', $10, $11, $12)
             ON CONFLICT(tenant_id, organization_id, resource_group_id, item_type, resource_code, child_resource_group_code) DO UPDATE SET
                 status = 1,
                 deleted_at = NULL,
@@ -2538,7 +2538,7 @@ async fn sync_resource_group_status(
         r#"
         UPDATE ai_resource_group
         SET status = $1,
-            updated_at = $2,
+            updated_at = CAST($2 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE tenant_id = $3
           AND organization_id = $4
@@ -2559,7 +2559,7 @@ async fn sync_resource_group_status(
         r#"
         UPDATE ai_resource_group_item
         SET status = $1,
-            updated_at = $2,
+            updated_at = CAST($2 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE tenant_id = $3
           AND organization_id = $4
@@ -2618,7 +2618,7 @@ async fn insert_members(
             INSERT INTO ai_resource_group_item
                 (uuid, tenant_id, organization_id, data_scope, status, created_at, updated_at, version, metadata, resource_group_id, resource_group_code, item_type, resource_id, resource_code, child_resource_group_id, child_resource_group_code, item_role, sort_order, id)
             VALUES
-                ($1, $2, $3, 1, 1, $4, $5, 0, $6::jsonb, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)
+                ($1, $2, $3, 1, 1, CAST($4 AS TIMESTAMPTZ), CAST($5 AS TIMESTAMPTZ), 0, $6::jsonb, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)
             ON CONFLICT(tenant_id, organization_id, resource_group_id, item_type, resource_code, child_resource_group_code) DO UPDATE SET
                 status = 1,
                 deleted_at = NULL,
@@ -2767,7 +2767,7 @@ async fn ensure_resource_group(
             status = 1,
             deleted_at = NULL,
             deleted_by = NULL,
-            updated_at = $4,
+            updated_at = CAST($4 AS TIMESTAMPTZ),
             version = COALESCE(version, 0) + 1
         WHERE uuid = $5
           AND tenant_id = $6
@@ -2799,8 +2799,8 @@ async fn ensure_resource_group(
             organization_id,
             data_scope,
             status,
-            $1,
-            $2,
+            CAST($1 AS TIMESTAMPTZ),
+            CAST($2 AS TIMESTAMPTZ),
             0,
             '{}'::jsonb,
             resource_code,

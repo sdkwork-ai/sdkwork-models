@@ -1147,7 +1147,7 @@ async fn insert_model_mapping(
              source_vendor_id, source_vendor_code, target_vendor_id, target_vendor_code,
              mapping_mode, match_type, enabled, id)
         VALUES
-            ($1, $2, $3, 0, 1, $4, $4, 0, '{}'::jsonb,
+            ($1, $2, $3, 0, 1, $4::timestamptz, $4::timestamptz, 0, '{}'::jsonb,
              $5, $6, $7, $8,
              $9, $10, $11, $12)
         RETURNING id
@@ -3023,8 +3023,8 @@ async fn soft_delete_model_mapping(
     sqlx::query(
         r#"
         UPDATE ai_model_mapping_rule
-        SET deleted_at = $1,
-            updated_at = $1,
+        SET deleted_at = $1::timestamptz,
+            updated_at = $1::timestamptz,
             deleted_by = $2,
             version = COALESCE(version, 0) + 1
         WHERE id = $3
