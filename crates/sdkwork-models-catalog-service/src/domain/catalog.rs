@@ -12,12 +12,25 @@ pub const DEFAULT_PROVIDER_CIRCUIT_BREAKER_FAILURE_THRESHOLD: usize = 1;
 pub const MAX_PROVIDER_CIRCUIT_BREAKER_FAILURE_THRESHOLD: usize = 100;
 pub const DEFAULT_PROVIDER_CIRCUIT_BREAKER_RECOVERY_WINDOW_SECONDS: u64 = 60;
 
+/// The single provider-model-id parser used by every surface that dials a
+/// vendor (chat, responses, embeddings, image, video, audio, music, and the
+/// provider-native passthrough routes).
+///
+/// A request may spell the model as `vendor/model` (canonical OpenRouter form),
+/// `vendor:model` (client and display-label style), `vendor|model`
+/// (provider-picker style), in half or full width, and occasionally with a
+/// `region` middle segment (`deepseek/cn/deepseek-flash`). When the head is a
+/// known vendor or relay namespace the prefix (and the region) are stripped so
+/// the vendor receives its own model id; any other head is not a model-id
+/// prefix at all (OpenAI fine-tune ids such as `ft:gpt-4o-2024-08-13:org:abc`,
+/// or variant ids such as `gpt-4o:free`) and is returned verbatim, so a
+/// caller's model is never rewritten into a different one.
 pub fn provider_native_model_id(model_key: &str) -> String {
     let value = model_key.trim();
     if value.is_empty() {
         return String::new();
     }
-    if let Some(identity) = parse_model_catalog_identity(value) {
+    if let Some(identity) = parse_request_model_identity(value) {
         if unambiguous_catalog_namespace_prefix(&identity.vendor_code)
             || relay_provider_namespace_prefix(&identity.vendor_code)
         {
@@ -25,6 +38,71 @@ pub fn provider_native_model_id(model_key: &str) -> String {
         }
     }
     value.to_owned()
+}
+
+/// Separators a *request* model id may use between the vendor prefix and the
+/// model, including the full-width forms a Chinese IME produces.
+const REQUEST_MODEL_SEPARATORS: [char; 6] = ['/', ':', '|', '／', '：', '｜'];
+
+/// Tolerant inbound reader: vendor + model parts for any accepted separator.
+///
+/// The **storage** contract stays strict — [`parse_model_catalog_identity`]
+/// accepts only `vendor/model` (see [`ensure_canonical_model_catalog_key`]) —
+/// while this reader absorbs the request dialects. Remaining `/` segments stay
+/// part of the model id (`meta-llama/llama-3-70b`), and one leading `region`
+/// segment is dropped, because a region is routing state rather than model
+/// identity.
+pub fn parse_request_model_identity(value: &str) -> Option<ModelCatalogIdentity> {
+    let trimmed = value.trim();
+    if trimmed.is_empty() {
+        return None;
+    }
+    let separator = trimmed.find(|c: char| REQUEST_MODEL_SEPARATORS.contains(&c))?;
+    let vendor_code = trimmed[..separator].trim();
+    if vendor_code.is_empty() {
+        return None;
+    }
+    let rest = trimmed[separator..]
+        .trim_start_matches(|c: char| REQUEST_MODEL_SEPARATORS.contains(&c))
+        .trim();
+    if rest.is_empty() {
+        return None;
+    }
+    // Drop one leading `region` segment whatever separator follows it
+    // (`deepseek/cn/deepseek-flash`, `deepseek:cn:deepseek-flash`,
+    // `deepseek|cn|deepseek-flash`): a region is routing state, not model
+    // identity. Only the leading segment is inspected, so a `:` inside the
+    // model id (variant suffixes, fine-tune ids) is never misread.
+    let rest = drop_leading_region_segment(rest);
+    let mut model_parts = rest
+        .split(['/', '／', '|', '｜'])
+        .map(str::trim)
+        .filter(|part| !part.is_empty())
+        .map(str::to_owned)
+        .collect::<Vec<_>>();
+    if model_parts.is_empty() {
+        return None;
+    }
+    if model_parts.len() >= 2 && is_model_region_segment(&model_parts[0]) {
+        model_parts.remove(0);
+    }
+    Some(ModelCatalogIdentity {
+        vendor_code: vendor_code.to_owned(),
+        model_parts,
+    })
+}
+
+/// Removes one leading `region` segment (plus its separator) from a model tail.
+fn drop_leading_region_segment(rest: &str) -> &str {
+    let Some(separator) = rest.find(|c: char| REQUEST_MODEL_SEPARATORS.contains(&c)) else {
+        return rest;
+    };
+    if !is_model_region_segment(&rest[..separator]) {
+        return rest;
+    }
+    rest[separator..]
+        .trim_start_matches(|c: char| REQUEST_MODEL_SEPARATORS.contains(&c))
+        .trim()
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -1586,5 +1664,105 @@ fn normalize_credential_rotation_or_default(value: impl Into<String>) -> String 
         "weighted_round_robin" => "weighted_round_robin".to_owned(),
         "random" => "random".to_owned(),
         _ => DEFAULT_CREDENTIAL_ROTATION.to_owned(),
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn provider_native_model_id_strips_every_request_separator() {
+        for request in [
+            "deepseek/deepseek-flash",
+            "deepseek:deepseek-flash",
+            "deepseek|deepseek-flash",
+            "deepseek：deepseek-flash",
+            "deepseek｜deepseek-flash",
+            "deepseek／deepseek-flash",
+            "  deepseek | deepseek-flash  ",
+        ] {
+            assert_eq!(
+                "deepseek-flash",
+                provider_native_model_id(request),
+                "request id: {request}"
+            );
+        }
+        // Separator and case do not matter for the vendor head either.
+        assert_eq!("gpt-4o", provider_native_model_id("OpenAI|gpt-4o"));
+        assert_eq!("gpt-4o", provider_native_model_id("openai：gpt-4o"));
+    }
+
+    #[test]
+    fn provider_native_model_id_drops_the_region_segment() {
+        for request in [
+            "deepseek/cn/deepseek-flash",
+            "deepseek:cn:deepseek-flash",
+            "deepseek|cn|deepseek-flash",
+        ] {
+            assert_eq!(
+                "deepseek-flash",
+                provider_native_model_id(request),
+                "request id: {request}"
+            );
+        }
+    }
+
+    #[test]
+    fn provider_native_model_id_keeps_model_side_segments_and_relay_overlays() {
+        assert_eq!(
+            "meta-llama/llama-3-70b",
+            provider_native_model_id("openrouter/meta-llama/llama-3-70b")
+        );
+        assert_eq!(
+            "meta-llama/llama-3-70b",
+            provider_native_model_id("openrouter|meta-llama|llama-3-70b")
+        );
+        assert_eq!(
+            "anthropic/claude-opus-4.5",
+            provider_native_model_id("openrouter/anthropic/claude-opus-4.5")
+        );
+    }
+
+    #[test]
+    fn provider_native_model_id_leaves_non_vendor_heads_untouched() {
+        for passthrough in [
+            "deepseek-flash",
+            "gpt-4o:free",
+            "ft:gpt-4o-2024-08-13:org:abc",
+            "myorg/custom-model",
+            "gemini-2.5-pro",
+            "nano-banana",
+        ] {
+            assert_eq!(
+                passthrough,
+                provider_native_model_id(passthrough),
+                "id: {passthrough}"
+            );
+        }
+    }
+
+    #[test]
+    fn request_identity_parsing_is_separate_from_storage_validation() {
+        // Request reading absorbs the dialects ...
+        for request in [
+            "deepseek:deepseek-flash",
+            "deepseek|deepseek-flash",
+            "deepseek：deepseek-flash",
+        ] {
+            let identity = parse_request_model_identity(request).expect("request identity");
+            assert_eq!("deepseek", identity.vendor_code);
+            assert_eq!("deepseek-flash", identity.model_id());
+        }
+        // ... while stored catalog keys stay canonical `vendor/model`.
+        assert!(ensure_canonical_model_catalog_key("deepseek/deepseek-flash", "catalogKey").is_ok());
+        for stored in ["deepseek:deepseek-flash", "deepseek|deepseek-flash"] {
+            assert!(
+                ensure_canonical_model_catalog_key(stored, "catalogKey").is_err(),
+                "storage keys must stay vendor/model: {stored}"
+            );
+        }
+        assert!(parse_request_model_identity("deepseek-flash").is_none());
+        assert!(parse_request_model_identity("deepseek|").is_none());
     }
 }
