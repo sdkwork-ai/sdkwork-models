@@ -1,0 +1,9 @@
+{
+  "comment": "Deliberate exceptions to MODULE_SPEC.md §4.2 (Backend Module Call Boundary, In-Process First). The Models service reaches its siblings in-process; the entry below is the desktop client's bridge, not a backend module call.",
+  "allow": [
+    {
+      "file": "crates/sdkwork-models-agent-config-bridge/src/client.rs",
+      "reason": "Client-side bridge, not a backend-to-backend call (MODULE_SPEC.md §4.2.3 client exception). The crate's documented purpose is the desktop client: client-local SQLite user_model_* records are pushed to the sdkwork-agents app-api Config SPI (POST /app/v3/api/ai/model_configurations/apply and /app/v3/api/ai/model_selections/apply) so the agents kernel materializes provider CLI configs, then the applied state is written back on the local record. It deliberately depends on no sdkwork-agents crate, and no server module in this repository constructs ModelConfigBridgeClient (only this crate's own tests do), so there is no in-process call site to migrate."
+    }
+  ]
+}

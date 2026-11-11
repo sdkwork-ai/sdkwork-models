@@ -1290,6 +1290,15 @@ pub struct UpstreamAccountGroupBinding {
     /// `None` means the binding is intentionally unscoped. `Some([])` is fail-closed and
     /// represents a configured resource scope whose supplier/group intersection is empty.
     pub resource_entitlements: Option<Vec<UpstreamResourceEntitlement>>,
+    /// Effective resource scope the routing snapshot computed for this
+    /// group × supplier × account binding (the group grant intersected with the
+    /// supplier scope and, when present, the account's own scope). `None` when
+    /// the snapshot found no configured resource scope at all.
+    ///
+    /// Unlike [`Self::resource_entitlements`] this is descriptive metadata used
+    /// by catalog projections (for example the per-group model counts); routing
+    /// keeps reading `resource_entitlements`.
+    pub effective_resource_entitlements: Option<Vec<UpstreamResourceEntitlement>>,
 }
 
 impl UpstreamAccountGroupBinding {
@@ -1302,6 +1311,7 @@ impl UpstreamAccountGroupBinding {
             api_scope: Vec::new(),
             capabilities: Vec::new(),
             resource_entitlements: None,
+            effective_resource_entitlements: None,
         }
     }
 
@@ -1326,6 +1336,7 @@ impl UpstreamAccountGroupBinding {
             api_scope: api_scope.into_iter().map(Into::into).collect(),
             capabilities: capabilities.into_iter().map(Into::into).collect(),
             resource_entitlements: None,
+            effective_resource_entitlements: None,
         }
     }
 
@@ -1334,6 +1345,14 @@ impl UpstreamAccountGroupBinding {
         resource_entitlements: Vec<UpstreamResourceEntitlement>,
     ) -> Self {
         self.resource_entitlements = Some(resource_entitlements);
+        self
+    }
+
+    pub fn with_effective_resource_entitlements(
+        mut self,
+        effective_resource_entitlements: Vec<UpstreamResourceEntitlement>,
+    ) -> Self {
+        self.effective_resource_entitlements = Some(effective_resource_entitlements);
         self
     }
 

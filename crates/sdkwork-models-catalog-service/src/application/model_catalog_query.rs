@@ -4,8 +4,9 @@ use sdkwork_utils_rust::{is_blank, snake_case};
 
 use crate::application::{PricingResolver, ResolveModelPriceQuery};
 use crate::domain::{
-    AiModel, BillingMeter, DomainResult, ModelPrice, ModelVendor, PriceSide, UpstreamAccountGroup,
-    UpstreamAccountGroupBinding, UpstreamAccountRoute,
+    provider_native_model_id, AiModel, BillingMeter, DomainResult, ModelPrice, ModelUpstreamRoute,
+    ModelVendor, PriceSide, UpstreamAccountGroup, UpstreamAccountGroupBinding,
+    UpstreamAccountRoute, UpstreamResourceEntitlement,
 };
 use crate::ports::PricingCatalog;
 
@@ -21,6 +22,10 @@ const MODEL_CATEGORY_NEW: &str = "New";
 const DEFAULT_MODEL_CATALOG_PAGE_SIZE: usize = 20;
 const MAX_MODEL_CATALOG_PAGE_SIZE: usize = 200;
 const INVALID_MODEL_CATEGORY_FILTER: &str = "__invalid_model_category__";
+/// Synthetic capability emitted by the routing snapshot when a group grant and
+/// an account's resource scope do not intersect. A binding carrying it must be
+/// treated as a deny, exactly like the routing selector does.
+const MODEL_GROUP_CAPABILITY_DENY: &str = "__deny__";
 
 pub struct ModelCatalogQueryService<'a, C: PricingCatalog> {
     catalog: &'a C,
@@ -172,7 +177,8 @@ impl<'a, C: PricingCatalog> ModelCatalogQueryService<'a, C> {
                 return true;
             }
 
-            let model_groups = group_index.groups_for(model);
+            let model_groups =
+                group_index.groups_for(model, &model_upstream_routes(self.catalog, model));
             count_model_groups(&mut model_counts_by_group, &model_groups);
             let vendor = self
                 .catalog
@@ -385,6 +391,7 @@ struct ConfiguredModelGroupIndex {
     definitions: Vec<ConfiguredModelGroupDefinition>,
     groups_by_id: BTreeMap<i64, String>,
     account_routes: Vec<UpstreamAccountRoute>,
+    has_group_bindings: bool,
 }
 
 impl ConfiguredModelGroupIndex {
@@ -402,51 +409,25 @@ impl ConfiguredModelGroupIndex {
             groups_by_id.insert(group.id, key);
         }
         let account_routes = catalog.list_upstream_account_routes();
+        let has_group_bindings = account_routes
+            .iter()
+            .any(|route| !route.account_group_bindings.is_empty());
         Self {
             definitions,
             groups_by_id,
             account_routes,
+            has_group_bindings,
         }
     }
 
-    fn groups_for(&self, model: &AiModel) -> Vec<String> {
-        if self.groups_by_id.is_empty() {
-            return Vec::new();
-        }
-
-        let mut selected_group_ids = BTreeSet::new();
-        if self
-            .account_routes
-            .iter()
-            .all(|route| route.account_group_bindings.is_empty())
-        {
-            selected_group_ids.extend(self.groups_by_id.keys().copied());
-        } else {
-            let model_capability_codes = model_group_capability_codes(model);
-            for route in &self.account_routes {
-                for binding in &route.account_group_bindings {
-                    if self.groups_by_id.contains_key(&binding.account_group_id)
-                        && binding_matches_model_capability(binding, &model_capability_codes)
-                    {
-                        selected_group_ids.insert(binding.account_group_id);
-                    }
-                }
-            }
-        }
-
-        let mut groups = selected_group_ids
-            .into_iter()
-            .filter_map(|group_id| self.groups_by_id.get(&group_id).cloned())
-            .collect::<Vec<_>>();
-        groups.sort_by(|left, right| {
-            model_group_sort_key(left)
-                .cmp(&model_group_sort_key(right))
-                .then_with(|| normalize_semantic_token(left).cmp(&normalize_semantic_token(right)))
-        });
-        groups.dedup_by(|left, right| {
-            normalize_semantic_token(left) == normalize_semantic_token(right)
-        });
-        groups
+    fn groups_for(&self, model: &AiModel, model_routes: &[ModelUpstreamRoute]) -> Vec<String> {
+        model_group_keys(
+            model,
+            model_routes,
+            &self.account_routes,
+            &self.groups_by_id,
+            self.has_group_bindings,
+        )
     }
 
     fn price_is_visible_to_group(&self, price: &ModelPrice, account_group_id: Option<i64>) -> bool {
@@ -497,6 +478,226 @@ impl ConfiguredModelGroupIndex {
         });
         groups
     }
+}
+
+/// Group keys a model belongs to, mirroring the routing authority:
+///
+/// * a group only contains a model when one of its accounts is bound to the
+///   group and the binding's resource scope covers the model. The routing
+///   snapshot's effective scope (group × supplier × account) is preferred; the
+///   account's own entitlements are the fallback and a binding without either
+///   is unscoped and serves every model, matching
+///   `account_route_allows_model_request`;
+/// * `Some([])` is a configured scope whose intersection is empty and must
+///   fail closed;
+/// * the binding capability list narrows the granted surface (`llm`, `image`,
+///   …); the synthetic `__deny__` entry denies the whole binding.
+///
+/// When the catalog carries explicit model→account routes they are
+/// authoritative for which accounts can serve the model; catalogs that derive
+/// routes from entitlements (the SQL snapshot) carry none and every account
+/// route is considered.
+fn model_group_keys(
+    model: &AiModel,
+    model_routes: &[ModelUpstreamRoute],
+    account_routes: &[UpstreamAccountRoute],
+    groups_by_id: &BTreeMap<i64, String>,
+    has_group_bindings: bool,
+) -> Vec<String> {
+    if groups_by_id.is_empty() {
+        return Vec::new();
+    }
+
+    let mut selected_group_ids = BTreeSet::new();
+    if !has_group_bindings {
+        // No group configuration exists, so every group shares the same
+        // unscoped routing behavior (see `AiRoutingIndex::matching_accounts`).
+        selected_group_ids.extend(groups_by_id.keys().copied());
+    } else {
+        let model_capability_codes = model_group_capability_codes(model);
+        let routed_accounts = routed_account_keys(model_routes);
+        for route in account_routes {
+            if let Some(routed_accounts) = routed_accounts.as_ref() {
+                let account_key = account_route_key(route);
+                if !routed_accounts.contains(&account_key) {
+                    continue;
+                }
+            }
+            for binding in &route.account_group_bindings {
+                if !groups_by_id.contains_key(&binding.account_group_id) {
+                    continue;
+                }
+                if binding_is_denied(binding) {
+                    continue;
+                }
+                if !binding_matches_model_capability(binding, &model_capability_codes) {
+                    continue;
+                }
+                if !binding_grants_model(binding, model, &model_capability_codes) {
+                    continue;
+                }
+                selected_group_ids.insert(binding.account_group_id);
+            }
+        }
+    }
+
+    let mut groups = selected_group_ids
+        .into_iter()
+        .filter_map(|group_id| groups_by_id.get(&group_id).cloned())
+        .collect::<Vec<_>>();
+    groups.sort_by(|left, right| {
+        model_group_sort_key(left)
+            .cmp(&model_group_sort_key(right))
+            .then_with(|| normalize_semantic_token(left).cmp(&normalize_semantic_token(right)))
+    });
+    groups
+        .dedup_by(|left, right| normalize_semantic_token(left) == normalize_semantic_token(right));
+    groups
+}
+
+fn routed_account_keys(model_routes: &[ModelUpstreamRoute]) -> Option<BTreeSet<(String, i64)>> {
+    if model_routes.is_empty() {
+        return None;
+    }
+    Some(
+        model_routes
+            .iter()
+            .map(|route| {
+                (
+                    normalize_semantic_token(&route.supplier_code),
+                    route.account_id,
+                )
+            })
+            .collect(),
+    )
+}
+
+fn account_route_key(route: &UpstreamAccountRoute) -> (String, i64) {
+    (
+        normalize_semantic_token(&route.supplier_code),
+        route.account_id,
+    )
+}
+
+fn binding_is_denied(binding: &UpstreamAccountGroupBinding) -> bool {
+    binding.capabilities.iter().any(|capability| {
+        capability
+            .trim()
+            .eq_ignore_ascii_case(MODEL_GROUP_CAPABILITY_DENY)
+    })
+}
+
+fn binding_grants_model(
+    binding: &UpstreamAccountGroupBinding,
+    model: &AiModel,
+    model_capability_codes: &BTreeSet<String>,
+) -> bool {
+    // The routing snapshot's effective scope (group × supplier × account) is
+    // the most precise projection. It is absent only when no resource scope is
+    // configured at all, in which case the account-scoped entitlements (or the
+    // unscoped fallback) apply.
+    let Some(entitlements) = binding
+        .effective_resource_entitlements
+        .as_deref()
+        .or(binding.resource_entitlements.as_deref())
+    else {
+        // No configured resource scope: the account is unscoped and serves
+        // every model, matching the routing selector.
+        return true;
+    };
+
+    // API endpoint grants describe a callable surface, not a model set. Only a
+    // binding without any model-scoped grant falls back to surface-level
+    // membership (the binding capability scope narrows it further).
+    let mut has_model_scope = false;
+    let mut has_api_scope = false;
+    for entitlement in entitlements {
+        if entitlement_has_model_scope(entitlement) {
+            has_model_scope = true;
+            if entitlement_matches_model(entitlement, model, model_capability_codes) {
+                return true;
+            }
+        } else if non_blank(entitlement.api_code.as_deref()).is_some() {
+            has_api_scope = true;
+        }
+    }
+
+    !has_model_scope && has_api_scope
+}
+
+fn entitlement_has_model_scope(entitlement: &UpstreamResourceEntitlement) -> bool {
+    non_blank(entitlement.catalog_key.as_deref()).is_some()
+        || non_blank(entitlement.model.as_deref()).is_some()
+        || non_blank(entitlement.provider_native_model.as_deref()).is_some()
+        || non_blank(entitlement.vendor_code.as_deref()).is_some()
+        || non_blank(entitlement.modality_code.as_deref()).is_some()
+}
+
+fn entitlement_matches_model(
+    entitlement: &UpstreamResourceEntitlement,
+    model: &AiModel,
+    model_capability_codes: &BTreeSet<String>,
+) -> bool {
+    let catalog_key = model.catalog_key.trim();
+    let model_name = model.model.trim();
+    let native_model = provider_native_model_id(catalog_key);
+    let mut constrained = false;
+
+    if let Some(value) = non_blank(entitlement.catalog_key.as_deref()) {
+        constrained = true;
+        if !value.eq_ignore_ascii_case(catalog_key) {
+            return false;
+        }
+    }
+    if let Some(value) = non_blank(entitlement.model.as_deref()) {
+        constrained = true;
+        if !value.eq_ignore_ascii_case(model_name)
+            && !value.eq_ignore_ascii_case(catalog_key)
+            && !value.eq_ignore_ascii_case(&native_model)
+        {
+            return false;
+        }
+    }
+    if let Some(value) = non_blank(entitlement.provider_native_model.as_deref()) {
+        constrained = true;
+        if !value.eq_ignore_ascii_case(&native_model) && !value.eq_ignore_ascii_case(model_name) {
+            return false;
+        }
+    }
+    if let Some(value) = non_blank(entitlement.vendor_code.as_deref()) {
+        constrained = true;
+        if !value.eq_ignore_ascii_case(model.vendor_code.trim()) {
+            return false;
+        }
+    }
+    if let Some(value) = non_blank(entitlement.modality_code.as_deref()) {
+        constrained = true;
+        let modality = normalize_semantic_token(value);
+        if !model_capability_codes.contains(&modality) {
+            return false;
+        }
+    }
+
+    constrained
+}
+
+fn non_blank(value: Option<&str>) -> Option<&str> {
+    value.map(str::trim).filter(|value| !value.is_empty())
+}
+
+fn model_upstream_routes<C: PricingCatalog + ?Sized>(
+    catalog: &C,
+    model: &AiModel,
+) -> Vec<ModelUpstreamRoute> {
+    let by_catalog_key = catalog.list_model_upstream_routes(model.catalog_key.trim());
+    if !by_catalog_key.is_empty() {
+        return by_catalog_key;
+    }
+    let model_name = model.model.trim();
+    if model_name.is_empty() || model_name.eq_ignore_ascii_case(model.catalog_key.trim()) {
+        return Vec::new();
+    }
+    catalog.list_model_upstream_routes(model_name)
 }
 
 fn count_model_groups(counts: &mut BTreeMap<String, usize>, groups: &[String]) {
@@ -909,5 +1110,307 @@ fn to_price_availability(
         Err(error) => PriceAvailability::Unavailable {
             reason: error.to_string(),
         },
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::model_group_keys;
+    use crate::domain::{
+        AiModel, DecimalValue, ModelUpstreamRoute, UpstreamAccountGroup,
+        UpstreamAccountGroupBinding, UpstreamAccountRoute, UpstreamResourceEntitlement,
+    };
+    use std::collections::BTreeMap;
+
+    fn group(id: i64, code: &str) -> UpstreamAccountGroup {
+        UpstreamAccountGroup::new(id, code, "standard", DecimalValue::ONE, DecimalValue::ONE)
+    }
+
+    fn groups_by_id(groups: &[UpstreamAccountGroup]) -> BTreeMap<i64, String> {
+        groups
+            .iter()
+            .map(|group| (group.id, group.code.clone()))
+            .collect()
+    }
+
+    fn text_model(model: &str, vendor_code: &str) -> AiModel {
+        AiModel::new(model, model, vendor_code, vec!["chat", "llm"])
+    }
+
+    fn vendor_entitlement(vendor_code: &str) -> UpstreamResourceEntitlement {
+        let mut entitlement =
+            UpstreamResourceEntitlement::new(format!("vendor.{vendor_code}"), "vendor");
+        entitlement.vendor_code = Some(vendor_code.to_owned());
+        entitlement
+    }
+
+    fn modality_entitlement(modality_code: &str) -> UpstreamResourceEntitlement {
+        let mut entitlement =
+            UpstreamResourceEntitlement::new(format!("modality.{modality_code}"), "modality");
+        entitlement.modality_code = Some(modality_code.to_owned());
+        entitlement
+    }
+
+    fn api_entitlement(api_code: &str) -> UpstreamResourceEntitlement {
+        let mut entitlement =
+            UpstreamResourceEntitlement::new(format!("api.{api_code}"), "api_endpoint");
+        entitlement.api_code = Some(api_code.to_owned());
+        entitlement
+    }
+
+    fn scoped_binding(
+        account_group_id: i64,
+        capabilities: &[&str],
+        entitlements: Option<Vec<UpstreamResourceEntitlement>>,
+    ) -> UpstreamAccountGroupBinding {
+        let binding = UpstreamAccountGroupBinding::new_resource_scoped(
+            account_group_id,
+            100,
+            100,
+            Vec::<String>::new(),
+            capabilities.iter().map(|value| (*value).to_owned()),
+        );
+        match entitlements {
+            Some(entitlements) => binding.with_resource_entitlements(entitlements),
+            None => binding,
+        }
+    }
+
+    fn account_route(
+        supplier_code: &str,
+        account_id: i64,
+        bindings: Vec<UpstreamAccountGroupBinding>,
+    ) -> UpstreamAccountRoute {
+        UpstreamAccountRoute::new(supplier_code, account_id).with_account_group_bindings(bindings)
+    }
+
+    #[test]
+    fn group_membership_prefers_the_effective_scope_for_unscoped_accounts() {
+        let groups = [group(10, "deepseek.text")];
+        let by_id = groups_by_id(&groups);
+        let routes = vec![account_route(
+            "deepseek",
+            1,
+            vec![scoped_binding(10, &["llm"], None)
+                .with_effective_resource_entitlements(vec![vendor_entitlement("deepseek")])],
+        )];
+
+        assert_eq!(
+            vec!["deepseek.text"],
+            model_group_keys(
+                &text_model("deepseek-chat", "deepseek"),
+                &[],
+                &routes,
+                &by_id,
+                true
+            )
+        );
+        assert!(
+            model_group_keys(&text_model("gpt-4o", "openai"), &[], &routes, &by_id, true)
+                .is_empty()
+        );
+    }
+
+    #[test]
+    fn group_membership_respects_vendor_resource_entitlements() {
+        let groups = [group(10, "deepseek.text"), group(11, "openai.text")];
+        let by_id = groups_by_id(&groups);
+        let routes = vec![
+            account_route(
+                "deepseek",
+                1,
+                vec![scoped_binding(
+                    10,
+                    &["llm"],
+                    Some(vec![vendor_entitlement("deepseek")]),
+                )],
+            ),
+            account_route(
+                "openai",
+                2,
+                vec![scoped_binding(
+                    11,
+                    &["llm"],
+                    Some(vec![vendor_entitlement("openai")]),
+                )],
+            ),
+        ];
+
+        assert_eq!(
+            vec!["deepseek.text"],
+            model_group_keys(
+                &text_model("deepseek-chat", "deepseek"),
+                &[],
+                &routes,
+                &by_id,
+                true
+            )
+        );
+        assert_eq!(
+            vec!["openai.text"],
+            model_group_keys(&text_model("gpt-4o", "openai"), &[], &routes, &by_id, true)
+        );
+    }
+
+    #[test]
+    fn group_membership_does_not_count_models_outside_the_granted_modality() {
+        let groups = [group(10, "aliyun.audio")];
+        let by_id = groups_by_id(&groups);
+        let routes = vec![account_route(
+            "alibaba",
+            1,
+            vec![scoped_binding(
+                10,
+                &["audio"],
+                Some(vec![modality_entitlement("audio")]),
+            )],
+        )];
+        let mut audio_model = AiModel::new("qwen-tts", "Qwen TTS", "alibaba", vec!["audio"]);
+        audio_model.modalities = vec!["audio".to_owned()];
+
+        assert_eq!(
+            vec!["aliyun.audio"],
+            model_group_keys(&audio_model, &[], &routes, &by_id, true)
+        );
+        assert!(model_group_keys(
+            &text_model("qwen-max", "alibaba"),
+            &[],
+            &routes,
+            &by_id,
+            true
+        )
+        .is_empty());
+    }
+
+    #[test]
+    fn group_membership_uses_api_surface_only_when_no_model_scope_is_granted() {
+        let groups = [group(10, "relay.text"), group(11, "deepseek.text")];
+        let by_id = groups_by_id(&groups);
+        let routes = vec![
+            account_route(
+                "relay",
+                1,
+                vec![scoped_binding(
+                    10,
+                    &["llm"],
+                    Some(vec![api_entitlement("openai.chat_completions")]),
+                )],
+            ),
+            account_route(
+                "deepseek",
+                2,
+                vec![scoped_binding(
+                    11,
+                    &["llm"],
+                    Some(vec![
+                        vendor_entitlement("deepseek"),
+                        api_entitlement("openai.chat_completions"),
+                    ]),
+                )],
+            ),
+        ];
+
+        // The relay account only grants a callable surface, so any model whose
+        // capability fits that surface is reachable through it.
+        assert_eq!(
+            vec!["relay.text"],
+            model_group_keys(&text_model("gpt-4o", "openai"), &[], &routes, &by_id, true)
+        );
+        // The deepseek account also carries a model-scoped vendor grant, which
+        // stays authoritative over the co-granted chat surface.
+        assert_eq!(
+            vec!["deepseek.text", "relay.text"],
+            model_group_keys(
+                &text_model("deepseek-chat", "deepseek"),
+                &[],
+                &routes,
+                &by_id,
+                true
+            )
+        );
+        let mut image_model =
+            AiModel::new("flux-pro", "FLUX Pro", "black_forest_labs", vec!["image"]);
+        image_model.modalities = vec!["image".to_owned()];
+        assert!(model_group_keys(&image_model, &[], &routes, &by_id, true).is_empty());
+    }
+
+    #[test]
+    fn group_membership_fails_closed_for_denied_bindings() {
+        let groups = [group(10, "deepseek.text")];
+        let by_id = groups_by_id(&groups);
+        let routes = vec![account_route(
+            "deepseek",
+            1,
+            vec![scoped_binding(
+                10,
+                &["llm", "__deny__"],
+                Some(vec![vendor_entitlement("deepseek")]),
+            )],
+        )];
+
+        assert!(model_group_keys(
+            &text_model("deepseek-chat", "deepseek"),
+            &[],
+            &routes,
+            &by_id,
+            true
+        )
+        .is_empty());
+    }
+
+    #[test]
+    fn group_membership_treats_missing_entitlements_as_unscoped() {
+        let groups = [group(10, "standard-group")];
+        let by_id = groups_by_id(&groups);
+        let routes = vec![account_route(
+            "openrouter",
+            1,
+            vec![scoped_binding(10, &["tools"], None)],
+        )];
+        let mut tools_model = text_model("gpt-4o", "openai");
+        tools_model.capabilities = vec!["chat".to_owned(), "tools".to_owned()];
+
+        assert_eq!(
+            vec!["standard-group"],
+            model_group_keys(&tools_model, &[], &routes, &by_id, true)
+        );
+        assert!(
+            model_group_keys(&text_model("o1-mini", "openai"), &[], &routes, &by_id, true)
+                .is_empty()
+        );
+    }
+
+    #[test]
+    fn group_membership_keeps_unscoped_accounts_out_of_groups_without_a_binding() {
+        let groups = [group(10, "standard-group"), group(11, "premium-lab")];
+        let by_id = groups_by_id(&groups);
+        let routes = vec![
+            account_route("openrouter", 1, vec![scoped_binding(10, &[], None)]),
+            account_route("azure_openai", 2, vec![scoped_binding(11, &[], None)]),
+        ];
+        let model_routes = vec![ModelUpstreamRoute::new("gpt-4o", "openrouter", 1, "gpt-4o")];
+
+        assert_eq!(
+            vec!["standard-group"],
+            model_group_keys(
+                &text_model("gpt-4o", "openai"),
+                &model_routes,
+                &routes,
+                &by_id,
+                true
+            )
+        );
+    }
+
+    #[test]
+    fn group_membership_returns_every_group_when_no_binding_is_configured() {
+        let groups = [group(10, "standard-group"), group(11, "premium-lab")];
+        let by_id = groups_by_id(&groups);
+        let model = text_model("gpt-4o", "openai");
+
+        assert_eq!(
+            vec!["premium-lab", "standard-group"],
+            model_group_keys(&model, &[], &[], &by_id, false)
+        );
     }
 }
