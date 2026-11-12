@@ -26,11 +26,11 @@ pub const LIST_MODELS_BASE_WHERE_POSTGRES: &str = r#"
           AND ($11::int IS NULL OR m.status = $11)
           AND (
               cardinality($12::text[]) = 0
-              OR EXISTS (
-                  SELECT 1
-                  FROM jsonb_array_elements_text(COALESCE(m.modalities, '[]'::jsonb)) modality(value)
-                  WHERE lower(modality.value) = ANY($12)
-              )
+              -- jsonb `?|` keeps the predicate index-served by the
+              -- `idx_ai_model_modalities_gin` GIN index; imported values are
+              -- stored lowercase, and the query normalizes its filter values
+              -- the same way.
+              OR m.modalities ?| $12::text[]
           )
           AND (cardinality($13::int[]) = 0 OR m.release_stage = ANY($13))
           AND ($14::int IS NULL OR m.shelf_state = $14)
@@ -69,11 +69,8 @@ pub const LIST_MODELS_COUNT_WHERE_POSTGRES: &str = r#"
           AND ($9::int IS NULL OR m.status = $9)
           AND (
               cardinality($10::text[]) = 0
-              OR EXISTS (
-                  SELECT 1
-                  FROM jsonb_array_elements_text(COALESCE(m.modalities, '[]'::jsonb)) modality(value)
-                  WHERE lower(modality.value) = ANY($10)
-              )
+              -- Same index-served containment predicate as the page query.
+              OR m.modalities ?| $10::text[]
           )
           AND (cardinality($11::int[]) = 0 OR m.release_stage = ANY($11))
           AND ($12::int IS NULL OR m.shelf_state = $12)

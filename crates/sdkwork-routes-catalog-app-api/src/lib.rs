@@ -41,11 +41,12 @@ pub fn gateway_mount<C>(
 where
     C: sdkwork_models_catalog_service::PricingCatalog + Send + Sync + 'static,
 {
-    sdkwork_models_catalog_service::app_model_catalog_router_with_stores(
+    sdkwork_models_catalog_service::app_model_catalog_router_with_stores_and_profiles(
         pricing_catalog,
         model_store,
         resource_store,
         entity_uuid_generator,
+        Some(std::sync::Arc::clone(&voice_catalog)),
     )
     .merge(sdkwork_models_catalog_service::app_voice_catalog_router(
         std::sync::Arc::clone(&voice_catalog),

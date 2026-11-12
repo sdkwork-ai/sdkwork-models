@@ -441,6 +441,11 @@ CREATE INDEX IF NOT EXISTS idx_ai_model_capability_status ON ai_model (tenant_id
 CREATE INDEX IF NOT EXISTS idx_ai_model_public_listing ON ai_model (tenant_id, organization_id, shelf_state, routing_state, release_stage, status, rank_score, id);
 CREATE INDEX IF NOT EXISTS idx_ai_model_public_rank_desc ON ai_model (tenant_id, organization_id, status, routing_state, shelf_state, rank_score, id);
 CREATE INDEX IF NOT EXISTS idx_ai_model_catalog_search ON ai_model (tenant_id, organization_id, status, vendor_code, capability, routing_state, shelf_state, display_name, id);
+-- JSONB containment lookups (`?|` / `@>`) on the app catalog filters. The
+-- app model list filters by declared modalities; without a GIN index that
+-- predicate degrades into a per-row JSONB scan once the catalog grows.
+CREATE INDEX IF NOT EXISTS idx_ai_model_modalities_gin ON ai_model USING gin (modalities);
+CREATE INDEX IF NOT EXISTS idx_ai_model_output_modalities_gin ON ai_model USING gin (output_modalities);
 
 CREATE TABLE IF NOT EXISTS ai_model_capability (
     id BIGINT NOT NULL PRIMARY KEY,

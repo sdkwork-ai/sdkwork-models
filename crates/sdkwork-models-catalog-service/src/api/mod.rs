@@ -15,7 +15,10 @@ pub use admin_model_catalog::{
     admin_model_catalog_router, admin_model_catalog_router_with_api_key_hasher,
 };
 pub use admin_model_command::admin_model_management_router_with_store;
-pub use app_models::{app_model_catalog_router, app_model_catalog_router_with_stores};
+pub use app_models::{
+    app_model_catalog_router, app_model_catalog_router_with_stores,
+    app_model_catalog_router_with_stores_and_profiles,
+};
 pub use model_rankings::{
     admin_model_rankings_router, admin_model_rankings_router_with_read_store,
     admin_model_rankings_router_with_read_store_and_refresh_store, app_model_rankings_router,

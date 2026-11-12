@@ -44,6 +44,12 @@ pub struct AdminAiModelItem {
     pub display_name: String,
     pub name: String,
     pub model_type: String,
+    /// Catalog model family code (`seedance`, `kling`, ...).
+    pub family_code: Option<String>,
+    /// Brand color token the catalog publishes for the model.
+    pub color_token: Option<String>,
+    /// Vendor documentation URL the catalog records.
+    pub docs_url: Option<String>,
     pub region_prices: Vec<AdminAiModelRegionPriceCommand>,
     pub status: String,
     pub calls: String,

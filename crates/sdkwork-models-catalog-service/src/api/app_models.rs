@@ -54,6 +54,51 @@ struct AppModelCatalogState<C> {
     model_store: Option<Arc<dyn ModelCatalogAdminStore + Send + Sync>>,
     resource_store: Option<Arc<dyn AdminAiResourceStore + Send + Sync>>,
     entity_uuid_generator: Option<Arc<dyn EntityUuidGenerator + Send + Sync>>,
+    /// Per-model catalog capability counts (video profiles, voice bindings).
+    profile_counts: Arc<ProfileCounts>,
+}
+
+/// Per-model capability counts the app catalog item publishes.
+///
+/// Video profiles and voice bindings live in dedicated catalog tables/routes;
+/// the model list only needs their cardinality so a client can decide whether
+/// to load the detail surface without an extra request per model.
+#[derive(Debug, Default)]
+struct ProfileCounts {
+    video_profiles: HashMap<String, usize>,
+    voice_bindings: HashMap<String, usize>,
+}
+
+impl ProfileCounts {
+    fn from_catalog(catalog: Option<&sdkwork_models::ModelCatalog>) -> Self {
+        let Some(catalog) = catalog else {
+            return Self::default();
+        };
+        let mut counts = Self::default();
+        for vendor in &catalog.vendors {
+            for file in &vendor.model_video_profiles {
+                *counts
+                    .video_profiles
+                    .entry(file.catalog_key.trim().to_ascii_lowercase())
+                    .or_default() += file.profiles.len();
+            }
+            for file in &vendor.model_voice_bindings {
+                *counts
+                    .voice_bindings
+                    .entry(file.catalog_key.trim().to_ascii_lowercase())
+                    .or_default() += file.bindings.len();
+            }
+        }
+        counts
+    }
+
+    fn for_catalog_key(&self, catalog_key: &str) -> (usize, usize) {
+        let key = catalog_key.trim().to_ascii_lowercase();
+        (
+            self.video_profiles.get(&key).copied().unwrap_or(0),
+            self.voice_bindings.get(&key).copied().unwrap_or(0),
+        )
+    }
 }
 
 impl<C> Clone for AppModelCatalogState<C> {
@@ -63,6 +108,7 @@ impl<C> Clone for AppModelCatalogState<C> {
             model_store: self.model_store.as_ref().map(Arc::clone),
             resource_store: self.resource_store.as_ref().map(Arc::clone),
             entity_uuid_generator: self.entity_uuid_generator.as_ref().map(Arc::clone),
+            profile_counts: Arc::clone(&self.profile_counts),
         }
     }
 }
@@ -73,6 +119,11 @@ struct AppModelCatalogQuery {
     billing_meter: Option<String>,
     vendor_code: Option<String>,
     vendor_codes: Option<String>,
+    /// Matches any declared modality, including *input* modalities: the stored
+    /// `modalities` column unions input and output, so `modalities=video` also
+    /// returns chat models that read video input. Consumers selecting models by
+    /// what the model *produces* must also filter on `capabilities` (the
+    /// primary capability) or on `outputModalities` in the response.
     modalities: Option<String>,
     capabilities: Option<String>,
     categories: Option<String>,
@@ -210,6 +261,16 @@ struct AppModelCatalogItemResponse {
     supported_agent_provider_ids: Vec<String>,
     official_reference_prices: Vec<AppModelCatalogReferencePriceResponse>,
     price_availability: AppModelCatalogPriceAvailabilityResponse,
+    /// Catalog model family code (`seedance`, `kling`, ...).
+    family_code: Option<String>,
+    /// Brand color token the catalog publishes for the model.
+    color_token: Option<String>,
+    /// Vendor documentation URL the catalog records.
+    docs_url: Option<String>,
+    /// Number of catalog video generation profiles the model declares.
+    video_profile_count: usize,
+    /// Number of voice bindings the model declares.
+    voice_binding_count: usize,
 }
 
 #[derive(Debug, Serialize)]
@@ -315,7 +376,7 @@ pub fn app_model_catalog_router<C>(catalog: Arc<C>) -> Router
 where
     C: PricingCatalog + Send + Sync + 'static,
 {
-    app_model_catalog_router_with_optional_stores(catalog, None, None, None)
+    app_model_catalog_router_with_optional_stores(catalog, None, None, None, None)
 }
 
 pub fn app_model_catalog_router_with_stores<C>(
@@ -332,6 +393,28 @@ where
         Some(model_store),
         Some(resource_store),
         Some(entity_uuid_generator),
+        None,
+    )
+}
+
+/// Router with the catalog profile source, so list items can publish each
+/// model's video-profile and voice-binding counts (capability attributes).
+pub fn app_model_catalog_router_with_stores_and_profiles<C>(
+    fallback_catalog: Arc<C>,
+    model_store: Arc<dyn ModelCatalogAdminStore + Send + Sync>,
+    resource_store: Arc<dyn AdminAiResourceStore + Send + Sync>,
+    entity_uuid_generator: Arc<dyn EntityUuidGenerator + Send + Sync>,
+    profile_catalog: Option<Arc<sdkwork_models::ModelCatalog>>,
+) -> Router
+where
+    C: PricingCatalog + Send + Sync + 'static,
+{
+    app_model_catalog_router_with_optional_stores(
+        fallback_catalog,
+        Some(model_store),
+        Some(resource_store),
+        Some(entity_uuid_generator),
+        profile_catalog,
     )
 }
 
@@ -340,10 +423,12 @@ fn app_model_catalog_router_with_optional_stores<C>(
     model_store: Option<Arc<dyn ModelCatalogAdminStore + Send + Sync>>,
     resource_store: Option<Arc<dyn AdminAiResourceStore + Send + Sync>>,
     entity_uuid_generator: Option<Arc<dyn EntityUuidGenerator + Send + Sync>>,
+    profile_catalog: Option<Arc<sdkwork_models::ModelCatalog>>,
 ) -> Router
 where
     C: PricingCatalog + Send + Sync + 'static,
 {
+    let profile_counts = Arc::new(ProfileCounts::from_catalog(profile_catalog.as_deref()));
     Router::new()
         .route(
             "/app/v3/api/ai/model_vendors",
@@ -367,6 +452,7 @@ where
             model_store,
             resource_store,
             entity_uuid_generator,
+            profile_counts,
         })
 }
 
@@ -418,7 +504,13 @@ where
                 Ok(database_page) => {
                     return finish_success(
                         &ctx,
-                        to_database_model_response(database_page, &billing_meter, page, page_size),
+                        to_database_model_response(
+                            database_page,
+                            &billing_meter,
+                            page,
+                            page_size,
+                            &state.profile_counts,
+                        ),
                     )
                 }
                 Err(error) => tracing::warn!(
@@ -450,7 +542,7 @@ where
         page_size: Some(page_size),
         offset: Some(offset),
     }) {
-        Ok(page) => finish_success(&ctx, to_response(page)),
+        Ok(page) => finish_success(&ctx, to_response(page, &state.profile_counts)),
         Err(error) => problem_for(&ctx, SdkWorkResultCode::ValidationError, error.to_string()),
     }
 }
@@ -1556,13 +1648,14 @@ fn to_database_model_response(
     billing_meter: &BillingMeter,
     page: usize,
     page_size: usize,
+    profile_counts: &ProfileCounts,
 ) -> AppModelCatalogResponse {
     let groups = database_model_groups(&database_page.items);
     let total_items = database_page.total_count;
     let items = database_page
         .items
         .into_iter()
-        .map(|item| to_database_model_item(item, billing_meter))
+        .map(|item| to_database_model_item(item, billing_meter, profile_counts))
         .collect();
     AppModelCatalogResponse {
         items,
@@ -1600,9 +1693,12 @@ fn database_model_capabilities(model: &AdminAiModelItem) -> Vec<String> {
 fn to_database_model_item(
     item: AdminAiModelItem,
     billing_meter: &BillingMeter,
+    profile_counts: &ProfileCounts,
 ) -> AppModelCatalogItemResponse {
     let official_reference_prices = database_reference_prices(&item, billing_meter);
     let capabilities = database_model_capabilities(&item);
+    let (video_profile_count, voice_binding_count) =
+        profile_counts.for_catalog_key(&item.catalog_key);
     let price_availability = AppModelCatalogPriceAvailabilityResponse {
         status: if official_reference_prices.is_empty() {
             "unavailable"
@@ -1654,6 +1750,11 @@ fn to_database_model_item(
         supported_agent_provider_ids: canonical_agent_provider_ids(),
         official_reference_prices,
         price_availability,
+        family_code: item.family_code,
+        color_token: item.color_token,
+        docs_url: item.docs_url,
+        video_profile_count,
+        voice_binding_count,
     }
 }
 
@@ -2132,9 +2233,16 @@ fn canonical_agent_provider_ids() -> Vec<String> {
         .collect()
 }
 
-fn to_response(page: ModelCatalogPage) -> AppModelCatalogResponse {
+fn to_response(
+    page: ModelCatalogPage,
+    profile_counts: &ProfileCounts,
+) -> AppModelCatalogResponse {
     AppModelCatalogResponse {
-        items: page.items.into_iter().map(to_item_response).collect(),
+        items: page
+            .items
+            .into_iter()
+            .map(|item| to_item_response(item, profile_counts))
+            .collect(),
         groups: page.groups.into_iter().map(to_group_response).collect(),
         page_info: offset_page_info(
             ((page.offset / page.page_size) + 1) as i64,
@@ -2207,9 +2315,14 @@ fn to_vendor_response(
     AppModelVendorCatalogResponse { items }
 }
 
-fn to_item_response(item: ModelCatalogItem) -> AppModelCatalogItemResponse {
+fn to_item_response(
+    item: ModelCatalogItem,
+    profile_counts: &ProfileCounts,
+) -> AppModelCatalogItemResponse {
     let price_availability =
         to_price_availability_response(&item.official_reference_prices, item.price_availability);
+    let (video_profile_count, voice_binding_count) =
+        profile_counts.for_catalog_key(&item.catalog_key);
 
     AppModelCatalogItemResponse {
         catalog_key: item.catalog_key,
@@ -2254,6 +2367,11 @@ fn to_item_response(item: ModelCatalogItem) -> AppModelCatalogItemResponse {
             })
             .collect(),
         price_availability,
+        family_code: None,
+        color_token: None,
+        docs_url: None,
+        video_profile_count,
+        voice_binding_count,
     }
 }
 
@@ -2369,6 +2487,7 @@ mod tests {
             &BillingMeter::LlmInputToken,
             1,
             20,
+            &ProfileCounts::default(),
         );
 
         assert_eq!(response.items[0].model, "ranked-first");
@@ -2376,6 +2495,54 @@ mod tests {
         assert_eq!(response.items[0].vendor, "OpenAI");
         assert_eq!(response.items[1].model, "ranked-second");
         assert_eq!(response.items[1].vendor, "Anthropic");
+    }
+
+    #[test]
+    fn database_model_item_publishes_catalog_attributes_and_profile_counts() {
+        let mut item = database_model_item(
+            "doubao-seedance-2-0-mini-260615",
+            "bytedance",
+            "ByteDance",
+        );
+        item.family_code = Some("seedance".to_owned());
+        item.color_token = Some("#7c3aed".to_owned());
+        item.docs_url = Some("https://www.volcengine.com/docs/82379/1330310".to_owned());
+        let mut counts = ProfileCounts::default();
+        counts.video_profiles.insert(
+            "bytedance/doubao-seedance-2-0-mini-260615".to_owned(),
+            6,
+        );
+        counts
+            .voice_bindings
+            .insert("bytedance/doubao-seedance-2-0-mini-260615".to_owned(), 0);
+
+        let response = to_database_model_item(item, &BillingMeter::LlmInputToken, &counts);
+        assert_eq!(response.family_code.as_deref(), Some("seedance"));
+        assert_eq!(response.color_token.as_deref(), Some("#7c3aed"));
+        assert!(response.docs_url.is_some());
+        assert_eq!(response.video_profile_count, 6);
+        assert_eq!(response.voice_binding_count, 0);
+    }
+
+    #[test]
+    fn profile_counts_read_video_profiles_and_voice_bindings_from_the_catalog() {
+        let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../..");
+        let catalog = sdkwork_models::load_catalog(root).expect("bundled catalog loads");
+        let counts = ProfileCounts::from_catalog(Some(&catalog));
+
+        let (video_profiles, voice_bindings) =
+            counts.for_catalog_key("bytedance/doubao-seedance-2-0-mini-260615");
+        assert_eq!(video_profiles, 6, "seedance mini declares six profiles");
+        assert_eq!(voice_bindings, 0);
+
+        let (_, voice_bindings) = counts.for_catalog_key("elevenlabs/eleven_multilingual_v2");
+        assert!(voice_bindings >= 1, "TTS models publish a voice binding");
+
+        assert_eq!(counts.for_catalog_key("unknown/model"), (0, 0));
+        assert_eq!(
+            ProfileCounts::from_catalog(None).for_catalog_key("bytedance/x"),
+            (0, 0)
+        );
     }
 
     fn database_model_item(model: &str, vendor_code: &str, vendor_name: &str) -> AdminAiModelItem {
@@ -2392,6 +2559,9 @@ mod tests {
             display_name: model.to_owned(),
             name: model.to_owned(),
             model_type: "Chat".to_owned(),
+            family_code: None,
+            color_token: None,
+            docs_url: None,
             region_prices: Vec::new(),
             status: "active".to_owned(),
             calls: "0".to_owned(),

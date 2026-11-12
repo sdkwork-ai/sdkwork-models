@@ -13,12 +13,18 @@ export interface AppModelCatalogItem {
   catalogKey: string;
   /** Categories field on app model catalog item. */
   categories: string[];
+  /** Color token field on app model catalog item. */
+  colorToken?: string | null;
   /** Context tokens field on app model catalog item. */
   contextTokens: number | null;
   /** Description field on app model catalog item. */
   description: string | null;
   /** Display name field on app model catalog item. */
   displayName: string;
+  /** Docs url field on app model catalog item. */
+  docsUrl?: string | null;
+  /** Family code field on app model catalog item. */
+  familyCode?: string | null;
   /** Groups field on app model catalog item. */
   groups: string[];
   /** Input modalities field on app model catalog item. */
@@ -63,6 +69,10 @@ export interface AppModelCatalogItem {
   vendor: string;
   /** Vendor code field on app model catalog item. */
   vendorCode: string;
+  /** Video profile count field on app model catalog item. */
+  videoProfileCount?: number;
+  /** Voice binding count field on app model catalog item. */
+  voiceBindingCount?: number;
   /** Agent Config SPI provider ids that can consume this model. */
   supportedAgentProviderIds: string[];
   /** Product usage scopes where the model can be applied, e.g. coding (code IDE/agent surfaces). */

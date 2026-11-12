@@ -2630,7 +2630,10 @@ pub(crate) fn capability_code(value: &str) -> i32 {
     match value {
         "image" => 2,
         "audio" => 3,
-        "music" => 4,
+        // Sound effects share the music capability code: `code_from_text`
+        // (the app catalog's `capabilities` filter) maps `sfx` to music, so a
+        // different code here made every `capabilities=sfx` query empty.
+        "music" | "sfx" => 4,
         "video" => 5,
         "embedding" => 6,
         "rerank" => 7,
@@ -2771,9 +2774,26 @@ pub(crate) fn json_array(values: &[String]) -> String {
 #[cfg(test)]
 mod tests {
     use super::{
-        ai_resource_description, catalog_sync_run_uuid, endpoint_modality_code,
+        ai_resource_description, capability_code, catalog_sync_run_uuid, endpoint_modality_code,
         model_endpoint_descriptor, price_supplier_code, ModelInfo,
     };
+
+    #[test]
+    fn capability_code_agrees_with_the_app_catalog_modality_codec() {
+        // The app catalog filters by capability code (`code_from_text`), so the
+        // import mapping has to agree with it for every primary capability the
+        // catalog publishes -- `sfx` included.
+        assert_eq!(2, capability_code("image"));
+        assert_eq!(3, capability_code("audio"));
+        assert_eq!(4, capability_code("music"));
+        assert_eq!(4, capability_code("sfx"));
+        assert_eq!(5, capability_code("video"));
+        assert_eq!(6, capability_code("embedding"));
+        assert_eq!(7, capability_code("rerank"));
+        assert_eq!(8, capability_code("tool"));
+        assert_eq!(1, capability_code("chat"));
+        assert_eq!(1, capability_code("code"));
+    }
 
     #[test]
     fn ai_resource_description_preserves_none_and_short_values() {

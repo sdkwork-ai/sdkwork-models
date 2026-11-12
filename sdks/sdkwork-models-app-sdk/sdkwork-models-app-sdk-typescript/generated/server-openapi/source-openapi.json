@@ -241,7 +241,7 @@
     },
     "/app/v3/api/ai/models": {
       "get": {
-        "description": "List models. Reads ai_model_vendor, ai_model, ai_model_capability, ai_model_pricing, ai_upstream_supplier, ai_upstream_account, ai_upstream_account_group, ai_upstream_account_group_member, ai_upstream_account_group_resource. Writes none. File targets none.",
+        "description": "List models. Reads ai_model_vendor, ai_model, ai_model_capability, ai_model_pricing, ai_upstream_supplier, ai_upstream_account, ai_upstream_account_group, ai_upstream_account_group_member, ai_resource_binding. Writes none. File targets none.",
         "operationId": "models.list",
         "parameters": [
           {
@@ -453,7 +453,7 @@
           "ai_upstream_account",
           "ai_upstream_account_group",
           "ai_upstream_account_group_member",
-          "ai_upstream_account_group_resource"
+          "ai_resource_binding"
         ],
         "x-route-scope": "public",
         "x-sdk-domain": "intelligence",
@@ -1414,6 +1414,12 @@
             "maxItems": 128,
             "type": "array"
           },
+          "colorToken": {
+            "description": "Color token field on app model catalog item.",
+            "maxLength": 64,
+            "nullable": true,
+            "type": "string"
+          },
           "contextTokens": {
             "description": "Context tokens field on app model catalog item.",
             "format": "int32",
@@ -1432,6 +1438,18 @@
             "description": "Display name field on app model catalog item.",
             "maxLength": 256,
             "minLength": 1,
+            "type": "string"
+          },
+          "docsUrl": {
+            "description": "Docs url field on app model catalog item.",
+            "maxLength": 1024,
+            "nullable": true,
+            "type": "string"
+          },
+          "familyCode": {
+            "description": "Family code field on app model catalog item.",
+            "maxLength": 64,
+            "nullable": true,
             "type": "string"
           },
           "groups": {
@@ -1612,6 +1630,20 @@
             "minLength": 1,
             "type": "string"
           },
+          "videoProfileCount": {
+            "description": "Video profile count field on app model catalog item.",
+            "format": "int32",
+            "maximum": 10000,
+            "minimum": 0,
+            "type": "integer"
+          },
+          "voiceBindingCount": {
+            "description": "Voice binding count field on app model catalog item.",
+            "format": "int32",
+            "maximum": 10000,
+            "minimum": 0,
+            "type": "integer"
+          },
           "supportedAgentProviderIds": {
             "type": "array",
             "items": {
@@ -1770,7 +1802,12 @@
           "regionCode",
           "billingMeter",
           "unitPrice",
-          "currency"
+          "currency",
+          "familyCode",
+          "colorToken",
+          "docsUrl",
+          "videoProfileCount",
+          "voiceBindingCount"
         ],
         "type": "object"
       },
@@ -2311,7 +2348,9 @@
           },
           "totalItems": {
             "type": "string",
-            "pattern": "^[0-9]+$"
+            "format": "int64",
+            "pattern": "^[0-9]+$",
+            "x-sdkwork-int64-string": true
           },
           "totalPages": {
             "type": "integer",
