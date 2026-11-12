@@ -1703,6 +1703,11 @@
           "providerCodes",
           "officialReferencePrices",
           "priceAvailability",
+          "familyCode",
+          "colorToken",
+          "docsUrl",
+          "videoProfileCount",
+          "voiceBindingCount",
           "supportedAgentProviderIds",
           "usageScopes",
           "codingVisible"
@@ -1802,12 +1807,7 @@
           "regionCode",
           "billingMeter",
           "unitPrice",
-          "currency",
-          "familyCode",
-          "colorToken",
-          "docsUrl",
-          "videoProfileCount",
-          "voiceBindingCount"
+          "currency"
         ],
         "type": "object"
       },

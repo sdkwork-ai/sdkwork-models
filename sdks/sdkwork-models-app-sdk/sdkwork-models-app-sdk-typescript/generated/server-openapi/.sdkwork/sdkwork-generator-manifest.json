@@ -132,7 +132,7 @@
     },
     {
       "path": "src/types/app-model-catalog-item.ts",
-      "sha256": "5a833b57794c868d1da07a1fa15d29c00bdde23962b432c2dc6bce232b1ab9a0"
+      "sha256": "eea6aecf60da97b2f6dbf53a68a4f2e64838f8afaac9830e7a7e2375214c4250"
     },
     {
       "path": "src/types/app-model-catalog-page.ts",

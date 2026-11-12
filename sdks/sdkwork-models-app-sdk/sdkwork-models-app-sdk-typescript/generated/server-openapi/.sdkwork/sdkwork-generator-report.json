@@ -11,117 +11,32 @@
   "status": "ok",
   "mode": "apply",
   "hasChanges": true,
-  "hasDestructiveChanges": true,
-  "changeFingerprint": "645c63711c09437799bef464341f5cb5bf88da9dea022da1984e6876d63e023e",
+  "hasDestructiveChanges": false,
+  "changeFingerprint": "bd30d03a401b0c1391c9c96bfc6c3c3ca427f4d3aea9d2c74ab93dc2176313ea",
   "changeImpact": {
     "schemaVersion": 1,
     "areas": [
-      "api-surface",
-      "models",
-      "runtime",
-      "build-metadata",
-      "publish-workflow",
-      "documentation"
+      "models"
     ],
     "details": [
       {
-        "area": "api-surface",
-        "paths": [
-          "src/api/ai.d.ts",
-          "src/api/base.d.ts",
-          "src/api/index.d.ts",
-          "src/api/paths.d.ts",
-          "src/http/client.ts"
-        ]
-      },
-      {
         "area": "models",
         "paths": [
-          "src/types/app-model-access-channel-item-data.d.ts",
-          "src/types/app-model-access-channel-item.d.ts",
-          "src/types/app-model-access-channel-model-input.d.ts",
-          "src/types/app-model-access-channel-model.d.ts",
-          "src/types/app-model-access-channel-offering-input.d.ts",
-          "src/types/app-model-access-channel-offering.d.ts",
-          "src/types/app-model-access-channel-preset.d.ts",
-          "src/types/app-model-access-channel-presets-page.d.ts",
-          "src/types/app-model-access-channel-upsert-request.d.ts",
-          "src/types/app-model-access-channels-page.d.ts",
-          "src/types/app-model-catalog-group.d.ts",
-          "src/types/app-model-catalog-item.d.ts",
-          "src/types/app-model-catalog-item.ts",
-          "src/types/app-model-catalog-page.d.ts",
-          "src/types/app-model-catalog-price-availability.d.ts",
-          "src/types/app-model-catalog-reference-price.d.ts",
-          "src/types/app-model-vendor-catalog-response.d.ts",
-          "src/types/app-model-vendor-option.d.ts",
-          "src/types/common.d.ts",
-          "src/types/field-error.d.ts",
-          "src/types/index.d.ts",
-          "src/types/model-access-channel-presets-list-result.d.ts",
-          "src/types/model-access-channel-upsert-result.d.ts",
-          "src/types/model-access-channels-list-result.d.ts",
-          "src/types/model-access-channels-upsert-response.d.ts",
-          "src/types/model-ranking-history-entry.d.ts",
-          "src/types/model-ranking-history-point.d.ts",
-          "src/types/model-ranking-item.d.ts",
-          "src/types/model-rankings-list-result.d.ts",
-          "src/types/model-rankings-page.d.ts",
-          "src/types/model-rankings-source.d.ts",
-          "src/types/model-vendors-list-result.d.ts",
-          "src/types/models-list-result.d.ts",
-          "src/types/page-info.d.ts",
-          "src/types/problem-detail.d.ts",
-          "src/types/sdk-work-api-response.d.ts",
-          "src/types/sdk-work-command-data.d.ts",
-          "src/types/sdk-work-command-response.d.ts",
-          "src/types/sdk-work-list-response.d.ts",
-          "src/types/sdk-work-page-data.d.ts",
-          "src/types/sdk-work-platform-error-code.d.ts",
-          "src/types/sdk-work-resource-data.d.ts",
-          "src/types/sdk-work-resource-response.d.ts"
-        ]
-      },
-      {
-        "area": "runtime",
-        "paths": [
-          "src/http/client.ts"
-        ]
-      },
-      {
-        "area": "build-metadata",
-        "paths": [
-          "package.json"
-        ]
-      },
-      {
-        "area": "publish-workflow",
-        "paths": [
-          "bin/publish.ps1",
-          "bin/sdk-gen.bat"
-        ]
-      },
-      {
-        "area": "documentation",
-        "paths": [
-          "README.md"
+          "src/types/app-model-catalog-item.ts"
         ]
       }
     ],
     "requiresVerification": true,
-    "summary": "Detected impact areas: api-surface, models, runtime, build-metadata, publish-workflow, documentation. Verification is required."
+    "summary": "Detected impact areas: models. Verification is required."
   },
   "executionDecision": {
     "schemaVersion": 1,
-    "riskLevel": "high",
+    "riskLevel": "medium",
     "nextAction": "verify",
     "requiresManualReview": false,
     "applyRequiresExpectedFingerprint": false,
     "summary": "Changes have been applied. Run the required verification plan now.",
     "reasons": [
-      "backed-up-generated-files",
-      "deleted-generated-files",
-      "manual-review-required",
       "verification-required"
     ]
   },
@@ -133,7 +48,7 @@
         "id": "verify-check",
         "title": "Unified package check",
         "required": true,
-        "rationale": "Validate the generated package with the unified publish helper. Triggered by: api-surface, models, runtime, build-metadata, publish-workflow, documentation.",
+        "rationale": "Validate the generated package with the unified publish helper. Triggered by: models.",
         "workingDirectory": "D:\\sdkwork-space\\sdkwork-models\\sdks\\sdkwork-models-app-sdk\\sdkwork-models-app-sdk-typescript\\generated\\server-openapi",
         "command": "node",
         "args": [
@@ -151,7 +66,7 @@
         "id": "verify-build",
         "title": "Unified package build",
         "required": true,
-        "rationale": "Run the full package build because this language uses a lighter check path than the final build. Triggered by: api-surface, models, runtime, build-metadata, publish-workflow, documentation.",
+        "rationale": "Run the full package build because this language uses a lighter check path than the final build. Triggered by: models.",
         "workingDirectory": "D:\\sdkwork-space\\sdkwork-models\\sdks\\sdkwork-models-app-sdk\\sdkwork-models-app-sdk-typescript\\generated\\server-openapi",
         "command": "node",
         "args": [
@@ -170,13 +85,13 @@
   "verificationPlan": {
     "shouldRun": true,
     "runPhase": "now",
-    "summary": "Detected impact areas: api-surface, models, runtime, build-metadata, publish-workflow, documentation. Verification is required. Run the required verification commands now against the generated SDK output.",
+    "summary": "Detected impact areas: models. Verification is required. Run the required verification commands now against the generated SDK output.",
     "steps": [
       {
         "id": "check",
         "title": "Unified package check",
         "required": true,
-        "rationale": "Validate the generated package with the unified publish helper. Triggered by: api-surface, models, runtime, build-metadata, publish-workflow, documentation.",
+        "rationale": "Validate the generated package with the unified publish helper. Triggered by: models.",
         "workingDirectory": "D:\\sdkwork-space\\sdkwork-models\\sdks\\sdkwork-models-app-sdk\\sdkwork-models-app-sdk-typescript\\generated\\server-openapi",
         "command": "node",
         "args": [
@@ -194,7 +109,7 @@
         "id": "build",
         "title": "Unified package build",
         "required": true,
-        "rationale": "Run the full package build because this language uses a lighter check path than the final build. Triggered by: api-surface, models, runtime, build-metadata, publish-workflow, documentation.",
+        "rationale": "Run the full package build because this language uses a lighter check path than the final build. Triggered by: models.",
         "workingDirectory": "D:\\sdkwork-space\\sdkwork-models\\sdks\\sdkwork-models-app-sdk\\sdkwork-models-app-sdk-typescript\\generated\\server-openapi",
         "command": "node",
         "args": [
@@ -233,34 +148,34 @@
   "syncSummary": {
     "dryRun": false,
     "controlPlaneEnabled": true,
-    "writtenFiles": 6,
+    "writtenFiles": 1,
     "skippedScaffoldFiles": 2,
-    "skippedUnchangedGeneratedFiles": 56,
-    "deletedGeneratedFiles": 46,
+    "skippedUnchangedGeneratedFiles": 61,
+    "deletedGeneratedFiles": 0,
     "changeSummaryPath": ".sdkwork/sdkwork-generator-changes.json",
-    "changeFingerprint": "645c63711c09437799bef464341f5cb5bf88da9dea022da1984e6876d63e023e",
+    "changeFingerprint": "bd30d03a401b0c1391c9c96bfc6c3c3ca427f4d3aea9d2c74ab93dc2176313ea",
     "changes": {
       "createdGeneratedFiles": [],
       "updatedGeneratedFiles": [
-        "bin/publish.ps1",
-        "bin/sdk-gen.bat",
-        "package.json",
-        "README.md",
-        "src/http/client.ts",
         "src/types/app-model-catalog-item.ts"
       ],
       "unchangedGeneratedFiles": [
         "bin/publish-core.mjs",
+        "bin/publish.ps1",
         "bin/publish.sh",
+        "bin/sdk-gen.bat",
         "bin/sdk-gen.sh",
         "CHANGELOG.md",
         "LICENSE",
+        "package.json",
+        "README.md",
         "sdkwork-sdk.json",
         "src/api/ai.ts",
         "src/api/base.ts",
         "src/api/index.ts",
         "src/api/paths.ts",
         "src/auth/index.ts",
+        "src/http/client.ts",
         "src/http/index.ts",
         "src/index.ts",
         "src/sdk.ts",
@@ -307,220 +222,40 @@
         "src/types/sdk-work-resource-response.ts",
         "tsconfig.json"
       ],
-      "deletedGeneratedFiles": [
-        "src/api/ai.d.ts",
-        "src/api/base.d.ts",
-        "src/api/index.d.ts",
-        "src/api/paths.d.ts",
-        "src/types/app-model-access-channel-item-data.d.ts",
-        "src/types/app-model-access-channel-item.d.ts",
-        "src/types/app-model-access-channel-model-input.d.ts",
-        "src/types/app-model-access-channel-model.d.ts",
-        "src/types/app-model-access-channel-offering-input.d.ts",
-        "src/types/app-model-access-channel-offering.d.ts",
-        "src/types/app-model-access-channel-preset.d.ts",
-        "src/types/app-model-access-channel-presets-page.d.ts",
-        "src/types/app-model-access-channel-upsert-request.d.ts",
-        "src/types/app-model-access-channels-page.d.ts",
-        "src/types/app-model-catalog-group.d.ts",
-        "src/types/app-model-catalog-item.d.ts",
-        "src/types/app-model-catalog-page.d.ts",
-        "src/types/app-model-catalog-price-availability.d.ts",
-        "src/types/app-model-catalog-reference-price.d.ts",
-        "src/types/app-model-vendor-catalog-response.d.ts",
-        "src/types/app-model-vendor-option.d.ts",
-        "src/types/common.d.ts",
-        "src/types/field-error.d.ts",
-        "src/types/index.d.ts",
-        "src/types/model-access-channel-presets-list-result.d.ts",
-        "src/types/model-access-channel-upsert-result.d.ts",
-        "src/types/model-access-channels-list-result.d.ts",
-        "src/types/model-access-channels-upsert-response.d.ts",
-        "src/types/model-ranking-history-entry.d.ts",
-        "src/types/model-ranking-history-point.d.ts",
-        "src/types/model-ranking-item.d.ts",
-        "src/types/model-rankings-list-result.d.ts",
-        "src/types/model-rankings-page.d.ts",
-        "src/types/model-rankings-source.d.ts",
-        "src/types/model-vendors-list-result.d.ts",
-        "src/types/models-list-result.d.ts",
-        "src/types/page-info.d.ts",
-        "src/types/problem-detail.d.ts",
-        "src/types/sdk-work-api-response.d.ts",
-        "src/types/sdk-work-command-data.d.ts",
-        "src/types/sdk-work-command-response.d.ts",
-        "src/types/sdk-work-list-response.d.ts",
-        "src/types/sdk-work-page-data.d.ts",
-        "src/types/sdk-work-platform-error-code.d.ts",
-        "src/types/sdk-work-resource-data.d.ts",
-        "src/types/sdk-work-resource-response.d.ts"
-      ],
+      "deletedGeneratedFiles": [],
       "scaffoldedFiles": [],
       "preservedScaffoldFiles": [
         "custom/build-runtime.mjs",
         "custom/README.md"
       ],
-      "backedUpFiles": [
-        "bin/publish.ps1",
-        "bin/sdk-gen.bat",
-        "package.json",
-        "src/api/ai.d.ts",
-        "src/api/base.d.ts",
-        "src/api/index.d.ts",
-        "src/api/paths.d.ts",
-        "src/http/client.ts",
-        "src/types/app-model-access-channel-item-data.d.ts",
-        "src/types/app-model-access-channel-item.d.ts",
-        "src/types/app-model-access-channel-model-input.d.ts",
-        "src/types/app-model-access-channel-model.d.ts",
-        "src/types/app-model-access-channel-offering-input.d.ts",
-        "src/types/app-model-access-channel-offering.d.ts",
-        "src/types/app-model-access-channel-preset.d.ts",
-        "src/types/app-model-access-channel-presets-page.d.ts",
-        "src/types/app-model-access-channel-upsert-request.d.ts",
-        "src/types/app-model-access-channels-page.d.ts",
-        "src/types/app-model-catalog-group.d.ts",
-        "src/types/app-model-catalog-item.d.ts",
-        "src/types/app-model-catalog-page.d.ts",
-        "src/types/app-model-catalog-price-availability.d.ts",
-        "src/types/app-model-catalog-reference-price.d.ts",
-        "src/types/app-model-vendor-catalog-response.d.ts",
-        "src/types/app-model-vendor-option.d.ts",
-        "src/types/common.d.ts",
-        "src/types/field-error.d.ts",
-        "src/types/index.d.ts",
-        "src/types/model-access-channel-presets-list-result.d.ts",
-        "src/types/model-access-channel-upsert-result.d.ts",
-        "src/types/model-access-channels-list-result.d.ts",
-        "src/types/model-access-channels-upsert-response.d.ts",
-        "src/types/model-ranking-history-entry.d.ts",
-        "src/types/model-ranking-history-point.d.ts",
-        "src/types/model-ranking-item.d.ts",
-        "src/types/model-rankings-list-result.d.ts",
-        "src/types/model-rankings-page.d.ts",
-        "src/types/model-rankings-source.d.ts",
-        "src/types/model-vendors-list-result.d.ts",
-        "src/types/models-list-result.d.ts",
-        "src/types/page-info.d.ts",
-        "src/types/problem-detail.d.ts",
-        "src/types/sdk-work-api-response.d.ts",
-        "src/types/sdk-work-command-data.d.ts",
-        "src/types/sdk-work-command-response.d.ts",
-        "src/types/sdk-work-list-response.d.ts",
-        "src/types/sdk-work-page-data.d.ts",
-        "src/types/sdk-work-platform-error-code.d.ts",
-        "src/types/sdk-work-resource-data.d.ts",
-        "src/types/sdk-work-resource-response.d.ts"
-      ]
+      "backedUpFiles": []
     },
     "impact": {
       "schemaVersion": 1,
       "areas": [
-        "api-surface",
-        "models",
-        "runtime",
-        "build-metadata",
-        "publish-workflow",
-        "documentation"
+        "models"
       ],
       "details": [
         {
-          "area": "api-surface",
-          "paths": [
-            "src/api/ai.d.ts",
-            "src/api/base.d.ts",
-            "src/api/index.d.ts",
-            "src/api/paths.d.ts",
-            "src/http/client.ts"
-          ]
-        },
-        {
           "area": "models",
           "paths": [
-            "src/types/app-model-access-channel-item-data.d.ts",
-            "src/types/app-model-access-channel-item.d.ts",
-            "src/types/app-model-access-channel-model-input.d.ts",
-            "src/types/app-model-access-channel-model.d.ts",
-            "src/types/app-model-access-channel-offering-input.d.ts",
-            "src/types/app-model-access-channel-offering.d.ts",
-            "src/types/app-model-access-channel-preset.d.ts",
-            "src/types/app-model-access-channel-presets-page.d.ts",
-            "src/types/app-model-access-channel-upsert-request.d.ts",
-            "src/types/app-model-access-channels-page.d.ts",
-            "src/types/app-model-catalog-group.d.ts",
-            "src/types/app-model-catalog-item.d.ts",
-            "src/types/app-model-catalog-item.ts",
-            "src/types/app-model-catalog-page.d.ts",
-            "src/types/app-model-catalog-price-availability.d.ts",
-            "src/types/app-model-catalog-reference-price.d.ts",
-            "src/types/app-model-vendor-catalog-response.d.ts",
-            "src/types/app-model-vendor-option.d.ts",
-            "src/types/common.d.ts",
-            "src/types/field-error.d.ts",
-            "src/types/index.d.ts",
-            "src/types/model-access-channel-presets-list-result.d.ts",
-            "src/types/model-access-channel-upsert-result.d.ts",
-            "src/types/model-access-channels-list-result.d.ts",
-            "src/types/model-access-channels-upsert-response.d.ts",
-            "src/types/model-ranking-history-entry.d.ts",
-            "src/types/model-ranking-history-point.d.ts",
-            "src/types/model-ranking-item.d.ts",
-            "src/types/model-rankings-list-result.d.ts",
-            "src/types/model-rankings-page.d.ts",
-            "src/types/model-rankings-source.d.ts",
-            "src/types/model-vendors-list-result.d.ts",
-            "src/types/models-list-result.d.ts",
-            "src/types/page-info.d.ts",
-            "src/types/problem-detail.d.ts",
-            "src/types/sdk-work-api-response.d.ts",
-            "src/types/sdk-work-command-data.d.ts",
-            "src/types/sdk-work-command-response.d.ts",
-            "src/types/sdk-work-list-response.d.ts",
-            "src/types/sdk-work-page-data.d.ts",
-            "src/types/sdk-work-platform-error-code.d.ts",
-            "src/types/sdk-work-resource-data.d.ts",
-            "src/types/sdk-work-resource-response.d.ts"
-          ]
-        },
-        {
-          "area": "runtime",
-          "paths": [
-            "src/http/client.ts"
-          ]
-        },
-        {
-          "area": "build-metadata",
-          "paths": [
-            "package.json"
-          ]
-        },
-        {
-          "area": "publish-workflow",
-          "paths": [
-            "bin/publish.ps1",
-            "bin/sdk-gen.bat"
-          ]
-        },
-        {
-          "area": "documentation",
-          "paths": [
-            "README.md"
+            "src/types/app-model-catalog-item.ts"
           ]
         }
       ],
       "requiresVerification": true,
-      "summary": "Detected impact areas: api-surface, models, runtime, build-metadata, publish-workflow, documentation. Verification is required."
+      "summary": "Detected impact areas: models. Verification is required."
     },
     "verificationPlan": {
       "shouldRun": true,
       "runPhase": "now",
-      "summary": "Detected impact areas: api-surface, models, runtime, build-metadata, publish-workflow, documentation. Verification is required. Run the required verification commands now against the generated SDK output.",
+      "summary": "Detected impact areas: models. Verification is required. Run the required verification commands now against the generated SDK output.",
       "steps": [
         {
           "id": "check",
           "title": "Unified package check",
           "required": true,
-          "rationale": "Validate the generated package with the unified publish helper. Triggered by: api-surface, models, runtime, build-metadata, publish-workflow, documentation.",
+          "rationale": "Validate the generated package with the unified publish helper. Triggered by: models.",
           "workingDirectory": "D:\\sdkwork-space\\sdkwork-models\\sdks\\sdkwork-models-app-sdk\\sdkwork-models-app-sdk-typescript\\generated\\server-openapi",
           "command": "node",
           "args": [
@@ -538,7 +273,7 @@
           "id": "build",
           "title": "Unified package build",
           "required": true,
-          "rationale": "Run the full package build because this language uses a lighter check path than the final build. Triggered by: api-surface, models, runtime, build-metadata, publish-workflow, documentation.",
+          "rationale": "Run the full package build because this language uses a lighter check path than the final build. Triggered by: models.",
           "workingDirectory": "D:\\sdkwork-space\\sdkwork-models\\sdks\\sdkwork-models-app-sdk\\sdkwork-models-app-sdk-typescript\\generated\\server-openapi",
           "command": "node",
           "args": [
@@ -556,70 +291,16 @@
     },
     "executionDecision": {
       "schemaVersion": 1,
-      "riskLevel": "high",
+      "riskLevel": "medium",
       "nextAction": "verify",
       "requiresManualReview": false,
       "applyRequiresExpectedFingerprint": false,
       "summary": "Changes have been applied. Run the required verification plan now.",
       "reasons": [
-        "backed-up-generated-files",
-        "deleted-generated-files",
-        "manual-review-required",
         "verification-required"
       ]
     },
-    "backedUpFiles": [
-      "bin/publish.ps1",
-      "bin/sdk-gen.bat",
-      "package.json",
-      "src/api/ai.d.ts",
-      "src/api/base.d.ts",
-      "src/api/index.d.ts",
-      "src/api/paths.d.ts",
-      "src/http/client.ts",
-      "src/types/app-model-access-channel-item-data.d.ts",
-      "src/types/app-model-access-channel-item.d.ts",
-      "src/types/app-model-access-channel-model-input.d.ts",
-      "src/types/app-model-access-channel-model.d.ts",
-      "src/types/app-model-access-channel-offering-input.d.ts",
-      "src/types/app-model-access-channel-offering.d.ts",
-      "src/types/app-model-access-channel-preset.d.ts",
-      "src/types/app-model-access-channel-presets-page.d.ts",
-      "src/types/app-model-access-channel-upsert-request.d.ts",
-      "src/types/app-model-access-channels-page.d.ts",
-      "src/types/app-model-catalog-group.d.ts",
-      "src/types/app-model-catalog-item.d.ts",
-      "src/types/app-model-catalog-page.d.ts",
-      "src/types/app-model-catalog-price-availability.d.ts",
-      "src/types/app-model-catalog-reference-price.d.ts",
-      "src/types/app-model-vendor-catalog-response.d.ts",
-      "src/types/app-model-vendor-option.d.ts",
-      "src/types/common.d.ts",
-      "src/types/field-error.d.ts",
-      "src/types/index.d.ts",
-      "src/types/model-access-channel-presets-list-result.d.ts",
-      "src/types/model-access-channel-upsert-result.d.ts",
-      "src/types/model-access-channels-list-result.d.ts",
-      "src/types/model-access-channels-upsert-response.d.ts",
-      "src/types/model-ranking-history-entry.d.ts",
-      "src/types/model-ranking-history-point.d.ts",
-      "src/types/model-ranking-item.d.ts",
-      "src/types/model-rankings-list-result.d.ts",
-      "src/types/model-rankings-page.d.ts",
-      "src/types/model-rankings-source.d.ts",
-      "src/types/model-vendors-list-result.d.ts",
-      "src/types/models-list-result.d.ts",
-      "src/types/page-info.d.ts",
-      "src/types/problem-detail.d.ts",
-      "src/types/sdk-work-api-response.d.ts",
-      "src/types/sdk-work-command-data.d.ts",
-      "src/types/sdk-work-command-response.d.ts",
-      "src/types/sdk-work-list-response.d.ts",
-      "src/types/sdk-work-page-data.d.ts",
-      "src/types/sdk-work-platform-error-code.d.ts",
-      "src/types/sdk-work-resource-data.d.ts",
-      "src/types/sdk-work-resource-response.d.ts"
-    ],
+    "backedUpFiles": [],
     "preservedLegacyFiles": false
   }
 }

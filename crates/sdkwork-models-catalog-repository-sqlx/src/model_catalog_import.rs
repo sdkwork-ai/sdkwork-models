@@ -2353,6 +2353,9 @@ pub(crate) fn catalog_preview_admin_items(
                     model.display_name.clone()
                 },
                 model_type: preview_model_type(model),
+                family_code: Some(model.family_code.clone()),
+                color_token: model.color_token.clone(),
+                docs_url: Some(model.source.source_url.clone()),
                 region_prices: vec![AdminAiModelRegionPriceCommand {
                     region_code: vendor.vendor.region_code.clone(),
                     currency: preview_currency(prices, &vendor.vendor.region_code),
