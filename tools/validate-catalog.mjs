@@ -40,11 +40,15 @@ const GENERATION_MODE_INPUTS = {
 };
 
 const DURATION_TIER_CODES = new Set([
+  "dur_4s",
   "dur_5s",
   "dur_6s",
   "dur_8s",
   "dur_10s",
+  "dur_12s",
   "dur_15s",
+  "dur_16s",
+  "dur_20s",
   "dur_30s",
   "dur_60s",
 ]);

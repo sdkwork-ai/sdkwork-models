@@ -5,72 +5,96 @@
     {
       "aspectRatios": [
         "16:9",
-        "9:16",
-        "1:1"
+        "9:16"
       ],
-      "catalogKey": "google/veo-3.1-generate-preview/t2v_range_720p",
-      "displayName": "Text to Video · 5–8s · 720p",
-      "durationPolicy": "range",
-      "durationStepSeconds": 1,
+      "catalogKey": "google/veo-3.1-generate-preview/t2v_discrete_720p",
+      "displayName": "Text to Video · 4/6/8 s · 720p",
+      "durationOptions": [
+        4,
+        6,
+        8
+      ],
+      "durationPolicy": "discrete",
+      "durationTierCodes": [
+        "dur_4s",
+        "dur_6s",
+        "dur_8s"
+      ],
       "generationMode": "text_to_video",
       "isDefault": true,
       "maxDurationSeconds": 8,
-      "minDurationSeconds": 5,
+      "minDurationSeconds": 4,
       "outputAudio": false,
-      "profileCode": "t2v_range_720p",
+      "profileCode": "t2v_discrete_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
       "sortOrder": 10,
       "wireParameters": {
-        "duration": "5-8",
+        "duration": "4/6/8",
         "resolution": "720p"
       }
     },
     {
       "aspectRatios": [
         "16:9",
-        "9:16",
-        "1:1"
+        "9:16"
       ],
-      "catalogKey": "google/veo-3.1-generate-preview/i2v_range_720p",
-      "displayName": "Image to Video · 5–8s · 720p",
-      "durationPolicy": "range",
-      "durationStepSeconds": 1,
+      "catalogKey": "google/veo-3.1-generate-preview/i2v_discrete_720p",
+      "displayName": "Image to Video · 4/6/8 s · 720p",
+      "durationOptions": [
+        4,
+        6,
+        8
+      ],
+      "durationPolicy": "discrete",
+      "durationTierCodes": [
+        "dur_4s",
+        "dur_6s",
+        "dur_8s"
+      ],
       "generationMode": "image_to_video",
       "isDefault": false,
       "maxDurationSeconds": 8,
-      "minDurationSeconds": 5,
+      "minDurationSeconds": 4,
       "outputAudio": false,
-      "profileCode": "i2v_range_720p",
+      "profileCode": "i2v_discrete_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
       "sortOrder": 20,
       "wireParameters": {
-        "duration": "5-8",
+        "duration": "4/6/8",
         "resolution": "720p"
       }
     },
     {
       "aspectRatios": [
         "16:9",
-        "9:16",
-        "1:1"
+        "9:16"
       ],
-      "catalogKey": "google/veo-3.1-generate-preview/r2v_range_720p",
-      "displayName": "Reference to Video · 5–8s · 720p",
-      "durationPolicy": "range",
-      "durationStepSeconds": 1,
+      "catalogKey": "google/veo-3.1-generate-preview/r2v_discrete_720p",
+      "displayName": "Reference to Video · 4/6/8 s · 720p",
+      "durationOptions": [
+        4,
+        6,
+        8
+      ],
+      "durationPolicy": "discrete",
+      "durationTierCodes": [
+        "dur_4s",
+        "dur_6s",
+        "dur_8s"
+      ],
       "generationMode": "reference_to_video",
       "isDefault": false,
       "maxDurationSeconds": 8,
-      "minDurationSeconds": 5,
+      "minDurationSeconds": 4,
       "outputAudio": false,
-      "profileCode": "r2v_range_720p",
+      "profileCode": "r2v_discrete_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
       "sortOrder": 30,
       "wireParameters": {
-        "duration": "5-8",
+        "duration": "4/6/8",
         "resolution": "720p"
       }
     }

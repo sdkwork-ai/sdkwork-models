@@ -142,15 +142,15 @@ fn bundled_catalog_loads_and_queries_models() {
         .all(|model| model.routing_state == "enabled" && model.shelf_state == "listed"));
     assert!(available_models
         .iter()
-        .any(|model| model.catalog_key == "kuaishou/kling-v3-0-preview"
+        .any(|model| model.catalog_key == "kuaishou/kling-v3"
             && model.region_code == "global"));
     assert_eq!(
         Some("global"),
-        find_model(&catalog, "kuaishou/kling-v3-0-preview").map(|model| model.region_code.as_str())
+        find_model(&catalog, "kuaishou/kling-v3").map(|model| model.region_code.as_str())
     );
     assert_eq!(
         Some("cn"),
-        find_model_by_vendor_region(&catalog, "kuaishou", "cn", "kling-v3-0-preview")
+        find_model_by_vendor_region(&catalog, "kuaishou", "cn", "kling-v3")
             .map(|model| model.region_code.as_str())
     );
     assert!(list_available_models(
@@ -161,7 +161,7 @@ fn bundled_catalog_loads_and_queries_models() {
         }
     )
     .iter()
-    .all(|model| model.catalog_key != "kuaishou/kling-v3-0-preview"));
+    .all(|model| model.catalog_key != "bytedance/dreamina-seedance-2-5-260628"));
     assert!(list_available_models(
         &catalog,
         ModelFilter {
@@ -170,7 +170,7 @@ fn bundled_catalog_loads_and_queries_models() {
         }
     )
     .iter()
-    .any(|model| model.catalog_key == "kuaishou/kling-v3-0-preview"));
+    .any(|model| model.catalog_key == "bytedance/dreamina-seedance-2-5-260628"));
     assert!(!get_model_region_prices(&catalog, "openai/gpt-5.5", "global").is_empty());
     assert!(get_model_region_prices(&catalog, "openai/gpt-5.5", "cn").is_empty());
     assert_eq!(
