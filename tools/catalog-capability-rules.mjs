@@ -20,6 +20,7 @@ export const ALLOWED_METER_MODALITIES_BY_CAPABILITY = {
   video: new Set(["video", "api", "text", "image", "audio"]),
   streaming: new Set(["video", "audio", "text", "image", "api"]),
   rerank: new Set(["rerank", "text"]),
+  decision: new Set(["text", "api"]),
 };
 
 export const UNIVERSAL_METER_CODES = new Set(["api_request", "api_result", "api_item", "unknown"]);

@@ -6,7 +6,8 @@ export type ModelCapability =
   | "music"
   | "video"
   | "rerank"
-  | "tool";
+  | "tool"
+  | "decision";
 
 export type ModelModality =
   | "text"

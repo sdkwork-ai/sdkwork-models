@@ -4209,7 +4209,7 @@
     },
     {
       "capabilities": [
-        "chat"
+        "decision"
       ],
       "clientApiCompatibility": {
         "claude_code": {
@@ -4260,7 +4260,7 @@
           "billingCurrency": "USD",
           "billingJurisdiction": "US",
           "capabilities": [
-            "chat"
+            "decision"
           ],
           "clientApiCompatibility": {
             "claude_code": {

@@ -4,7 +4,7 @@
       "defaultModel": "jev-1.14.0",
       "displayName": "Jev",
       "familyCode": "jev",
-      "familyType": "llm",
+      "familyType": "decision",
       "primaryModality": "text",
       "sortOrder": 10
     }

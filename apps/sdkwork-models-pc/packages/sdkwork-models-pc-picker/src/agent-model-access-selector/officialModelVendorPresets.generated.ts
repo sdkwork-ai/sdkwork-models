@@ -550,36 +550,6 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
   },
   {
     "baseUrl": "",
-    "channelName": "TypeSafe AI",
-    "protocol": "",
-    "providerCode": "typesafe.direct",
-    "providerDisplayName": "TypeSafe AI",
-    "models": [
-      {
-        "catalogKey": "typesafe/jev-1.13.0",
-        "model": "jev-1.13.0",
-        "displayName": "Jev 1.13",
-        "sortOrder": 0
-      },
-      {
-        "catalogKey": "typesafe/jev-1.14.0",
-        "model": "jev-1.14.0",
-        "displayName": "Jev 1.14",
-        "sortOrder": 1
-      },
-      {
-        "catalogKey": "typesafe/jev-latest",
-        "model": "jev-latest",
-        "displayName": "Jev Latest",
-        "sortOrder": 2
-      }
-    ],
-    "sortOrder": 15,
-    "vendorCode": "typesafe",
-    "vendorName": "TypeSafe AI"
-  },
-  {
-    "baseUrl": "",
     "channelName": "xAI",
     "protocol": "",
     "providerCode": "xai.direct",
@@ -622,7 +592,7 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 7
       }
     ],
-    "sortOrder": 16,
+    "sortOrder": 15,
     "vendorCode": "xai",
     "vendorName": "xAI"
   },
@@ -652,7 +622,7 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 11
       }
     ],
-    "sortOrder": 17,
+    "sortOrder": 16,
     "vendorCode": "xiaomi",
     "vendorName": "Xiaomi MiMo"
   },
@@ -718,7 +688,7 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 14
       }
     ],
-    "sortOrder": 18,
+    "sortOrder": 17,
     "vendorCode": "zhipu",
     "vendorName": "Zhipu AI"
   }

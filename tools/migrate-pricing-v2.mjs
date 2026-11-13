@@ -25,6 +25,7 @@ function operationCode(capability, meterCode) {
     audio: "audio.generate",
     chat: "inference.generate",
     code: "inference.generate",
+    decision: "inference.generate",
     embedding: "embedding.create",
     image: "image.generate",
     music: "music.generate",

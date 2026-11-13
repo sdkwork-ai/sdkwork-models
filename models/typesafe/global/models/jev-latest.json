@@ -1,7 +1,7 @@
 {
   "apiFormat": "vendor_native",
   "capabilities": [
-    "chat"
+    "decision"
   ],
   "catalogKey": "typesafe/jev-latest",
   "codingVisible": false,
@@ -19,7 +19,7 @@
   "outputModalities": [
     "text"
   ],
-  "primaryCapability": "chat",
+  "primaryCapability": "decision",
   "regionCode": "global",
   "releaseStage": "active",
   "routingState": "enabled",

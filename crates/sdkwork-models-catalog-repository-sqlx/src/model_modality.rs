@@ -5,6 +5,7 @@ pub const MODALITY_MUSIC: i64 = 4;
 pub const MODALITY_VIDEO: i64 = 5;
 pub const MODALITY_EMBEDDING: i64 = 6;
 pub const MODALITY_RERANK: i64 = 7;
+pub const MODALITY_DECISION: i64 = 9;
 
 pub fn code_from_text(value: Option<&str>) -> Option<i64> {
     match value.unwrap_or("").trim().to_ascii_lowercase().as_str() {
@@ -15,6 +16,7 @@ pub fn code_from_text(value: Option<&str>) -> Option<i64> {
         "video" | "videos" => Some(MODALITY_VIDEO),
         "embedding" | "embeddings" => Some(MODALITY_EMBEDDING),
         "rerank" | "reranker" | "ranking" => Some(MODALITY_RERANK),
+        "decision" => Some(MODALITY_DECISION),
         _ => None,
     }
 }
@@ -27,6 +29,7 @@ pub fn label(value: Option<i64>) -> &'static str {
         Some(MODALITY_VIDEO) => "video",
         Some(MODALITY_EMBEDDING) => "embedding",
         Some(MODALITY_RERANK) => "rerank",
+        Some(MODALITY_DECISION) => "decision",
         Some(MODALITY_TEXT) => "text",
         _ => "unknown",
     }
@@ -40,6 +43,7 @@ pub fn ranking_label(value: Option<i64>) -> &'static str {
         Some(MODALITY_VIDEO) => "Video",
         Some(MODALITY_EMBEDDING) => "Embedding",
         Some(MODALITY_RERANK) => "Rerank",
+        Some(MODALITY_DECISION) => "Decision",
         Some(MODALITY_TEXT) => "LLM",
         _ => "LLM",
     }
@@ -53,6 +57,7 @@ pub fn model_type_capability_code(model_type: &str) -> i32 {
         "SoundEffect" => MODALITY_MUSIC as i32,
         "Video" => MODALITY_VIDEO as i32,
         "Embedding" => MODALITY_EMBEDDING as i32,
+        "Decision" => MODALITY_DECISION as i32,
         _ => MODALITY_TEXT as i32,
     }
 }

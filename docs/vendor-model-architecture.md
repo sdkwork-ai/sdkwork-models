@@ -546,9 +546,9 @@ Generated: 2026-11-01
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| jev-1.13.0 | 65K | chat | N/A |
-| jev-1.14.0 | 65K | chat | N/A |
-| jev-latest | 65K | chat | N/A |
+| jev-1.13.0 | 65K | decision | N/A |
+| jev-1.14.0 | 65K | decision | N/A |
+| jev-latest | 65K | decision | N/A |
 
 ### Vidu (vidu)
 
@@ -672,7 +672,7 @@ Generated: 2026-11-01
 
 | Capability | Vendors |
 |------------|---------|
-| chat | 16 |
+| chat | 15 |
 | video | 14 |
 | image | 13 |
 | reasoning | 10 |
@@ -682,4 +682,5 @@ Generated: 2026-11-01
 | sfx | 4 |
 | code | 2 |
 | tool | 2 |
+| decision | 1 |
 | streaming | 1 |

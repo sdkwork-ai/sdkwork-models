@@ -18,7 +18,7 @@
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
-      "productCode": "models.typesafe.chat",
+      "productCode": "models.typesafe.decision",
       "quantityAggregation": "sum",
       "quantityStep": "1",
       "rateHash": "cfac57a7cc4925b69d06921c8f102de981cfaddd38550597e584130aff55c035",

@@ -46,7 +46,8 @@
               "sfx",
               "video",
               "rerank",
-              "multimodal"
+              "multimodal",
+              "decision"
             ]
           },
           "primaryModality": {

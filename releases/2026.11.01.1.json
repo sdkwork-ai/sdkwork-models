@@ -8,7 +8,7 @@
     "warnings": []
   },
   "generatedAt": "2026-11-01T00:00:00Z",
-  "indexSha256": "c42d7425f3b18f6f5b47d32ff78be29eadfc18f0802021abbde4255232b58c8b",
+  "indexSha256": "4167237b19d1728a084dca6060f7ffc9562200e7bf093876e4b7973b32a1c170",
   "schemaVersion": "1.1.0",
   "sourceAudit": {
     "errorCount": 0,
@@ -95,14 +95,14 @@
       "modelCount": 29,
       "pricingFileCount": 27,
       "regionCode": "cn",
-      "sha256": "4736504753e91544a272a56b2d368d1c8db5fb8d846f08cabb670892bfcc509c",
+      "sha256": "861962f501aff4ef95b38ba50614680fad430dc55f745437d0e833d835d1063d",
       "vendorCode": "bytedance"
     },
     {
       "modelCount": 19,
       "pricingFileCount": 19,
       "regionCode": "global",
-      "sha256": "f04ac6672e36de3d609432f83f5a2641132c8ce518c84e53f78f3c676fd175f7",
+      "sha256": "a2ad777f39df2b936af9199cc3b07155dcf202bbd9601037fd4093045fdb5885",
       "vendorCode": "bytedance"
     },
     {
@@ -130,7 +130,7 @@
       "modelCount": 44,
       "pricingFileCount": 44,
       "regionCode": "global",
-      "sha256": "58ac402d4a1e032281b2cf495b9731479868e14a147934b7d60620eedfb07e34",
+      "sha256": "aadef4a6d7b7a286ed11944e9175c5d2fa65ef7fa04707dea8f6406c60d91751",
       "vendorCode": "google"
     },
     {
@@ -200,7 +200,7 @@
       "modelCount": 46,
       "pricingFileCount": 46,
       "regionCode": "global",
-      "sha256": "a92517b3a95861ad25fd0c4c197ba7064696cbfe565df605d8aeb68e7aa8c3da",
+      "sha256": "b8bc8da802a6d496f27449b28a0dc98d69ebed89882cff4e2d2dd09738a8533e",
       "vendorCode": "openai"
     },
     {
@@ -256,7 +256,7 @@
       "modelCount": 3,
       "pricingFileCount": 3,
       "regionCode": "global",
-      "sha256": "87e4aff7b52c7f93e4a881b3b2ab3dcbdb67394aabb77609980ddc227d953723",
+      "sha256": "e4b497a99f44d1d80ec965a5043741e60a4253af8a38b1753f4e363e0ba27a0f",
       "vendorCode": "typesafe"
     },
     {

@@ -2641,6 +2641,7 @@ pub(crate) fn capability_code(value: &str) -> i32 {
         "embedding" => 6,
         "rerank" => 7,
         "tool" => 8,
+        "decision" => 9,
         _ => 1,
     }
 }
@@ -2654,6 +2655,7 @@ pub(crate) fn family_type_code(value: &str) -> i32 {
         "video" => 6,
         "rerank" => 7,
         "multimodal" => 8,
+        "decision" => 9,
         _ => 1,
     }
 }
@@ -2794,6 +2796,7 @@ mod tests {
         assert_eq!(6, capability_code("embedding"));
         assert_eq!(7, capability_code("rerank"));
         assert_eq!(8, capability_code("tool"));
+        assert_eq!(9, capability_code("decision"));
         assert_eq!(1, capability_code("chat"));
         assert_eq!(1, capability_code("code"));
     }
