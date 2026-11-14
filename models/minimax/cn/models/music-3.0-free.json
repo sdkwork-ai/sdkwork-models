@@ -1,0 +1,36 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "music"
+  ],
+  "catalogKey": "minimax/music-3.0-free",
+  "codingVisible": false,
+  "colorToken": "#2563eb",
+  "description": "music-3.0 的限免版本（RPM 3）。MiniMax 已于 2026 年 8 月 20 日停止免费音乐生成接口 Music-3.0-free、Music-2.6-free、music-cover-free 的服务；保留模型记录用于历史追溯。",
+  "displayName": "MiniMax Music 3.0 Free",
+  "familyCode": "minimax-music",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "retired",
+  "modelId": "music-3.0-free",
+  "outputModalities": [
+    "music"
+  ],
+  "primaryCapability": "music",
+  "regionCode": "cn",
+  "releaseStage": "retired",
+  "routingState": "disabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "archived",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/api-reference/music-generation"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax"
+}

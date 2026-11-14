@@ -32,7 +32,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "res_768sq",
@@ -68,7 +68,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "res_1k",
@@ -104,7 +104,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "res_1.5k",
@@ -140,7 +140,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "res_2k",
@@ -176,7 +176,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "res_4k",

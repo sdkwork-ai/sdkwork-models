@@ -1,0 +1,37 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "minimax/MiniMax-H3-Image-Highspeed",
+  "codingVisible": false,
+  "colorToken": "#2563eb",
+  "description": "High-speed variant of MiniMax-H3-Image with the same parameters and limits, selected by setting model to MiniMax-H3-Image-Highspeed; billed per million input text tokens, input image tokens and output image tokens.",
+  "displayName": "MiniMax H3 Image Highspeed",
+  "familyCode": "minimax-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "MiniMax-H3-Image-Highspeed",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/guides/image-generation"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax"
+}

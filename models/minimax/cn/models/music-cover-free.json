@@ -1,0 +1,37 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "music"
+  ],
+  "catalogKey": "minimax/music-cover-free",
+  "codingVisible": false,
+  "colorToken": "#1d4ed8",
+  "description": "music-cover 的限免版本（RPM 3），基于 6 秒至 6 分钟参考音频生成翻唱。MiniMax 已于 2026 年 8 月 20 日停止免费音乐生成接口 Music-3.0-free、Music-2.6-free、music-cover-free 的服务；保留模型记录用于历史追溯。",
+  "displayName": "MiniMax Music Cover Free",
+  "familyCode": "minimax-music",
+  "inputModalities": [
+    "text",
+    "audio"
+  ],
+  "lifecycle": "retired",
+  "modelId": "music-cover-free",
+  "outputModalities": [
+    "music"
+  ],
+  "primaryCapability": "music",
+  "regionCode": "cn",
+  "releaseStage": "retired",
+  "routingState": "disabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "archived",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/api-reference/music-generation"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax"
+}

@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#1d4ed8",
   "contextTokens": 1048576,
-  "description": "Gemini 3.6 Flash main-tier model with 17% fewer output tokens than 3.5 Flash, improved agentic coding and multimodal efficiency.",
+  "description": "Gemini 3.6 Flash main-tier model with 17% fewer output tokens than 3.5 Flash, improved agentic coding and multimodal efficiency. Superseded by Gemini 3.8 Flash; kept for historical pricing and migration reference.",
   "displayName": "Gemini 3.6 Flash",
   "familyCode": "gemini",
   "inputModalities": [
@@ -18,7 +18,7 @@
   ],
   "latencyP50Ms": 380,
   "latencyP95Ms": 1300,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1048576,
   "maxOutputTokens": 65535,
   "modelId": "gemini-3.6-flash",
@@ -28,12 +28,13 @@
   "primaryCapability": "chat",
   "rankScore": "1060.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "gemini-3.8-flash",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
   },
   "strengths": [

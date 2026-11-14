@@ -1,0 +1,52 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "tencent/hy4",
+  "codingVisible": true,
+  "colorToken": "#0052d9",
+  "contextTokens": 1000000,
+  "description": "Tencent Hunyuan Hy4 flagship chat model on TokenHub: 1M context, 960k max input, 64k max output, with preserved thinking, JSON schema, function calling, prompt cache and image understanding.",
+  "displayName": "Hy4",
+  "familyCode": "hunyuan",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 960000,
+  "maxOutputTokens": 65536,
+  "modelId": "hy4",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "915.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://cloud.tencent.com/document/product/1823/130051"
+  },
+  "strengths": [
+    "Reasoning",
+    "Code",
+    "Agent",
+    "Vision",
+    "Long context"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "tencent",
+  "vendorName": "Tencent Cloud"
+}

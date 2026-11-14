@@ -56,6 +56,54 @@ function selectPreferredRegion(current, candidate) {
   return current;
 }
 
+/**
+ * Whether the catalog offers one row to code and agent surfaces. A chat model
+ * the catalog marks `codingVisible: false` is a specialized endpoint — OCR,
+ * translation, role-play, character, live audio, or robotics — rather than a
+ * general-purpose LLM, so a picker that selects the model behind an agent must
+ * not list it.
+ */
+function isGeneralLlm(model) {
+  return model.codingVisible === true;
+}
+
+/**
+ * The catalog key a row's `replacementModel` names. The field is a vendor-local
+ * model id, so it is qualified with the row's vendor unless it already carries
+ * a vendor prefix.
+ */
+function replacementKey(model) {
+  const target = model.replacementModel;
+  if (!target) {
+    return undefined;
+  }
+  return target.includes('/') ? target : `${model.vendorCode}/${target}`;
+}
+
+/**
+ * Hide a model the catalog has replaced when the model it names as its
+ * successor is offered too, so a picker shows the head of each replacement
+ * chain instead of every legacy member of it. A model whose named successor is
+ * not offered stays, so nothing disappears without a visible replacement, and a
+ * cycle in the catalog's links cannot loop.
+ */
+function hideSuperseded(rowsByKey, models) {
+  const offered = new Set(models.map((model) => model.catalogKey));
+  return models.filter((model) => {
+    const seen = new Set([model.catalogKey]);
+    let next = replacementKey(model);
+    while (next !== undefined && !seen.has(next)) {
+      if (offered.has(next)) {
+        return false;
+      }
+      seen.add(next);
+      const nextModel = rowsByKey.get(next);
+      next = nextModel === undefined ? undefined : replacementKey(nextModel);
+    }
+    return true;
+  });
+}
+
 function listSupportedProviderIds(vendor) {
   return Object.entries(vendor.clientApiCompatibility ?? {})
     .filter(([, compatibility]) => (
@@ -89,35 +137,48 @@ async function generateCatalogSource() {
     );
   }
 
-  const modelsByCatalogKey = new Map();
+  const chatRowsByCatalogKey = new Map();
   for (const vendorEntry of index.vendors) {
     for (const modelFile of vendorEntry.modelFiles) {
       const model = await readJson(path.join(catalogRoot, modelFile));
-      if (
-        model.primaryCapability !== 'chat'
-        || model.shelfState !== 'listed'
-        || model.routingState !== 'enabled'
-        || !['active', 'preview'].includes(model.lifecycle)
-      ) {
+      if (model.primaryCapability !== 'chat') {
         continue;
       }
       const candidate = { ...model, regionCode: vendorEntry.regionCode };
-      modelsByCatalogKey.set(
+      // Every chat row keeps its place in the replacement graph, including the
+      // rows this list filters out: a legacy row's successor may itself be
+      // hidden, and the chain still has to be followed.
+      chatRowsByCatalogKey.set(
         model.catalogKey,
-        selectPreferredRegion(modelsByCatalogKey.get(model.catalogKey), candidate),
+        selectPreferredRegion(chatRowsByCatalogKey.get(model.catalogKey), candidate),
       );
     }
   }
 
-  const models = [...modelsByCatalogKey.values()].sort((left, right) => {
-    const leftVendor = vendorsByCode.get(left.vendorCode);
-    const rightVendor = vendorsByCode.get(right.vendorCode);
-    return (leftVendor?.sortOrder ?? Number.MAX_SAFE_INTEGER)
-      - (rightVendor?.sortOrder ?? Number.MAX_SAFE_INTEGER)
-      || lifecycleOrder(left.lifecycle) - lifecycleOrder(right.lifecycle)
-      || Number(right.rankScore ?? 0) - Number(left.rankScore ?? 0)
-      || compareText(left.modelId.toLowerCase(), right.modelId.toLowerCase());
-  });
+  // The vendor's preferred region decides one model's status, so a row the
+  // global catalog deprecates is not offered merely because a regional catalog
+  // still lists it as active.
+  const currentRows = [...chatRowsByCatalogKey.values()].filter((model) => (
+    model.shelfState === 'listed'
+    && model.routingState === 'enabled'
+    && ['active', 'preview'].includes(model.lifecycle)
+  ));
+
+  // Supersession is resolved over every current offer, not only the general LLM
+  // rows this list keeps: a legacy preview is replaced by a live-audio model
+  // that the list itself will drop, and it must not resurface because its head
+  // is filtered out.
+  const models = hideSuperseded(chatRowsByCatalogKey, currentRows)
+    .filter(isGeneralLlm)
+    .sort((left, right) => {
+      const leftVendor = vendorsByCode.get(left.vendorCode);
+      const rightVendor = vendorsByCode.get(right.vendorCode);
+      return (leftVendor?.sortOrder ?? Number.MAX_SAFE_INTEGER)
+        - (rightVendor?.sortOrder ?? Number.MAX_SAFE_INTEGER)
+        || lifecycleOrder(left.lifecycle) - lifecycleOrder(right.lifecycle)
+        || Number(right.rankScore ?? 0) - Number(left.rankScore ?? 0)
+        || compareText(left.modelId.toLowerCase(), right.modelId.toLowerCase());
+    });
 
   const entries = models.map((model, sortOrder) => {
     const vendor = vendorsByCode.get(model.vendorCode);
@@ -189,24 +250,34 @@ async function generateOfficialVendorPresetsSource() {
   }
 
   async function listChatModels(vendorEntry) {
-    const models = [];
+    const offered = [];
+    const sortOrderByModel = new Map();
+    const chatRowsByKey = new Map();
     for (const [sortOrder, modelFile] of vendorEntry.modelFiles.entries()) {
       const model = await readJson(path.join(catalogRoot, modelFile));
+      if (model.primaryCapability !== 'chat') {
+        continue;
+      }
+      chatRowsByKey.set(model.catalogKey, model);
       if (
-        model.primaryCapability !== 'chat'
-        || model.shelfState !== 'listed'
+        model.shelfState !== 'listed'
         || model.routingState !== 'enabled'
       ) {
         continue;
       }
-      models.push({
+      sortOrderByModel.set(model, sortOrder);
+      offered.push(model);
+    }
+    // Resolve the replacement chain before dropping specialized models, so a
+    // row replaced by a non-LLM endpoint is still recognized as superseded.
+    return hideSuperseded(chatRowsByKey, offered)
+      .filter(isGeneralLlm)
+      .map((model) => ({
         catalogKey: model.catalogKey,
         model: model.modelId,
         displayName: model.displayName,
-        sortOrder,
-      });
-    }
-    return models;
+        sortOrder: sortOrderByModel.get(model) ?? 0,
+      }));
   }
 
   const directSortOrder = new Map(

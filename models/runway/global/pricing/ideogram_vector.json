@@ -31,7 +31,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
       "tierCode": "t2v_q_low",
@@ -66,7 +66,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
       "tierCode": "t2v_q_medium",
@@ -101,7 +101,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
       "tierCode": "t2v_q_high",
@@ -136,7 +136,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
       "tierCode": "t2v_q_high_refs",
@@ -171,7 +171,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
       },
       "tierCode": "image_to_vector",

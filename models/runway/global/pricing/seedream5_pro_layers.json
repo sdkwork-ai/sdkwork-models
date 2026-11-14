@@ -1,0 +1,150 @@
+{
+  "catalogKey": "runway/seedream5_pro_layers",
+  "currency": "USD",
+  "modelId": "seedream5_pro_layers",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-seedream5_pro_layers-image-res_1k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "6b947e86e280c68b87e3d78d2fb910f50b571de1d8165b7a665b2caf93ec9dae",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_1k",
+      "unitPrice": "0.030000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1_5k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-seedream5_pro_layers-image-res_1_5k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "eab4a04a737b6b97ff4acb9df515b67c87c87fd485c3b60ef0c26b34267d081a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_1_5k",
+      "unitPrice": "0.030000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-seedream5_pro_layers-image-res_2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "f9fba50f5e9e97127d7bfc0c71cba6f88525cc0057092965e9f0e5ed7813c7bd",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_2k",
+      "unitPrice": "0.050000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_auto"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-seedream5_pro_layers-image-res_auto",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "f965fbd5635ed02a549a0cffb3d8e404586c1f606d848bdfcbaa9d4d95522c22",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_auto",
+      "unitPrice": "0.050000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "runway"
+}

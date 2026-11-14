@@ -1,0 +1,36 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "runway/seedream5_pro_layers",
+  "codingVisible": false,
+  "description": "Seedream 5.0 Pro Layers image decomposition, resold through the Runway Dev API: 3 credits per 1K or 1.5K image and 5 credits per 2K or auto image, billed per returned image including the base image and every layer.",
+  "displayName": "Seedream 5.0 Pro Layers",
+  "familyCode": "runway-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "seedream5_pro_layers",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "runway",
+  "vendorName": "Runway"
+}

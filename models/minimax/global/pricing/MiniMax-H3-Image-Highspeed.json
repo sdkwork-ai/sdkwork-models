@@ -1,0 +1,120 @@
+{
+  "catalogKey": "minimax/MiniMax-H3-Image-Highspeed",
+  "currency": "USD",
+  "modelId": "MiniMax-H3-Image-Highspeed",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "media_type",
+          "operator": "eq",
+          "value": "text"
+        },
+        {
+          "dimensionCode": "input_type",
+          "operator": "eq",
+          "value": "text"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-14T00:00:00Z",
+      "inputType": "text",
+      "mediaType": "text",
+      "meterCode": "image_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.minimax.global.official",
+      "priceId": "minimax-global-h3-image-highspeed-text-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "2cc064273f748e0c90d11b3f1d2d0e2f41146da12d43d7a62d29654744ea1fad",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "unitPrice": "2.300000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "media_type",
+          "operator": "eq",
+          "value": "image"
+        },
+        {
+          "dimensionCode": "input_type",
+          "operator": "eq",
+          "value": "image"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-14T00:00:00Z",
+      "inputType": "image",
+      "mediaType": "image",
+      "meterCode": "image_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.minimax.global.official",
+      "priceId": "minimax-global-h3-image-highspeed-image-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "1276f038cf4f3d378e303d5d84753d3631f11195a9bafc1ae1195810906f8c00",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "unitPrice": "3.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-14T00:00:00Z",
+      "meterCode": "image_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.minimax.global.official",
+      "priceId": "minimax-global-h3-image-highspeed-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "eab20225f9525cb3e8cb6b0dadd6b552ebff59eba6890cf87aafc17643114146",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "unitPrice": "7.600000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "minimax"
+}

@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#111827",
   "contextTokens": 1050000,
-  "description": "GPT-5.6 Terra balanced model for everyday work at roughly half the cost of GPT-5.5. Generally available as of July 2026.",
+  "description": "GPT-5.6 Terra balanced model for everyday work at roughly half the cost of GPT-5.5. Generally available as of July 2026. Superseded by GPT-6.1 Terra; kept for historical pricing and migration reference.",
   "displayName": "GPT-5.6 Terra",
   "familyCode": "gpt-5",
   "inputModalities": [
@@ -16,7 +16,7 @@
   ],
   "latencyP50Ms": 900,
   "latencyP95Ms": 3200,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1050000,
   "maxOutputTokens": 128000,
   "modelId": "gpt-5.6-terra",
@@ -26,12 +26,13 @@
   "primaryCapability": "chat",
   "rankScore": "1150.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "gpt-6.1-terra",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://openai.com/index/previewing-gpt-5-6-sol/"
   },
   "strengths": [

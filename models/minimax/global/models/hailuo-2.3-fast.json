@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 35000,
   "latencyP95Ms": 90000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "hailuo-2.3-fast",
   "outputModalities": [
     "video"
@@ -23,12 +23,13 @@
   "primaryCapability": "video",
   "rankScore": "810.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "MiniMax-H3-Highspeed",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-video"
   },
   "strengths": [

@@ -1,0 +1,109 @@
+{
+  "catalogKey": "runway/kling_4_flash",
+  "modelId": "kling_4_flash",
+  "profiles": [
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/kling_4_flash/t2v_range_1080p",
+      "displayName": "Text to Video · 3–15s · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": true,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": true,
+      "profileCode": "t2v_range_1080p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 10,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/kling_4_flash/i2v_range_1080p",
+      "displayName": "Image to Video · 3–15s · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": true,
+      "profileCode": "i2v_range_1080p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 20,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/kling_4_flash/r2v_range_1080p",
+      "displayName": "Reference to Video · 3–15s · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "reference_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": true,
+      "profileCode": "r2v_range_1080p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 30,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "720p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/kling_4_flash/multi_range_1080p",
+      "displayName": "Multi-shot · 3–15s · 720p",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "multi_shot",
+      "isDefault": false,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 3,
+      "outputAudio": true,
+      "profileCode": "multi_range_1080p",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 40,
+      "wireParameters": {
+        "duration": "3-15",
+        "resolution": "720p"
+      }
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+  },
+  "vendorCode": "runway"
+}

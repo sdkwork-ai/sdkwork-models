@@ -7,7 +7,7 @@ or merging tiers - a product decision, so nothing here is auto-applied.
 
 | reason | count |
 |---|---|
-| dimension_never_populated | 349 |
+| dimension_never_populated | 353 |
 
 `dimension_never_populated`: the runtime has no producer for the dimension at all.
 `time_window_tier_redundant`: a `time_window` rate conditioned on `tier_code`; the
@@ -348,6 +348,10 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | runway/global/pricing/nano_banana_2.1.json | runway-global-nano_banana_2.1-image-res_4k | image_result | 0.120000 | USD | 1 | tier_code | dimension_never_populated | res_4k | - |
 | runway/global/pricing/seedream5_pro.json | runway-global-seedream5_pro-image-res_1k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | res_1k | - |
 | runway/global/pricing/seedream5_pro.json | runway-global-seedream5_pro-image-res_2k | image_result | 0.090000 | USD | 1 | tier_code | dimension_never_populated | res_2k | - |
+| runway/global/pricing/seedream5_pro_layers.json | runway-global-seedream5_pro_layers-image-res_1_5k | image_result | 0.030000 | USD | 1 | tier_code | dimension_never_populated | res_1_5k | - |
+| runway/global/pricing/seedream5_pro_layers.json | runway-global-seedream5_pro_layers-image-res_1k | image_result | 0.030000 | USD | 1 | tier_code | dimension_never_populated | res_1k | - |
+| runway/global/pricing/seedream5_pro_layers.json | runway-global-seedream5_pro_layers-image-res_2k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | res_2k | - |
+| runway/global/pricing/seedream5_pro_layers.json | runway-global-seedream5_pro_layers-image-res_auto | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | res_auto | - |
 | vidu/cn/pricing/audio1.0-text2audio.json | vidu-cn-audio1-0-text2audio-under-10s | sfx_result | 0.625000 | CNY | 1 | tier_code | dimension_never_populated | under_10s | - |
 | vidu/cn/pricing/audio1.0-text2audio.json | vidu-cn-audio1-0-text2audio-under-5s | sfx_result | 0.312500 | CNY | 1 | tier_code | dimension_never_populated | under_5s | - |
 | vidu/cn/pricing/audio1.0-timing2audio.json | vidu-cn-audio1-0-timing2audio-under-10s | sfx_result | 0.625000 | CNY | 1 | tier_code | dimension_never_populated | under_10s | - |

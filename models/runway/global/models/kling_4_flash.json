@@ -1,0 +1,38 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "runway/kling_4_flash",
+  "codingVisible": false,
+  "description": "Kling 4.0 Flash at 720p, resold through the Runway Dev API: 9.4 credits per second without an input video; with an input video, 6.3 credits per output second plus 6.3 credits per second of the greater of input and output duration, rounded up to the next credit with a 29-credit minimum.",
+  "displayName": "Kling 4.0 Flash",
+  "familyCode": "runway-video",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "active",
+  "modelId": "kling_4_flash",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "runway",
+  "vendorName": "Runway"
+}

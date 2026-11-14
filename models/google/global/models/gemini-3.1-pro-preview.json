@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#2563eb",
   "contextTokens": 1048576,
-  "description": "Preview multimodal Gemini model for long-context reasoning.",
+  "description": "Preview multimodal Gemini model for long-context reasoning. Superseded by Gemini 4 Argon; kept for historical pricing and migration reference.",
   "displayName": "Gemini 3.1 Pro Preview",
   "familyCode": "gemini",
   "inputModalities": [
@@ -18,7 +18,7 @@
   ],
   "latencyP50Ms": 880,
   "latencyP95Ms": 3000,
-  "lifecycle": "preview",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1048576,
   "maxOutputTokens": 65535,
   "modelId": "gemini-3.1-pro-preview",
@@ -28,12 +28,13 @@
   "primaryCapability": "chat",
   "rankScore": "1050.000000",
   "regionCode": "global",
-  "releaseStage": "preview",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "gemini-4-argon",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
   },
   "strengths": [

@@ -7,28 +7,70 @@
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "successful_result",
-      "conditions": [],
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
       "currency": "CNY",
-      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
       "operationCode": "video.generate",
       "priceBookCode": "models.alibaba.cn.official",
-      "priceId": "qwen-cn-wan2.6-r2v-video-second",
+      "priceId": "alibaba-cn-wan2-6-r2v-second-720p",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.alibaba.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "74661c3dadbcdafc9de96ae8f50c704eebfd19140295dd528f1d4912d124dc02",
+      "rateHash": "54de70abf61e0883187e0b8c18aa703f6ad46b00c1e1d958d0b98e2711bf2894",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/wan2-6-r2v"
       },
+      "tierCode": "res_720p",
       "unitPrice": "0.600000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-wan2-6-r2v-second-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5a6ea9e922339329b6c06fca30e1ec0a2574b9880f2ba1d7a27e48745ed22c1c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/wan2-6-r2v"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "1.000000",
       "unitSize": "1"
     }
   ],

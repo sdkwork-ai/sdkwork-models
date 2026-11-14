@@ -32,7 +32,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "t2v_hd",
@@ -68,7 +68,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "t2v_fhd",
@@ -104,7 +104,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "t2v_qhd",
@@ -140,7 +140,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "t2v_uhd",
@@ -176,7 +176,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "t2v_draft",
@@ -212,7 +212,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "i2v_hd",
@@ -248,7 +248,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "i2v_fhd",
@@ -284,7 +284,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "i2v_qhd",
@@ -320,7 +320,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "i2v_uhd",
@@ -356,7 +356,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "i2v_draft",
@@ -392,7 +392,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "v2v_hd",
@@ -428,7 +428,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "v2v_fhd",
@@ -464,7 +464,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "v2v_qhd",
@@ -500,11 +500,47 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "v2v_uhd",
       "unitPrice": "0.450000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "v2v_draft"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-10-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "FLUX 3 Video Video → Video draft effort.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.black_forest_labs.global.official",
+      "priceId": "bfl-flux-3-second-v2v_draft",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.black_forest_labs.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5163b7de06cb2692bcef5b1603b5fbc8b9fdb2a275deb104322e9c53c9d75028",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://bfl.ai/pricing"
+      },
+      "tierCode": "v2v_draft",
+      "unitPrice": "0.120000",
       "unitSize": "1"
     }
   ],

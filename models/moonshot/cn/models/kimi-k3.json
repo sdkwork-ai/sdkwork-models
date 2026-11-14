@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#334155",
   "contextTokens": 1048576,
-  "description": "Kimi K3 flagship released on July 16, 2026 at WAIC 2026; 2.8T-parameter Stable LatentMoE with 16-of-896 expert activation, native multimodal vision, and 1M context for long-horizon agent coding.",
+  "description": "Kimi K3 flagship released on July 16, 2026 at WAIC 2026; 2.8T-parameter Stable LatentMoE with 16-of-896 expert activation, native multimodal vision, and 1M context for long-horizon agent coding. Superseded by Kimi K3.1 Pro; kept for historical pricing and migration reference.",
   "displayName": "Kimi K3",
   "familyCode": "kimi",
   "inputModalities": [
@@ -17,7 +17,7 @@
   ],
   "latencyP50Ms": 820,
   "latencyP95Ms": 2900,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1048576,
   "maxOutputTokens": 131072,
   "modelId": "kimi-k3",
@@ -27,12 +27,13 @@
   "primaryCapability": "chat",
   "rankScore": "1090.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "kimi-k3.1-pro",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart"
   },
   "strengths": [

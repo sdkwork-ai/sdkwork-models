@@ -26,7 +26,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
       },
       "unitPrice": "26.000000",
@@ -55,7 +55,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
       },
       "unitPrice": "136.000000",
@@ -84,7 +84,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
       },
       "unitPrice": "1.300000",
@@ -119,7 +119,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
       },
       "tierCode": "cache_write_5m",
@@ -155,7 +155,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.kimi.com/docs/pricing/chat"
       },
       "tierCode": "cache_write_1h",

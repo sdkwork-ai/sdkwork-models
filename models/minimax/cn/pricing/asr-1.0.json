@@ -1,0 +1,38 @@
+{
+  "catalogKey": "minimax/asr-1.0",
+  "currency": "CNY",
+  "modelId": "asr-1.0",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-14T00:00:00Z",
+      "meterCode": "stt_audio_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.transcribe",
+      "priceBookCode": "models.minimax.cn.official",
+      "priceId": "minimax-cn-asr-1-0-hour",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "0.001",
+      "rateHash": "ee29cd48d5665c5070366b8beb8fbd4cbc548f243165c1e703192caca8f0012b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+      },
+      "unitPrice": "2.500000",
+      "unitSize": "60"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "minimax"
+}

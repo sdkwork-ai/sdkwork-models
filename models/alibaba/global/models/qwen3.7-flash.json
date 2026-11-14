@@ -2,7 +2,7 @@
   "apiFormat": "openai_compatible",
   "catalogKey": "alibaba/qwen3.7-flash",
   "codingVisible": true,
-  "description": "QwenCloud 上在售的 Qwen3.7 低延迟档模型，1M 上下文。",
+  "description": "QwenCloud 上在售的 Qwen3.7 低延迟档模型，1M 上下文。 Superseded by Qwen3.8 Flash; kept for historical pricing and migration reference.",
   "displayName": "Qwen3.7 Flash",
   "familyCode": "qwen",
   "inputModalities": [
@@ -10,19 +10,20 @@
     "image",
     "video"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "qwen3.7-flash",
   "outputModalities": [
     "text"
   ],
   "primaryCapability": "chat",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "qwen3.8-flash",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-flash"
   },
   "supportsJsonSchema": true,

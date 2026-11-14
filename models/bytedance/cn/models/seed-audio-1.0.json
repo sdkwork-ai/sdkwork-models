@@ -1,0 +1,47 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio",
+    "sfx",
+    "music"
+  ],
+  "catalogKey": "bytedance/seed-audio-1.0",
+  "codingVisible": false,
+  "colorToken": "#dc2626",
+  "description": "Doubao Seed-Audio 1.0 (豆包音频生成模型 1.0) is ByteDance's universal audio-creation model that generates speech, music, foley and sound effects plus environmental ambience from a single prompt, accepting text with up to one image and three reference audio clips and producing up to 2 minutes of 8/16/24/48 kHz audio over the non-streaming HTTP API.",
+  "displayName": "Doubao Seed-Audio 1.0",
+  "familyCode": "audio",
+  "inputModalities": [
+    "text",
+    "image",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "seed-audio-1.0",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://www.volcengine.com/docs/6561/2499930"
+  },
+  "strengths": [
+    "Universal audio creation",
+    "Voice and dialogue",
+    "Music",
+    "Foley and sound effects",
+    "Ambient sound"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
+}

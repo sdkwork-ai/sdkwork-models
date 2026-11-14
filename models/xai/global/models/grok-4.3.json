@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#111827",
   "contextTokens": 1000000,
-  "description": "Grok model for general chat, reasoning, and multimodal assistance.",
+  "description": "Grok model for general chat, reasoning, and multimodal assistance. Superseded by Grok 4.7; kept for historical pricing and migration reference.",
   "displayName": "Grok 4.3",
   "familyCode": "grok",
   "inputModalities": [
@@ -16,7 +16,7 @@
   ],
   "latencyP50Ms": 820,
   "latencyP95Ms": 2800,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1000000,
   "modelId": "grok-4.3",
   "outputModalities": [
@@ -25,12 +25,13 @@
   "primaryCapability": "chat",
   "rankScore": "930.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "grok-4.7",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://docs.x.ai/docs/models"
   },
   "strengths": [

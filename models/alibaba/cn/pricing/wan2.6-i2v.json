@@ -7,7 +7,13 @@
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "successful_result",
-      "conditions": [],
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
       "currency": "CNY",
       "effectiveFrom": "2026-07-02T00:00:00Z",
       "meterCode": "video_output_second",
@@ -21,14 +27,50 @@
       "productCode": "models.alibaba.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "9dad36280e6b9dbcdd91c8d9df74f63e627e8c4141f754c7fd09383fcaf28f3b",
+      "rateHash": "eabd3c8dab13ddf3f0e2f9790df4d9a4a7bfa3f76f2415e0a9b58a14b75ce336",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/wan-image-to-video-guide"
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/wan2-6-i2v"
       },
+      "tierCode": "res_720p",
       "unitPrice": "0.600000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-wan2-6-i2v-second-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "fcace1e7ac2b656a306c5a75dbaa15e12e7c8f7df61fc6101e16d5fda3cca892",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/wan2-6-i2v"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "1.000000",
       "unitSize": "1"
     }
   ],

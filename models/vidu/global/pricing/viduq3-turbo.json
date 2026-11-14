@@ -31,7 +31,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "res_1080p",
@@ -67,7 +67,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "res_720p",
@@ -102,7 +102,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "res_540p",
@@ -137,7 +137,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "offpeak_res_1080p",
@@ -172,7 +172,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "offpeak_res_720p",
@@ -207,7 +207,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "offpeak_res_540p",
@@ -242,7 +242,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_res_1080p",
@@ -277,7 +277,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_res_720p",
@@ -312,7 +312,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_res_540p",
@@ -347,7 +347,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_offpeak_res_1080p",
@@ -382,7 +382,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_offpeak_res_720p",
@@ -417,7 +417,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_offpeak_res_540p",

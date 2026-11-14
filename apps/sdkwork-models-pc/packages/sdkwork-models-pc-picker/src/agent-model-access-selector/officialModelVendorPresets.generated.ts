@@ -10,34 +10,10 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "OpenAI direct",
     "models": [
       {
-        "catalogKey": "openai/gpt-5.5-cyber",
-        "model": "gpt-5.5-cyber",
-        "displayName": "GPT-5.5 Cyber",
-        "sortOrder": 10
-      },
-      {
         "catalogKey": "openai/gpt-5.6-cyber",
         "model": "gpt-5.6-cyber",
         "displayName": "GPT-5.6 Cyber",
         "sortOrder": 13
-      },
-      {
-        "catalogKey": "openai/gpt-5.6-luna",
-        "model": "gpt-5.6-luna",
-        "displayName": "GPT-5.6 Luna",
-        "sortOrder": 14
-      },
-      {
-        "catalogKey": "openai/gpt-5.6-sol",
-        "model": "gpt-5.6-sol",
-        "displayName": "GPT-5.6 Sol",
-        "sortOrder": 15
-      },
-      {
-        "catalogKey": "openai/gpt-5.6-terra",
-        "model": "gpt-5.6-terra",
-        "displayName": "GPT-5.6 Terra",
-        "sortOrder": 16
       },
       {
         "catalogKey": "openai/gpt-6-astra",
@@ -50,12 +26,6 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "model": "gpt-6-luna",
         "displayName": "GPT-6 Luna",
         "sortOrder": 18
-      },
-      {
-        "catalogKey": "openai/gpt-6-sol",
-        "model": "gpt-6-sol",
-        "displayName": "GPT-6 Sol",
-        "sortOrder": 20
       },
       {
         "catalogKey": "openai/gpt-6.1-sol",
@@ -88,18 +58,6 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 0
       },
       {
-        "catalogKey": "anthropic/claude-fable-5",
-        "model": "claude-fable-5",
-        "displayName": "Claude Fable 5",
-        "sortOrder": 1
-      },
-      {
-        "catalogKey": "anthropic/claude-haiku-4-5",
-        "model": "claude-haiku-4-5",
-        "displayName": "Claude Haiku 4.5",
-        "sortOrder": 2
-      },
-      {
         "catalogKey": "anthropic/claude-haiku-5-5",
         "model": "claude-haiku-5-5",
         "displayName": "Claude Haiku 5.5",
@@ -112,64 +70,16 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 4
       },
       {
-        "catalogKey": "anthropic/claude-mythos-5",
-        "model": "claude-mythos-5",
-        "displayName": "Claude Mythos 5",
-        "sortOrder": 5
-      },
-      {
-        "catalogKey": "anthropic/claude-opus-4-5",
-        "model": "claude-opus-4-5",
-        "displayName": "Claude Opus 4.5",
-        "sortOrder": 6
-      },
-      {
-        "catalogKey": "anthropic/claude-opus-4-6",
-        "model": "claude-opus-4-6",
-        "displayName": "Claude Opus 4.6",
-        "sortOrder": 7
-      },
-      {
-        "catalogKey": "anthropic/claude-opus-4-7",
-        "model": "claude-opus-4-7",
-        "displayName": "Claude Opus 4.7",
-        "sortOrder": 8
-      },
-      {
-        "catalogKey": "anthropic/claude-opus-4-8",
-        "model": "claude-opus-4-8",
-        "displayName": "Claude Opus 4.8",
-        "sortOrder": 9
-      },
-      {
         "catalogKey": "anthropic/claude-opus-5-5",
         "model": "claude-opus-5-5",
         "displayName": "Claude Opus 5.5",
         "sortOrder": 10
       },
       {
-        "catalogKey": "anthropic/claude-opus-5",
-        "model": "claude-opus-5",
-        "displayName": "Claude Opus 5",
-        "sortOrder": 11
-      },
-      {
-        "catalogKey": "anthropic/claude-sonnet-4-6",
-        "model": "claude-sonnet-4-6",
-        "displayName": "Claude Sonnet 4.6",
-        "sortOrder": 13
-      },
-      {
         "catalogKey": "anthropic/claude-sonnet-5-5",
         "model": "claude-sonnet-5-5",
         "displayName": "Claude Sonnet 5.5",
         "sortOrder": 14
-      },
-      {
-        "catalogKey": "anthropic/claude-sonnet-5",
-        "model": "claude-sonnet-5",
-        "displayName": "Claude Sonnet 5",
-        "sortOrder": 15
       }
     ],
     "sortOrder": 1,
@@ -184,28 +94,10 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "Google AI direct",
     "models": [
       {
-        "catalogKey": "google/gemini-3-flash-preview",
-        "model": "gemini-3-flash-preview",
-        "displayName": "Gemini 3 Flash Preview",
-        "sortOrder": 3
-      },
-      {
         "catalogKey": "google/gemini-3.1-flash-lite",
         "model": "gemini-3.1-flash-lite",
         "displayName": "Gemini 3.1 Flash Lite",
         "sortOrder": 9
-      },
-      {
-        "catalogKey": "google/gemini-3.1-flash-live-preview",
-        "model": "gemini-3.1-flash-live-preview",
-        "displayName": "Gemini 3.1 Flash Live Preview",
-        "sortOrder": 10
-      },
-      {
-        "catalogKey": "google/gemini-3.1-pro-preview",
-        "model": "gemini-3.1-pro-preview",
-        "displayName": "Gemini 3.1 Pro Preview",
-        "sortOrder": 12
       },
       {
         "catalogKey": "google/gemini-3.5-flash-lite",
@@ -214,46 +106,16 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 14
       },
       {
-        "catalogKey": "google/gemini-3.6-flash",
-        "model": "gemini-3.6-flash",
-        "displayName": "Gemini 3.6 Flash",
-        "sortOrder": 19
-      },
-      {
         "catalogKey": "google/gemini-3.8-flash",
         "model": "gemini-3.8-flash",
         "displayName": "Gemini 3.8 Flash",
         "sortOrder": 23
       },
       {
-        "catalogKey": "google/gemini-3.8-live-extended-thinking",
-        "model": "gemini-3.8-live-extended-thinking",
-        "displayName": "Gemini 3.8 Live Extended Thinking",
-        "sortOrder": 24
-      },
-      {
-        "catalogKey": "google/gemini-3.8-live",
-        "model": "gemini-3.8-live",
-        "displayName": "Gemini 3.8 Live",
-        "sortOrder": 25
-      },
-      {
         "catalogKey": "google/gemini-4-argon",
         "model": "gemini-4-argon",
         "displayName": "Gemini 4 Argon",
         "sortOrder": 26
-      },
-      {
-        "catalogKey": "google/gemini-robotics-er-2-preview",
-        "model": "gemini-robotics-er-2-preview",
-        "displayName": "Gemini Robotics ER 2 Preview",
-        "sortOrder": 31
-      },
-      {
-        "catalogKey": "google/gemini-robotics-er-2-streaming-preview",
-        "model": "gemini-robotics-er-2-streaming-preview",
-        "displayName": "Gemini Robotics ER 2 Streaming Preview",
-        "sortOrder": 32
       }
     ],
     "sortOrder": 2,
@@ -267,18 +129,6 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerCode": "alibaba.direct",
     "providerDisplayName": "Alibaba Cloud",
     "models": [
-      {
-        "catalogKey": "alibaba/qwen3.7-flash",
-        "model": "qwen3.7-flash",
-        "displayName": "Qwen3.7 Flash",
-        "sortOrder": 0
-      },
-      {
-        "catalogKey": "alibaba/qwen3.7-max",
-        "model": "qwen3.7-max",
-        "displayName": "Qwen3.7 Max",
-        "sortOrder": 1
-      },
       {
         "catalogKey": "alibaba/qwen3.7-plus",
         "model": "qwen3.7-plus",
@@ -332,30 +182,6 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "model": "dola-seed-2-1-turbo-260628",
         "displayName": "Dola Seed 2.1 Turbo",
         "sortOrder": 0
-      },
-      {
-        "catalogKey": "bytedance/seed-2-0-code-preview-260328",
-        "model": "seed-2-0-code-preview-260328",
-        "displayName": "Dola Seed 2.0 Code Preview",
-        "sortOrder": 13
-      },
-      {
-        "catalogKey": "bytedance/seed-2-0-lite-260428",
-        "model": "seed-2-0-lite-260428",
-        "displayName": "Dola Seed 2.0 Lite (260428)",
-        "sortOrder": 15
-      },
-      {
-        "catalogKey": "bytedance/seed-2-0-mini-260428",
-        "model": "seed-2-0-mini-260428",
-        "displayName": "Dola Seed 2.0 Mini (260428)",
-        "sortOrder": 17
-      },
-      {
-        "catalogKey": "bytedance/seed-2-0-pro-260328",
-        "model": "seed-2-0-pro-260328",
-        "displayName": "Dola Seed 2.0 Pro",
-        "sortOrder": 18
       }
     ],
     "sortOrder": 6,
@@ -406,35 +232,11 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
   },
   {
     "baseUrl": "",
-    "channelName": "MiniMax",
-    "protocol": "",
-    "providerCode": "minimax.direct",
-    "providerDisplayName": "MiniMax",
-    "models": [
-      {
-        "catalogKey": "minimax/MiniMax-H3-Context-IR",
-        "model": "MiniMax-H3-Context-IR",
-        "displayName": "MiniMax H3 Context IR",
-        "sortOrder": 6
-      }
-    ],
-    "sortOrder": 10,
-    "vendorCode": "minimax",
-    "vendorName": "MiniMax"
-  },
-  {
-    "baseUrl": "",
     "channelName": "Moonshot Kimi",
     "protocol": "",
     "providerCode": "moonshot.direct",
     "providerDisplayName": "Moonshot Kimi",
     "models": [
-      {
-        "catalogKey": "moonshot/kimi-k2.6",
-        "model": "kimi-k2.6",
-        "displayName": "Kimi K2.6",
-        "sortOrder": 1
-      },
       {
         "catalogKey": "moonshot/kimi-k3.1-pro-highspeed",
         "model": "kimi-k3.1-pro-highspeed",
@@ -446,15 +248,9 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "model": "kimi-k3.1-pro",
         "displayName": "Kimi K3.1 Pro",
         "sortOrder": 6
-      },
-      {
-        "catalogKey": "moonshot/kimi-k3",
-        "model": "kimi-k3",
-        "displayName": "Kimi K3",
-        "sortOrder": 7
       }
     ],
-    "sortOrder": 11,
+    "sortOrder": 10,
     "vendorCode": "moonshot",
     "vendorName": "Moonshot Kimi"
   },
@@ -465,18 +261,6 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerCode": "stepfun.direct",
     "providerDisplayName": "StepFun",
     "models": [
-      {
-        "catalogKey": "stepfun/step-3.5-flash-2603",
-        "model": "step-3.5-flash-2603",
-        "displayName": "Step 3.5 Flash 2603",
-        "sortOrder": 0
-      },
-      {
-        "catalogKey": "stepfun/step-3.5-flash",
-        "model": "step-3.5-flash",
-        "displayName": "Step 3.5 Flash",
-        "sortOrder": 1
-      },
       {
         "catalogKey": "stepfun/step-3.7-flash",
         "model": "step-3.7-flash",
@@ -490,7 +274,7 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 3
       }
     ],
-    "sortOrder": 13,
+    "sortOrder": 12,
     "vendorCode": "stepfun",
     "vendorName": "StepFun"
   },
@@ -502,49 +286,13 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "Tencent Cloud",
     "models": [
       {
-        "catalogKey": "tencent/hy-mt2-lite",
-        "model": "hy-mt2-lite",
-        "displayName": "Hy-MT2-Lite",
-        "sortOrder": 3
-      },
-      {
-        "catalogKey": "tencent/hy-mt2-plus",
-        "model": "hy-mt2-plus",
-        "displayName": "Hy-MT2-Plus",
-        "sortOrder": 4
-      },
-      {
-        "catalogKey": "tencent/hy-mt2-pro",
-        "model": "hy-mt2-pro",
-        "displayName": "Hy-MT2-Pro",
-        "sortOrder": 5
-      },
-      {
-        "catalogKey": "tencent/hy-role-latest",
-        "model": "hy-role-latest",
-        "displayName": "Hy-Role-Latest",
-        "sortOrder": 6
-      },
-      {
-        "catalogKey": "tencent/hy-role",
-        "model": "hy-role",
-        "displayName": "Hy-Role",
-        "sortOrder": 7
-      },
-      {
-        "catalogKey": "tencent/hy3",
-        "model": "hy3",
-        "displayName": "Hy3",
-        "sortOrder": 8
-      },
-      {
-        "catalogKey": "tencent/hy4-preview",
-        "model": "hy4-preview",
-        "displayName": "Hy4 Preview",
-        "sortOrder": 9
+        "catalogKey": "tencent/hy4",
+        "model": "hy4",
+        "displayName": "Hy4",
+        "sortOrder": 10
       }
     ],
-    "sortOrder": 14,
+    "sortOrder": 13,
     "vendorCode": "tencent",
     "vendorName": "Tencent Cloud"
   },
@@ -562,24 +310,6 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 0
       },
       {
-        "catalogKey": "xai/grok-4.3",
-        "model": "grok-4.3",
-        "displayName": "Grok 4.3",
-        "sortOrder": 3
-      },
-      {
-        "catalogKey": "xai/grok-4.5",
-        "model": "grok-4.5",
-        "displayName": "Grok 4.5",
-        "sortOrder": 4
-      },
-      {
-        "catalogKey": "xai/grok-4.6",
-        "model": "grok-4.6",
-        "displayName": "Grok 4.6",
-        "sortOrder": 5
-      },
-      {
         "catalogKey": "xai/grok-4.7",
         "model": "grok-4.7",
         "displayName": "Grok 4.7",
@@ -592,7 +322,7 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 7
       }
     ],
-    "sortOrder": 15,
+    "sortOrder": 14,
     "vendorCode": "xai",
     "vendorName": "xAI"
   },
@@ -622,7 +352,7 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 11
       }
     ],
-    "sortOrder": 16,
+    "sortOrder": 15,
     "vendorCode": "xiaomi",
     "vendorName": "Xiaomi MiMo"
   },
@@ -633,24 +363,6 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerCode": "zhipu.direct",
     "providerDisplayName": "Zhipu AI",
     "models": [
-      {
-        "catalogKey": "zhipu/glm-5-turbo",
-        "model": "glm-5-turbo",
-        "displayName": "GLM-5-Turbo",
-        "sortOrder": 4
-      },
-      {
-        "catalogKey": "zhipu/glm-5.1",
-        "model": "glm-5.1",
-        "displayName": "GLM-5.1",
-        "sortOrder": 5
-      },
-      {
-        "catalogKey": "zhipu/glm-5.2",
-        "model": "glm-5.2",
-        "displayName": "GLM-5.2",
-        "sortOrder": 6
-      },
       {
         "catalogKey": "zhipu/glm-5.3-flash",
         "model": "glm-5.3-flash",
@@ -670,25 +382,13 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 10
       },
       {
-        "catalogKey": "zhipu/glm-5",
-        "model": "glm-5",
-        "displayName": "GLM-5",
-        "sortOrder": 11
-      },
-      {
         "catalogKey": "zhipu/glm-5v-turbo",
         "model": "glm-5v-turbo",
         "displayName": "GLM-5V-Turbo",
         "sortOrder": 12
-      },
-      {
-        "catalogKey": "zhipu/glm-ocr",
-        "model": "glm-ocr",
-        "displayName": "GLM-OCR",
-        "sortOrder": 14
       }
     ],
-    "sortOrder": 17,
+    "sortOrder": 16,
     "vendorCode": "zhipu",
     "vendorName": "Zhipu AI"
   }

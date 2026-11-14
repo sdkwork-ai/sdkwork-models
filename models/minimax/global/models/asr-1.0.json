@@ -1,0 +1,36 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "minimax/asr-1.0",
+  "codingVisible": false,
+  "colorToken": "#0ea5e9",
+  "description": "MiniMax ASR model asr-1.0 that transcribes audio to text with multilingual code-switching, one-shot or SSE streaming output, speaker diarization, segment timestamps and srt/vtt subtitle export; billed per hour of audio.",
+  "displayName": "MiniMax ASR 1.0",
+  "familyCode": "minimax-speech",
+  "inputModalities": [
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "asr-1.0",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/guides/speech-to-text"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax"
+}

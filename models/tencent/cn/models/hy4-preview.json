@@ -7,13 +7,13 @@
   "codingVisible": true,
   "colorToken": "#0052d9",
   "contextTokens": 1000000,
-  "description": "Tencent Hunyuan Hy4 preview model released on August 28, 2026 with 770B-parameter MoE (49B activated) and 1M context.",
+  "description": "Tencent Hunyuan Hy4 preview model released on August 28, 2026 with 770B-parameter MoE (49B activated) and 1M context. Superseded by Hy4; kept for historical pricing and migration reference.",
   "displayName": "Hy4 Preview",
   "familyCode": "hunyuan",
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "preview",
+  "lifecycle": "deprecated",
   "maxInputTokens": 960000,
   "maxOutputTokens": 65536,
   "modelId": "hy4-preview",
@@ -23,12 +23,13 @@
   "primaryCapability": "chat",
   "rankScore": "905.000000",
   "regionCode": "cn",
-  "releaseStage": "preview",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "hy4",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://cloud.tencent.com/document/product/1823/130055"
   },
   "strengths": [

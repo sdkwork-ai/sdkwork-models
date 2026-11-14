@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#334155",
   "contextTokens": 262144,
-  "description": "Kimi K2.6 model for long-context Chinese, multilingual, and agent workloads.",
+  "description": "Kimi K2.6 model for long-context Chinese, multilingual, and agent workloads. Superseded by Kimi K3.1 Pro; kept for historical pricing and migration reference.",
   "displayName": "Kimi K2.6",
   "familyCode": "kimi",
   "inputModalities": [
@@ -17,7 +17,7 @@
   ],
   "latencyP50Ms": 760,
   "latencyP95Ms": 2600,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 262144,
   "maxOutputTokens": 32768,
   "modelId": "kimi-k2.6",
@@ -27,12 +27,13 @@
   "primaryCapability": "chat",
   "rankScore": "875.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "kimi-k3.1-pro",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://platform.kimi.ai/docs/models"
   },
   "strengths": [

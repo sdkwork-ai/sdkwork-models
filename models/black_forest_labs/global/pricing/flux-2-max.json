@@ -32,7 +32,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "first_megapixel",
@@ -68,7 +68,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
       "tierCode": "additional_megapixel",

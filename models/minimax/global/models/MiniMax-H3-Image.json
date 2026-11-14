@@ -1,0 +1,37 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "minimax/MiniMax-H3-Image",
+  "codingVisible": false,
+  "colorToken": "#1d4ed8",
+  "description": "MiniMax-H3-Image text-to-image and image editing (1-16 reference images) with output up to 20,000,000 pixels at 1K/2K/4K area tiers or custom width and height, billed per million input text tokens, input image tokens and output image tokens.",
+  "displayName": "MiniMax H3 Image",
+  "familyCode": "minimax-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "MiniMax-H3-Image",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/guides/image-generation"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax"
+}

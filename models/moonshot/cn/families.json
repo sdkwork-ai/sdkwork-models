@@ -1,7 +1,7 @@
 {
   "families": [
     {
-      "defaultModel": "kimi-k3",
+      "defaultModel": "kimi-k3.1-pro",
       "displayName": "Kimi",
       "familyCode": "kimi",
       "familyType": "llm",

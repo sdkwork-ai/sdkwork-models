@@ -25,7 +25,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://elevenlabs.io/pricing/api"
       },
       "unitPrice": "0.080000",
@@ -53,7 +53,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://elevenlabs.io/pricing/api"
       },
       "unitPrice": "1.800000",
@@ -81,7 +81,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://elevenlabs.io/pricing/api"
       },
       "unitPrice": "9.000000",

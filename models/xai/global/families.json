@@ -1,7 +1,7 @@
 {
   "families": [
     {
-      "defaultModel": "grok-4.3",
+      "defaultModel": "grok-4.7",
       "displayName": "Grok",
       "familyCode": "grok",
       "familyType": "multimodal",

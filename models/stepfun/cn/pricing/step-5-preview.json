@@ -26,7 +26,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
       },
       "unitPrice": "7.000000",
@@ -55,7 +55,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
       },
       "unitPrice": "0.700000",
@@ -84,7 +84,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
       },
       "unitPrice": "20.000000",

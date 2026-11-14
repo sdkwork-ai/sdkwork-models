@@ -1,0 +1,36 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "minimax/asr-1.0",
+  "codingVisible": false,
+  "colorToken": "#0ea5e9",
+  "description": "MiniMax 语音识别模型 asr-1.0，支持多语言与中英混说、一次性或 SSE 流式返回、说话人分离、句段级时间戳与 srt/vtt 字幕导出，按音频小时计费。",
+  "displayName": "MiniMax ASR 1.0",
+  "familyCode": "minimax-speech",
+  "inputModalities": [
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "asr-1.0",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/guides/speech-to-text"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax"
+}

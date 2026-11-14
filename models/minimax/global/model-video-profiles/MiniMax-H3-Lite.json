@@ -168,7 +168,7 @@
   "regionCode": "global",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://platform.minimax.io/docs/api-reference/video-generation-v2-create"
   },
   "vendorCode": "minimax"

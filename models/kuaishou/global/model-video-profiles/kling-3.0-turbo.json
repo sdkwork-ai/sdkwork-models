@@ -60,7 +60,7 @@
   "regionCode": "global",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://kling.ai/document-api/guides/capability-map/video"
   },
   "vendorCode": "kuaishou"

@@ -8,13 +8,13 @@
   "codingVisible": true,
   "colorToken": "#0284c7",
   "contextTokens": 256000,
-  "description": "Agent-optimized Step 3.5 Flash variant with faster inference and reasoning_effort controls.",
+  "description": "Agent-optimized Step 3.5 Flash variant with faster inference and reasoning_effort controls. Superseded by Step 3.7 Flash; kept for historical pricing and migration reference.",
   "displayName": "Step 3.5 Flash 2603",
   "familyCode": "step-flash",
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 256000,
   "maxOutputTokens": 65536,
   "modelId": "step-3.5-flash-2603",
@@ -24,12 +24,13 @@
   "primaryCapability": "chat",
   "rankScore": "920.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "step-3.7-flash",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/step-3.5-flash"
   },
   "strengths": [

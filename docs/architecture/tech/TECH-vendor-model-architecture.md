@@ -1,6 +1,6 @@
 > Owner: SDKWork maintainers
 
-Generated: 2026-11-01
+Generated: 2026-11-14
 
 > 本文件由 `tools/generate-vendor-model-architecture-doc.mjs` 从模型目录生成，请勿手改。
 > 口径：模型表仅收录 `shelfState = listed` 的模型；`Context` = `contextTokens / 1000` 向下取整；
@@ -46,8 +46,6 @@ Generated: 2026-11-01
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| qwen3.7-flash | N/A | N/A | CNY 0.20 / 0.80 |
-| qwen3.7-max | 1000K | chat | CNY 12.00 / 36.00 |
 | qwen3.7-plus | N/A | N/A | CNY 2.00 / 8.00 |
 | qwen3.7-text-embedding | N/A | N/A | N/A |
 | qwen3.7-text-embedding-flash | N/A | N/A | N/A |
@@ -63,8 +61,6 @@ Generated: 2026-11-01
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| qwen3.7-flash | N/A | N/A | USD 0.03 / 0.13 |
-| qwen3.7-max | 1000K | chat | USD 2.50 / 7.50 |
 | qwen3.7-plus | N/A | N/A | USD 0.40 / 1.60 |
 | qwen3.8-flash | 1000K | chat | USD 0.15 / 0.47 |
 | qwen3.8-max | 1000K | chat | USD 2.00 / 6.00 |
@@ -79,7 +75,6 @@ Generated: 2026-11-01
 | claude-fable-5-1 | 1000K | chat | USD 10.00 / 50.00 |
 | claude-haiku-4-5 | 200K | chat | USD 1.00 / 5.00 |
 | claude-haiku-5-5 | 1000K | chat | USD 0.10 / 0.50 |
-| claude-mythos-5 | 1000K | chat | USD 10.00 / 50.00 |
 | claude-mythos-5-1 | 1000K | chat | USD 10.00 / 50.00 |
 | claude-opus-4-5 | 200K | chat | USD 5.00 / 25.00 |
 | claude-opus-4-6 | 1000K | chat | USD 5.00 / 25.00 |
@@ -126,8 +121,6 @@ Generated: 2026-11-01
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| doubao-seed-2-0-lite-260428 | 262K | chat, reasoning | CNY 0.60 / 3.60 |
-| doubao-seed-2-0-mini-260428 | 262K | chat, reasoning | CNY 0.20 / 2.00 |
 | doubao-seed-2-1-lite-260915 | 1048K | chat, reasoning | CNY 0.80 / 2.70 |
 | doubao-seed-2-1-pro-260628 | 256K | chat, reasoning | CNY 6.00 / 30.00 |
 | doubao-seed-2-1-pro-260915 | 1048K | chat, reasoning | CNY 6.00 / 30.00 |
@@ -142,6 +135,7 @@ Generated: 2026-11-01
 | doubao-seedance-2-5-260628 | N/A | video | N/A |
 | doubao-seedream-5-0-flash-260915 | N/A | image | N/A |
 | doubao-seedream-5-0-pro-260628 | N/A | image | N/A |
+| seed-audio-1.0 | N/A | audio, sfx, music | N/A |
 | seed-music-gensong-v4 | N/A | music | N/A |
 | seed-tts-2.0-expressive | N/A | audio | N/A |
 | seed-tts-2.0-standard | N/A | audio | N/A |
@@ -155,10 +149,6 @@ Generated: 2026-11-01
 | dreamina-seedance-2-0-fast-260128 | N/A | video | N/A |
 | dreamina-seedance-2-0-mini-260615 | N/A | video | N/A |
 | dreamina-seedance-2-5-260628 | N/A | video | N/A |
-| seed-2-0-code-preview-260328 | 262K | chat, reasoning | USD 0.50 / 3.00 |
-| seed-2-0-lite-260428 | 262K | chat, reasoning | USD 0.25 / 2.00 |
-| seed-2-0-mini-260428 | 262K | chat, reasoning | USD 0.10 / 0.40 |
-| seed-2-0-pro-260328 | 262K | chat, reasoning | USD 0.50 / 3.00 |
 
 ### DeepSeek (deepseek)
 
@@ -209,19 +199,16 @@ Generated: 2026-11-01
 |----------|---------|------------|------------------------|
 | gemini-2.5-flash-preview-tts | 8K | audio | N/A |
 | gemini-2.5-pro-preview-tts | 8K | audio | N/A |
-| gemini-3-flash-preview | 1048K | chat | USD 0.50 / 3.00 |
 | gemini-3-pro-image | 32K | image | N/A |
 | gemini-3.1-flash-image | 32K | image | N/A |
 | gemini-3.1-flash-lite | 1048K | chat | USD 0.25 / 1.50 |
 | gemini-3.1-flash-lite-image | N/A | N/A | USD 0.25 / 1.50 |
 | gemini-3.1-flash-live-preview | 131K | chat, audio | USD 0.75 / 4.50 |
 | gemini-3.1-flash-tts-preview | 32K | audio | N/A |
-| gemini-3.1-pro-preview | 1048K | chat | USD 2.00 / 12.00 |
 | gemini-3.5-flash-lite | 1048K | chat | USD 0.30 / 2.50 |
 | gemini-3.5-live-translate-preview | N/A | N/A | N/A |
 | gemini-3.5-transcribe | N/A | N/A | N/A |
 | gemini-3.5-transcribe-live | N/A | N/A | N/A |
-| gemini-3.6-flash | 1048K | chat | USD 0.75 / 3.75 |
 | gemini-3.8-flash | 1048K | chat | USD 0.75 / 3.75 |
 | gemini-3.8-flash-lite-tts | 8K | audio | N/A |
 | gemini-3.8-flash-tts | 8K | audio | N/A |
@@ -298,9 +285,7 @@ Generated: 2026-11-01
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| hailuo-02 | N/A | video | N/A |
-| hailuo-2.3 | N/A | video | N/A |
-| hailuo-2.3-fast | N/A | video | N/A |
+| asr-1.0 | N/A | audio | N/A |
 | image-01 | N/A | image | N/A |
 | image-01-live | N/A | image | N/A |
 | MiniMax-H3 | N/A | video | N/A |
@@ -311,10 +296,6 @@ Generated: 2026-11-01
 | MiniMax-H3-Regeneration | N/A | video | N/A |
 | MiniMax-M3 | 1000K | chat, code | CNY 2.10 / 8.40 |
 | MiniMax-M3.1-Flash | 1000K | chat, code | CNY 1.00 / 4.00 |
-| speech-02-hd | N/A | audio | N/A |
-| speech-02-turbo | N/A | audio | N/A |
-| speech-2.6-hd | N/A | audio | N/A |
-| speech-2.6-turbo | N/A | audio | N/A |
 | speech-2.8-hd | N/A | audio | N/A |
 | speech-2.8-turbo | N/A | audio | N/A |
 
@@ -322,22 +303,18 @@ Generated: 2026-11-01
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| hailuo-02 | N/A | video | N/A |
-| hailuo-2.3 | N/A | video | N/A |
-| hailuo-2.3-fast | N/A | video | N/A |
+| asr-1.0 | N/A | audio | N/A |
 | image-01 | N/A | image | N/A |
 | MiniMax-H3 | N/A | video | N/A |
 | MiniMax-H3-Context-IR | N/A | chat, video | USD 0.90 / 3.60 |
 | MiniMax-H3-Highspeed | N/A | video | N/A |
+| MiniMax-H3-Image | N/A | image | N/A |
+| MiniMax-H3-Image-Highspeed | N/A | image | N/A |
 | MiniMax-H3-Lite | N/A | video | N/A |
 | MiniMax-H3-Max | N/A | video | N/A |
 | MiniMax-H3-Regeneration | N/A | video | N/A |
 | MiniMax-M3 | 1000K | chat, code | USD 0.30 / 1.20 |
 | MiniMax-M3.1-Flash | 1000K | chat, code | USD 0.15 / 0.60 |
-| speech-02-hd | N/A | audio | N/A |
-| speech-02-turbo | N/A | audio | N/A |
-| speech-2.6-hd | N/A | audio | N/A |
-| speech-2.6-turbo | N/A | audio | N/A |
 | speech-2.8-hd | N/A | audio | N/A |
 | speech-2.8-turbo | N/A | audio | N/A |
 
@@ -347,10 +324,8 @@ Generated: 2026-11-01
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| kimi-k2.6 | 262K | chat | CNY 6.50 / 27.00 |
 | kimi-k2.7-code | 262K | chat, code, reasoning | CNY 6.50 / 27.00 |
 | kimi-k2.7-code-highspeed | 262K | chat, code, reasoning | CNY 13.00 / 54.00 |
-| kimi-k3 | 1048K | chat | CNY 20.00 / 100.00 |
 | kimi-k3.1-pro | 1048K | chat | CNY 13.00 / 68.00 |
 | kimi-k3.1-pro-highspeed | 1048K | chat | CNY 26.00 / 136.00 |
 
@@ -358,10 +333,8 @@ Generated: 2026-11-01
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| kimi-k2.6 | 262K | chat | USD 0.95 / 4.00 |
 | kimi-k2.7-code | 262K | chat, code, reasoning | USD 0.95 / 4.00 |
 | kimi-k2.7-code-highspeed | 262K | chat, code, reasoning | USD 1.90 / 8.00 |
-| kimi-k3 | 1048K | chat | USD 3.00 / 15.00 |
 | kimi-k3.1-pro | 1048K | chat | USD 2.00 / 10.00 |
 | kimi-k3.1-pro-highspeed | 1048K | chat | USD 4.00 / 20.00 |
 
@@ -387,14 +360,9 @@ Generated: 2026-11-01
 | gpt-4o-mini-tts | N/A | audio | N/A |
 | gpt-4o-transcribe | N/A | audio | USD 2.50 / 10.00 |
 | gpt-4o-transcribe-diarize | N/A | audio | USD 2.50 / 10.00 |
-| gpt-5.5-cyber | N/A | chat | USD 12.50 / 75.00 |
 | gpt-5.6-cyber | N/A | chat | USD 12.50 / 75.00 |
-| gpt-5.6-luna | 1050K | chat | USD 0.20 / 1.20 |
-| gpt-5.6-sol | 1050K | chat | USD 4.00 / 20.00 |
-| gpt-5.6-terra | 1050K | chat | USD 2.00 / 12.00 |
 | gpt-6-astra | 1050K | chat | USD 10.00 / 50.00 |
 | gpt-6-luna | 1050K | chat | USD 0.10 / 0.50 |
-| gpt-6-sol | 1050K | chat | USD 2.00 / 10.00 |
 | gpt-6.1-sol | 1050K | chat | USD 2.00 / 10.00 |
 | gpt-6.1-terra | 1050K | chat | USD 1.00 / 5.00 |
 | gpt-audio-1.5 | N/A | audio, chat | USD 2.50 / 10.00 |
@@ -431,6 +399,7 @@ Generated: 2026-11-01
 |----------|---------|------------|------------------------|
 | pixverse-c1 | N/A | video, audio | N/A |
 | pixverse-v5 | N/A | video | N/A |
+| pixverse-v5.5 | N/A | video, audio | N/A |
 | pixverse-v5.6 | N/A | video, audio | N/A |
 | pixverse-v6 | N/A | video | N/A |
 | pixverse-v6-max | N/A | video, audio | N/A |
@@ -452,6 +421,7 @@ Generated: 2026-11-01
 | gemini_image3.1_flash_lite | N/A | image | N/A |
 | gemini_omni_flash | N/A | video | N/A |
 | gemini_omni_flash_1.1 | N/A | video | N/A |
+| gemini_omni_flash_1.2 | N/A | video | N/A |
 | gen4_image | N/A | image | N/A |
 | gen4_image_turbo | N/A | image | N/A |
 | gen4_turbo | N/A | video | N/A |
@@ -470,6 +440,7 @@ Generated: 2026-11-01
 | ideogram_4_5 | N/A | image | N/A |
 | ideogram_vector | N/A | image | N/A |
 | kling_4 | N/A | video | N/A |
+| kling_4_flash | N/A | video | N/A |
 | kling2.5_turbo_pro | N/A | video | N/A |
 | kling3.0_4k | N/A | video | N/A |
 | kling3.0_pro | N/A | video | N/A |
@@ -488,6 +459,7 @@ Generated: 2026-11-01
 | seedream5_flash | N/A | image | N/A |
 | seedream5_lite | N/A | image | N/A |
 | seedream5_pro | N/A | image | N/A |
+| seedream5_pro_layers | N/A | image | N/A |
 | veo3.1 | N/A | video | N/A |
 | veo3.1_fast | N/A | video | N/A |
 | wan3 | N/A | video | N/A |
@@ -514,8 +486,6 @@ Generated: 2026-11-01
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| step-3.5-flash | 256K | chat, reasoning | CNY 0.70 / 2.10 |
-| step-3.5-flash-2603 | 256K | chat, reasoning | CNY 0.70 / 2.10 |
 | step-3.7-flash | 256K | chat, reasoning | CNY 1.35 / 8.10 |
 | step-5-preview | 1000K | chat, reasoning | CNY 7.00 / 20.00 |
 
@@ -537,8 +507,7 @@ Generated: 2026-11-01
 | hy-mt2-pro | 8K | chat | CNY 0.50 / 2.00 |
 | hy-role | 32K | chat | CNY 2.40 / 9.60 |
 | hy-role-latest | 32K | chat | CNY 2.40 / 9.60 |
-| hy3 | 256K | chat, reasoning | CNY 1.00 / 4.00 |
-| hy4-preview | 1000K | chat | CNY 6.00 / 18.00 |
+| hy4 | 1000K | chat | CNY 6.00 / 18.00 |
 
 ### TypeSafe AI (typesafe)
 
@@ -589,9 +558,6 @@ Generated: 2026-11-01
 | grok-4.20-0309-non-reasoning | 1000K | chat | USD 1.25 / 2.50 |
 | grok-4.20-0309-reasoning | 1000K | chat, reasoning | USD 1.25 / 2.50 |
 | grok-4.20-multi-agent-0309 | 1000K | chat, reasoning | USD 1.25 / 2.50 |
-| grok-4.3 | 1000K | chat | USD 1.25 / 2.50 |
-| grok-4.5 | 500K | chat, reasoning | USD 2.00 / 6.00 |
-| grok-4.6 | 500K | chat, reasoning | USD 2.00 / 6.00 |
 | grok-4.7 | 500K | chat, reasoning | USD 2.00 / 6.00 |
 | grok-build-0.1 | 256K | chat | USD 1.00 / 2.00 |
 | grok-imagine-image | N/A | image | N/A |
@@ -630,10 +596,6 @@ Generated: 2026-11-01
 | cogview-4-250304 | N/A | image | N/A |
 | embedding-2 | 8K | embedding | N/A |
 | embedding-3 | N/A | embedding | N/A |
-| glm-5 | 200K | chat, reasoning | CNY 4.00 / 18.00 |
-| glm-5-turbo | 200K | chat, reasoning | CNY 5.00 / 22.00 |
-| glm-5.1 | 200K | chat | CNY 6.00 / 24.00 |
-| glm-5.2 | 1000K | chat, reasoning | CNY 8.00 / 28.00 |
 | glm-5.3 | 1000K | chat | CNY 8.00 / 28.00 |
 | glm-5.3-flash | 1000K | chat | CNY 0.80 / 2.80 |
 | glm-5.3-flashx | 1000K | chat | CNY 2.00 / 7.00 |
@@ -647,8 +609,8 @@ Generated: 2026-11-01
 
 | Region | Vendors | Models | Pricing Files |
 |--------|---------|--------|---------------|
-| CN | 14 | 171 | 163 |
-| GLOBAL | 21 | 349 | 336 |
+| CN | 14 | 178 | 166 |
+| GLOBAL | 21 | 359 | 343 |
 
 ### Client API Support
 

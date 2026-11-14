@@ -8,7 +8,7 @@
   "codingVisible": true,
   "colorToken": "#b91c1c",
   "contextTokens": 262144,
-  "description": "Doubao Seed 2.0 Lite 260428 revision, listed under 往期模型 on the Volcengine Ark model list. 256K context window, 224K max input, 128K max answer and 128K max CoT.",
+  "description": "Doubao Seed 2.0 Lite 260428 revision, listed under 往期模型 on the Volcengine Ark model list. 256K context window, 224K max input, 128K max answer and 128K max CoT. Superseded by Doubao Seed 2.1 Lite (260915); kept for historical pricing and migration reference.",
   "displayName": "Doubao Seed 2.0 Lite (260428)",
   "familyCode": "doubao-seed",
   "inputModalities": [
@@ -17,7 +17,7 @@
     "audio",
     "video"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 229376,
   "maxOutputTokens": 131072,
   "modelId": "doubao-seed-2-0-lite-260428",
@@ -26,12 +26,13 @@
   ],
   "primaryCapability": "chat",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "doubao-seed-2-1-lite-260915",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://www.volcengine.com/docs/82379/1330310"
   },
   "strengths": [

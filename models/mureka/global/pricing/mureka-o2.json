@@ -21,14 +21,14 @@
       "productCode": "models.mureka.music",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "57bfb6e9949715d991a3e4dbe5d6394d455a075ed6a637f27c46b23b20dada61",
+      "rateHash": "8c361a76657ec6da9035f450f9c6ed8a7769351804c9d730c36a733b5703c148",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-01T00:00:00Z",
+        "observedAt": "2026-11-14T00:00:00Z",
         "sourceUrl": "https://platform.mureka.ai/docs/en/faq.html"
       },
-      "unitPrice": "0.200000",
+      "unitPrice": "0.045000",
       "unitSize": "1"
     }
   ],

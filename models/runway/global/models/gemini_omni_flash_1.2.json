@@ -1,0 +1,37 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "runway/gemini_omni_flash_1.2",
+  "codingVisible": false,
+  "description": "Gemini Omni Flash 1.2 video generation at 360p, 720p, 1080p or 4K, resold through the Runway Dev API: 2/7/10/21 credits per output second plus 1 credit per reference image or keyframe and 1 credit per second of input video.",
+  "displayName": "Gemini Omni Flash 1.2",
+  "familyCode": "runway-video",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "active",
+  "modelId": "gemini_omni_flash_1.2",
+  "outputModalities": [
+    "video"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "runway",
+  "vendorName": "Runway"
+}

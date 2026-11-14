@@ -1,0 +1,38 @@
+{
+  "catalogKey": "minimax/asr-1.0",
+  "currency": "USD",
+  "modelId": "asr-1.0",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-14T00:00:00Z",
+      "meterCode": "stt_audio_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.transcribe",
+      "priceBookCode": "models.minimax.global.official",
+      "priceId": "minimax-global-asr-1-0-hour",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "0.001",
+      "rateHash": "d99a89ff976b5dc83e54e56f93f9a63c70f2033da3cabf62ee210e3803fc3150",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "unitPrice": "0.380000",
+      "unitSize": "60"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "minimax"
+}

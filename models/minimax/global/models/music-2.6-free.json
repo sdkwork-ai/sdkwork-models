@@ -1,0 +1,36 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "music"
+  ],
+  "catalogKey": "minimax/music-2.6-free",
+  "codingVisible": false,
+  "colorToken": "#2563eb",
+  "description": "Rate-limited free tier of music-2.6 (RPM 3). MiniMax stopped the free music generation endpoints Music-3.0-free, Music-2.6-free and music-cover-free on 2026-08-20; the model id is retained for historical reference only.",
+  "displayName": "MiniMax Music 2.6 Free",
+  "familyCode": "minimax-music",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "retired",
+  "modelId": "music-2.6-free",
+  "outputModalities": [
+    "music"
+  ],
+  "primaryCapability": "music",
+  "regionCode": "global",
+  "releaseStage": "retired",
+  "routingState": "disabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "archived",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/faq/models"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax"
+}

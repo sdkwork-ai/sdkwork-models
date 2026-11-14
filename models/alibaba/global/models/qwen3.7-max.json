@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#2563eb",
   "contextTokens": 1000000,
-  "description": "Qwen3.7-Max international flagship reasoning and agent model with 1M context.",
+  "description": "Qwen3.7-Max international flagship reasoning and agent model with 1M context. Superseded by Qwen3.8 Max; kept for historical pricing and migration reference.",
   "displayName": "Qwen3.7 Max",
   "familyCode": "qwen",
   "inputModalities": [
@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 760,
   "latencyP95Ms": 2600,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 991800,
   "maxOutputTokens": 65530,
   "modelId": "qwen3.7-max",
@@ -25,12 +25,13 @@
   "primaryCapability": "chat",
   "rankScore": "1060.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "qwen3.8-max",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-max"
   },
   "strengths": [

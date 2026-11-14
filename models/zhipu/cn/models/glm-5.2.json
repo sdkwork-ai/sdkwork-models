@@ -8,13 +8,13 @@
   "codingVisible": true,
   "colorToken": "#7c2d12",
   "contextTokens": 1000000,
-  "description": "GLM-5.2 flagship coding and agent model with 1M context and open-weight lineage.",
+  "description": "GLM-5.2 flagship coding and agent model with 1M context and open-weight lineage. Superseded by GLM-5.3; kept for historical pricing and migration reference.",
   "displayName": "GLM-5.2",
   "familyCode": "glm",
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1000000,
   "maxOutputTokens": 131072,
   "modelId": "glm-5.2",
@@ -24,12 +24,13 @@
   "primaryCapability": "chat",
   "rankScore": "920.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "glm-5.3",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/text/glm-5.2"
   },
   "strengths": [

@@ -1,0 +1,38 @@
+{
+  "catalogKey": "bytedance/seed-audio-1.0",
+  "currency": "CNY",
+  "modelId": "seed-audio-1.0",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-14T00:00:00Z",
+      "meterCode": "audio_output_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-seed-audio-1-0-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "0.01",
+      "rateHash": "5c3bab6ab7a88a92553992018ec7d22299615fd3237388c92f36f6d10140a58a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://www.volcengine.com/docs/6561/1359370"
+      },
+      "unitPrice": "1.000000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "bytedance"
+}

@@ -1,0 +1,115 @@
+{
+  "catalogKey": "runway/kling_4_flash",
+  "currency": "USD",
+  "modelId": "kling_4_flash",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p_no_input"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-kling_4_flash-second-res_720p_no_input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "cd6f22c723bd6f66617408a3cc470fe3b18016b10fd92d889888190341f39d56",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_720p_no_input",
+      "unitPrice": "0.094000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p_with_input"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-kling_4_flash-second-res_720p_with_input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "98383cda3cb14add6e0a90f1e2d0e0f809589db22633e0f411b24924edd860e2",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_720p_with_input",
+      "unitPrice": "0.063000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p_with_input"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-01T00:00:00Z",
+      "meterCode": "video_input_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-kling_4_flash-input-second-res_720p_with_input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "caa1cdfc126419c447a3199461255566c0c668b19140fa51a266f0d9a449ef13",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_720p_with_input",
+      "unitPrice": "0.063000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "runway"
+}

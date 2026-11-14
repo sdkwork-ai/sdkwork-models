@@ -1,5 +1,5 @@
 {
-  "catalogVersion": "2026.11.01.1",
+  "catalogVersion": "2026.11.14.6",
   "schemaVersion": "1.1.0",
   "vendors": [
     {
@@ -19,7 +19,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -38,7 +38,7 @@
             "api.openai.codex"
           ],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://developers.openai.com/codex/"
           },
           "supportStatus": "supported"
@@ -51,7 +51,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -80,7 +80,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -99,7 +99,7 @@
                 "api.openai.codex"
               ],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://developers.openai.com/codex/"
               },
               "supportStatus": "supported"
@@ -112,7 +112,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -165,7 +165,7 @@
             "api.anthropic.claude_code"
           ],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://docs.anthropic.com/en/docs/claude-code/overview"
           },
           "supportStatus": "supported"
@@ -178,7 +178,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -191,7 +191,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -223,7 +223,7 @@
                 "api.anthropic.claude_code"
               ],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://docs.anthropic.com/en/docs/claude-code/overview"
               },
               "supportStatus": "supported"
@@ -236,7 +236,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -249,7 +249,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -299,7 +299,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -312,7 +312,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -331,7 +331,7 @@
             "api.gemini.generate_content"
           ],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://ai.google.dev/gemini-api/docs"
           },
           "supportStatus": "supported"
@@ -362,7 +362,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -375,7 +375,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -394,7 +394,7 @@
                 "api.gemini.generate_content"
               ],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://ai.google.dev/gemini-api/docs"
               },
               "supportStatus": "supported"
@@ -445,7 +445,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -458,7 +458,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -471,7 +471,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -499,7 +499,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -512,7 +512,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -525,7 +525,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -614,7 +614,7 @@
             "api.anthropic.claude_code"
           ],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-max"
           },
           "supportStatus": "partial"
@@ -658,7 +658,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "convert"
@@ -702,7 +702,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "convert"
@@ -730,7 +730,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -743,7 +743,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -756,7 +756,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -835,7 +835,7 @@
                 "api.anthropic.claude_code"
               ],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-max"
               },
               "supportStatus": "partial"
@@ -879,7 +879,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "convert"
@@ -923,7 +923,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "convert"
@@ -988,7 +988,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "convert"
@@ -1017,7 +1017,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "convert"
@@ -1046,7 +1046,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "convert"
@@ -1071,7 +1071,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1084,7 +1084,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1097,7 +1097,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1153,7 +1153,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "convert"
@@ -1182,7 +1182,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "convert"
@@ -1211,7 +1211,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "convert"
@@ -1261,7 +1261,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1274,7 +1274,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1287,7 +1287,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1314,7 +1314,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1327,7 +1327,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1340,7 +1340,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1381,7 +1381,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1394,7 +1394,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1407,7 +1407,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1457,7 +1457,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1470,7 +1470,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1483,7 +1483,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1512,7 +1512,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1525,7 +1525,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1538,7 +1538,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1587,7 +1587,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1600,7 +1600,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1613,7 +1613,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1639,7 +1639,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1652,7 +1652,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1665,7 +1665,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1674,13 +1674,13 @@
           "displayName": "Runway",
           "legalName": "Runway AI, Inc.",
           "marketScope": "global",
-          "modelCount": 52,
+          "modelCount": 55,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "runway/global/vendor.json",
-          "pricingFileCount": 51,
+          "pricingFileCount": 54,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 85,
@@ -1710,7 +1710,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1723,7 +1723,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1736,7 +1736,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1762,7 +1762,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1775,7 +1775,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1788,7 +1788,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1834,7 +1834,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1847,7 +1847,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1860,7 +1860,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1885,7 +1885,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1898,7 +1898,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1911,7 +1911,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -1958,7 +1958,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1971,7 +1971,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -1984,7 +1984,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2011,7 +2011,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2024,7 +2024,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2037,7 +2037,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2078,7 +2078,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2091,7 +2091,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2104,7 +2104,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2148,7 +2148,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2161,7 +2161,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2174,7 +2174,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2199,7 +2199,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2212,7 +2212,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2225,7 +2225,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2263,7 +2263,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2276,7 +2276,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2289,7 +2289,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2298,13 +2298,13 @@
           "displayName": "PixVerse",
           "legalName": "Beijing Aisy Technology",
           "marketScope": "global",
-          "modelCount": 5,
+          "modelCount": 6,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "pixverse/global/vendor.json",
-          "pricingFileCount": 5,
+          "pricingFileCount": 6,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 101,
@@ -2334,7 +2334,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2347,7 +2347,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2360,7 +2360,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2386,7 +2386,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2399,7 +2399,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2412,7 +2412,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2421,13 +2421,13 @@
           "displayName": "Tencent Cloud",
           "legalName": "Tencent Cloud",
           "marketScope": "china_mainland",
-          "modelCount": 10,
+          "modelCount": 11,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "tencent/cn/vendor.json",
-          "pricingFileCount": 10,
+          "pricingFileCount": 11,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 100,
@@ -2463,7 +2463,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2476,7 +2476,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2489,7 +2489,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2519,7 +2519,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2532,7 +2532,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2545,7 +2545,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2554,13 +2554,13 @@
           "displayName": "ByteDance",
           "legalName": "ByteDance",
           "marketScope": "china_mainland",
-          "modelCount": 29,
+          "modelCount": 30,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "bytedance/cn/vendor.json",
-          "pricingFileCount": 27,
+          "pricingFileCount": 28,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 110,
@@ -2587,7 +2587,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2600,7 +2600,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2613,7 +2613,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2667,7 +2667,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2680,7 +2680,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2693,7 +2693,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2724,7 +2724,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2737,7 +2737,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2750,7 +2750,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2759,13 +2759,13 @@
           "displayName": "MiniMax",
           "legalName": "MiniMax",
           "marketScope": "china_mainland",
-          "modelCount": 30,
+          "modelCount": 35,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "minimax/cn/vendor.json",
-          "pricingFileCount": 30,
+          "pricingFileCount": 31,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 121,
@@ -2795,7 +2795,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2808,7 +2808,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2821,7 +2821,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2830,13 +2830,13 @@
           "displayName": "MiniMax",
           "legalName": "MiniMax",
           "marketScope": "international",
-          "modelCount": 30,
+          "modelCount": 36,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "minimax/global/vendor.json",
-          "pricingFileCount": 29,
+          "pricingFileCount": 32,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 120,
@@ -2868,7 +2868,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2881,7 +2881,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2894,7 +2894,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -2920,7 +2920,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2933,7 +2933,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2946,7 +2946,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -2996,7 +2996,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3009,7 +3009,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3022,7 +3022,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3049,7 +3049,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3062,7 +3062,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3075,7 +3075,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3115,7 +3115,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3128,7 +3128,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3141,7 +3141,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3186,7 +3186,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3199,7 +3199,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3212,7 +3212,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3238,7 +3238,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3251,7 +3251,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3264,7 +3264,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3312,7 +3312,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3325,7 +3325,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3338,7 +3338,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3365,7 +3365,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3378,7 +3378,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3391,7 +3391,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3437,7 +3437,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3450,7 +3450,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3463,7 +3463,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3490,7 +3490,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3503,7 +3503,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3516,7 +3516,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3560,7 +3560,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3573,7 +3573,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3586,7 +3586,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3611,7 +3611,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3624,7 +3624,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3637,7 +3637,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3681,7 +3681,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3694,7 +3694,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3707,7 +3707,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3732,7 +3732,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3745,7 +3745,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3758,7 +3758,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3804,7 +3804,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3817,7 +3817,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3830,7 +3830,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "unsupported"
@@ -3857,7 +3857,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3870,7 +3870,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3883,7 +3883,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -3946,7 +3946,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "convert"
@@ -3975,7 +3975,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "convert"
@@ -4004,7 +4004,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
           },
           "supportStatus": "convert"
@@ -4032,7 +4032,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -4045,7 +4045,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -4058,7 +4058,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "unsupported"
@@ -4116,7 +4116,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "convert"
@@ -4145,7 +4145,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "convert"
@@ -4174,7 +4174,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
               },
               "supportStatus": "convert"
@@ -4220,7 +4220,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
           },
           "supportStatus": "unsupported"
@@ -4233,7 +4233,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
           },
           "supportStatus": "unsupported"
@@ -4246,7 +4246,7 @@
           "protocolCodes": [],
           "resourceCodes": [],
           "source": {
-            "observedAt": "2026-11-01T00:00:00Z",
+            "observedAt": "2026-11-14T00:00:00Z",
             "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
           },
           "supportStatus": "unsupported"
@@ -4271,7 +4271,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
               },
               "supportStatus": "unsupported"
@@ -4284,7 +4284,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
               },
               "supportStatus": "unsupported"
@@ -4297,7 +4297,7 @@
               "protocolCodes": [],
               "resourceCodes": [],
               "source": {
-                "observedAt": "2026-11-01T00:00:00Z",
+                "observedAt": "2026-11-14T00:00:00Z",
                 "sourceUrl": "https://docs.typesafe.ai/concepts/system-one"
               },
               "supportStatus": "unsupported"

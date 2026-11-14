@@ -32,7 +32,7 @@
       "sortOrder": 40
     },
     {
-      "defaultModel": "hailuo-2.3",
+      "defaultModel": "MiniMax-H3",
       "displayName": "MiniMax Hailuo",
       "familyCode": "minimax-video",
       "familyType": "video",

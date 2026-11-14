@@ -12,7 +12,7 @@
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "speech-2.6-turbo",
   "outputModalities": [
     "audio"
@@ -20,12 +20,13 @@
   "primaryCapability": "audio",
   "rankScore": "740.000000",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "speech-2.8-turbo",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
   },
   "strengths": [

@@ -8,13 +8,13 @@
   "codingVisible": true,
   "colorToken": "#7c2d12",
   "contextTokens": 200000,
-  "description": "Zhipu GLM-5 text model. Official model overview lists GLM-5 under text models with 200K context and 128K max output, positioned for Agentic long-horizon planning and execution.",
+  "description": "Zhipu GLM-5 text model. Official model overview lists GLM-5 under text models with 200K context and 128K max output, positioned for Agentic long-horizon planning and execution. Superseded by GLM-5.3; kept for historical pricing and migration reference.",
   "displayName": "GLM-5",
   "familyCode": "glm",
   "inputModalities": [
     "text"
   ],
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 200000,
   "maxOutputTokens": 131072,
   "modelId": "glm-5",
@@ -23,12 +23,13 @@
   ],
   "primaryCapability": "chat",
   "regionCode": "cn",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "glm-5.3",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/model-overview"
   },
   "strengths": [

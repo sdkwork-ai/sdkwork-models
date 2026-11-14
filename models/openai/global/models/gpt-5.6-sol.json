@@ -7,7 +7,7 @@
   "codingVisible": true,
   "colorToken": "#111827",
   "contextTokens": 1050000,
-  "description": "GPT-5.6 Sol flagship model with max reasoning and ultra sub-agent modes. Generally available as of July 2026. Official pricing page notes promotional pricing is available at least through November 21, 2026.",
+  "description": "GPT-5.6 Sol flagship model with max reasoning and ultra sub-agent modes. Generally available as of July 2026. Official pricing page notes promotional pricing is available at least through November 21, 2026. Superseded by GPT-6.1 Sol; kept for historical pricing and migration reference.",
   "displayName": "GPT-5.6 Sol",
   "familyCode": "gpt-5",
   "inputModalities": [
@@ -16,7 +16,7 @@
   ],
   "latencyP50Ms": 1200,
   "latencyP95Ms": 4000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "maxInputTokens": 1050000,
   "maxOutputTokens": 128000,
   "modelId": "gpt-5.6-sol",
@@ -26,12 +26,13 @@
   "primaryCapability": "chat",
   "rankScore": "1220.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "deprecated",
+  "replacementModel": "gpt-6.1-sol",
+  "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-01T00:00:00Z",
+    "observedAt": "2026-11-14T00:00:00Z",
     "sourceUrl": "https://openai.com/index/previewing-gpt-5-6-sol/"
   },
   "strengths": [

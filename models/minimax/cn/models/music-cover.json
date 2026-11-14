@@ -1,0 +1,37 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "music"
+  ],
+  "catalogKey": "minimax/music-cover",
+  "codingVisible": false,
+  "colorToken": "#1d4ed8",
+  "description": "基于 6 秒至 6 分钟参考音频生成翻唱版本（可选歌词改写）。MiniMax 自 2026 年 8 月 20 日起不再向新用户提供付费音乐/翻唱接口，历史付费用户仍可继续使用；中文按量计费页未单列翻唱单价，故不落价格行。",
+  "displayName": "MiniMax Music Cover",
+  "familyCode": "minimax-music",
+  "inputModalities": [
+    "text",
+    "audio"
+  ],
+  "lifecycle": "deprecated",
+  "modelId": "music-cover",
+  "outputModalities": [
+    "music"
+  ],
+  "primaryCapability": "music",
+  "regionCode": "cn",
+  "releaseStage": "deprecated",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://platform.minimaxi.com/docs/api-reference/music-generation"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "minimax",
+  "vendorName": "MiniMax"
+}

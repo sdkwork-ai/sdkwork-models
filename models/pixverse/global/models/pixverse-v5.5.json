@@ -1,0 +1,44 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video",
+    "audio"
+  ],
+  "catalogKey": "pixverse/pixverse-v5.5",
+  "codingVisible": false,
+  "colorToken": "#8b5cf6",
+  "description": "PixVerse V5.5 video generation at 5, 8 or 10 seconds and 360p-1080p with optional audio, single-shot or multi-shot, billed at a fixed Credit amount per request (225 Credits = USD 1); 10-second 1080p is not supported.",
+  "displayName": "PixVerse V5.5",
+  "familyCode": "pixverse-video",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "pixverse-v5.5",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-14T00:00:00Z",
+    "sourceUrl": "https://docs.platform.pixverse.ai/model-capability-map-2394982m0"
+  },
+  "strengths": [
+    "Text to video",
+    "Image to video",
+    "First and last frame video"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "pixverse",
+  "vendorName": "PixVerse"
+}
