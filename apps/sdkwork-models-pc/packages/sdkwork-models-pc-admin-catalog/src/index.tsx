@@ -147,7 +147,6 @@ export function ModelAdmin() {
   const { t } = useTranslation();
   const [vendors, setVendors] = useState<Vendor[]>([]);
   const [models, setModels] = useState<Model[]>([]);
-  const [vendorModelCounts, setVendorModelCounts] = useState<Record<string, number>>({});
   const [vendorModelTotal, setVendorModelTotal] = useState(0);
   const [selectedVendorId, setSelectedVendorId] = useState<string>('');
   const [search, setSearch] = useState('');
@@ -203,10 +202,6 @@ export function ModelAdmin() {
       });
       setModels(pageResult.items);
       setVendorModelTotal(pageResult.totalCount);
-      setVendorModelCounts((current) => ({
-        ...current,
-        [vendor.id]: pageResult.totalCount,
-      }));
     } catch (error) {
       setLoadError(error instanceof Error ? error.message : 'Failed to load model catalog');
     } finally {
@@ -220,7 +215,6 @@ export function ModelAdmin() {
     try {
       const initialized = await ModelService.fetchInitializedCatalog();
       setVendors(initialized.vendors);
-      setVendorModelCounts({});
     } catch (error) {
       setLoadError(error instanceof Error ? error.message : 'Failed to load model catalog');
     } finally {
@@ -327,6 +321,19 @@ export function ModelAdmin() {
     }
   };
 
+  /**
+   * Keep the vendor badge in step with model mutations the operator performs on
+   * this page; the badge itself is served by the vendor list so it never depends
+   * on which vendor happens to be open.
+   */
+  const adjustVendorModelCount = (vendorCode: string, delta: number) => {
+    setVendors(current => current.map(vendor => (
+      vendor.vendorCode === vendorCode
+        ? { ...vendor, modelCount: Math.max(0, vendor.modelCount + delta) }
+        : vendor
+    )));
+  };
+
   const handleAddVendor = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoadError(null);
@@ -363,6 +370,7 @@ export function ModelAdmin() {
       }
       const added = await ModelService.addModel(createModelInputFromForm(formData, selectedVendor.id));
       setModels([...models, added]);
+      adjustVendorModelCount(selectedVendor.vendorCode, 1);
       setIsModelModalOpen(false);
     } catch (error) {
       setLoadError(error instanceof Error ? error.message : 'Failed to save model');
@@ -404,6 +412,7 @@ export function ModelAdmin() {
       const success = await ModelService.deleteModel(id);
       if (success) {
         setModels(current => current.filter(m => m.id !== id));
+        adjustVendorModelCount(deleteTarget.vendorCode, -1);
       }
       setDeleteTarget(null);
     } catch (error) {
@@ -629,7 +638,6 @@ export function ModelAdmin() {
           <div className="flex-1 overflow-y-auto p-3 space-y-1.5">
             {vendors.map(v => {
               const isActive = selectedVendorId === v.id;
-              const count = vendorModelCounts[v.id];
               const vendorAvatarAppearance = resolveVendorAvatarAppearance(v.color);
               return (
                 <button
@@ -653,11 +661,9 @@ export function ModelAdmin() {
                     </span>
                   </div>
                   <div className="flex shrink-0 items-center gap-2">
-                    {typeof count === 'number' ? (
-                      <span className={`text-xs px-2 py-0.5 rounded-full ${isActive ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300' : 'bg-slate-100 text-slate-500 dark:bg-white/10 dark:text-slate-400'}`}>
-                        {count}
-                      </span>
-                    ) : null}
+                    <span className={`text-xs px-2 py-0.5 rounded-full ${isActive ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-300' : 'bg-slate-100 text-slate-500 dark:bg-white/10 dark:text-slate-400'}`}>
+                      {v.modelCount}
+                    </span>
                   </div>
                 </button>
               );

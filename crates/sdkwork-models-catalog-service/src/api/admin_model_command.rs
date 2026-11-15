@@ -413,6 +413,7 @@ struct AdminModelVendorItemResponse {
     description: String,
     supported_protocols: Value,
     client_api_compatibility: Value,
+    model_count: i32,
 }
 
 #[derive(Debug, Serialize)]
@@ -2709,6 +2710,7 @@ fn to_vendor_response(item: AdminModelVendorItem) -> AdminModelVendorItemRespons
             &item.client_api_compatibility,
             Value::Object(Default::default()),
         ),
+        model_count: item.model_count,
     }
 }
 

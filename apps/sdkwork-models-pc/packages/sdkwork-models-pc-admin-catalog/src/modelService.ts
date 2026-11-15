@@ -42,6 +42,8 @@ export interface Vendor {
   status: 'active' | 'inactive';
   color: string;
   description: string;
+  /** Catalog models the operator can manage under this vendor. */
+  modelCount: number;
 }
 
 export interface Model {
@@ -1047,6 +1049,7 @@ function normalizeVendor(value: unknown): Vendor {
     status: readVendorStatus(item),
     color: readRequiredString(item, 'color', 'Vendor color is required'),
     description: readRequiredString(item, 'description', 'Vendor description is required'),
+    modelCount: readRequiredNonNegativeInteger(item, 'modelCount', 'Vendor model count'),
   };
 }
 

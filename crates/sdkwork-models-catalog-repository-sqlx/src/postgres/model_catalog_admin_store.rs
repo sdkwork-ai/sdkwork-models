@@ -711,7 +711,18 @@ async fn list_vendors(
     .fetch_all(pool)
     .await
     .map_err(|error| store_error("failed to list model vendors", error))?;
-    rows.into_iter().map(vendor_from_row).collect()
+    let mut vendors = rows
+        .into_iter()
+        .map(vendor_from_row)
+        .collect::<DomainResult<Vec<_>>>()?;
+    let counts = vendor_model_counts(
+        pool,
+        query.subject.tenant_id,
+        query.subject.organization_id,
+    )
+    .await?;
+    attach_vendor_model_counts(&mut vendors, &counts);
+    Ok(vendors)
 }
 
 async fn list_models(
@@ -1057,7 +1068,13 @@ async fn list_vendors_tx(
     .fetch_all(&mut **tx)
     .await
     .map_err(|error| store_error("failed to list model vendors", error))?;
-    rows.into_iter().map(vendor_from_row).collect()
+    let mut vendors = rows
+        .into_iter()
+        .map(vendor_from_row)
+        .collect::<DomainResult<Vec<_>>>()?;
+    let counts = vendor_model_counts_tx(tx, tenant_id, organization_id).await?;
+    attach_vendor_model_counts(&mut vendors, &counts);
+    Ok(vendors)
 }
 
 async fn list_models_tx(
@@ -3630,6 +3647,87 @@ fn mapping_item_select_sql() -> &'static str {
     "#
 }
 
+/// Per-vendor model totals for the vendor sidebar.
+///
+/// The predicate mirrors the admin model list (tenant scoping plus the
+/// tenant-override shadowing rule) so a vendor badge always equals the total
+/// the operator gets after selecting that vendor.
+const VENDOR_MODEL_COUNT_SQL: &str = r#"
+        SELECT m.vendor_code, COUNT(*)::bigint AS model_count
+        FROM ai_model m
+        WHERE (m.tenant_id = 0 OR m.tenant_id = $1)
+          AND (m.organization_id = 0 OR m.organization_id = $2)
+          AND m.deleted_at IS NULL
+          AND NOT EXISTS (
+              SELECT 1
+              FROM ai_model tenant_model
+              WHERE tenant_model.tenant_id = $3
+                AND tenant_model.organization_id = $4
+                AND tenant_model.model = m.model
+                AND tenant_model.id <> m.id
+                AND tenant_model.deleted_at IS NULL
+          )
+        GROUP BY m.vendor_code
+        "#;
+
+async fn vendor_model_counts(
+    pool: &PgPool,
+    tenant_id: i64,
+    organization_id: i64,
+) -> DomainResult<BTreeMap<String, i32>> {
+    let rows = sqlx::query(VENDOR_MODEL_COUNT_SQL)
+        .bind(tenant_id)
+        .bind(organization_id)
+        .bind(tenant_id)
+        .bind(organization_id)
+        .fetch_all(pool)
+        .await
+        .map_err(|error| store_error("failed to count vendor models", error))?;
+    vendor_model_count_rows(rows)
+}
+
+async fn vendor_model_counts_tx(
+    tx: &mut Transaction<'_, Postgres>,
+    tenant_id: i64,
+    organization_id: i64,
+) -> DomainResult<BTreeMap<String, i32>> {
+    let rows = sqlx::query(VENDOR_MODEL_COUNT_SQL)
+        .bind(tenant_id)
+        .bind(organization_id)
+        .bind(tenant_id)
+        .bind(organization_id)
+        .fetch_all(&mut **tx)
+        .await
+        .map_err(|error| store_error("failed to count vendor models", error))?;
+    vendor_model_count_rows(rows)
+}
+
+fn vendor_model_count_rows(rows: Vec<sqlx::postgres::PgRow>) -> DomainResult<BTreeMap<String, i32>> {
+    let mut counts = BTreeMap::new();
+    for row in rows {
+        let vendor_code: String = row.try_get("vendor_code").map_err(row_error)?;
+        let model_count: i64 = row.try_get("model_count").map_err(row_error)?;
+        let normalized = vendor_code.trim().to_ascii_lowercase();
+        if normalized.is_empty() {
+            continue;
+        }
+        counts.insert(normalized, i32::try_from(model_count).unwrap_or(i32::MAX));
+    }
+    Ok(counts)
+}
+
+fn attach_vendor_model_counts(
+    vendors: &mut [AdminModelVendorItem],
+    counts: &BTreeMap<String, i32>,
+) {
+    for vendor in vendors {
+        vendor.model_count = counts
+            .get(&vendor.vendor_code.trim().to_ascii_lowercase())
+            .copied()
+            .unwrap_or(0);
+    }
+}
+
 fn vendor_from_row(row: sqlx::postgres::PgRow) -> DomainResult<AdminModelVendorItem> {
     Ok(AdminModelVendorItem {
         id: row.try_get("id").map_err(row_error)?,
@@ -3647,6 +3745,9 @@ fn vendor_from_row(row: sqlx::postgres::PgRow) -> DomainResult<AdminModelVendorI
         client_api_compatibility: row
             .try_get("client_api_compatibility")
             .unwrap_or_else(|_| "{}".to_owned()),
+        // The vendor projection does not join models; list reads attach the
+        // real totals through `attach_vendor_model_counts`.
+        model_count: 0,
         deleted_at: row.try_get("deleted_at").ok().flatten(),
     })
 }

@@ -27,6 +27,13 @@ pub struct AdminModelVendorItem {
     pub description: String,
     pub supported_protocols: String,
     pub client_api_compatibility: String,
+    /// Number of catalog models the operator can manage under this vendor.
+    ///
+    /// The vendor list is the only surface that must answer this without a
+    /// per-vendor model query, so the count is resolved together with the
+    /// vendor row. Single-vendor reads that cannot know it (a vendor that was
+    /// just created) leave it at `0`.
+    pub model_count: i32,
     pub deleted_at: Option<String>,
 }
 

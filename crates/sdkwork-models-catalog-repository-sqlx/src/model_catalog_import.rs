@@ -2300,6 +2300,13 @@ pub(crate) fn catalog_preview_admin_items(
     catalog: &ModelCatalog,
     subject: AdminModelSubject,
 ) -> (Vec<AdminModelVendorItem>, Vec<AdminAiModelItem>) {
+    let identity_models = public_catalog_identity_models(catalog);
+    let mut model_counts = BTreeMap::<String, i32>::new();
+    for (_, (vendor, _model)) in &identity_models {
+        *model_counts
+            .entry(vendor.vendor.vendor_code.trim().to_ascii_lowercase())
+            .or_default() += 1;
+    }
     let vendors = catalog_vendor_records(catalog)
         .into_iter()
         .map(|vendor| AdminModelVendorItem {
@@ -2307,7 +2314,7 @@ pub(crate) fn catalog_preview_admin_items(
             uuid: stable_uuid("sdk-vendor-preview", &[&vendor.vendor_code]),
             tenant_id: subject.tenant_id,
             organization_id: subject.organization_id,
-            vendor_code: vendor.vendor_code,
+            vendor_code: vendor.vendor_code.clone(),
             name: vendor.display_name,
             status: "active".to_owned(),
             color: "bg-slate-700".to_owned(),
@@ -2315,6 +2322,10 @@ pub(crate) fn catalog_preview_admin_items(
             supported_protocols: json_array(&vendor.supported_protocols),
             client_api_compatibility: serde_json::to_string(&vendor.client_api_compatibility)
                 .unwrap_or_else(|_| "{}".to_owned()),
+            model_count: model_counts
+                .get(&vendor.vendor_code.trim().to_ascii_lowercase())
+                .copied()
+                .unwrap_or(0),
             deleted_at: None,
         })
         .map(|item| (item.vendor_code.clone(), item))
@@ -2326,7 +2337,7 @@ pub(crate) fn catalog_preview_admin_items(
             item
         })
         .collect::<Vec<_>>();
-    let models = public_catalog_identity_models(catalog)
+    let models = identity_models
         .into_iter()
         .map(|(catalog_key, (vendor, model))| {
             let prices = vendor
