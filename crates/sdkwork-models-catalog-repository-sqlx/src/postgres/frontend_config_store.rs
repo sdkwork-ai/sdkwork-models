@@ -270,7 +270,7 @@ async fn retire_live_rows(
                AND organization_id = $2
                AND deleted_at IS NULL"
         );
-        sqlx::query(&statement)
+        sqlx::query(sqlx::AssertSqlSafe(statement))
             .bind(subject.tenant_id)
             .bind(subject.organization_id)
             .bind(&command.requested_at)
