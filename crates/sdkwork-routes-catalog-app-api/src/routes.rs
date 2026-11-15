@@ -78,6 +78,13 @@ pub const ROUTES: &[RouteDefinition] = &[
         handler: "list_model_video_profiles",
         service_method: "list_model_video_profiles",
     },
+    RouteDefinition {
+        method: "GET",
+        path: "/app/v3/api/ai/frontend_config",
+        operation_id: "frontendConfig.retrieve",
+        handler: "fetch_app_frontend_config",
+        service_method: "load_frontend_config",
+    },
 ];
 
 pub fn route_definitions() -> &'static [RouteDefinition] {

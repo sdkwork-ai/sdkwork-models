@@ -141,6 +141,8 @@ function ModelPricePopover({
   );
 }
 
+export { FrontendModelAdmin } from './FrontendModelAdmin';
+
 export function ModelAdmin() {
   const { t } = useTranslation();
   const [vendors, setVendors] = useState<Vendor[]>([]);

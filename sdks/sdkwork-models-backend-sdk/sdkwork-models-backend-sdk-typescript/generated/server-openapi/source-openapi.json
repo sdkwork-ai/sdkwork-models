@@ -6107,6 +6107,12 @@
             "pattern": "^[1-9][0-9]*$",
             "type": "string"
           },
+          "modelCount": {
+            "description": "Model count field on admin model vendor item.",
+            "format": "int32",
+            "minimum": 0,
+            "type": "integer"
+          },
           "name": {
             "description": "Name field on admin model vendor item.",
             "maxLength": 128,
@@ -6147,7 +6153,8 @@
           "color",
           "description",
           "supportedProtocols",
-          "clientApiCompatibility"
+          "clientApiCompatibility",
+          "modelCount"
         ],
         "type": "object"
       },

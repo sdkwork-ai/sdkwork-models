@@ -184,7 +184,7 @@
     },
     {
       "path": "src/types/admin-model-vendor-item.ts",
-      "sha256": "d8d8cd07bda9268e110694d4292eebb7aaff40b1d520c62f49de63726de73a4b"
+      "sha256": "7111a9f89e50d2d084140f61ca2d8bdb2a5d20115041b3fcd78ac08f4ebb447f"
     },
     {
       "path": "src/types/admin-model-vendor-list-response.ts",

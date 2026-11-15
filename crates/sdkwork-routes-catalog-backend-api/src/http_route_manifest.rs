@@ -213,6 +213,20 @@ const HTTP_ROUTES: &[HttpRoute] = &[
         "resourceGroups.delete",
     )
     .with_required_permission("intelligence.resources.manage"),
+    HttpRoute::dual_token(
+        HttpMethod::Get,
+        "/backend/v3/api/ai/frontend_config",
+        SDK_DOMAIN,
+        "frontendConfig.retrieve",
+    )
+    .with_required_permission("intelligence.models.read"),
+    HttpRoute::dual_token(
+        HttpMethod::Put,
+        "/backend/v3/api/ai/frontend_config",
+        SDK_DOMAIN,
+        "frontendConfig.replace",
+    )
+    .with_required_permission("intelligence.models.manage"),
 ];
 
 pub fn backend_route_manifest() -> HttpRouteManifest {

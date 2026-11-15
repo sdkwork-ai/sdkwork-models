@@ -11,7 +11,7 @@
   ],
   "defaultEngine": "postgres",
   "tablePrefix": "ai_",
-  "contractVersion": "1.1.0",
+  "contractVersion": "1.2.0",
   "baselineStrategy": "baseline-plus-migrations",
   "baselineAnchorTable": "ai_model_vendor",
   "modules": [],

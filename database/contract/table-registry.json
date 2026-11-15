@@ -133,6 +133,30 @@
       "owner": "sdkwork-models-platform",
       "compliance_level": "L2",
       "lifecycle_status": "active"
+    },
+    {
+      "table_name": "ai_model_frontend_channel",
+      "owner": "sdkwork-models-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "ai_model_frontend_channel_model",
+      "owner": "sdkwork-models-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "ai_model_frontend_field",
+      "owner": "sdkwork-models-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
+    },
+    {
+      "table_name": "ai_model_frontend_revision",
+      "owner": "sdkwork-models-platform",
+      "compliance_level": "L2",
+      "lifecycle_status": "active"
     }
   ]
 }

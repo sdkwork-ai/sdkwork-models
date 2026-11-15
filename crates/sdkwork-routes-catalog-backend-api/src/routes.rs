@@ -220,6 +220,20 @@ pub const ROUTES: &[RouteDefinition] = &[
         handler: "delete_ai_resource_group",
         service_method: "delete_ai_resource_group",
     },
+    RouteDefinition {
+        method: "GET",
+        path: "/backend/v3/api/ai/frontend_config",
+        operation_id: "frontendConfig.retrieve",
+        handler: "fetch_frontend_config",
+        service_method: "load_frontend_config",
+    },
+    RouteDefinition {
+        method: "PUT",
+        path: "/backend/v3/api/ai/frontend_config",
+        operation_id: "frontendConfig.replace",
+        handler: "replace_frontend_config",
+        service_method: "replace_frontend_config",
+    },
 ];
 
 pub fn route_definitions() -> &'static [RouteDefinition] {

@@ -4,10 +4,12 @@ use std::sync::Arc;
 
 use sdkwork_database_sqlx::DatabasePool;
 use sdkwork_models_catalog_repository_sqlx::{
-    PostgresAdminAiResourceStore, PostgresModelCatalogAdminStore, PostgresModelRankingsReadStore,
+    PostgresAdminAiResourceStore, PostgresFrontendConfigStore, PostgresModelCatalogAdminStore,
+    PostgresModelRankingsReadStore,
 };
 use sdkwork_models_contract_service::{
-    AdminAiResourceStore, EntityUuidGenerator, ModelCatalogAdminStore, ModelRankingsReadModelStore,
+    AdminAiResourceStore, EntityUuidGenerator, FrontendConfigStore, ModelCatalogAdminStore,
+    ModelRankingsReadModelStore,
 };
 use sdkwork_models_service_host::ModelsServiceHost;
 pub use sdkwork_web_bootstrap::ApiAssemblyContribution;
@@ -41,6 +43,8 @@ pub async fn assemble_app_api_contribution() -> Result<ApiAssemblyContribution, 
                 Arc::new(PostgresAdminAiResourceStore::new(pool.clone()))
                     as Arc<dyn AdminAiResourceStore + Send + Sync>,
                 Arc::clone(&entity_uuid_generator),
+                Arc::new(PostgresFrontendConfigStore::new(pool.clone()))
+                    as Arc<dyn FrontendConfigStore + Send + Sync>,
             )
         }
         _ => unreachable!(

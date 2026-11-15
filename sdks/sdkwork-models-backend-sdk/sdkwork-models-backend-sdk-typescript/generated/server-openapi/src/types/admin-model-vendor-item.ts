@@ -10,6 +10,8 @@ export interface AdminModelVendorItem {
   description: string;
   /** Id field on admin model vendor item. */
   id: string;
+  /** Model count field on admin model vendor item. */
+  modelCount: number;
   /** Name field on admin model vendor item. */
   name: string;
   /** Status field on admin model vendor item. */

@@ -61,6 +61,14 @@ apps/sdkwork-models-pc/        → Catalog browser + composed admin libraries
 - App catalog read uses in-memory `ModelCatalog` JSON snapshot in standalone mode
 - TTS voice catalog: `voices.json` + `model-voices/` per vendor region; persisted to `ai_model_voice` / `ai_model_voice_binding`
 - Video generation profiles: `model-video-profiles/{modelId}.json` per video model; persisted to `ai_model_video_profile`
+- Front-end model configuration: `ai_model_frontend_channel`,
+  `ai_model_frontend_channel_model`, `ai_model_frontend_field`, and
+  `ai_model_frontend_revision` own which catalog models each product surface
+  (LLM, video, image, audio, music, …) presents, its order, badge, field
+  visibility, default model, enabled flag, and published revision. Catalog facts
+  remain in `ai_model` / `ai_model_capability`; presentation never writes those
+  rows. The field-vs-table decision is
+  [ADR-20261115](../../decisions/ADR-20261115-frontend-model-config-tables.md).
 - AI resource, resource-group, and group-member list paths push filtering, stable
   ordering, counting, and `LIMIT`/`OFFSET` into SQL. Resource member hydration is
   restricted to resource codes in the selected page, so page reads do not grow

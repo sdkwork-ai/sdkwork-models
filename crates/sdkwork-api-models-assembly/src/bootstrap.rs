@@ -3,12 +3,12 @@
 use axum::Router;
 use sdkwork_database_sqlx::DatabasePool;
 use sdkwork_models_catalog_repository_sqlx::{
-    PostgresAdminAiResourceStore, PostgresModelCatalogAdminStore, PostgresModelRankingRefreshStore,
-    PostgresModelRankingsReadStore,
+    PostgresAdminAiResourceStore, PostgresFrontendConfigStore, PostgresModelCatalogAdminStore,
+    PostgresModelRankingRefreshStore, PostgresModelRankingsReadStore,
 };
 use sdkwork_models_contract_service::{
-    AdminAiResourceStore, EntityUuidGenerator, ModelCatalogAdminStore, ModelRankingRefreshStore,
-    ModelRankingsReadModelStore,
+    AdminAiResourceStore, EntityUuidGenerator, FrontendConfigStore, ModelCatalogAdminStore,
+    ModelRankingRefreshStore, ModelRankingsReadModelStore,
 };
 use sdkwork_models_service_host::ModelsServiceHost;
 pub use sdkwork_web_bootstrap::ApiAssemblyContribution;
@@ -39,6 +39,8 @@ pub async fn assemble_business_routes() -> Result<ApiAssembly, String> {
                 Arc::new(PostgresAdminAiResourceStore::new(pool.clone()))
                     as Arc<dyn AdminAiResourceStore + Send + Sync>,
                 Arc::clone(&entity_uuid_generator),
+                Arc::new(PostgresFrontendConfigStore::new(pool.clone()))
+                    as Arc<dyn FrontendConfigStore + Send + Sync>,
             )
         }
         _ => unreachable!(
@@ -57,6 +59,8 @@ pub async fn assemble_business_routes() -> Result<ApiAssembly, String> {
                 Arc::new(PostgresAdminAiResourceStore::new(pool.clone()))
                     as Arc<dyn AdminAiResourceStore + Send + Sync>,
                 Arc::clone(&entity_uuid_generator),
+                Arc::new(PostgresFrontendConfigStore::new(pool.clone()))
+                    as Arc<dyn FrontendConfigStore + Send + Sync>,
                 host.voice_catalog(),
             )
         }

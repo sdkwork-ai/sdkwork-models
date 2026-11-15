@@ -17,6 +17,11 @@ Catalog dictionary and public model facts imported from the JSON catalog:
 - `ai_model_catalog_source`, `ai_model_catalog_sync_run`, `ai_model_rank_snapshot`
 - `ai_model_voice`, `ai_model_voice_binding` (TTS speaker catalog and model bindings)
 - `ai_model_video_profile` (video generation profile catalog per video model)
+- `ai_model_frontend_channel`, `ai_model_frontend_channel_model`,
+  `ai_model_frontend_field`, `ai_model_frontend_revision` (front-end surface
+  configuration: which models each product surface presents, in which order,
+  with which fields, and the published revision; see
+  [ADR-20261115](../docs/architecture/decisions/ADR-20261115-frontend-model-config-tables.md))
 
 Cloud Router retains tenant routing overlays (`ai_model_mapping_*`), gateway channels, and tenant pricing plans.
 

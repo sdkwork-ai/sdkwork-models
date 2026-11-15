@@ -11,8 +11,8 @@ pub mod sql_model_rankings;
 pub mod postgres;
 
 pub use postgres::{
-    PostgresAdminAiResourceStore, PostgresModelCatalogAdminStore, PostgresModelRankingRefreshStore,
-    PostgresModelRankingsReadStore,
+    PostgresAdminAiResourceStore, PostgresFrontendConfigStore, PostgresModelCatalogAdminStore,
+    PostgresModelRankingRefreshStore, PostgresModelRankingsReadStore,
 };
 
 pub use sdkwork_models_contract_service::DEFAULT_CATALOG_REFRESH_SOURCE;

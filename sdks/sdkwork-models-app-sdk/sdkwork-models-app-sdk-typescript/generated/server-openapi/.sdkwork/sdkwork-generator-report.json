@@ -11,8 +11,8 @@
   "status": "ok",
   "mode": "apply",
   "hasChanges": true,
-  "hasDestructiveChanges": false,
-  "changeFingerprint": "bd30d03a401b0c1391c9c96bfc6c3c3ca427f4d3aea9d2c74ab93dc2176313ea",
+  "hasDestructiveChanges": true,
+  "changeFingerprint": "559cdb7bfe57effc37b791daf2fa65ab53fdcb088fa74fde4bb514056e2d4f2a",
   "changeImpact": {
     "schemaVersion": 1,
     "areas": [
@@ -22,7 +22,7 @@
       {
         "area": "models",
         "paths": [
-          "src/types/app-model-catalog-item.ts"
+          "src/types/app-model-catalog-item.d.ts"
         ]
       }
     ],
@@ -31,12 +31,15 @@
   },
   "executionDecision": {
     "schemaVersion": 1,
-    "riskLevel": "medium",
+    "riskLevel": "high",
     "nextAction": "verify",
     "requiresManualReview": false,
     "applyRequiresExpectedFingerprint": false,
     "summary": "Changes have been applied. Run the required verification plan now.",
     "reasons": [
+      "backed-up-generated-files",
+      "deleted-generated-files",
+      "manual-review-required",
       "verification-required"
     ]
   },
@@ -148,17 +151,15 @@
   "syncSummary": {
     "dryRun": false,
     "controlPlaneEnabled": true,
-    "writtenFiles": 1,
+    "writtenFiles": 0,
     "skippedScaffoldFiles": 2,
-    "skippedUnchangedGeneratedFiles": 61,
-    "deletedGeneratedFiles": 0,
+    "skippedUnchangedGeneratedFiles": 62,
+    "deletedGeneratedFiles": 1,
     "changeSummaryPath": ".sdkwork/sdkwork-generator-changes.json",
-    "changeFingerprint": "bd30d03a401b0c1391c9c96bfc6c3c3ca427f4d3aea9d2c74ab93dc2176313ea",
+    "changeFingerprint": "559cdb7bfe57effc37b791daf2fa65ab53fdcb088fa74fde4bb514056e2d4f2a",
     "changes": {
       "createdGeneratedFiles": [],
-      "updatedGeneratedFiles": [
-        "src/types/app-model-catalog-item.ts"
-      ],
+      "updatedGeneratedFiles": [],
       "unchangedGeneratedFiles": [
         "bin/publish-core.mjs",
         "bin/publish.ps1",
@@ -190,6 +191,7 @@
         "src/types/app-model-access-channel-upsert-request.ts",
         "src/types/app-model-access-channels-page.ts",
         "src/types/app-model-catalog-group.ts",
+        "src/types/app-model-catalog-item.ts",
         "src/types/app-model-catalog-page.ts",
         "src/types/app-model-catalog-price-availability.ts",
         "src/types/app-model-catalog-reference-price.ts",
@@ -222,13 +224,17 @@
         "src/types/sdk-work-resource-response.ts",
         "tsconfig.json"
       ],
-      "deletedGeneratedFiles": [],
+      "deletedGeneratedFiles": [
+        "src/types/app-model-catalog-item.d.ts"
+      ],
       "scaffoldedFiles": [],
       "preservedScaffoldFiles": [
         "custom/build-runtime.mjs",
         "custom/README.md"
       ],
-      "backedUpFiles": []
+      "backedUpFiles": [
+        "src/types/app-model-catalog-item.d.ts"
+      ]
     },
     "impact": {
       "schemaVersion": 1,
@@ -239,7 +245,7 @@
         {
           "area": "models",
           "paths": [
-            "src/types/app-model-catalog-item.ts"
+            "src/types/app-model-catalog-item.d.ts"
           ]
         }
       ],
@@ -291,16 +297,21 @@
     },
     "executionDecision": {
       "schemaVersion": 1,
-      "riskLevel": "medium",
+      "riskLevel": "high",
       "nextAction": "verify",
       "requiresManualReview": false,
       "applyRequiresExpectedFingerprint": false,
       "summary": "Changes have been applied. Run the required verification plan now.",
       "reasons": [
+        "backed-up-generated-files",
+        "deleted-generated-files",
+        "manual-review-required",
         "verification-required"
       ]
     },
-    "backedUpFiles": [],
+    "backedUpFiles": [
+      "src/types/app-model-catalog-item.d.ts"
+    ],
     "preservedLegacyFiles": false
   }
 }

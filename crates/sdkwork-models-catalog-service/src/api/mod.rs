@@ -2,6 +2,7 @@ pub mod admin_ai_resource;
 pub mod admin_model_catalog;
 pub mod admin_model_command;
 pub mod app_models;
+pub mod frontend_config;
 pub mod model_rankings;
 pub mod page_info;
 pub mod request_id;
@@ -18,6 +19,9 @@ pub use admin_model_command::admin_model_management_router_with_store;
 pub use app_models::{
     app_model_catalog_router, app_model_catalog_router_with_stores,
     app_model_catalog_router_with_stores_and_profiles,
+};
+pub use frontend_config::{
+    app_frontend_config_router_with_store, backend_frontend_config_router_with_store,
 };
 pub use model_rankings::{
     admin_model_rankings_router, admin_model_rankings_router_with_read_store,

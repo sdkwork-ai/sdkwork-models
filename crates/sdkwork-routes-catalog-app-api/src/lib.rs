@@ -8,7 +8,8 @@ pub mod web_bootstrap;
 pub use http_route_manifest::app_route_manifest;
 pub use routes::{route_definitions, RouteDefinition};
 pub use sdkwork_models_catalog_service::{
-    app_model_catalog_router, app_model_catalog_router_with_stores, app_model_rankings_router,
+    app_frontend_config_router_with_store, app_model_catalog_router,
+    app_model_catalog_router_with_stores, app_model_rankings_router,
     app_model_rankings_router_with_read_store, app_models_router,
 };
 pub use web_bootstrap::{
@@ -37,6 +38,9 @@ pub fn gateway_mount<C>(
     entity_uuid_generator: std::sync::Arc<
         dyn sdkwork_models_contract_service::EntityUuidGenerator + Send + Sync,
     >,
+    frontend_config_store: std::sync::Arc<
+        dyn sdkwork_models_contract_service::FrontendConfigStore + Send + Sync,
+    >,
 ) -> axum::Router
 where
     C: sdkwork_models_catalog_service::PricingCatalog + Send + Sync + 'static,
@@ -53,4 +57,9 @@ where
     ))
     .merge(sdkwork_models_catalog_service::app_video_profile_catalog_router(voice_catalog))
     .merge(sdkwork_models_catalog_service::app_model_rankings_router_with_read_store(read_store))
+    .merge(
+        sdkwork_models_catalog_service::app_frontend_config_router_with_store(
+            frontend_config_store,
+        ),
+    )
 }

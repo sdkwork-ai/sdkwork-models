@@ -63,6 +63,12 @@ const HTTP_ROUTES: &[HttpRoute] = &[
         SDK_DOMAIN,
         "modelVideoProfiles.list",
     ),
+    HttpRoute::public(
+        HttpMethod::Get,
+        "/app/v3/api/ai/frontend_config",
+        SDK_DOMAIN,
+        "frontendConfig.retrieve",
+    ),
 ];
 
 pub fn app_route_manifest() -> HttpRouteManifest {
