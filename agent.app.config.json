@@ -28,7 +28,10 @@
     "platform": "WEB",
     "appId": null,
     "tenantId": "100001",
-    "organizationId": "0"
+    "organizationId": "0",
+    "accessTokenPermissionScope": [
+      "iam:self"
+    ]
   },
   "runtime": {
     "family": "web",
