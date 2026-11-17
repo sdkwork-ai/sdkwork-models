@@ -123,7 +123,13 @@ Rules:
   supports `If-None-Match`.
 - Channel defaults (`llm`, `video`, `image`, `audio`, `music`, `sound_effect`,
   `embedding`) are returned by the service when a tenant has no rows yet, and
-  the first successful replace persists them.
+  `database/seeds/common/002_ai_model_frontend_defaults.sql` persists the same
+  document (one channel per modality with its default model, initialization
+  models, and fields) through the seed lifecycle on install/upgrade. The first
+  successful replace persists operator edits.
+- `ai_model_frontend_channel_model.model_id` is an int64 and crosses the HTTP
+  boundary as a decimal string (`modelId`) per `API_SPEC.md` section 13.6; the
+  admin client never converts it to a JavaScript number.
 
 The admin Models page adds one menu item, `模型前端配置` (`/admin/model/frontend`),
 with a tab per channel. The page reads and writes this document through the
@@ -148,11 +154,21 @@ models backend SDK; it never talks to Cloud Router's site settings.
 
 - Database: baseline DDL, migration `0003_ai_model_frontend_config`, schema
   contract 1.2.0, table registry.
+- Initialization: `database/seeds/common/002_ai_model_frontend_defaults.sql`
+  persists the per-modality channels, default/initialization models, and fields
+  for the console tenant (`100001` / `0`). It is idempotent, never overwrites an
+  operator-authored surface, and is applied by `db:seed` and the Cloud Router
+  installer (`install|upgrade|ensure`). The backend keeps an equivalent
+  in-memory fallback for tenants that have no rows yet.
 - Backend: `FrontendConfigStore` port, `PostgresFrontendConfigStore`, the
   `frontend_config` handlers, backend/app route descriptors and manifests, and
-  mounts in the models assembly and the Cloud Router app/backend gateways.
-- Admin: `/admin/model/frontend` (`模型前端配置`) in the Models menu, including
-  "import from catalog" filtered by the channel's capability binding.
+  mounts in the models assembly and the Cloud Router app/backend gateways. The
+  admin read/write validates that a channel's default model is one of its
+  visible exposed models, and the app read normalizes a legacy dangling default
+  to the first visible model.
+- Admin: `/admin/model/frontend` (`模型前端配置`) in the Models menu, including a
+  catalog model picker for the add action and "import from catalog" (filtered by
+  the channel's capability binding, paginated over the whole catalog).
 - The app read ships `ETag`/`If-None-Match` over the published revision and
   returns only enabled channels, visible models, and visible fields.
 - Generated OpenAPI/SDK exposure for the two operations is still pending; the

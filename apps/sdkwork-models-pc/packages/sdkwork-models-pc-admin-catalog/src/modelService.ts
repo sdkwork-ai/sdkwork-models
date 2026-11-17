@@ -451,6 +451,32 @@ export class ModelService {
     };
   }
 
+  /**
+   * Reads the whole catalog model list through the generated backend SDK.
+   *
+   * The list endpoint is paginated, so a single fixed-size page silently hides
+   * models from the admin authoring surfaces (the front-end model picker and the
+   * "import from catalog" action). Pages are read until `hasMore` is false, with
+   * a hard page cap so a misreported page count cannot loop forever.
+   * @returns every catalog model.
+   */
+  static async fetchAllModels(): Promise<Model[]> {
+    const pageSize = 200;
+    const maxPages = 100;
+    const models: Model[] = [];
+    for (let page = 1; page <= maxPages; page += 1) {
+      const result = await ModelService.fetchModelsPage(
+        { page, pageSize },
+        { enrichRankingCalls: false },
+      );
+      models.push(...result.items);
+      if (!result.hasMore || result.items.length === 0 || models.length >= result.totalCount) {
+        break;
+      }
+    }
+    return models;
+  }
+
   static async fetchModelRankings(): Promise<ModelRankingMetricItem[]> {
     const result = await getModelsBackendSdkClient().ai.modelRankings.list({ pageSize: 200 });
     ensureSdkworkApiSuccess(result, 'Failed to fetch model rankings');

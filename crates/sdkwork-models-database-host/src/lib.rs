@@ -3,7 +3,9 @@ use std::sync::Arc;
 
 use sdkwork_database_config::DatabaseConfig;
 use sdkwork_database_lifecycle::{lifecycle_options_from_env, LifecycleOrchestrator};
-use sdkwork_database_spi::{DatabaseAssetProvider, DatabaseManifest, DefaultDatabaseModule};
+use sdkwork_database_spi::{
+    DatabaseAssetProvider, DatabaseManifest, DefaultDatabaseModule, LocaleTag,
+};
 use sdkwork_database_sqlx::{create_pool_from_config, DatabasePool};
 
 pub struct ModelsDatabaseHost {
@@ -43,6 +45,33 @@ impl ModelsDatabaseHost {
             .await
             .map(|migrations| migrations.len())
             .map_err(|error| format!("models database migration plan failed: {error}"))
+    }
+
+    /// Applies the module's configured seed set for the selected locale and
+    /// profile through the shared lifecycle seed pipeline.
+    ///
+    /// The seed set carries the catalog reference data that must exist for the
+    /// console to open populated (for example the front-end channel
+    /// initialization rows behind `/admin/model/frontend`). The runner records
+    /// each file's content checksum, so repeated calls apply only new or
+    /// changed seeds and never rewrite operator edits.
+    ///
+    /// `seed_locale` is the installer's resolved locale override (environment or
+    /// runtime TOML). When omitted the module's own manifest/env default
+    /// applies.
+    pub async fn seed(&self, applied_by: &str, seed_locale: Option<&str>) -> Result<usize, String> {
+        let manifest = DatabaseManifest::from_file(self.module.manifest_path())
+            .map_err(|error| format!("read models database manifest failed: {error}"))?;
+        let options = lifecycle_options_from_env("MODELS", &manifest);
+        let locale = LocaleTag(
+            seed_locale
+                .map(str::to_owned)
+                .unwrap_or_else(|| options.seed_locale.0.clone()),
+        );
+        self.orchestrator(applied_by)
+            .seed(&locale, &options.seed_profile)
+            .await
+            .map_err(|error| format!("models database seed failed: {error}"))
     }
 }
 
@@ -168,7 +197,31 @@ fn explicit_lifecycle_command() -> bool {
 
 #[cfg(test)]
 mod tests {
+    use sdkwork_database_spi::{SeedManifest, SeedProfile};
+
     use super::*;
+
+    #[test]
+    fn frontend_defaults_seed_is_registered_in_the_standard_profile() {
+        let app_root = resolve_app_root();
+        let seeds_dir = app_root.join("database").join("seeds");
+        let manifest = SeedManifest::from_file(seeds_dir.join("seed.manifest.json"))
+            .expect("read seed manifest");
+        let plan = manifest
+            .resolve_plan(
+                &seeds_dir,
+                &LocaleTag("zh-CN".to_owned()),
+                &SeedProfile("standard".to_owned()),
+            )
+            .expect("resolve seed plan");
+        assert!(
+            plan.common_scripts
+                .iter()
+                .any(|path| path.ends_with("002_ai_model_frontend_defaults.sql")),
+            "standard seed profile must apply the front-end defaults seed: {:?}",
+            plan.common_scripts
+        );
+    }
 
     #[test]
     fn production_like_environment_rejects_production_aliases() {

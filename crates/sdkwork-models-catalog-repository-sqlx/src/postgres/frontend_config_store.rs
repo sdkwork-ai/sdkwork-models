@@ -164,7 +164,7 @@ async fn load_frontend_config(
                 model_id: row.get("model_id"),
                 visible: row.get("visible"),
                 featured: row.get("featured"),
-                sort_order: row.get("sort_order"),
+                sort_order: i64::from(row.get::<i32, _>("sort_order")),
                 badge: row.get("badge"),
                 config: parse_json(&config_json, "frontend channel model config")?,
             });
@@ -180,7 +180,7 @@ async fn load_frontend_config(
             .push(FrontendChannelField {
                 field_key: row.get("field_key"),
                 visible: row.get("visible"),
-                sort_order: row.get("sort_order"),
+                sort_order: i64::from(row.get::<i32, _>("sort_order")),
                 config: parse_json(&config_json, "frontend field config")?,
             });
     }
@@ -200,7 +200,7 @@ async fn load_frontend_config(
             )?,
             description: row.get("description"),
             enabled: row.get("enabled"),
-            sort_order: row.get("sort_order"),
+            sort_order: i64::from(row.get::<i32, _>("sort_order")),
             default_catalog_key: row.get("default_catalog_key"),
             capability_codes: parse_string_array(
                 &capability_codes_json,

@@ -35,6 +35,9 @@ const MAX_FIELD_KEY_LEN: usize = 64;
 const MAX_BADGE_LEN: usize = 64;
 const MAX_CAPABILITY_CODES: usize = 64;
 const MAX_CAPABILITY_CODE_LEN: usize = 64;
+const MAX_SCHEMA_VERSION_LEN: usize = 32;
+const MAX_LOCALE_LEN: usize = 32;
+const MAX_SOURCE_LEN: usize = 64;
 
 #[derive(Clone)]
 struct FrontendConfigState {
@@ -100,6 +103,9 @@ struct FrontendChannelResponse {
 #[serde(rename_all = "camelCase")]
 struct FrontendChannelModelResponse {
     catalog_key: String,
+    /// Model ids are int64 and cross the HTTP boundary as decimal strings
+    /// (API_SPEC section 13.6); a JavaScript client must never round them.
+    #[serde(with = "sdkwork_utils_rust::serde_int64::option")]
     model_id: Option<i64>,
     visible: bool,
     featured: bool,
@@ -157,7 +163,7 @@ struct FrontendChannelRequest {
 #[serde(rename_all = "camelCase")]
 struct FrontendChannelModelRequest {
     catalog_key: String,
-    #[serde(default)]
+    #[serde(default, with = "sdkwork_utils_rust::serde_int64::option")]
     model_id: Option<i64>,
     #[serde(default = "default_enabled")]
     visible: bool,
@@ -245,15 +251,7 @@ async fn fetch_app_frontend_config(
             } else {
                 config.channels
             };
-            let visible: Vec<FrontendChannel> = channels
-                .into_iter()
-                .filter(|channel| channel.enabled)
-                .map(|mut channel| {
-                    channel.models.retain(|model| model.visible);
-                    channel.fields.retain(|field| field.visible);
-                    channel
-                })
-                .collect();
+            let visible = app_visible_channels(channels);
             let response = to_response(FrontendConfig {
                 revision: config.revision,
                 channels: visible,
@@ -280,6 +278,35 @@ async fn fetch_app_frontend_config(
         }
         Err(error) => problem_for(&ctx, SdkWorkResultCode::InternalError, error.to_string()),
     }
+}
+
+/// What the app surface may see: enabled channels, visible models and fields,
+/// and a default that names one of the visible models.
+fn app_visible_channels(channels: Vec<FrontendChannel>) -> Vec<FrontendChannel> {
+    channels
+        .into_iter()
+        .filter(|channel| channel.enabled)
+        .map(|mut channel| {
+            channel.models.retain(|model| model.visible);
+            channel.fields.retain(|field| field.visible);
+            // Legacy documents may still point at a model that is no longer
+            // visible; the app surface must never receive a default it cannot
+            // resolve.
+            if let Some(default_catalog_key) = channel.default_catalog_key.as_deref() {
+                if !channel
+                    .models
+                    .iter()
+                    .any(|model| model.catalog_key == default_catalog_key)
+                {
+                    channel.default_catalog_key = channel
+                        .models
+                        .first()
+                        .map(|model| model.catalog_key.clone());
+                }
+            }
+            channel
+        })
+        .collect()
 }
 
 /// Whether an `If-None-Match` header names the current entity tag. Handles the
@@ -365,11 +392,16 @@ fn build_replace_command(
                 config: field.config,
             });
         }
+        let display_name_i18n = if channel.display_name_i18n.is_null() {
+            json!({})
+        } else {
+            channel.display_name_i18n
+        };
         channels.push(FrontendChannelCommand {
             uuid: generator.generate_entity_uuid()?,
             channel_code: channel.channel_code,
             display_name: channel.display_name,
-            display_name_i18n: channel.display_name_i18n,
+            display_name_i18n,
             description: channel.description,
             enabled: channel.enabled,
             sort_order: channel.sort_order,
@@ -392,6 +424,9 @@ fn build_replace_command(
 }
 
 fn validate_request(request: &FrontendConfigReplaceRequest) -> Result<(), String> {
+    if let Some(source) = request.source.as_deref() {
+        validate_text("source", source, MAX_SOURCE_LEN, true)?;
+    }
     if request.channels.len() > MAX_CHANNELS {
         return Err(format!(
             "at most {MAX_CHANNELS} frontend channels are supported"
@@ -412,6 +447,41 @@ fn validate_request(request: &FrontendConfigReplaceRequest) -> Result<(), String
             MAX_DISPLAY_NAME_LEN,
             false,
         )?;
+        if !channel.display_name_i18n.is_null() {
+            let Some(labels) = channel.display_name_i18n.as_object() else {
+                return Err(format!(
+                    "channel {} displayNameI18n must be a JSON object",
+                    channel.channel_code
+                ));
+            };
+            for (locale, value) in labels {
+                validate_text(
+                    "channel displayNameI18n locale",
+                    locale,
+                    MAX_LOCALE_LEN,
+                    false,
+                )?;
+                let Some(text) = value.as_str() else {
+                    return Err(format!(
+                        "channel {} displayNameI18n values must be strings",
+                        channel.channel_code
+                    ));
+                };
+                validate_text(
+                    "channel displayNameI18n value",
+                    text,
+                    MAX_DISPLAY_NAME_LEN,
+                    false,
+                )?;
+            }
+        }
+        validate_text(
+            "channel schemaVersion",
+            &channel.schema_version,
+            MAX_SCHEMA_VERSION_LEN,
+            false,
+        )?;
+        validate_sort_order("channel sortOrder", channel.sort_order)?;
         if let Some(description) = &channel.description {
             validate_text(
                 "channel description",
@@ -471,6 +541,15 @@ fn validate_request(request: &FrontendConfigReplaceRequest) -> Result<(), String
             if let Some(badge) = &model.badge {
                 validate_text("model badge", badge, MAX_BADGE_LEN, true)?;
             }
+            if let Some(model_id) = model.model_id {
+                if model_id <= 0 {
+                    return Err(format!(
+                        "channel {} model {} modelId must be a positive int64",
+                        channel.channel_code, model.catalog_key
+                    ));
+                }
+            }
+            validate_sort_order("model sortOrder", model.sort_order)?;
             if !model.config.is_object() {
                 return Err(format!(
                     "channel {} model {} config must be a JSON object",
@@ -487,6 +566,7 @@ fn validate_request(request: &FrontendConfigReplaceRequest) -> Result<(), String
         let mut field_keys = HashSet::with_capacity(channel.fields.len());
         for field in &channel.fields {
             validate_text("field key", &field.field_key, MAX_FIELD_KEY_LEN, false)?;
+            validate_sort_order("field sortOrder", field.sort_order)?;
             if !field_keys.insert(field.field_key.as_str()) {
                 return Err(format!(
                     "channel {} repeats field key {}",
@@ -500,6 +580,36 @@ fn validate_request(request: &FrontendConfigReplaceRequest) -> Result<(), String
                 ));
             }
         }
+        if let Some(default_catalog_key) = channel.default_catalog_key.as_deref() {
+            match channel
+                .models
+                .iter()
+                .find(|model| model.catalog_key.as_str() == default_catalog_key)
+            {
+                Some(model) if model.visible => {}
+                Some(_) => {
+                    return Err(format!(
+                        "channel {} defaultCatalogKey {} must name a visible exposed model",
+                        channel.channel_code, default_catalog_key
+                    ));
+                }
+                None => {
+                    return Err(format!(
+                        "channel {} defaultCatalogKey {} must be one of its exposed models",
+                        channel.channel_code, default_catalog_key
+                    ));
+                }
+            }
+        }
+    }
+    Ok(())
+}
+
+/// The sort-order columns are PostgreSQL `INTEGER`; reject values the database
+/// cannot store instead of surfacing a 500 from the insert.
+fn validate_sort_order(field: &str, value: i64) -> Result<(), String> {
+    if value < i64::from(i32::MIN) || value > i64::from(i32::MAX) {
+        return Err(format!("{field} must fit in a 32-bit integer"));
     }
     Ok(())
 }
@@ -601,71 +711,155 @@ fn to_field_response(field: FrontendChannelField) -> FrontendChannelFieldRespons
     }
 }
 
+/// One product surface and the catalog models it exposes before a tenant
+/// authors its own configuration.
+///
+/// The seeded database rows in `database/seeds/common/002_ai_model_frontend_defaults.sql`
+/// mirror this table, so a fresh database, a saved revision, and the fallback
+/// document a tenant sees before it saves all describe the same initialization
+/// models. The first catalog key is the surface's default model.
+struct DefaultFrontendChannel {
+    channel_code: &'static str,
+    display_name: &'static str,
+    display_name_zh_cn: &'static str,
+    capability_codes: &'static [&'static str],
+    sort_order: i64,
+    catalog_keys: &'static [&'static str],
+}
+
+const DEFAULT_FRONTEND_CHANNELS: &[DefaultFrontendChannel] = &[
+    DefaultFrontendChannel {
+        channel_code: "llm",
+        display_name: "LLM",
+        display_name_zh_cn: "大语言模型",
+        capability_codes: &["chat", "responses", "completion"],
+        sort_order: 10,
+        catalog_keys: &[
+            "deepseek/deepseek-flash",
+            "deepseek/deepseek-v4-pro",
+            "anthropic/claude-opus-5",
+        ],
+    },
+    DefaultFrontendChannel {
+        channel_code: "video",
+        display_name: "Video",
+        display_name_zh_cn: "视频生成",
+        capability_codes: &["video_generation"],
+        sort_order: 20,
+        catalog_keys: &["luma_ai/ray-3.2", "minimax/MiniMax-H3", "vidu/viduq3-pro"],
+    },
+    DefaultFrontendChannel {
+        channel_code: "image",
+        display_name: "Image",
+        display_name_zh_cn: "图片生成",
+        capability_codes: &["image_generation", "image_editing"],
+        sort_order: 30,
+        catalog_keys: &[
+            "google/gemini-3-pro-image",
+            "openai/gpt-image-2",
+            "kuaishou/kling-image-3.0",
+        ],
+    },
+    DefaultFrontendChannel {
+        channel_code: "audio",
+        display_name: "Audio",
+        display_name_zh_cn: "音频",
+        capability_codes: &[
+            "audio_input",
+            "audio_output",
+            "speech_to_text",
+            "text_to_speech",
+        ],
+        sort_order: 40,
+        catalog_keys: &[
+            "openai/gpt-realtime-2.1",
+            "google/gemini-2.5-pro-preview-tts",
+            "openai/tts-1-hd",
+        ],
+    },
+    DefaultFrontendChannel {
+        channel_code: "music",
+        display_name: "Music",
+        display_name_zh_cn: "音乐生成",
+        capability_codes: &["music_generation"],
+        sort_order: 50,
+        catalog_keys: &[
+            "mureka/mureka-v9.5",
+            "mureka/mureka-o2",
+            "elevenlabs/music_v2_5",
+        ],
+    },
+    DefaultFrontendChannel {
+        channel_code: "sound_effect",
+        display_name: "Sound Effect",
+        display_name_zh_cn: "音效生成",
+        capability_codes: &["sound_effect_generation"],
+        sort_order: 60,
+        catalog_keys: &[
+            "vidu/audio1.0-timing2audio",
+            "kuaishou/kling-sound-t2a",
+            "vidu/audio1.0-text2audio",
+        ],
+    },
+    DefaultFrontendChannel {
+        channel_code: "embedding",
+        display_name: "Embedding",
+        display_name_zh_cn: "向量嵌入",
+        capability_codes: &["embedding", "rerank"],
+        sort_order: 70,
+        catalog_keys: &[
+            "openai/text-embedding-3-large",
+            "alibaba/text-embedding-v4",
+            "zhipu/embedding-3",
+        ],
+    },
+];
+
 /// The channels a tenant sees before it authors its own configuration.
 fn default_frontend_channels() -> Vec<FrontendChannel> {
-    [
-        (
-            "llm",
-            "LLM",
-            "大语言模型",
-            vec!["chat", "responses", "completion"],
-            10,
-        ),
-        ("video", "Video", "视频生成", vec!["video_generation"], 20),
-        (
-            "image",
-            "Image",
-            "图片生成",
-            vec!["image_generation", "image_editing"],
-            30,
-        ),
-        (
-            "audio",
-            "Audio",
-            "音频",
-            vec![
-                "audio_input",
-                "audio_output",
-                "speech_to_text",
-                "text_to_speech",
-            ],
-            40,
-        ),
-        ("music", "Music", "音乐生成", vec!["music_generation"], 50),
-        (
-            "sound_effect",
-            "Sound Effect",
-            "音效生成",
-            vec!["sound_effect_generation"],
-            60,
-        ),
-        (
-            "embedding",
-            "Embedding",
-            "向量嵌入",
-            vec!["embedding", "rerank"],
-            70,
-        ),
-    ]
-    .into_iter()
-    .map(
-        |(code, english, chinese, capabilities, sort_order)| FrontendChannel {
-            channel_code: code.to_owned(),
-            display_name: english.to_owned(),
-            display_name_i18n: json!({ "en-US": english, "zh-CN": chinese }),
+    DEFAULT_FRONTEND_CHANNELS
+        .iter()
+        .map(|channel| FrontendChannel {
+            channel_code: channel.channel_code.to_owned(),
+            display_name: channel.display_name.to_owned(),
+            display_name_i18n: json!({
+                "en-US": channel.display_name,
+                "zh-CN": channel.display_name_zh_cn,
+            }),
             description: None,
             enabled: true,
-            sort_order,
-            default_catalog_key: None,
-            capability_codes: capabilities.into_iter().map(str::to_owned).collect(),
+            sort_order: channel.sort_order,
+            default_catalog_key: channel.catalog_keys.first().map(|key| (*key).to_owned()),
+            capability_codes: channel
+                .capability_codes
+                .iter()
+                .map(|code| (*code).to_owned())
+                .collect(),
             config: json!({ "pageSize": 100 }),
             schema_version: "1.0.0".to_owned(),
             revision: 0,
-            models: Vec::new(),
+            models: default_frontend_channel_models(channel.catalog_keys),
             fields: default_frontend_fields(),
-        },
-    )
-    .collect()
+        })
+        .collect()
+}
+
+/// The initialization models exposed by one surface. The first entry is the
+/// default model and is marked featured so the admin page can highlight it.
+fn default_frontend_channel_models(catalog_keys: &[&str]) -> Vec<FrontendChannelModel> {
+    catalog_keys
+        .iter()
+        .enumerate()
+        .map(|(index, catalog_key)| FrontendChannelModel {
+            catalog_key: (*catalog_key).to_owned(),
+            model_id: None,
+            visible: true,
+            featured: index == 0,
+            sort_order: (index as i64 + 1) * 10,
+            badge: None,
+            config: json!({}),
+        })
+        .collect()
 }
 
 fn default_frontend_fields() -> Vec<FrontendChannelField> {
@@ -683,7 +877,325 @@ fn default_frontend_fields() -> Vec<FrontendChannelField> {
 
 #[cfg(test)]
 mod tests {
-    use super::{default_frontend_channels, if_none_match_matches};
+    use std::sync::Mutex;
+
+    use axum::body::to_bytes;
+    use axum::extract::State;
+    use sdkwork_cloudrouter_http::TrustedRequestSubject;
+    use sdkwork_models_contract_service::{
+        DomainResult, EntityUuidGenerator, FrontendConfigFuture,
+    };
+    use sdkwork_web_core::{
+        ServerRequestId, WebApiSurface, WebAuthMode, WebRequestContext, WebTransportFacts,
+    };
+    use serde_json::json;
+
+    use super::*;
+
+    struct EmptyFrontendConfigStore;
+
+    impl FrontendConfigStore for EmptyFrontendConfigStore {
+        fn load_frontend_config<'a>(
+            &'a self,
+            _query: LoadFrontendConfigQuery,
+        ) -> FrontendConfigFuture<'a, FrontendConfig> {
+            Box::pin(async {
+                Ok(FrontendConfig {
+                    revision: 0,
+                    channels: Vec::new(),
+                })
+            })
+        }
+
+        fn replace_frontend_config<'a>(
+            &'a self,
+            _command: ReplaceFrontendConfigCommand,
+        ) -> FrontendConfigFuture<'a, FrontendConfig> {
+            Box::pin(async {
+                Ok(FrontendConfig {
+                    revision: 1,
+                    channels: Vec::new(),
+                })
+            })
+        }
+    }
+
+    struct StaticFrontendConfigStore(FrontendConfig);
+
+    impl FrontendConfigStore for StaticFrontendConfigStore {
+        fn load_frontend_config<'a>(
+            &'a self,
+            _query: LoadFrontendConfigQuery,
+        ) -> FrontendConfigFuture<'a, FrontendConfig> {
+            let config = self.0.clone();
+            Box::pin(async move { Ok(config) })
+        }
+
+        fn replace_frontend_config<'a>(
+            &'a self,
+            _command: ReplaceFrontendConfigCommand,
+        ) -> FrontendConfigFuture<'a, FrontendConfig> {
+            let config = self.0.clone();
+            Box::pin(async move { Ok(config) })
+        }
+    }
+
+    #[derive(Default)]
+    struct CapturingFrontendConfigStore {
+        commands: Mutex<Vec<ReplaceFrontendConfigCommand>>,
+    }
+
+    impl FrontendConfigStore for CapturingFrontendConfigStore {
+        fn load_frontend_config<'a>(
+            &'a self,
+            _query: LoadFrontendConfigQuery,
+        ) -> FrontendConfigFuture<'a, FrontendConfig> {
+            Box::pin(async {
+                Ok(FrontendConfig {
+                    revision: 0,
+                    channels: Vec::new(),
+                })
+            })
+        }
+
+        fn replace_frontend_config<'a>(
+            &'a self,
+            command: ReplaceFrontendConfigCommand,
+        ) -> FrontendConfigFuture<'a, FrontendConfig> {
+            self.commands
+                .lock()
+                .expect("capture replace commands")
+                .push(command);
+            Box::pin(async {
+                Ok(FrontendConfig {
+                    revision: 1,
+                    channels: Vec::new(),
+                })
+            })
+        }
+    }
+
+    struct FixedUuidGenerator;
+
+    impl EntityUuidGenerator for FixedUuidGenerator {
+        fn generate_entity_uuid(&self) -> DomainResult<String> {
+            Ok("test-entity-uuid".to_owned())
+        }
+    }
+
+    fn trusted_subject() -> TrustedRequestSubject {
+        TrustedRequestSubject {
+            tenant_id: 100_001,
+            organization_id: 0,
+            user_id: 1,
+            operator_id: 1,
+            operator_type: 1,
+        }
+    }
+
+    fn test_context() -> WebRequestContext {
+        WebRequestContext {
+            request_id: ServerRequestId("test-request".to_owned()),
+            api_surface: WebApiSurface::BackendApi,
+            auth_mode: WebAuthMode::DualToken,
+            transport: WebTransportFacts {
+                path: "/backend/v3/api/ai/frontend_config".to_owned(),
+                method: "GET".to_owned(),
+                auth_token_present: true,
+                access_token_present: true,
+                api_key_present: false,
+                ingress_token_present: false,
+                oauth_bearer_present: false,
+                agent_token_present: false,
+            },
+            principal: None,
+            locale: None,
+            client_kind: None,
+            operation: None,
+            trace_id: None,
+            idempotency_key: None,
+        }
+    }
+
+    #[tokio::test]
+    async fn admin_read_serves_the_initialization_fallback_without_tenant_rows() {
+        let state = FrontendConfigState {
+            store: Arc::new(EmptyFrontendConfigStore),
+            entity_uuid_generator: None,
+        };
+        let response = fetch_frontend_config(
+            test_context(),
+            State(state),
+            trusted_subject(),
+            HeaderMap::new(),
+        )
+        .await;
+        assert_eq!(response.status(), StatusCode::OK);
+        let body = to_bytes(response.into_body(), usize::MAX)
+            .await
+            .expect("read response body");
+        let value: Value = serde_json::from_slice(&body).expect("parse response body");
+        assert_eq!(value["code"], 0);
+        let channels = value["data"]["channels"]
+            .as_array()
+            .expect("channels array");
+        assert_eq!(channels.len(), 7);
+        for channel in channels {
+            assert_eq!(
+                channel["models"].as_array().map(Vec::len),
+                Some(3),
+                "the fallback document must expose initialization models"
+            );
+            assert!(
+                channel["defaultCatalogKey"].is_string(),
+                "the fallback document must name a default model"
+            );
+        }
+    }
+
+    #[tokio::test]
+    async fn app_read_emits_an_etag_and_honors_if_none_match() {
+        let state = FrontendConfigState {
+            store: Arc::new(StaticFrontendConfigStore(FrontendConfig {
+                revision: 7,
+                channels: default_frontend_channels(),
+            })),
+            entity_uuid_generator: None,
+        };
+
+        let mut headers = HeaderMap::new();
+        headers.insert(
+            axum::http::header::IF_NONE_MATCH,
+            HeaderValue::from_static("\"fmc-7\""),
+        );
+        let not_modified =
+            fetch_app_frontend_config(test_context(), State(state.clone()), None, headers).await;
+        assert_eq!(not_modified.status(), StatusCode::NOT_MODIFIED);
+        assert_eq!(
+            not_modified
+                .headers()
+                .get(axum::http::header::ETAG)
+                .and_then(|value| value.to_str().ok()),
+            Some("\"fmc-7\"")
+        );
+
+        let response =
+            fetch_app_frontend_config(test_context(), State(state), None, HeaderMap::new()).await;
+        assert_eq!(response.status(), StatusCode::OK);
+        assert_eq!(
+            response
+                .headers()
+                .get(axum::http::header::ETAG)
+                .and_then(|value| value.to_str().ok()),
+            Some("\"fmc-7\"")
+        );
+        let body = to_bytes(response.into_body(), usize::MAX)
+            .await
+            .expect("read app response body");
+        let value: Value = serde_json::from_slice(&body).expect("parse app response body");
+        assert_eq!(value["code"], 0);
+        assert_eq!(value["data"]["channels"].as_array().map(Vec::len), Some(7));
+    }
+
+    #[tokio::test]
+    async fn replace_handler_builds_the_command_from_the_wire_document() {
+        let store = Arc::new(CapturingFrontendConfigStore::default());
+        let state = FrontendConfigState {
+            store: store.clone(),
+            entity_uuid_generator: Some(Arc::new(FixedUuidGenerator)),
+        };
+        let body = Bytes::from(
+            serde_json::to_vec(&json!({
+                "channels": [{
+                    "channelCode": "llm",
+                    "displayName": "LLM",
+                    "enabled": true,
+                    "sortOrder": 10,
+                    "defaultCatalogKey": "vendor/model",
+                    "capabilityCodes": ["chat"],
+                    "schemaVersion": "1.0.0",
+                    "models": [{
+                        "catalogKey": "vendor/model",
+                        "modelId": "42",
+                        "visible": true,
+                        "featured": true,
+                        "sortOrder": 10
+                    }],
+                    "fields": [{ "fieldKey": "price", "visible": true, "sortOrder": 10 }]
+                }],
+                "source": "test"
+            }))
+            .expect("serialize replace request"),
+        );
+        let response = replace_frontend_config(
+            test_context(),
+            State(state),
+            trusted_subject(),
+            HeaderMap::new(),
+            body,
+        )
+        .await;
+        assert_eq!(response.status(), StatusCode::OK);
+
+        let commands = store.commands.lock().expect("capture replace commands");
+        assert_eq!(commands.len(), 1);
+        let command = &commands[0];
+        assert_eq!(command.source, "test");
+        assert_eq!(command.channels.len(), 1);
+        let channel = &command.channels[0];
+        assert_eq!(channel.channel_code, "llm");
+        assert_eq!(
+            channel.display_name_i18n,
+            json!({}),
+            "an omitted displayNameI18n must persist as an empty object"
+        );
+        assert_eq!(channel.default_catalog_key.as_deref(), Some("vendor/model"));
+        assert_eq!(channel.models.len(), 1);
+        assert_eq!(channel.models[0].model_id, Some(42));
+        assert!(channel.models[0].featured);
+        assert_eq!(channel.fields[0].field_key, "price");
+    }
+
+    #[tokio::test]
+    async fn replace_handler_rejects_a_dangling_default_with_a_problem_response() {
+        let state = FrontendConfigState {
+            store: Arc::new(EmptyFrontendConfigStore),
+            entity_uuid_generator: None,
+        };
+        let body = Bytes::from(
+            serde_json::to_vec(&json!({
+                "channels": [{
+                    "channelCode": "llm",
+                    "displayName": "LLM",
+                    "defaultCatalogKey": "vendor/missing",
+                    "models": [{ "catalogKey": "vendor/model" }]
+                }]
+            }))
+            .expect("serialize invalid replace request"),
+        );
+        let response = replace_frontend_config(
+            test_context(),
+            State(state),
+            trusted_subject(),
+            HeaderMap::new(),
+            body,
+        )
+        .await;
+        assert_eq!(response.status(), StatusCode::BAD_REQUEST);
+        assert_eq!(
+            response
+                .headers()
+                .get(axum::http::header::CONTENT_TYPE)
+                .and_then(|value| value.to_str().ok()),
+            Some("application/problem+json")
+        );
+        let body = to_bytes(response.into_body(), usize::MAX)
+            .await
+            .expect("read problem body");
+        let value: Value = serde_json::from_slice(&body).expect("parse problem body");
+        assert!(value["code"].is_number());
+        assert!(value["traceId"].is_string());
+    }
 
     #[test]
     fn if_none_match_accepts_the_exact_weak_and_wildcard_validators() {
@@ -717,11 +1229,235 @@ mod tests {
             .into_iter()
             .map(|channel| channel.channel_code)
             .collect();
-        for expected in ["llm", "video", "image", "audio", "music"] {
+        for expected in [
+            "llm",
+            "video",
+            "image",
+            "audio",
+            "music",
+            "sound_effect",
+            "embedding",
+        ] {
             assert!(
                 codes.iter().any(|code| code == expected),
                 "missing {expected}"
             );
         }
+    }
+
+    #[test]
+    fn default_channels_expose_initialization_models() {
+        for channel in default_frontend_channels() {
+            assert!(
+                !channel.models.is_empty(),
+                "channel {} must expose initialization models",
+                channel.channel_code
+            );
+            assert_eq!(
+                channel.default_catalog_key.as_deref(),
+                Some(channel.models[0].catalog_key.as_str()),
+                "channel {} default model must be its first exposed model",
+                channel.channel_code
+            );
+            assert!(
+                channel.models.iter().all(|model| model.visible),
+                "channel {} initialization models must be visible",
+                channel.channel_code
+            );
+            assert!(
+                channel.models.iter().filter(|model| model.featured).count() == 1,
+                "channel {} must feature exactly one initialization model",
+                channel.channel_code
+            );
+        }
+    }
+
+    #[test]
+    fn database_seed_matches_the_fallback_initialization_document() {
+        let sql =
+            include_str!("../../../../database/seeds/common/002_ai_model_frontend_defaults.sql");
+        for channel in default_frontend_channels() {
+            let channel_code = channel.channel_code.as_str();
+            assert!(
+                sql.contains(&format!("'seed-fmc-channel-{channel_code}'")),
+                "seed is missing the {channel_code} channel row"
+            );
+            let default_catalog_key = channel
+                .default_catalog_key
+                .as_deref()
+                .expect("default catalog key");
+            let capability_codes =
+                serde_json::to_string(&channel.capability_codes).expect("capability codes json");
+            assert!(
+                sql.contains(&format!(
+                    "'{default_catalog_key}', '{capability_codes}'::jsonb"
+                )),
+                "seed default model or capability codes drifted for {channel_code}"
+            );
+            let display_name_i18n =
+                serde_json::to_string(&channel.display_name_i18n).expect("display name i18n json");
+            assert!(
+                sql.contains(&format!("'{channel_code}', '{}',", channel.display_name))
+                    && sql.contains(&format!("'{display_name_i18n}'::jsonb")),
+                "seed display name or i18n drifted for {channel_code}"
+            );
+            for (index, model) in channel.models.iter().enumerate() {
+                let sort_order = (index as i64 + 1) * 10;
+                let featured = if model.featured { "TRUE" } else { "FALSE" };
+                assert!(
+                    sql.contains(&format!(
+                        "'seed-fmc-model-{channel_code}-{}', '{channel_code}', '{}', {featured}, {sort_order})",
+                        index + 1,
+                        model.catalog_key
+                    )),
+                    "seed row for {} of {channel_code} drifted",
+                    model.catalog_key
+                );
+                assert!(
+                    sql.contains(&format!("'{}'", model.catalog_key)),
+                    "seed is missing the {} catalog key",
+                    model.catalog_key
+                );
+            }
+            for field in &channel.fields {
+                assert!(
+                    sql.contains(&format!(
+                        ", '{channel_code}', '{}', {})",
+                        field.field_key, field.sort_order
+                    )),
+                    "seed field {} of {channel_code} drifted",
+                    field.field_key
+                );
+            }
+        }
+    }
+
+    #[test]
+    fn app_read_drops_hidden_rows_and_repairs_a_dangling_default() {
+        let mut llm = default_frontend_channels()
+            .into_iter()
+            .find(|channel| channel.channel_code == "llm")
+            .expect("llm defaults");
+        llm.models[1].visible = false;
+        llm.default_catalog_key = Some(llm.models[1].catalog_key.clone());
+        llm.fields[0].visible = false;
+        let mut disabled = default_frontend_channels()
+            .into_iter()
+            .find(|channel| channel.channel_code == "video")
+            .expect("video defaults");
+        disabled.enabled = false;
+
+        let visible = app_visible_channels(vec![llm, disabled]);
+        assert_eq!(visible.len(), 1);
+        let llm = &visible[0];
+        assert!(llm.models.iter().all(|model| model.visible));
+        assert!(llm.fields.iter().all(|field| field.visible));
+        assert_eq!(
+            llm.default_catalog_key.as_deref(),
+            Some("deepseek/deepseek-flash"),
+            "a hidden default must be replaced by the first visible model"
+        );
+    }
+
+    #[test]
+    fn replace_rejects_a_default_model_outside_the_exposed_models() {
+        let request: FrontendConfigReplaceRequest = serde_json::from_value(json!({
+            "channels": [{
+                "channelCode": "llm",
+                "displayName": "LLM",
+                "defaultCatalogKey": "vendor/missing",
+                "models": [{ "catalogKey": "vendor/model" }]
+            }]
+        }))
+        .expect("deserialize replace request");
+        let error = validate_request(&request).expect_err("dangling default must be rejected");
+        assert!(
+            error.contains("defaultCatalogKey"),
+            "unexpected error: {error}"
+        );
+
+        let valid: FrontendConfigReplaceRequest = serde_json::from_value(json!({
+            "channels": [{
+                "channelCode": "llm",
+                "displayName": "LLM",
+                "defaultCatalogKey": "vendor/model",
+                "models": [{ "catalogKey": "vendor/model" }]
+            }]
+        }))
+        .expect("deserialize replace request");
+        validate_request(&valid).expect("default model inside the exposed set must be accepted");
+
+        let invisible_default: FrontendConfigReplaceRequest = serde_json::from_value(json!({
+            "channels": [{
+                "channelCode": "llm",
+                "displayName": "LLM",
+                "defaultCatalogKey": "vendor/model",
+                "models": [{ "catalogKey": "vendor/model", "visible": false }]
+            }]
+        }))
+        .expect("deserialize replace request");
+        validate_request(&invisible_default)
+            .expect_err("an invisible default model must be rejected");
+    }
+
+    #[test]
+    fn replace_rejects_invalid_wire_shapes() {
+        let huge_sort: FrontendConfigReplaceRequest = serde_json::from_value(json!({
+            "channels": [{
+                "channelCode": "llm",
+                "displayName": "LLM",
+                "sortOrder": i64::MAX
+            }]
+        }))
+        .expect("deserialize replace request");
+        validate_request(&huge_sort).expect_err("out-of-range sort order must be rejected");
+
+        let bad_i18n: FrontendConfigReplaceRequest = serde_json::from_value(json!({
+            "channels": [{
+                "channelCode": "llm",
+                "displayName": "LLM",
+                "displayNameI18n": "oops"
+            }]
+        }))
+        .expect("deserialize replace request");
+        validate_request(&bad_i18n).expect_err("non-object displayNameI18n must be rejected");
+
+        let bad_model_id: FrontendConfigReplaceRequest = serde_json::from_value(json!({
+            "channels": [{
+                "channelCode": "llm",
+                "displayName": "LLM",
+                "models": [{ "catalogKey": "vendor/model", "modelId": "0" }]
+            }]
+        }))
+        .expect("deserialize replace request");
+        validate_request(&bad_model_id).expect_err("non-positive model id must be rejected");
+    }
+
+    #[test]
+    fn channel_model_id_crosses_the_wire_as_a_decimal_string() {
+        let response = FrontendChannelModelResponse {
+            catalog_key: "deepseek/deepseek-flash".to_owned(),
+            model_id: Some(42),
+            visible: true,
+            featured: true,
+            sort_order: 10,
+            badge: None,
+            config: json!({}),
+        };
+        let value = serde_json::to_value(&response).expect("serialize model response");
+        assert_eq!(value["modelId"], json!("42"));
+
+        let request: FrontendChannelModelRequest = serde_json::from_value(json!({
+            "catalogKey": "deepseek/deepseek-flash",
+            "modelId": "42",
+        }))
+        .expect("deserialize model request");
+        assert_eq!(request.model_id, Some(42));
+
+        let without_id: FrontendChannelModelRequest = serde_json::from_value(json!({
+            "catalogKey": "deepseek/deepseek-flash",
+        }))
+        .expect("deserialize model request without id");
+        assert_eq!(without_id.model_id, None);
     }
 }

@@ -15,7 +15,8 @@ import { getModelsBackendSdkClient } from '@sdkwork/cloudroutes-pc-commons/sdk-c
  */
 export interface FrontendChannelModelConfig {
   catalogKey: string;
-  modelId?: number | null;
+  /** Int64 model id as a decimal string (never a JavaScript number). */
+  modelId?: string | null;
   visible: boolean;
   featured: boolean;
   sortOrder: number;
@@ -60,6 +61,23 @@ function readJsonObject(value: unknown): Record<string, unknown> {
   return isRecord(value) ? value : {};
 }
 
+/**
+ * Read an int64 wire value without losing precision.
+ *
+ * The contract is a decimal string; the numeric branch only keeps a
+ * transitional server returning a plain number from being dropped, and refuses
+ * values JavaScript cannot represent exactly (API_SPEC section 13.6).
+ */
+function readInt64String(value: unknown): string | null {
+  if (typeof value === 'string' && /^-?\d+$/u.test(value.trim())) {
+    return value.trim();
+  }
+  if (typeof value === 'number' && Number.isSafeInteger(value)) {
+    return String(value);
+  }
+  return null;
+}
+
 function readChannel(record: ApiRecord): FrontendChannelConfig {
   const code = readString(record, 'channelCode', '');
   return {
@@ -81,7 +99,7 @@ function readChannel(record: ApiRecord): FrontendChannelConfig {
     models: Array.isArray(record.models)
       ? record.models.filter(isRecord).map((model) => ({
         catalogKey: readString(model, 'catalogKey', ''),
-        modelId: typeof model.modelId === 'number' ? model.modelId : null,
+        modelId: readInt64String(model.modelId),
         visible: readBoolean(model, 'visible', true),
         featured: readBoolean(model, 'featured', false),
         sortOrder: readNumber(model, 'sortOrder', 0),

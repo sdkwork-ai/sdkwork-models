@@ -30,8 +30,21 @@ Cloud Router retains tenant routing overlays (`ai_model_mapping_*`), gateway cha
 This module is in **initialization state** for greenfield deployments:
 
 1. **Baseline** — `database/ddl/baseline/{engine}/0001_sdkwork-models_baseline.sql` contains the full DDL snapshot.
-2. **Migrations** — `database/migrations/{engine}/` is reserved for post-GA incremental schema changes only. It is intentionally empty at initialization.
-3. **Drift** — run `pnpm db:drift:check` before release.
+2. **Migrations** — `database/migrations/{engine}/` carries post-baseline incremental changes
+   (`0001_organization_id_not_null`, `0002_ai_resource_route_kind`,
+   `0003_ai_model_frontend_config`); a fresh install applies the baseline and then
+   every ordered migration.
+3. **Seeds** — `database/seeds/common/002_ai_model_frontend_defaults.sql` persists the
+   front-end channel initialization document for the admin console tenant
+   (`100001` / `0`): one channel per modality (`llm`, `video`, `image`, `audio`,
+   `music`, `sound_effect`, `embedding`), each with its default model,
+   initialization model list, and field visibility. It is idempotent
+   (`ON CONFLICT DO NOTHING`) and never rewrites an operator-authored revision.
+   The `db:seed` command and the Cloud Router installer
+   (`cloudrouterctl install|upgrade|ensure`) apply it through the seed
+   lifecycle; the runtime models assembly only migrates. The backend keeps an
+   equivalent in-memory fallback for tenants that have no rows yet.
+4. **Drift** — run `pnpm db:drift:check` before release.
 
 ## Commands
 
