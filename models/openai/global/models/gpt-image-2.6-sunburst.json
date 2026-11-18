@@ -1,0 +1,42 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "openai/gpt-image-2.6-sunburst",
+  "codingVisible": false,
+  "colorToken": "#0f766e",
+  "description": "GPT Image 2.6 Sunburst is OpenAI’s newest high-fidelity image generation and editing model, priced at $5 input per 1M text tokens and $8 per 1M image tokens, with image output at $30 per 1M tokens.",
+  "displayName": "GPT Image 2.6 Sunburst",
+  "familyCode": "gpt-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "gpt-image-2.6-sunburst",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-19T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-image-2.6-sunburst"
+  },
+  "strengths": [
+    "Text to image",
+    "Image editing",
+    "Text rendering"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "1.000000",
+  "usageScopes": [],
+  "vendorCode": "openai"
+}

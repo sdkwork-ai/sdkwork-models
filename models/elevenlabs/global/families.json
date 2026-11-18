@@ -1,7 +1,7 @@
 {
   "families": [
     {
-      "defaultModel": "eleven_v3",
+      "defaultModel": "eleven_v4",
       "displayName": "ElevenLabs TTS",
       "familyCode": "elevenlabs-tts",
       "familyType": "audio",
@@ -9,7 +9,7 @@
       "sortOrder": 10
     },
     {
-      "defaultModel": "scribe_v2",
+      "defaultModel": "scribe_v3",
       "displayName": "ElevenLabs STT",
       "familyCode": "elevenlabs-stt",
       "familyType": "audio",
@@ -17,7 +17,7 @@
       "sortOrder": 20
     },
     {
-      "defaultModel": "music_v2",
+      "defaultModel": "music_v2_5",
       "displayName": "ElevenLabs Music",
       "familyCode": "elevenlabs-music",
       "familyType": "music",

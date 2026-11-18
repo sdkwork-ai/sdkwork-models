@@ -13,31 +13,61 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "catalogKey": "openai/gpt-5.6-cyber",
         "model": "gpt-5.6-cyber",
         "displayName": "GPT-5.6 Cyber",
-        "sortOrder": 13
+        "sortOrder": 14
+      },
+      {
+        "catalogKey": "openai/gpt-6-astra-law",
+        "model": "gpt-6-astra-law",
+        "displayName": "GPT-6 Astra for Law",
+        "sortOrder": 18
       },
       {
         "catalogKey": "openai/gpt-6-astra",
         "model": "gpt-6-astra",
         "displayName": "GPT-6 Astra",
-        "sortOrder": 17
+        "sortOrder": 19
+      },
+      {
+        "catalogKey": "openai/gpt-6-cyber",
+        "model": "gpt-6-cyber",
+        "displayName": "GPT-6 Cyber",
+        "sortOrder": 20
       },
       {
         "catalogKey": "openai/gpt-6-luna",
         "model": "gpt-6-luna",
         "displayName": "GPT-6 Luna",
-        "sortOrder": 18
+        "sortOrder": 21
       },
       {
         "catalogKey": "openai/gpt-6.1-sol",
         "model": "gpt-6.1-sol",
         "displayName": "GPT-6.1 Sol",
-        "sortOrder": 21
+        "sortOrder": 24
       },
       {
         "catalogKey": "openai/gpt-6.1-terra",
         "model": "gpt-6.1-terra",
         "displayName": "GPT-6.1 Terra",
-        "sortOrder": 22
+        "sortOrder": 25
+      },
+      {
+        "catalogKey": "openai/gpt-6.2-astra-law",
+        "model": "gpt-6.2-astra-law",
+        "displayName": "GPT-6.2 Astra for Law",
+        "sortOrder": 26
+      },
+      {
+        "catalogKey": "openai/gpt-6.2-astra",
+        "model": "gpt-6.2-astra",
+        "displayName": "GPT-6.2 Astra",
+        "sortOrder": 27
+      },
+      {
+        "catalogKey": "openai/gpt-6.2-sol",
+        "model": "gpt-6.2-sol",
+        "displayName": "GPT-6.2 Sol",
+        "sortOrder": 28
       }
     ],
     "sortOrder": 0,

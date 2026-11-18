@@ -9,20 +9,20 @@
         "1:1"
       ],
       "catalogKey": "runway/seedance2_5/t2v_range_720p",
-      "displayName": "Text to Video · 2–12s · 720p",
+      "displayName": "Text to Video · 4–30s · 720p",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "text_to_video",
       "isDefault": true,
-      "maxDurationSeconds": 12,
-      "minDurationSeconds": 2,
+      "maxDurationSeconds": 30,
+      "minDurationSeconds": 4,
       "outputAudio": true,
       "profileCode": "t2v_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
       "sortOrder": 10,
       "wireParameters": {
-        "duration": "2-12",
+        "duration": "4-30",
         "resolution": "720p"
       }
     },
@@ -33,20 +33,20 @@
         "1:1"
       ],
       "catalogKey": "runway/seedance2_5/t2v_range_1080p",
-      "displayName": "Text to Video · 2–12s · 1080p",
+      "displayName": "Text to Video · 4–30s · 1080p",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "text_to_video",
       "isDefault": false,
-      "maxDurationSeconds": 12,
-      "minDurationSeconds": 2,
+      "maxDurationSeconds": 30,
+      "minDurationSeconds": 4,
       "outputAudio": true,
       "profileCode": "t2v_range_1080p",
       "resolution": "1080p",
       "resolutionTierCode": "res_1080p",
       "sortOrder": 20,
       "wireParameters": {
-        "duration": "2-12",
+        "duration": "4-30",
         "resolution": "1080p"
       }
     },
@@ -57,20 +57,20 @@
         "1:1"
       ],
       "catalogKey": "runway/seedance2_5/t2v_range_480p",
-      "displayName": "Text to Video · 2–12s · 480p",
+      "displayName": "Text to Video · 4–30s · 480p",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "text_to_video",
       "isDefault": false,
-      "maxDurationSeconds": 12,
-      "minDurationSeconds": 2,
+      "maxDurationSeconds": 30,
+      "minDurationSeconds": 4,
       "outputAudio": true,
       "profileCode": "t2v_range_480p",
       "resolution": "480p",
       "resolutionTierCode": "res_480p",
       "sortOrder": 30,
       "wireParameters": {
-        "duration": "2-12",
+        "duration": "4-30",
         "resolution": "480p"
       }
     },
@@ -80,21 +80,45 @@
         "9:16",
         "1:1"
       ],
+      "catalogKey": "runway/seedance2_5/t2v_range_4k",
+      "displayName": "Text to Video · 4–30s · 4K",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 30,
+      "minDurationSeconds": 4,
+      "outputAudio": true,
+      "profileCode": "t2v_range_4k",
+      "resolution": "4k",
+      "resolutionTierCode": "res_4k",
+      "sortOrder": 40,
+      "wireParameters": {
+        "duration": "4-30",
+        "resolution": "4k"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
       "catalogKey": "runway/seedance2_5/i2v_range_720p",
-      "displayName": "Image to Video · 2–12s · 720p",
+      "displayName": "Image to Video · 4–30s · 720p",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "image_to_video",
       "isDefault": false,
-      "maxDurationSeconds": 12,
-      "minDurationSeconds": 2,
+      "maxDurationSeconds": 30,
+      "minDurationSeconds": 4,
       "outputAudio": true,
       "profileCode": "i2v_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
-      "sortOrder": 40,
+      "sortOrder": 50,
       "wireParameters": {
-        "duration": "2-12",
+        "duration": "4-30",
         "resolution": "720p"
       }
     },
@@ -105,20 +129,20 @@
         "1:1"
       ],
       "catalogKey": "runway/seedance2_5/i2v_range_1080p",
-      "displayName": "Image to Video · 2–12s · 1080p",
+      "displayName": "Image to Video · 4–30s · 1080p",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "image_to_video",
       "isDefault": false,
-      "maxDurationSeconds": 12,
-      "minDurationSeconds": 2,
+      "maxDurationSeconds": 30,
+      "minDurationSeconds": 4,
       "outputAudio": true,
       "profileCode": "i2v_range_1080p",
       "resolution": "1080p",
       "resolutionTierCode": "res_1080p",
-      "sortOrder": 50,
+      "sortOrder": 60,
       "wireParameters": {
-        "duration": "2-12",
+        "duration": "4-30",
         "resolution": "1080p"
       }
     },
@@ -129,20 +153,20 @@
         "1:1"
       ],
       "catalogKey": "runway/seedance2_5/i2v_range_480p",
-      "displayName": "Image to Video · 2–12s · 480p",
+      "displayName": "Image to Video · 4–30s · 480p",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "image_to_video",
       "isDefault": false,
-      "maxDurationSeconds": 12,
-      "minDurationSeconds": 2,
+      "maxDurationSeconds": 30,
+      "minDurationSeconds": 4,
       "outputAudio": true,
       "profileCode": "i2v_range_480p",
       "resolution": "480p",
       "resolutionTierCode": "res_480p",
-      "sortOrder": 60,
+      "sortOrder": 70,
       "wireParameters": {
-        "duration": "2-12",
+        "duration": "4-30",
         "resolution": "480p"
       }
     },
@@ -152,21 +176,45 @@
         "9:16",
         "1:1"
       ],
+      "catalogKey": "runway/seedance2_5/i2v_range_4k",
+      "displayName": "Image to Video · 4–30s · 4K",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 30,
+      "minDurationSeconds": 4,
+      "outputAudio": true,
+      "profileCode": "i2v_range_4k",
+      "resolution": "4k",
+      "resolutionTierCode": "res_4k",
+      "sortOrder": 80,
+      "wireParameters": {
+        "duration": "4-30",
+        "resolution": "4k"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
       "catalogKey": "runway/seedance2_5/r2v_range_720p",
-      "displayName": "Reference to Video · 2–12s · 720p",
+      "displayName": "Reference to Video · 4–30s · 720p",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "reference_to_video",
       "isDefault": false,
-      "maxDurationSeconds": 12,
-      "minDurationSeconds": 2,
+      "maxDurationSeconds": 30,
+      "minDurationSeconds": 4,
       "outputAudio": true,
       "profileCode": "r2v_range_720p",
       "resolution": "720p",
       "resolutionTierCode": "res_720p",
-      "sortOrder": 70,
+      "sortOrder": 90,
       "wireParameters": {
-        "duration": "2-12",
+        "duration": "4-30",
         "resolution": "720p"
       }
     },
@@ -177,20 +225,20 @@
         "1:1"
       ],
       "catalogKey": "runway/seedance2_5/r2v_range_1080p",
-      "displayName": "Reference to Video · 2–12s · 1080p",
+      "displayName": "Reference to Video · 4–30s · 1080p",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "reference_to_video",
       "isDefault": false,
-      "maxDurationSeconds": 12,
-      "minDurationSeconds": 2,
+      "maxDurationSeconds": 30,
+      "minDurationSeconds": 4,
       "outputAudio": true,
       "profileCode": "r2v_range_1080p",
       "resolution": "1080p",
       "resolutionTierCode": "res_1080p",
-      "sortOrder": 80,
+      "sortOrder": 100,
       "wireParameters": {
-        "duration": "2-12",
+        "duration": "4-30",
         "resolution": "1080p"
       }
     },
@@ -201,29 +249,53 @@
         "1:1"
       ],
       "catalogKey": "runway/seedance2_5/r2v_range_480p",
-      "displayName": "Reference to Video · 2–12s · 480p",
+      "displayName": "Reference to Video · 4–30s · 480p",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "reference_to_video",
       "isDefault": false,
-      "maxDurationSeconds": 12,
-      "minDurationSeconds": 2,
+      "maxDurationSeconds": 30,
+      "minDurationSeconds": 4,
       "outputAudio": true,
       "profileCode": "r2v_range_480p",
       "resolution": "480p",
       "resolutionTierCode": "res_480p",
-      "sortOrder": 90,
+      "sortOrder": 110,
       "wireParameters": {
-        "duration": "2-12",
+        "duration": "4-30",
         "resolution": "480p"
+      }
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/seedance2_5/r2v_range_4k",
+      "displayName": "Reference to Video · 4–30s · 4K",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "reference_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 30,
+      "minDurationSeconds": 4,
+      "outputAudio": true,
+      "profileCode": "r2v_range_4k",
+      "resolution": "4k",
+      "resolutionTierCode": "res_4k",
+      "sortOrder": 120,
+      "wireParameters": {
+        "duration": "4-30",
+        "resolution": "4k"
       }
     }
   ],
   "regionCode": "global",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
-    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+    "observedAt": "2026-11-19T00:00:00Z",
+    "sourceUrl": "https://dev.runway.com/learn/seedance-2-5-api"
   },
   "vendorCode": "runway"
 }

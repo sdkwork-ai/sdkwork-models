@@ -1,5 +1,5 @@
 {
-  "catalogVersion": "2026.11.14.6",
+  "catalogVersion": "2026.11.19.4",
   "schemaVersion": "1.1.0",
   "vendors": [
     {
@@ -121,13 +121,13 @@
           "displayName": "OpenAI",
           "legalName": "OpenAI, Inc.",
           "marketScope": "global",
-          "modelCount": 46,
+          "modelCount": 54,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "openai/global/vendor.json",
-          "pricingFileCount": 46,
+          "pricingFileCount": 54,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 10,
@@ -1547,13 +1547,13 @@
           "displayName": "Zhipu AI",
           "legalName": "Zhipu AI",
           "marketScope": "china_mainland",
-          "modelCount": 15,
+          "modelCount": 16,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "zhipu/cn/vendor.json",
-          "pricingFileCount": 15,
+          "pricingFileCount": 16,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 80,
@@ -3892,13 +3892,13 @@
           "displayName": "ElevenLabs",
           "legalName": "ElevenLabs",
           "marketScope": "global",
-          "modelCount": 20,
+          "modelCount": 22,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "elevenlabs/global/vendor.json",
-          "pricingFileCount": 19,
+          "pricingFileCount": 21,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 170,

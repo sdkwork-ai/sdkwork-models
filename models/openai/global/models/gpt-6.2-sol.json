@@ -1,0 +1,54 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "openai/gpt-6.2-sol",
+  "codingVisible": true,
+  "colorToken": "#0f766e",
+  "contextTokens": 1050000,
+  "description": "GPT-6.2 Sol delivers flagship-adjacent intelligence for coding, computer use and professional work at $2 input / $10 output per 1M tokens with $0.10 cached input. 1,050,000 context window.",
+  "displayName": "GPT-6.2 Sol",
+  "familyCode": "gpt-6",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 1100,
+  "latencyP95Ms": 3800,
+  "lifecycle": "active",
+  "maxInputTokens": 922000,
+  "maxOutputTokens": 128000,
+  "modelId": "gpt-6.2-sol",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1265.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-19T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-sol"
+  },
+  "strengths": [
+    "Reasoning",
+    "Coding",
+    "Agents",
+    "Computer use"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "1.000000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "openai",
+  "winRate": "0.995000"
+}

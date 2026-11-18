@@ -72,6 +72,78 @@
       "tierCode": "res_768p",
       "unitPrice": "0.080000",
       "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_768p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "video_input_second",
+      "minimumQuantity": "0",
+      "notes": "Input/reference video billed per second at the 768P output rate; audio input is free.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.minimax.global.official",
+      "priceId": "minimax-global-h3-max-input-second-res-768p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "02bedd806499fbc76621a08b68d74bdce55156a8cf4c25ca2cc3d6a31e29e3f7",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-19T00:00:00Z",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "tierCode": "res_768p",
+      "unitPrice": "0.143000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_480p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "video_input_second",
+      "minimumQuantity": "0",
+      "notes": "Input/reference video billed per second at the 480P output rate; audio input is free.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.minimax.global.official",
+      "priceId": "minimax-global-h3-max-input-second-res-480p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "cdcae750b5990f508efcaccce9a8ecf7ab195fab9e4a409b0063b8fb46c5aa18",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-19T00:00:00Z",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "tierCode": "res_480p",
+      "unitPrice": "0.055300",
+      "unitSize": "1"
     }
   ],
   "regionCode": "global",

@@ -8,7 +8,7 @@
       "sortOrder": 10
     },
     {
-      "defaultModel": "gpt-6-astra",
+      "defaultModel": "gpt-6.2-astra",
       "displayName": "GPT-6",
       "familyCode": "gpt-6",
       "familyType": "llm",
@@ -16,7 +16,15 @@
       "sortOrder": 12
     },
     {
-      "defaultModel": "gpt-image-2",
+      "defaultModel": "chat-latest",
+      "displayName": "ChatGPT",
+      "familyCode": "gpt-chat",
+      "familyType": "llm",
+      "primaryModality": "text",
+      "sortOrder": 13
+    },
+    {
+      "defaultModel": "gpt-image-2.6-sunburst",
       "displayName": "GPT Image",
       "familyCode": "gpt-image",
       "familyType": "image",

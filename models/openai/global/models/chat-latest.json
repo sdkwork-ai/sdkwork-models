@@ -1,0 +1,49 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "openai/chat-latest",
+  "codingVisible": false,
+  "colorToken": "#0f766e",
+  "description": "ChatGPT model alias for the latest ChatGPT configuration on the API, priced at $5 input / $30 output per 1M tokens with $0.50 cached input.",
+  "displayName": "ChatGPT Latest",
+  "familyCode": "gpt-chat",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 900,
+  "latencyP95Ms": 3000,
+  "lifecycle": "active",
+  "maxInputTokens": 400000,
+  "maxOutputTokens": 128000,
+  "modelId": "chat-latest",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1150.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-19T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/chat-latest"
+  },
+  "strengths": [
+    "Conversation",
+    "Instruction following"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "1.000000",
+  "usageScopes": [
+    "chat"
+  ],
+  "vendorCode": "openai",
+  "winRate": "0.993000"
+}

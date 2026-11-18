@@ -1,0 +1,38 @@
+{
+  "catalogKey": "elevenlabs/scribe_v3",
+  "currency": "USD",
+  "modelId": "scribe_v3",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "stt_audio_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.transcribe",
+      "priceBookCode": "models.elevenlabs.global.official",
+      "priceId": "elevenlabs-scribe-v3-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.elevenlabs.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "0.001",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-19T00:00:00Z",
+        "sourceUrl": "https://elevenlabs.io/pricing/api"
+      },
+      "unitPrice": "0.003333",
+      "unitSize": "1",
+      "rateHash": "a53056e7e7bc8650cc303d5dc3633bca11cac46bcd0cef00f78605cfddb1c9ce"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "elevenlabs"
+}

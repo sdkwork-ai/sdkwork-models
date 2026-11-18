@@ -1,6 +1,6 @@
 # SDKWork Models - Vendor & Model Architecture
 
-Generated: 2026-11-14
+Generated: 2026-11-19
 
 > 本文件由 `tools/generate-vendor-model-architecture-doc.mjs` 从模型目录生成，请勿手改。
 > 口径：模型表仅收录 `shelfState = listed` 的模型；`Context` = `contextTokens / 1000` 向下取整；
@@ -156,7 +156,7 @@ Generated: 2026-11-14
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| deepseek-flash | 1048K | chat | CNY 1.00 / 4.00 |
+| deepseek-flash | 1048K | chat | CNY 1.00 / 2.00 |
 | deepseek-v4-pro | 1048K | chat | CNY 3.00 / 6.00 |
 | web_tools | N/A | tool | N/A |
 
@@ -165,7 +165,7 @@ Generated: 2026-11-14
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
 | deepseek-flash | 1048K | chat | USD 0.15 / 0.60 |
-| deepseek-v4-pro | 1048K | chat | USD 0.43 / 0.87 |
+| deepseek-v4-pro | 1048K | chat | USD 0.66 / 1.98 |
 | web_tools | N/A | tool | N/A |
 
 ### ElevenLabs (elevenlabs)
@@ -184,12 +184,13 @@ Generated: 2026-11-14
 | eleven_v3_conversational | N/A | audio | N/A |
 | eleven_v4 | N/A | audio | N/A |
 | eleven_v4_turbo | N/A | audio | N/A |
-| music_v1 | N/A | N/A | N/A |
 | music_v2 | N/A | music | N/A |
 | music_v2_5 | N/A | N/A | N/A |
 | scribe_v2 | N/A | audio | N/A |
 | scribe_v2_medical | N/A | N/A | N/A |
 | scribe_v2_realtime | N/A | audio | N/A |
+| scribe_v3 | N/A | audio | N/A |
+| scribe_v3_live | N/A | audio | N/A |
 
 ### Google (google)
 
@@ -356,19 +357,27 @@ Generated: 2026-11-14
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
+| chat-latest | N/A | chat | USD 5.00 / 30.00 |
 | gpt-4o-mini-transcribe | 128K | audio | USD 1.25 / 5.00 |
 | gpt-4o-mini-tts | N/A | audio | N/A |
 | gpt-4o-transcribe | N/A | audio | USD 2.50 / 10.00 |
 | gpt-4o-transcribe-diarize | N/A | audio | USD 2.50 / 10.00 |
 | gpt-5.6-cyber | N/A | chat | USD 12.50 / 75.00 |
 | gpt-6-astra | 1050K | chat | USD 10.00 / 50.00 |
+| gpt-6-astra-law | 1050K | chat | USD 10.00 / 50.00 |
+| gpt-6-cyber | N/A | chat | USD 20.00 / 100.00 |
 | gpt-6-luna | 1050K | chat | USD 0.10 / 0.50 |
 | gpt-6.1-sol | 1050K | chat | USD 2.00 / 10.00 |
 | gpt-6.1-terra | 1050K | chat | USD 1.00 / 5.00 |
+| gpt-6.2-astra | 1050K | chat | USD 8.00 / 40.00 |
+| gpt-6.2-astra-law | 1050K | chat | USD 8.00 / 40.00 |
+| gpt-6.2-sol | 1050K | chat | USD 2.00 / 10.00 |
 | gpt-audio-1.5 | N/A | audio, chat | USD 2.50 / 10.00 |
 | gpt-image-2 | N/A | image | N/A |
 | gpt-image-2.5-flare | N/A | image | N/A |
 | gpt-image-2.5-sunburst | N/A | image | N/A |
+| gpt-image-2.6-flare | N/A | image | N/A |
+| gpt-image-2.6-sunburst | N/A | image | N/A |
 | gpt-live-1 | N/A | audio, chat | N/A |
 | gpt-live-transcribe | N/A | audio | N/A |
 | gpt-realtime-1.5 | N/A | chat, audio | USD 4.00 / 16.00 |
@@ -602,6 +611,7 @@ Generated: 2026-11-14
 | glm-5v-turbo | 200K | chat, reasoning | CNY 5.00 / 22.00 |
 | glm-image | N/A | image | N/A |
 | glm-ocr | 32K | chat | CNY 0.20 / 0.20 |
+| glm-tts | N/A | audio | N/A |
 
 ## Statistics Summary
 
@@ -609,8 +619,8 @@ Generated: 2026-11-14
 
 | Region | Vendors | Models | Pricing Files |
 |--------|---------|--------|---------------|
-| CN | 14 | 178 | 166 |
-| GLOBAL | 21 | 359 | 343 |
+| CN | 14 | 179 | 167 |
+| GLOBAL | 21 | 369 | 353 |
 
 ### Client API Support
 

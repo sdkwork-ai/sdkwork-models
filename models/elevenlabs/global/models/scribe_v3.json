@@ -1,0 +1,47 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "elevenlabs/scribe_v3",
+  "codingVisible": false,
+  "colorToken": "#7c2d12",
+  "description": "ElevenLabs Scribe v3 speech-to-text model, successor to Scribe v2 with improved transcription accuracy across 90+ languages.",
+  "displayName": "Scribe v3",
+  "familyCode": "elevenlabs-stt",
+  "inputModalities": [
+    "audio"
+  ],
+  "latencyP50Ms": 1200,
+  "latencyP95Ms": 5000,
+  "lifecycle": "active",
+  "modelId": "scribe_v3",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "rankScore": "745.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-19T00:00:00Z",
+    "sourceUrl": "https://elevenlabs.io/docs/overview/models"
+  },
+  "strengths": [
+    "Speech to text",
+    "Highest accuracy",
+    "Multilingual",
+    "Keyterm prompting"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.900000",
+  "usageScopes": [],
+  "vendorCode": "elevenlabs",
+  "vendorName": "ElevenLabs",
+  "winRate": "0.890000"
+}

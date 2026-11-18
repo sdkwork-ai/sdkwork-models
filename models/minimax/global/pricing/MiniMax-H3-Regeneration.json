@@ -37,6 +37,42 @@
       "tierCode": "regen_768p_to_2k",
       "unitPrice": "0.050000",
       "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "regen_768p_to_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "video_input_second",
+      "minimumQuantity": "0",
+      "notes": "Original input/video material billed again by duration during regeneration; audio input is free.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.minimax.global.official",
+      "priceId": "minimax-global-h3-regeneration-input-second-768p-to-2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "460f983b622ca5657e13e62c2ec00488286ef1d20ca4ba91f0736edab38cf01b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-19T00:00:00Z",
+        "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
+      },
+      "tierCode": "regen_768p_to_2k",
+      "unitPrice": "0.050000",
+      "unitSize": "1"
     }
   ],
   "regionCode": "global",

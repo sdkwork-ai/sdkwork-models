@@ -1,0 +1,54 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "openai/gpt-6.2-astra",
+  "codingVisible": true,
+  "colorToken": "#0f766e",
+  "contextTokens": 1050000,
+  "description": "GPT-6.2 Astra is OpenAI’s newest flagship for demanding reasoning, long-horizon agentic work and coding. 1,050,000 context window; $8 input / $40 output per 1M tokens with $0.40 cached input.",
+  "displayName": "GPT-6.2 Astra",
+  "familyCode": "gpt-6",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 1000,
+  "latencyP95Ms": 3500,
+  "lifecycle": "active",
+  "maxInputTokens": 922000,
+  "maxOutputTokens": 128000,
+  "modelId": "gpt-6.2-astra",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1290.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-19T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra"
+  },
+  "strengths": [
+    "Reasoning",
+    "Coding",
+    "Agents",
+    "Long context"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "1.000000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "openai",
+  "winRate": "0.997000"
+}

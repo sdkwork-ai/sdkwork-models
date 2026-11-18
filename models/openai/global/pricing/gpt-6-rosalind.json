@@ -20,14 +20,14 @@
       "productCode": "models.openai.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "ab00f90d52a7131b11da31d9609e27b7161519849b2160a60bacff210c69ee29",
+      "rateHash": "6c28dc609572390a331d53c1995a77e056bf2706b8dcb3e00fdee408d9efd56a",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-19T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
-      "unitPrice": "15.000000",
+      "unitPrice": "10.000000",
       "unitSize": "1000000"
     },
     {
@@ -53,15 +53,15 @@
       "productCode": "models.openai.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "8b7461c50be117ff73a9c0e8952d41f8a99694ea0e12e38f709a0305c8af1d14",
+      "rateHash": "83737936aa2a0cd50eb721d12f3a618ca90282f30b9edc4334f849f48cf80457",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-19T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "tierCode": "long_context",
-      "unitPrice": "30.000000",
+      "unitPrice": "20.000000",
       "unitSize": "1000000"
     },
     {
@@ -81,14 +81,14 @@
       "productCode": "models.openai.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "975803f66f4140eac3fe58d7df670f14f663d5f75944957f2d92501c6eb0305f",
+      "rateHash": "208dba907ddc802e899bc2938cc76924433e8dcc64239037e3910de4efcfb187",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-19T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
-      "unitPrice": "1.500000",
+      "unitPrice": "1.000000",
       "unitSize": "1000000"
     },
     {
@@ -114,15 +114,15 @@
       "productCode": "models.openai.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "107e5c4526277686aa0340d4f22523f2a259df06757a06b20bd88a270920324b",
+      "rateHash": "f9c1e87629ea2098667ce57184eae5b6be0e829b97bfab2d14f6b038cc1976d3",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-19T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "tierCode": "long_context",
-      "unitPrice": "3.000000",
+      "unitPrice": "2.000000",
       "unitSize": "1000000"
     },
     {
@@ -142,14 +142,14 @@
       "productCode": "models.openai.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "a939be8a06e7a8cbc901e721bd51289f6aab9e4e2389fbe67459874bce1ac838",
+      "rateHash": "29b52fd47b037fad7c9372573d8f1203a636627aa00d2001d3cbeff0227006ef",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-19T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
-      "unitPrice": "18.750000",
+      "unitPrice": "12.500000",
       "unitSize": "1000000"
     },
     {
@@ -175,15 +175,15 @@
       "productCode": "models.openai.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "bc154fbaa440cdfb77c44d1e93e2793c8f0134f8cc408b5945a52eb7acc6833a",
+      "rateHash": "7f23622ca4c5094280bf0e59d9e2223e24813e4cf1a83c8ecf4468159887f881",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-19T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "tierCode": "long_context",
-      "unitPrice": "37.500000",
+      "unitPrice": "25.000000",
       "unitSize": "1000000"
     },
     {
@@ -203,14 +203,14 @@
       "productCode": "models.openai.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "e39b6b38d02b665883413256d04def8437604b3e81be8ee8367949f8d3664524",
+      "rateHash": "8657f4d3cd13e19bef26f269a1a598e86ac84755f630cc9830cce399fc9398bb",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-19T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
-      "unitPrice": "75.000000",
+      "unitPrice": "50.000000",
       "unitSize": "1000000"
     },
     {
@@ -236,15 +236,15 @@
       "productCode": "models.openai.chat",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "0e262670ecfeeb5afc0d96d9949d57f2fde8dcf7139d4dafc2cf6205a088117c",
+      "rateHash": "48d3eaad83a497e28785fc880cb0e8a024bff48c6a78ad917409082032ea9a78",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-19T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "tierCode": "long_context",
-      "unitPrice": "112.500000",
+      "unitPrice": "100.000000",
       "unitSize": "1000000"
     }
   ],

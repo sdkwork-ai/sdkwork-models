@@ -1,5 +1,5 @@
 {
-  "catalogVersion": "2026.11.14.6",
+  "catalogVersion": "2026.11.19.4",
   "observedAt": "2026-11-14T00:00:00Z",
   "schemaVersion": "1.1.0",
   "vendors": [
@@ -387,14 +387,17 @@
         },
         {
           "modelId": "glm-ocr"
+        },
+        {
+          "modelId": "glm-tts"
         }
       ],
-      "observedAt": "2026-11-14T00:00:00Z",
+      "observedAt": "2026-11-19T00:00:00Z",
       "officialUrls": [
         "https://docs.bigmodel.cn/cn/guide/models/text/glm-5.2"
       ],
       "regionCode": "cn",
-      "sourceSnapshotHash": "29ddfa270d49d5c4105bf3bb6981ce9cd03202c26626d03c226c429234598203",
+      "sourceSnapshotHash": "0d4b60512c1fd8d3e86c79fae4686c0b4d67898c0a55c780e6057c681c5a345e",
       "vendorCode": "zhipu"
     }
   ]

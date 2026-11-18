@@ -1,0 +1,52 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "openai/gpt-6.2-astra-law",
+  "codingVisible": true,
+  "colorToken": "#7c2d12",
+  "contextTokens": 1050000,
+  "description": "GPT-6.2 Astra for Law is a legal-domain configuration of GPT-6.2 Astra priced at $8 input / $40 output per 1M tokens with $0.40 cached input; promotional pricing available at least through December 31, 2026.",
+  "displayName": "GPT-6.2 Astra for Law",
+  "familyCode": "gpt-6",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 1050,
+  "latencyP95Ms": 3600,
+  "lifecycle": "active",
+  "maxInputTokens": 922000,
+  "maxOutputTokens": 128000,
+  "modelId": "gpt-6.2-astra-law",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1230.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-19T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.2-astra-law"
+  },
+  "strengths": [
+    "Legal reasoning",
+    "Long context",
+    "Coding"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "1.000000",
+  "usageScopes": [
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "openai",
+  "winRate": "0.995000"
+}

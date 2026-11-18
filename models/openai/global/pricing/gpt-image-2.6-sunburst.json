@@ -1,0 +1,190 @@
+{
+  "catalogKey": "openai/gpt-image-2.6-sunburst",
+  "currency": "USD",
+  "modelId": "gpt-image-2.6-sunburst",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "media_type",
+          "operator": "eq",
+          "value": "text"
+        },
+        {
+          "dimensionCode": "input_type",
+          "operator": "eq",
+          "value": "text"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "image_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-image-2.6-sunburst-text-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-19T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "unitPrice": "5.000000",
+      "unitSize": "1000000",
+      "mediaType": "text",
+      "inputType": "text",
+      "rateHash": "0cb0cb33552d14afbe66aa042c43efdf454138d17c005d40dfd09a78492a94ea"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "media_type",
+          "operator": "eq",
+          "value": "text"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-image-2.6-sunburst-text-cache-read",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-19T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "unitPrice": "1.250000",
+      "unitSize": "1000000",
+      "mediaType": "text",
+      "rateHash": "c0b3ebd17146cf9f4cbaa4ab58749fe4aff240610a011074ca490d00a9ed22bd"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "media_type",
+          "operator": "eq",
+          "value": "image"
+        },
+        {
+          "dimensionCode": "input_type",
+          "operator": "eq",
+          "value": "image"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "image_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-image-2.6-sunburst-image-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-19T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "unitPrice": "8.000000",
+      "unitSize": "1000000",
+      "mediaType": "image",
+      "inputType": "image",
+      "rateHash": "23b141945e5fe5a003040b470f9f85458703b8f037f7a85d6f4d09f7322ee772"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "media_type",
+          "operator": "eq",
+          "value": "image"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-image-2.6-sunburst-image-cache-read",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-19T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "unitPrice": "2.000000",
+      "unitSize": "1000000",
+      "mediaType": "image",
+      "rateHash": "6bf16b2b08209388660d0b67b64b2d3a47a76cae84702b851dc82ea035a33b88"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "image_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-image-2.6-sunburst-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-19T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "unitPrice": "30.000000",
+      "unitSize": "1000000",
+      "rateHash": "644cd9a6d96e45adc3f96d5a9f501aa668683b6d1f2c62d5f1aeacfd3d45bb94"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "openai"
+}

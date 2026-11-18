@@ -25,6 +25,14 @@
       "sortOrder": 30
     },
     {
+      "defaultModel": "glm-tts",
+      "displayName": "GLM TTS",
+      "familyCode": "glm-tts",
+      "familyType": "audio",
+      "primaryModality": "audio",
+      "sortOrder": 35
+    },
+    {
       "defaultModel": "embedding-3",
       "displayName": "Zhipu Embedding",
       "familyCode": "zhipu-embedding",

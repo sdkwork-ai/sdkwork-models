@@ -1,0 +1,52 @@
+{
+  "apiFormat": "openai_responses",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "openai/gpt-6-cyber",
+  "codingVisible": true,
+  "colorToken": "#1e3a8a",
+  "description": "GPT-6 Cyber is OpenAI’s cybersecurity specialist model for defensive security workflows, priced at $20 input / $100 output per 1M tokens with $2 cached input and prompt cache writes at $25 (30m) / $50 (12h).",
+  "displayName": "GPT-6 Cyber",
+  "familyCode": "gpt-6",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 1150,
+  "latencyP95Ms": 4200,
+  "lifecycle": "active",
+  "maxInputTokens": 922000,
+  "maxOutputTokens": 128000,
+  "modelId": "gpt-6-cyber",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1240.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-19T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-6-cyber"
+  },
+  "strengths": [
+    "Cybersecurity",
+    "Reasoning",
+    "Agents"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "1.000000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "openai",
+  "winRate": "0.996000"
+}

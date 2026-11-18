@@ -1,0 +1,40 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "zhipu/glm-tts",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "Zhipu GLM-TTS speech synthesis model with hyper-realistic emotional expression. Official pricing is CNY 2 per 10,000 input characters. Billed by input character count (one Chinese character counts as two characters).",
+  "displayName": "GLM-TTS",
+  "familyCode": "glm-tts",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "glm-tts",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-19T00:00:00Z",
+    "sourceUrl": "https://open.bigmodel.cn/pricing"
+  },
+  "strengths": [
+    "Speech synthesis",
+    "Emotional expression",
+    "Voice cloning"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "zhipu"
+}

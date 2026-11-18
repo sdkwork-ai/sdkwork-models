@@ -1,6 +1,6 @@
 {
-  "catalogVersion": "2026.11.14.6",
-  "generatedAt": "2026-11-14T00:00:00Z",
+  "catalogVersion": "2026.11.19.4",
+  "generatedAt": "2026-11-19T00:00:00Z",
   "policy": {
     "description": "Vendor-regions listed here must be official_verified and must have an independent official model snapshot for the same catalog release.",
     "mode": "release_gate"

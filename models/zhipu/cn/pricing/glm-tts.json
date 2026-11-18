@@ -1,0 +1,38 @@
+{
+  "catalogKey": "zhipu/glm-tts",
+  "currency": "CNY",
+  "modelId": "glm-tts",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "operationCode": "speech.synthesize",
+      "priceBookCode": "models.zhipu.cn.official",
+      "priceId": "zhipu-glm-tts-input-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.zhipu.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "f791c748a6c49b4e0291da04070597aa8e98a7905274b16f25f744734782e8ac",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-19T00:00:00Z",
+        "sourceUrl": "https://open.bigmodel.cn/pricing"
+      },
+      "unitPrice": "0.200000",
+      "unitSize": "1000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "zhipu"
+}

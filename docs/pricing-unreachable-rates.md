@@ -260,10 +260,10 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | openai/global/pricing/gpt-6-luna.json | openai-gpt-6-luna-cache-write-long-context | llm_cache_write_token | 0.250000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-luna.json | openai-gpt-6-luna-input-long-context | llm_input_token | 0.200000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-luna.json | openai-gpt-6-luna-output-long-context | llm_output_token | 0.750000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
-| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-cache-read-long-context | llm_cache_read_token | 3.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
-| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-cache-write-long-context | llm_cache_write_token | 37.500000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
-| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-input-long-context | llm_input_token | 30.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
-| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-output-long-context | llm_output_token | 112.500000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-cache-read-long-context | llm_cache_read_token | 2.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-cache-write-long-context | llm_cache_write_token | 25.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-input-long-context | llm_input_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-output-long-context | llm_output_token | 100.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-sol.json | openai-gpt-6-sol-cache-read-long-context | llm_cache_read_token | 0.400000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-sol.json | openai-gpt-6-sol-cache-write-long-context | llm_cache_write_token | 5.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-sol.json | openai-gpt-6-sol-input-long-context | llm_input_token | 4.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |

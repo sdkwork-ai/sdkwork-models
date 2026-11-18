@@ -6,7 +6,7 @@
   "catalogKey": "elevenlabs/eleven_text_to_sound_v2",
   "codingVisible": false,
   "colorToken": "#7c2d12",
-  "description": "ElevenLabs Text to Sound v2 for cinematic sound-effect generation from text prompts with up to 30 seconds output.",
+  "description": "ElevenLabs Text to Sound v2 for cinematic sound-effect generation from text prompts with up to 30 seconds output. Officially deprecated and scheduled for removal on 2027-03-01; replacement: eleven_text_to_sound_v3.",
   "displayName": "Eleven Text to Sound v2",
   "familyCode": "elevenlabs-sfx",
   "inputModalities": [
@@ -14,7 +14,7 @@
   ],
   "latencyP50Ms": 5000,
   "latencyP95Ms": 24000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
   "modelId": "eleven_text_to_sound_v2",
   "outputModalities": [
     "audio"
@@ -22,12 +22,13 @@
   "primaryCapability": "sfx",
   "rankScore": "700.000000",
   "regionCode": "global",
-  "releaseStage": "active",
+  "releaseStage": "deprecated",
+  "replacementModel": "eleven_text_to_sound_v3",
   "routingState": "enabled",
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
+    "observedAt": "2026-11-19T00:00:00Z",
     "sourceUrl": "https://elevenlabs.io/docs/models"
   },
   "strengths": [
