@@ -134,3 +134,6 @@ temp/
 
 # One-off local audit scripts (never commit)
 /.tmp-*
+
+# Local catalog validation output (scratch report, never commit)
+/target-validate.json

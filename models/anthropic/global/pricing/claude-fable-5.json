@@ -184,6 +184,76 @@
       },
       "unitPrice": "10.000000",
       "unitSize": "1000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "batch"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-06-09T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-fable-5-input-batch",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "e2a52016425b1a47f737b94c5256e1726ae44091194198eafa41063721d242fc",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/models/overview"
+      },
+      "unitPrice": "5.000000",
+      "unitSize": "1000000",
+      "evidence": "Batch: Claude Fable 5 | $5 / MTok"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "batch"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-06-09T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-fable-5-output-batch",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "bde82ae569a908af3303ed5ec2dbd56803e3a9c25562842e8b3f33fc4ebb2922",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/models/overview"
+      },
+      "unitPrice": "25.000000",
+      "unitSize": "1000000",
+      "evidence": "Batch: Claude Fable 5 | $25 / MTok"
     }
   ],
   "regionCode": "global",

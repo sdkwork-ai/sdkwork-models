@@ -184,6 +184,76 @@
       },
       "unitPrice": "10.000000",
       "unitSize": "1000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "batch"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-06-24T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-mythos-5-input-batch",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "315d195f7b5e0efac21227571be98d0687c63134b84ef6d39a93dd5361a5649b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/models/overview"
+      },
+      "unitPrice": "5.000000",
+      "unitSize": "1000000",
+      "evidence": "Batch: Claude Mythos 5 | $5 / MTok"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "batch"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-06-24T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-mythos-5-output-batch",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "982ffb71c47feafd1aa9ff66c196d47fd6027ac09b8d3bd7803e22cea81e079e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/models/overview"
+      },
+      "unitPrice": "25.000000",
+      "unitSize": "1000000",
+      "evidence": "Batch: Claude Mythos 5 | $25 / MTok"
     }
   ],
   "regionCode": "global",

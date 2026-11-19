@@ -254,6 +254,76 @@
       },
       "unitPrice": "10.000000",
       "unitSize": "1000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "batch"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-06-03T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-opus-4-8-input-batch",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "27df7172fbb9302addc917fab6f6c797cce6162d6f4a13e1f0c260e4ea688d0e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/models/overview"
+      },
+      "unitPrice": "2.500000",
+      "unitSize": "1000000",
+      "evidence": "Batch: Claude Opus 4.8 | $2.50 / MTok"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "batch"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-06-03T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.anthropic.global.official",
+      "priceId": "anthropic-claude-opus-4-8-output-batch",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.anthropic.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "816f690bcab375947d1e906fe73c6e476396e7c23893cb9c4c65240ff3dba30b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-14T00:00:00Z",
+        "sourceUrl": "https://platform.claude.com/docs/en/about-claude/models/overview"
+      },
+      "unitPrice": "12.500000",
+      "unitSize": "1000000",
+      "evidence": "Batch: Claude Opus 4.8 | $12.50 / MTok"
     }
   ],
   "regionCode": "global",

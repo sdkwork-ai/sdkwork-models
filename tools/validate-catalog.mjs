@@ -128,8 +128,8 @@ function validatePriceSchedule(price, pricingPath, index, issues) {
   if (!Number.isInteger(price.priority) || price.priority < 0) {
     issues.push(issue("price.priority.invalid", `${path}/priority`, "priority must be a non-negative integer"));
   }
-  if (!["standard", "time_window"].includes(variant)) {
-    issues.push(issue("price.rate_variant.invalid", `${path}/rateVariant`, "rateVariant must be standard or time_window"));
+  if (!["standard", "time_window", "batch"].includes(variant)) {
+    issues.push(issue("price.rate_variant.invalid", `${path}/rateVariant`, "rateVariant must be standard, time_window or batch"));
   }
   if (variant === "standard" && price.schedule != null) {
     issues.push(issue("price.schedule.unexpected", `${path}/schedule`, "standard rates must not define a schedule"));

@@ -71,6 +71,28 @@ function conditions(price) {
       result.push({ dimensionCode, operator: "eq", value: price[field] });
     }
   }
+  // Batch (off-peak) rates are a variant, not a request field: the router picks
+  // them only when the invocation is a completed batch. Appended last for the
+  // same byte/hash-stability reason as `quality`, and idempotent so re-running
+  // the migration keeps a materialized batch row intact.
+  // `rateVariant` is a closed vocabulary owned by the contract crate
+  // (`standard` / `time_window`), so a batch row keeps the standard variant and
+  // carries its discount as a `tier_code = batch` condition. Preserve that
+  // condition across migrations: rebuilding `conditions` from scalar fields
+  // alone would silently delete the discount.
+  if (
+    (price.rateVariant === "batch" ||
+      (price.conditions ?? []).some(
+        (condition) =>
+          condition.dimensionCode === "tier_code" && condition.value === "batch",
+      )) &&
+    !result.some(
+      (condition) =>
+        condition.dimensionCode === "tier_code" && condition.value === "batch",
+    )
+  ) {
+    result.push({ dimensionCode: "tier_code", operator: "eq", value: "batch" });
+  }
   return result;
 }
 

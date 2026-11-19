@@ -155,9 +155,11 @@
             "minimum": 0
           },
           "rateVariant": {
+            "description": "Pricing variant. `batch` is the vendor's off-peak/batch rate (OpenAI and Anthropic publish 50% of standard); the router selects it only for completed batch work and never for an interactive call.",
             "enum": [
               "standard",
-              "time_window"
+              "time_window",
+              "batch"
             ]
           },
           "schedule": {
