@@ -19,8 +19,8 @@
   "latencyP50Ms": 700,
   "latencyP95Ms": 2300,
   "lifecycle": "active",
-  "maxInputTokens": 1000000,
-  "maxOutputTokens": 65536,
+  "maxInputTokens": 991808,
+  "maxOutputTokens": 131072,
   "modelId": "qwen3.8-max",
   "outputModalities": [
     "text"
@@ -33,7 +33,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
+    "observedAt": "2026-11-23T00:00:00Z",
     "sourceUrl": "https://www.qwencloud.com/models/qwen3.8-max"
   },
   "strengths": [

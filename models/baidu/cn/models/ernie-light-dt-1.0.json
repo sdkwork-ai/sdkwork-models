@@ -1,0 +1,47 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "baidu/ernie-light-dt-1.0",
+  "codingVisible": false,
+  "colorToken": "#1e40af",
+  "contextTokens": 1000000,
+  "description": "ERNIE-Light-DT-1.0 listed on the Qianfan model list (updated 2026-11-11) with 1M context and 128k output; public per-token price is not published yet.",
+  "displayName": "ERNIE Light DT 1.0",
+  "familyCode": "ernie",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1000000,
+  "maxOutputTokens": 131072,
+  "modelId": "ernie-light-dt-1.0",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "820.000000",
+  "regionCode": "cn",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/7m95lyy43"
+  },
+  "strengths": [
+    "Chinese",
+    "Long context",
+    "Lightweight"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "chat"
+  ],
+  "vendorCode": "baidu",
+  "vendorName": "Baidu AI Cloud"
+}

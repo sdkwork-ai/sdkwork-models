@@ -24,7 +24,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "1080p"
-      }
+      },
+      "pricingTierCodes": [
+        "noref_audio_1080p"
+      ]
     },
     {
       "aspectRatios": [
@@ -48,7 +51,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "1080p"
-      }
+      },
+      "pricingTierCodes": [
+        "noref_audio_1080p"
+      ]
     },
     {
       "aspectRatios": [
@@ -64,7 +70,7 @@
       "isDefault": false,
       "maxDurationSeconds": 15,
       "minDurationSeconds": 3,
-      "outputAudio": true,
+      "outputAudio": false,
       "profileCode": "r2v_range_1080p",
       "resolution": "1080p",
       "resolutionTierCode": "res_1080p",
@@ -72,7 +78,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "1080p"
-      }
+      },
+      "pricingTierCodes": [
+        "ref_silent_1080p"
+      ]
     },
     {
       "aspectRatios": [
@@ -96,14 +105,17 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "1080p"
-      }
+      },
+      "pricingTierCodes": [
+        "noref_audio_1080p"
+      ]
     }
   ],
   "regionCode": "global",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
-    "sourceUrl": "https://app.klingai.com/global/dev/document-api"
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
   },
   "vendorCode": "kuaishou"
 }

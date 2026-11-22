@@ -12,6 +12,7 @@
       "effectiveFrom": "2026-07-14T00:00:00Z",
       "meterCode": "api_result",
       "minimumQuantity": "0",
+      "notes": "官方 Lyrics-to-song 档位（Prompt-to-song 档位另计，V9.5 为 0.5 USD/song）；按首计费，重充电量 12 个月有效。",
       "operationCode": "music.generate",
       "priceBookCode": "models.mureka.global.official",
       "priceId": "mureka-global-mureka-o2-result",
@@ -25,8 +26,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://platform.mureka.ai/docs/en/faq.html"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.mureka.ai/pricing"
       },
       "unitPrice": "0.045000",
       "unitSize": "1"

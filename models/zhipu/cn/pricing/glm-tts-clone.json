@@ -1,0 +1,39 @@
+{
+  "catalogKey": "zhipu/glm-tts-clone",
+  "currency": "CNY",
+  "modelId": "glm-tts-clone",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "request_accepted",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "api_request",
+      "minimumQuantity": "0",
+      "notes": "Official price: CNY 6 per voice clone request.",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.zhipu.cn.official",
+      "priceId": "zhipu-glm-tts-clone-api-request",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.zhipu.audio",
+      "quantityAggregation": "distinct_invocation",
+      "quantityStep": "1",
+      "rateHash": "63f1adaa549def50587210399622078b6d4af9732c02139617cd345e8655392e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/sound-and-video/glm-tts-clone"
+      },
+      "unitPrice": "6.000000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "zhipu"
+}

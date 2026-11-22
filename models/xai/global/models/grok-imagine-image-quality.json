@@ -6,7 +6,7 @@
   "catalogKey": "xai/grok-imagine-image-quality",
   "codingVisible": false,
   "colorToken": "#1f2937",
-  "description": "Grok Imagine high-quality image generation model for premium visual outputs. Retiring on 2026-11-02 per the official migration guide 'Imagine Image Quality Retirement (Nov 2, 2026)'; the official use-case table now points Images to grok-imagine-image-2.0, which is the replacement model.",
+  "description": "Grok Imagine high-quality image generation model. Retired on 2026-11-02: requests to grok-imagine-image-quality and grok-imagine-image-pro are served by grok-imagine-image-2.0 with quality=low at a lower per-image price.",
   "displayName": "Grok Imagine Image Quality",
   "familyCode": "grok-imagine",
   "inputModalities": [
@@ -15,7 +15,7 @@
   ],
   "latencyP50Ms": 5500,
   "latencyP95Ms": 18000,
-  "lifecycle": "deprecated",
+  "lifecycle": "retired",
   "modelId": "grok-imagine-image-quality",
   "outputModalities": [
     "image"
@@ -23,12 +23,12 @@
   "primaryCapability": "image",
   "rankScore": "820.000000",
   "regionCode": "global",
-  "releaseStage": "deprecated",
-  "routingState": "catalog_only",
+  "releaseStage": "retired",
+  "routingState": "disabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "hidden",
+  "shelfState": "archived",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
+    "observedAt": "2026-11-23T00:00:00Z",
     "sourceUrl": "https://docs.x.ai/developers/models/grok-imagine-image-quality"
   },
   "strengths": [
@@ -43,5 +43,6 @@
   "usageScopes": [],
   "vendorCode": "xai",
   "vendorName": "xAI",
-  "winRate": "0.880000"
+  "winRate": "0.880000",
+  "replacementModel": "grok-imagine-image-2.0"
 }

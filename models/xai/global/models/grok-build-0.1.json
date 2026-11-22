@@ -6,8 +6,8 @@
   "catalogKey": "xai/grok-build-0.1",
   "codingVisible": true,
   "colorToken": "#374151",
-  "contextTokens": 256000,
-  "description": "Grok Build lightweight model for fast, cost-efficient inference on simpler tasks.",
+  "contextTokens": 500000,
+  "description": "Grok Build lightweight model for fast, cost-efficient inference on simpler tasks. Reached end of life on 2026-11-19 and is no longer served on the xAI API; replace with grok-4.7.",
   "displayName": "Grok Build 0.1",
   "familyCode": "grok",
   "inputModalities": [
@@ -16,8 +16,8 @@
   ],
   "latencyP50Ms": 400,
   "latencyP95Ms": 1200,
-  "lifecycle": "active",
-  "maxInputTokens": 256000,
+  "lifecycle": "retired",
+  "maxInputTokens": 500000,
   "modelId": "grok-build-0.1",
   "outputModalities": [
     "text"
@@ -25,12 +25,12 @@
   "primaryCapability": "chat",
   "rankScore": "800.000000",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
+  "releaseStage": "retired",
+  "routingState": "disabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "listed",
+  "shelfState": "archived",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
+    "observedAt": "2026-11-23T00:00:00Z",
     "sourceUrl": "https://docs.x.ai/docs/models"
   },
   "strengths": [
@@ -47,5 +47,6 @@
   ],
   "vendorCode": "xai",
   "vendorName": "xAI",
-  "winRate": "0.780000"
+  "winRate": "0.780000",
+  "replacementModel": "grok-4.7"
 }

@@ -1,0 +1,150 @@
+{
+  "catalogKey": "runway/seedance2_5_flash",
+  "currency": "USD",
+  "modelId": "seedance2_5_flash",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_480p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-seedance2_5_flash-second-res_480p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "b2ec42afa127af53d718eefac467a3a9ac038c5de0661b8c4ead1307141572bf",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_480p",
+      "unitPrice": "0.130000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-seedance2_5_flash-second-res_720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "6291e04c56536e4c411c9899be3183434b573a974203b9551a9b8dd042ef79aa",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "res_720p",
+      "unitPrice": "0.200000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_res_480p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "video_input_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-seedance2_5_flash-input-second-res_480p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "642287567593152caa8a94dfe66974c80c96af5ded71f761171d37f70436c6f4",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "input_res_480p",
+      "unitPrice": "0.070000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "video_input_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.runway.global.official",
+      "priceId": "runway-global-seedance2_5_flash-input-second-res_720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.runway.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3276c167438d187d39625c69fde221edacc510ab699fb3cc08ec7c746a146cae",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      "tierCode": "input_res_720p",
+      "unitPrice": "0.100000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "runway"
+}

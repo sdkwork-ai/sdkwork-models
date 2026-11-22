@@ -24,7 +24,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "1080p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_1080p"
+      ]
     },
     {
       "aspectRatios": [
@@ -48,7 +51,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "4k"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_4k"
+      ]
     },
     {
       "aspectRatios": [
@@ -72,7 +78,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -96,7 +105,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "1080p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_1080p"
+      ]
     },
     {
       "aspectRatios": [
@@ -120,7 +132,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "4k"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_4k"
+      ]
     },
     {
       "aspectRatios": [
@@ -144,7 +159,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -168,7 +186,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "1080p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_1080p"
+      ]
     },
     {
       "aspectRatios": [
@@ -192,7 +213,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "4k"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_4k"
+      ]
     },
     {
       "aspectRatios": [
@@ -216,7 +240,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -240,7 +267,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "1080p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_1080p"
+      ]
     },
     {
       "aspectRatios": [
@@ -264,7 +294,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "4k"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_4k"
+      ]
     },
     {
       "aspectRatios": [
@@ -288,7 +321,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -402,8 +438,8 @@
   "regionCode": "cn",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
-    "sourceUrl": "https://app.klingai.com/cn/dev/document-api/"
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
   },
   "vendorCode": "kuaishou"
 }

@@ -12,6 +12,7 @@
   "billingCurrency": "CNY",
   "billingJurisdiction": "CN",
   "capabilities": [
+    "audio",
     "chat",
     "embedding",
     "image",
@@ -69,6 +70,9 @@
     "glm",
     "cogview",
     "cogvideo",
+    "glm-tts",
+    "glm-voice",
+    "glm-asr",
     "zhipu-embedding"
   ],
   "openSource": false,
@@ -89,7 +93,7 @@
   "schemaVersion": "1.0.0",
   "sortOrder": 80,
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
+    "observedAt": "2026-11-23T00:00:00Z",
     "sourceUrl": "https://docs.bigmodel.cn"
   },
   "supportedProtocols": [

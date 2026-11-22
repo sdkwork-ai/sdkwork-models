@@ -31,8 +31,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-flash"
       },
       "tierCode": "tier_32k",
       "unitPrice": "0.200000",
@@ -66,8 +66,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-flash"
       },
       "tierCode": "tier_32k",
       "unitPrice": "0.800000",
@@ -101,8 +101,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-flash"
       },
       "tierCode": "tier_256k",
       "unitPrice": "0.600000",
@@ -136,8 +136,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-flash"
       },
       "tierCode": "tier_256k",
       "unitPrice": "2.400000",
@@ -171,8 +171,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-flash"
       },
       "tierCode": "tier_1m",
       "unitPrice": "1.200000",
@@ -206,8 +206,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-flash"
       },
       "tierCode": "tier_1m",
       "unitPrice": "4.800000",

@@ -31,8 +31,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "noref_720p",
       "unitPrice": "0.084000",
@@ -66,8 +66,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "noref_1080p",
       "unitPrice": "0.112000",
@@ -101,8 +101,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "ref_720p",
       "unitPrice": "0.126000",
@@ -136,8 +136,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "ref_1080p",
       "unitPrice": "0.168000",

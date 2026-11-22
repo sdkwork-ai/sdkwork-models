@@ -68,8 +68,8 @@
   "regionCode": "global",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
-    "sourceUrl": "https://docs.agents.lumalabs.ai/guides/videos/generation"
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://docs.agents.lumalabs.ai/guides/pricing"
   },
   "vendorCode": "luma_ai"
 }

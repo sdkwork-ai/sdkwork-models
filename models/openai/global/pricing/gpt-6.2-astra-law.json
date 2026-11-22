@@ -24,7 +24,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "8.000000",
@@ -52,7 +52,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "0.400000",
@@ -80,7 +80,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "10.000000",
@@ -108,7 +108,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "40.000000",
@@ -136,12 +136,12 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "10.000000",
-      "unitSize": "1000000",
-      "rateHash": "b34c7dd72464a83b4617a6ed0d16ec6516667a8395b8c879f1c243c7cc73874a"
+      "unitSize": "1000",
+      "rateHash": "4df7ac63a259b8b9a4eacda5e9ae73a2895cc858cda137c03fa42677e66478a1"
     },
     {
       "billability": "chargeable",
@@ -164,12 +164,12 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "2.500000",
-      "unitSize": "1000000",
-      "rateHash": "0691e990f1d58514c55d7eb10af0ba9560ec1dca75c6b4383042074cb3119b0c"
+      "unitSize": "1000",
+      "rateHash": "ecc5d90df98d0bb13d56d213a6b0b9a88a4a102c8097b8ca9167ce8751a58832"
     },
     {
       "billability": "chargeable",
@@ -192,12 +192,152 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "0.030000",
       "unitSize": "1",
       "rateHash": "546e745dbb1475c42fb25645812d5eca458ec63184dcd41dcdaa037371ed8967"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "long_context"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-6.2-astra-law-input-long-context",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "289405e58244d368af4d7c8d164fbc128036a87b670ccf03350ab0f0850e5a47",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "tierCode": "long_context",
+      "unitPrice": "16.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "long_context"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-6.2-astra-law-cache-read-long-context",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "62dcfa641abdb67aa310c49145620b107f2aa2a70cc2cf5939dab991a92681dd",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "tierCode": "long_context",
+      "unitPrice": "0.800000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "long_context"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-6.2-astra-law-cache-write-long-context",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "fe022465a77e505a399e43dc2e72e2805224e986f2a513b0fcd8c7823c3003bd",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "tierCode": "long_context",
+      "unitPrice": "20.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "long_context"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-6.2-astra-law-output-long-context",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "29772f4c5d9415a1735a41a31d56b04112c90caa7b9e95a3247dbfdb83e5ba54",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "tierCode": "long_context",
+      "unitPrice": "60.000000",
+      "unitSize": "1000000"
     }
   ],
   "regionCode": "global",

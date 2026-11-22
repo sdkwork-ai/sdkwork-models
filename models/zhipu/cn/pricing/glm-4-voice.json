@@ -1,0 +1,68 @@
+{
+  "catalogKey": "zhipu/glm-4-voice",
+  "currency": "CNY",
+  "modelId": "glm-4-voice",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "audio_input_token",
+      "minimumQuantity": "0",
+      "notes": "Official flat rate: CNY 80 per 1M tokens.",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.zhipu.cn.official",
+      "priceId": "zhipu-glm-4-voice-audio-input-token",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.zhipu.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "2a81556de3de957ae27f9e469866bf55922d379c8570467bf40a31d4356a10d0",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/sound-and-video/glm-4-voice"
+      },
+      "unitPrice": "80.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "audio_output_token",
+      "minimumQuantity": "0",
+      "notes": "Official flat rate: CNY 80 per 1M tokens.",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.zhipu.cn.official",
+      "priceId": "zhipu-glm-4-voice-audio-output-token",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.zhipu.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "7adff1dc4662246729867ee0fef0aea85ec60b8f6ea73f71663cd5486c41ddf4",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/sound-and-video/glm-4-voice"
+      },
+      "unitPrice": "80.000000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "zhipu"
+}

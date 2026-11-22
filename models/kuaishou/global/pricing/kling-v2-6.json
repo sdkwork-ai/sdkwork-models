@@ -31,8 +31,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "res_720p",
       "unitPrice": "0.042000",
@@ -66,8 +66,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "res_1080p",
       "unitPrice": "0.070000",
@@ -101,8 +101,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "audio_1080p",
       "unitPrice": "0.140000",
@@ -136,8 +136,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "audio_voice_1080p",
       "unitPrice": "0.168000",
@@ -171,8 +171,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "motion_720p",
       "unitPrice": "0.070000",
@@ -206,8 +206,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "motion_1080p",
       "unitPrice": "0.112000",

@@ -88,28 +88,40 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "sortOrder": 0
       },
       {
+        "catalogKey": "anthropic/claude-fable-5-2",
+        "model": "claude-fable-5-2",
+        "displayName": "Claude Fable 5.2",
+        "sortOrder": 1
+      },
+      {
         "catalogKey": "anthropic/claude-haiku-5-5",
         "model": "claude-haiku-5-5",
         "displayName": "Claude Haiku 5.5",
-        "sortOrder": 3
+        "sortOrder": 4
       },
       {
         "catalogKey": "anthropic/claude-mythos-5-1",
         "model": "claude-mythos-5-1",
         "displayName": "Claude Mythos 5.1",
-        "sortOrder": 4
+        "sortOrder": 5
+      },
+      {
+        "catalogKey": "anthropic/claude-mythos-5-2",
+        "model": "claude-mythos-5-2",
+        "displayName": "Claude Mythos 5.2",
+        "sortOrder": 6
       },
       {
         "catalogKey": "anthropic/claude-opus-5-5",
         "model": "claude-opus-5-5",
         "displayName": "Claude Opus 5.5",
-        "sortOrder": 10
+        "sortOrder": 12
       },
       {
         "catalogKey": "anthropic/claude-sonnet-5-5",
         "model": "claude-sonnet-5-5",
         "displayName": "Claude Sonnet 5.5",
-        "sortOrder": 14
+        "sortOrder": 16
       }
     ],
     "sortOrder": 1,
@@ -176,6 +188,12 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "model": "qwen3.8-max",
         "displayName": "Qwen3.8 Max",
         "sortOrder": 4
+      },
+      {
+        "catalogKey": "alibaba/qwen4-max",
+        "model": "qwen4-max",
+        "displayName": "Qwen4 Max",
+        "sortOrder": 5
       }
     ],
     "sortOrder": 3,
@@ -250,10 +268,10 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "Meituan",
     "models": [
       {
-        "catalogKey": "meituan/longcat-2.5-preview",
-        "model": "longcat-2.5-preview",
-        "displayName": "LongCat 2.5 Preview",
-        "sortOrder": 2
+        "catalogKey": "meituan/longcat-2.5",
+        "model": "longcat-2.5",
+        "displayName": "LongCat 2.5",
+        "sortOrder": 3
       }
     ],
     "sortOrder": 9,
@@ -316,10 +334,16 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
     "providerDisplayName": "Tencent Cloud",
     "models": [
       {
+        "catalogKey": "tencent/hy4-flash",
+        "model": "hy4-flash",
+        "displayName": "Hy4 flash",
+        "sortOrder": 9
+      },
+      {
         "catalogKey": "tencent/hy4",
         "model": "hy4",
         "displayName": "Hy4",
-        "sortOrder": 10
+        "sortOrder": 11
       }
     ],
     "sortOrder": 13,
@@ -344,12 +368,6 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "model": "grok-4.7",
         "displayName": "Grok 4.7",
         "sortOrder": 6
-      },
-      {
-        "catalogKey": "xai/grok-build-0.1",
-        "model": "grok-build-0.1",
-        "displayName": "Grok Build 0.1",
-        "sortOrder": 7
       }
     ],
     "sortOrder": 14,
@@ -397,25 +415,25 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "catalogKey": "zhipu/glm-5.3-flash",
         "model": "glm-5.3-flash",
         "displayName": "GLM-5.3 Flash",
-        "sortOrder": 7
+        "sortOrder": 8
       },
       {
         "catalogKey": "zhipu/glm-5.3-flashx",
         "model": "glm-5.3-flashx",
         "displayName": "GLM-5.3 FlashX",
-        "sortOrder": 9
+        "sortOrder": 10
       },
       {
         "catalogKey": "zhipu/glm-5.3",
         "model": "glm-5.3",
         "displayName": "GLM-5.3",
-        "sortOrder": 10
+        "sortOrder": 11
       },
       {
         "catalogKey": "zhipu/glm-5v-turbo",
         "model": "glm-5v-turbo",
         "displayName": "GLM-5V-Turbo",
-        "sortOrder": 12
+        "sortOrder": 13
       }
     ],
     "sortOrder": 16,

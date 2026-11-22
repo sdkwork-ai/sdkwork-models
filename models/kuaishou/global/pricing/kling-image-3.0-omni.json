@@ -1,0 +1,80 @@
+{
+  "catalogKey": "kuaishou/kling-image-3.0-omni",
+  "currency": "USD",
+  "modelId": "kling-image-3.0-omni",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1k_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-image-3-0-omni-result-1k-2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "1ebec9455888143e77860717a626f24f04be83542504bb3c101d4adcbbb7f5c0",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/image"
+      },
+      "tierCode": "res_1k_2k",
+      "unitPrice": "0.028169",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_4k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-image-3-0-omni-result-4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "7e92986534b2f709eda90e3591f4d523570d818ec6455e108c99802c8e5c7674",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/image"
+      },
+      "tierCode": "res_4k",
+      "unitPrice": "0.056338",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "kuaishou"
+}

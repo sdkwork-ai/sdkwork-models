@@ -51,7 +51,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "res_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -102,7 +105,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "res_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -153,7 +159,10 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "res_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -204,14 +213,17 @@
       "wireParameters": {
         "duration": "3-15",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "res_720p"
+      ]
     }
   ],
   "regionCode": "cn",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
-    "sourceUrl": "https://klingai.com/document-api/guides/capability-map/video"
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
   },
   "vendorCode": "kuaishou"
 }

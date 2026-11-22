@@ -25,8 +25,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing"
       },
       "unitPrice": "9.000000",
       "unitSize": "1000000"
@@ -59,8 +59,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing"
       },
       "thresholdTokens": 128000,
       "unitPrice": "15.000000",
@@ -88,8 +88,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing"
       },
       "unitPrice": "54.000000",
       "unitSize": "1000000"
@@ -122,8 +122,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing"
       },
       "thresholdTokens": 128000,
       "unitPrice": "90.000000",

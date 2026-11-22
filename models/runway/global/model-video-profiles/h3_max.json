@@ -8,35 +8,6 @@
         "9:16",
         "1:1"
       ],
-      "catalogKey": "runway/h3_max/t2v_discrete_720p",
-      "displayName": "Text to Video · 5/10s · 720p",
-      "durationOptions": [
-        5,
-        10
-      ],
-      "durationPolicy": "discrete",
-      "durationTierCodes": [
-        "dur_5s",
-        "dur_10s"
-      ],
-      "generationMode": "text_to_video",
-      "isDefault": true,
-      "outputAudio": false,
-      "profileCode": "t2v_discrete_720p",
-      "resolution": "720p",
-      "resolutionTierCode": "res_720p",
-      "sortOrder": 10,
-      "wireParameters": {
-        "duration": "5,10",
-        "resolution": "720p"
-      }
-    },
-    {
-      "aspectRatios": [
-        "16:9",
-        "9:16",
-        "1:1"
-      ],
       "catalogKey": "runway/h3_max/t2v_discrete_768p",
       "displayName": "Text to Video · 5/10s · 768p",
       "durationOptions": [
@@ -49,7 +20,7 @@
         "dur_10s"
       ],
       "generationMode": "text_to_video",
-      "isDefault": false,
+      "isDefault": true,
       "outputAudio": false,
       "profileCode": "t2v_discrete_768p",
       "resolution": "768p",
@@ -87,35 +58,6 @@
       "wireParameters": {
         "duration": "5,10",
         "resolution": "480p"
-      }
-    },
-    {
-      "aspectRatios": [
-        "16:9",
-        "9:16",
-        "1:1"
-      ],
-      "catalogKey": "runway/h3_max/i2v_discrete_720p",
-      "displayName": "Image to Video · 5/10s · 720p",
-      "durationOptions": [
-        5,
-        10
-      ],
-      "durationPolicy": "discrete",
-      "durationTierCodes": [
-        "dur_5s",
-        "dur_10s"
-      ],
-      "generationMode": "image_to_video",
-      "isDefault": false,
-      "outputAudio": false,
-      "profileCode": "i2v_discrete_720p",
-      "resolution": "720p",
-      "resolutionTierCode": "res_720p",
-      "sortOrder": 40,
-      "wireParameters": {
-        "duration": "5,10",
-        "resolution": "720p"
       }
     },
     {
@@ -180,8 +122,8 @@
   "regionCode": "global",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
-    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
   },
   "vendorCode": "runway"
 }

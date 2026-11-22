@@ -6,14 +6,14 @@
   "catalogKey": "minimax/image-01-live",
   "codingVisible": false,
   "colorToken": "#2563eb",
-  "description": "Listed under Image Models in the global FAQ Available Models list, but the global pay-as-you-go Image pricing table publishes a price for image-01 only ($0.0035 per image), the image generation guide examples use image-01 only, and the release notes record no global launch entry for this variant; held as a preview catalog entry (lifecycle catalog_only, shelf hidden, routing catalog_only) without a pricing file until the official USD per-image price and guide entry are published. The official FAQ does not stamp a Preview/Beta badge; preview records that this region has not yet published a billable listing for the model.",
+  "description": "MiniMax image-01-live image generation model with enhanced hand-drawn and cartoon styles and text-to-image plus style presets. Listed under Legacy Models in the global model overview, and the global pay-as-you-go Image table prices image-01 and image-01-live at $0.0035 per image.",
   "displayName": "MiniMax Image 01 Live",
   "familyCode": "minimax-image",
   "inputModalities": [
     "text",
     "image"
   ],
-  "lifecycle": "catalog_only",
+  "lifecycle": "active",
   "modelId": "image-01-live",
   "outputModalities": [
     "image"
@@ -21,13 +21,13 @@
   "primaryCapability": "image",
   "rankScore": "735.000000",
   "regionCode": "global",
-  "releaseStage": "preview",
-  "routingState": "catalog_only",
+  "releaseStage": "active",
+  "routingState": "enabled",
   "schemaVersion": "1.0.0",
-  "shelfState": "hidden",
+  "shelfState": "listed",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
-    "sourceUrl": "https://platform.minimax.io/docs/faq/models"
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-paygo"
   },
   "strengths": [
     "Text to image",

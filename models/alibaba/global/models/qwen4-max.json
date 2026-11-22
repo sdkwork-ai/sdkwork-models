@@ -1,0 +1,56 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "alibaba/qwen4-max",
+  "codingVisible": true,
+  "colorToken": "#2563eb",
+  "contextTokens": 1000000,
+  "description": "Qwen4-Max is the next-generation flagship multimodal model in the Qwen family, combining text generation, image and video understanding, and deep reasoning for coding, office productivity and agentic tasks with native 1M context.",
+  "displayName": "Qwen4 Max",
+  "familyCode": "qwen",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "latencyP50Ms": 700,
+  "latencyP95Ms": 2300,
+  "lifecycle": "active",
+  "maxInputTokens": 991808,
+  "maxOutputTokens": 131072,
+  "modelId": "qwen4-max",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1150.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://www.qwencloud.com/models/qwen4-max"
+  },
+  "strengths": [
+    "Native multimodal",
+    "Long context",
+    "Agents",
+    "Coding"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.997000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.970000"
+}

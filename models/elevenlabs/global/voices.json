@@ -17,14 +17,14 @@
       "schemaVersion": "1.0.0",
       "shelfState": "listed",
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://elevenlabs.io/docs/api-reference/voices/search"
       },
       "supportedLocales": [
         "en-US"
       ],
       "vendorCode": "elevenlabs",
-      "vendorListEndpoint": "https://api.elevenlabs.io/v1/voices",
+      "vendorListEndpoint": "https://api.elevenlabs.io/v2/voices",
       "voiceId": "_catalog_dynamic",
       "voiceKind": "neural",
       "wireParameter": "voice_id"

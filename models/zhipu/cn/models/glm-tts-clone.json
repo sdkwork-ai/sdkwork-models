@@ -1,0 +1,42 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "zhipu/glm-tts-clone",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "Zhipu GLM-TTS-Clone voice cloning model that learns a speaker's timbre and speaking habits from about three seconds of audio and returns a reusable voice id plus an optional preview clip. Official pricing is CNY 6 per voice clone request.",
+  "displayName": "GLM-TTS-Clone",
+  "familyCode": "glm-tts",
+  "inputModalities": [
+    "audio",
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "glm-tts-clone",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/sound-and-video/glm-tts-clone"
+  },
+  "strengths": [
+    "Voice cloning",
+    "Three-second voice sample",
+    "Emotional expression",
+    "Custom brand voice"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "zhipu"
+}

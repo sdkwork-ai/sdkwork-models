@@ -7,7 +7,7 @@
   "catalogKey": "openai/gpt-live-1",
   "codingVisible": false,
   "colorToken": "#6366f1",
-  "description": "Our premier model for natural, expressive voice conversations with smooth interruption handling. GPT-Live sessions are billed per second ($0.05 per minute) without rounding up to a whole minute; backend model and tool usage is charged separately.",
+  "description": "Our premier model for natural, expressive voice conversations with smooth interruption handling. GPT-Live sessions are billed per second ($0.05 per minute active, $0.02 per minute standby) without rounding up to a whole minute; backend model and tool usage is charged separately.",
   "displayName": "GPT-Live 1",
   "familyCode": "gpt-realtime",
   "inputModalities": [
@@ -27,8 +27,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
-    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-live-1"
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models"
   },
   "supportsJsonSchema": false,
   "supportsStreaming": true,

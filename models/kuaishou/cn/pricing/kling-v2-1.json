@@ -31,8 +31,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://klingai.com/document-api/pricing/base/image"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "t2i_1k_2k",
       "unitPrice": "0.100000",
@@ -66,8 +66,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://klingai.com/document-api/pricing/base/image"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "i2i_1k_2k",
       "unitPrice": "0.200000",
@@ -101,8 +101,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://klingai.com/document-api/pricing/base/image"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "multi_ref_1k_2k",
       "unitPrice": "0.400000",

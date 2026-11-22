@@ -1,6 +1,6 @@
 {
-  "catalogVersion": "2026.11.19.4",
-  "observedAt": "2026-11-14T00:00:00Z",
+  "catalogVersion": "2026.11.23.1",
+  "observedAt": "2026-11-23T00:00:00Z",
   "schemaVersion": "1.1.0",
   "vendors": [
     {
@@ -15,13 +15,13 @@
           "modelId": "web_tools"
         }
       ],
-      "observedAt": "2026-11-14T00:00:00Z",
+      "observedAt": "2026-11-23T00:00:00Z",
       "officialUrls": [
         "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
         "https://api-docs.deepseek.com/zh-cn/updates/"
       ],
       "regionCode": "cn",
-      "sourceSnapshotHash": "39c737c4e5704e340b6fd8728d68ee8029481b2173f261c2eb0e9b2d7e894c1c",
+      "sourceSnapshotHash": "a72cd27f009a973e5d2b809bcd37bf4e34f1d9005917863d4c587d4d5aa3eaae",
       "vendorCode": "deepseek"
     },
     {
@@ -36,13 +36,13 @@
           "modelId": "web_tools"
         }
       ],
-      "observedAt": "2026-11-14T00:00:00Z",
+      "observedAt": "2026-11-23T00:00:00Z",
       "officialUrls": [
         "https://api-docs.deepseek.com/quick_start/pricing",
         "https://api-docs.deepseek.com/updates/"
       ],
       "regionCode": "global",
-      "sourceSnapshotHash": "70d41f5363ccdd35b11770b59d1765b98381200c89b61d92af2b4c2a871572d9",
+      "sourceSnapshotHash": "a029466c32926d9ed06242310f864e44f24b01f17536b72783c872cfc089c3c7",
       "vendorCode": "deepseek"
     },
     {
@@ -108,7 +108,7 @@
           "modelId": "speech-2.8-turbo"
         }
       ],
-      "observedAt": "2026-11-14T00:00:00Z",
+      "observedAt": "2026-11-23T00:00:00Z",
       "officialUrls": [
         "https://platform.minimaxi.com/docs/guides/models-intro",
         "https://platform.minimaxi.com/docs/guides/music-generation",
@@ -118,7 +118,7 @@
         "https://platform.minimaxi.com/docs/guides/text-generation"
       ],
       "regionCode": "cn",
-      "sourceSnapshotHash": "b9a715060d1f8b90f98c4e98190b444a234d9fc43536474a30a505ba5bdabc71",
+      "sourceSnapshotHash": "7f516593ef94d69f1488c989fc588633b41cf98dc9a2ffb354b430f8ce554d5d",
       "vendorCode": "minimax"
     },
     {
@@ -190,7 +190,7 @@
           "modelId": "speech-2.8-turbo"
         }
       ],
-      "observedAt": "2026-11-14T00:00:00Z",
+      "observedAt": "2026-11-23T00:00:00Z",
       "officialUrls": [
         "https://platform.minimax.io/docs/api-reference/music-generation",
         "https://platform.minimax.io/docs/guides/image-generation",
@@ -204,7 +204,7 @@
         "https://www.minimax.io/blog/minimax-m3"
       ],
       "regionCode": "global",
-      "sourceSnapshotHash": "2f8519395050dbcbf579809ecf2421469dbf8b8c872cfb9cbbb98c2c6df2d9d3",
+      "sourceSnapshotHash": "7c809e4ff9b14db223f3c9fcd647fff48add021c4d2a219eb3b36eba179cb57b",
       "vendorCode": "minimax"
     },
     {
@@ -228,7 +228,7 @@
           "modelId": "kimi-k3.1-pro-highspeed"
         }
       ],
-      "observedAt": "2026-11-14T00:00:00Z",
+      "observedAt": "2026-11-23T00:00:00Z",
       "officialUrls": [
         "https://platform.kimi.com/",
         "https://platform.kimi.com/docs/pricing/chat-k25",
@@ -237,7 +237,7 @@
         "https://www.kimi.com/blog/kimi-k3"
       ],
       "regionCode": "cn",
-      "sourceSnapshotHash": "b50ed42e220e8936c48819a683253de614d8b3794e842f985dfe92f0a200528f",
+      "sourceSnapshotHash": "85dc15bfa45c3b4913d20e276d5fe4188cad68be0093914296fd20f9533e243c",
       "vendorCode": "moonshot"
     },
     {
@@ -261,7 +261,7 @@
           "modelId": "kimi-k3.1-pro-highspeed"
         }
       ],
-      "observedAt": "2026-11-14T00:00:00Z",
+      "observedAt": "2026-11-23T00:00:00Z",
       "officialUrls": [
         "https://platform.kimi.ai/",
         "https://platform.kimi.ai/docs/pricing/chat-k25",
@@ -270,7 +270,7 @@
         "https://www.kimi.com/blog/kimi-k3"
       ],
       "regionCode": "global",
-      "sourceSnapshotHash": "2f44139a0560d51218e5af5e91ba2a79d2ec8723589be444732eb559c0187deb",
+      "sourceSnapshotHash": "c763552c4749806d502f097d5bcb743f7bf991a3ec75de05b67d4bdbe4d69aeb",
       "vendorCode": "moonshot"
     },
     {
@@ -297,14 +297,14 @@
           "modelId": "mimo-v2.6-pro-ultraspeed"
         }
       ],
-      "observedAt": "2026-11-14T00:00:00Z",
+      "observedAt": "2026-11-23T00:00:00Z",
       "officialUrls": [
         "https://mimo.mi.com/docs/en-US/price/pay-as-you-go",
         "https://mimo.mi.com/docs/en-US/quick-start/summary/model",
         "https://platform.xiaomimimo.com"
       ],
       "regionCode": "global",
-      "sourceSnapshotHash": "c3af3c37f9e904c6cfcf82b8c98b9a55e53b7272cec0c3d1cf43f35c1f26e5b7",
+      "sourceSnapshotHash": "b81095f5f17ef164c02e01e79f37d2bbe6c20b59a86521fb98245700d08a92eb",
       "vendorCode": "xiaomi"
     },
     {
@@ -331,14 +331,14 @@
           "modelId": "mimo-v2.6-pro-ultraspeed"
         }
       ],
-      "observedAt": "2026-11-14T00:00:00Z",
+      "observedAt": "2026-11-23T00:00:00Z",
       "officialUrls": [
         "https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go",
         "https://mimo.mi.com/docs/zh-CN/quick-start/summary/model",
         "https://platform.xiaomimimo.com"
       ],
       "regionCode": "cn",
-      "sourceSnapshotHash": "7a1afd7b3a1bcf012220163581de07a31badbcba3a672cb1fc553cddfaf9df0c",
+      "sourceSnapshotHash": "168a4526189fd765b762567fa015cab3a42f818f357f980187f52185a1486cb2",
       "vendorCode": "xiaomi"
     },
     {
@@ -392,12 +392,12 @@
           "modelId": "glm-tts"
         }
       ],
-      "observedAt": "2026-11-19T00:00:00Z",
+      "observedAt": "2026-11-23T00:00:00Z",
       "officialUrls": [
         "https://docs.bigmodel.cn/cn/guide/models/text/glm-5.2"
       ],
       "regionCode": "cn",
-      "sourceSnapshotHash": "0d4b60512c1fd8d3e86c79fae4686c0b4d67898c0a55c780e6057c681c5a345e",
+      "sourceSnapshotHash": "3dae3a1b66a2a66429a70d64df86d80443c39c9bd1ae9b15d4ed8dd440ec6245",
       "vendorCode": "zhipu"
     }
   ]

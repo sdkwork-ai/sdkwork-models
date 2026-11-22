@@ -31,8 +31,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
-    "sourceUrl": "https://openai.com/index/gpt-6-astra/"
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models"
   },
   "strengths": [
     "Reasoning",

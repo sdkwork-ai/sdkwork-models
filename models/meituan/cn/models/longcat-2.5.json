@@ -1,0 +1,53 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat",
+    "reasoning"
+  ],
+  "catalogKey": "meituan/longcat-2.5",
+  "codingVisible": true,
+  "colorToken": "#0284c7",
+  "contextTokens": 1048576,
+  "description": "Meituan LongCat-2.5 agentic multimodal model, the only pay-as-you-go model on the LongCat API platform: 1M context, 256K max output, OpenAI/Anthropic compatible, with limited-time pricing of ¥2 input, ¥0.04 cached input and ¥8 output per million tokens.",
+  "displayName": "LongCat 2.5",
+  "familyCode": "longcat",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1048576,
+  "maxOutputTokens": 262144,
+  "modelId": "longcat-2.5",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://longcat.chat/platform/docs/zh/pricing/longcat-2.5"
+  },
+  "strengths": [
+    "Chinese",
+    "Coding",
+    "Agentic",
+    "Long context",
+    "Multimodal understanding"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "meituan",
+  "vendorName": "Meituan"
+}

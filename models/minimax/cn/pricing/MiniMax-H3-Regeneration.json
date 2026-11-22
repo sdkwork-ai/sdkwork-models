@@ -31,7 +31,43 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
+      },
+      "tierCode": "regen_768p_to_2k",
+      "unitPrice": "0.300000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "regen_768p_to_2k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "video_input_second",
+      "minimumQuantity": "0",
+      "notes": "Input video from the original 768P generation task is billed again at CNY 0.30 per second; up to 5 input images are free, additional images are CNY 0.15 each.",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.minimax.cn.official",
+      "priceId": "minimax-cn-h3-regeneration-input-second",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.minimax.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "645f5b4b5f6fc513cb2af2217297e99041511d31ad149d6eae52c52d8573ede7",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://platform.minimaxi.com/docs/guides/pricing-paygo"
       },
       "tierCode": "regen_768p_to_2k",

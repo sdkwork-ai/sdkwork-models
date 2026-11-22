@@ -1,0 +1,45 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "audio",
+    "chat"
+  ],
+  "catalogKey": "zhipu/glm-4-voice",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "Zhipu GLM-4-Voice end-to-end speech model that understands and generates Chinese and English audio for real-time voice conversations, with adjustable emotion, tone, speed, and dialect. 8K context, 4K max output. Official pricing is CNY 80 per 1M audio input or output tokens.",
+  "contextTokens": 8192,
+  "displayName": "GLM-4-Voice",
+  "familyCode": "glm-voice",
+  "inputModalities": [
+    "text",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "maxOutputTokens": 4096,
+  "modelId": "glm-4-voice",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/sound-and-video/glm-4-voice"
+  },
+  "strengths": [
+    "Real-time voice conversation",
+    "Emotional speech",
+    "Dialect support",
+    "Bilingual Chinese and English"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "zhipu"
+}

@@ -25,8 +25,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://seed.bytedance.com/en/seed2"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://www.byteplus.com/en/product/modelark"
       },
       "unitPrice": "0.120000",
       "unitSize": "1000000"
@@ -53,8 +53,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://seed.bytedance.com/en/seed2"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://www.byteplus.com/en/product/modelark"
       },
       "unitPrice": "0.580000",
       "unitSize": "1000000"

@@ -4,9 +4,12 @@
   "profiles": [
     {
       "aspectRatios": [
+        "21:9",
         "16:9",
-        "9:16",
-        "1:1"
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16"
       ],
       "catalogKey": "minimax/MiniMax-H3/t2v_range_768p",
       "displayName": "Text to Video · 5–15s · 768p",
@@ -28,9 +31,12 @@
     },
     {
       "aspectRatios": [
+        "21:9",
         "16:9",
-        "9:16",
-        "1:1"
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16"
       ],
       "catalogKey": "minimax/MiniMax-H3/t2v_range_2k",
       "displayName": "Text to Video · 5–15s · 2K",
@@ -51,9 +57,12 @@
     },
     {
       "aspectRatios": [
+        "21:9",
         "16:9",
-        "9:16",
-        "1:1"
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16"
       ],
       "catalogKey": "minimax/MiniMax-H3/i2v_range_768p",
       "displayName": "Image to Video · 5–15s · 768p",
@@ -76,7 +85,7 @@
   "regionCode": "global",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
+    "observedAt": "2026-11-23T00:00:00Z",
     "sourceUrl": "https://platform.minimax.io/docs/guides/pricing-video"
   },
   "vendorCode": "minimax"

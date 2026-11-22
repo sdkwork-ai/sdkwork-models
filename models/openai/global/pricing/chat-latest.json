@@ -24,7 +24,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "5.000000",
@@ -52,40 +52,12 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "0.500000",
       "unitSize": "1000000",
       "rateHash": "1e09823bd2f844392595fa4bed8c78e26feb9f923ce05113269d5318b0e19587"
-    },
-    {
-      "billability": "chargeable",
-      "calculationMode": "per_unit",
-      "chargeTiming": "usage_reported",
-      "conditions": [],
-      "currency": "USD",
-      "effectiveFrom": "2026-11-19T00:00:00Z",
-      "meterCode": "llm_cache_write_token",
-      "minimumQuantity": "0",
-      "operationCode": "inference.generate",
-      "priceBookCode": "models.openai.global.official",
-      "priceId": "openai-chat-latest-cache-write",
-      "priceSide": "official",
-      "pricingScope": "model",
-      "priority": 100,
-      "productCode": "models.openai.chat",
-      "quantityAggregation": "sum",
-      "quantityStep": "1",
-      "rateVariant": "standard",
-      "schedule": null,
-      "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
-        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
-      },
-      "unitPrice": "6.250000",
-      "unitSize": "1000000",
-      "rateHash": "e5d4034db34868ff224b4b4a7fe8ec7f584ce848d5ca4afdf354ef8471b84689"
     },
     {
       "billability": "chargeable",
@@ -108,7 +80,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "30.000000",
@@ -136,12 +108,12 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "10.000000",
-      "unitSize": "1000000",
-      "rateHash": "23784a9709652902f9432b2bc939aa2874892103312b7d829b07f2d87029ad79"
+      "unitSize": "1000",
+      "rateHash": "2e9052d5b66e841348e0a8b054c372d9a3687f7e0055f1c043efd60f9f41e140"
     },
     {
       "billability": "chargeable",
@@ -164,12 +136,12 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "2.500000",
-      "unitSize": "1000000",
-      "rateHash": "f94a6a9d4d9fd808a6b05c4509ec2de0b8982af540c13b298dbbfe0d3cdf0161"
+      "unitSize": "1000",
+      "rateHash": "2b01550347d83ceaf2359c29204389e61367f652d832f0d1d57e5de2c8c0ab7e"
     },
     {
       "billability": "chargeable",
@@ -192,7 +164,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "0.030000",

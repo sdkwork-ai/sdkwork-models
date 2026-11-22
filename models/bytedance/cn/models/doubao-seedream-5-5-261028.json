@@ -1,0 +1,49 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "bytedance/doubao-seedream-5-5-261028",
+  "codingVisible": false,
+  "colorToken": "#dc2626",
+  "description": "ByteDance Doubao Seedream 5.5 image creation model released 2026-10-28, supporting multi-turn precise editing, native RGBA output and finer layer splitting.",
+  "displayName": "Doubao Seedream 5.5",
+  "familyCode": "seedream",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 4500,
+  "latencyP95Ms": 16000,
+  "lifecycle": "active",
+  "modelId": "doubao-seedream-5-5-261028",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "830.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://docs.volcengine.com/docs/ark/model-list?lang=zh"
+  },
+  "strengths": [
+    "Text to image",
+    "Image editing",
+    "Multi-turn editing",
+    "Native RGBA",
+    "Layer split"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "trendScore": "0.950000",
+  "usageScopes": [],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance",
+  "winRate": "0.900000"
+}

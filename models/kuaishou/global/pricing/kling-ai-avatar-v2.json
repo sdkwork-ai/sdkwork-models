@@ -25,8 +25,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "unitPrice": "0.056000",
       "unitSize": "1"
@@ -60,8 +60,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "unitPrice": "0.112000",
       "unitSize": "1"

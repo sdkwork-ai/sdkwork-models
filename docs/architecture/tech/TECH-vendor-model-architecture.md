@@ -1,6 +1,6 @@
 > Owner: SDKWork maintainers
 
-Generated: 2026-11-19
+Generated: 2026-11-23
 
 > 本文件由 `tools/generate-vendor-model-architecture-doc.mjs` 从模型目录生成，请勿手改。
 > 口径：模型表仅收录 `shelfState = listed` 的模型；`Context` = `contextTokens / 1000` 向下取整；
@@ -46,11 +46,12 @@ Generated: 2026-11-19
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| qwen3.7-plus | N/A | N/A | CNY 2.00 / 8.00 |
+| qwen3.7-plus | 1000K | N/A | CNY 2.00 / 8.00 |
 | qwen3.7-text-embedding | N/A | N/A | N/A |
 | qwen3.7-text-embedding-flash | N/A | N/A | N/A |
 | qwen3.8-flash | 1000K | chat | CNY 0.80 / 2.70 |
 | qwen3.8-max | 1000K | chat | CNY 12.00 / 36.00 |
+| qwen4-max | 1000K | chat | CNY 10.00 / 30.00 |
 | text-embedding-v4 | N/A | embedding | N/A |
 | wan2.6-i2v | N/A | video | N/A |
 | wan2.6-r2v | N/A | video | N/A |
@@ -61,9 +62,10 @@ Generated: 2026-11-19
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| qwen3.7-plus | N/A | N/A | USD 0.40 / 1.60 |
+| qwen3.7-plus | 1000K | N/A | USD 0.40 / 1.60 |
 | qwen3.8-flash | 1000K | chat | USD 0.15 / 0.47 |
 | qwen3.8-max | 1000K | chat | USD 2.00 / 6.00 |
+| qwen4-max | 1000K | chat | USD 1.50 / 4.50 |
 
 ### Anthropic (anthropic)
 
@@ -73,9 +75,11 @@ Generated: 2026-11-19
 |----------|---------|------------|------------------------|
 | claude-fable-5 | 1000K | chat | USD 10.00 / 50.00 |
 | claude-fable-5-1 | 1000K | chat | USD 10.00 / 50.00 |
+| claude-fable-5-2 | 1000K | chat | USD 8.00 / 40.00 |
 | claude-haiku-4-5 | 200K | chat | USD 1.00 / 5.00 |
 | claude-haiku-5-5 | 1000K | chat | USD 0.10 / 0.50 |
 | claude-mythos-5-1 | 1000K | chat | USD 10.00 / 50.00 |
+| claude-mythos-5-2 | 1000K | chat | USD 8.00 / 40.00 |
 | claude-opus-4-5 | 200K | chat | USD 5.00 / 25.00 |
 | claude-opus-4-6 | 1000K | chat | USD 5.00 / 25.00 |
 | claude-opus-4-7 | 1000K | chat | USD 5.00 / 25.00 |
@@ -135,6 +139,7 @@ Generated: 2026-11-19
 | doubao-seedance-2-5-260628 | N/A | video | N/A |
 | doubao-seedream-5-0-flash-260915 | N/A | image | N/A |
 | doubao-seedream-5-0-pro-260628 | N/A | image | N/A |
+| doubao-seedream-5-5-261028 | N/A | image | N/A |
 | seed-audio-1.0 | N/A | audio, sfx, music | N/A |
 | seed-music-gensong-v4 | N/A | music | N/A |
 | seed-tts-2.0-expressive | N/A | audio | N/A |
@@ -254,6 +259,7 @@ Generated: 2026-11-19
 | kling-4.0 | N/A | video | N/A |
 | kling-ai-avatar-v2 | N/A | video | N/A |
 | kling-image-3.0 | N/A | image | N/A |
+| kling-image-3.0-omni | N/A | image | N/A |
 | kling-image-o1 | N/A | image | N/A |
 | kling-sound-t2a | N/A | sfx | N/A |
 | kling-sound-v2a | N/A | sfx | N/A |
@@ -278,7 +284,7 @@ Generated: 2026-11-19
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| longcat-2.5-preview | 1048K | chat, reasoning | CNY 2.00 / 8.00 |
+| longcat-2.5 | 1048K | chat, reasoning | CNY 2.00 / 8.00 |
 
 ### MiniMax (minimax)
 
@@ -306,6 +312,7 @@ Generated: 2026-11-19
 |----------|---------|------------|------------------------|
 | asr-1.0 | N/A | audio | N/A |
 | image-01 | N/A | image | N/A |
+| image-01-live | N/A | image | N/A |
 | MiniMax-H3 | N/A | video | N/A |
 | MiniMax-H3-Context-IR | N/A | chat, video | USD 0.90 / 3.60 |
 | MiniMax-H3-Highspeed | N/A | video | N/A |
@@ -325,8 +332,6 @@ Generated: 2026-11-19
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| kimi-k2.7-code | 262K | chat, code, reasoning | CNY 6.50 / 27.00 |
-| kimi-k2.7-code-highspeed | 262K | chat, code, reasoning | CNY 13.00 / 54.00 |
 | kimi-k3.1-pro | 1048K | chat | CNY 13.00 / 68.00 |
 | kimi-k3.1-pro-highspeed | 1048K | chat | CNY 26.00 / 136.00 |
 
@@ -334,8 +339,6 @@ Generated: 2026-11-19
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| kimi-k2.7-code | 262K | chat, code, reasoning | USD 0.95 / 4.00 |
-| kimi-k2.7-code-highspeed | 262K | chat, code, reasoning | USD 1.90 / 8.00 |
 | kimi-k3.1-pro | 1048K | chat | USD 2.00 / 10.00 |
 | kimi-k3.1-pro-highspeed | 1048K | chat | USD 4.00 / 20.00 |
 
@@ -373,12 +376,12 @@ Generated: 2026-11-19
 | gpt-6.2-astra-law | 1050K | chat | USD 8.00 / 40.00 |
 | gpt-6.2-sol | 1050K | chat | USD 2.00 / 10.00 |
 | gpt-audio-1.5 | N/A | audio, chat | USD 2.50 / 10.00 |
-| gpt-image-2 | N/A | image | N/A |
 | gpt-image-2.5-flare | N/A | image | N/A |
 | gpt-image-2.5-sunburst | N/A | image | N/A |
 | gpt-image-2.6-flare | N/A | image | N/A |
 | gpt-image-2.6-sunburst | N/A | image | N/A |
 | gpt-live-1 | N/A | audio, chat | N/A |
+| gpt-live-1.1 | N/A | audio, chat | N/A |
 | gpt-live-transcribe | N/A | audio | N/A |
 | gpt-realtime-1.5 | N/A | chat, audio | USD 4.00 / 16.00 |
 | gpt-realtime-2 | 128K | chat, audio | USD 4.00 / 24.00 |
@@ -463,12 +466,15 @@ Generated: 2026-11-19
 | ruby | N/A | video | N/A |
 | seedance2 | N/A | video | N/A |
 | seedance2_5 | N/A | video | N/A |
+| seedance2_5_flash | N/A | video | N/A |
 | seedance2_fast | N/A | video | N/A |
 | seedance2_mini | N/A | video | N/A |
 | seedream5_flash | N/A | image | N/A |
 | seedream5_lite | N/A | image | N/A |
 | seedream5_pro | N/A | image | N/A |
 | seedream5_pro_layers | N/A | image | N/A |
+| seedream5.5 | N/A | image | N/A |
+| seedream5.5_layers | N/A | image | N/A |
 | veo3.1 | N/A | video | N/A |
 | veo3.1_fast | N/A | video | N/A |
 | wan3 | N/A | video | N/A |
@@ -517,6 +523,7 @@ Generated: 2026-11-19
 | hy-role | 32K | chat | CNY 2.40 / 9.60 |
 | hy-role-latest | 32K | chat | CNY 2.40 / 9.60 |
 | hy4 | 1000K | chat | CNY 6.00 / 18.00 |
+| hy4-flash | 1000K | chat | CNY 0.50 / 2.00 |
 
 ### TypeSafe AI (typesafe)
 
@@ -568,7 +575,6 @@ Generated: 2026-11-19
 | grok-4.20-0309-reasoning | 1000K | chat, reasoning | USD 1.25 / 2.50 |
 | grok-4.20-multi-agent-0309 | 1000K | chat, reasoning | USD 1.25 / 2.50 |
 | grok-4.7 | 500K | chat, reasoning | USD 2.00 / 6.00 |
-| grok-build-0.1 | 256K | chat | USD 1.00 / 2.00 |
 | grok-imagine-image | N/A | image | N/A |
 | grok-imagine-image-2.0 | N/A | image | N/A |
 | grok-imagine-video | N/A | video | N/A |
@@ -605,13 +611,16 @@ Generated: 2026-11-19
 | cogview-4-250304 | N/A | image | N/A |
 | embedding-2 | 8K | embedding | N/A |
 | embedding-3 | N/A | embedding | N/A |
+| glm-4-voice | 8K | audio, chat | N/A |
 | glm-5.3 | 1000K | chat | CNY 8.00 / 28.00 |
 | glm-5.3-flash | 1000K | chat | CNY 0.80 / 2.80 |
 | glm-5.3-flashx | 1000K | chat | CNY 2.00 / 7.00 |
 | glm-5v-turbo | 200K | chat, reasoning | CNY 5.00 / 22.00 |
+| glm-asr-2512 | N/A | audio | N/A |
 | glm-image | N/A | image | N/A |
 | glm-ocr | 32K | chat | CNY 0.20 / 0.20 |
 | glm-tts | N/A | audio | N/A |
+| glm-tts-clone | N/A | audio | N/A |
 
 ## Statistics Summary
 
@@ -619,8 +628,8 @@ Generated: 2026-11-19
 
 | Region | Vendors | Models | Pricing Files |
 |--------|---------|--------|---------------|
-| CN | 14 | 179 | 167 |
-| GLOBAL | 21 | 369 | 353 |
+| CN | 14 | 188 | 174 |
+| GLOBAL | 21 | 377 | 362 |
 
 ### Client API Support
 
@@ -648,7 +657,7 @@ Generated: 2026-11-19
 | video | 14 |
 | image | 13 |
 | reasoning | 10 |
-| audio | 7 |
+| audio | 8 |
 | music | 7 |
 | embedding | 4 |
 | sfx | 4 |

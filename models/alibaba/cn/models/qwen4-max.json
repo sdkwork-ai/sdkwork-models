@@ -1,0 +1,57 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "alibaba/qwen4-max",
+  "codingVisible": true,
+  "colorToken": "#2563eb",
+  "contextTokens": 1000000,
+  "description": "Qwen4-Max 是通义千问新一代旗舰多模态模型，支持文本生成、图片与视频理解及深度思考，面向编程、办公与复杂 Agent 任务，原生 1M 上下文。",
+  "displayName": "Qwen4 Max",
+  "familyCode": "qwen",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "latencyP50Ms": 700,
+  "latencyP95Ms": 2300,
+  "lifecycle": "active",
+  "maxInputTokens": 991808,
+  "maxOutputTokens": 131072,
+  "modelId": "qwen4-max",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1150.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen4-max"
+  },
+  "strengths": [
+    "Native multimodal",
+    "Long context",
+    "Agents",
+    "Coding",
+    "Chinese"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.997000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.970000"
+}

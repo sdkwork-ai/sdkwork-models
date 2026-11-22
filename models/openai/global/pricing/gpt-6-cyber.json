@@ -24,7 +24,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "20.000000",
@@ -52,7 +52,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "2.000000",
@@ -80,7 +80,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "25.000000",
@@ -108,7 +108,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "100.000000",
@@ -136,12 +136,12 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "10.000000",
-      "unitSize": "1000000",
-      "rateHash": "589d7f41636ee671ec47742e3e5a41973caf8f79cd257262bec39bd73beab809"
+      "unitSize": "1000",
+      "rateHash": "d571afb4070800c5301705ac42b85cb6f29e5b362aad1cc9bd1101f991075540"
     },
     {
       "billability": "chargeable",
@@ -164,12 +164,12 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "2.500000",
-      "unitSize": "1000000",
-      "rateHash": "b8e89c2cffab8bc2d6cb381b66b5023854620b938dffaed45537bf1eaf7b9e24"
+      "unitSize": "1000",
+      "rateHash": "9a2dc117366bc7d1e3879aeea44bc1bef30537aa7eb2c5568642fe6ad89f383b"
     },
     {
       "billability": "chargeable",
@@ -192,12 +192,117 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-19T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "0.030000",
       "unitSize": "1",
       "rateHash": "9b6f5bb380475889bd875350cbd5d96f966d7d5ee0a5f17b37ddffb6ca76fe4d"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "long_context"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-6-cyber-input-long-context",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "611236657770964cb3a16603ee600589e3c44d960bb8ad38c40fc752587d4650",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "tierCode": "long_context",
+      "unitPrice": "40.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "long_context"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-6-cyber-cache-read-long-context",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "e5a6e1e46085178b3d60b976ddcbb60e794d4fa7cdefd42c3ed96047b48ce07a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "tierCode": "long_context",
+      "unitPrice": "4.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "long_context"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-19T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-6-cyber-output-long-context",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "46382d4ee211296024accfb53749cf402459246c41ec77d62e8d1905ccd2596d",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "tierCode": "long_context",
+      "unitPrice": "150.000000",
+      "unitSize": "1000000"
     }
   ],
   "regionCode": "global",

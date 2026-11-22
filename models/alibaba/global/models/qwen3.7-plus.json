@@ -2,6 +2,7 @@
   "apiFormat": "openai_compatible",
   "catalogKey": "alibaba/qwen3.7-plus",
   "codingVisible": true,
+  "contextTokens": 1000000,
   "description": "QwenCloud 上在售的 Qwen3.7 均衡档模型，1M 上下文；页面标注限时 20% off。",
   "displayName": "Qwen3.7 Plus",
   "familyCode": "qwen",
@@ -11,6 +12,8 @@
     "video"
   ],
   "lifecycle": "active",
+  "maxInputTokens": 991808,
+  "maxOutputTokens": 131072,
   "modelId": "qwen3.7-plus",
   "outputModalities": [
     "text"
@@ -22,7 +25,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
+    "observedAt": "2026-11-23T00:00:00Z",
     "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-plus"
   },
   "supportsJsonSchema": true,

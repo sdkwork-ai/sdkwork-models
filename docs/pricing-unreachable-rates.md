@@ -7,7 +7,7 @@ or merging tiers - a product decision, so nothing here is auto-applied.
 
 | reason | count |
 |---|---|
-| dimension_never_populated | 353 |
+| dimension_never_populated | 417 |
 
 `dimension_never_populated`: the runtime has no producer for the dimension at all.
 `time_window_tier_redundant`: a `time_window` rate conditioned on `tier_code`; the
@@ -41,10 +41,21 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | alibaba/global/pricing/qwen3.8-max.json | qwen-global-qwen3.8-max-cache-read | llm_cache_read_token | 0.170000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_read | - |
 | alibaba/global/pricing/qwen3.8-max.json | qwen-global-qwen3.8-max-cache-read-implicit | llm_cache_read_token | 0.250000 | USD | 1000000 | tier_code | dimension_never_populated | implicit_cache | - |
 | alibaba/global/pricing/qwen3.8-max.json | qwen-global-qwen3.8-max-cache-write | llm_cache_write_token | 2.500000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_write | - |
+| alibaba/global/pricing/qwen4-max.json | qwen-global-qwen4-max-cache-read | llm_cache_read_token | 0.075000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_read | - |
+| alibaba/global/pricing/qwen4-max.json | qwen-global-qwen4-max-cache-read-implicit | llm_cache_read_token | 0.075000 | USD | 1000000 | tier_code | dimension_never_populated | implicit_cache | - |
+| alibaba/global/pricing/qwen4-max.json | qwen-global-qwen4-max-cache-write | llm_cache_write_token | 1.875000 | USD | 1000000 | tier_code | dimension_never_populated | explicit_cache_write | - |
 | anthropic/global/pricing/claude-fable-5-1.json | anthropic-claude-fable-5-1-cache-write | llm_cache_write_token | 12.500000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-fable-5-1.json | anthropic-claude-fable-5-1-cache-write-1h | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-fable-5-1.json | anthropic-claude-fable-5-1-input-batch | llm_input_token | 5.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-fable-5-1.json | anthropic-claude-fable-5-1-output-batch | llm_output_token | 25.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-fable-5-2.json | anthropic-claude-fable-5-2-cache-write | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-fable-5-2.json | anthropic-claude-fable-5-2-cache-write-1h | llm_cache_write_token | 16.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-fable-5-2.json | anthropic-claude-fable-5-2-input-batch | llm_input_token | 4.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-fable-5-2.json | anthropic-claude-fable-5-2-output-batch | llm_output_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
 | anthropic/global/pricing/claude-fable-5.json | anthropic-claude-fable-5-cache-write | llm_cache_write_token | 12.500000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-fable-5.json | anthropic-claude-fable-5-cache-write-1h | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-fable-5.json | anthropic-claude-fable-5-input-batch | llm_input_token | 5.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-fable-5.json | anthropic-claude-fable-5-output-batch | llm_output_token | 25.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
 | anthropic/global/pricing/claude-haiku-4-5.json | anthropic-claude-haiku-4-5-cache-write | llm_cache_write_token | 1.250000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-haiku-4-5.json | anthropic-claude-haiku-4-5-cache-write-1h | llm_cache_write_token | 2.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
 | anthropic/global/pricing/claude-haiku-5-5.json | anthropic-claude-haiku-5-5-cache-read-over-100k | llm_cache_read_token | 0.050000 | USD | 1000000 | tier_code | dimension_never_populated | prompts_over_100k | - |
@@ -56,32 +67,54 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | anthropic/global/pricing/claude-haiku-5-5.json | anthropic-claude-haiku-5-5-output-over-100k | llm_output_token | 2.500000 | USD | 1000000 | tier_code | dimension_never_populated | prompts_over_100k | - |
 | anthropic/global/pricing/claude-mythos-5-1.json | anthropic-claude-mythos-5-1-cache-write | llm_cache_write_token | 12.500000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-mythos-5-1.json | anthropic-claude-mythos-5-1-cache-write-1h | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-mythos-5-1.json | anthropic-claude-mythos-5-1-input-batch | llm_input_token | 5.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-mythos-5-1.json | anthropic-claude-mythos-5-1-output-batch | llm_output_token | 25.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-mythos-5-2.json | anthropic-claude-mythos-5-2-cache-write | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
+| anthropic/global/pricing/claude-mythos-5-2.json | anthropic-claude-mythos-5-2-cache-write-1h | llm_cache_write_token | 16.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-mythos-5-2.json | anthropic-claude-mythos-5-2-input-batch | llm_input_token | 4.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-mythos-5-2.json | anthropic-claude-mythos-5-2-output-batch | llm_output_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
 | anthropic/global/pricing/claude-mythos-5.json | anthropic-claude-mythos-5-cache-write | llm_cache_write_token | 12.500000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-mythos-5.json | anthropic-claude-mythos-5-cache-write-1h | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-mythos-5.json | anthropic-claude-mythos-5-input-batch | llm_input_token | 5.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-mythos-5.json | anthropic-claude-mythos-5-output-batch | llm_output_token | 25.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
 | anthropic/global/pricing/claude-opus-4-5.json | anthropic-claude-opus-4-5-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-opus-4-5.json | anthropic-claude-opus-4-5-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-opus-4-5.json | anthropic-claude-opus-4-5-input-batch | llm_input_token | 2.500000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-opus-4-5.json | anthropic-claude-opus-4-5-output-batch | llm_output_token | 12.500000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
 | anthropic/global/pricing/claude-opus-4-6.json | anthropic-claude-opus-4-6-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-opus-4-6.json | anthropic-claude-opus-4-6-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-opus-4-6.json | anthropic-claude-opus-4-6-input-batch | llm_input_token | 2.500000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-opus-4-6.json | anthropic-claude-opus-4-6-output-batch | llm_output_token | 12.500000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
 | anthropic/global/pricing/claude-opus-4-7.json | anthropic-claude-opus-4-7-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-opus-4-7.json | anthropic-claude-opus-4-7-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-opus-4-7.json | anthropic-claude-opus-4-7-input-batch | llm_input_token | 2.500000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-opus-4-7.json | anthropic-claude-opus-4-7-output-batch | llm_output_token | 12.500000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
 | anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
 | anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-fast-input | llm_input_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | fast_mode | - |
 | anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-fast-output | llm_output_token | 50.000000 | USD | 1000000 | tier_code | dimension_never_populated | fast_mode | - |
+| anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-input-batch | llm_input_token | 2.500000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-opus-4-8.json | anthropic-claude-opus-4-8-output-batch | llm_output_token | 12.500000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
 | anthropic/global/pricing/claude-opus-5-5.json | anthropic-claude-opus-5-5-cache-write | llm_cache_write_token | 5.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-opus-5-5.json | anthropic-claude-opus-5-5-cache-write-1h | llm_cache_write_token | 8.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
 | anthropic/global/pricing/claude-opus-5-5.json | anthropic-claude-opus-5-5-fast-input | llm_input_token | 8.000000 | USD | 1000000 | tier_code | dimension_never_populated | fast_mode | - |
 | anthropic/global/pricing/claude-opus-5-5.json | anthropic-claude-opus-5-5-fast-output | llm_output_token | 40.000000 | USD | 1000000 | tier_code | dimension_never_populated | fast_mode | - |
+| anthropic/global/pricing/claude-opus-5-5.json | anthropic-claude-opus-5-5-input-batch | llm_input_token | 2.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-opus-5-5.json | anthropic-claude-opus-5-5-output-batch | llm_output_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
 | anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-cache-write | llm_cache_write_token | 6.250000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-cache-write-1h | llm_cache_write_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
 | anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-fast-mode-input | llm_input_token | 10.000000 | USD | 1000000 | tier_code | dimension_never_populated | fast_mode | - |
 | anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-fast-mode-output | llm_output_token | 50.000000 | USD | 1000000 | tier_code | dimension_never_populated | fast_mode | - |
+| anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-input-batch | llm_input_token | 2.500000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-opus-5.json | anthropic-claude-opus-5-output-batch | llm_output_token | 12.500000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
 | anthropic/global/pricing/claude-sonnet-4-5.json | anthropic-claude-sonnet-4-5-cache-write | llm_cache_write_token | 3.750000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-sonnet-4-5.json | anthropic-claude-sonnet-4-5-cache-write-1h | llm_cache_write_token | 6.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
 | anthropic/global/pricing/claude-sonnet-4-6.json | anthropic-claude-sonnet-4-6-cache-write | llm_cache_write_token | 3.750000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-sonnet-4-6.json | anthropic-claude-sonnet-4-6-cache-write-1h | llm_cache_write_token | 6.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
 | anthropic/global/pricing/claude-sonnet-5-5.json | anthropic-claude-sonnet-5-5-cache-write | llm_cache_write_token | 2.500000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-sonnet-5-5.json | anthropic-claude-sonnet-5-5-cache-write-1h | llm_cache_write_token | 4.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
+| anthropic/global/pricing/claude-sonnet-5-5.json | anthropic-claude-sonnet-5-5-input-batch | llm_input_token | 1.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| anthropic/global/pricing/claude-sonnet-5-5.json | anthropic-claude-sonnet-5-5-output-batch | llm_output_token | 5.000000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
 | anthropic/global/pricing/claude-sonnet-5.json | anthropic-claude-sonnet-5-cache-write | llm_cache_write_token | 2.500000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_5m | - |
 | anthropic/global/pricing/claude-sonnet-5.json | anthropic-claude-sonnet-5-cache-write-1h | llm_cache_write_token | 4.000000 | USD | 1000000 | tier_code | dimension_never_populated | cache_write_1h | - |
 | baidu/cn/pricing/ernie-5.0.json | baidu-cn-ernie-5.0-input-128k | llm_input_token | 10.000000 | CNY | 1000000 | tier_code | dimension_never_populated | tier_128k | - |
@@ -176,6 +209,8 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-layer_split_le_2_61mp | image_result | 0.150000 | CNY | 1 | tier_code | dimension_never_populated | layer_split_le_2_61mp | - |
 | bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-single_image_gt_2_61mp | image_result | 0.600000 | CNY | 1 | tier_code | dimension_never_populated | single_image_gt_2_61mp | - |
 | bytedance/cn/pricing/doubao-seedream-5-0-pro-260628.json | bytedance-cn-doubao-seedream-5-0-pro-260628-result-single_image_le_2_61mp | image_result | 0.300000 | CNY | 1 | tier_code | dimension_never_populated | single_image_le_2_61mp | - |
+| bytedance/cn/pricing/doubao-seedream-5-5-261028.json | bytedance-cn-doubao-seedream-5-5-261028-result-single_image_2_61_4_63mp | image_result | 0.230000 | CNY | 1 | tier_code | dimension_never_populated | single_image_2_61_4_63mp | - |
+| bytedance/cn/pricing/doubao-seedream-5-5-261028.json | bytedance-cn-doubao-seedream-5-5-261028-result-single_image_le_2_61mp | image_result | 0.130000 | CNY | 1 | tier_code | dimension_never_populated | single_image_le_2_61mp | - |
 | bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-cache-read-input_128k_256k | llm_cache_read_token | 0.20 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
 | bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-cache-read-input_le_128k | llm_cache_read_token | 0.10 | USD | 1000000 | tier_code | dimension_never_populated | input_le_128k | - |
 | bytedance/global/pricing/seed-2-0-code-preview-260328.json | bytedance-global-seed-2-0-code-preview-260328-input-input_128k_256k | llm_input_token | 1.00 | USD | 1000000 | tier_code | dimension_never_populated | input_128k_256k | - |
@@ -220,6 +255,8 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-i2i | image_result | 0.200000 | CNY | 1 | tier_code | dimension_never_populated | i2i_1k_2k | - |
 | kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-multi-ref | image_result | 0.400000 | CNY | 1 | tier_code | dimension_never_populated | multi_ref_1k_2k | - |
 | kuaishou/cn/pricing/kling-v2-1.json | kuaishou-cn-kling-v2-1-result-t2i | image_result | 0.100000 | CNY | 1 | tier_code | dimension_never_populated | t2i_1k_2k | - |
+| kuaishou/global/pricing/kling-image-3.0-omni.json | kuaishou-global-kling-image-3-0-omni-result-1k-2k | image_result | 0.028169 | USD | 1 | tier_code | dimension_never_populated | res_1k_2k | - |
+| kuaishou/global/pricing/kling-image-3.0-omni.json | kuaishou-global-kling-image-3-0-omni-result-4k | image_result | 0.056338 | USD | 1 | tier_code | dimension_never_populated | res_4k | - |
 | kuaishou/global/pricing/kling-image-3.0.json | kuaishou-global-kling-image-3-0-res-1k-2k | image_result | 0.028169 | USD | 1 | tier_code | dimension_never_populated | res_1k_2k | - |
 | kuaishou/global/pricing/kling-image-o1.json | kuaishou-global-kling-image-o1-result-1k-2k | image_result | 0.028000 | USD | 1 | tier_code | dimension_never_populated | res_1k_2k | - |
 | kuaishou/global/pricing/kling-v2-1.json | kuaishou-global-kling-v2-1-result-i2i | image_result | 0.028000 | USD | 1 | tier_code | dimension_never_populated | i2i_1k_2k | - |
@@ -252,10 +289,16 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | openai/global/pricing/gpt-5.6-terra.json | openai-gpt-5-6-terra-cache-write-long-context | llm_cache_write_token | 5.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-5.6-terra.json | openai-gpt-5-6-terra-input-long-context | llm_input_token | 4.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-5.6-terra.json | openai-gpt-5-6-terra-output-long-context | llm_output_token | 18.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-astra-law.json | openai-gpt-6-astra-law-cache-read-long-context | llm_cache_read_token | 2.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-astra-law.json | openai-gpt-6-astra-law-input-long-context | llm_input_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-astra-law.json | openai-gpt-6-astra-law-output-long-context | llm_output_token | 75.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-cache-read-long-context | llm_cache_read_token | 2.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-cache-write-long-context | llm_cache_write_token | 25.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-input-long-context | llm_input_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-astra.json | openai-gpt-6-astra-output-long-context | llm_output_token | 75.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-cyber.json | openai-gpt-6-cyber-cache-read-long-context | llm_cache_read_token | 4.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-cyber.json | openai-gpt-6-cyber-input-long-context | llm_input_token | 40.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-cyber.json | openai-gpt-6-cyber-output-long-context | llm_output_token | 150.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-luna.json | openai-gpt-6-luna-cache-read-long-context | llm_cache_read_token | 0.020000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-luna.json | openai-gpt-6-luna-cache-write-long-context | llm_cache_write_token | 0.250000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-luna.json | openai-gpt-6-luna-input-long-context | llm_input_token | 0.200000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
@@ -263,7 +306,7 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-cache-read-long-context | llm_cache_read_token | 2.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-cache-write-long-context | llm_cache_write_token | 25.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-input-long-context | llm_input_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
-| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-output-long-context | llm_output_token | 100.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6-rosalind.json | openai-gpt-6-rosalind-output-long-context | llm_output_token | 75.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-sol.json | openai-gpt-6-sol-cache-read-long-context | llm_cache_read_token | 0.400000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-sol.json | openai-gpt-6-sol-cache-write-long-context | llm_cache_write_token | 5.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6-sol.json | openai-gpt-6-sol-input-long-context | llm_input_token | 4.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
@@ -276,6 +319,20 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | openai/global/pricing/gpt-6.1-terra.json | openai-gpt-6.1-terra-cache-write-long-context | llm_cache_write_token | 2.500000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6.1-terra.json | openai-gpt-6.1-terra-input-long-context | llm_input_token | 2.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
 | openai/global/pricing/gpt-6.1-terra.json | openai-gpt-6.1-terra-output-long-context | llm_output_token | 7.500000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.2-astra-law.json | openai-gpt-6.2-astra-law-cache-read-long-context | llm_cache_read_token | 0.800000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.2-astra-law.json | openai-gpt-6.2-astra-law-cache-write-long-context | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.2-astra-law.json | openai-gpt-6.2-astra-law-input-long-context | llm_input_token | 16.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.2-astra-law.json | openai-gpt-6.2-astra-law-output-long-context | llm_output_token | 60.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.2-astra.json | openai-gpt-6.2-astra-cache-read-long-context | llm_cache_read_token | 0.800000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.2-astra.json | openai-gpt-6.2-astra-cache-write-long-context | llm_cache_write_token | 20.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.2-astra.json | openai-gpt-6.2-astra-input-long-context | llm_input_token | 16.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.2-astra.json | openai-gpt-6.2-astra-output-long-context | llm_output_token | 60.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.2-sol.json | openai-gpt-6.2-sol-cache-read-long-context | llm_cache_read_token | 0.200000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.2-sol.json | openai-gpt-6.2-sol-cache-write-long-context | llm_cache_write_token | 5.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.2-sol.json | openai-gpt-6.2-sol-input-long-context | llm_input_token | 4.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-6.2-sol.json | openai-gpt-6.2-sol-output-long-context | llm_output_token | 15.000000 | USD | 1000000 | tier_code | dimension_never_populated | long_context | - |
+| openai/global/pricing/gpt-live-1.1.json | openai-gpt-live-1.1-minute-standby | audio_output_minute | 0.020000 | USD | 1 | tier_code | dimension_never_populated | standby | - |
+| openai/global/pricing/gpt-live-1.json | openai-gpt-live-1-minute-standby | audio_output_minute | 0.020000 | USD | 1 | tier_code | dimension_never_populated | standby | - |
 | runway/global/pricing/bria_fibo_1_5.json | runway-global-bria_fibo_1_5-image-res_1mp | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | res_1mp | - |
 | runway/global/pricing/bria_fibo_1_5.json | runway-global-bria_fibo_1_5-image-res_4mp | image_result | 0.100000 | USD | 1 | tier_code | dimension_never_populated | res_4mp | - |
 | runway/global/pricing/gemini_image3.1_flash.json | runway-global-gemini_image3.1_flash-image-res_1k | image_result | 0.070000 | USD | 1 | tier_code | dimension_never_populated | res_1k | - |
@@ -346,6 +403,13 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | runway/global/pricing/nano_banana_2.1.json | runway-global-nano_banana_2.1-image-res_1k | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | res_1k | - |
 | runway/global/pricing/nano_banana_2.1.json | runway-global-nano_banana_2.1-image-res_2k | image_result | 0.060000 | USD | 1 | tier_code | dimension_never_populated | res_2k | - |
 | runway/global/pricing/nano_banana_2.1.json | runway-global-nano_banana_2.1-image-res_4k | image_result | 0.120000 | USD | 1 | tier_code | dimension_never_populated | res_4k | - |
+| runway/global/pricing/seedream5.5.json | runway-global-seedream5.5-image-res_1_5k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | res_1_5k | - |
+| runway/global/pricing/seedream5.5.json | runway-global-seedream5.5-image-res_1k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | res_1k | - |
+| runway/global/pricing/seedream5.5.json | runway-global-seedream5.5-image-res_2k | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | res_2k | - |
+| runway/global/pricing/seedream5.5_layers.json | runway-global-seedream5.5_layers-image-res_1_5k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | res_1_5k | - |
+| runway/global/pricing/seedream5.5_layers.json | runway-global-seedream5.5_layers-image-res_1k | image_result | 0.020000 | USD | 1 | tier_code | dimension_never_populated | res_1k | - |
+| runway/global/pricing/seedream5.5_layers.json | runway-global-seedream5.5_layers-image-res_2k | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | res_2k | - |
+| runway/global/pricing/seedream5.5_layers.json | runway-global-seedream5.5_layers-image-res_auto | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | res_auto | - |
 | runway/global/pricing/seedream5_pro.json | runway-global-seedream5_pro-image-res_1k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | res_1k | - |
 | runway/global/pricing/seedream5_pro.json | runway-global-seedream5_pro-image-res_2k | image_result | 0.090000 | USD | 1 | tier_code | dimension_never_populated | res_2k | - |
 | runway/global/pricing/seedream5_pro_layers.json | runway-global-seedream5_pro_layers-image-res_1_5k | image_result | 0.030000 | USD | 1 | tier_code | dimension_never_populated | res_1_5k | - |

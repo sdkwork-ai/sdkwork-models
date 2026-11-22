@@ -25,8 +25,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://openai.com/api/pricing/"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.openai.com/docs/pricing"
       },
       "unitPrice": "0.750000",
       "unitSize": "1000000"
@@ -53,8 +53,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://openai.com/api/pricing/"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.openai.com/docs/pricing"
       },
       "unitPrice": "0.075000",
       "unitSize": "1000000"
@@ -81,8 +81,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://openai.com/api/pricing/"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.openai.com/docs/pricing"
       },
       "unitPrice": "4.500000",
       "unitSize": "1000000"

@@ -31,8 +31,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_res_720p",
       "unitPrice": "0.750000",
@@ -66,8 +66,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://platform.vidu.cn/docs/pricing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
       },
       "tierCode": "ref_res_1080p",
       "unitPrice": "0.906250",

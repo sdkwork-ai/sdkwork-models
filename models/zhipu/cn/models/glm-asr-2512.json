@@ -1,0 +1,41 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "zhipu/glm-asr-2512",
+  "codingVisible": false,
+  "colorToken": "#0f766e",
+  "description": "Zhipu GLM-ASR-2512 speech recognition model with a 0.0717 character error rate, custom vocabulary support, and coverage of Mandarin, major Chinese dialects, and dozens of global languages. Official pricing is CNY 16 per 1M audio input tokens; output text is not billed separately.",
+  "displayName": "GLM-ASR-2512",
+  "familyCode": "glm-asr",
+  "inputModalities": [
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "glm-asr-2512",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/sound-and-video/glm-asr-2512"
+  },
+  "strengths": [
+    "Speech recognition",
+    "Multi-language",
+    "Dialect support",
+    "Custom vocabulary"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "zhipu"
+}

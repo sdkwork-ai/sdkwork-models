@@ -27,8 +27,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
-    "sourceUrl": "https://help.aliyun.com/zh/model-studio/embedding"
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/text-embedding-synchronous-api"
   },
   "strengths": [
     "Embedding",

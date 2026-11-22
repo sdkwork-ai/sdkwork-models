@@ -1,0 +1,56 @@
+{
+  "apiFormat": "anthropic_messages",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "anthropic/claude-fable-5-2",
+  "codingVisible": true,
+  "colorToken": "#7c2d12",
+  "contextTokens": 1000000,
+  "description": "Anthropic's newest flagship for demanding reasoning and long-horizon agentic work, released 2026-11-09. 1M-token context, 128K max output. $8 / $40 per MTok; 5m cache writes $10, 1h cache writes $16, cache reads $0.20 / MTok.",
+  "displayName": "Claude Fable 5.2",
+  "familyCode": "claude",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 900,
+  "latencyP95Ms": 3200,
+  "lifecycle": "active",
+  "maxInputTokens": 1000000,
+  "maxOutputTokens": 128000,
+  "modelId": "claude-fable-5-2",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1320.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://platform.claude.com/docs/en/models/fable-5-2/overview"
+  },
+  "strengths": [
+    "Reasoning",
+    "Coding",
+    "Agents",
+    "Long context",
+    "Adaptive thinking"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "1.000000",
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "anthropic",
+  "vendorName": "Anthropic",
+  "winRate": "0.998000"
+}

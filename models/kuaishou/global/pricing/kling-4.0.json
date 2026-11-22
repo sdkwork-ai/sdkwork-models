@@ -31,8 +31,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "no_input_res_720p",
       "unitPrice": "0.140000",
@@ -66,8 +66,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "no_input_res_1080p",
       "unitPrice": "0.210000",
@@ -101,8 +101,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "input_le_output_res_720p",
       "unitPrice": "0.084000",
@@ -136,8 +136,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "input_le_output_res_1080p",
       "unitPrice": "0.126000",
@@ -171,8 +171,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "input_gt_output_res_720p",
       "unitPrice": "0.084000",
@@ -206,11 +206,116 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
       },
       "tierCode": "input_gt_output_res_1080p",
       "unitPrice": "0.126000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "no_input_res_4k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-4-0-second-no-input-res-4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "26e8c7c152a3a195d8b9cc3cbc95c27690c9ee64e793ec7ebc002d15e3554155",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
+      },
+      "tierCode": "no_input_res_4k",
+      "unitPrice": "0.490000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_le_output_res_4k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-4-0-second-input-le-output-res-4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "9bd71b15de001e193b29e792d00c425387dc031f8a0cbdd30cf80ed57ff32a3c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
+      },
+      "tierCode": "input_le_output_res_4k",
+      "unitPrice": "0.294000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "input_gt_output_res_4k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.kuaishou.global.official",
+      "priceId": "kuaishou-global-kling-4-0-second-input-gt-output-res-4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.kuaishou.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "83b44dc6504f9c2cc3c949326fd2b714c366d97a3adfa92bcb6b538f43b78be9",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
+      },
+      "tierCode": "input_gt_output_res_4k",
+      "unitPrice": "0.294000",
       "unitSize": "1"
     }
   ],

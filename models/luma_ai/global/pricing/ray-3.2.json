@@ -18,6 +18,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-540p-5s",
@@ -31,8 +32,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_540p_dur_5s",
       "unitPrice": "0.030000",
@@ -53,6 +54,7 @@
       "effectiveFrom": "2026-07-14T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-720p-5s",
@@ -66,8 +68,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_720p_dur_5s",
       "unitPrice": "0.060000",
@@ -88,6 +90,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-1080p-5s",
@@ -101,8 +104,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_1080p_dur_5s",
       "unitPrice": "0.240000",
@@ -123,6 +126,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-540p-10s",
@@ -136,8 +140,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_540p_dur_10s",
       "unitPrice": "0.045000",
@@ -158,6 +162,7 @@
       "effectiveFrom": "2026-07-14T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-720p-10s",
@@ -171,8 +176,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_720p_dur_10s",
       "unitPrice": "0.090000",
@@ -193,6 +198,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-1080p-10s",
@@ -206,8 +212,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_1080p_dur_10s",
       "unitPrice": "0.360000",
@@ -228,6 +234,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-360p-5s",
@@ -241,8 +248,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_360p_dur_5s",
       "unitPrice": "0.012000",
@@ -263,6 +270,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-360p-10s",
@@ -276,8 +284,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_360p_dur_10s",
       "unitPrice": "0.018000",
@@ -298,6 +306,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-v2v-360p-5s",
@@ -311,8 +320,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_360p_dur_5s",
       "unitPrice": "0.108000",
@@ -333,6 +342,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-v2v-360p-10s",
@@ -346,8 +356,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_360p_dur_10s",
       "unitPrice": "0.108000",
@@ -368,6 +378,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-v2v-540p-5s",
@@ -381,8 +392,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_540p_dur_5s",
       "unitPrice": "0.144000",
@@ -403,6 +414,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-v2v-540p-10s",
@@ -416,8 +428,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_540p_dur_10s",
       "unitPrice": "0.144000",
@@ -438,6 +450,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-v2v-720p-5s",
@@ -451,8 +464,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_720p_dur_5s",
       "unitPrice": "0.216000",
@@ -473,6 +486,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-v2v-720p-10s",
@@ -486,8 +500,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_720p_dur_10s",
       "unitPrice": "0.216000",
@@ -508,6 +522,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-v2v-1080p-5s",
@@ -521,8 +536,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_1080p_dur_5s",
       "unitPrice": "0.432000",
@@ -543,6 +558,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-v2v-1080p-10s",
@@ -556,8 +572,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_1080p_dur_10s",
       "unitPrice": "0.432000",
@@ -578,6 +594,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-reframe-360p",
@@ -591,8 +608,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "reframe_res_360p",
       "unitPrice": "0.030000",
@@ -613,6 +630,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-reframe-540p",
@@ -626,8 +644,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "reframe_res_540p",
       "unitPrice": "0.060000",
@@ -648,6 +666,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-reframe-720p",
@@ -661,8 +680,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "reframe_res_720p",
       "unitPrice": "0.120000",
@@ -683,6 +702,7 @@
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
+      "notes": "官方仅公布 credits 计价（该档为 5s/10s 总 credits），Usage 文档明确不得假设默认 credit 费率；USD 单价为按 1 credit 0.003 USD 换算的参考值，实际以合同 overage_rate 为准，标记未确认。",
       "operationCode": "video.generate",
       "priceBookCode": "models.luma_ai.global.official",
       "priceId": "luma-ai-global-ray-3-2-second-reframe-1080p",
@@ -696,8 +716,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://lumalabs.ai/api"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "reframe_res_1080p",
       "unitPrice": "0.360000",

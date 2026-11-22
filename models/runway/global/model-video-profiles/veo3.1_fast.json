@@ -24,7 +24,10 @@
       "wireParameters": {
         "duration": "5-8",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "no_audio"
+      ]
     },
     {
       "aspectRatios": [
@@ -48,14 +51,71 @@
       "wireParameters": {
         "duration": "5-8",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "no_audio"
+      ]
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/veo3.1_fast/t2v_range_720p_audio",
+      "displayName": "Text to Video · 5–8s · 720p (audio)",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "text_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 8,
+      "minDurationSeconds": 5,
+      "outputAudio": true,
+      "profileCode": "t2v_range_720p_audio",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 15,
+      "wireParameters": {
+        "duration": "5-8",
+        "resolution": "720p"
+      },
+      "pricingTierCodes": [
+        "audio"
+      ]
+    },
+    {
+      "aspectRatios": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "catalogKey": "runway/veo3.1_fast/i2v_range_720p_audio",
+      "displayName": "Image to Video · 5–8s · 720p (audio)",
+      "durationPolicy": "range",
+      "durationStepSeconds": 1,
+      "generationMode": "image_to_video",
+      "isDefault": false,
+      "maxDurationSeconds": 8,
+      "minDurationSeconds": 5,
+      "outputAudio": true,
+      "profileCode": "i2v_range_720p_audio",
+      "resolution": "720p",
+      "resolutionTierCode": "res_720p",
+      "sortOrder": 25,
+      "wireParameters": {
+        "duration": "5-8",
+        "resolution": "720p"
+      },
+      "pricingTierCodes": [
+        "audio"
+      ]
     }
   ],
   "regionCode": "global",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
-    "sourceUrl": "https://docs.dev.runwayml.com/guides/models/"
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
   },
   "vendorCode": "runway"
 }

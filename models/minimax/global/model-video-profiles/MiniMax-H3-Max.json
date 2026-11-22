@@ -4,97 +4,109 @@
   "profiles": [
     {
       "aspectRatios": [
+        "21:9",
         "16:9",
-        "9:16",
-        "1:1"
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16"
       ],
       "catalogKey": "minimax/MiniMax-H3-Max/t2v_range_768p",
-      "displayName": "Text to Video · 6–10s · 768p",
+      "displayName": "Text to Video · 5–15s · 768p",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "text_to_video",
       "isDefault": true,
-      "maxDurationSeconds": 10,
-      "minDurationSeconds": 6,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 5,
       "outputAudio": false,
       "profileCode": "t2v_range_768p",
       "resolution": "768p",
       "resolutionTierCode": "res_768p",
       "sortOrder": 10,
       "wireParameters": {
-        "duration": "6-10",
+        "duration": "5-15",
         "resolution": "768p"
       }
     },
     {
       "aspectRatios": [
+        "21:9",
         "16:9",
-        "9:16",
-        "1:1"
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16"
       ],
       "catalogKey": "minimax/MiniMax-H3-Max/t2v_range_480p",
-      "displayName": "Text to Video · 6–10s · 480p",
+      "displayName": "Text to Video · 5–15s · 480p",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "text_to_video",
       "isDefault": false,
-      "maxDurationSeconds": 10,
-      "minDurationSeconds": 6,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 5,
       "outputAudio": false,
       "profileCode": "t2v_range_480p",
       "resolution": "480p",
       "resolutionTierCode": "res_480p",
       "sortOrder": 20,
       "wireParameters": {
-        "duration": "6-10",
+        "duration": "5-15",
         "resolution": "480p"
       }
     },
     {
       "aspectRatios": [
+        "21:9",
         "16:9",
-        "9:16",
-        "1:1"
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16"
       ],
       "catalogKey": "minimax/MiniMax-H3-Max/i2v_range_768p",
-      "displayName": "Image to Video · 6–10s · 768p",
+      "displayName": "Image to Video · 5–15s · 768p",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "image_to_video",
       "isDefault": false,
-      "maxDurationSeconds": 10,
-      "minDurationSeconds": 6,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 5,
       "outputAudio": false,
       "profileCode": "i2v_range_768p",
       "resolution": "768p",
       "resolutionTierCode": "res_768p",
       "sortOrder": 30,
       "wireParameters": {
-        "duration": "6-10",
+        "duration": "5-15",
         "resolution": "768p"
       }
     },
     {
       "aspectRatios": [
+        "21:9",
         "16:9",
-        "9:16",
-        "1:1"
+        "4:3",
+        "1:1",
+        "3:4",
+        "9:16"
       ],
       "catalogKey": "minimax/MiniMax-H3-Max/i2v_range_480p",
-      "displayName": "Image to Video · 6–10s · 480p",
+      "displayName": "Image to Video · 5–15s · 480p",
       "durationPolicy": "range",
       "durationStepSeconds": 1,
       "generationMode": "image_to_video",
       "isDefault": false,
-      "maxDurationSeconds": 10,
-      "minDurationSeconds": 6,
+      "maxDurationSeconds": 15,
+      "minDurationSeconds": 5,
       "outputAudio": false,
       "profileCode": "i2v_range_480p",
       "resolution": "480p",
       "resolutionTierCode": "res_480p",
       "sortOrder": 40,
       "wireParameters": {
-        "duration": "6-10",
+        "duration": "5-15",
         "resolution": "480p"
       }
     }
@@ -102,7 +114,7 @@
   "regionCode": "global",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
+    "observedAt": "2026-11-23T00:00:00Z",
     "sourceUrl": "https://platform.minimax.io/docs/guides/models-intro"
   },
   "vendorCode": "minimax"

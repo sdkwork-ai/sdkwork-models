@@ -25,11 +25,46 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-23T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "0.050000",
       "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "standby"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "audio_output_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-live-1-minute-standby",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "0917a6b798e5b4bf27bf78a7694ec87565fcaf23a66a47b3b2a61ba0ad4c879f",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "unitPrice": "0.020000",
+      "unitSize": "1",
+      "tierCode": "standby"
     }
   ],
   "regionCode": "global",

@@ -31,8 +31,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://www.byteplus.com/en/product/modelark"
       },
       "tierCode": "input_le_128k",
       "unitPrice": "0.10",
@@ -66,8 +66,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://www.byteplus.com/en/product/modelark"
       },
       "tierCode": "input_le_128k",
       "unitPrice": "0.02",
@@ -101,8 +101,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://www.byteplus.com/en/product/modelark"
       },
       "tierCode": "input_le_128k",
       "unitPrice": "0.40",
@@ -136,8 +136,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://www.byteplus.com/en/product/modelark"
       },
       "tierCode": "input_128k_256k",
       "unitPrice": "0.20",
@@ -171,8 +171,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://www.byteplus.com/en/product/modelark"
       },
       "tierCode": "input_128k_256k",
       "unitPrice": "0.04",
@@ -206,8 +206,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://docs.byteplus.com/en/docs/ModelArk/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://www.byteplus.com/en/product/modelark"
       },
       "tierCode": "input_128k_256k",
       "unitPrice": "0.80",

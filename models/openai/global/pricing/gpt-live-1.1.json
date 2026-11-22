@@ -1,0 +1,73 @@
+{
+  "catalogKey": "openai/gpt-live-1.1",
+  "currency": "USD",
+  "modelId": "gpt-live-1.1",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "audio_output_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-live-1.1-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d1f48907057bd6a5bc5f71c865464896c4bb48e7b3bba0baf2def0b357ec3f0d",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "unitPrice": "0.050000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "standby"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "audio_output_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.openai.global.official",
+      "priceId": "openai-gpt-live-1.1-minute-standby",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.openai.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3d5f3bbd01a600ad35e4f5ad830ff1cf43f508c52cb202622be6967b3322115a",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+      },
+      "unitPrice": "0.020000",
+      "unitSize": "1",
+      "tierCode": "standby"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "openai"
+}

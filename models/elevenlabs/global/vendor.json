@@ -57,7 +57,8 @@
     "elevenlabs-tts",
     "elevenlabs-stt",
     "elevenlabs-music",
-    "elevenlabs-sfx"
+    "elevenlabs-sfx",
+    "elevenlabs-realtime"
   ],
   "nativeApiBaseUrl": {
     "host": "api.elevenlabs.io",

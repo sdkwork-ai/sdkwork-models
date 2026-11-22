@@ -31,8 +31,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
       },
       "tierCode": "input_le_32k",
       "unitPrice": "3.2",
@@ -66,8 +66,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
       },
       "tierCode": "input_le_32k",
       "unitPrice": "0.64",
@@ -101,8 +101,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
       },
       "tierCode": "input_le_32k",
       "unitPrice": "16.0",
@@ -136,8 +136,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
       },
       "tierCode": "input_32k_128k",
       "unitPrice": "4.8",
@@ -171,8 +171,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
       },
       "tierCode": "input_32k_128k",
       "unitPrice": "0.96",
@@ -206,8 +206,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
       },
       "tierCode": "input_32k_128k",
       "unitPrice": "24.0",
@@ -241,8 +241,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
       },
       "tierCode": "input_128k_256k",
       "unitPrice": "9.6",
@@ -276,8 +276,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
       },
       "tierCode": "input_128k_256k",
       "unitPrice": "1.92",
@@ -311,8 +311,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://www.volcengine.com/docs/82379/1544106"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
       },
       "tierCode": "input_128k_256k",
       "unitPrice": "48.0",

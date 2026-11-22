@@ -1,5 +1,5 @@
 {
-  "catalogVersion": "2026.11.19.4",
+  "catalogVersion": "2026.11.23.1",
   "schemaVersion": "1.1.0",
   "vendors": [
     {
@@ -121,13 +121,13 @@
           "displayName": "OpenAI",
           "legalName": "OpenAI, Inc.",
           "marketScope": "global",
-          "modelCount": 54,
+          "modelCount": 55,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "openai/global/vendor.json",
-          "pricingFileCount": 54,
+          "pricingFileCount": 55,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 10,
@@ -258,13 +258,13 @@
           "displayName": "Anthropic",
           "legalName": "Anthropic, PBC",
           "marketScope": "global",
-          "modelCount": 16,
+          "modelCount": 18,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "anthropic/global/vendor.json",
-          "pricingFileCount": 16,
+          "pricingFileCount": 18,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 20,
@@ -765,13 +765,13 @@
           "displayName": "Alibaba Cloud",
           "legalName": "Alibaba Cloud",
           "marketScope": "china_mainland",
-          "modelCount": 15,
+          "modelCount": 16,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "alibaba/cn/vendor.json",
-          "pricingFileCount": 15,
+          "pricingFileCount": 16,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 50,
@@ -932,13 +932,13 @@
           "displayName": "Alibaba Cloud",
           "legalName": "Alibaba Cloud",
           "marketScope": "international",
-          "modelCount": 5,
+          "modelCount": 6,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "alibaba/global/vendor.json",
-          "pricingFileCount": 5,
+          "pricingFileCount": 6,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 51,
@@ -1442,6 +1442,7 @@
     },
     {
       "capabilities": [
+        "audio",
         "chat",
         "embedding",
         "image",
@@ -1497,6 +1498,7 @@
           "billingCurrency": "CNY",
           "billingJurisdiction": "CN",
           "capabilities": [
+            "audio",
             "chat",
             "embedding",
             "image",
@@ -1547,13 +1549,13 @@
           "displayName": "Zhipu AI",
           "legalName": "Zhipu AI",
           "marketScope": "china_mainland",
-          "modelCount": 16,
+          "modelCount": 19,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "zhipu/cn/vendor.json",
-          "pricingFileCount": 16,
+          "pricingFileCount": 19,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 80,
@@ -1674,13 +1676,13 @@
           "displayName": "Runway",
           "legalName": "Runway AI, Inc.",
           "marketScope": "global",
-          "modelCount": 55,
+          "modelCount": 58,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "runway/global/vendor.json",
-          "pricingFileCount": 54,
+          "pricingFileCount": 57,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 85,
@@ -1797,7 +1799,7 @@
           "displayName": "Baidu AI Cloud",
           "legalName": "Baidu AI Cloud",
           "marketScope": "china_mainland",
-          "modelCount": 11,
+          "modelCount": 13,
           "openSource": false,
           "operatingRegions": [
             "CN"
@@ -2421,13 +2423,13 @@
           "displayName": "Tencent Cloud",
           "legalName": "Tencent Cloud",
           "marketScope": "china_mainland",
-          "modelCount": 11,
+          "modelCount": 12,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "tencent/cn/vendor.json",
-          "pricingFileCount": 11,
+          "pricingFileCount": 12,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 100,
@@ -2554,13 +2556,13 @@
           "displayName": "ByteDance",
           "legalName": "ByteDance",
           "marketScope": "china_mainland",
-          "modelCount": 30,
+          "modelCount": 31,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "bytedance/cn/vendor.json",
-          "pricingFileCount": 28,
+          "pricingFileCount": 29,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 110,
@@ -2836,7 +2838,7 @@
             "GLOBAL"
           ],
           "path": "minimax/global/vendor.json",
-          "pricingFileCount": 32,
+          "pricingFileCount": 33,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 120,
@@ -3150,13 +3152,13 @@
           "displayName": "Kuaishou",
           "legalName": "Kuaishou",
           "marketScope": "international",
-          "modelCount": 14,
+          "modelCount": 15,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "kuaishou/global/vendor.json",
-          "pricingFileCount": 14,
+          "pricingFileCount": 15,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 130,
@@ -3273,13 +3275,13 @@
           "displayName": "Meituan",
           "legalName": "Meituan",
           "marketScope": "china_mainland",
-          "modelCount": 3,
+          "modelCount": 4,
           "openSource": true,
           "operatingRegions": [
             "CN"
           ],
           "path": "meituan/cn/vendor.json",
-          "pricingFileCount": 3,
+          "pricingFileCount": 4,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 130,

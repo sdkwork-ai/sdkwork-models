@@ -25,8 +25,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-11-19T00:00:00Z",
-    "sourceUrl": "https://developers.openai.com/api/docs/models/gpt-image-2.6-flare"
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models"
   },
   "strengths": [
     "Text to image",

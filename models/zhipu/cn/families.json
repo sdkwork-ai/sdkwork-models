@@ -33,6 +33,22 @@
       "sortOrder": 35
     },
     {
+      "defaultModel": "glm-4-voice",
+      "displayName": "GLM Voice",
+      "familyCode": "glm-voice",
+      "familyType": "audio",
+      "primaryModality": "audio",
+      "sortOrder": 36
+    },
+    {
+      "defaultModel": "glm-asr-2512",
+      "displayName": "GLM ASR",
+      "familyCode": "glm-asr",
+      "familyType": "audio",
+      "primaryModality": "audio",
+      "sortOrder": 38
+    },
+    {
       "defaultModel": "embedding-3",
       "displayName": "Zhipu Embedding",
       "familyCode": "zhipu-embedding",

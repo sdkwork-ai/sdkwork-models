@@ -32,8 +32,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/pixverse-v6-t2v"
       },
       "tierCode": "res_360p",
       "unitPrice": "0.150000",
@@ -68,8 +68,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/pixverse-v6-t2v"
       },
       "tierCode": "res_540p",
       "unitPrice": "0.210000",
@@ -104,8 +104,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/pixverse-v6-t2v"
       },
       "tierCode": "res_720p",
       "unitPrice": "0.270000",
@@ -140,8 +140,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/pixverse-v6-t2v"
       },
       "tierCode": "res_1080p",
       "unitPrice": "0.530000",
@@ -176,8 +176,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/pixverse-v6-t2v"
       },
       "tierCode": "audio_res_360p",
       "unitPrice": "0.210000",
@@ -212,8 +212,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/pixverse-v6-t2v"
       },
       "tierCode": "audio_res_540p",
       "unitPrice": "0.270000",
@@ -248,8 +248,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/pixverse-v6-t2v"
       },
       "tierCode": "audio_res_720p",
       "unitPrice": "0.360000",
@@ -284,8 +284,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/pixverse-v6-t2v"
       },
       "tierCode": "audio_res_1080p",
       "unitPrice": "0.680000",

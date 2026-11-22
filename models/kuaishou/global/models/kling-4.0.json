@@ -6,7 +6,7 @@
   "catalogKey": "kuaishou/kling-4.0",
   "codingVisible": false,
   "colorToken": "#6d28d9",
-  "description": "[Live · API now available] Next-generation native multimodal AI video creation model: native 30s generation, smoother high-dynamic motions, omni reference (up to 15 references), up to 10 keyframes, and precise localized editing of finished videos. Capability map parameters: input text/image/video, duration 3~30s, resolution 720P/1080P/4K, dynamic range SDR/10-bit HDR, aspect ratios 21:9/16:9/1:1/9:16/adaptive. Billing (official Units; 4K not priced): no input video (total = output duration) 1.0 Unit/s at 720P, 1.5 Units/s at 1080P; with input video and input <= output (total = output x 2) 0.6 Units/s at 720P, 0.9 Units/s at 1080P; with input video and input > output (total = input + output) 0.6/0.9 Units/s. Official notice: to call the Kling 4.0 model, purchase the Flagship Resource Pack or contact the account manager to top up the account balance.",
+  "description": "[Live · API now available] Next-generation native multimodal AI video creation model: native 30s generation, smoother high-dynamic motions, omni reference (up to 15 references), up to 10 keyframes, and precise localized editing of finished videos. Capability map parameters: input text/image/video, duration 3~30s, resolution 720P/1080P/4K, dynamic range SDR/10-bit HDR, aspect ratios 21:9/16:9/1:1/9:16/adaptive. Billing (official Units): no input video (total = output duration) 1.0 Unit/s at 720P, 1.5 Units/s at 1080P, 3.5 Units/s at 4K; with input video and input <= output (total = output x 2) 0.6 Units/s at 720P, 0.9 Units/s at 1080P, 2.1 Units/s at 4K; with input video and input > output (total = input + output) 0.6/0.9/2.1 Units/s; HDR adds +0.3 Unit/s at 1080P and +0.5 Unit/s at 4K. Official notice: to call the Kling 4.0 model, purchase the Flagship Resource Pack or contact the account manager to top up the account balance.",
   "displayName": "Kling 4.0",
   "familyCode": "kling",
   "inputModalities": [
@@ -27,8 +27,8 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
-    "sourceUrl": "https://kling.ai/document-api/pricing/base/video"
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
   },
   "strengths": [
     "Native 30s generation",

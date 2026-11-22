@@ -31,8 +31,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus"
       },
       "tierCode": "tier_256k",
       "unitPrice": "2.000000",
@@ -66,8 +66,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus"
       },
       "tierCode": "tier_256k",
       "unitPrice": "8.000000",
@@ -101,8 +101,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus"
       },
       "tierCode": "tier_1m",
       "unitPrice": "6.000000",
@@ -136,8 +136,8 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
-        "sourceUrl": "https://help.aliyun.com/zh/model-studio/billing"
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus"
       },
       "tierCode": "tier_1m",
       "unitPrice": "24.000000",

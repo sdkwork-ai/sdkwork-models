@@ -6,7 +6,7 @@
   "catalogKey": "openai/gpt-image-1.5",
   "codingVisible": false,
   "colorToken": "#0f766e",
-  "description": "Previous OpenAI image generation model. Officially deprecated on 2026-06-02; scheduled for removal from the API on December 1, 2026; official replacement: gpt-image-2.5-sunburst or gpt-image-2.5-flare.",
+  "description": "Previous OpenAI image generation model. Officially deprecated on 2026-06-02; scheduled for removal from the API on December 1, 2026; official replacements: gpt-image-2.6-sunburst or gpt-image-2.6-flare.",
   "displayName": "GPT Image 1.5",
   "familyCode": "gpt-image",
   "inputModalities": [
@@ -24,12 +24,12 @@
   "rankScore": "790.000000",
   "regionCode": "global",
   "releaseStage": "deprecated",
-  "replacementModel": "gpt-image-2.5-sunburst",
+  "replacementModel": "gpt-image-2.6-sunburst",
   "routingState": "catalog_only",
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
+    "observedAt": "2026-11-23T00:00:00Z",
     "sourceUrl": "https://developers.openai.com/api/docs/deprecations"
   },
   "strengths": [

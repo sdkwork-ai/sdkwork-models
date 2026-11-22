@@ -1,0 +1,44 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "audio",
+    "chat"
+  ],
+  "catalogKey": "openai/gpt-live-1.1",
+  "codingVisible": false,
+  "colorToken": "#6366f1",
+  "description": "Latest GPT-Live full-duplex voice model for natural, multilingual conversations with smooth interruption handling. Sessions are billed per second ($0.05 per minute active, $0.02 per minute standby) without rounding up to a whole minute; backend model and tool usage is charged separately.",
+  "displayName": "GPT-Live 1.1",
+  "familyCode": "gpt-realtime",
+  "inputModalities": [
+    "text",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "gpt-live-1.1",
+  "outputModalities": [
+    "text",
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "rankScore": "890.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/pricing"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.991000",
+  "usageScopes": [
+    "chat"
+  ],
+  "vendorCode": "openai",
+  "vendorName": "OpenAI",
+  "winRate": "0.945000"
+}

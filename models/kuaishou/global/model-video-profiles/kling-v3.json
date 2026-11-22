@@ -25,7 +25,10 @@
         "duration": "3-15",
         "mode": "std",
         "resolution": "1080p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_1080p"
+      ]
     },
     {
       "aspectRatios": [
@@ -50,7 +53,10 @@
         "duration": "3-15",
         "mode": "std",
         "resolution": "4k"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_4k"
+      ]
     },
     {
       "aspectRatios": [
@@ -75,7 +81,10 @@
         "duration": "3-15",
         "mode": "std",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -99,7 +108,10 @@
         "duration": "3-15",
         "mode": "pro",
         "resolution": "1080p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_1080p"
+      ]
     },
     {
       "aspectRatios": [
@@ -124,7 +136,10 @@
         "duration": "3-15",
         "mode": "pro",
         "resolution": "4k"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_4k"
+      ]
     },
     {
       "aspectRatios": [
@@ -149,7 +164,10 @@
         "duration": "3-15",
         "mode": "pro",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -173,7 +191,10 @@
         "duration": "3-15",
         "mode": "multi_shot",
         "resolution": "1080p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_1080p"
+      ]
     },
     {
       "aspectRatios": [
@@ -198,7 +219,10 @@
         "duration": "3-15",
         "mode": "multi_shot",
         "resolution": "4k"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_4k"
+      ]
     },
     {
       "aspectRatios": [
@@ -223,7 +247,10 @@
         "duration": "3-15",
         "mode": "multi_shot",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "audio_res_720p"
+      ]
     },
     {
       "aspectRatios": [
@@ -337,8 +364,8 @@
   "regionCode": "global",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
-    "sourceUrl": "https://app.klingai.com/global/dev/document-api"
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
   },
   "vendorCode": "kuaishou"
 }

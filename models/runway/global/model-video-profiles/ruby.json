@@ -29,7 +29,10 @@
       "wireParameters": {
         "duration": "5,10",
         "resolution": "720p"
-      }
+      },
+      "pricingTierCodes": [
+        "upto_4mp"
+      ]
     }
   ],
   "regionCode": "global",
