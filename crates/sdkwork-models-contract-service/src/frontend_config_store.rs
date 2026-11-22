@@ -66,6 +66,13 @@ pub struct FrontendConfig {
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub struct LoadFrontendConfigQuery {
     pub subject: FrontendConfigSubject,
+    /// When `true`, only exposed models the catalog still serves are returned.
+    ///
+    /// The app surface sets this: a row whose catalog key was retired, deleted,
+    /// or disabled must never reach a product client, even if an operator has
+    /// not opened the admin page since the catalog changed. The admin surface
+    /// leaves it `false` so it can still show (and repair) stale rows.
+    pub catalog_backed_only: bool,
 }
 
 /// One channel in a replace request, with server-assigned row UUIDs.
@@ -118,6 +125,9 @@ pub struct ReplaceFrontendConfigCommand {
     pub request_id: String,
     pub snapshot_uuid: String,
     pub requested_at: String,
+    /// Revision the editor loaded. When present, the replace is refused with a
+    /// conflict instead of overwriting a revision published in between.
+    pub expected_revision: Option<i64>,
 }
 
 /// Storage port for the front-end model configuration tables.

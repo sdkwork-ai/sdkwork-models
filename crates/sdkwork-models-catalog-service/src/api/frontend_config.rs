@@ -130,6 +130,11 @@ struct FrontendConfigReplaceRequest {
     channels: Vec<FrontendChannelRequest>,
     #[serde(default)]
     source: Option<String>,
+    /// Revision the editor loaded. When present, a replace whose base revision
+    /// is no longer published is refused with HTTP 409 instead of overwriting
+    /// another operator's change.
+    #[serde(default)]
+    expected_revision: Option<i64>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -205,12 +210,15 @@ async fn fetch_frontend_config(
     ctx: WebRequestContext,
     State(state): State<FrontendConfigState>,
     trusted: TrustedRequestSubject,
-    _headers: HeaderMap,
+    headers: HeaderMap,
 ) -> Response {
     let subject = map_subject(trusted);
     match state
         .store
-        .load_frontend_config(LoadFrontendConfigQuery { subject })
+        .load_frontend_config(LoadFrontendConfigQuery {
+            subject,
+            catalog_backed_only: false,
+        })
         .await
     {
         Ok(config) => {
@@ -222,7 +230,26 @@ async fn fetch_frontend_config(
             } else {
                 config
             };
-            finish_success(&ctx, to_response(config))
+            let response = to_response(config);
+            let etag = frontend_config_etag(response.revision, &response);
+            if if_none_match_matches(&headers, &etag) {
+                let mut not_modified = StatusCode::NOT_MODIFIED.into_response();
+                if let Ok(value) = HeaderValue::from_str(&etag) {
+                    not_modified.headers_mut().insert(header::ETAG, value);
+                }
+                not_modified
+                    .headers_mut()
+                    .insert(header::CACHE_CONTROL, HeaderValue::from_static("no-cache"));
+                return not_modified;
+            }
+            let mut response = finish_success(&ctx, response);
+            if let Ok(value) = HeaderValue::from_str(&etag) {
+                response.headers_mut().insert(header::ETAG, value);
+            }
+            response
+                .headers_mut()
+                .insert(header::CACHE_CONTROL, HeaderValue::from_static("no-cache"));
+            response
         }
         Err(error) => problem_for(&ctx, SdkWorkResultCode::InternalError, error.to_string()),
     }
@@ -242,7 +269,10 @@ async fn fetch_app_frontend_config(
     });
     match state
         .store
-        .load_frontend_config(LoadFrontendConfigQuery { subject })
+        .load_frontend_config(LoadFrontendConfigQuery {
+            subject,
+            catalog_backed_only: true,
+        })
         .await
     {
         Ok(config) => {
@@ -256,7 +286,7 @@ async fn fetch_app_frontend_config(
                 revision: config.revision,
                 channels: visible,
             });
-            let etag = format!("\"fmc-{}\"", response.revision);
+            let etag = frontend_config_etag(response.revision, &response);
             if if_none_match_matches(&headers, &etag) {
                 let mut not_modified = StatusCode::NOT_MODIFIED.into_response();
                 if let Ok(value) = HeaderValue::from_str(&etag) {
@@ -324,6 +354,41 @@ fn if_none_match_matches(headers: &HeaderMap, etag: &str) -> bool {
         .any(|candidate| candidate == "*" || candidate.trim_start_matches("W/") == etag)
 }
 
+/// FNV-1a 64-bit over one byte slice, continuing from a running hash.
+fn fnv1a64(hash: u64, bytes: &[u8]) -> u64 {
+    let mut hash = hash;
+    for byte in bytes {
+        hash ^= u64::from(*byte);
+        hash = hash.wrapping_mul(0x0000_0100_0000_01b3);
+    }
+    hash
+}
+
+/// Entity tag of one served document.
+///
+/// The revision alone is not a sufficient validator: the catalog-backed app
+/// read can drop a model when the catalog removes or disables it, without a
+/// front-end revision bump. Folding the served channel/model/field membership
+/// into the tag makes a changed exposure a different entity, so a conditional
+/// request cannot keep a stale filtered document.
+fn frontend_config_etag(revision: i64, response: &FrontendConfigResponse) -> String {
+    let mut hash = 0xcbf2_9ce4_8422_2325u64;
+    hash = fnv1a64(hash, revision.to_string().as_bytes());
+    for channel in &response.channels {
+        hash = fnv1a64(hash, b"\x1f");
+        hash = fnv1a64(hash, channel.channel_code.as_bytes());
+        for model in &channel.models {
+            hash = fnv1a64(hash, b"\x1e");
+            hash = fnv1a64(hash, model.catalog_key.as_bytes());
+        }
+        for field in &channel.fields {
+            hash = fnv1a64(hash, b"\x1d");
+            hash = fnv1a64(hash, field.field_key.as_bytes());
+        }
+    }
+    format!("\"fmc-{revision}-{hash:016x}\"")
+}
+
 async fn replace_frontend_config(
     ctx: WebRequestContext,
     State(state): State<FrontendConfigState>,
@@ -353,6 +418,9 @@ async fn replace_frontend_config(
     };
     match state.store.replace_frontend_config(command).await {
         Ok(config) => finish_success(&ctx, to_response(config)),
+        Err(error) if error.is_conflict() => {
+            problem_for(&ctx, SdkWorkResultCode::Conflict, error.to_string())
+        }
         Err(error) => problem_for(&ctx, SdkWorkResultCode::InternalError, error.to_string()),
     }
 }
@@ -420,10 +488,16 @@ fn build_replace_command(
         request_id: generate_server_request_id().unwrap_or_else(|_| String::new()),
         snapshot_uuid: generator.generate_entity_uuid()?,
         requested_at: current_timestamp_string(),
+        expected_revision: request.expected_revision,
     })
 }
 
 fn validate_request(request: &FrontendConfigReplaceRequest) -> Result<(), String> {
+    if let Some(expected_revision) = request.expected_revision {
+        if expected_revision < 0 {
+            return Err("expectedRevision must be greater than or equal to 0".to_owned());
+        }
+    }
     if let Some(source) = request.source.as_deref() {
         validate_text("source", source, MAX_SOURCE_LEN, true)?;
     }
@@ -975,6 +1049,35 @@ mod tests {
         }
     }
 
+    /// A store whose replace reports the backend's optimistic-concurrency
+    /// rejection, as the PostgreSQL store does when the base revision moved.
+    struct ConflictedFrontendConfigStore;
+
+    impl FrontendConfigStore for ConflictedFrontendConfigStore {
+        fn load_frontend_config<'a>(
+            &'a self,
+            _query: LoadFrontendConfigQuery,
+        ) -> FrontendConfigFuture<'a, FrontendConfig> {
+            Box::pin(async {
+                Ok(FrontendConfig {
+                    revision: 0,
+                    channels: Vec::new(),
+                })
+            })
+        }
+
+        fn replace_frontend_config<'a>(
+            &'a self,
+            _command: ReplaceFrontendConfigCommand,
+        ) -> FrontendConfigFuture<'a, FrontendConfig> {
+            Box::pin(async {
+                Err(sdkwork_models_contract_service::DomainError::conflict(
+                    "frontend config revision conflict: expected 1, current 2",
+                ))
+            })
+        }
+    }
+
     struct FixedUuidGenerator;
 
     impl EntityUuidGenerator for FixedUuidGenerator {
@@ -1063,10 +1166,31 @@ mod tests {
             entity_uuid_generator: None,
         };
 
+        let response =
+            fetch_app_frontend_config(test_context(), State(state.clone()), None, HeaderMap::new())
+                .await;
+        assert_eq!(response.status(), StatusCode::OK);
+        let etag = response
+            .headers()
+            .get(axum::http::header::ETAG)
+            .and_then(|value| value.to_str().ok())
+            .expect("app read emits an entity tag")
+            .to_owned();
+        assert!(
+            etag.starts_with("\"fmc-7-"),
+            "the entity tag folds the served membership into the revision: {etag}"
+        );
+        let body = to_bytes(response.into_body(), usize::MAX)
+            .await
+            .expect("read app response body");
+        let value: Value = serde_json::from_slice(&body).expect("parse app response body");
+        assert_eq!(value["code"], 0);
+        assert_eq!(value["data"]["channels"].as_array().map(Vec::len), Some(7));
+
         let mut headers = HeaderMap::new();
         headers.insert(
             axum::http::header::IF_NONE_MATCH,
-            HeaderValue::from_static("\"fmc-7\""),
+            HeaderValue::from_str(&etag).expect("valid entity tag"),
         );
         let not_modified =
             fetch_app_frontend_config(test_context(), State(state.clone()), None, headers).await;
@@ -1076,25 +1200,113 @@ mod tests {
                 .headers()
                 .get(axum::http::header::ETAG)
                 .and_then(|value| value.to_str().ok()),
-            Some("\"fmc-7\"")
+            Some(etag.as_str())
         );
 
+        // A revision-only validator from an older deployment must not suppress
+        // a body whose exposure set can differ.
+        let mut legacy = HeaderMap::new();
+        legacy.insert(
+            axum::http::header::IF_NONE_MATCH,
+            HeaderValue::from_static("\"fmc-7\""),
+        );
+        let legacy_response =
+            fetch_app_frontend_config(test_context(), State(state), None, legacy).await;
+        assert_eq!(legacy_response.status(), StatusCode::OK);
+    }
+
+    #[tokio::test]
+    async fn app_read_serves_only_enabled_and_visible_rows_and_normalizes_the_default() {
+        fn model(catalog_key: &str, visible: bool) -> FrontendChannelModel {
+            FrontendChannelModel {
+                catalog_key: catalog_key.to_owned(),
+                model_id: Some(1),
+                visible,
+                featured: false,
+                sort_order: 10,
+                badge: None,
+                config: json!({}),
+            }
+        }
+        fn field(field_key: &str, visible: bool) -> FrontendChannelField {
+            FrontendChannelField {
+                field_key: field_key.to_owned(),
+                visible,
+                sort_order: 10,
+                config: json!({}),
+            }
+        }
+        fn channel(
+            channel_code: &str,
+            enabled: bool,
+            models: Vec<FrontendChannelModel>,
+            fields: Vec<FrontendChannelField>,
+        ) -> FrontendChannel {
+            FrontendChannel {
+                channel_code: channel_code.to_owned(),
+                display_name: channel_code.to_owned(),
+                display_name_i18n: json!({}),
+                description: None,
+                enabled,
+                sort_order: 10,
+                // The stored default names a hidden row on purpose: the app
+                // read must never serve a default it cannot resolve.
+                default_catalog_key: Some("vendor/hidden".to_owned()),
+                capability_codes: vec!["chat".to_owned()],
+                config: json!({}),
+                schema_version: "1.0.0".to_owned(),
+                revision: 9,
+                models,
+                fields,
+            }
+        }
+        let state = FrontendConfigState {
+            store: Arc::new(StaticFrontendConfigStore(FrontendConfig {
+                revision: 9,
+                channels: vec![
+                    channel(
+                        "llm",
+                        true,
+                        vec![model("vendor/visible", true), model("vendor/hidden", false)],
+                        vec![field("price", true), field("latency", false)],
+                    ),
+                    channel(
+                        "video",
+                        false,
+                        vec![model("vendor/video", true)],
+                        Vec::new(),
+                    ),
+                ],
+            })),
+            entity_uuid_generator: None,
+        };
         let response =
             fetch_app_frontend_config(test_context(), State(state), None, HeaderMap::new()).await;
         assert_eq!(response.status(), StatusCode::OK);
-        assert_eq!(
-            response
-                .headers()
-                .get(axum::http::header::ETAG)
-                .and_then(|value| value.to_str().ok()),
-            Some("\"fmc-7\"")
-        );
         let body = to_bytes(response.into_body(), usize::MAX)
             .await
             .expect("read app response body");
         let value: Value = serde_json::from_slice(&body).expect("parse app response body");
-        assert_eq!(value["code"], 0);
-        assert_eq!(value["data"]["channels"].as_array().map(Vec::len), Some(7));
+        let channels = value["data"]["channels"]
+            .as_array()
+            .expect("channels array");
+        assert_eq!(channels.len(), 1, "a disabled surface is not served");
+        assert_eq!(channels[0]["channelCode"], "llm");
+        assert_eq!(
+            channels[0]["models"].as_array().map(Vec::len),
+            Some(1),
+            "a hidden exposed model is not served"
+        );
+        assert_eq!(channels[0]["models"][0]["catalogKey"], "vendor/visible");
+        assert_eq!(
+            channels[0]["fields"].as_array().map(Vec::len),
+            Some(1),
+            "a hidden field is not served"
+        );
+        assert_eq!(
+            channels[0]["defaultCatalogKey"], "vendor/visible",
+            "the served default resolves to a visible model"
+        );
     }
 
     #[tokio::test]
@@ -1123,6 +1335,7 @@ mod tests {
                     }],
                     "fields": [{ "fieldKey": "price", "visible": true, "sortOrder": 10 }]
                 }],
+                "expectedRevision": 0,
                 "source": "test"
             }))
             .expect("serialize replace request"),
@@ -1141,6 +1354,11 @@ mod tests {
         assert_eq!(commands.len(), 1);
         let command = &commands[0];
         assert_eq!(command.source, "test");
+        assert_eq!(
+            command.expected_revision,
+            Some(0),
+            "the replace must carry the editor's base revision"
+        );
         assert_eq!(command.channels.len(), 1);
         let channel = &command.channels[0];
         assert_eq!(channel.channel_code, "llm");
@@ -1195,6 +1413,125 @@ mod tests {
         let value: Value = serde_json::from_slice(&body).expect("parse problem body");
         assert!(value["code"].is_number());
         assert!(value["traceId"].is_string());
+    }
+
+    #[tokio::test]
+    async fn admin_read_emits_etag_and_honors_if_none_match() {
+        let state = FrontendConfigState {
+            store: Arc::new(StaticFrontendConfigStore(FrontendConfig {
+                revision: 5,
+                channels: default_frontend_channels(),
+            })),
+            entity_uuid_generator: None,
+        };
+
+        let response = fetch_frontend_config(
+            test_context(),
+            State(state.clone()),
+            trusted_subject(),
+            HeaderMap::new(),
+        )
+        .await;
+        assert_eq!(response.status(), StatusCode::OK);
+        let etag = response
+            .headers()
+            .get(axum::http::header::ETAG)
+            .and_then(|value| value.to_str().ok())
+            .expect("admin read emits an entity tag")
+            .to_owned();
+        assert!(
+            etag.starts_with("\"fmc-5-"),
+            "the admin entity tag folds the document membership into the revision: {etag}"
+        );
+        assert_eq!(
+            response
+                .headers()
+                .get(axum::http::header::CACHE_CONTROL)
+                .and_then(|value| value.to_str().ok()),
+            Some("no-cache")
+        );
+        let body = to_bytes(response.into_body(), usize::MAX)
+            .await
+            .expect("read admin response body");
+        let value: Value = serde_json::from_slice(&body).expect("parse admin response body");
+        assert_eq!(value["code"], 0);
+        assert_eq!(value["data"]["revision"], 5);
+
+        let mut headers = HeaderMap::new();
+        headers.insert(
+            axum::http::header::IF_NONE_MATCH,
+            HeaderValue::from_str(&etag).expect("valid entity tag"),
+        );
+        let not_modified =
+            fetch_frontend_config(test_context(), State(state), trusted_subject(), headers).await;
+        assert_eq!(not_modified.status(), StatusCode::NOT_MODIFIED);
+        assert_eq!(
+            not_modified
+                .headers()
+                .get(axum::http::header::ETAG)
+                .and_then(|value| value.to_str().ok()),
+            Some(etag.as_str())
+        );
+    }
+
+    #[tokio::test]
+    async fn replace_handler_maps_a_revision_conflict_to_http_409() {
+        let state = FrontendConfigState {
+            store: Arc::new(ConflictedFrontendConfigStore),
+            entity_uuid_generator: Some(Arc::new(FixedUuidGenerator)),
+        };
+        let body = Bytes::from(
+            serde_json::to_vec(&json!({
+                "channels": [{ "channelCode": "llm", "displayName": "LLM" }],
+                "expectedRevision": 1
+            }))
+            .expect("serialize conflicted replace request"),
+        );
+        let response = replace_frontend_config(
+            test_context(),
+            State(state),
+            trusted_subject(),
+            HeaderMap::new(),
+            body,
+        )
+        .await;
+        assert_eq!(response.status(), StatusCode::CONFLICT);
+        assert_eq!(
+            response
+                .headers()
+                .get(axum::http::header::CONTENT_TYPE)
+                .and_then(|value| value.to_str().ok()),
+            Some("application/problem+json")
+        );
+        let body = to_bytes(response.into_body(), usize::MAX)
+            .await
+            .expect("read conflict body");
+        let value: Value = serde_json::from_slice(&body).expect("parse conflict body");
+        assert_eq!(value["code"], 40901);
+    }
+
+    #[tokio::test]
+    async fn replace_handler_rejects_a_negative_expected_revision() {
+        let state = FrontendConfigState {
+            store: Arc::new(EmptyFrontendConfigStore),
+            entity_uuid_generator: Some(Arc::new(FixedUuidGenerator)),
+        };
+        let body = Bytes::from(
+            serde_json::to_vec(&json!({
+                "channels": [{ "channelCode": "llm", "displayName": "LLM" }],
+                "expectedRevision": -1
+            }))
+            .expect("serialize invalid replace request"),
+        );
+        let response = replace_frontend_config(
+            test_context(),
+            State(state),
+            trusted_subject(),
+            HeaderMap::new(),
+            body,
+        )
+        .await;
+        assert_eq!(response.status(), StatusCode::BAD_REQUEST);
     }
 
     #[test]

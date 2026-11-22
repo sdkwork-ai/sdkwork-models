@@ -57,6 +57,55 @@ export interface FrontendConfigDocument {
 
 const FRONTEND_CONFIG_PATH = '/backend/v3/api/ai/frontend_config';
 
+/**
+ * The document changed on the server between the read the operator edited and
+ * the replace, so the optimistic-concurrency guard refused the write.
+ *
+ * The page reloads on this error instead of overwriting another operator's
+ * revision.
+ */
+export class FrontendConfigRevisionConflictError extends Error {
+  constructor() {
+    super('frontend_config_revision_conflict');
+    this.name = 'FrontendConfigRevisionConflictError';
+  }
+}
+
+/** Record whose string/number fields can be inspected defensively. */
+function isObjectRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+/** Whether one value carries the platform's HTTP 409 or numeric conflict code. */
+function isConflictCode(field: string, value: unknown): boolean {
+  if (typeof value === 'number' && Number.isFinite(value)) {
+    return field === 'status' ? value === 409 : value === 40901 || value === 409;
+  }
+  return typeof value === 'string' && /^(?:40901|409|conflict)$/iu.test(value.trim());
+}
+
+/**
+ * Detect the backend's revision-conflict failure across the SDK error shapes:
+ * a plain `ProblemDetail` value, an error carrying `problem`, or an error whose
+ * `cause` wraps one.
+ * @param error - the thrown value.
+ * @returns whether the write was refused because the revision is stale.
+ */
+export function isFrontendConfigRevisionConflict(error: unknown): boolean {
+  if (error instanceof FrontendConfigRevisionConflictError) return true;
+  const candidates: unknown[] = [error];
+  if (isObjectRecord(error)) {
+    candidates.push(error.problem, error.cause, error.response);
+  }
+  for (const candidate of candidates) {
+    if (!isObjectRecord(candidate)) continue;
+    for (const field of ['status', 'httpStatus', 'code'] as const) {
+      if (isConflictCode(field, candidate[field])) return true;
+    }
+  }
+  return false;
+}
+
 function readJsonObject(value: unknown): Record<string, unknown> {
   return isRecord(value) ? value : {};
 }
@@ -139,38 +188,65 @@ export async function loadFrontendConfigDocument(): Promise<FrontendConfigDocume
   return readDocument(result);
 }
 
+/** How one replace call records itself in the published revision history. */
+export interface SaveFrontendConfigOptions {
+  /** Revision the editor loaded; the backend refuses the write when it moved. */
+  expectedRevision?: number | null;
+  /** Revision source recorded by `ai_model_frontend_revision` (default `admin`). */
+  source?: string;
+}
+
 /**
  * Replace the complete front-end configuration in one transaction. The models
  * backend validates the document, retires the previous rows, writes the new
  * set, and returns the next revision.
+ *
+ * When `expectedRevision` is supplied, a server revision that moved since the
+ * client read is refused with HTTP 409 instead of silently overwriting another
+ * operator's edit; the rejection surfaces as
+ * {@link FrontendConfigRevisionConflictError}.
  * @param document - the edited channels.
+ * @param options - concurrency guard and revision source.
  */
 export async function saveFrontendConfigDocument(
   document: FrontendConfigDocument,
+  options: SaveFrontendConfigOptions = {},
 ): Promise<FrontendConfigDocument> {
   const client = getModelsBackendSdkClient();
-  const result = await client.http.request<unknown>(FRONTEND_CONFIG_PATH, {
-    method: 'PUT',
-    body: {
-      channels: document.channels.map((channel) => ({
-        channelCode: channel.channelCode,
-        displayName: channel.displayName,
-        displayNameI18n: channel.displayNameI18n,
-        description: channel.description ?? null,
-        enabled: channel.enabled,
-        sortOrder: channel.sortOrder,
-        defaultCatalogKey: channel.defaultCatalogKey ?? null,
-        capabilityCodes: channel.capabilityCodes,
-        config: channel.config,
-        schemaVersion: channel.schemaVersion,
-        models: channel.models,
-        fields: channel.fields,
-      })),
-      source: 'admin',
-    },
-    contentType: 'application/json',
-    sdkworkUnwrapKind: 'data',
-  });
+  const expectedRevision = options.expectedRevision === undefined
+    ? document.revision
+    : options.expectedRevision;
+  let result: unknown;
+  try {
+    result = await client.http.request<unknown>(FRONTEND_CONFIG_PATH, {
+      method: 'PUT',
+      body: {
+        channels: document.channels.map((channel) => ({
+          channelCode: channel.channelCode,
+          displayName: channel.displayName,
+          displayNameI18n: channel.displayNameI18n,
+          description: channel.description ?? null,
+          enabled: channel.enabled,
+          sortOrder: channel.sortOrder,
+          defaultCatalogKey: channel.defaultCatalogKey ?? null,
+          capabilityCodes: channel.capabilityCodes,
+          config: channel.config,
+          schemaVersion: channel.schemaVersion,
+          models: channel.models,
+          fields: channel.fields,
+        })),
+        ...(expectedRevision === null ? {} : { expectedRevision }),
+        source: options.source ?? 'admin',
+      },
+      contentType: 'application/json',
+      sdkworkUnwrapKind: 'data',
+    });
+  } catch (writeError) {
+    if (isFrontendConfigRevisionConflict(writeError)) {
+      throw new FrontendConfigRevisionConflictError();
+    }
+    throw writeError;
+  }
   ensureSdkworkApiSuccess(result, 'Unable to save front-end model configuration');
   return readDocument(result);
 }

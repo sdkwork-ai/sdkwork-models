@@ -169,8 +169,45 @@ models backend SDK; it never talks to Cloud Router's site settings.
 - Admin: `/admin/model/frontend` (`模型前端配置`) in the Models menu, including a
   catalog model picker for the add action and "import from catalog" (filtered by
   the channel's capability binding, paginated over the whole catalog).
+- Admin header action `更新模型数据`: calls the models backend `models.sync`
+  (the Rust-owned `sdkwork-models` catalog import), reloads the catalog, then
+  aligns every channel with the refreshed catalog. Alignment is pure and
+  client-side: a key the catalog no longer describes is disabled and loses its
+  stale int64 id, a bound id is refreshed from the catalog, duplicate rows are
+  collapsed, and a dangling default moves to the first visible model. Newly
+  published models are reported (never exposed automatically) and can be added
+  disabled in one action; bulk enable/disable only touches models the catalog
+  still describes. The aligned document is persisted as its own revision with
+  `source: "model_sync_alignment"`, so the app read and product clients observe
+  the same surface the operator reviewed.
+- Admin replace accepts an optional `expectedRevision`. The PostgreSQL store
+  serializes concurrent replaces on the tenant's live channel rows and refuses a
+  stale base revision with HTTP 409 (`40901`); a racing first publication is
+  caught by the unique `(tenant_id, organization_id, revision)` index and also
+  surfaces as 409. The admin client reloads on that conflict instead of
+  overwriting another operator's revision.
+- Both the admin and app reads of one revision are served from a bounded,
+  process-local revision cache in `PostgresFrontendConfigStore`: one indexed
+  revision lookup decides whether the cached three-table document is still
+  current, and the replace publishes the new document into the cache. A cached
+  entry is keyed by tenant and revision, so a write in another process is
+  invalidated by observation, never by a stale pointer.
+- Admin read emits `ETag: "fmc-<revision>"` and honors `If-None-Match`, matching
+  the app read; both send `Cache-Control: no-cache`.
 - The app read ships `ETag`/`If-None-Match` over the published revision and
-  returns only enabled channels, visible models, and visible fields.
+  returns only enabled channels, visible models, and visible fields. It also
+  filters exposed models to rows the catalog still serves (live, active,
+  tenant-or-global), so a retired or disabled catalog model never reaches a
+  product client even before an operator reopens the admin page; the admin read
+  deliberately keeps stale rows visible for repair (`LoadFrontendConfigQuery.
+  catalog_backed_only`).
+- Both reads use a membership-aware entity tag (`fmc-<revision>-<hash>`): the
+  revision alone cannot validate the app body, because the catalog-backed filter
+  can change the served set without a front-end revision bump. The app
+  projection's cache key additionally carries a catalog freshness stamp
+  (`MAX(updated_at)` over the visible catalog rows), so a catalog import, model
+  disable, or removal misses the cached app projection while the admin
+  projection stays cached by revision alone.
 - Generated OpenAPI/SDK exposure for the two operations is still pending; the
   admin page talks to the route through the generated client's HTTP seam in the
   meantime.

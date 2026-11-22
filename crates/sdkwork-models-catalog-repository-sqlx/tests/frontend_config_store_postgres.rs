@@ -111,6 +111,7 @@ fn replace_command(
         request_id: format!("test-request-{sequence}"),
         snapshot_uuid: format!("test-snapshot-{sequence}"),
         requested_at: "2026-11-17T12:00:00Z".to_owned(),
+        expected_revision: None,
     }
 }
 
@@ -160,7 +161,10 @@ async fn store_round_trips_and_replaces_the_frontend_configuration() {
     assert_eq!(first.channels[0].fields.len(), 1);
 
     let loaded = store
-        .load_frontend_config(LoadFrontendConfigQuery { subject: subject() })
+        .load_frontend_config(LoadFrontendConfigQuery {
+            subject: subject(),
+            catalog_backed_only: false,
+        })
         .await
         .expect("load frontend config");
     assert_eq!(loaded.revision, first.revision);
@@ -189,7 +193,10 @@ async fn store_round_trips_and_replaces_the_frontend_configuration() {
     assert!(second.revision > first.revision);
 
     let replaced = store
-        .load_frontend_config(LoadFrontendConfigQuery { subject: subject() })
+        .load_frontend_config(LoadFrontendConfigQuery {
+            subject: subject(),
+            catalog_backed_only: false,
+        })
         .await
         .expect("load replaced frontend config");
     assert_eq!(replaced.revision, second.revision);
@@ -218,6 +225,7 @@ async fn seeded_console_tenant_loads_all_modalities() {
                 operator_id: 0,
                 operator_type: 0,
             },
+            catalog_backed_only: false,
         })
         .await
         .expect("load seeded frontend config");
@@ -340,6 +348,7 @@ async fn seeded_console_tenant_loads_all_modalities() {
             request_id: "hash-check".to_owned(),
             snapshot_uuid: "hash-check".to_owned(),
             requested_at: "2026-11-17T12:00:00Z".to_owned(),
+            expected_revision: None,
         })
         .await
         .expect("replace seeded document for the hash check");

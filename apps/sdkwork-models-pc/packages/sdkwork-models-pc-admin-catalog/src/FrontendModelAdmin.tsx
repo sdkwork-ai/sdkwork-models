@@ -14,6 +14,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import { ModelService, type Model } from './modelService';
 import {
+  FrontendConfigRevisionConflictError,
   loadFrontendConfigDocument,
   saveFrontendConfigDocument,
   type FrontendChannelConfig,
@@ -21,8 +22,17 @@ import {
   type FrontendChannelModelConfig,
   type FrontendConfigDocument,
 } from './frontendConfigService';
-
-type ChannelModelType = Model['type'];
+import {
+  alignFrontendDocumentWithCatalog,
+  catalogKeyOf,
+  capabilityModelTypes,
+  mergeAvailableFrontendModels,
+  mergeCatalogModels,
+  modelIdsByKey,
+  normalizeFrontendDocumentDefaults,
+  setChannelModelsVisibility,
+  type FrontendCatalogAlignmentReport,
+} from './frontendCatalogAlignment';
 
 function emptyChannel(channelCode: string): FrontendChannelConfig {
   return {
@@ -46,112 +56,22 @@ function emptyField(fieldKey: string): FrontendChannelFieldConfig {
   return { fieldKey, visible: true, sortOrder: 0, config: {} };
 }
 
-function emptyModel(catalogKey: string, modelId: string | null = null): FrontendChannelModelConfig {
-  return {
-    catalogKey,
-    modelId,
-    visible: true,
-    featured: false,
-    sortOrder: 0,
-    badge: null,
-    config: {},
-  };
-}
-
-/**
- * Map a channel's catalog capability codes to the admin model types so the
- * model picker and the "import from catalog" action offer only models that can
- * serve the surface. An empty set means "no capability binding" and offers
- * every type.
- * @param capabilityCodes - the channel's bound capability codes.
- * @returns the model types the channel accepts.
- */
-function capabilityModelTypes(capabilityCodes: readonly string[]): Set<ChannelModelType> {
-  const types = new Set<ChannelModelType>();
-  for (const code of capabilityCodes) {
-    if (['chat', 'responses', 'completion', 'tool_calling', 'json_schema', 'batch', 'realtime', 'moderation', 'computer_use', 'web_search', 'file_search', 'code_interpreter'].includes(code)) types.add('Chat');
-    else if (['image_generation', 'image_editing', 'vision'].includes(code)) types.add('Image');
-    else if (code === 'video_generation') types.add('Video');
-    else if (['audio_input', 'audio_output', 'speech_to_text', 'text_to_speech'].includes(code)) types.add('Audio');
-    else if (code === 'music_generation') types.add('Music');
-    else if (code === 'sound_effect_generation') types.add('SoundEffect');
-    else if (['embedding', 'rerank'].includes(code)) types.add('Embedding');
-  }
-  return types;
-}
-
-function catalogKeyOf(model: Pick<Model, 'vendorCode' | 'model'>): string {
-  return `${model.vendorCode}/${model.model}`;
-}
-
-/** Catalog key to the int64 model id (decimal string) for persistence. */
-function modelIdsByKey(models: readonly Model[]): Map<string, string> {
-  const map = new Map<string, string>();
-  for (const model of models) {
-    map.set(catalogKeyOf(model), model.id);
-  }
-  return map;
-}
-
-/**
- * Point a channel's default at a visible exposed model.
- *
- * A document saved before the backend enforced this invariant can carry a
- * default that is missing or hidden; normalize it on load so the operator can
- * change and save the surface without hitting a validation error.
- */
-function normalizeDefaultCatalogKey(channel: FrontendChannelConfig): FrontendChannelConfig {
-  const current = channel.defaultCatalogKey;
-  const valid = current !== null
-    && channel.models.some((model) => model.catalogKey === current && model.visible);
-  if (valid) {
-    return channel;
-  }
-  const fallback = channel.models.find((model) => model.visible)?.catalogKey ?? null;
-  return fallback === current ? channel : { ...channel, defaultCatalogKey: fallback };
-}
-
-function normalizeDocumentDefaults(document: FrontendConfigDocument): FrontendConfigDocument {
-  return {
-    ...document,
-    channels: document.channels.map(normalizeDefaultCatalogKey),
-  };
-}
-
 /** Parse a sort-order input without letting an empty field become `NaN`. */
 function parseSortOrder(value: string, fallback = 0): number {
   const parsed = Number.parseInt(value, 10);
   return Number.isFinite(parsed) ? parsed : fallback;
 }
 
-/**
- * Merge catalog model keys into a channel without duplicating an already
- * exposed key, keeping the channel's sort order monotonic.
- * @param channel - the channel being edited.
- * @param keys - catalog keys to add.
- * @param catalogIdsByKey - catalog key to int64 model id (decimal string).
- * @returns the next channel plus how many rows were added.
- */
-function mergeCatalogModels(
-  channel: FrontendChannelConfig,
-  keys: readonly string[],
-  catalogIdsByKey: ReadonlyMap<string, string>,
-): { channel: FrontendChannelConfig; added: number } {
-  const existing = new Set(channel.models.map((model) => model.catalogKey));
-  const baseOrder = channel.models.reduce((max, model) => Math.max(max, model.sortOrder), 0);
-  const additions: FrontendChannelModelConfig[] = [];
-  for (const key of keys) {
-    if (existing.has(key)) continue;
-    existing.add(key);
-    additions.push({
-      ...emptyModel(key, catalogIdsByKey.get(key) ?? null),
-      sortOrder: baseOrder + (additions.length + 1) * 10,
-    });
-  }
-  if (additions.length === 0) {
-    return { channel, added: 0 };
-  }
-  return { channel: { ...channel, models: [...channel.models, ...additions] }, added: additions.length };
+/** Outcome of one manual catalog synchronization plus its alignment pass. */
+interface ModelDataSyncOutcome {
+  report: FrontendCatalogAlignmentReport;
+  catalogVersion: string;
+  catalogModelCount: number;
+  vendorCount: number;
+  priceCount: number;
+  capabilityCount: number;
+  /** Whether the alignment had to persist a new configuration revision. */
+  persisted: boolean;
 }
 
 /**
@@ -161,6 +81,11 @@ function mergeCatalogModels(
  * page reads and replaces the revisioned document served by the models backend;
  * catalog facts remain in the model tables, and this page only chooses which
  * models a surface exposes and which fields it shows.
+ *
+ * The header action `更新模型数据` asks the Rust backend to re-import the
+ * `sdkwork-models` catalog, then aligns every channel with the refreshed
+ * catalog: stale keys are disabled, int64 model ids are rebound, and newly
+ * published models are reported so the operator can enable them deliberately.
  */
 export function FrontendModelAdmin() {
   const { t, i18n } = useTranslation();
@@ -179,6 +104,9 @@ export function FrontendModelAdmin() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [importing, setImporting] = useState(false);
+  const [syncing, setSyncing] = useState(false);
+  const [merging, setMerging] = useState(false);
+  const [syncOutcome, setSyncOutcome] = useState<ModelDataSyncOutcome | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
 
@@ -200,7 +128,7 @@ export function FrontendModelAdmin() {
     setLoading(true);
     setError(null);
     try {
-      const next = normalizeDocumentDefaults(await loadFrontendConfigDocument());
+      const next = normalizeFrontendDocumentDefaults(await loadFrontendConfigDocument());
       setDocument(next);
       setSelectedCode((current) => (
         next.channels.some((channel) => channel.channelCode === current)
@@ -299,6 +227,141 @@ export function FrontendModelAdmin() {
         : channel.defaultCatalogKey;
       return { ...channel, models, defaultCatalogKey };
     });
+  };
+
+  /**
+   * Reload the document and the catalog after the backend refused a write
+   * because another operator published a newer revision.
+   */
+  const reloadAfterRevisionConflict = async () => {
+    setSyncOutcome(null);
+    setNotice(t('admin.model.frontend.revisionConflictReloaded'));
+    await load();
+    await loadCatalog(true);
+  };
+
+  /**
+   * Re-import the `sdkwork-models` catalog through the Rust backend, then
+   * align every product surface with the refreshed catalog.
+   *
+   * Alignment only edits presentation rows: stale keys are disabled and lose
+   * their int64 id, bound ids are refreshed, and newly published models are
+   * reported (not auto-exposed). A changed document is persisted as its own
+   * revision so the app read and BirdCoder pick up the aligned surface.
+   */
+  const syncModelData = async () => {
+    if (syncing || saving || document === null) return;
+    if (typeof window !== 'undefined' && !window.confirm(t('admin.model.frontend.syncCatalogConfirm'))) {
+      return;
+    }
+    setSyncing(true);
+    setError(null);
+    setNotice(null);
+    setSyncOutcome(null);
+    try {
+      const catalogSync = await ModelService.syncVendorsAndModels();
+      const catalog = catalogSync.models.length > 0
+        ? catalogSync.models
+        : await ModelService.fetchAllModels();
+      setCatalogModels(catalog);
+      const aligned = alignFrontendDocumentWithCatalog(document, catalog);
+      let next = document;
+      let persisted = false;
+      if (aligned.report.changed) {
+        next = normalizeFrontendDocumentDefaults(await saveFrontendConfigDocument(aligned.document, {
+          expectedRevision: document.revision,
+          source: 'model_sync_alignment',
+        }));
+        persisted = true;
+      }
+      setDocument(next);
+      setSyncOutcome({
+        report: aligned.report,
+        catalogVersion: catalogSync.catalogVersion,
+        catalogModelCount: catalog.length,
+        vendorCount: catalogSync.vendorCount,
+        priceCount: catalogSync.priceCount,
+        capabilityCount: catalogSync.capabilityCount,
+        persisted,
+      });
+      setNotice(persisted
+        ? t('admin.model.frontend.syncCatalogDone', {
+          version: catalogSync.catalogVersion || '—',
+          models: catalog.length,
+          stale: aligned.report.staleModelCount,
+          available: aligned.report.availableModelCount,
+        })
+        : t('admin.model.frontend.syncCatalogNoChange', {
+          version: catalogSync.catalogVersion || '—',
+        }));
+    } catch (syncError) {
+      if (syncError instanceof FrontendConfigRevisionConflictError) {
+        setError(t('admin.model.frontend.revisionConflict'));
+        await reloadAfterRevisionConflict();
+      } else {
+        setError(syncError instanceof Error ? syncError.message : t('admin.model.frontend.syncCatalogError'));
+      }
+    } finally {
+      setSyncing(false);
+    }
+  };
+
+  /**
+   * Import every available catalog model into its surface as a hidden row.
+   *
+   * Hidden is deliberate: a vendor's newest release becomes discoverable and
+   * the operator enables it explicitly instead of it appearing on a production
+   * surface unreviewed.
+   */
+  const importAvailableModels = async () => {
+    if (merging || syncing || document === null || syncOutcome === null) return;
+    setMerging(true);
+    setError(null);
+    try {
+      const merged = mergeAvailableFrontendModels(document, catalogModels ?? [], { visible: false });
+      if (merged.addedCount === 0) {
+        setSyncOutcome(null);
+        return;
+      }
+      const saved = normalizeFrontendDocumentDefaults(await saveFrontendConfigDocument(merged.document, {
+        expectedRevision: document.revision,
+        source: 'model_sync_alignment',
+      }));
+      setDocument(saved);
+      setSyncOutcome(null);
+      setNotice(t('admin.model.frontend.syncCatalogImported', { count: merged.addedCount }));
+    } catch (mergeError) {
+      if (mergeError instanceof FrontendConfigRevisionConflictError) {
+        setError(t('admin.model.frontend.revisionConflict'));
+        await reloadAfterRevisionConflict();
+      } else {
+        setError(mergeError instanceof Error ? mergeError.message : t('admin.model.frontend.syncCatalogError'));
+      }
+    } finally {
+      setMerging(false);
+    }
+  };
+
+  /**
+   * Enable or disable every model the catalog still describes in the selected
+   * surface. Stale rows stay hidden so a removed model cannot be re-exposed by
+   * a bulk action.
+   * @param visible - whether eligible rows become visible.
+   */
+  const setSelectedChannelVisibility = (visible: boolean) => {
+    if (!selected || catalogModels === null) return;
+    const catalogKeys = new Set(catalogModels.map(catalogKeyOf));
+    const outcome = setChannelModelsVisibility(selected, visible, catalogKeys);
+    if (outcome.changedCount === 0) {
+      setNotice(t(visible
+        ? 'admin.model.frontend.enableAllNoop'
+        : 'admin.model.frontend.disableAllNoop'));
+      return;
+    }
+    updateChannel(() => outcome.channel);
+    setNotice(t(visible
+      ? 'admin.model.frontend.enableAllDone'
+      : 'admin.model.frontend.disableAllDone', { count: outcome.changedCount }));
   };
 
   const addChannel = () => {
@@ -450,11 +513,16 @@ export function FrontendModelAdmin() {
     setError(null);
     setNotice(null);
     try {
-      const next = normalizeDocumentDefaults(await saveFrontendConfigDocument(document));
+      const next = normalizeFrontendDocumentDefaults(await saveFrontendConfigDocument(document));
       setDocument(next);
       setNotice(t('admin.model.frontend.saved'));
     } catch (saveError) {
-      setError(saveError instanceof Error ? saveError.message : t('admin.model.frontend.saveError'));
+      if (saveError instanceof FrontendConfigRevisionConflictError) {
+        setError(t('admin.model.frontend.revisionConflict'));
+        await reloadAfterRevisionConflict();
+      } else {
+        setError(saveError instanceof Error ? saveError.message : t('admin.model.frontend.saveError'));
+      }
     } finally {
       setSaving(false);
     }
@@ -499,7 +567,18 @@ export function FrontendModelAdmin() {
             <RefreshCw className="h-3.5 w-3.5" />
             {t('admin.model.frontend.reload')}
           </button>
-          <button type="button" onClick={() => void save()} disabled={saving || document === null} className="inline-flex items-center gap-1.5 rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60">
+          <button
+            type="button"
+            onClick={() => void syncModelData()}
+            disabled={syncing || saving || document === null}
+            aria-busy={syncing}
+            title={t('admin.model.frontend.syncCatalogHint')}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700 hover:bg-indigo-100 disabled:cursor-not-allowed disabled:opacity-60 dark:border-indigo-500/30 dark:bg-indigo-500/10 dark:text-indigo-300 dark:hover:bg-indigo-500/20"
+          >
+            {syncing ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Download className="h-3.5 w-3.5" />}
+            {syncing ? t('admin.model.frontend.syncingCatalog') : t('admin.model.frontend.syncCatalog')}
+          </button>
+          <button type="button" onClick={() => void save()} disabled={saving || syncing || document === null} className="inline-flex items-center gap-1.5 rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60">
             {saving ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Save className="h-3.5 w-3.5" />}
             {saving ? t('admin.model.frontend.saving') : t('admin.model.frontend.save')}
           </button>
@@ -633,6 +712,23 @@ export function FrontendModelAdmin() {
                       {importing ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Download className="h-3.5 w-3.5" />}
                       {importing ? t('admin.model.frontend.importing') : t('admin.model.frontend.importFromCatalog')}
                     </button>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedChannelVisibility(true)}
+                      disabled={catalogModels === null}
+                      className="rounded-md border border-slate-200 px-2 py-1 text-xs font-medium text-slate-600 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-60 dark:border-white/10 dark:text-slate-300 dark:hover:bg-white/5"
+                      title={t('admin.model.frontend.enableAllHint')}
+                    >
+                      {t('admin.model.frontend.enableAll')}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setSelectedChannelVisibility(false)}
+                      className="rounded-md border border-slate-200 px-2 py-1 text-xs font-medium text-slate-600 hover:bg-slate-50 dark:border-white/10 dark:text-slate-300 dark:hover:bg-white/5"
+                      title={t('admin.model.frontend.disableAllHint')}
+                    >
+                      {t('admin.model.frontend.disableAll')}
+                    </button>
                   </div>
                 </div>
                 {catalogError ? (
@@ -645,14 +741,28 @@ export function FrontendModelAdmin() {
                     {selected.models.map((model, index) => {
                       const catalogModel = catalogByKey.get(model.catalogKey);
                       const isDefault = selected.defaultCatalogKey === model.catalogKey;
+                      const stale = catalogModel === undefined;
+                      const inactive = catalogModel !== undefined && catalogModel.status !== 'active';
                       return (
                         <div key={model.catalogKey} className="flex flex-wrap items-center gap-2 py-2 text-sm">
                           <div className="flex min-w-0 flex-1 flex-col">
-                            <span className="truncate font-medium text-slate-800 dark:text-slate-200">{catalogModel?.displayName ?? model.catalogKey}</span>
+                            <span className="flex min-w-0 items-center gap-1.5">
+                              <span className="truncate font-medium text-slate-800 dark:text-slate-200">{catalogModel?.displayName ?? model.catalogKey}</span>
+                              {stale && catalogModels !== null ? (
+                                <span className="shrink-0 rounded-full bg-amber-100 px-1.5 py-0.5 text-[10px] font-medium text-amber-700 dark:bg-amber-500/15 dark:text-amber-300">
+                                  {t('admin.model.frontend.staleModel')}
+                                </span>
+                              ) : null}
+                              {inactive ? (
+                                <span className="shrink-0 rounded-full bg-slate-200 px-1.5 py-0.5 text-[10px] font-medium text-slate-600 dark:bg-white/10 dark:text-slate-300">
+                                  {t('admin.model.frontend.inactiveModel')}
+                                </span>
+                              ) : null}
+                            </span>
                             <span className="truncate text-xs text-slate-400 dark:text-slate-500">
                               {model.catalogKey}
                               {catalogModel ? ` · ${catalogModel.type}` : null}
-                              {catalogModel === undefined && catalogModels !== null ? ` · ${t('admin.model.frontend.notInCatalog')}` : null}
+                              {stale && catalogModels !== null ? ` · ${t('admin.model.frontend.notInCatalog')}` : null}
                             </span>
                           </div>
                           <label className="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400">
@@ -668,8 +778,8 @@ export function FrontendModelAdmin() {
                               type="radio"
                               name={`frontend-default-${selected.channelCode}`}
                               checked={isDefault}
-                              disabled={!model.visible}
-                              title={!model.visible ? t('admin.model.frontend.defaultModelRequiresVisible') : undefined}
+                              disabled={!model.visible || stale}
+                              title={!model.visible ? t('admin.model.frontend.defaultModelRequiresVisible') : stale ? t('admin.model.frontend.defaultModelRequiresCatalog') : undefined}
                               onChange={() => updateChannel((channel) => ({ ...channel, defaultCatalogKey: model.catalogKey }))}
                               className="h-3.5 w-3.5 border-slate-300 text-indigo-600 disabled:opacity-40"
                             />
@@ -809,6 +919,140 @@ export function FrontendModelAdmin() {
                 </button>
                 <button type="button" onClick={confirmPicker} disabled={pickerSelected.length === 0} className="rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60">
                   {t('admin.model.frontend.addSelected')}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
+
+      {syncOutcome ? (
+        <div
+          className="fixed inset-0 z-[70] flex items-center justify-center bg-slate-950/50 p-4 backdrop-blur-sm"
+          role="presentation"
+          onMouseDown={(event) => { if (event.target === event.currentTarget) setSyncOutcome(null); }}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="frontend-sync-summary-title"
+            onKeyDown={(event) => {
+              if (event.key === 'Escape') {
+                event.preventDefault();
+                setSyncOutcome(null);
+              }
+            }}
+            className="flex max-h-[min(80vh,44rem)] w-full max-w-2xl flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-white/10 dark:bg-[#171719]"
+          >
+            <div className="flex shrink-0 items-start justify-between gap-3 border-b border-slate-200 px-4 py-3 dark:border-white/10">
+              <div className="min-w-0">
+                <h3 id="frontend-sync-summary-title" className="truncate text-sm font-semibold text-slate-900 dark:text-white">
+                  {t('admin.model.frontend.syncSummaryTitle')}
+                </h3>
+                <p className="truncate text-xs text-slate-500 dark:text-slate-400">
+                  {t('admin.model.frontend.syncSummarySubtitle', { version: syncOutcome.catalogVersion || '—' })}
+                </p>
+              </div>
+              <button type="button" onClick={() => setSyncOutcome(null)} className="text-slate-400 hover:text-slate-600" aria-label={t('common.actions.close')}>
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+            <div className="min-h-0 flex-1 overflow-y-auto px-4 py-3">
+              <dl className="grid grid-cols-2 gap-2 text-xs sm:grid-cols-3">
+                <div className="rounded-lg border border-slate-200 px-2.5 py-2 dark:border-white/10">
+                  <dt className="text-slate-500 dark:text-slate-400">{t('admin.model.frontend.syncSummaryCatalog')}</dt>
+                  <dd className="mt-0.5 text-base font-semibold text-slate-900 dark:text-white">{syncOutcome.catalogModelCount}</dd>
+                </div>
+                <div className="rounded-lg border border-slate-200 px-2.5 py-2 dark:border-white/10">
+                  <dt className="text-slate-500 dark:text-slate-400">{t('admin.model.frontend.syncSummaryVendors')}</dt>
+                  <dd className="mt-0.5 text-base font-semibold text-slate-900 dark:text-white">{syncOutcome.vendorCount}</dd>
+                </div>
+                <div className="rounded-lg border border-slate-200 px-2.5 py-2 dark:border-white/10">
+                  <dt className="text-slate-500 dark:text-slate-400">{t('admin.model.frontend.syncSummaryPrices')}</dt>
+                  <dd className="mt-0.5 text-base font-semibold text-slate-900 dark:text-white">{syncOutcome.priceCount}</dd>
+                </div>
+                <div className="rounded-lg border border-slate-200 px-2.5 py-2 dark:border-white/10">
+                  <dt className="text-slate-500 dark:text-slate-400">{t('admin.model.frontend.syncSummaryCapabilities')}</dt>
+                  <dd className="mt-0.5 text-base font-semibold text-slate-900 dark:text-white">{syncOutcome.capabilityCount}</dd>
+                </div>
+                <div className="rounded-lg border border-slate-200 px-2.5 py-2 dark:border-white/10">
+                  <dt className="text-slate-500 dark:text-slate-400">{t('admin.model.frontend.syncSummaryStale')}</dt>
+                  <dd className="mt-0.5 text-base font-semibold text-amber-600 dark:text-amber-300">{syncOutcome.report.staleModelCount}</dd>
+                </div>
+                <div className="rounded-lg border border-slate-200 px-2.5 py-2 dark:border-white/10">
+                  <dt className="text-slate-500 dark:text-slate-400">{t('admin.model.frontend.syncSummaryRebound')}</dt>
+                  <dd className="mt-0.5 text-base font-semibold text-slate-900 dark:text-white">{syncOutcome.report.reboundModelIdCount}</dd>
+                </div>
+                <div className="rounded-lg border border-slate-200 px-2.5 py-2 dark:border-white/10">
+                  <dt className="text-slate-500 dark:text-slate-400">{t('admin.model.frontend.syncSummaryAvailable')}</dt>
+                  <dd className="mt-0.5 text-base font-semibold text-emerald-600 dark:text-emerald-300">{syncOutcome.report.availableModelCount}</dd>
+                </div>
+                <div className="rounded-lg border border-slate-200 px-2.5 py-2 dark:border-white/10">
+                  <dt className="text-slate-500 dark:text-slate-400">{t('admin.model.frontend.syncSummaryDuplicates')}</dt>
+                  <dd className="mt-0.5 text-base font-semibold text-slate-900 dark:text-white">{syncOutcome.report.duplicateModelCount}</dd>
+                </div>
+                <div className="rounded-lg border border-slate-200 px-2.5 py-2 dark:border-white/10">
+                  <dt className="text-slate-500 dark:text-slate-400">{t('admin.model.frontend.syncSummaryRevision')}</dt>
+                  <dd className="mt-0.5 text-base font-semibold text-slate-900 dark:text-white">{document?.revision ?? 0}</dd>
+                </div>
+              </dl>
+              {!syncOutcome.persisted ? (
+                <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">{t('admin.model.frontend.syncSummaryUntouched')}</p>
+              ) : null}
+              <div className="mt-4 flex flex-col gap-2">
+                {syncOutcome.report.channels
+                  .filter((channel) => channel.staleModels.length + channel.availableModels.length
+                    + channel.reboundModelKeys.length + channel.duplicateModelCount > 0)
+                  .map((channel) => {
+                    const channelDocument = document?.channels.find((candidate) => candidate.channelCode === channel.channelCode);
+                    return (
+                      <div key={channel.channelCode} className="rounded-lg border border-slate-200 p-2.5 text-xs dark:border-white/10">
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <span className="font-medium text-slate-700 dark:text-slate-200">
+                            {channelDocument ? channelLabel(channelDocument) : channel.channelCode}
+                          </span>
+                          <span className="text-slate-500 dark:text-slate-400">
+                            {t('admin.model.frontend.syncSummaryChannelCounts', {
+                              stale: channel.staleModels.length,
+                              available: channel.availableModelCount,
+                            })}
+                          </span>
+                        </div>
+                        {channel.staleModels.length > 0 ? (
+                          <p className="mt-1.5 text-amber-700 dark:text-amber-300">
+                            {t('admin.model.frontend.syncSummaryStaleList')}
+                            {' '}
+                            {channel.staleModels.slice(0, 6).map((model) => model.catalogKey).join(', ')}
+                            {channel.staleModels.length > 6 ? ' …' : ''}
+                          </p>
+                        ) : null}
+                        {channel.availableModels.length > 0 ? (
+                          <p className="mt-1.5 text-emerald-700 dark:text-emerald-300">
+                            {t('admin.model.frontend.syncSummaryAvailableList')}
+                            {' '}
+                            {channel.availableModels.slice(0, 6).map((model) => model.catalogKey).join(', ')}
+                            {channel.availableModelCount > 6 ? ' …' : ''}
+                          </p>
+                        ) : null}
+                      </div>
+                    );
+                  })}
+              </div>
+            </div>
+            <div className="flex shrink-0 flex-wrap items-center justify-between gap-3 border-t border-slate-200 px-4 py-3 dark:border-white/10">
+              <span className="text-xs text-slate-500 dark:text-slate-400">{t('admin.model.frontend.syncSummaryAvailableHint')}</span>
+              <div className="flex items-center gap-2">
+                <button type="button" onClick={() => setSyncOutcome(null)} className="rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50 dark:border-white/10 dark:text-slate-300 dark:hover:bg-white/5">
+                  {t('common.actions.close')}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => void importAvailableModels()}
+                  disabled={merging || syncOutcome.report.availableModelCount === 0}
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  {merging ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Plus className="h-3.5 w-3.5" />}
+                  {merging ? t('admin.model.frontend.syncSummaryImporting') : t('admin.model.frontend.syncSummaryImport')}
                 </button>
               </div>
             </div>
