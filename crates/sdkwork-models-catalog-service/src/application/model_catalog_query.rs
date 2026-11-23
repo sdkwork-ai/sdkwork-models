@@ -497,6 +497,15 @@ impl ConfiguredModelGroupIndex {
 /// authoritative for which accounts can serve the model; catalogs that derive
 /// routes from entitlements (the SQL snapshot) carry none and every account
 /// route is considered.
+///
+/// A catalog whose account-route projection is empty can serve nothing: routing
+/// (`AiRoutingIndex::matching_accounts`) has no candidate accounts at all in
+/// that state, so no group may claim ownership of the catalog. Without this
+/// guard the legacy "every group is equivalent" fallback below would report
+/// every configured group with the whole catalog's model count — the model
+/// library then shows the same global number in every group and lists every
+/// model under every group while the account routes are still loading (boot,
+/// install/import, or a degraded refresh).
 fn model_group_keys(
     model: &AiModel,
     model_routes: &[ModelUpstreamRoute],
@@ -510,8 +519,12 @@ fn model_group_keys(
 
     let mut selected_group_ids = BTreeSet::new();
     if !has_group_bindings {
-        // No group configuration exists, so every group shares the same
-        // unscoped routing behavior (see `AiRoutingIndex::matching_accounts`).
+        if account_routes.is_empty() {
+            // No callable account route exists, so nothing can serve the model.
+            return Vec::new();
+        }
+        // Accounts exist but none is bound to a group: every group shares the
+        // same unscoped routing behavior (see `AiRoutingIndex::matching_accounts`).
         selected_group_ids.extend(groups_by_id.keys().copied());
     } else {
         let model_capability_codes = model_group_capability_codes(model);
@@ -1403,14 +1416,29 @@ mod tests {
     }
 
     #[test]
-    fn group_membership_returns_every_group_when_no_binding_is_configured() {
+    fn group_membership_returns_every_group_when_accounts_exist_without_bindings() {
+        let groups = [group(10, "standard-group"), group(11, "premium-lab")];
+        let by_id = groups_by_id(&groups);
+        let model = text_model("gpt-4o", "openai");
+        // An unbound account keeps the legacy "every group is equivalent"
+        // projection, mirroring routing's unscoped fallback.
+        let unbound_route = account_route("openrouter", 1, Vec::new());
+
+        assert_eq!(
+            vec!["premium-lab", "standard-group"],
+            model_group_keys(&model, &[], &[unbound_route], &by_id, false)
+        );
+    }
+
+    #[test]
+    fn group_membership_is_empty_when_the_account_route_projection_is_empty() {
         let groups = [group(10, "standard-group"), group(11, "premium-lab")];
         let by_id = groups_by_id(&groups);
         let model = text_model("gpt-4o", "openai");
 
-        assert_eq!(
-            vec!["premium-lab", "standard-group"],
-            model_group_keys(&model, &[], &[], &by_id, false)
-        );
+        // No callable account route means nothing can serve the model: the
+        // catalog must not fall back to "every group serves the whole catalog",
+        // which would report the catalog total as each group's model count.
+        assert!(model_group_keys(&model, &[], &[], &by_id, false).is_empty());
     }
 }
