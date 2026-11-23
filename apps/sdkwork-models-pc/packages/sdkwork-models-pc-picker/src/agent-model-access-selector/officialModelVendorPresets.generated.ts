@@ -247,13 +247,13 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "catalogKey": "deepseek/deepseek-flash",
         "model": "deepseek-flash",
         "displayName": "DeepSeek V4.1 Flash",
-        "sortOrder": 0
+        "sortOrder": 1
       },
       {
         "catalogKey": "deepseek/deepseek-v4-pro",
         "model": "deepseek-v4-pro",
         "displayName": "DeepSeek V4 Pro",
-        "sortOrder": 3
+        "sortOrder": 6
       }
     ],
     "sortOrder": 7,
@@ -313,13 +313,13 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "catalogKey": "stepfun/step-3.7-flash",
         "model": "step-3.7-flash",
         "displayName": "Step 3.7 Flash",
-        "sortOrder": 2
+        "sortOrder": 3
       },
       {
         "catalogKey": "stepfun/step-5-preview",
         "model": "step-5-preview",
         "displayName": "Step 5 Preview",
-        "sortOrder": 3
+        "sortOrder": 4
       }
     ],
     "sortOrder": 12,

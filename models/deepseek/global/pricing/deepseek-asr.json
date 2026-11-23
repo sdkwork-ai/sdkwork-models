@@ -1,0 +1,39 @@
+{
+  "catalogKey": "deepseek/deepseek-asr",
+  "currency": "USD",
+  "modelId": "deepseek-asr",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "stt_audio_minute",
+      "minimumQuantity": "0",
+      "notes": "Official list price per hour (60 audio minutes). DeepSeek currently applies a limited-time 50% discount: CNY 0.39 (USD 0.058) per hour.",
+      "operationCode": "audio.transcribe",
+      "priceBookCode": "models.deepseek.global.official",
+      "priceId": "deepseek-global-deepseek-asr",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.deepseek.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "e7aa7b2e9b0bb26db44e7889e4b2136834105f8f7bd95e5e618becf21a1026eb",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing"
+      },
+      "unitPrice": "0.116000",
+      "unitSize": "60"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "deepseek"
+}

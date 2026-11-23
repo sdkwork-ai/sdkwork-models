@@ -1,0 +1,82 @@
+{
+  "catalogKey": "stepfun/stepaudio-3-music",
+  "currency": "CNY",
+  "modelId": "stepaudio-3-music",
+  "prices": [
+    {
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "no_audio_input"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T04:00:00Z",
+      "meterCode": "music_output_second",
+      "minimumQuantity": "0",
+      "priceId": "stepfun-cn-stepaudio-3-music-music-output-second-no-audio-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "quantityStep": "1",
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+      },
+      "unitPrice": "16.000000",
+      "unitSize": "3600",
+      "evidence": "音乐生成·第一档（无音频输入）16.00 元／输出音频小时",
+      "tierCode": "no_audio_input",
+      "priceBookCode": "models.stepfun.cn.official",
+      "productCode": "models.stepfun.music",
+      "operationCode": "music.generate",
+      "billability": "chargeable",
+      "chargeTiming": "successful_result",
+      "calculationMode": "per_unit",
+      "quantityAggregation": "sum",
+      "rateVariant": "standard",
+      "schedule": null,
+      "rateHash": "d57412af3c0f7adc01fd1f2dd1171b2939e5ef39cca9d621b54cf2f05d191dd5"
+    },
+    {
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "with_audio_input"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T04:00:00Z",
+      "meterCode": "music_output_second",
+      "minimumQuantity": "0",
+      "priceId": "stepfun-cn-stepaudio-3-music-music-output-second-with-audio-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "quantityStep": "1",
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+      },
+      "unitPrice": "32.000000",
+      "unitSize": "3600",
+      "evidence": "音乐生成·第二档（有音频输入）32.00 元／输出音频小时",
+      "tierCode": "with_audio_input",
+      "priceBookCode": "models.stepfun.cn.official",
+      "productCode": "models.stepfun.music",
+      "operationCode": "music.generate",
+      "billability": "chargeable",
+      "chargeTiming": "successful_result",
+      "calculationMode": "per_unit",
+      "quantityAggregation": "sum",
+      "rateVariant": "standard",
+      "schedule": null,
+      "rateHash": "1c5e99d2813d1e9a6b2019ae22b78a5b6984eb200d19ff874c4feb7575156082"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "stepfun"
+}

@@ -2,6 +2,9 @@
   "catalogKey": "tencent/hy4",
   "currency": "CNY",
   "modelId": "hy4",
+  "notes": [
+    "Limited-time 50% discount: Hy4 usage is billed at 50% of the catalog prices below from the pricing-page publication date through 2026-12-31T15:59:59Z (Beijing 2026-12-31 23:59:59); catalog prices apply after the discount ends."
+  ],
   "prices": [
     {
       "billability": "chargeable",

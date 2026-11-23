@@ -961,6 +961,7 @@
     },
     {
       "capabilities": [
+        "audio",
         "chat"
       ],
       "clientApiCompatibility": {
@@ -1060,7 +1061,8 @@
           "billingCurrency": "CNY",
           "billingJurisdiction": "CN",
           "capabilities": [
-            "chat"
+            "chat",
+            "audio"
           ],
           "clientApiCompatibility": {
             "claude_code": {
@@ -1106,13 +1108,13 @@
           "displayName": "DeepSeek",
           "legalName": "DeepSeek",
           "marketScope": "china_mainland",
-          "modelCount": 5,
+          "modelCount": 8,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "deepseek/cn/vendor.json",
-          "pricingFileCount": 5,
+          "pricingFileCount": 8,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 60,
@@ -1126,7 +1128,8 @@
           "billingCurrency": "USD",
           "billingJurisdiction": "GLOBAL",
           "capabilities": [
-            "chat"
+            "chat",
+            "audio"
           ],
           "clientApiCompatibility": {
             "claude_code": {
@@ -1220,13 +1223,13 @@
           "displayName": "DeepSeek",
           "legalName": "DeepSeek",
           "marketScope": "international",
-          "modelCount": 5,
+          "modelCount": 8,
           "openSource": false,
           "operatingRegions": [
             "GLOBAL"
           ],
           "path": "deepseek/global/vendor.json",
-          "pricingFileCount": 5,
+          "pricingFileCount": 8,
           "rankingSnapshotCount": 1,
           "regionCode": "global",
           "sortOrder": 60,
@@ -1447,6 +1450,7 @@
         "embedding",
         "image",
         "reasoning",
+        "streaming",
         "video"
       ],
       "clientApiCompatibility": {
@@ -1503,6 +1507,7 @@
             "embedding",
             "image",
             "reasoning",
+            "streaming",
             "video"
           ],
           "clientApiCompatibility": {
@@ -1549,13 +1554,13 @@
           "displayName": "Zhipu AI",
           "legalName": "Zhipu AI",
           "marketScope": "china_mainland",
-          "modelCount": 19,
+          "modelCount": 21,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "zhipu/cn/vendor.json",
-          "pricingFileCount": 19,
+          "pricingFileCount": 21,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 80,
@@ -1805,7 +1810,7 @@
             "CN"
           ],
           "path": "baidu/cn/vendor.json",
-          "pricingFileCount": 11,
+          "pricingFileCount": 13,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 90,
@@ -2858,8 +2863,11 @@
     },
     {
       "capabilities": [
+        "audio",
         "chat",
-        "reasoning"
+        "music",
+        "reasoning",
+        "streaming"
       ],
       "clientApiCompatibility": {
         "claude_code": {
@@ -2911,7 +2919,10 @@
           "billingJurisdiction": "CN",
           "capabilities": [
             "chat",
-            "reasoning"
+            "reasoning",
+            "audio",
+            "music",
+            "streaming"
           ],
           "clientApiCompatibility": {
             "claude_code": {
@@ -2957,20 +2968,21 @@
           "displayName": "StepFun",
           "legalName": "StepFun",
           "marketScope": "china_mainland",
-          "modelCount": 4,
+          "modelCount": 23,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "stepfun/cn/vendor.json",
-          "pricingFileCount": 4,
+          "pricingFileCount": 23,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 125,
           "supportedProtocols": [
             "anthropic_messages",
             "openai_compatible",
-            "openai_responses"
+            "openai_responses",
+            "vendor_native"
           ]
         }
       ],
@@ -2978,7 +2990,8 @@
       "supportedProtocols": [
         "anthropic_messages",
         "openai_compatible",
-        "openai_responses"
+        "openai_responses",
+        "vendor_native"
       ],
       "vendorCode": "stepfun",
       "vendorType": "commercial"

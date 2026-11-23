@@ -209,6 +209,9 @@ pub enum BillingMeter {
     ContainerSession,
     StorageGbDay,
     BandwidthGb,
+    /// Document pages processed by file parsing or OCR APIs. Billed per page,
+    /// so it is a count meter rather than a duration/storage meter.
+    DocumentPage,
     Unknown,
 }
 
@@ -256,6 +259,7 @@ impl BillingMeter {
             Self::ContainerSession => "container_session",
             Self::StorageGbDay => "storage_gb_day",
             Self::BandwidthGb => "bandwidth_gb",
+            Self::DocumentPage => "document_page",
             Self::Unknown => "unknown",
         }
     }
@@ -303,6 +307,7 @@ impl BillingMeter {
             "container_session" => Self::ContainerSession,
             "storage_gb_day" => Self::StorageGbDay,
             "bandwidth_gb" => Self::BandwidthGb,
+            "document_page" => Self::DocumentPage,
             "unknown" => Self::Unknown,
             _ => Self::Unknown,
         }

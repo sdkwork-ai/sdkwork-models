@@ -7,7 +7,7 @@ or merging tiers - a product decision, so nothing here is auto-applied.
 
 | reason | count |
 |---|---|
-| dimension_never_populated | 417 |
+| dimension_never_populated | 440 |
 
 `dimension_never_populated`: the runtime has no producer for the dimension at all.
 `time_window_tier_redundant`: a `time_window` rate conditioned on `tier_code`; the
@@ -416,6 +416,13 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | runway/global/pricing/seedream5_pro_layers.json | runway-global-seedream5_pro_layers-image-res_1k | image_result | 0.030000 | USD | 1 | tier_code | dimension_never_populated | res_1k | - |
 | runway/global/pricing/seedream5_pro_layers.json | runway-global-seedream5_pro_layers-image-res_2k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | res_2k | - |
 | runway/global/pricing/seedream5_pro_layers.json | runway-global-seedream5_pro_layers-image-res_auto | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | res_auto | - |
+| stepfun/cn/pricing/step-tts-2.json | stepfun-cn-step-tts-2-api-request-voice-clone | api_request | 10.000000 | CNY | 1 | tier_code | dimension_never_populated | voice_clone | - |
+| stepfun/cn/pricing/step-tts-mini.json | stepfun-cn-step-tts-mini-api-request-voice-clone | api_request | 10.000000 | CNY | 1 | tier_code | dimension_never_populated | voice_clone | - |
+| stepfun/cn/pricing/stepaudio-2.5-tts.json | stepfun-cn-stepaudio-2-5-tts-api-request-voice-clone | api_request | 10.000000 | CNY | 1 | tier_code | dimension_never_populated | voice_clone | - |
+| stepfun/cn/pricing/stepaudio-3-music.json | stepfun-cn-stepaudio-3-music-music-output-second-no-audio-input | music_output_second | 16.000000 | CNY | 3600 | tier_code | dimension_never_populated | no_audio_input | - |
+| stepfun/cn/pricing/stepaudio-3-music.json | stepfun-cn-stepaudio-3-music-music-output-second-with-audio-input | music_output_second | 32.000000 | CNY | 3600 | tier_code | dimension_never_populated | with_audio_input | - |
+| stepfun/cn/pricing/stepaudio-3-tts.json | stepfun-cn-stepaudio-3-tts-api-request-voice-clone | api_request | 10.000000 | CNY | 1 | tier_code | dimension_never_populated | voice_clone | - |
+| stepfun/cn/pricing/stepaudio-3-tts.json | stepfun-cn-stepaudio-3-tts-api-request-voice-design | api_request | 10.000000 | CNY | 1 | tier_code | dimension_never_populated | voice_design | - |
 | vidu/cn/pricing/audio1.0-text2audio.json | vidu-cn-audio1-0-text2audio-under-10s | sfx_result | 0.625000 | CNY | 1 | tier_code | dimension_never_populated | under_10s | - |
 | vidu/cn/pricing/audio1.0-text2audio.json | vidu-cn-audio1-0-text2audio-under-5s | sfx_result | 0.312500 | CNY | 1 | tier_code | dimension_never_populated | under_5s | - |
 | vidu/cn/pricing/audio1.0-timing2audio.json | vidu-cn-audio1-0-timing2audio-under-10s | sfx_result | 0.625000 | CNY | 1 | tier_code | dimension_never_populated | under_10s | - |
@@ -433,3 +440,19 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | vidu/global/pricing/viduq2.json | vidu-global-viduq2-image-t2i-1080p | image_result | 0.030000 | USD | 1 | tier_code | dimension_never_populated | t2i_1080p | - |
 | vidu/global/pricing/viduq2.json | vidu-global-viduq2-image-t2i-2k | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | t2i_2k | - |
 | vidu/global/pricing/viduq2.json | vidu-global-viduq2-image-t2i-4k | image_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | t2i_4k | - |
+| xai/global/pricing/grok-imagine-image-2.0.json | xai-grok-imagine-image-2.0-low-1k | image_result | 0.040000 | USD | 1 | tier_code | dimension_never_populated | low_1k | - |
+| xai/global/pricing/grok-imagine-image-2.0.json | xai-grok-imagine-image-2.0-low-2k | image_result | 0.060000 | USD | 1 | tier_code | dimension_never_populated | low_2k | - |
+| xai/global/pricing/grok-imagine-image-2.0.json | xai-grok-imagine-image-2.0-medium-1k | image_result | 0.060000 | USD | 1 | tier_code | dimension_never_populated | medium_1k | - |
+| xai/global/pricing/grok-imagine-image-2.0.json | xai-grok-imagine-image-2.0-medium-2k | image_result | 0.080000 | USD | 1 | tier_code | dimension_never_populated | medium_2k | - |
+| xiaomi/cn/pricing/mimo-v2.6-flash.json | xiaomi-cn-mimo-v2-6-flash-cache-read-batch | llm_cache_read_token | 0.010000 | CNY | 1000000 | tier_code | dimension_never_populated | batch | - |
+| xiaomi/cn/pricing/mimo-v2.6-flash.json | xiaomi-cn-mimo-v2-6-flash-input-batch | llm_input_token | 0.500000 | CNY | 1000000 | tier_code | dimension_never_populated | batch | - |
+| xiaomi/cn/pricing/mimo-v2.6-flash.json | xiaomi-cn-mimo-v2-6-flash-output-batch | llm_output_token | 1.000000 | CNY | 1000000 | tier_code | dimension_never_populated | batch | - |
+| xiaomi/cn/pricing/mimo-v2.6-pro.json | xiaomi-cn-mimo-v2-6-pro-cache-read-batch | llm_cache_read_token | 0.012500 | CNY | 1000000 | tier_code | dimension_never_populated | batch | - |
+| xiaomi/cn/pricing/mimo-v2.6-pro.json | xiaomi-cn-mimo-v2-6-pro-input-batch | llm_input_token | 1.500000 | CNY | 1000000 | tier_code | dimension_never_populated | batch | - |
+| xiaomi/cn/pricing/mimo-v2.6-pro.json | xiaomi-cn-mimo-v2-6-pro-output-batch | llm_output_token | 3.000000 | CNY | 1000000 | tier_code | dimension_never_populated | batch | - |
+| xiaomi/global/pricing/mimo-v2.6-flash.json | xiaomi-global-mimo-v2-6-flash-cache-read-batch | llm_cache_read_token | 0.001400 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| xiaomi/global/pricing/mimo-v2.6-flash.json | xiaomi-global-mimo-v2-6-flash-input-batch | llm_input_token | 0.070000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| xiaomi/global/pricing/mimo-v2.6-flash.json | xiaomi-global-mimo-v2-6-flash-output-batch | llm_output_token | 0.140000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| xiaomi/global/pricing/mimo-v2.6-pro.json | xiaomi-global-mimo-v2-6-pro-cache-read-batch | llm_cache_read_token | 0.001800 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| xiaomi/global/pricing/mimo-v2.6-pro.json | xiaomi-global-mimo-v2-6-pro-input-batch | llm_input_token | 0.217500 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |
+| xiaomi/global/pricing/mimo-v2.6-pro.json | xiaomi-global-mimo-v2-6-pro-output-batch | llm_output_token | 0.435000 | USD | 1000000 | tier_code | dimension_never_populated | batch | - |

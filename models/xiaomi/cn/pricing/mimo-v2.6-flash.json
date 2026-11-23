@@ -86,6 +86,111 @@
       },
       "unitPrice": "2.000000",
       "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "batch"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.xiaomi.cn.official",
+      "priceId": "xiaomi-cn-mimo-v2-6-flash-input-batch",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xiaomi.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "batch",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go"
+      },
+      "unitPrice": "0.500000",
+      "unitSize": "1000000",
+      "evidence": "Batch API: 0.500000 CNY per 1M tokens (50% of real-time price)",
+      "rateHash": "983571504c945df3613159c4674583b3315bfe613db507a0cdc59168be315a79"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "batch"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.xiaomi.cn.official",
+      "priceId": "xiaomi-cn-mimo-v2-6-flash-cache-read-batch",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xiaomi.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "batch",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go"
+      },
+      "unitPrice": "0.010000",
+      "unitSize": "1000000",
+      "evidence": "Batch API: 0.010000 CNY per 1M tokens (50% of real-time price)",
+      "rateHash": "7336f768a64aac22464ddfa5950ab57be1d80a68459238d0392abedba47463fc"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "batch"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-22T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.xiaomi.cn.official",
+      "priceId": "xiaomi-cn-mimo-v2-6-flash-output-batch",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xiaomi.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "batch",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go"
+      },
+      "unitPrice": "1.000000",
+      "unitSize": "1000000",
+      "evidence": "Batch API: 1.000000 CNY per 1M tokens (50% of real-time price)",
+      "rateHash": "5103cc445338afdcf1dbe0e4b07f23cd55bef458065309a1c63ace765ad8959a"
     }
   ],
   "regionCode": "cn",

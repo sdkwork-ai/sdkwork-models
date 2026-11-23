@@ -1,0 +1,36 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "stepfun/stepaudio-3-asr-max",
+  "codingVisible": false,
+  "colorToken": "#0369a1",
+  "description": "StepAudio 3 speech recognition billed per input audio hour.",
+  "displayName": "StepAudio 3 ASR Max",
+  "familyCode": "step-audio-3",
+  "inputModalities": [
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "stepaudio-3-asr-max",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "stepfun",
+  "vendorName": "StepFun"
+}

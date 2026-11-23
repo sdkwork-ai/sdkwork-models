@@ -311,6 +311,19 @@ fn validate_schedule(
                 message: "startTime and endTime must use HH:mm:ss".to_owned(),
             });
         }
+        if window.holiday_only
+            && (window.start_time != "00:00:00"
+                || window.end_time != "23:59:59"
+                || window.end_day_offset != 0)
+        {
+            issues.push(CatalogIssue {
+                code: "pricing.schedule.holiday_only.range.invalid".to_owned(),
+                path: path.clone(),
+                message:
+                    "holidayOnly windows must cover the whole day (00:00:00-23:59:59, endDayOffset 0)"
+                        .to_owned(),
+            });
+        }
         if !matches!(window.end_day_offset, 0 | 1)
             || start.zip(end).is_some_and(|(start, end)| {
                 (window.end_day_offset == 0 && end <= start)
@@ -325,16 +338,45 @@ fn validate_schedule(
         }
     }
 
-    let include_dates =
-        validate_schedule_dates(catalog_key, "includeDates", &schedule.include_dates, issues);
-    let exclude_dates =
-        validate_schedule_dates(catalog_key, "excludeDates", &schedule.exclude_dates, issues);
+    let include_dates = validate_schedule_dates(
+        catalog_key,
+        "includeDates",
+        &schedule.include_dates,
+        issues,
+        "pricing.schedule.date.invalid",
+    );
+    let exclude_dates = validate_schedule_dates(
+        catalog_key,
+        "excludeDates",
+        &schedule.exclude_dates,
+        issues,
+        "pricing.schedule.date.invalid",
+    );
+    let holiday_dates = validate_schedule_dates(
+        catalog_key,
+        "holidayDates",
+        &schedule.holiday_dates,
+        issues,
+        "pricing.schedule.holiday_date.invalid",
+    );
     if include_dates.intersection(&exclude_dates).next().is_some() {
         issues.push(CatalogIssue {
             code: "pricing.schedule.date_conflict".to_owned(),
             path: format!("{catalog_key}/schedule"),
             message: "a date cannot be both included and excluded".to_owned(),
         });
+    }
+    for (field, dates) in [
+        ("includeDates", &include_dates),
+        ("excludeDates", &exclude_dates),
+    ] {
+        if holiday_dates.intersection(dates).next().is_some() {
+            issues.push(CatalogIssue {
+                code: "pricing.schedule.holiday_date.conflict".to_owned(),
+                path: format!("{catalog_key}/schedule"),
+                message: format!("holidayDates must not overlap {field}"),
+            });
+        }
     }
 }
 
@@ -343,13 +385,14 @@ fn validate_schedule_dates(
     field: &str,
     values: &[String],
     issues: &mut Vec<CatalogIssue>,
+    invalid_code: &str,
 ) -> BTreeSet<NaiveDate> {
     let mut dates = BTreeSet::new();
     for (index, value) in values.iter().enumerate() {
         match NaiveDate::parse_from_str(value, "%Y-%m-%d") {
             Ok(date) if dates.insert(date) => {}
             _ => issues.push(CatalogIssue {
-                code: "pricing.schedule.date.invalid".to_owned(),
+                code: invalid_code.to_owned(),
                 path: format!("{catalog_key}/schedule/{field}/{index}"),
                 message: "schedule dates must be unique ISO dates".to_owned(),
             }),

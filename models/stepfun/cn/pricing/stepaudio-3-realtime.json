@@ -1,0 +1,39 @@
+{
+  "catalogKey": "stepfun/stepaudio-3-realtime",
+  "currency": "CNY",
+  "modelId": "stepaudio-3-realtime",
+  "prices": [
+    {
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T04:00:00Z",
+      "meterCode": "audio_output_minute",
+      "minimumQuantity": "0",
+      "priceId": "stepfun-cn-stepaudio-3-realtime-audio-output-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "quantityStep": "1",
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+      },
+      "unitPrice": "0.650000",
+      "unitSize": "1",
+      "evidence": "实时语音 0.65 元／会话分钟（39.00 元／会话小时）",
+      "priceBookCode": "models.stepfun.cn.official",
+      "productCode": "models.stepfun.audio",
+      "operationCode": "audio.generate",
+      "billability": "chargeable",
+      "chargeTiming": "successful_result",
+      "calculationMode": "per_unit",
+      "quantityAggregation": "sum",
+      "rateVariant": "standard",
+      "schedule": null,
+      "rateHash": "f75f0ed89acf0a1b1a390efae665aac57e476871140260edb3a26f1ff6cd57bf"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "stepfun"
+}

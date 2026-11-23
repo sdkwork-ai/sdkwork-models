@@ -172,6 +172,9 @@ function validatePriceSchedule(price, pricingPath, index, issues) {
         issues.push(issue("price.schedule.range.invalid", windowPath, "same-day windows require endTime after startTime; cross-midnight windows require endDayOffset 1 and endTime before startTime"));
       }
     }
+    if (window.holidayOnly === true && (window.startTime !== "00:00:00" || window.endTime !== "23:59:59" || window.endDayOffset !== 0)) {
+      issues.push(issue("pricing.schedule.holiday_only.range.invalid", windowPath, "holidayOnly windows must cover the whole day (00:00:00-23:59:59, endDayOffset 0)"));
+    }
   }
   for (const field of ["includeDates", "excludeDates"]) {
     if (schedule[field] === undefined) continue;
@@ -181,6 +184,17 @@ function validatePriceSchedule(price, pricingPath, index, issues) {
   }
   if (Array.isArray(schedule.includeDates) && Array.isArray(schedule.excludeDates) && schedule.includeDates.some((value) => schedule.excludeDates.includes(value))) {
     issues.push(issue("price.schedule.date_conflict", `${path}/schedule`, "a date cannot be both included and excluded"));
+  }
+  if (schedule.holidayDates !== undefined) {
+    if (!Array.isArray(schedule.holidayDates) || new Set(schedule.holidayDates).size !== schedule.holidayDates.length || schedule.holidayDates.some((value) => typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value) || Number.isNaN(Date.parse(`${value}T00:00:00Z`)))) {
+      issues.push(issue("pricing.schedule.holiday_date.invalid", `${path}/schedule/holidayDates`, "holidayDates must contain unique ISO dates"));
+    } else {
+      for (const field of ["includeDates", "excludeDates"]) {
+        if (Array.isArray(schedule[field]) && schedule.holidayDates.some((value) => schedule[field].includes(value))) {
+          issues.push(issue("pricing.schedule.holiday_date.conflict", `${path}/schedule`, `holidayDates must not overlap ${field}`));
+        }
+      }
+    }
   }
 }
 

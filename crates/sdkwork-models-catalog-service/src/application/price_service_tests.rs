@@ -1631,9 +1631,11 @@ fn time_window_rate_overrides_standard_rate_only_inside_local_window() {
             start_time: NaiveTime::from_hms_opt(9, 0, 0).expect("valid time"),
             end_time: NaiveTime::from_hms_opt(12, 0, 0).expect("valid time"),
             end_day_offset: 0,
+            holiday_only: false,
         }],
         include_dates: vec![NaiveDate::from_ymd_opt(2026, 8, 17).expect("valid date")],
         exclude_dates: Vec::new(),
+        holiday_dates: Vec::new(),
     });
     let standard = official_price(
         BillingMeter::ApiRequest,

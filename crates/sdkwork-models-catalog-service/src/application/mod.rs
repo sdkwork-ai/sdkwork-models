@@ -23,8 +23,9 @@ pub use billing_strategy::{
 };
 pub use credential_secret_codec::CredentialSecretCodec;
 pub use model_catalog_query::{
-    ListModelCatalogQuery, ModelCatalogGroup, ModelCatalogItem, ModelCatalogPage,
-    ModelCatalogPriceView, ModelCatalogQueryService, ModelCatalogReferencePriceView,
+    official_reference_price_views, ListModelCatalogQuery, ModelCatalogGroup, ModelCatalogItem,
+    ModelCatalogPage, ModelCatalogPriceScheduleView, ModelCatalogPriceView,
+    ModelCatalogPriceWeeklyWindowView, ModelCatalogQueryService, ModelCatalogReferencePriceView,
     PriceAvailability,
 };
 pub use model_ranking_refresh_worker::{

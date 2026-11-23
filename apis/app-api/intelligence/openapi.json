@@ -1776,6 +1776,130 @@
         ],
         "type": "object"
       },
+      "AppModelCatalogPriceSchedule": {
+        "additionalProperties": false,
+        "description": "App model catalog price schedule schema exposed by Cloud Router.",
+        "nullable": true,
+        "properties": {
+          "excludeDates": {
+            "description": "Exclude dates field on app model catalog price schedule.",
+            "items": {
+              "description": "Exclude dates field on app model catalog price schedule.",
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string"
+            },
+            "maxItems": 366,
+            "type": "array",
+            "uniqueItems": true
+          },
+          "holidayDates": {
+            "description": "Holiday dates field on app model catalog price schedule.",
+            "items": {
+              "description": "Holiday dates field on app model catalog price schedule.",
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string"
+            },
+            "maxItems": 366,
+            "type": "array",
+            "uniqueItems": true
+          },
+          "includeDates": {
+            "description": "Include dates field on app model catalog price schedule.",
+            "items": {
+              "description": "Include dates field on app model catalog price schedule.",
+              "format": "date",
+              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+              "type": "string"
+            },
+            "maxItems": 366,
+            "type": "array",
+            "uniqueItems": true
+          },
+          "timeZone": {
+            "description": "Time zone field on app model catalog price schedule.",
+            "maxLength": 128,
+            "minLength": 1,
+            "type": "string"
+          },
+          "weeklyWindows": {
+            "description": "Weekly windows field on app model catalog price schedule.",
+            "items": {
+              "$ref": "#/components/schemas/AppModelCatalogPriceScheduleWindow"
+            },
+            "maxItems": 64,
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "timeZone",
+          "weeklyWindows",
+          "includeDates",
+          "excludeDates",
+          "holidayDates"
+        ],
+        "type": "object"
+      },
+      "AppModelCatalogPriceScheduleWindow": {
+        "additionalProperties": false,
+        "description": "App model catalog price schedule window schema exposed by Cloud Router.",
+        "properties": {
+          "daysOfWeek": {
+            "description": "Days of week field on app model catalog price schedule window.",
+            "items": {
+              "description": "Days of week field on app model catalog price schedule window.",
+              "format": "int32",
+              "maximum": 7,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "maxItems": 7,
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true
+          },
+          "endDayOffset": {
+            "description": "End day offset field on app model catalog price schedule window.",
+            "enum": [
+              0,
+              1
+            ],
+            "format": "int32",
+            "type": "integer"
+          },
+          "endTime": {
+            "description": "End time field on app model catalog price schedule window.",
+            "pattern": "^(?:[01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$",
+            "type": "string"
+          },
+          "holidayOnly": {
+            "description": "Holiday only field on app model catalog price schedule window.",
+            "type": "boolean"
+          },
+          "startTime": {
+            "description": "Start time field on app model catalog price schedule window.",
+            "pattern": "^(?:[01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$",
+            "type": "string"
+          },
+          "windowCode": {
+            "description": "Window code field on app model catalog price schedule window.",
+            "maxLength": 96,
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "windowCode",
+          "daysOfWeek",
+          "startTime",
+          "endTime",
+          "endDayOffset",
+          "holidayOnly"
+        ],
+        "type": "object"
+      },
       "AppModelCatalogReferencePrice": {
         "additionalProperties": false,
         "description": "App model catalog reference price schema exposed by Cloud Router.",
@@ -1791,11 +1915,46 @@
             "pattern": "^[A-Z]{3}$",
             "type": "string"
           },
+          "rateHash": {
+            "description": "Rate hash field on app model catalog reference price.",
+            "maxLength": 128,
+            "type": "string"
+          },
+          "rateVariant": {
+            "description": "Rate variant field on app model catalog reference price.",
+            "enum": [
+              "standard",
+              "time_window",
+              "batch"
+            ],
+            "type": "string"
+          },
           "regionCode": {
             "description": "Region code field on app model catalog reference price.",
             "maxLength": 64,
             "minLength": 1,
             "type": "string"
+          },
+          "schedule": {
+            "description": "Schedule field on app model catalog reference price.",
+            "oneOf": [
+              {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/AppModelCatalogPriceSchedule"
+                  }
+                ],
+                "description": "Schedule field on app model catalog reference price."
+              },
+              {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/JsonNull"
+                  }
+                ],
+                "description": "Null variant accepted by schedule."
+              }
+            ]
           },
           "unitPrice": {
             "description": "Unit price field on app model catalog reference price.",
@@ -1807,7 +1966,10 @@
           "regionCode",
           "billingMeter",
           "unitPrice",
-          "currency"
+          "currency",
+          "rateHash",
+          "rateVariant",
+          "schedule"
         ],
         "type": "object"
       },
@@ -1903,6 +2065,10 @@
             }
           }
         }
+      },
+      "JsonNull": {
+        "description": "JSON null value.",
+        "type": "null"
       },
       "ModelRankingHistoryEntry": {
         "additionalProperties": false,

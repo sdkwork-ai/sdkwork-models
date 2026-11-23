@@ -12,7 +12,8 @@
   "billingCurrency": "USD",
   "billingJurisdiction": "GLOBAL",
   "capabilities": [
-    "chat"
+    "chat",
+    "audio"
   ],
   "clientApiCompatibility": {
     "claude_code": {
@@ -110,7 +111,10 @@
   "legalName": "DeepSeek",
   "marketScope": "international",
   "modelFamilies": [
-    "deepseek"
+    "deepseek",
+    "deepseek-tts",
+    "deepseek-asr",
+    "deepseek-ocr"
   ],
   "openSource": false,
   "operatingRegions": [
@@ -134,7 +138,7 @@
   "schemaVersion": "1.0.0",
   "sortOrder": 60,
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
+    "observedAt": "2026-11-23T00:00:00Z",
     "sourceUrl": "https://api-docs.deepseek.com"
   },
   "supportedProtocols": [

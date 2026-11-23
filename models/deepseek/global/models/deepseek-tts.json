@@ -1,0 +1,39 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "deepseek/deepseek-tts",
+  "codingVisible": false,
+  "description": "DeepSeek text-to-speech API. Official pricing is CNY 3 per 10,000 characters (USD 0.45), with a limited-time 50% discount of CNY 1.5 (USD 0.225) per 10,000 characters.",
+  "displayName": "DeepSeek TTS",
+  "familyCode": "deepseek-tts",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "deepseek-tts",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing"
+  },
+  "strengths": [
+    "Text to speech",
+    "Voice synthesis"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "deepseek",
+  "vendorName": "DeepSeek"
+}

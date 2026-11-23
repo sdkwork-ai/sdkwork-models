@@ -1,0 +1,36 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "stepfun/stepaudio-3-gen",
+  "codingVisible": false,
+  "colorToken": "#0369a1",
+  "description": "StepAudio 3 audio generation billed per million input billed characters, same character counting rules as TTS.",
+  "displayName": "StepAudio 3 Gen",
+  "familyCode": "step-audio-3",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "stepaudio-3-gen",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "stepfun",
+  "vendorName": "StepFun"
+}

@@ -410,6 +410,14 @@
             "type": "string",
             "format": "date"
           }
+        },
+        "holidayDates": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "format": "date"
+          }
         }
       },
       "additionalProperties": false
@@ -448,6 +456,10 @@
         },
         "endDayOffset": {
           "enum": [0, 1]
+        },
+        "holidayOnly": {
+          "type": "boolean",
+          "default": false
         }
       },
       "additionalProperties": false

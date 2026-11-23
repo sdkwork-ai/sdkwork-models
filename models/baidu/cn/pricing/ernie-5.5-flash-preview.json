@@ -1,0 +1,355 @@
+{
+  "catalogKey": "baidu/ernie-5.5-flash-preview",
+  "currency": "CNY",
+  "modelId": "ernie-5.5-flash-preview",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-29T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5-5-flash-preview-input-peak",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "19276123cc25dfcaab48e3e013dd1980a03a04409804f6f2b987db2649fb0c06",
+      "rateVariant": "time_window",
+      "schedule": {
+        "excludeDates": [],
+        "holidayDates": [],
+        "includeDates": [],
+        "timeZone": "Asia/Shanghai",
+        "weeklyWindows": [
+          {
+            "daysOfWeek": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "endDayOffset": 0,
+            "endTime": "22:00:00",
+            "startTime": "08:00:00",
+            "windowCode": "peak_daily"
+          }
+        ]
+      },
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a"
+      },
+      "unitPrice": "2.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-29T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5-5-flash-preview-cache-read-peak",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "33787ec3004c1938d665daf0853901466fa2e6ff4be7fdd3b89518d8d1fb6c45",
+      "rateVariant": "time_window",
+      "schedule": {
+        "excludeDates": [],
+        "holidayDates": [],
+        "includeDates": [],
+        "timeZone": "Asia/Shanghai",
+        "weeklyWindows": [
+          {
+            "daysOfWeek": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "endDayOffset": 0,
+            "endTime": "22:00:00",
+            "startTime": "08:00:00",
+            "windowCode": "peak_daily"
+          }
+        ]
+      },
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a"
+      },
+      "unitPrice": "0.200000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-29T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5-5-flash-preview-output-peak",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "e6dfd544b89a0cacc0f31061c17241d34bc3c85046388fff41fd14c1659cb6a6",
+      "rateVariant": "time_window",
+      "schedule": {
+        "excludeDates": [],
+        "holidayDates": [],
+        "includeDates": [],
+        "timeZone": "Asia/Shanghai",
+        "weeklyWindows": [
+          {
+            "daysOfWeek": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "endDayOffset": 0,
+            "endTime": "22:00:00",
+            "startTime": "08:00:00",
+            "windowCode": "peak_daily"
+          }
+        ]
+      },
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a"
+      },
+      "unitPrice": "8.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-29T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5-5-flash-preview-input-off-peak",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "55e56a6a9f6adc86ebbc992ed27cd914cdaad7dc314a46332179c122ff193c18",
+      "rateVariant": "time_window",
+      "schedule": {
+        "excludeDates": [],
+        "holidayDates": [],
+        "includeDates": [],
+        "timeZone": "Asia/Shanghai",
+        "weeklyWindows": [
+          {
+            "daysOfWeek": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "endDayOffset": 0,
+            "endTime": "08:00:00",
+            "startTime": "00:00:00",
+            "windowCode": "off_peak_daily_morning"
+          },
+          {
+            "daysOfWeek": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "endDayOffset": 1,
+            "endTime": "00:00:00",
+            "startTime": "22:00:00",
+            "windowCode": "off_peak_daily_night"
+          }
+        ]
+      },
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a"
+      },
+      "unitPrice": "1.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-29T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5-5-flash-preview-cache-read-off-peak",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "9cb3d854d4a42b6435cc16ad6749448388c372a6fa2b18d7b470723e29f99f9c",
+      "rateVariant": "time_window",
+      "schedule": {
+        "excludeDates": [],
+        "holidayDates": [],
+        "includeDates": [],
+        "timeZone": "Asia/Shanghai",
+        "weeklyWindows": [
+          {
+            "daysOfWeek": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "endDayOffset": 0,
+            "endTime": "08:00:00",
+            "startTime": "00:00:00",
+            "windowCode": "off_peak_daily_morning"
+          },
+          {
+            "daysOfWeek": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "endDayOffset": 1,
+            "endTime": "00:00:00",
+            "startTime": "22:00:00",
+            "windowCode": "off_peak_daily_night"
+          }
+        ]
+      },
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a"
+      },
+      "unitPrice": "0.100000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-29T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.baidu.cn.official",
+      "priceId": "baidu-cn-ernie-5-5-flash-preview-output-off-peak",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.baidu.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "abccdfb175c8c12cecd9909598dcc72524b01bc13713ac11697f1176fb2e5cf1",
+      "rateVariant": "time_window",
+      "schedule": {
+        "excludeDates": [],
+        "holidayDates": [],
+        "includeDates": [],
+        "timeZone": "Asia/Shanghai",
+        "weeklyWindows": [
+          {
+            "daysOfWeek": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "endDayOffset": 0,
+            "endTime": "08:00:00",
+            "startTime": "00:00:00",
+            "windowCode": "off_peak_daily_morning"
+          },
+          {
+            "daysOfWeek": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "endDayOffset": 1,
+            "endTime": "00:00:00",
+            "startTime": "22:00:00",
+            "windowCode": "off_peak_daily_night"
+          }
+        ]
+      },
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a"
+      },
+      "unitPrice": "4.000000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "baidu"
+}

@@ -1,0 +1,39 @@
+{
+  "catalogKey": "deepseek/deepseek-ocr",
+  "currency": "CNY",
+  "modelId": "deepseek-ocr",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "document_page",
+      "minimumQuantity": "0",
+      "notes": "Official price per 1,000 pages for both file parsing and the OCR API.",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.deepseek.cn.official",
+      "priceId": "deepseek-cn-deepseek-ocr",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.deepseek.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "0172fa2bf3b4eea49b237f7a340c29e5b6c9a88f83886be2b346940c4d79b892",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
+      },
+      "unitPrice": "1.500000",
+      "unitSize": "1000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "deepseek"
+}

@@ -30,6 +30,7 @@ SCOPE = {"model", "provider", "channel", "plan"}
 OPS = {"eq", "neq", "gt", "gte", "lt", "lte", "in", "not_in", "exists"}
 DECIMAL_RE = re.compile(r"^(0|[1-9][0-9]*)(\.[0-9]+)?$")
 HASH_RE = re.compile(r"^[a-f0-9]{64}$")
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 KNOWN_DIMS = {
     "api_code", "operation_id", "tier_code", "quality", "resolution",
     "duration_seconds", "result_count", "media_type", "input_type", "output_type",
@@ -59,6 +60,12 @@ def charge_timing(meter):
     return "usage_reported"
 
 def conditions_of(price):
+    # Modern pricing v2 rows already carry the normalized condition array.
+    # Re-deriving it from the legacy scalar fields would drop `tier_code=batch`
+    # and context/tier conditions and produce a false hash-drift report.
+    existing = price.get("conditions")
+    if isinstance(existing, list) and existing:
+        return existing
     result = []
     if price.get("thresholdTokens") is not None:
         result.append({"dimensionCode": "context_tokens", "operator": "gt", "value": str(price["thresholdTokens"])})
@@ -73,8 +80,10 @@ def normalized_price(pricing, price, capability):
     """Faithful port of migrate-pricing-v2.mjs normalization."""
     p = dict(price)
     p["priceBookCode"] = f"models.{pricing['vendorCode']}.{pricing['regionCode']}.{p['priceSide']}"
-    p["productCode"] = f"models.{pricing['vendorCode']}.{capability or 'model'}"
-    p["operationCode"] = op_code(capability, p["meterCode"])
+    if not p.get("productCode"):
+        p["productCode"] = f"models.{pricing['vendorCode']}.{capability or 'model'}"
+    if not p.get("operationCode"):
+        p["operationCode"] = op_code(capability, p["meterCode"])
     p["billability"] = "chargeable" if float(p["unitPrice"]) > 0 else "unknown"
     p["chargeTiming"] = charge_timing(p["meterCode"])
     p["calculationMode"] = "per_unit"
@@ -199,10 +208,10 @@ for pricing_path in sorted(glob.glob(os.path.join(MODELS, "*", "*", "pricing", "
 
         variant = price.get("rateVariant", "standard")
         schedule = price.get("schedule")
-        if variant not in ("standard", "time_window"):
+        if variant not in ("standard", "time_window", "batch"):
             issue(loc, f"rateVariant={variant!r}")
-        if variant == "standard" and schedule is not None:
-            issue(loc, "standard rate carries a schedule")
+        if variant in ("standard", "batch") and schedule is not None:
+            issue(loc, "standard/batch rate carries a schedule")
         if variant == "time_window":
             if schedule is None:
                 issue(loc, "time_window rate without a schedule")
@@ -214,6 +223,23 @@ for pricing_path in sorted(glob.glob(os.path.join(MODELS, "*", "*", "pricing", "
                         if k not in w: issue(loc, f"weekly window missing {k}")
                     if w.get("endDayOffset") not in (0, 1): issue(loc, f"endDayOffset={w.get('endDayOffset')!r}")
                     if not w.get("daysOfWeek"): issue(loc, "weekly window has empty daysOfWeek (never matches)")
+                    if w.get("holidayOnly") is True and (
+                            w.get("startTime") != "00:00:00"
+                            or w.get("endTime") != "23:59:59"
+                            or w.get("endDayOffset") != 0):
+                        issue(loc, "holidayOnly window must cover the whole day (00:00:00-23:59:59, endDayOffset 0)")
+                holiday_dates = schedule.get("holidayDates")
+                if holiday_dates is not None:
+                    if (not isinstance(holiday_dates, list)
+                            or any(not isinstance(d, str) or not DATE_RE.match(d) for d in holiday_dates)):
+                        issue(loc, "schedule holidayDates must contain unique ISO dates")
+                    elif len(set(holiday_dates)) != len(holiday_dates):
+                        issue(loc, "schedule holidayDates must contain unique ISO dates")
+                    else:
+                        for other in ("includeDates", "excludeDates"):
+                            overlap = sorted(set(holiday_dates) & set(schedule.get(other) or []))
+                            if overlap:
+                                issue(loc, f"holidayDates overlap {other}: {', '.join(overlap)}")
 
         conds = price.get("conditions", [])
         if not isinstance(conds, list):
@@ -224,8 +250,10 @@ for pricing_path in sorted(glob.glob(os.path.join(MODELS, "*", "*", "pricing", "
                     issue(loc, f"condition dimension {c.get('dimensionCode')!r} not evaluable at runtime")
                 if c.get("operator") not in OPS:
                     issue(loc, f"operator={c.get('operator')!r}")
-                if c.get("dimensionCode") == "tier_code" and variant != "time_window":
-                    issue(loc, "tier_code condition on a non-time_window rate (unreachable without a request tier)")
+                # `tier_code` is injected by the gateway from the request
+                # (`/tier_code`, `/service_tier`) and from the catalog's context
+                # tier resolver, so it is reachable on standard, batch, and
+                # time-window rates alike.
 
         ef, et = price.get("effectiveFrom"), price.get("effectiveTo")
         if ef is not None and et is not None:

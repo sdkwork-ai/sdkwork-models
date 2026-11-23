@@ -1,0 +1,37 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "music"
+  ],
+  "catalogKey": "stepfun/stepaudio-3-music",
+  "codingVisible": false,
+  "colorToken": "#0369a1",
+  "description": "StepAudio 3 music generation billed per output audio hour with two tiers by presence of audio input: no audio input 16.00 CNY/h, with audio input 32.00 CNY/h.",
+  "displayName": "StepAudio 3 Music",
+  "familyCode": "step-audio-3",
+  "inputModalities": [
+    "text",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "stepaudio-3-music",
+  "outputModalities": [
+    "music"
+  ],
+  "primaryCapability": "music",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "stepfun",
+  "vendorName": "StepFun"
+}

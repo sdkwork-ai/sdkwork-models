@@ -7,6 +7,22 @@
       "familyType": "llm",
       "primaryModality": "text",
       "sortOrder": 10
+    },
+    {
+      "defaultModel": "stepaudio-3-tts",
+      "displayName": "StepAudio 3",
+      "familyCode": "step-audio-3",
+      "familyType": "audio",
+      "primaryModality": "audio",
+      "sortOrder": 20
+    },
+    {
+      "defaultModel": "step-tts-mini",
+      "displayName": "StepAudio Legacy",
+      "familyCode": "step-audio-legacy",
+      "familyType": "audio",
+      "primaryModality": "audio",
+      "sortOrder": 30
     }
   ],
   "regionCode": "cn",

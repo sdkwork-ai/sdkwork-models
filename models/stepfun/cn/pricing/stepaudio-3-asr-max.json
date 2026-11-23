@@ -1,0 +1,39 @@
+{
+  "catalogKey": "stepfun/stepaudio-3-asr-max",
+  "currency": "CNY",
+  "modelId": "stepaudio-3-asr-max",
+  "prices": [
+    {
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T04:00:00Z",
+      "meterCode": "stt_audio_minute",
+      "minimumQuantity": "0",
+      "priceId": "stepfun-cn-stepaudio-3-asr-max-stt-audio-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "quantityStep": "1",
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+      },
+      "unitPrice": "7.500000",
+      "unitSize": "60",
+      "evidence": "语音识别 7.50 元／音频小时",
+      "priceBookCode": "models.stepfun.cn.official",
+      "productCode": "models.stepfun.audio",
+      "operationCode": "audio.transcribe",
+      "billability": "chargeable",
+      "chargeTiming": "successful_result",
+      "calculationMode": "per_unit",
+      "quantityAggregation": "sum",
+      "rateVariant": "standard",
+      "schedule": null,
+      "rateHash": "ab975d38edd51fb0a92846f166f92db99a2bbc1357d37691934d571915392afe"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "stepfun"
+}

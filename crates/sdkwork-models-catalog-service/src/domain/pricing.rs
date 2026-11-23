@@ -127,6 +127,11 @@ pub struct PricingRateMetadata {
 pub enum PricingRateVariant {
     Standard,
     TimeWindow,
+    /// Vendor batch/offline price (typically 50% of the real-time rate). It
+    /// shares the no-schedule shape with `standard`; the catalog distinguishes
+    /// it through the explicit `tier_code=batch` condition so an interactive
+    /// call never selects it.
+    Batch,
 }
 
 impl PricingRateVariant {
@@ -134,6 +139,7 @@ impl PricingRateVariant {
         match self {
             Self::Standard => "standard",
             Self::TimeWindow => "time_window",
+            Self::Batch => "batch",
         }
     }
 
@@ -141,6 +147,7 @@ impl PricingRateVariant {
         match value.trim() {
             "standard" => Some(Self::Standard),
             "time_window" => Some(Self::TimeWindow),
+            "batch" => Some(Self::Batch),
             _ => None,
         }
     }
@@ -148,6 +155,7 @@ impl PricingRateVariant {
     pub fn selection_rank(self) -> u8 {
         match self {
             Self::Standard => 0,
+            Self::Batch => 0,
             Self::TimeWindow => 1,
         }
     }
@@ -159,6 +167,7 @@ pub struct PricingSchedule {
     pub weekly_windows: Vec<PricingWeeklyWindow>,
     pub include_dates: Vec<NaiveDate>,
     pub exclude_dates: Vec<NaiveDate>,
+    pub holiday_dates: Vec<NaiveDate>,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -168,6 +177,7 @@ pub struct PricingWeeklyWindow {
     pub start_time: NaiveTime,
     pub end_time: NaiveTime,
     pub end_day_offset: u8,
+    pub holiday_only: bool,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -382,7 +392,7 @@ impl PricingRateMetadata {
 
     pub fn matched_window_code(&self, occurred_at: DateTime<Utc>) -> Option<&str> {
         match self.rate_variant {
-            PricingRateVariant::Standard => None,
+            PricingRateVariant::Standard | PricingRateVariant::Batch => None,
             PricingRateVariant::TimeWindow => self
                 .schedule
                 .as_ref()
@@ -398,7 +408,9 @@ impl PricingRateMetadata {
         self.is_effective_at(occurred_at)
             && self.matches(dimensions)
             && match self.rate_variant {
-                PricingRateVariant::Standard => self.schedule.is_none(),
+                PricingRateVariant::Standard | PricingRateVariant::Batch => {
+                    self.schedule.is_none()
+                }
                 PricingRateVariant::TimeWindow => self
                     .schedule
                     .as_ref()
@@ -415,8 +427,18 @@ impl PricingSchedule {
         if self.exclude_dates.contains(&local_date) {
             return None;
         }
+        if self.holiday_dates.contains(&local_date) {
+            return self
+                .weekly_windows
+                .iter()
+                .find(|window| window.holiday_only)
+                .map(|window| window.window_code.as_str());
+        }
         let local_time = local.time();
         self.weekly_windows.iter().find_map(|window| {
+            if window.holiday_only {
+                return None;
+            }
             let start_date = if window.end_day_offset == 1 && local_time < window.end_time {
                 local_date.checked_sub_signed(Duration::days(1))?
             } else {
@@ -628,12 +650,47 @@ mod tests {
     }
 
     fn schedule(window: PricingWeeklyWindow) -> PricingSchedule {
+        schedule_with(vec![window], Vec::new())
+    }
+
+    fn schedule_with(
+        weekly_windows: Vec<PricingWeeklyWindow>,
+        holiday_dates: Vec<NaiveDate>,
+    ) -> PricingSchedule {
         PricingSchedule {
             time_zone: "Asia/Shanghai".parse().expect("valid timezone"),
-            weekly_windows: vec![window],
+            weekly_windows,
             include_dates: Vec::new(),
             exclude_dates: Vec::new(),
+            holiday_dates,
         }
+    }
+
+    fn window(
+        window_code: &str,
+        days_of_week: Vec<u8>,
+        start: (u32, u32, u32),
+        end: (u32, u32, u32),
+        end_day_offset: u8,
+        holiday_only: bool,
+    ) -> PricingWeeklyWindow {
+        PricingWeeklyWindow {
+            window_code: window_code.to_owned(),
+            days_of_week,
+            start_time: NaiveTime::from_hms_opt(start.0, start.1, start.2).expect("valid time"),
+            end_time: NaiveTime::from_hms_opt(end.0, end.1, end.2).expect("valid time"),
+            end_day_offset,
+            holiday_only,
+        }
+    }
+
+    fn shanghai_instant(year: i32, month: u32, day: u32, hour: u32) -> chrono::DateTime<Utc> {
+        chrono::FixedOffset::east_opt(8 * 3600)
+            .expect("valid offset")
+            .with_ymd_and_hms(year, month, day, hour, 0, 0)
+            .single()
+            .expect("valid instant")
+            .with_timezone(&Utc)
     }
 
     #[test]
@@ -644,6 +701,7 @@ mod tests {
             start_time: NaiveTime::from_hms_opt(9, 0, 0).expect("valid time"),
             end_time: NaiveTime::from_hms_opt(12, 0, 0).expect("valid time"),
             end_day_offset: 0,
+            holiday_only: false,
         });
         let occurred_at = Utc
             .with_ymd_and_hms(2026, 8, 17, 2, 0, 0)
@@ -664,6 +722,7 @@ mod tests {
             start_time: NaiveTime::from_hms_opt(22, 0, 0).expect("valid time"),
             end_time: NaiveTime::from_hms_opt(2, 0, 0).expect("valid time"),
             end_day_offset: 1,
+            holiday_only: false,
         });
         let friday_2330 = Utc
             .with_ymd_and_hms(2026, 8, 21, 15, 30, 0)
@@ -697,6 +756,7 @@ mod tests {
             start_time: NaiveTime::from_hms_opt(9, 0, 0).expect("valid time"),
             end_time: NaiveTime::from_hms_opt(12, 0, 0).expect("valid time"),
             end_day_offset: 0,
+            holiday_only: false,
         });
         let sunday = NaiveDate::from_ymd_opt(2026, 8, 23).expect("valid date");
         let occurred_at = Utc
@@ -707,6 +767,97 @@ mod tests {
         schedule.include_dates.push(sunday);
         assert_eq!(Some("morning"), schedule.matched_window_code(occurred_at));
         schedule.exclude_dates.push(sunday);
+        assert_eq!(None, schedule.matched_window_code(occurred_at));
+    }
+
+    #[test]
+    fn weekday_morning_matches_the_peak_window() {
+        let schedule = schedule(window(
+            "peak_weekday_morning",
+            vec![1, 2, 3, 4, 5],
+            (9, 0, 0),
+            (12, 0, 0),
+            0,
+            false,
+        ));
+
+        assert_eq!(
+            Some("peak_weekday_morning"),
+            schedule.matched_window_code(shanghai_instant(2026, 8, 17, 10))
+        );
+    }
+
+    #[test]
+    fn holiday_on_a_weekday_matches_only_the_holiday_window() {
+        let holiday = NaiveDate::from_ymd_opt(2026, 10, 1).expect("valid date");
+        let peak = window(
+            "peak_weekday_morning",
+            vec![1, 2, 3, 4, 5],
+            (9, 0, 0),
+            (12, 0, 0),
+            0,
+            false,
+        );
+        let holiday_window = window(
+            "off_peak_holiday",
+            vec![1, 2, 3, 4, 5, 6, 7],
+            (0, 0, 0),
+            (23, 59, 59),
+            0,
+            true,
+        );
+
+        let peak_only = schedule_with(vec![peak.clone()], vec![holiday]);
+        assert_eq!(
+            None,
+            peak_only.matched_window_code(shanghai_instant(2026, 10, 1, 10))
+        );
+
+        let with_holiday = schedule_with(vec![peak, holiday_window], vec![holiday]);
+        assert_eq!(
+            Some("off_peak_holiday"),
+            with_holiday.matched_window_code(shanghai_instant(2026, 10, 1, 10))
+        );
+    }
+
+    #[test]
+    fn holiday_only_window_never_matches_a_non_holiday() {
+        let schedule = schedule(window(
+            "off_peak_holiday",
+            vec![1, 2, 3, 4, 5, 6, 7],
+            (0, 0, 0),
+            (23, 59, 59),
+            0,
+            true,
+        ));
+
+        assert_eq!(
+            None,
+            schedule.matched_window_code(shanghai_instant(2026, 8, 17, 10))
+        );
+    }
+
+    #[test]
+    fn exclude_dates_take_precedence_over_holiday_windows() {
+        let holiday = NaiveDate::from_ymd_opt(2026, 10, 1).expect("valid date");
+        let mut schedule = schedule_with(
+            vec![window(
+                "off_peak_holiday",
+                vec![1, 2, 3, 4, 5, 6, 7],
+                (0, 0, 0),
+                (23, 59, 59),
+                0,
+                true,
+            )],
+            vec![holiday],
+        );
+        let occurred_at = shanghai_instant(2026, 10, 1, 10);
+
+        assert_eq!(
+            Some("off_peak_holiday"),
+            schedule.matched_window_code(occurred_at)
+        );
+        schedule.exclude_dates.push(holiday);
         assert_eq!(None, schedule.matched_window_code(occurred_at));
     }
 }

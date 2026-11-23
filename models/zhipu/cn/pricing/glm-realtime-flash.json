@@ -1,0 +1,68 @@
+{
+  "catalogKey": "zhipu/glm-realtime-flash",
+  "currency": "CNY",
+  "modelId": "glm-realtime-flash",
+  "prices": [
+    {
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "audio_input_minute",
+      "minimumQuantity": "0",
+      "priceId": "zhipu-cn-glm-realtime-flash-audio-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "quantityStep": "1",
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
+      },
+      "unitPrice": "0.180000",
+      "unitSize": "1",
+      "evidence": "音频：0.18 元/分钟",
+      "priceBookCode": "models.zhipu.cn.official",
+      "productCode": "models.zhipu.audio",
+      "operationCode": "audio.generate",
+      "billability": "chargeable",
+      "chargeTiming": "successful_result",
+      "calculationMode": "per_unit",
+      "quantityAggregation": "sum",
+      "rateVariant": "standard",
+      "schedule": null,
+      "rateHash": "5431e12e517cd8967458c08ed93cafa880a1bf20fc1e692f850b712052a4eadc"
+    },
+    {
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "video_input_second",
+      "minimumQuantity": "0",
+      "priceId": "zhipu-cn-glm-realtime-flash-video-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "quantityStep": "1",
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
+      },
+      "unitPrice": "1.200000",
+      "unitSize": "60",
+      "evidence": "视频：1.2 元/分钟",
+      "priceBookCode": "models.zhipu.cn.official",
+      "productCode": "models.zhipu.audio",
+      "operationCode": "audio.generate",
+      "billability": "chargeable",
+      "chargeTiming": "successful_result",
+      "calculationMode": "per_unit",
+      "quantityAggregation": "sum",
+      "rateVariant": "standard",
+      "schedule": null,
+      "rateHash": "0915a12c82326c22f7d61193c634fd55a57ce947ec4dd77ac3ff586c1de268f4"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "zhipu"
+}

@@ -7,21 +7,27 @@
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "successful_result",
-      "conditions": [],
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "low_1k"
+        }
+      ],
       "currency": "USD",
       "effectiveFrom": "2026-09-17T00:00:00Z",
       "meterCode": "image_result",
       "minimumQuantity": "0",
       "operationCode": "image.generate",
       "priceBookCode": "models.xai.global.official",
-      "priceId": "xai-grok-imagine-image-2.0-image",
+      "priceId": "xai-grok-imagine-image-2.0-low-1k",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.xai.image",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "bee269ad0a9ccf6b3746cc9ceab8455331581222ec14572f4f6d99ae9a055882",
+      "rateHash": "b453f3a2078b1dbd1fbc817ed73015ce5a59d00e55ea5e7c23e2a56be18cb007",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
@@ -29,7 +35,113 @@
         "sourceUrl": "https://docs.x.ai/developers/pricing"
       },
       "unitPrice": "0.040000",
-      "unitSize": "1"
+      "unitSize": "1",
+      "tierCode": "low_1k"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "medium_1k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-grok-imagine-image-2.0-medium-1k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "afc8305ef136356b184ac6f028a14472b2e33c4fca75eac16b44124b24d698bf",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/developers/pricing"
+      },
+      "unitPrice": "0.060000",
+      "unitSize": "1",
+      "tierCode": "medium_1k"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "low_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-grok-imagine-image-2.0-low-2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "9f6a6a95ec24a077daa5941ccd71d1a982ec60d91f792ae540710f41ff2809bc",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/developers/pricing"
+      },
+      "unitPrice": "0.060000",
+      "unitSize": "1",
+      "tierCode": "low_2k"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "medium_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-grok-imagine-image-2.0-medium-2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "b607aa73dc633488a2b5c5efc446e438a366350a393e87aeef522916bad815d2",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/developers/pricing"
+      },
+      "unitPrice": "0.080000",
+      "unitSize": "1",
+      "tierCode": "medium_2k"
     }
   ],
   "regionCode": "global",

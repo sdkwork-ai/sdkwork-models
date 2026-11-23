@@ -143,8 +143,16 @@
       "sha256": "8ed510b3625edfa1dfa15b473a3e0532b0ac0141d8f69133f1ba6d4b28c1caa3"
     },
     {
+      "path": "src/types/app-model-catalog-price-schedule-window.ts",
+      "sha256": "3b353ab197b32bb81e9bc0372488a3eb63203d086a84cc3278982f9e38922df2"
+    },
+    {
+      "path": "src/types/app-model-catalog-price-schedule.ts",
+      "sha256": "f59c62cac99851519f4dbb212f6d28274cb79d7260f0eafcbd3730d6974e839d"
+    },
+    {
       "path": "src/types/app-model-catalog-reference-price.ts",
-      "sha256": "612701e0b1dc6b2a3165e95c426e624ff2ee4321549b393d80d0a90b542f221c"
+      "sha256": "684038aad1716f761936f1d7d497c339d0f6fed8d5c6baa2025c3bf9c6c75fce"
     },
     {
       "path": "src/types/app-model-vendor-catalog-response.ts",
@@ -164,7 +172,11 @@
     },
     {
       "path": "src/types/index.ts",
-      "sha256": "8010423abc10dbc95884505d0762a45b1d25daf05198e7b6542afa17afa7c4f9"
+      "sha256": "c20cb52290e7203a64ca13c16951fff2426c572fdd137ba9253f4d13ff9de090"
+    },
+    {
+      "path": "src/types/json-null.ts",
+      "sha256": "2ef891ef2a54f476c457aeca7ec7d3d5d2cbdca19343fdefd8dfcbcd2767d856"
     },
     {
       "path": "src/types/model-access-channel-presets-list-result.ts",

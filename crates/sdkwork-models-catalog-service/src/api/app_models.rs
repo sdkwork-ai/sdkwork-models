@@ -16,8 +16,9 @@ use crate::api::page_info::{offset_page_info, ApiPageInfo};
 use crate::api::request_id::{generate_server_request_id, RequestIdError};
 use crate::api::response::{finish_success, problem_for};
 use crate::application::{
-    EntityUuidGenerator, ListModelCatalogQuery, ModelCatalogGroup, ModelCatalogItem,
-    ModelCatalogPage, ModelCatalogQueryService, PriceAvailability,
+    official_reference_price_views, EntityUuidGenerator, ListModelCatalogQuery,
+    ModelCatalogGroup, ModelCatalogItem, ModelCatalogPage, ModelCatalogQueryService,
+    ModelCatalogReferencePriceView, PriceAvailability,
 };
 use crate::domain::BillingMeter;
 use crate::ports::{
@@ -358,6 +359,30 @@ struct AppModelCatalogReferencePriceResponse {
     billing_meter: String,
     unit_price: String,
     currency: String,
+    rate_hash: String,
+    rate_variant: String,
+    schedule: Option<AppModelCatalogPriceScheduleResponse>,
+}
+
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+struct AppModelCatalogPriceScheduleResponse {
+    time_zone: String,
+    weekly_windows: Vec<AppModelCatalogPriceWeeklyWindowResponse>,
+    include_dates: Vec<String>,
+    exclude_dates: Vec<String>,
+    holiday_dates: Vec<String>,
+}
+
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+struct AppModelCatalogPriceWeeklyWindowResponse {
+    window_code: String,
+    days_of_week: Vec<u8>,
+    start_time: String,
+    end_time: String,
+    end_day_offset: u8,
+    holiday_only: bool,
 }
 
 #[derive(Debug, Serialize)]
@@ -510,6 +535,14 @@ where
                             page,
                             page_size,
                             &state.profile_counts,
+                            Some(&|catalog_key: &str| {
+                                official_reference_price_views(
+                                    state.fallback_catalog.as_ref(),
+                                    0,
+                                    0,
+                                    catalog_key,
+                                )
+                            }),
                         ),
                     )
                 }
@@ -1649,13 +1682,28 @@ fn to_database_model_response(
     page: usize,
     page_size: usize,
     profile_counts: &ProfileCounts,
+    official_price_loader: Option<&dyn Fn(&str) -> Vec<ModelCatalogReferencePriceView>>,
 ) -> AppModelCatalogResponse {
     let groups = database_model_groups(&database_page.items);
     let total_items = database_page.total_count;
     let items = database_page
         .items
         .into_iter()
-        .map(|item| to_database_model_item(item, billing_meter, profile_counts))
+        .map(|item| {
+            // The DB model snapshot carries only the legacy per-region columns.
+            // Join the composed official price catalog for the current
+            // rate family (including peak/off-peak schedules) so the public
+            // model list and the pricing workspace agree on the same rates.
+            let official_reference_prices = official_price_loader
+                .map(|load| load(item.catalog_key.as_str()))
+                .unwrap_or_default();
+            to_database_model_item(
+                item,
+                billing_meter,
+                profile_counts,
+                official_reference_prices,
+            )
+        })
         .collect();
     AppModelCatalogResponse {
         items,
@@ -1694,8 +1742,41 @@ fn to_database_model_item(
     item: AdminAiModelItem,
     billing_meter: &BillingMeter,
     profile_counts: &ProfileCounts,
+    official_reference_prices: Vec<ModelCatalogReferencePriceView>,
 ) -> AppModelCatalogItemResponse {
-    let official_reference_prices = database_reference_prices(&item, billing_meter);
+    let official_reference_prices = if official_reference_prices.is_empty() {
+        database_reference_prices(&item, billing_meter)
+    } else {
+        official_reference_prices
+            .into_iter()
+            .map(|price| AppModelCatalogReferencePriceResponse {
+                region_code: price.region_code,
+                billing_meter: price.billing_meter,
+                unit_price: price.unit_price,
+                currency: price.currency,
+                rate_hash: price.rate_hash,
+                rate_variant: price.rate_variant,
+                schedule: price.schedule.map(|schedule| AppModelCatalogPriceScheduleResponse {
+                    time_zone: schedule.time_zone,
+                    weekly_windows: schedule
+                        .weekly_windows
+                        .into_iter()
+                        .map(|window| AppModelCatalogPriceWeeklyWindowResponse {
+                            window_code: window.window_code,
+                            days_of_week: window.days_of_week,
+                            start_time: window.start_time,
+                            end_time: window.end_time,
+                            end_day_offset: window.end_day_offset,
+                            holiday_only: window.holiday_only,
+                        })
+                        .collect(),
+                    include_dates: schedule.include_dates,
+                    exclude_dates: schedule.exclude_dates,
+                    holiday_dates: schedule.holiday_dates,
+                }),
+            })
+            .collect()
+    };
     let capabilities = database_model_capabilities(&item);
     let (video_profile_count, voice_binding_count) =
         profile_counts.for_catalog_key(&item.catalog_key);
@@ -1776,6 +1857,9 @@ fn database_reference_prices(
                 billing_meter: billing_meter.code().to_owned(),
                 unit_price: unit_price.to_owned(),
                 currency: price.currency.clone(),
+                rate_hash: String::new(),
+                rate_variant: "standard".to_owned(),
+                schedule: None,
             })
         })
         .collect()
@@ -2364,6 +2448,26 @@ fn to_item_response(
                 billing_meter: price.billing_meter,
                 unit_price: price.unit_price,
                 currency: price.currency,
+                rate_hash: price.rate_hash,
+                rate_variant: price.rate_variant,
+                schedule: price.schedule.map(|schedule| AppModelCatalogPriceScheduleResponse {
+                    time_zone: schedule.time_zone,
+                    weekly_windows: schedule
+                        .weekly_windows
+                        .into_iter()
+                        .map(|window| AppModelCatalogPriceWeeklyWindowResponse {
+                            window_code: window.window_code,
+                            days_of_week: window.days_of_week,
+                            start_time: window.start_time,
+                            end_time: window.end_time,
+                            end_day_offset: window.end_day_offset,
+                            holiday_only: window.holiday_only,
+                        })
+                        .collect(),
+                    include_dates: schedule.include_dates,
+                    exclude_dates: schedule.exclude_dates,
+                    holiday_dates: schedule.holiday_dates,
+                }),
             })
             .collect(),
         price_availability,
@@ -2488,6 +2592,7 @@ mod tests {
             1,
             20,
             &ProfileCounts::default(),
+            None,
         );
 
         assert_eq!(response.items[0].model, "ranked-first");
@@ -2516,7 +2621,12 @@ mod tests {
             .voice_bindings
             .insert("bytedance/doubao-seedance-2-0-mini-260615".to_owned(), 0);
 
-        let response = to_database_model_item(item, &BillingMeter::LlmInputToken, &counts);
+        let response = to_database_model_item(
+            item,
+            &BillingMeter::LlmInputToken,
+            &counts,
+            Vec::new(),
+        );
         assert_eq!(response.family_code.as_deref(), Some("seedance"));
         assert_eq!(response.color_token.as_deref(), Some("#7c3aed"));
         assert!(response.docs_url.is_some());

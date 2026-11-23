@@ -1,0 +1,39 @@
+{
+  "catalogKey": "stepfun/stepaudio-2.5-asr-stream",
+  "currency": "CNY",
+  "modelId": "stepaudio-2.5-asr-stream",
+  "prices": [
+    {
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T04:00:00Z",
+      "meterCode": "stt_audio_minute",
+      "minimumQuantity": "0",
+      "priceId": "stepfun-cn-stepaudio-2-5-asr-stream-stt-audio-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "quantityStep": "1",
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+      },
+      "unitPrice": "4.200000",
+      "unitSize": "60",
+      "evidence": "语音识别 4.20 元／小时",
+      "priceBookCode": "models.stepfun.cn.official",
+      "productCode": "models.stepfun.audio",
+      "operationCode": "audio.transcribe",
+      "billability": "chargeable",
+      "chargeTiming": "successful_result",
+      "calculationMode": "per_unit",
+      "quantityAggregation": "sum",
+      "rateVariant": "standard",
+      "schedule": null,
+      "rateHash": "e4b08d7f1e717e88c84523cdfd7db350f1dee039ee9761ca667989f02eb0247b"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "stepfun"
+}

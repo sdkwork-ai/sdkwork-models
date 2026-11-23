@@ -1,0 +1,40 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio",
+    "video",
+    "streaming"
+  ],
+  "catalogKey": "zhipu/glm-realtime-flash",
+  "codingVisible": false,
+  "colorToken": "#7c3aed",
+  "description": "Zhipu realtime audio/video model billed at CNY 0.18 per audio minute and CNY 1.20 per video minute.",
+  "displayName": "GLM-Realtime-Flash",
+  "familyCode": "glm-realtime",
+  "inputModalities": [
+    "text",
+    "audio",
+    "video"
+  ],
+  "lifecycle": "active",
+  "modelId": "glm-realtime-flash",
+  "outputModalities": [
+    "text",
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "zhipu"
+}

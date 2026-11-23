@@ -7,21 +7,27 @@
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "successful_result",
-      "conditions": [],
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_480p"
+        }
+      ],
       "currency": "USD",
       "effectiveFrom": "2026-07-02T00:00:00Z",
       "meterCode": "video_output_second",
       "minimumQuantity": "0",
       "operationCode": "video.generate",
       "priceBookCode": "models.xai.global.official",
-      "priceId": "xai-global-grok-imagine-video-1-5-second",
+      "priceId": "xai-global-grok-imagine-video-1-5-second-480p",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.xai.video",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "5204b72ca3a46afb23a36f9da874722ec7a45b1161aca22eaab0735049f967f0",
+      "rateHash": "af1958748d5708bbf9ab761facc782c7921ab2fca1271287ee79eaae8f043333",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
@@ -29,7 +35,78 @@
         "sourceUrl": "https://docs.x.ai/developers/pricing"
       },
       "unitPrice": "0.080000",
-      "unitSize": "1"
+      "unitSize": "1",
+      "tierCode": "res_480p"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-global-grok-imagine-video-1-5-second-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "169622e59383bba880261c3a89ee8535905fee1e3e24de6f17a05568d8626e88",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/developers/pricing"
+      },
+      "unitPrice": "0.140000",
+      "unitSize": "1",
+      "tierCode": "res_720p"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-global-grok-imagine-video-1-5-second-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "139d2a78ba97f6fca7d4ae8535c7886f4a411a0cc8e15d476bfa9a41ab5bd4cf",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/developers/pricing"
+      },
+      "unitPrice": "0.250000",
+      "unitSize": "1",
+      "tierCode": "res_1080p"
     }
   ],
   "regionCode": "global",

@@ -341,10 +341,15 @@
     },
     {
       "lastCheckedAt": "2026-11-23T00:00:00Z",
-      "notes": "2026-11-23 复核：英文与中文定价页均与目录一致。global 仍为峰谷双档：deepseek-flash 缓存命中 0.003/0.006、缓存未命中 0.15/0.30、输出 0.60/1.20 USD/MTok；deepseek-v4-pro 0.022/0.044、0.66/1.32、1.98/3.96 USD/MTok；目录的 time_window 非高峰窗口（Asia/Shanghai 00:00-09:00、12:00-14:00、18:00-24:00 与周末）换算 UTC 后与官方 01:00-04:00、06:00-10:00 高峰互补，无需改动。cn 为单一价：flash 0.02/1/2 CNY，v4-pro 0.025/3/6 CNY，与目录一致；cn 未拆分峰谷，符合官方中文页。deepseek-v4-flash 与 deepseek-v4-flash-vision-exp 已按官方说明为历史名（请求由 V4.1-Flash 承接并按 Flash 价计费），目录保持 retired/archived。所有已核对 model 与 price 行 observedAt 更新为 2026-11-23T00:00:00Z。",
+      "notes": "2026-11-23 复核：英文定价页峰谷双档与目录一致。global deepseek-flash 缓存命中 0.003/0.006、未命中 0.15/0.30、输出 0.60/1.20 USD/MTok；deepseek-v4-pro 0.022/0.044、0.66/1.32、1.98/3.96 USD/MTok。高峰窗口按官方 01:00-04:00、06:00-10:00 UTC（即北京时间 9:00-12:00、14:00-18:00），已由统一配置物化 2026 法定节假日日历。新增 deepseek-tts（0.45 USD/万字符）、deepseek-asr（0.116 USD/小时）、deepseek-ocr（0.225 USD/千页）。",
       "official": {
         "additionalUrls": [
-          "https://api-docs.deepseek.com/"
+          "https://api-docs.deepseek.com/",
+          "https://api-docs.deepseek.com/guides/tts",
+          "https://api-docs.deepseek.com/guides/asr",
+          "https://api-docs.deepseek.com/guides/ocr",
+          "https://api-docs.deepseek.com/guides/document_parsing",
+          "https://api-docs.deepseek.com/guides/search"
         ],
         "modelsUrl": "https://api-docs.deepseek.com/quick_start/pricing",
         "pricingUrl": "https://api-docs.deepseek.com/quick_start/pricing"
@@ -362,7 +367,10 @@
       "regionCode": "global",
       "requiredModels": [
         "deepseek-flash",
-        "deepseek-v4-pro"
+        "deepseek-v4-pro",
+        "deepseek-tts",
+        "deepseek-asr",
+        "deepseek-ocr"
       ],
       "supportedModels": [],
       "vendorCode": "deepseek",
@@ -370,10 +378,15 @@
     },
     {
       "lastCheckedAt": "2026-11-23T00:00:00Z",
-      "notes": "2026-11-23 复核：英文与中文定价页均与目录一致。global 仍为峰谷双档：deepseek-flash 缓存命中 0.003/0.006、缓存未命中 0.15/0.30、输出 0.60/1.20 USD/MTok；deepseek-v4-pro 0.022/0.044、0.66/1.32、1.98/3.96 USD/MTok；目录的 time_window 非高峰窗口（Asia/Shanghai 00:00-09:00、12:00-14:00、18:00-24:00 与周末）换算 UTC 后与官方 01:00-04:00、06:00-10:00 高峰互补，无需改动。cn 为单一价：flash 0.02/1/2 CNY，v4-pro 0.025/3/6 CNY，与目录一致；cn 未拆分峰谷，符合官方中文页。deepseek-v4-flash 与 deepseek-v4-flash-vision-exp 已按官方说明为历史名（请求由 V4.1-Flash 承接并按 Flash 价计费），目录保持 retired/archived。所有已核对 model 与 price 行 observedAt 更新为 2026-11-23T00:00:00Z。",
+      "notes": "2026-11-23 复核：官方中文定价页已改为峰谷双档，目录同步修正。cn deepseek-flash 高峰 0.04/2/8、空闲 0.02/1/4 CNY/百万 tokens；deepseek-v4-pro 高峰 0.30/9/27、空闲 0.15/4.5/13.5 CNY/百万 tokens。高峰为北京时间周一至周五 9:00-12:00、14:00-18:00（不含法定节假日），其余时段含节假日全天为空闲，空闲价=高峰价×0.5，由 config/pricing/time-window-schedules.json 与 tools/materialize-time-window-schedules.mjs 物化并带 2026 法定节假日日历。新增 deepseek-tts（3 元/万字符）、deepseek-asr（0.78 元/小时）、deepseek-ocr（1.5 元/千页），官方限时 5 折在价格行 notes 中记录。deepseek-v4-flash 与 deepseek-v4-flash-vision-exp 为历史名，保持 retired/archived。",
       "official": {
         "additionalUrls": [
-          "https://api-docs.deepseek.com/zh-cn/"
+          "https://api-docs.deepseek.com/zh-cn/",
+          "https://api-docs.deepseek.com/zh-cn/guides/tts",
+          "https://api-docs.deepseek.com/zh-cn/guides/asr",
+          "https://api-docs.deepseek.com/zh-cn/guides/ocr",
+          "https://api-docs.deepseek.com/zh-cn/guides/document_parsing",
+          "https://api-docs.deepseek.com/zh-cn/guides/search"
         ],
         "modelsUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing",
         "pricingUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
@@ -391,7 +404,10 @@
       "regionCode": "cn",
       "requiredModels": [
         "deepseek-flash",
-        "deepseek-v4-pro"
+        "deepseek-v4-pro",
+        "deepseek-tts",
+        "deepseek-asr",
+        "deepseek-ocr"
       ],
       "supportedModels": [],
       "vendorCode": "deepseek",

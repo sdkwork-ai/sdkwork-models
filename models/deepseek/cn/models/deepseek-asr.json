@@ -1,0 +1,39 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "deepseek/deepseek-asr",
+  "codingVisible": false,
+  "description": "DeepSeek speech-to-text API. Official pricing is CNY 0.78 per hour of audio (USD 0.116), with a limited-time 50% discount of CNY 0.39 (USD 0.058) per hour.",
+  "displayName": "DeepSeek ASR",
+  "familyCode": "deepseek-asr",
+  "inputModalities": [
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "deepseek-asr",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
+  },
+  "strengths": [
+    "Speech recognition",
+    "Transcription"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "deepseek",
+  "vendorName": "DeepSeek"
+}

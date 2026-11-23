@@ -1,0 +1,75 @@
+{
+  "catalogKey": "stepfun/step-tts-mini",
+  "currency": "CNY",
+  "modelId": "step-tts-mini",
+  "prices": [
+    {
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T04:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "priceId": "stepfun-cn-step-tts-mini-tts-input-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "quantityStep": "1",
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+      },
+      "unitPrice": "90.000000",
+      "unitSize": "1000000",
+      "evidence": "语音合成 90.00 元／百万字符",
+      "priceBookCode": "models.stepfun.cn.official",
+      "productCode": "models.stepfun.audio",
+      "operationCode": "speech.synthesize",
+      "billability": "chargeable",
+      "chargeTiming": "usage_reported",
+      "calculationMode": "per_unit",
+      "quantityAggregation": "sum",
+      "rateVariant": "standard",
+      "schedule": null,
+      "rateHash": "674018be69583c8f546e4536fa0bd96b65b67d47b24a04db0e4467792392f97b"
+    },
+    {
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "voice_clone"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T04:00:00Z",
+      "meterCode": "api_request",
+      "minimumQuantity": "0",
+      "priceId": "stepfun-cn-step-tts-mini-api-request-voice-clone",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "quantityStep": "1",
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+      },
+      "unitPrice": "10.000000",
+      "unitSize": "1",
+      "evidence": "音色复刻 10.00 元／音色",
+      "tierCode": "voice_clone",
+      "priceBookCode": "models.stepfun.cn.official",
+      "productCode": "models.stepfun.audio",
+      "operationCode": "audio.generate",
+      "billability": "chargeable",
+      "chargeTiming": "request_accepted",
+      "calculationMode": "per_unit",
+      "quantityAggregation": "distinct_invocation",
+      "rateVariant": "standard",
+      "schedule": null,
+      "rateHash": "642ab0a42bec50f539c6d77518cefdab3abc2917f3fc94a27d2b5d9505a1474d"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "stepfun"
+}

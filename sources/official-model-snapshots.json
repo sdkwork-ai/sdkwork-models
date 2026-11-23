@@ -6,7 +6,16 @@
     {
       "models": [
         {
+          "modelId": "deepseek-asr"
+        },
+        {
           "modelId": "deepseek-flash"
+        },
+        {
+          "modelId": "deepseek-ocr"
+        },
+        {
+          "modelId": "deepseek-tts"
         },
         {
           "modelId": "deepseek-v4-pro"
@@ -21,13 +30,22 @@
         "https://api-docs.deepseek.com/zh-cn/updates/"
       ],
       "regionCode": "cn",
-      "sourceSnapshotHash": "a72cd27f009a973e5d2b809bcd37bf4e34f1d9005917863d4c587d4d5aa3eaae",
+      "sourceSnapshotHash": "d563885368b029e447ea9557a338926574e24a02902658a8cc801ac8aa8a5bfd",
       "vendorCode": "deepseek"
     },
     {
       "models": [
         {
+          "modelId": "deepseek-asr"
+        },
+        {
           "modelId": "deepseek-flash"
+        },
+        {
+          "modelId": "deepseek-ocr"
+        },
+        {
+          "modelId": "deepseek-tts"
         },
         {
           "modelId": "deepseek-v4-pro"
@@ -42,7 +60,7 @@
         "https://api-docs.deepseek.com/updates/"
       ],
       "regionCode": "global",
-      "sourceSnapshotHash": "a029466c32926d9ed06242310f864e44f24b01f17536b72783c872cfc089c3c7",
+      "sourceSnapshotHash": "50ce980d7ae587eb38f938635030672e41002fea274a7f76b5c5417b7088a203",
       "vendorCode": "deepseek"
     },
     {

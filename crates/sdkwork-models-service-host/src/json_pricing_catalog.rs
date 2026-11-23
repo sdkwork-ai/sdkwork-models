@@ -402,6 +402,7 @@ fn map_schedule(schedule: &sdkwork_models::PriceSchedule) -> Option<PricingSched
                     start_time: NaiveTime::parse_from_str(&window.start_time, "%H:%M:%S").ok()?,
                     end_time: NaiveTime::parse_from_str(&window.end_time, "%H:%M:%S").ok()?,
                     end_day_offset: window.end_day_offset,
+                    holiday_only: window.holiday_only,
                 })
             })
             .collect::<Option<Vec<_>>>()?,
@@ -412,6 +413,11 @@ fn map_schedule(schedule: &sdkwork_models::PriceSchedule) -> Option<PricingSched
             .collect::<Option<Vec<_>>>()?,
         exclude_dates: schedule
             .exclude_dates
+            .iter()
+            .map(|value| NaiveDate::parse_from_str(value, "%Y-%m-%d").ok())
+            .collect::<Option<Vec<_>>>()?,
+        holiday_dates: schedule
+            .holiday_dates
             .iter()
             .map(|value| NaiveDate::parse_from_str(value, "%Y-%m-%d").ok())
             .collect::<Option<Vec<_>>>()?,

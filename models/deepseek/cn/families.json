@@ -7,6 +7,30 @@
       "familyType": "llm",
       "primaryModality": "text",
       "sortOrder": 10
+    },
+    {
+      "defaultModel": "deepseek-tts",
+      "displayName": "DeepSeek TTS",
+      "familyCode": "deepseek-tts",
+      "familyType": "audio",
+      "primaryModality": "audio",
+      "sortOrder": 20
+    },
+    {
+      "defaultModel": "deepseek-asr",
+      "displayName": "DeepSeek ASR",
+      "familyCode": "deepseek-asr",
+      "familyType": "audio",
+      "primaryModality": "audio",
+      "sortOrder": 30
+    },
+    {
+      "defaultModel": "deepseek-ocr",
+      "displayName": "DeepSeek OCR",
+      "familyCode": "deepseek-ocr",
+      "familyType": "multimodal",
+      "primaryModality": "text",
+      "sortOrder": 40
     }
   ],
   "regionCode": "cn",

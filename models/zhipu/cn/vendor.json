@@ -17,6 +17,7 @@
     "embedding",
     "image",
     "reasoning",
+    "streaming",
     "video"
   ],
   "clientApiCompatibility": {
@@ -73,6 +74,7 @@
     "glm-tts",
     "glm-voice",
     "glm-asr",
+    "glm-realtime",
     "zhipu-embedding"
   ],
   "openSource": false,

@@ -2,6 +2,9 @@
   "catalogKey": "tencent/hy4-flash",
   "currency": "CNY",
   "modelId": "hy4-flash",
+  "notes": [
+    "Limited-time 50% discount: Hy4 flash usage is billed at 50% of the catalog prices below from the pricing-page publication date through 2026-11-30T04:00:00Z (Beijing 2026-11-30 12:00); catalog prices apply after the discount ends."
+  ],
   "prices": [
     {
       "billability": "chargeable",

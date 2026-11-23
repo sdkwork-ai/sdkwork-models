@@ -1,0 +1,41 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "deepseek/deepseek-ocr",
+  "codingVisible": false,
+  "description": "DeepSeek file parsing and OCR API. Official pricing is CNY 1.5 per 1,000 pages (USD 0.225).",
+  "displayName": "DeepSeek File Parsing & OCR",
+  "familyCode": "deepseek-ocr",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "deepseek-ocr",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing"
+  },
+  "strengths": [
+    "OCR",
+    "Document parsing",
+    "Image understanding"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "deepseek",
+  "vendorName": "DeepSeek"
+}

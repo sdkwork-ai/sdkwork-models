@@ -116,12 +116,46 @@ pub struct ModelCatalogItem {
     pub price_availability: PriceAvailability,
 }
 
+/// One official reference rate exposed by the public model catalog.
+///
+/// A model can publish several rows for the same `(region, billing_meter)` when
+/// the vendor charges different prices by time window (for example DeepSeek's
+/// peak and off-peak rates). Every row therefore carries its own stable
+/// `rate_hash`, variant, and schedule instead of being collapsed onto the
+/// standard rate — the UI needs the full family to render peak/off-peak tabs.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ModelCatalogReferencePriceView {
     pub region_code: String,
     pub billing_meter: String,
     pub unit_price: String,
     pub currency: String,
+    /// Stable identity of the source rate row. Empty for legacy price sources
+    /// that carry no rate metadata.
+    pub rate_hash: String,
+    /// `standard` or `time_window`.
+    pub rate_variant: String,
+    /// Closed schedule for a `time_window` rate; `None` for a standard rate.
+    pub schedule: Option<ModelCatalogPriceScheduleView>,
+}
+
+/// Schedule projection of a time-window official rate.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct ModelCatalogPriceScheduleView {
+    pub time_zone: String,
+    pub weekly_windows: Vec<ModelCatalogPriceWeeklyWindowView>,
+    pub include_dates: Vec<String>,
+    pub exclude_dates: Vec<String>,
+    pub holiday_dates: Vec<String>,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct ModelCatalogPriceWeeklyWindowView {
+    pub window_code: String,
+    pub days_of_week: Vec<u8>,
+    pub start_time: String,
+    pub end_time: String,
+    pub end_day_offset: u8,
+    pub holiday_only: bool,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -322,41 +356,7 @@ impl<'a, C: PricingCatalog> ModelCatalogQueryService<'a, C> {
         organization_id: i64,
         model: &str,
     ) -> Vec<ModelCatalogReferencePriceView> {
-        let mut prices: Vec<ModelCatalogReferencePriceView> = self
-            .catalog
-            .list_model_prices_for_scope_side(
-                tenant_id,
-                organization_id,
-                model,
-                PriceSide::OfficialReference,
-            )
-            .into_iter()
-            .filter(|price| {
-                price.supplier_code.is_none()
-                    && price.account_id.is_none()
-                    && price.pricing_plan_code.is_none()
-            })
-            .map(|price| ModelCatalogReferencePriceView {
-                region_code: price.region_code,
-                billing_meter: price.billing_meter.code().to_owned(),
-                unit_price: price.unit_price.to_fixed_string(6),
-                currency: price.unit_price.currency,
-            })
-            .collect();
-        prices.sort_by(|left, right| {
-            model_region_sort_key(&left.region_code)
-                .cmp(&model_region_sort_key(&right.region_code))
-                .then_with(|| left.region_code.cmp(&right.region_code))
-                .then_with(|| {
-                    billing_meter_sort_key(&left.billing_meter)
-                        .cmp(&billing_meter_sort_key(&right.billing_meter))
-                })
-                .then_with(|| left.billing_meter.cmp(&right.billing_meter))
-        });
-        prices.dedup_by(|left, right| {
-            left.region_code == right.region_code && left.billing_meter == right.billing_meter
-        });
-        prices
+        official_reference_price_views(self.catalog, tenant_id, organization_id, model)
     }
 
     fn lowest_upstream_cost(
@@ -380,6 +380,108 @@ impl<'a, C: PricingCatalog> ModelCatalogQueryService<'a, C> {
             .filter(|price| group_index.price_is_visible_to_group(price, account_group_id))
             .min_by_key(|price| price.unit_price.unit_price)
     }
+}
+
+/// Loads every official reference rate of one model as the public catalog view
+/// shape, preserving time-window variants (peak/off-peak) instead of collapsing
+/// them onto `(region, meter)`.
+pub fn official_reference_price_views<C>(
+    catalog: &C,
+    tenant_id: i64,
+    organization_id: i64,
+    model: &str,
+) -> Vec<ModelCatalogReferencePriceView>
+where
+    C: PricingCatalog,
+{
+    let mut prices: Vec<ModelCatalogReferencePriceView> = catalog
+        .list_model_prices_for_scope_side(
+            tenant_id,
+            organization_id,
+            model,
+            PriceSide::OfficialReference,
+        )
+        .into_iter()
+        .filter(|price| {
+            price.supplier_code.is_none()
+                && price.account_id.is_none()
+                && price.pricing_plan_code.is_none()
+        })
+        .map(|price| {
+            let metadata = price.rate_metadata.as_ref();
+            ModelCatalogReferencePriceView {
+                region_code: price.region_code,
+                billing_meter: price.billing_meter.code().to_owned(),
+                unit_price: price.unit_price.to_fixed_string(6),
+                currency: price.unit_price.currency,
+                rate_hash: metadata
+                    .map(|metadata| metadata.rate_hash.clone())
+                    .unwrap_or_default(),
+                rate_variant: metadata
+                    .map(|metadata| metadata.rate_variant.code().to_owned())
+                    .unwrap_or_else(|| "standard".to_owned()),
+                schedule: metadata.and_then(|metadata| {
+                    metadata
+                        .schedule
+                        .as_ref()
+                        .map(|schedule| ModelCatalogPriceScheduleView {
+                            time_zone: schedule.time_zone.name().to_owned(),
+                            weekly_windows: schedule
+                                .weekly_windows
+                                .iter()
+                                .map(|window| ModelCatalogPriceWeeklyWindowView {
+                                    window_code: window.window_code.clone(),
+                                    days_of_week: window.days_of_week.clone(),
+                                    start_time: window.start_time.format("%H:%M:%S").to_string(),
+                                    end_time: window.end_time.format("%H:%M:%S").to_string(),
+                                    end_day_offset: window.end_day_offset,
+                                    holiday_only: window.holiday_only,
+                                })
+                                .collect(),
+                            include_dates: schedule
+                                .include_dates
+                                .iter()
+                                .map(ToString::to_string)
+                                .collect(),
+                            exclude_dates: schedule
+                                .exclude_dates
+                                .iter()
+                                .map(ToString::to_string)
+                                .collect(),
+                            holiday_dates: schedule
+                                .holiday_dates
+                                .iter()
+                                .map(ToString::to_string)
+                                .collect(),
+                        })
+                }),
+            }
+        })
+        .collect();
+    prices.sort_by(|left, right| {
+        model_region_sort_key(&left.region_code)
+            .cmp(&model_region_sort_key(&right.region_code))
+            .then_with(|| left.region_code.cmp(&right.region_code))
+            .then_with(|| {
+                billing_meter_sort_key(&left.billing_meter)
+                    .cmp(&billing_meter_sort_key(&right.billing_meter))
+            })
+            .then_with(|| left.billing_meter.cmp(&right.billing_meter))
+            .then_with(|| price_variant_sort_key(left).cmp(&price_variant_sort_key(right)))
+            .then_with(|| left.rate_hash.cmp(&right.rate_hash))
+            .then_with(|| left.unit_price.cmp(&right.unit_price))
+    });
+    // Collapse only rows that are the same source rate. Peak and off-peak rows
+    // share region + meter but have different hashes, so they must all survive;
+    // deduping on `(region, meter)` silently dropped one variant.
+    prices.dedup_by(|left, right| {
+        left.region_code == right.region_code
+            && left.billing_meter == right.billing_meter
+            && left.rate_variant == right.rate_variant
+            && left.rate_hash == right.rate_hash
+            && left.rate_hash != ""
+    });
+    prices
 }
 
 struct ConfiguredModelGroupDefinition {
@@ -1083,8 +1185,38 @@ fn billing_meter_sort_key(billing_meter: &str) -> usize {
         "video_result" => 440,
         "music_output_second" => 500,
         "sfx_result" => 510,
+        "document_page" => 600,
         _ => usize::MAX,
     }
+}
+
+/// Stable display order for price variants of the same meter:
+/// standard fallback first, then peak, then off-peak, then any other window.
+fn price_variant_sort_key(price: &ModelCatalogReferencePriceView) -> usize {
+    if price.rate_variant == "batch" {
+        return 40;
+    }
+    if price.rate_variant != "time_window" {
+        return 0;
+    }
+    let Some(schedule) = price.schedule.as_ref() else {
+        return 30;
+    };
+    let codes = schedule
+        .weekly_windows
+        .iter()
+        .map(|window| window.window_code.as_str())
+        .collect::<Vec<_>>();
+    if codes.is_empty() {
+        return 30;
+    }
+    if codes.iter().all(|code| code.starts_with("peak")) {
+        return 10;
+    }
+    if codes.iter().all(|code| code.starts_with("off_peak")) {
+        return 20;
+    }
+    30
 }
 
 fn model_region_sort_key(region_code: &str) -> usize {

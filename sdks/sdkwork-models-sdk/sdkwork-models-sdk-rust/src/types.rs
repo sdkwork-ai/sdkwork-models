@@ -227,6 +227,8 @@ pub struct PriceSchedule {
     pub include_dates: Vec<String>,
     #[serde(default)]
     pub exclude_dates: Vec<String>,
+    #[serde(default)]
+    pub holiday_dates: Vec<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
@@ -238,6 +240,8 @@ pub struct WeeklyPriceWindow {
     pub start_time: String,
     pub end_time: String,
     pub end_day_offset: u8,
+    #[serde(default)]
+    pub holiday_only: bool,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]

@@ -29,7 +29,7 @@ Generated: 2026-11-23
 | 16 | pixverse | PixVerse | No | vendor_native | cn, global | CC:unsupported / CX:unsupported / GC:unsupported |
 | 17 | runway | Runway | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
 | 18 | stability_ai | Stability AI | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
-| 19 | stepfun | StepFun | No | anthropic_messages, openai_compatible, openai_responses | cn | CC:unsupported / CX:unsupported / GC:unsupported |
+| 19 | stepfun | StepFun | No | anthropic_messages, openai_compatible, openai_responses, vendor_native | cn | CC:unsupported / CX:unsupported / GC:unsupported |
 | 20 | suno | Suno | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
 | 21 | tencent | Tencent Cloud | No | anthropic_messages, openai_compatible | cn | CC:unsupported / CX:unsupported / GC:unsupported |
 | 22 | typesafe | TypeSafe AI | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
@@ -161,15 +161,21 @@ Generated: 2026-11-23
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| deepseek-flash | 1048K | chat | CNY 1.00 / 2.00 |
-| deepseek-v4-pro | 1048K | chat | CNY 3.00 / 6.00 |
+| deepseek-asr | N/A | audio | N/A |
+| deepseek-flash | 1048K | chat | CNY 1.00 / 4.00 |
+| deepseek-ocr | N/A | chat | N/A |
+| deepseek-tts | N/A | audio | N/A |
+| deepseek-v4-pro | 1048K | chat | CNY 4.50 / 13.50 |
 | web_tools | N/A | tool | N/A |
 
 **Region: GLOBAL** (USD)
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
+| deepseek-asr | N/A | audio | N/A |
 | deepseek-flash | 1048K | chat | USD 0.15 / 0.60 |
+| deepseek-ocr | N/A | chat | N/A |
+| deepseek-tts | N/A | audio | N/A |
 | deepseek-v4-pro | 1048K | chat | USD 0.66 / 1.98 |
 | web_tools | N/A | tool | N/A |
 
@@ -205,8 +211,8 @@ Generated: 2026-11-23
 |----------|---------|------------|------------------------|
 | gemini-2.5-flash-preview-tts | 8K | audio | N/A |
 | gemini-2.5-pro-preview-tts | 8K | audio | N/A |
-| gemini-3-pro-image | 32K | image | N/A |
-| gemini-3.1-flash-image | 32K | image | N/A |
+| gemini-3-pro-image | 32K | image | USD 2.00 / 12.00 |
+| gemini-3.1-flash-image | 32K | image | USD 0.50 / 3.00 |
 | gemini-3.1-flash-lite | 1048K | chat | USD 0.25 / 1.50 |
 | gemini-3.1-flash-lite-image | N/A | N/A | USD 0.25 / 1.50 |
 | gemini-3.1-flash-live-preview | 131K | chat, audio | USD 0.75 / 4.50 |
@@ -501,8 +507,27 @@ Generated: 2026-11-23
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
+| step-1o-audio | N/A | audio | N/A |
 | step-3.7-flash | 256K | chat, reasoning | CNY 1.35 / 8.10 |
 | step-5-preview | 1000K | chat, reasoning | CNY 7.00 / 20.00 |
+| step-asr | N/A | audio | N/A |
+| step-asr-1.1 | N/A | audio | N/A |
+| step-asr-1.1-stream | N/A | audio | N/A |
+| step-audio-2 | N/A | audio | N/A |
+| step-audio-r1.5 | N/A | audio | N/A |
+| step-tts-2 | N/A | audio | N/A |
+| step-tts-mini | N/A | audio | N/A |
+| stepaudio-2-asr-pro | N/A | audio | N/A |
+| stepaudio-2.5-asr | N/A | audio | N/A |
+| stepaudio-2.5-asr-stream | N/A | audio | N/A |
+| stepaudio-2.5-chat | N/A | audio | N/A |
+| stepaudio-2.5-realtime | N/A | audio, streaming | N/A |
+| stepaudio-2.5-tts | N/A | audio | N/A |
+| stepaudio-3-asr-max | N/A | audio | N/A |
+| stepaudio-3-gen | N/A | audio | N/A |
+| stepaudio-3-music | N/A | music | N/A |
+| stepaudio-3-realtime | N/A | audio, streaming | N/A |
+| stepaudio-3-tts | N/A | audio | N/A |
 
 ### Suno (suno)
 
@@ -619,6 +644,8 @@ Generated: 2026-11-23
 | glm-asr-2512 | N/A | audio | N/A |
 | glm-image | N/A | image | N/A |
 | glm-ocr | 32K | chat | CNY 0.20 / 0.20 |
+| glm-realtime-air | N/A | audio, video, streaming | N/A |
+| glm-realtime-flash | N/A | audio, video, streaming | N/A |
 | glm-tts | N/A | audio | N/A |
 | glm-tts-clone | N/A | audio | N/A |
 
@@ -628,8 +655,8 @@ Generated: 2026-11-23
 
 | Region | Vendors | Models | Pricing Files |
 |--------|---------|--------|---------------|
-| CN | 14 | 188 | 174 |
-| GLOBAL | 21 | 377 | 362 |
+| CN | 14 | 212 | 200 |
+| GLOBAL | 21 | 380 | 365 |
 
 ### Client API Support
 
@@ -643,7 +670,7 @@ Generated: 2026-11-23
 
 | Protocol | Vendors |
 |----------|---------|
-| vendor_native | 18 |
+| vendor_native | 19 |
 | openai_compatible | 14 |
 | anthropic_messages | 9 |
 | openai_responses | 6 |
@@ -656,12 +683,12 @@ Generated: 2026-11-23
 | chat | 15 |
 | video | 14 |
 | image | 13 |
+| audio | 10 |
 | reasoning | 10 |
-| audio | 8 |
-| music | 7 |
+| music | 8 |
 | embedding | 4 |
 | sfx | 4 |
+| streaming | 3 |
 | code | 2 |
 | tool | 2 |
 | decision | 1 |
-| streaming | 1 |

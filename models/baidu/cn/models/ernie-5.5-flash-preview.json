@@ -7,7 +7,7 @@
   "codingVisible": false,
   "colorToken": "#1e40af",
   "contextTokens": 1000000,
-  "description": "ERNIE 5.5 Flash Preview listed on the Qianfan model list (updated 2026-11-11) with 1M context; public per-token price is not published yet.",
+  "description": "ERNIE 5.5 Flash Preview listed on the Qianfan model list (updated 2026-11-11) with 1M context; Qianfan price page (updated 2026-10-29) publishes peak (08:00-22:00) and off-peak (22:00-08:00) input, cache-hit and output rates.",
   "displayName": "ERNIE 5.5 Flash Preview",
   "familyCode": "ernie",
   "inputModalities": [

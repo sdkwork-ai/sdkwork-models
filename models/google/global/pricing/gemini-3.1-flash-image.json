@@ -35,6 +35,34 @@
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.google.global.official",
+      "priceId": "google-gemini-3.1-flash-image-text-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.google.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
+      },
+      "unitPrice": "3.000000",
+      "unitSize": "1000000",
+      "rateHash": "9a12c4321a9b355f47b6e388a7922a9e82b4d9e198a0583fb09b8ae1fcef71e1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
       "conditions": [
         {
           "dimensionCode": "output_type",

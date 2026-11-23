@@ -9,7 +9,7 @@
     "protocol": "http",
     "packageName": "sdkwork-models-app-sdk-generated-typescript"
   },
-  "changeFingerprint": "559cdb7bfe57effc37b791daf2fa65ab53fdcb088fa74fde4bb514056e2d4f2a",
+  "changeFingerprint": "2f3119fd5c2d6cd90054dc32405e07eb9bc968a628ec33a04aa2c579b5e217fe",
   "changes": {
     "createdGeneratedFiles": [],
     "updatedGeneratedFiles": [],
@@ -47,12 +47,15 @@
       "src/types/app-model-catalog-item.ts",
       "src/types/app-model-catalog-page.ts",
       "src/types/app-model-catalog-price-availability.ts",
+      "src/types/app-model-catalog-price-schedule-window.ts",
+      "src/types/app-model-catalog-price-schedule.ts",
       "src/types/app-model-catalog-reference-price.ts",
       "src/types/app-model-vendor-catalog-response.ts",
       "src/types/app-model-vendor-option.ts",
       "src/types/common.ts",
       "src/types/field-error.ts",
       "src/types/index.ts",
+      "src/types/json-null.ts",
       "src/types/model-access-channel-presets-list-result.ts",
       "src/types/model-access-channel-upsert-result.ts",
       "src/types/model-access-channels-list-result.ts",
@@ -77,89 +80,36 @@
       "src/types/sdk-work-resource-response.ts",
       "tsconfig.json"
     ],
-    "deletedGeneratedFiles": [
-      "src/types/app-model-catalog-item.d.ts"
-    ],
+    "deletedGeneratedFiles": [],
     "scaffoldedFiles": [],
     "preservedScaffoldFiles": [
       "custom/build-runtime.mjs",
       "custom/README.md"
     ],
-    "backedUpFiles": [
-      "src/types/app-model-catalog-item.d.ts"
-    ]
+    "backedUpFiles": []
   },
   "impact": {
     "schemaVersion": 1,
-    "areas": [
-      "models"
-    ],
-    "details": [
-      {
-        "area": "models",
-        "paths": [
-          "src/types/app-model-catalog-item.d.ts"
-        ]
-      }
-    ],
-    "requiresVerification": true,
-    "summary": "Detected impact areas: models. Verification is required."
+    "areas": [],
+    "details": [],
+    "requiresVerification": false,
+    "summary": "No generated, scaffold, or backup changes detected. Verification can be skipped."
   },
   "verificationPlan": {
-    "shouldRun": true,
-    "runPhase": "now",
-    "summary": "Detected impact areas: models. Verification is required. Run the required verification commands now against the generated SDK output.",
-    "steps": [
-      {
-        "id": "check",
-        "title": "Unified package check",
-        "required": true,
-        "rationale": "Validate the generated package with the unified publish helper. Triggered by: models.",
-        "workingDirectory": "D:\\sdkwork-space\\sdkwork-models\\sdks\\sdkwork-models-app-sdk\\sdkwork-models-app-sdk-typescript\\generated\\server-openapi",
-        "command": "node",
-        "args": [
-          "./bin/publish-core.mjs",
-          "--language",
-          "typescript",
-          "--project-dir",
-          ".",
-          "--action",
-          "check"
-        ],
-        "displayCommand": "node ./bin/publish-core.mjs --language typescript --project-dir . --action check"
-      },
-      {
-        "id": "build",
-        "title": "Unified package build",
-        "required": true,
-        "rationale": "Run the full package build because this language uses a lighter check path than the final build. Triggered by: models.",
-        "workingDirectory": "D:\\sdkwork-space\\sdkwork-models\\sdks\\sdkwork-models-app-sdk\\sdkwork-models-app-sdk-typescript\\generated\\server-openapi",
-        "command": "node",
-        "args": [
-          "./bin/publish-core.mjs",
-          "--language",
-          "typescript",
-          "--project-dir",
-          ".",
-          "--action",
-          "build"
-        ],
-        "displayCommand": "node ./bin/publish-core.mjs --language typescript --project-dir . --action build"
-      }
-    ]
+    "shouldRun": false,
+    "runPhase": "skip",
+    "summary": "No generated, scaffold, or backup changes detected. Verification can be skipped.",
+    "steps": []
   },
   "executionDecision": {
     "schemaVersion": 1,
-    "riskLevel": "high",
-    "nextAction": "verify",
+    "riskLevel": "low",
+    "nextAction": "skip",
     "requiresManualReview": false,
     "applyRequiresExpectedFingerprint": false,
-    "summary": "Changes have been applied. Run the required verification plan now.",
+    "summary": "No actionable changes were detected. No apply or verification step is required.",
     "reasons": [
-      "backed-up-generated-files",
-      "deleted-generated-files",
-      "manual-review-required",
-      "verification-required"
+      "no-actionable-changes"
     ]
   },
   "preservedLegacyFiles": false

@@ -1,0 +1,39 @@
+{
+  "catalogKey": "stepfun/stepaudio-3-gen",
+  "currency": "CNY",
+  "modelId": "stepaudio-3-gen",
+  "prices": [
+    {
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T04:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "priceId": "stepfun-cn-stepaudio-3-gen-tts-input-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "quantityStep": "1",
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+      },
+      "unitPrice": "95.000000",
+      "unitSize": "1000000",
+      "evidence": "音频生成 95.00 元／百万输入文本计费字符",
+      "priceBookCode": "models.stepfun.cn.official",
+      "productCode": "models.stepfun.audio",
+      "operationCode": "speech.synthesize",
+      "billability": "chargeable",
+      "chargeTiming": "usage_reported",
+      "calculationMode": "per_unit",
+      "quantityAggregation": "sum",
+      "rateVariant": "standard",
+      "schedule": null,
+      "rateHash": "3f07df48c767ab21939f2ecf11d7b70f1a0351e4ca1e7b19f1c90e9cd1244648"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "stepfun"
+}

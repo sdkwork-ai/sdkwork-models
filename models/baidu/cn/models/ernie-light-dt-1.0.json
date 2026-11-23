@@ -7,7 +7,7 @@
   "codingVisible": false,
   "colorToken": "#1e40af",
   "contextTokens": 1000000,
-  "description": "ERNIE-Light-DT-1.0 listed on the Qianfan model list (updated 2026-11-11) with 1M context and 128k output; public per-token price is not published yet.",
+  "description": "ERNIE-Light-DT-1.0 listed on the Qianfan model list (updated 2026-11-11) with 1M context and 128k output; Qianfan price page (updated 2026-10-29) publishes input, cache-hit and output rates.",
   "displayName": "ERNIE Light DT 1.0",
   "familyCode": "ernie",
   "inputModalities": [

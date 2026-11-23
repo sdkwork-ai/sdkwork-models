@@ -1,0 +1,37 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio",
+    "streaming"
+  ],
+  "catalogKey": "stepfun/stepaudio-3-realtime",
+  "codingVisible": false,
+  "colorToken": "#0369a1",
+  "description": "StepAudio 3 realtime speech model billed per session minute (speaker time counts, minimum 1 second).",
+  "displayName": "StepAudio 3 Realtime",
+  "familyCode": "step-audio-3",
+  "inputModalities": [
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "stepaudio-3-realtime",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "stepfun",
+  "vendorName": "StepFun"
+}

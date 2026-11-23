@@ -1,0 +1,39 @@
+{
+  "catalogKey": "deepseek/deepseek-tts",
+  "currency": "USD",
+  "modelId": "deepseek-tts",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-23T00:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "notes": "Official list price. DeepSeek currently applies a limited-time 50% discount: CNY 1.5 per 10,000 characters (USD 0.225).",
+      "operationCode": "speech.synthesize",
+      "priceBookCode": "models.deepseek.global.official",
+      "priceId": "deepseek-global-deepseek-tts",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.deepseek.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "644bbe4b505059fdc62d21e88947c8440ba467cc0d87d16ac4cf2e3a14f01e48",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://api-docs.deepseek.com/quick_start/pricing"
+      },
+      "unitPrice": "0.450000",
+      "unitSize": "10000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "deepseek"
+}

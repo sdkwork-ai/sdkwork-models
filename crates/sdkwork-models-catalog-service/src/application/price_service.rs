@@ -493,9 +493,11 @@ fn schedule_snapshot(schedule: &crate::domain::PricingSchedule) -> serde_json::V
             "startTime": window.start_time.format("%H:%M:%S").to_string(),
             "endTime": window.end_time.format("%H:%M:%S").to_string(),
             "endDayOffset": window.end_day_offset,
+            "holidayOnly": window.holiday_only,
         })).collect::<Vec<_>>(),
         "includeDates": schedule.include_dates.iter().map(ToString::to_string).collect::<Vec<_>>(),
         "excludeDates": schedule.exclude_dates.iter().map(ToString::to_string).collect::<Vec<_>>(),
+        "holidayDates": schedule.holiday_dates.iter().map(ToString::to_string).collect::<Vec<_>>(),
     })
 }
 

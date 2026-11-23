@@ -1,0 +1,111 @@
+{
+  "catalogKey": "stepfun/stepaudio-3-tts",
+  "currency": "CNY",
+  "modelId": "stepaudio-3-tts",
+  "prices": [
+    {
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T04:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "priceId": "stepfun-cn-stepaudio-3-tts-tts-input-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "quantityStep": "1",
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+      },
+      "unitPrice": "95.000000",
+      "unitSize": "1000000",
+      "evidence": "语音合成 95.00 元／百万输入文本计费字符",
+      "priceBookCode": "models.stepfun.cn.official",
+      "productCode": "models.stepfun.audio",
+      "operationCode": "speech.synthesize",
+      "billability": "chargeable",
+      "chargeTiming": "usage_reported",
+      "calculationMode": "per_unit",
+      "quantityAggregation": "sum",
+      "rateVariant": "standard",
+      "schedule": null,
+      "rateHash": "f7892909ad6e94157d8c4c89a68019e96bc4504cd497df608f22a62eebddab0b"
+    },
+    {
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "voice_clone"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T04:00:00Z",
+      "meterCode": "api_request",
+      "minimumQuantity": "0",
+      "priceId": "stepfun-cn-stepaudio-3-tts-api-request-voice-clone",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "quantityStep": "1",
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+      },
+      "unitPrice": "10.000000",
+      "unitSize": "1",
+      "evidence": "音色复刻 10.00 元／个音色",
+      "tierCode": "voice_clone",
+      "priceBookCode": "models.stepfun.cn.official",
+      "productCode": "models.stepfun.audio",
+      "operationCode": "audio.generate",
+      "billability": "chargeable",
+      "chargeTiming": "request_accepted",
+      "calculationMode": "per_unit",
+      "quantityAggregation": "distinct_invocation",
+      "rateVariant": "standard",
+      "schedule": null,
+      "rateHash": "5e0a761d85761fd384dbcede5c139734ff17af3a5c584f3e0a5c5946e872af3f"
+    },
+    {
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "voice_design"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-23T04:00:00Z",
+      "meterCode": "api_request",
+      "minimumQuantity": "0",
+      "priceId": "stepfun-cn-stepaudio-3-tts-api-request-voice-design",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "quantityStep": "1",
+      "source": {
+        "observedAt": "2026-11-23T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+      },
+      "unitPrice": "10.000000",
+      "unitSize": "1",
+      "evidence": "音色设计 10.00 元／个音色",
+      "tierCode": "voice_design",
+      "priceBookCode": "models.stepfun.cn.official",
+      "productCode": "models.stepfun.audio",
+      "operationCode": "audio.generate",
+      "billability": "chargeable",
+      "chargeTiming": "request_accepted",
+      "calculationMode": "per_unit",
+      "quantityAggregation": "distinct_invocation",
+      "rateVariant": "standard",
+      "schedule": null,
+      "rateHash": "6427c07a9a771acaed9b68c15e000e3e86267e6c94d213bedeb4762c3f68d16b"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "stepfun"
+}

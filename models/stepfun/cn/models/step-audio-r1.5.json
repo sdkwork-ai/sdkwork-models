@@ -1,0 +1,38 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "stepfun/step-audio-r1.5",
+  "codingVisible": false,
+  "colorToken": "#0369a1",
+  "description": "Step Audio R1.5 voice model billed per million tokens.",
+  "displayName": "Step Audio R1.5",
+  "familyCode": "step-audio-legacy",
+  "inputModalities": [
+    "text",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "step-audio-r1.5",
+  "outputModalities": [
+    "text",
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-23T00:00:00Z",
+    "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "stepfun",
+  "vendorName": "StepFun"
+}

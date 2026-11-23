@@ -49,6 +49,14 @@
       "sortOrder": 38
     },
     {
+      "defaultModel": "glm-realtime-flash",
+      "displayName": "GLM Realtime",
+      "familyCode": "glm-realtime",
+      "familyType": "audio",
+      "primaryModality": "audio",
+      "sortOrder": 39
+    },
+    {
       "defaultModel": "embedding-3",
       "displayName": "Zhipu Embedding",
       "familyCode": "zhipu-embedding",

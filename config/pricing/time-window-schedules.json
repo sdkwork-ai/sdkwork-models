@@ -1,0 +1,104 @@
+{
+  "authoredNote": "Peak/off-peak time-window schedules and statutory holiday calendars are authored here only. tools/materialize-time-window-schedules.mjs materializes them into pricing documents: peak rows exclude calendar holidays, off-peak rows mark calendar holidays as holidayDates, and configured off-peak prices are derived from the matching peak price. DeepSeek runs on the Chinese statutory holiday calendar; Baidu's daily 08:00-22:00 window does not exclude holidays, so it uses the empty no-holiday-calendar. makeupWorkdays is recorded for audit only: DeepSeek's rule is literally Monday through Friday, so make-up working days do not participate in schedule calculation.",
+  "calendars": {
+    "no-holiday-calendar": {
+      "timeZone": "Asia/Shanghai",
+      "sourceUrl": "https://cloud.baidu.com/doc/qianfan-docs/s/Jm8r1826a",
+      "observedAt": "2026-11-23T00:00:00Z",
+      "holidayDates": [],
+      "makeupWorkdays": []
+    },
+    "cn-statutory-holidays-2026": {
+      "timeZone": "Asia/Shanghai",
+      "sourceUrl": "https://www.gov.cn/zhengce/content/202511/content_7047090.htm",
+      "observedAt": "2026-11-23T00:00:00Z",
+      "holidayDates": [
+        "2026-01-01",
+        "2026-01-02",
+        "2026-01-03",
+        "2026-02-15",
+        "2026-02-16",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-21",
+        "2026-02-22",
+        "2026-02-23",
+        "2026-04-04",
+        "2026-04-05",
+        "2026-04-06",
+        "2026-05-01",
+        "2026-05-02",
+        "2026-05-03",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-06-19",
+        "2026-06-20",
+        "2026-06-21",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07"
+      ],
+      "makeupWorkdays": [
+        "2026-01-04",
+        "2026-02-14",
+        "2026-02-28",
+        "2026-05-09",
+        "2026-09-20",
+        "2026-10-10"
+      ]
+    }
+  },
+  "schedules": {
+    "deepseek-cn-peak-offpeak": {
+      "timeZone": "Asia/Shanghai",
+      "calendarCode": "cn-statutory-holidays-2026",
+      "peakWindows": [
+        { "windowCode": "peak_weekday_morning", "daysOfWeek": [1, 2, 3, 4, 5], "startTime": "09:00:00", "endTime": "12:00:00", "endDayOffset": 0 },
+        { "windowCode": "peak_weekday_afternoon", "daysOfWeek": [1, 2, 3, 4, 5], "startTime": "14:00:00", "endTime": "18:00:00", "endDayOffset": 0 }
+      ],
+      "offPeakWindows": [
+        { "windowCode": "off_peak_weekday_morning", "daysOfWeek": [1, 2, 3, 4, 5], "startTime": "00:00:00", "endTime": "09:00:00", "endDayOffset": 0 },
+        { "windowCode": "off_peak_weekday_midday", "daysOfWeek": [1, 2, 3, 4, 5], "startTime": "12:00:00", "endTime": "14:00:00", "endDayOffset": 0 },
+        { "windowCode": "off_peak_weekday_night", "daysOfWeek": [1, 2, 3, 4, 5], "startTime": "18:00:00", "endTime": "00:00:00", "endDayOffset": 1 },
+        { "windowCode": "off_peak_weekend", "daysOfWeek": [6, 7], "startTime": "00:00:00", "endTime": "23:59:59", "endDayOffset": 0 },
+        { "windowCode": "off_peak_holiday", "daysOfWeek": [1, 2, 3, 4, 5, 6, 7], "startTime": "00:00:00", "endTime": "23:59:59", "endDayOffset": 0, "holidayOnly": true }
+      ]
+    },
+    "baidu-cn-daily-peak-offpeak": {
+      "timeZone": "Asia/Shanghai",
+      "calendarCode": "no-holiday-calendar",
+      "peakWindows": [
+        { "windowCode": "peak_daily", "daysOfWeek": [1, 2, 3, 4, 5, 6, 7], "startTime": "08:00:00", "endTime": "22:00:00", "endDayOffset": 0 }
+      ],
+      "offPeakWindows": [
+        { "windowCode": "off_peak_daily_morning", "daysOfWeek": [1, 2, 3, 4, 5, 6, 7], "startTime": "00:00:00", "endTime": "08:00:00", "endDayOffset": 0 },
+        { "windowCode": "off_peak_daily_night", "daysOfWeek": [1, 2, 3, 4, 5, 6, 7], "startTime": "22:00:00", "endTime": "00:00:00", "endDayOffset": 1 }
+      ]
+    }
+  },
+  "enforcements": [
+    {
+      "vendorCode": "deepseek",
+      "regionCodes": ["cn", "global"],
+      "modelIds": ["*"],
+      "scheduleCode": "deepseek-cn-peak-offpeak",
+      "deriveOffPeakPrice": { "from": "peak", "ratio": "0.5" }
+    },
+    {
+      "vendorCode": "baidu",
+      "regionCodes": ["cn"],
+      "modelIds": ["ernie-5.5-flash-preview"],
+      "scheduleCode": "baidu-cn-daily-peak-offpeak",
+      "deriveOffPeakPrice": { "from": "peak", "ratio": "0.5" }
+    }
+  ]
+}
