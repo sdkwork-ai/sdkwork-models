@@ -3070,12 +3070,16 @@ name = "sdkwork-routes-models-catalog-app-api"
 version = "0.1.0"
 dependencies = [
  "axum",
+ "http-body-util",
  "sdkwork-iam-web-adapter",
  "sdkwork-models",
  "sdkwork-models-catalog-service",
  "sdkwork-models-contract-service",
  "sdkwork-web-axum",
  "sdkwork-web-core",
+ "serde_json",
+ "tokio",
+ "tower",
 ]
 
 [[package]]

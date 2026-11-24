@@ -2,10 +2,14 @@
 
 pub mod http_route_manifest;
 pub mod paths;
+pub mod profile_catalog;
 pub mod routes;
 pub mod web_bootstrap;
 
 pub use http_route_manifest::app_route_manifest;
+pub use profile_catalog::{
+    load_profile_catalog, merge_profile_catalog_routers, merge_profile_catalog_routers_from_env,
+};
 pub use routes::{route_definitions, RouteDefinition};
 pub use sdkwork_models_catalog_service::{
     app_frontend_config_router_with_store, app_model_catalog_router,
@@ -45,17 +49,16 @@ pub fn gateway_mount<C>(
 where
     C: sdkwork_models_catalog_service::PricingCatalog + Send + Sync + 'static,
 {
-    sdkwork_models_catalog_service::app_model_catalog_router_with_stores_and_profiles(
-        pricing_catalog,
-        model_store,
-        resource_store,
-        entity_uuid_generator,
-        Some(std::sync::Arc::clone(&voice_catalog)),
+    merge_profile_catalog_routers(
+        sdkwork_models_catalog_service::app_model_catalog_router_with_stores_and_profiles(
+            pricing_catalog,
+            model_store,
+            resource_store,
+            entity_uuid_generator,
+            Some(std::sync::Arc::clone(&voice_catalog)),
+        ),
+        voice_catalog,
     )
-    .merge(sdkwork_models_catalog_service::app_voice_catalog_router(
-        std::sync::Arc::clone(&voice_catalog),
-    ))
-    .merge(sdkwork_models_catalog_service::app_video_profile_catalog_router(voice_catalog))
     .merge(sdkwork_models_catalog_service::app_model_rankings_router_with_read_store(read_store))
     .merge(
         sdkwork_models_catalog_service::app_frontend_config_router_with_store(
