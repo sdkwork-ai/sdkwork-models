@@ -69,6 +69,8 @@
     "requiredPorts": [],
     "runtimeEntrypoints": [
       "app_route_manifest",
+      "merge_profile_catalog_routers",
+      "merge_profile_catalog_routers_from_env",
       "wrap_router_with_web_framework",
       "wrap_router_with_web_framework_from_env"
     ],

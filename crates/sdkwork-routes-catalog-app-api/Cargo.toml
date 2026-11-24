@@ -22,4 +22,8 @@ sdkwork-web-axum.workspace = true
 sdkwork-iam-web-adapter.workspace = true
 
 [dev-dependencies]
+http-body-util = "0.1"
+serde_json.workspace = true
+tokio.workspace = true
+tower = { version = "0.5", features = ["util"] }
 sdkwork-web-core.workspace = true
