@@ -1,0 +1,74 @@
+{
+  "bindings": [
+    {
+      "compatibility": "full",
+      "isDefault": true,
+      "sortOrder": 10,
+      "voiceId": "cixingnansheng",
+      "voiceKey": "stepfun/cixingnansheng"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 20,
+      "voiceId": "qingchunshaonv",
+      "voiceKey": "stepfun/qingchunshaonv"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 30,
+      "voiceId": "zhengpaiqingnian",
+      "voiceKey": "stepfun/zhengpaiqingnian"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 40,
+      "voiceId": "ruyayichen",
+      "voiceKey": "stepfun/ruyayichen"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 50,
+      "voiceId": "yuanqinvsheng",
+      "voiceKey": "stepfun/yuanqinvsheng"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 60,
+      "voiceId": "wenrounvsheng",
+      "voiceKey": "stepfun/wenrounvsheng"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 70,
+      "voiceId": "jilingshaonv",
+      "voiceKey": "stepfun/jilingshaonv"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 80,
+      "voiceId": "shenchennanyin",
+      "voiceKey": "stepfun/shenchennanyin"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 90,
+      "voiceId": "gaolengyujie",
+      "voiceKey": "stepfun/gaolengyujie"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 100,
+      "voiceId": "boyinnansheng",
+      "voiceKey": "stepfun/boyinnansheng"
+    }
+  ],
+  "catalogKey": "stepfun/stepaudio-3-tts",
+  "modelId": "stepaudio-3-tts",
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+  },
+  "vendorCode": "stepfun"
+}

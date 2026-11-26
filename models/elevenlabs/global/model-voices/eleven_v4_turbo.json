@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "compatibility": "full",
+      "isDefault": true,
+      "sortOrder": 10,
+      "voiceId": "_catalog_dynamic",
+      "voiceKey": "elevenlabs/_catalog_dynamic",
+      "notes": "Use any voice_id returned by GET /v2/voices."
+    }
+  ],
+  "catalogKey": "elevenlabs/eleven_v4_turbo",
+  "modelId": "eleven_v4_turbo",
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://elevenlabs.io/docs/models"
+  },
+  "vendorCode": "elevenlabs"
+}

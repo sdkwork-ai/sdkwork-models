@@ -1,5 +1,8 @@
 {
   "apiFormat": "google_gemini",
+  "capabilities": [
+    "image"
+  ],
   "catalogKey": "google/gemini-3.1-flash-lite-image",
   "codingVisible": false,
   "description": "Nano Banana 2 Lite，面向超低延迟与低成本图像生成/编辑，2026-06-30 GA。",

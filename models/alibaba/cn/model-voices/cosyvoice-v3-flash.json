@@ -1,0 +1,104 @@
+{
+  "bindings": [
+    {
+      "compatibility": "full",
+      "isDefault": true,
+      "sortOrder": 10,
+      "voiceId": "longxiaochun",
+      "voiceKey": "alibaba/longxiaochun"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 20,
+      "voiceId": "longxiaoxia",
+      "voiceKey": "alibaba/longxiaoxia"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 30,
+      "voiceId": "longxiaocheng",
+      "voiceKey": "alibaba/longxiaocheng"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 40,
+      "voiceId": "longxiaobai",
+      "voiceKey": "alibaba/longxiaobai"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 50,
+      "voiceId": "longlaotie",
+      "voiceKey": "alibaba/longlaotie"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 60,
+      "voiceId": "longshu",
+      "voiceKey": "alibaba/longshu"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 70,
+      "voiceId": "longshuo",
+      "voiceKey": "alibaba/longshuo"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 80,
+      "voiceId": "longjing",
+      "voiceKey": "alibaba/longjing"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 90,
+      "voiceId": "longmiao",
+      "voiceKey": "alibaba/longmiao"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 100,
+      "voiceId": "longyue",
+      "voiceKey": "alibaba/longyue"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 110,
+      "voiceId": "longyuan",
+      "voiceKey": "alibaba/longyuan"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 120,
+      "voiceId": "longfei",
+      "voiceKey": "alibaba/longfei"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 130,
+      "voiceId": "longjielidou",
+      "voiceKey": "alibaba/longjielidou"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 140,
+      "voiceId": "longtong",
+      "voiceKey": "alibaba/longtong"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 150,
+      "voiceId": "longxiang",
+      "voiceKey": "alibaba/longxiang"
+    }
+  ],
+  "catalogKey": "alibaba/cosyvoice-v3-flash",
+  "modelId": "cosyvoice-v3-flash",
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+  },
+  "vendorCode": "alibaba"
+}

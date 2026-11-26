@@ -1,0 +1,257 @@
+{
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "vendorCode": "stepfun",
+  "voices": [
+    {
+      "catalogKey": "stepfun/cixingnansheng",
+      "displayName": "磁性男声",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/overview"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "stepfun",
+      "voiceId": "cixingnansheng",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "stepfun/qingchunshaonv",
+      "displayName": "清纯少女",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/overview"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "stepfun",
+      "voiceId": "qingchunshaonv",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "stepfun/zhengpaiqingnian",
+      "displayName": "正派青年",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/overview"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "stepfun",
+      "voiceId": "zhengpaiqingnian",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "stepfun/ruyayichen",
+      "displayName": "儒雅医生",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/overview"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "stepfun",
+      "voiceId": "ruyayichen",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "stepfun/yuanqinvsheng",
+      "displayName": "元气女声",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/overview"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "stepfun",
+      "voiceId": "yuanqinvsheng",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "stepfun/wenrounvsheng",
+      "displayName": "温柔女声",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/overview"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "stepfun",
+      "voiceId": "wenrounvsheng",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "stepfun/jilingshaonv",
+      "displayName": "机灵少女",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/overview"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "stepfun",
+      "voiceId": "jilingshaonv",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "stepfun/shenchennanyin",
+      "displayName": "深沉男音",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/overview"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "stepfun",
+      "voiceId": "shenchennanyin",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "stepfun/gaolengyujie",
+      "displayName": "高冷御姐",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/overview"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "stepfun",
+      "voiceId": "gaolengyujie",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "stepfun/boyinnansheng",
+      "displayName": "播音男声",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/models/overview"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "stepfun",
+      "voiceId": "boyinnansheng",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    }
+  ]
+}

@@ -2,6 +2,7 @@
   "billingCurrency": "CNY",
   "billingJurisdiction": "CN",
   "capabilities": [
+    "image",
     "sfx",
     "streaming",
     "video"
@@ -55,7 +56,9 @@
   "marketScope": "china_mainland",
   "modelFamilies": [
     "vidu-video",
-    "vidu-audio"
+    "vidu-audio",
+    "vidu-image",
+    "vidu-stream"
   ],
   "nativeApiBaseUrl": {
     "host": "api.vidu.cn",

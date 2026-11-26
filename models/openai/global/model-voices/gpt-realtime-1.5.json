@@ -1,0 +1,80 @@
+{
+  "bindings": [
+    {
+      "compatibility": "full",
+      "isDefault": true,
+      "sortOrder": 10,
+      "voiceId": "alloy",
+      "voiceKey": "openai/alloy"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 20,
+      "voiceId": "ash",
+      "voiceKey": "openai/ash"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 30,
+      "voiceId": "ballad",
+      "voiceKey": "openai/ballad"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 40,
+      "voiceId": "coral",
+      "voiceKey": "openai/coral"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 50,
+      "voiceId": "echo",
+      "voiceKey": "openai/echo"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 60,
+      "voiceId": "fable",
+      "voiceKey": "openai/fable"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 70,
+      "voiceId": "onyx",
+      "voiceKey": "openai/onyx"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 80,
+      "voiceId": "nova",
+      "voiceKey": "openai/nova"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 90,
+      "voiceId": "sage",
+      "voiceKey": "openai/sage"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 100,
+      "voiceId": "shimmer",
+      "voiceKey": "openai/shimmer"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 110,
+      "voiceId": "verse",
+      "voiceKey": "openai/verse"
+    }
+  ],
+  "catalogKey": "openai/gpt-realtime-1.5",
+  "modelId": "gpt-realtime-1.5",
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://developers.openai.com/api/docs/models"
+  },
+  "vendorCode": "openai"
+}

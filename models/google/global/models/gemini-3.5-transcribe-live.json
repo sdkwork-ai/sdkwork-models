@@ -1,5 +1,8 @@
 {
   "apiFormat": "google_gemini",
+  "capabilities": [
+    "audio"
+  ],
   "catalogKey": "google/gemini-3.5-transcribe-live",
   "codingVisible": false,
   "description": "基于 Live API 的双向流式语音转文本模型（WebSocket），2026-08-26 GA。",

@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "compatibility": "full",
+      "isDefault": true,
+      "sortOrder": 10,
+      "voiceId": "zhichu",
+      "voiceKey": "alibaba/zhichu"
+    }
+  ],
+  "catalogKey": "alibaba/sambert-zhichu-v1",
+  "modelId": "sambert-zhichu-v1",
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+  },
+  "vendorCode": "alibaba"
+}

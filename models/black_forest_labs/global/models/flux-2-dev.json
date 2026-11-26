@@ -1,5 +1,8 @@
 {
   "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
   "catalogKey": "black_forest_labs/flux-2-dev",
   "codingVisible": false,
   "colorToken": "#18181b",

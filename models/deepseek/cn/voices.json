@@ -1,0 +1,33 @@
+{
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "vendorCode": "deepseek",
+  "voices": [
+    {
+      "catalogKey": "deepseek/_catalog_dynamic",
+      "displayName": "DeepSeek TTS Voice Library",
+      "gender": "unspecified",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "vendor_api",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://api-docs.deepseek.com/zh-cn/guides/tts"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "deepseek",
+      "voiceId": "_catalog_dynamic",
+      "voiceKind": "neural",
+      "wireParameter": "voice",
+      "description": "DeepSeek TTS 官方音色库在运行时通过语音列表接口解析。"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "compatibility": "full",
+      "isDefault": true,
+      "sortOrder": 10,
+      "voiceId": "_catalog_dynamic",
+      "voiceKey": "xiaomi/_catalog_dynamic",
+      "notes": "Use a cloned voice_id created through the voice clone API."
+    }
+  ],
+  "catalogKey": "xiaomi/mimo-v2.5-tts-voiceclone",
+  "modelId": "mimo-v2.5-tts-voiceclone",
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://mimo.mi.com/docs/zh-CN/quick-start/summary/model"
+  },
+  "vendorCode": "xiaomi"
+}

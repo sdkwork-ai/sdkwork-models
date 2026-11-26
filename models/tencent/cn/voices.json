@@ -1,0 +1,33 @@
+{
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "vendorCode": "tencent",
+  "voices": [
+    {
+      "catalogKey": "tencent/_catalog_dynamic",
+      "displayName": "Tencent TenLai TTS Voice Library",
+      "gender": "unspecified",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "vendor_api",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://cloud.tencent.com/document/product/1823/130051"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "tencent",
+      "voiceId": "_catalog_dynamic",
+      "voiceKind": "neural",
+      "wireParameter": "voice_type",
+      "description": "腾讯云 TokenHub Tenlai TTS 音色在运行时按官方语音类型列表解析。"
+    }
+  ]
+}

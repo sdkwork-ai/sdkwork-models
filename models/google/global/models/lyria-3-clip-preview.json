@@ -1,5 +1,8 @@
 {
   "apiFormat": "google_gemini",
+  "capabilities": [
+    "music"
+  ],
   "catalogKey": "google/lyria-3-clip-preview",
   "codingVisible": false,
   "description": "面向 30 秒以内短音乐片段/循环/预览的 Lyria 3 模型。",

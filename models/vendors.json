@@ -1,5 +1,5 @@
 {
-  "catalogVersion": "2026.11.26.1",
+  "catalogVersion": "2026.11.26.3",
   "schemaVersion": "1.1.0",
   "vendors": [
     {
@@ -2011,6 +2011,7 @@
           "billingCurrency": "CNY",
           "billingJurisdiction": "CN",
           "capabilities": [
+            "image",
             "sfx",
             "streaming",
             "video"
@@ -2059,13 +2060,13 @@
           "displayName": "Vidu",
           "legalName": "ShengShu Technology",
           "marketScope": "china_mainland",
-          "modelCount": 11,
+          "modelCount": 13,
           "openSource": false,
           "operatingRegions": [
             "CN"
           ],
           "path": "vidu/cn/vendor.json",
-          "pricingFileCount": 9,
+          "pricingFileCount": 11,
           "rankingSnapshotCount": 1,
           "regionCode": "cn",
           "sortOrder": 95,

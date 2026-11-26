@@ -1,0 +1,98 @@
+{
+  "bindings": [
+    {
+      "compatibility": "full",
+      "isDefault": true,
+      "sortOrder": 10,
+      "voiceId": "Cherry",
+      "voiceKey": "alibaba/Cherry"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 20,
+      "voiceId": "Serena",
+      "voiceKey": "alibaba/Serena"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 30,
+      "voiceId": "Ethan",
+      "voiceKey": "alibaba/Ethan"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 40,
+      "voiceId": "Chelsie",
+      "voiceKey": "alibaba/Chelsie"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 50,
+      "voiceId": "Dylan",
+      "voiceKey": "alibaba/Dylan"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 60,
+      "voiceId": "Jada",
+      "voiceKey": "alibaba/Jada"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 70,
+      "voiceId": "Sunny",
+      "voiceKey": "alibaba/Sunny"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 80,
+      "voiceId": "Nofish",
+      "voiceKey": "alibaba/Nofish"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 90,
+      "voiceId": "Jennifer",
+      "voiceKey": "alibaba/Jennifer"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 100,
+      "voiceId": "Ryan",
+      "voiceKey": "alibaba/Ryan"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 110,
+      "voiceId": "Katerina",
+      "voiceKey": "alibaba/Katerina"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 120,
+      "voiceId": "Elias",
+      "voiceKey": "alibaba/Elias"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 130,
+      "voiceId": "Jais",
+      "voiceKey": "alibaba/Jais"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 140,
+      "voiceId": "Demi",
+      "voiceKey": "alibaba/Demi"
+    }
+  ],
+  "catalogKey": "alibaba/qwen-audio-3.1-tts-flash",
+  "modelId": "qwen-audio-3.1-tts-flash",
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://www.qwencloud.com/models/qwen-audio-3.1-tts-flash"
+  },
+  "vendorCode": "alibaba"
+}

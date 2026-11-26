@@ -1,0 +1,38 @@
+{
+  "catalogKey": "vidu/viduq1",
+  "currency": "CNY",
+  "modelId": "viduq1",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.vidu.cn.official",
+      "priceId": "vidu-cn-viduq1-image-result",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.vidu.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "da3d7b5b50cd5df7cb76f61722afdf666bff214ed090c728321a2237aeb690c2",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://platform.vidu.com/docs/overview/pricing"
+      },
+      "unitPrice": "0.625000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "vidu"
+}

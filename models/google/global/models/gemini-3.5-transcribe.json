@@ -1,5 +1,8 @@
 {
   "apiFormat": "google_gemini",
+  "capabilities": [
+    "audio"
+  ],
   "catalogKey": "google/gemini-3.5-transcribe",
   "codingVisible": false,
   "description": "非流式语音转文本模型，支持 85+ 语言的话语级语言检测、说话人分离、词级时间戳与自定义词表，2026-08-26 GA。",

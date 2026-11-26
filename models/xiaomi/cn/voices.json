@@ -1,0 +1,33 @@
+{
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "vendorCode": "xiaomi",
+  "voices": [
+    {
+      "catalogKey": "xiaomi/_catalog_dynamic",
+      "displayName": "MiMo TTS Voice Library",
+      "gender": "unspecified",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "vendor_api",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://mimo.mi.com/docs/zh-CN"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "xiaomi",
+      "voiceId": "_catalog_dynamic",
+      "voiceKind": "neural",
+      "wireParameter": "voice",
+      "description": "MiMo TTS 预置音色、克隆音色与声音设计音色在运行时解析。"
+    }
+  ]
+}

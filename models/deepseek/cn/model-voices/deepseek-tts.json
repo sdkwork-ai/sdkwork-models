@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "compatibility": "full",
+      "isDefault": true,
+      "sortOrder": 10,
+      "voiceId": "_catalog_dynamic",
+      "voiceKey": "deepseek/_catalog_dynamic"
+    }
+  ],
+  "catalogKey": "deepseek/deepseek-tts",
+  "modelId": "deepseek-tts",
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
+  },
+  "vendorCode": "deepseek"
+}

@@ -1,5 +1,8 @@
 {
   "apiFormat": "google_gemini",
+  "capabilities": [
+    "video"
+  ],
   "catalogKey": "google/gemini-omni-flash-preview",
   "codingVisible": false,
   "description": "官方 deprecations 页：gemini-omni-flash-preview 已于 2026-10-22 关停（Shutdown date October 22, 2026），推荐迁移至 gemini-omni-1.2-flash；条目保持 hidden/catalog_only 迁移参考。",

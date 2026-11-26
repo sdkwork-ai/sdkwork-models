@@ -1,0 +1,741 @@
+{
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "vendorCode": "alibaba",
+  "voices": [
+    {
+      "catalogKey": "alibaba/Cherry",
+      "displayName": "Cherry",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Cherry",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Serena",
+      "displayName": "Serena",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Serena",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Ethan",
+      "displayName": "Ethan",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Ethan",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Chelsie",
+      "displayName": "Chelsie",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Chelsie",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Dylan",
+      "displayName": "Dylan",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Dylan",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Jada",
+      "displayName": "Jada",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Jada",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Sunny",
+      "displayName": "Sunny",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Sunny",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Nofish",
+      "displayName": "Nofish",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Nofish",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Jennifer",
+      "displayName": "Jennifer",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Jennifer",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Ryan",
+      "displayName": "Ryan",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Ryan",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Katerina",
+      "displayName": "Katerina",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Katerina",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Elias",
+      "displayName": "Elias",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Elias",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Jais",
+      "displayName": "Jais",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Jais",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Demi",
+      "displayName": "Demi",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Demi",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longxiaochun",
+      "displayName": "龙小淳",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longxiaochun",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longxiaoxia",
+      "displayName": "龙小夏",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longxiaoxia",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longxiaocheng",
+      "displayName": "龙小诚",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longxiaocheng",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longxiaobai",
+      "displayName": "龙小白",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longxiaobai",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longlaotie",
+      "displayName": "龙老铁",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longlaotie",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longshu",
+      "displayName": "龙书",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longshu",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longshuo",
+      "displayName": "龙硕",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longshuo",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longjing",
+      "displayName": "龙婧",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longjing",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longmiao",
+      "displayName": "龙妙",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longmiao",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longyue",
+      "displayName": "龙悦",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longyue",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longyuan",
+      "displayName": "龙媛",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longyuan",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longfei",
+      "displayName": "龙飞",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longfei",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longjielidou",
+      "displayName": "龙杰力豆",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longjielidou",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longtong",
+      "displayName": "龙童",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longtong",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/longxiang",
+      "displayName": "龙祥",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "longxiang",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/zhichu",
+      "displayName": "知厨",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "supportedLocales": [
+        "zh-CN"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "zhichu",
+      "voiceKind": "standard",
+      "wireParameter": "voice"
+    }
+  ]
+}

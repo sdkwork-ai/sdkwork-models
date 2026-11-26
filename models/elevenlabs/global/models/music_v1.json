@@ -1,5 +1,8 @@
 {
   "apiFormat": "vendor_native",
+  "capabilities": [
+    "music"
+  ],
   "catalogKey": "elevenlabs/music_v1",
   "codingVisible": false,
   "colorToken": "#ca8a04",

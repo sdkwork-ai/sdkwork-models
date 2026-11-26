@@ -1,5 +1,9 @@
 {
   "apiFormat": "google_gemini",
+  "capabilities": [
+    "chat",
+    "audio"
+  ],
   "catalogKey": "google/gemini-3.8-live-extended-thinking",
   "codingVisible": false,
   "description": "高推理强度的 Live API 音频到音频模型，支持实时对话中的后台推理，2026-09-15 GA。",

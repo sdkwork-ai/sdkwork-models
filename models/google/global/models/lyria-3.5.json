@@ -1,5 +1,8 @@
 {
   "apiFormat": "google_gemini",
+  "capabilities": [
+    "music"
+  ],
   "catalogKey": "google/lyria-3.5",
   "codingVisible": false,
   "description": "旗舰音乐生成模型，支持完整歌曲、44.1kHz 立体声，2026-09-03 GA。",

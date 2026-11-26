@@ -1,5 +1,8 @@
 {
   "apiFormat": "vendor_native",
+  "capabilities": [
+    "music"
+  ],
   "catalogKey": "suno/suno-v6-mini",
   "codingVisible": false,
   "colorToken": "#b91c1c",

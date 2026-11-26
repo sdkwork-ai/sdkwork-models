@@ -151,12 +151,12 @@ Generated: 2026-11-26
 | flux-3 | N/A | image, video, audio | N/A |
 | flux-3-image | N/A | image | N/A |
 | flux-3-image-klein | N/A | image | N/A |
-| flux-kontext-max | N/A | N/A | N/A |
-| flux-kontext-pro | N/A | N/A | N/A |
-| flux-pro-1.0-fill | N/A | N/A | N/A |
-| flux-pro-1.1 | N/A | N/A | N/A |
-| flux-pro-1.1-raw | N/A | N/A | N/A |
-| flux-pro-1.1-ultra | N/A | N/A | N/A |
+| flux-kontext-max | N/A | image | N/A |
+| flux-kontext-pro | N/A | image | N/A |
+| flux-pro-1.0-fill | N/A | image | N/A |
+| flux-pro-1.1 | N/A | image | N/A |
+| flux-pro-1.1-raw | N/A | image | N/A |
+| flux-pro-1.1-ultra | N/A | image | N/A |
 
 ### ByteDance (bytedance)
 
@@ -227,7 +227,7 @@ Generated: 2026-11-26
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
-| eleven_flash_v2 | N/A | N/A | N/A |
+| eleven_flash_v2 | N/A | audio | N/A |
 | eleven_flash_v2_5 | N/A | audio | N/A |
 | eleven_multilingual_v2 | N/A | audio | N/A |
 | eleven_realtime_v1_max | N/A | audio | USD 1.80 / 9.00 |
@@ -238,9 +238,9 @@ Generated: 2026-11-26
 | eleven_v4 | N/A | audio | N/A |
 | eleven_v4_turbo | N/A | audio | N/A |
 | music_v2 | N/A | music | N/A |
-| music_v2_5 | N/A | N/A | N/A |
+| music_v2_5 | N/A | music | N/A |
 | scribe_v2 | N/A | audio | N/A |
-| scribe_v2_medical | N/A | N/A | N/A |
+| scribe_v2_medical | N/A | audio | N/A |
 | scribe_v2_realtime | N/A | audio | N/A |
 | scribe_v3 | N/A | audio | N/A |
 | scribe_v3_live | N/A | audio | N/A |
@@ -256,18 +256,18 @@ Generated: 2026-11-26
 | gemini-3-pro-image | 32K | image | USD 2.00 / 12.00 |
 | gemini-3.1-flash-image | 32K | image | USD 0.50 / 3.00 |
 | gemini-3.1-flash-lite | 1048K | chat | USD 0.25 / 1.50 |
-| gemini-3.1-flash-lite-image | N/A | N/A | USD 0.25 / 1.50 |
+| gemini-3.1-flash-lite-image | N/A | image | USD 0.25 / 1.50 |
 | gemini-3.1-flash-live-preview | 131K | chat, audio | USD 0.75 / 4.50 |
 | gemini-3.1-flash-tts-preview | 32K | audio | N/A |
 | gemini-3.5-flash-lite | 1048K | chat | USD 0.30 / 2.50 |
-| gemini-3.5-live-translate-preview | N/A | N/A | N/A |
-| gemini-3.5-transcribe | N/A | N/A | N/A |
-| gemini-3.5-transcribe-live | N/A | N/A | N/A |
+| gemini-3.5-live-translate-preview | N/A | audio | N/A |
+| gemini-3.5-transcribe | N/A | audio | N/A |
+| gemini-3.5-transcribe-live | N/A | audio | N/A |
 | gemini-3.8-flash | 1048K | chat | USD 0.75 / 3.75 |
 | gemini-3.8-flash-lite-tts | 8K | audio | N/A |
 | gemini-3.8-flash-tts | 8K | audio | N/A |
-| gemini-3.8-live | N/A | N/A | USD 0.75 / 4.50 |
-| gemini-3.8-live-extended-thinking | N/A | N/A | USD 0.75 / 4.50 |
+| gemini-3.8-live | N/A | chat, audio | USD 0.75 / 4.50 |
+| gemini-3.8-live-extended-thinking | N/A | chat, audio | USD 0.75 / 4.50 |
 | gemini-4-argon | 1048K | chat | USD 2.00 / 10.00 |
 | gemini-4-carbon | 1048K | chat | USD 2.00 / 10.00 |
 | gemini-4-hydrogen | 1048K | chat | USD 1.50 / 7.50 |
@@ -277,9 +277,9 @@ Generated: 2026-11-26
 | gemini-omni-1.2-flash | N/A | video | USD 1.50 / 9.00 |
 | gemini-robotics-er-2-preview | N/A | N/A | USD 1.00 / 5.00 |
 | gemini-robotics-er-2-streaming-preview | N/A | N/A | USD 1.00 / 5.00 |
-| lyria-3-clip-preview | N/A | N/A | N/A |
-| lyria-3-pro-preview | N/A | N/A | N/A |
-| lyria-3.5 | N/A | N/A | N/A |
+| lyria-3-clip-preview | N/A | music | N/A |
+| lyria-3-pro-preview | N/A | music | N/A |
+| lyria-3.5 | N/A | music | N/A |
 
 ### Kuaishou (kuaishou)
 
@@ -557,10 +557,10 @@ Generated: 2026-11-26
 |----------|---------|------------|------------------------|
 | stable-audio-2.5 | N/A | music | N/A |
 | stable-audio-3.0 | N/A | music | N/A |
-| stable-diffusion-3-5-flash | N/A | N/A | N/A |
-| stable-diffusion-3-5-large | N/A | N/A | N/A |
-| stable-diffusion-3-5-large-turbo | N/A | N/A | N/A |
-| stable-diffusion-3-5-medium | N/A | N/A | N/A |
+| stable-diffusion-3-5-flash | N/A | image | N/A |
+| stable-diffusion-3-5-large | N/A | image | N/A |
+| stable-diffusion-3-5-large-turbo | N/A | image | N/A |
+| stable-diffusion-3-5-medium | N/A | image | N/A |
 | stable-image-core | N/A | image | N/A |
 | stable-image-ultra | N/A | image | N/A |
 
@@ -634,6 +634,8 @@ Generated: 2026-11-26
 |----------|---------|------------|------------------------|
 | audio1.0-text2audio | N/A | sfx | N/A |
 | audio1.0-timing2audio | N/A | sfx | N/A |
+| viduq1 | N/A | image | N/A |
+| viduq2 | N/A | image | N/A |
 | viduq3 | N/A | video, audio | N/A |
 | viduq3-mix | N/A | video | N/A |
 | viduq3-pro | N/A | video | N/A |
@@ -721,7 +723,7 @@ Generated: 2026-11-26
 
 | Region | Vendors | Models | Pricing Files |
 |--------|---------|--------|---------------|
-| CN | 15 | 247 | 234 |
+| CN | 15 | 249 | 236 |
 | GLOBAL | 22 | 401 | 385 |
 
 ### Client API Support

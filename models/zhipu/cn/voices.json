@@ -1,0 +1,208 @@
+{
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "vendorCode": "zhipu",
+  "voices": [
+    {
+      "catalogKey": "zhipu/tongtong",
+      "displayName": "彤彤",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "zhipu",
+      "voiceId": "tongtong",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "zhipu/chuichui",
+      "displayName": "锤锤",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "zhipu",
+      "voiceId": "chuichui",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "zhipu/xiaochen",
+      "displayName": "小陈",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "zhipu",
+      "voiceId": "xiaochen",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "zhipu/jam",
+      "displayName": "Jam",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "zhipu",
+      "voiceId": "jam",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "zhipu/kazi",
+      "displayName": "Kazi",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "zhipu",
+      "voiceId": "kazi",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "zhipu/douji",
+      "displayName": "豆几",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "zhipu",
+      "voiceId": "douji",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "zhipu/luodo",
+      "displayName": "洛多",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "zhipu",
+      "voiceId": "luodo",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "zhipu/_catalog_dynamic",
+      "displayName": "GLM-TTS Cloned Voice Library",
+      "gender": "unspecified",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "vendor_api",
+      "regionCode": "cn",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://docs.bigmodel.cn/"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "zhipu",
+      "voiceId": "_catalog_dynamic",
+      "voiceKind": "cloned",
+      "wireParameter": "voice",
+      "description": "GLM-TTS-Clone 克隆音色在运行时通过官方声音复刻接口解析。"
+    }
+  ]
+}

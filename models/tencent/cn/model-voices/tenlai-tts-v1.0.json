@@ -1,0 +1,20 @@
+{
+  "bindings": [
+    {
+      "compatibility": "full",
+      "isDefault": true,
+      "sortOrder": 10,
+      "voiceId": "_catalog_dynamic",
+      "voiceKey": "tencent/_catalog_dynamic"
+    }
+  ],
+  "catalogKey": "tencent/tenlai-tts-v1.0",
+  "modelId": "tenlai-tts-v1.0",
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://cloud.tencent.com/document/product/1823/130051"
+  },
+  "vendorCode": "tencent"
+}

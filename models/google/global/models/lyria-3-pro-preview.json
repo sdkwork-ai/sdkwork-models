@@ -1,5 +1,8 @@
 {
   "apiFormat": "google_gemini",
+  "capabilities": [
+    "music"
+  ],
   "catalogKey": "google/lyria-3-pro-preview",
   "codingVisible": false,
   "description": "面向完整歌曲的上一代 Lyria 3 音乐生成模型。",

@@ -1,0 +1,357 @@
+{
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "vendorCode": "alibaba",
+  "voices": [
+    {
+      "catalogKey": "alibaba/Cherry",
+      "displayName": "Cherry",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Cherry",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Serena",
+      "displayName": "Serena",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Serena",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Ethan",
+      "displayName": "Ethan",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Ethan",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Chelsie",
+      "displayName": "Chelsie",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Chelsie",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Dylan",
+      "displayName": "Dylan",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Dylan",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Jada",
+      "displayName": "Jada",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Jada",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Sunny",
+      "displayName": "Sunny",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Sunny",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Nofish",
+      "displayName": "Nofish",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "zh-CN",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Nofish",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Jennifer",
+      "displayName": "Jennifer",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Jennifer",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Ryan",
+      "displayName": "Ryan",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Ryan",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Katerina",
+      "displayName": "Katerina",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Katerina",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Elias",
+      "displayName": "Elias",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Elias",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Jais",
+      "displayName": "Jais",
+      "gender": "male",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Jais",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    },
+    {
+      "catalogKey": "alibaba/Demi",
+      "displayName": "Demi",
+      "gender": "female",
+      "lifecycle": "active",
+      "primaryLocale": "en-US",
+      "provisioningMode": "static",
+      "regionCode": "global",
+      "releaseStage": "active",
+      "routingState": "enabled",
+      "schemaVersion": "1.0.0",
+      "shelfState": "listed",
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models"
+      },
+      "supportedLocales": [
+        "zh-CN",
+        "en-US"
+      ],
+      "vendorCode": "alibaba",
+      "voiceId": "Demi",
+      "voiceKind": "neural",
+      "wireParameter": "voice"
+    }
+  ]
+}

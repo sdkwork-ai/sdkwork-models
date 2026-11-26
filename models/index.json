@@ -1,10 +1,10 @@
 {
-  "catalogVersion": "2026.11.26.1",
+  "catalogVersion": "2026.11.26.3",
   "generatedAt": "2026-11-26T00:00:00Z",
-  "modelCount": 648,
+  "modelCount": 650,
   "modelVideoProfileFileCount": 144,
-  "modelVoiceFileCount": 14,
-  "pricingFileCount": 619,
+  "modelVoiceFileCount": 82,
+  "pricingFileCount": 621,
   "regionCount": 37,
   "schemaVersion": "1.1.0",
   "vendorCount": 27,
@@ -75,8 +75,20 @@
         "alibaba/cn/model-video-profiles/wan3.0-video.json"
       ],
       "modelVideoProfilesPath": "alibaba/cn/model-video-profiles",
-      "modelVoiceFileCount": 0,
-      "modelVoiceFiles": [],
+      "modelVoiceFileCount": 11,
+      "modelVoiceFiles": [
+        "alibaba/cn/model-voices/cosyvoice-v2.json",
+        "alibaba/cn/model-voices/cosyvoice-v3-flash.json",
+        "alibaba/cn/model-voices/cosyvoice-v3-plus.json",
+        "alibaba/cn/model-voices/cosyvoice-v3.5-flash.json",
+        "alibaba/cn/model-voices/cosyvoice-v3.5-plus.json",
+        "alibaba/cn/model-voices/qwen-audio-3.0-tts-flash.json",
+        "alibaba/cn/model-voices/qwen-audio-3.0-tts-plus.json",
+        "alibaba/cn/model-voices/qwen-audio-3.1-tts-flash.json",
+        "alibaba/cn/model-voices/qwen-audio-3.1-tts-plus.json",
+        "alibaba/cn/model-voices/qwen3-tts-flash.json",
+        "alibaba/cn/model-voices/sambert-zhichu-v1.json"
+      ],
       "modelVoicesPath": "alibaba/cn/model-voices",
       "modelsPath": "alibaba/cn/models",
       "path": "alibaba/cn/vendor.json",
@@ -130,11 +142,11 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "alibaba/cn/rankings.json",
       "regionCode": "cn",
-      "sha256": "6a1c8685a65b7ae1ff5631390221c1debaea575557c12c0e155dc629f60951eb",
+      "sha256": "718185b123fb719cbcbc216e0810917b5650091e22b169180f9b80bef149668c",
       "vendorCode": "alibaba",
       "videoProfileCount": 34,
-      "voiceCount": 0,
-      "voicesPath": null
+      "voiceCount": 30,
+      "voicesPath": "alibaba/cn/voices.json"
     },
     {
       "billingCurrency": "USD",
@@ -173,8 +185,10 @@
         "alibaba/global/model-video-profiles/wan3.0-video.json"
       ],
       "modelVideoProfilesPath": "alibaba/global/model-video-profiles",
-      "modelVoiceFileCount": 0,
-      "modelVoiceFiles": [],
+      "modelVoiceFileCount": 1,
+      "modelVoiceFiles": [
+        "alibaba/global/model-voices/qwen-audio-3.1-tts-flash.json"
+      ],
       "modelVoicesPath": "alibaba/global/model-voices",
       "modelsPath": "alibaba/global/models",
       "path": "alibaba/global/vendor.json",
@@ -202,11 +216,11 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "alibaba/global/rankings.json",
       "regionCode": "global",
-      "sha256": "19ff53dcf783aaf93a220cba815935ecffea17750bf68d4fb0c1fab763fc04e1",
+      "sha256": "9242ce03302fc6445e32a5b0c39581df45a7f2b28e4fb08c2d30503559a60c76",
       "vendorCode": "alibaba",
       "videoProfileCount": 24,
-      "voiceCount": 0,
-      "voicesPath": null
+      "voiceCount": 14,
+      "voicesPath": "alibaba/global/voices.json"
     },
     {
       "billingCurrency": "USD",
@@ -393,7 +407,7 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "black_forest_labs/global/rankings.json",
       "regionCode": "global",
-      "sha256": "a100f10b36ac8528189ef669a9eea4247eb994e19bbac4c0536afdd4b3b8d119",
+      "sha256": "8ba6df9db05625c352b611a170b2ebb62928c1b328a837f38548419b97b850c4",
       "vendorCode": "black_forest_labs",
       "videoProfileCount": 4,
       "voiceCount": 0,
@@ -609,8 +623,10 @@
       "modelVideoProfileFileCount": 0,
       "modelVideoProfileFiles": [],
       "modelVideoProfilesPath": "deepseek/cn/model-video-profiles",
-      "modelVoiceFileCount": 0,
-      "modelVoiceFiles": [],
+      "modelVoiceFileCount": 1,
+      "modelVoiceFiles": [
+        "deepseek/cn/model-voices/deepseek-tts.json"
+      ],
       "modelVoicesPath": "deepseek/cn/model-voices",
       "modelsPath": "deepseek/cn/models",
       "path": "deepseek/cn/vendor.json",
@@ -629,11 +645,11 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "deepseek/cn/rankings.json",
       "regionCode": "cn",
-      "sha256": "b94a9fcff22a086597721b0181dd6c0cfaa04be206189f3e55e802ad16e0294b",
+      "sha256": "2ee84cae6ed6df4d6d7805474c77bb7238121912e90bf32d13902e228785a422",
       "vendorCode": "deepseek",
       "videoProfileCount": 0,
-      "voiceCount": 0,
-      "voicesPath": null
+      "voiceCount": 1,
+      "voicesPath": "deepseek/cn/voices.json"
     },
     {
       "billingCurrency": "USD",
@@ -657,8 +673,10 @@
       "modelVideoProfileFileCount": 0,
       "modelVideoProfileFiles": [],
       "modelVideoProfilesPath": "deepseek/global/model-video-profiles",
-      "modelVoiceFileCount": 0,
-      "modelVoiceFiles": [],
+      "modelVoiceFileCount": 1,
+      "modelVoiceFiles": [
+        "deepseek/global/model-voices/deepseek-tts.json"
+      ],
       "modelVoicesPath": "deepseek/global/model-voices",
       "modelsPath": "deepseek/global/models",
       "path": "deepseek/global/vendor.json",
@@ -677,11 +695,11 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "deepseek/global/rankings.json",
       "regionCode": "global",
-      "sha256": "5fb72d92a0e34be3f60282eae2413bead3df579c2d87c0fae7975d11b9bd9988",
+      "sha256": "8b08150c4651376d6ba2d3051d194b391240a0e3a4671f355eba5b581e3b067c",
       "vendorCode": "deepseek",
       "videoProfileCount": 0,
-      "voiceCount": 0,
-      "voicesPath": null
+      "voiceCount": 1,
+      "voicesPath": "deepseek/global/voices.json"
     },
     {
       "billingCurrency": "USD",
@@ -719,11 +737,19 @@
       "modelVideoProfileFileCount": 0,
       "modelVideoProfileFiles": [],
       "modelVideoProfilesPath": "elevenlabs/global/model-video-profiles",
-      "modelVoiceFileCount": 3,
+      "modelVoiceFileCount": 11,
       "modelVoiceFiles": [
         "elevenlabs/global/model-voices/eleven_flash_v2_5.json",
+        "elevenlabs/global/model-voices/eleven_flash_v2.json",
+        "elevenlabs/global/model-voices/eleven_monolingual_v1.json",
+        "elevenlabs/global/model-voices/eleven_multilingual_v1.json",
         "elevenlabs/global/model-voices/eleven_multilingual_v2.json",
-        "elevenlabs/global/model-voices/eleven_v3.json"
+        "elevenlabs/global/model-voices/eleven_realtime_v1_max.json",
+        "elevenlabs/global/model-voices/eleven_realtime_v1_mini.json",
+        "elevenlabs/global/model-voices/eleven_v3_conversational.json",
+        "elevenlabs/global/model-voices/eleven_v3.json",
+        "elevenlabs/global/model-voices/eleven_v4_turbo.json",
+        "elevenlabs/global/model-voices/eleven_v4.json"
       ],
       "modelVoicesPath": "elevenlabs/global/model-voices",
       "modelsPath": "elevenlabs/global/models",
@@ -756,7 +782,7 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "elevenlabs/global/rankings.json",
       "regionCode": "global",
-      "sha256": "3327f2da54e67dfd4622f6e67525a5cabc76ef7aafd98155f841af7bf34102dc",
+      "sha256": "986277a77d3ab3546212c4e385f5d6a63e6dffc5a035a9586cfaaf4725c871ee",
       "vendorCode": "elevenlabs",
       "videoProfileCount": 0,
       "voiceCount": 1,
@@ -831,11 +857,17 @@
         "google/global/model-video-profiles/veo-3.1-lite-generate-preview.json"
       ],
       "modelVideoProfilesPath": "google/global/model-video-profiles",
-      "modelVoiceFileCount": 3,
+      "modelVoiceFileCount": 9,
       "modelVoiceFiles": [
         "google/global/model-voices/gemini-2.5-flash-preview-tts.json",
         "google/global/model-voices/gemini-2.5-pro-preview-tts.json",
-        "google/global/model-voices/gemini-3.1-flash-tts-preview.json"
+        "google/global/model-voices/gemini-3.1-flash-live-preview.json",
+        "google/global/model-voices/gemini-3.1-flash-tts-preview.json",
+        "google/global/model-voices/gemini-3.5-live-translate-preview.json",
+        "google/global/model-voices/gemini-3.8-flash-lite-tts.json",
+        "google/global/model-voices/gemini-3.8-flash-tts.json",
+        "google/global/model-voices/gemini-3.8-live-extended-thinking.json",
+        "google/global/model-voices/gemini-3.8-live.json"
       ],
       "modelVoicesPath": "google/global/model-voices",
       "modelsPath": "google/global/models",
@@ -895,10 +927,10 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "google/global/rankings.json",
       "regionCode": "global",
-      "sha256": "134d884a892fbe0577c915cbd80ec30ef8089ea31fc2c6ecc5476bd9ba84a2f4",
+      "sha256": "d1b4637eb242796593bc8e8692e9183f043344bd48477c0aea548bfac5c32c7a",
       "vendorCode": "google",
       "videoProfileCount": 15,
-      "voiceCount": 8,
+      "voiceCount": 30,
       "voicesPath": "google/global/voices.json"
     },
     {
@@ -1192,8 +1224,12 @@
         "minimax/cn/model-video-profiles/MiniMax-H3.json"
       ],
       "modelVideoProfilesPath": "minimax/cn/model-video-profiles",
-      "modelVoiceFileCount": 2,
+      "modelVoiceFileCount": 6,
       "modelVoiceFiles": [
+        "minimax/cn/model-voices/speech-02-hd.json",
+        "minimax/cn/model-voices/speech-02-turbo.json",
+        "minimax/cn/model-voices/speech-2.6-hd.json",
+        "minimax/cn/model-voices/speech-2.6-turbo.json",
         "minimax/cn/model-voices/speech-2.8-hd.json",
         "minimax/cn/model-voices/speech-2.8-turbo.json"
       ],
@@ -1238,7 +1274,7 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "minimax/cn/rankings.json",
       "regionCode": "cn",
-      "sha256": "3822ee512b4641ddc28993707d24e6adeeaa95ac3a17c80eb8e92ec2b1066ce5",
+      "sha256": "aed32135572f4d1a850c41c4c0d82c5df899882ff162175db25ab101651a5187",
       "vendorCode": "minimax",
       "videoProfileCount": 30,
       "voiceCount": 1,
@@ -1303,8 +1339,12 @@
         "minimax/global/model-video-profiles/MiniMax-H3.json"
       ],
       "modelVideoProfilesPath": "minimax/global/model-video-profiles",
-      "modelVoiceFileCount": 2,
+      "modelVoiceFileCount": 6,
       "modelVoiceFiles": [
+        "minimax/global/model-voices/speech-02-hd.json",
+        "minimax/global/model-voices/speech-02-turbo.json",
+        "minimax/global/model-voices/speech-2.6-hd.json",
+        "minimax/global/model-voices/speech-2.6-turbo.json",
         "minimax/global/model-voices/speech-2.8-hd.json",
         "minimax/global/model-voices/speech-2.8-turbo.json"
       ],
@@ -1351,7 +1391,7 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "minimax/global/rankings.json",
       "regionCode": "global",
-      "sha256": "2a6067bedf17e0ae5de09683f142d111f2418acf5603cc834d9e1ae148f88b09",
+      "sha256": "9dd2bbeef0a09e30f2ca2939b6751d3929ce2357b32d4428bf5183162abed4a7",
       "vendorCode": "minimax",
       "videoProfileCount": 29,
       "voiceCount": 1,
@@ -1573,9 +1613,18 @@
         "openai/global/model-video-profiles/sora-2.json"
       ],
       "modelVideoProfilesPath": "openai/global/model-video-profiles",
-      "modelVoiceFileCount": 2,
+      "modelVoiceFileCount": 11,
       "modelVoiceFiles": [
         "openai/global/model-voices/gpt-4o-mini-tts.json",
+        "openai/global/model-voices/gpt-audio-1.5.json",
+        "openai/global/model-voices/gpt-live-1.1.json",
+        "openai/global/model-voices/gpt-live-1.json",
+        "openai/global/model-voices/gpt-realtime-1.5.json",
+        "openai/global/model-voices/gpt-realtime-2.1-mini.json",
+        "openai/global/model-voices/gpt-realtime-2.1.json",
+        "openai/global/model-voices/gpt-realtime-2.json",
+        "openai/global/model-voices/gpt-realtime-mini.json",
+        "openai/global/model-voices/gpt-realtime-translate.json",
         "openai/global/model-voices/tts-1-hd.json"
       ],
       "modelVoicesPath": "openai/global/model-voices",
@@ -1643,7 +1692,7 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "openai/global/rankings.json",
       "regionCode": "global",
-      "sha256": "9f88645d6d84c60e756ab239a6f08996f285d1e0c99ce28287d023ffe9280ea0",
+      "sha256": "48fcfbef21e924465d5ea3df77c85bdbdbd621bde4bc4ab71a840491e0cbdc89",
       "vendorCode": "openai",
       "videoProfileCount": 4,
       "voiceCount": 11,
@@ -2049,7 +2098,7 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "stability_ai/global/rankings.json",
       "regionCode": "global",
-      "sha256": "1f42730b6a0f67caf4d2caef9f5a06d7592f69e4ca3f7c0aac83c3f545201b54",
+      "sha256": "007b7cfb8881bbdd94ec62835b72225955c2d7faea62e8355617b8c081524154",
       "vendorCode": "stability_ai",
       "videoProfileCount": 0,
       "voiceCount": 0,
@@ -2093,8 +2142,20 @@
       "modelVideoProfileFileCount": 0,
       "modelVideoProfileFiles": [],
       "modelVideoProfilesPath": "stepfun/cn/model-video-profiles",
-      "modelVoiceFileCount": 0,
-      "modelVoiceFiles": [],
+      "modelVoiceFileCount": 11,
+      "modelVoiceFiles": [
+        "stepfun/cn/model-voices/step-1o-audio.json",
+        "stepfun/cn/model-voices/step-audio-2.json",
+        "stepfun/cn/model-voices/step-audio-r1.5.json",
+        "stepfun/cn/model-voices/step-tts-2.json",
+        "stepfun/cn/model-voices/step-tts-mini.json",
+        "stepfun/cn/model-voices/stepaudio-2.5-chat.json",
+        "stepfun/cn/model-voices/stepaudio-2.5-realtime.json",
+        "stepfun/cn/model-voices/stepaudio-2.5-tts.json",
+        "stepfun/cn/model-voices/stepaudio-3-gen.json",
+        "stepfun/cn/model-voices/stepaudio-3-realtime.json",
+        "stepfun/cn/model-voices/stepaudio-3-tts.json"
+      ],
       "modelVoicesPath": "stepfun/cn/model-voices",
       "modelsPath": "stepfun/cn/models",
       "path": "stepfun/cn/vendor.json",
@@ -2129,11 +2190,11 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "stepfun/cn/rankings.json",
       "regionCode": "cn",
-      "sha256": "82a878762afaea258afb1c5b48a02356007edc47924c3736dea028d7e3126370",
+      "sha256": "f166b3008bc8fae0e020c81ae6a6ad685c1b95882ae11c2d3d18be34cc54d314",
       "vendorCode": "stepfun",
       "videoProfileCount": 0,
-      "voiceCount": 0,
-      "voicesPath": null
+      "voiceCount": 10,
+      "voicesPath": "stepfun/cn/voices.json"
     },
     {
       "billingCurrency": "USD",
@@ -2168,7 +2229,7 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "suno/global/rankings.json",
       "regionCode": "global",
-      "sha256": "a3985610452edc394ddefcb835f21b45d2f0688bdcd27c89a2c4bfab9f07233b",
+      "sha256": "926ce0115999c7ea1f86a565a1b6192a8be653c0c3f805e17efa6e6804ac1884",
       "vendorCode": "suno",
       "videoProfileCount": 0,
       "voiceCount": 0,
@@ -2202,8 +2263,10 @@
       "modelVideoProfileFileCount": 0,
       "modelVideoProfileFiles": [],
       "modelVideoProfilesPath": "tencent/cn/model-video-profiles",
-      "modelVoiceFileCount": 0,
-      "modelVoiceFiles": [],
+      "modelVoiceFileCount": 1,
+      "modelVoiceFiles": [
+        "tencent/cn/model-voices/tenlai-tts-v1.0.json"
+      ],
       "modelVoicesPath": "tencent/cn/model-voices",
       "modelsPath": "tencent/cn/models",
       "path": "tencent/cn/vendor.json",
@@ -2228,11 +2291,11 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "tencent/cn/rankings.json",
       "regionCode": "cn",
-      "sha256": "4ed47234a59d783e28360b30a03ae33f43060ff543b7023fea1811652c649a44",
+      "sha256": "b0d2cba2b54a4e7bdcfabde0931ddf248d1fa5d15b871084f4cbad5f4a472dbf",
       "vendorCode": "tencent",
       "videoProfileCount": 0,
-      "voiceCount": 0,
-      "voicesPath": null
+      "voiceCount": 1,
+      "voicesPath": "tencent/cn/voices.json"
     },
     {
       "billingCurrency": "USD",
@@ -2278,13 +2341,15 @@
       "catalogKeyPrefix": "vidu/",
       "displayName": "Vidu",
       "familiesPath": "vidu/cn/families.json",
-      "familyCount": 3,
+      "familyCount": 4,
       "marketScope": "china_mainland",
-      "modelCount": 11,
+      "modelCount": 13,
       "modelFiles": [
         "vidu/cn/models/audio1.0-text2audio.json",
         "vidu/cn/models/audio1.0-timing2audio.json",
         "vidu/cn/models/vidu-s1.json",
+        "vidu/cn/models/viduq1.json",
+        "vidu/cn/models/viduq2.json",
         "vidu/cn/models/viduq3-ad.json",
         "vidu/cn/models/viduq3-drama.json",
         "vidu/cn/models/viduq3-mix.json",
@@ -2311,11 +2376,13 @@
       "modelVoicesPath": "vidu/cn/model-voices",
       "modelsPath": "vidu/cn/models",
       "path": "vidu/cn/vendor.json",
-      "pricingFileCount": 9,
+      "pricingFileCount": 11,
       "pricingFiles": [
         "vidu/cn/pricing/audio1.0-text2audio.json",
         "vidu/cn/pricing/audio1.0-timing2audio.json",
         "vidu/cn/pricing/vidu-s1.json",
+        "vidu/cn/pricing/viduq1.json",
+        "vidu/cn/pricing/viduq2.json",
         "vidu/cn/pricing/viduq3-mix.json",
         "vidu/cn/pricing/viduq3-pro-fast.json",
         "vidu/cn/pricing/viduq3-pro.json",
@@ -2327,7 +2394,7 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "vidu/cn/rankings.json",
       "regionCode": "cn",
-      "sha256": "d3d670aab3b5daa2e0632d65fcfedbde1103546d8482413c503ca88a9fca181f",
+      "sha256": "19f45481a15d90f62e620267c0e3cb7f88a4de8f6a36c06bec8608e5220e48b3",
       "vendorCode": "vidu",
       "videoProfileCount": 31,
       "voiceCount": 0,
@@ -2488,8 +2555,12 @@
       "modelVideoProfileFileCount": 0,
       "modelVideoProfileFiles": [],
       "modelVideoProfilesPath": "xiaomi/cn/model-video-profiles",
-      "modelVoiceFileCount": 0,
-      "modelVoiceFiles": [],
+      "modelVoiceFileCount": 3,
+      "modelVoiceFiles": [
+        "xiaomi/cn/model-voices/mimo-v2.5-tts-voiceclone.json",
+        "xiaomi/cn/model-voices/mimo-v2.5-tts-voicedesign.json",
+        "xiaomi/cn/model-voices/mimo-v2.5-tts.json"
+      ],
       "modelVoicesPath": "xiaomi/cn/model-voices",
       "modelsPath": "xiaomi/cn/models",
       "path": "xiaomi/cn/vendor.json",
@@ -2509,11 +2580,11 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "xiaomi/cn/rankings.json",
       "regionCode": "cn",
-      "sha256": "dad060d12815506f5eceac45ea185d3cedbf1eb0e7535ad1c9abde226c45dccb",
+      "sha256": "5252efdb94d806a0245da0d84f7d9d374fc2c60ff035dd0578fd92a1e7baa6b5",
       "vendorCode": "xiaomi",
       "videoProfileCount": 0,
-      "voiceCount": 0,
-      "voicesPath": null
+      "voiceCount": 1,
+      "voicesPath": "xiaomi/cn/voices.json"
     },
     {
       "billingCurrency": "USD",
@@ -2541,8 +2612,12 @@
       "modelVideoProfileFileCount": 0,
       "modelVideoProfileFiles": [],
       "modelVideoProfilesPath": "xiaomi/global/model-video-profiles",
-      "modelVoiceFileCount": 0,
-      "modelVoiceFiles": [],
+      "modelVoiceFileCount": 3,
+      "modelVoiceFiles": [
+        "xiaomi/global/model-voices/mimo-v2.5-tts-voiceclone.json",
+        "xiaomi/global/model-voices/mimo-v2.5-tts-voicedesign.json",
+        "xiaomi/global/model-voices/mimo-v2.5-tts.json"
+      ],
       "modelVoicesPath": "xiaomi/global/model-voices",
       "modelsPath": "xiaomi/global/models",
       "path": "xiaomi/global/vendor.json",
@@ -2562,11 +2637,11 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "xiaomi/global/rankings.json",
       "regionCode": "global",
-      "sha256": "5f36e5ba45f7fd7ec2f83719a4e13003805b4385ac55760d99a45684dda542c9",
+      "sha256": "43009cac5ffeddc3b90e63b754b8dc334f912e010911a35a861cb043bf9f0697",
       "vendorCode": "xiaomi",
       "videoProfileCount": 0,
-      "voiceCount": 0,
-      "voicesPath": null
+      "voiceCount": 1,
+      "voicesPath": "xiaomi/global/voices.json"
     },
     {
       "billingCurrency": "CNY",
@@ -2606,8 +2681,14 @@
         "zhipu/cn/model-video-profiles/cogvideox-3.json"
       ],
       "modelVideoProfilesPath": "zhipu/cn/model-video-profiles",
-      "modelVoiceFileCount": 0,
-      "modelVoiceFiles": [],
+      "modelVoiceFileCount": 5,
+      "modelVoiceFiles": [
+        "zhipu/cn/model-voices/glm-4-voice.json",
+        "zhipu/cn/model-voices/glm-realtime-air.json",
+        "zhipu/cn/model-voices/glm-realtime-flash.json",
+        "zhipu/cn/model-voices/glm-tts-clone.json",
+        "zhipu/cn/model-voices/glm-tts.json"
+      ],
       "modelVoicesPath": "zhipu/cn/model-voices",
       "modelsPath": "zhipu/cn/models",
       "path": "zhipu/cn/vendor.json",
@@ -2639,13 +2720,13 @@
       "rankingSnapshotCount": 1,
       "rankingsPath": "zhipu/cn/rankings.json",
       "regionCode": "cn",
-      "sha256": "4419eff0de527b932b4d447928c04e04e0aa6188f0c9336c946cba35713cbb5f",
+      "sha256": "755c7a06da7d1e1731fd5077b249bec40cede34bc3d2a29996f822a1775d723d",
       "vendorCode": "zhipu",
       "videoProfileCount": 2,
-      "voiceCount": 0,
-      "voicesPath": null
+      "voiceCount": 8,
+      "voicesPath": "zhipu/cn/voices.json"
     }
   ],
   "videoProfileCount": 630,
-  "voiceCount": 23
+  "voiceCount": 112
 }

@@ -1,0 +1,56 @@
+{
+  "bindings": [
+    {
+      "compatibility": "full",
+      "isDefault": true,
+      "sortOrder": 10,
+      "voiceId": "tongtong",
+      "voiceKey": "zhipu/tongtong"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 20,
+      "voiceId": "chuichui",
+      "voiceKey": "zhipu/chuichui"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 30,
+      "voiceId": "xiaochen",
+      "voiceKey": "zhipu/xiaochen"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 40,
+      "voiceId": "jam",
+      "voiceKey": "zhipu/jam"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 50,
+      "voiceId": "kazi",
+      "voiceKey": "zhipu/kazi"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 60,
+      "voiceId": "douji",
+      "voiceKey": "zhipu/douji"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 70,
+      "voiceId": "luodo",
+      "voiceKey": "zhipu/luodo"
+    }
+  ],
+  "catalogKey": "zhipu/glm-realtime-flash",
+  "modelId": "glm-realtime-flash",
+  "regionCode": "cn",
+  "schemaVersion": "1.0.0",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
+  },
+  "vendorCode": "zhipu"
+}

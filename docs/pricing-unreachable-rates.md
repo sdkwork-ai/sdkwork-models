@@ -7,7 +7,7 @@ or merging tiers - a product decision, so nothing here is auto-applied.
 
 | reason | count |
 |---|---|
-| dimension_never_populated | 481 |
+| dimension_never_populated | 490 |
 
 `dimension_never_populated`: the runtime has no producer for the dimension at all.
 `time_window_tier_redundant`: a `time_window` rate conditioned on `tier_code`; the
@@ -466,6 +466,15 @@ the rate unselectable. See `ROUTING_PRICING_SPEC.md` section 5.4.
 | vidu/cn/pricing/audio1.0-text2audio.json | vidu-cn-audio1-0-text2audio-under-5s | sfx_result | 0.312500 | CNY | 1 | tier_code | dimension_never_populated | under_5s | - |
 | vidu/cn/pricing/audio1.0-timing2audio.json | vidu-cn-audio1-0-timing2audio-under-10s | sfx_result | 0.625000 | CNY | 1 | tier_code | dimension_never_populated | under_10s | - |
 | vidu/cn/pricing/audio1.0-timing2audio.json | vidu-cn-audio1-0-timing2audio-under-5s | sfx_result | 0.312500 | CNY | 1 | tier_code | dimension_never_populated | under_5s | - |
+| vidu/cn/pricing/viduq2.json | vidu-cn-viduq2-image-r2i-ref1-3-1080p | image_result | 0.250000 | CNY | 1 | tier_code | dimension_never_populated | r2i_ref1_3_1080p | - |
+| vidu/cn/pricing/viduq2.json | vidu-cn-viduq2-image-r2i-ref1-3-2k | image_result | 0.375000 | CNY | 1 | tier_code | dimension_never_populated | r2i_ref1_3_2k | - |
+| vidu/cn/pricing/viduq2.json | vidu-cn-viduq2-image-r2i-ref1-3-4k | image_result | 0.625000 | CNY | 1 | tier_code | dimension_never_populated | r2i_ref1_3_4k | - |
+| vidu/cn/pricing/viduq2.json | vidu-cn-viduq2-image-r2i-ref4-7-1080p | image_result | 0.312500 | CNY | 1 | tier_code | dimension_never_populated | r2i_ref4_7_1080p | - |
+| vidu/cn/pricing/viduq2.json | vidu-cn-viduq2-image-r2i-ref4-7-2k | image_result | 0.500000 | CNY | 1 | tier_code | dimension_never_populated | r2i_ref4_7_2k | - |
+| vidu/cn/pricing/viduq2.json | vidu-cn-viduq2-image-r2i-ref4-7-4k | image_result | 0.937500 | CNY | 1 | tier_code | dimension_never_populated | r2i_ref4_7_4k | - |
+| vidu/cn/pricing/viduq2.json | vidu-cn-viduq2-image-t2i-1080p | image_result | 0.187500 | CNY | 1 | tier_code | dimension_never_populated | t2i_1080p | - |
+| vidu/cn/pricing/viduq2.json | vidu-cn-viduq2-image-t2i-2k | image_result | 0.250000 | CNY | 1 | tier_code | dimension_never_populated | t2i_2k | - |
+| vidu/cn/pricing/viduq2.json | vidu-cn-viduq2-image-t2i-4k | image_result | 0.312500 | CNY | 1 | tier_code | dimension_never_populated | t2i_4k | - |
 | vidu/global/pricing/audio1.0-text2audio.json | vidu-global-audio1-0-text2audio-under-10s | sfx_result | 0.100000 | USD | 1 | tier_code | dimension_never_populated | under_10s | - |
 | vidu/global/pricing/audio1.0-text2audio.json | vidu-global-audio1-0-text2audio-under-5s | sfx_result | 0.050000 | USD | 1 | tier_code | dimension_never_populated | under_5s | - |
 | vidu/global/pricing/audio1.0-timing2audio.json | vidu-global-audio1-0-timing2audio-under-10s | sfx_result | 0.100000 | USD | 1 | tier_code | dimension_never_populated | under_10s | - |

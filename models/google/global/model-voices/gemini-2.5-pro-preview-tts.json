@@ -48,6 +48,138 @@
       "sortOrder": 80,
       "voiceId": "Zephyr",
       "voiceKey": "google/Zephyr"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 90,
+      "voiceId": "Callirrhoe",
+      "voiceKey": "google/Callirrhoe"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 100,
+      "voiceId": "Autonoe",
+      "voiceKey": "google/Autonoe"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 110,
+      "voiceId": "Enceladus",
+      "voiceKey": "google/Enceladus"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 120,
+      "voiceId": "Iapetus",
+      "voiceKey": "google/Iapetus"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 130,
+      "voiceId": "Umbriel",
+      "voiceKey": "google/Umbriel"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 140,
+      "voiceId": "Algieba",
+      "voiceKey": "google/Algieba"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 150,
+      "voiceId": "Despina",
+      "voiceKey": "google/Despina"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 160,
+      "voiceId": "Erinome",
+      "voiceKey": "google/Erinome"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 170,
+      "voiceId": "Algenib",
+      "voiceKey": "google/Algenib"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 180,
+      "voiceId": "Rasalgethi",
+      "voiceKey": "google/Rasalgethi"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 190,
+      "voiceId": "Laomedeia",
+      "voiceKey": "google/Laomedeia"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 200,
+      "voiceId": "Achernar",
+      "voiceKey": "google/Achernar"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 210,
+      "voiceId": "Alnilam",
+      "voiceKey": "google/Alnilam"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 220,
+      "voiceId": "Schedar",
+      "voiceKey": "google/Schedar"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 230,
+      "voiceId": "Gacrux",
+      "voiceKey": "google/Gacrux"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 240,
+      "voiceId": "Pulcherrima",
+      "voiceKey": "google/Pulcherrima"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 250,
+      "voiceId": "Achird",
+      "voiceKey": "google/Achird"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 260,
+      "voiceId": "Zubenelgenubi",
+      "voiceKey": "google/Zubenelgenubi"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 270,
+      "voiceId": "Vindemiatrix",
+      "voiceKey": "google/Vindemiatrix"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 280,
+      "voiceId": "Sadachbia",
+      "voiceKey": "google/Sadachbia"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 290,
+      "voiceId": "Sadaltager",
+      "voiceKey": "google/Sadaltager"
+    },
+    {
+      "compatibility": "full",
+      "sortOrder": 300,
+      "voiceId": "Sulafat",
+      "voiceKey": "google/Sulafat"
     }
   ],
   "catalogKey": "google/gemini-2.5-pro-preview-tts",
@@ -56,7 +188,7 @@
   "schemaVersion": "1.0.0",
   "source": {
     "observedAt": "2026-11-26T00:00:00Z",
-    "sourceUrl": "https://ai.google.dev/gemini-api/docs/speech-generation"
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models"
   },
   "vendorCode": "google"
 }

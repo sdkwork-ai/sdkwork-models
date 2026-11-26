@@ -1,5 +1,9 @@
 {
   "apiFormat": "google_gemini",
+  "capabilities": [
+    "chat",
+    "audio"
+  ],
   "catalogKey": "google/gemini-3.8-live",
   "codingVisible": false,
   "description": "默认 Live API 音频到音频模型，用于低延迟语音智能体，2026-09-15 GA。官方同价组：Gemini 3.8 Live / Gemini 3.8 Live Extended Thinking / Gemini 3.1 Flash Live Preview。",

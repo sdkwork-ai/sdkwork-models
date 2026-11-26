@@ -1,5 +1,8 @@
 {
   "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
   "catalogKey": "stability_ai/sdxl-1-0",
   "codingVisible": false,
   "colorToken": "#0d9488",

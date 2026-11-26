@@ -1,5 +1,8 @@
 {
   "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
   "catalogKey": "elevenlabs/scribe_v2_medical",
   "codingVisible": false,
   "colorToken": "#1d4ed8",

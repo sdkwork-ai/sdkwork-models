@@ -1,5 +1,8 @@
 {
   "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
   "catalogKey": "black_forest_labs/flux-kontext-max",
   "codingVisible": false,
   "colorToken": "#18181b",

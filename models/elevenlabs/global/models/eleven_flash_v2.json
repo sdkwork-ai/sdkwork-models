@@ -1,5 +1,8 @@
 {
   "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
   "catalogKey": "elevenlabs/eleven_flash_v2",
   "codingVisible": false,
   "colorToken": "#7c2d12",

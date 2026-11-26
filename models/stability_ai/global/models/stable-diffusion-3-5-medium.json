@@ -1,5 +1,8 @@
 {
   "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
   "catalogKey": "stability_ai/stable-diffusion-3-5-medium",
   "codingVisible": false,
   "colorToken": "#0d9488",
