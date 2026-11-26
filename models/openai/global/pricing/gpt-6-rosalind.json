@@ -24,7 +24,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "10.000000",
@@ -57,7 +57,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "tierCode": "long_context",
@@ -85,7 +85,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "1.000000",
@@ -118,7 +118,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "tierCode": "long_context",
@@ -146,7 +146,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "12.500000",
@@ -179,7 +179,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "tierCode": "long_context",
@@ -207,7 +207,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "unitPrice": "50.000000",
@@ -240,7 +240,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://developers.openai.com/api/docs/pricing"
       },
       "tierCode": "long_context",

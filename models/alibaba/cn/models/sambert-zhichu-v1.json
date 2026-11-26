@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "alibaba/sambert-zhichu-v1",
+  "codingVisible": false,
+  "colorToken": "#ff6a00",
+  "description": "Sambert neural text-to-speech voice (Chinese) combining SAMBERT and NSFGAN for natural prosody.",
+  "displayName": "Sambert Zhichu v1",
+  "familyCode": "sambert",
+  "inputModalities": [
+    "text"
+  ],
+  "latencyP50Ms": 300,
+  "latencyP95Ms": 900,
+  "lifecycle": "active",
+  "modelId": "sambert-zhichu-v1",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "rankScore": "650.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+  },
+  "strengths": [
+    "Text to speech",
+    "Multilingual",
+    "Voice cloning"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.880000",
+  "usageScopes": [],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.850000"
+}

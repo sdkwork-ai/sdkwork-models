@@ -1,0 +1,40 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video",
+    "audio"
+  ],
+  "catalogKey": "sand_ai/magi-2",
+  "codingVisible": false,
+  "description": "Sand.ai MAGI-2 flagship unified audio-video generation model: 480B total / ~28B active parameters, native up to 30s of 1080p 25fps video with synchronized audio, omni-reference across images, video and audio, precision timeline control and video editing. The native v2 API bills per output second at 1080p.",
+  "displayName": "MAGI-2",
+  "familyCode": "magi-video",
+  "inputModalities": [
+    "text",
+    "image",
+    "video",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "modelId": "magi-2",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://sand.ai/blog/magi-2/"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "sand_ai",
+  "vendorName": "Sand.ai"
+}

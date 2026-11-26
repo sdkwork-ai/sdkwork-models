@@ -1,0 +1,56 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "alibaba/qwen3.8-omni-flash",
+  "codingVisible": true,
+  "colorToken": "#2563eb",
+  "contextTokens": 1000000,
+  "description": "Qwen3.8-Omni-Flash native omni-modal model with 1M context and text, image, audio, and video understanding.",
+  "displayName": "Qwen3.8 Omni Flash",
+  "familyCode": "qwen-omni",
+  "inputModalities": [
+    "text",
+    "image",
+    "audio",
+    "video"
+  ],
+  "latencyP50Ms": 800,
+  "latencyP95Ms": 2600,
+  "lifecycle": "active",
+  "maxInputTokens": 991808,
+  "maxOutputTokens": 131072,
+  "modelId": "qwen3.8-omni-flash",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "rankScore": "1000.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://www.qwencloud.com/models/qwen3.8-omni-flash"
+  },
+  "strengths": [
+    "Native omni-modal",
+    "1M context",
+    "Audio understanding",
+    "Video understanding"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "trendScore": "0.985000",
+  "usageScopes": [
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.940000"
+}

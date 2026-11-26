@@ -1,0 +1,46 @@
+{
+  "catalogKey": "sand_ai/magi-2",
+  "currency": "USD",
+  "modelId": "magi-2",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-25T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "Sand AI Platform 官方 Model & Pricing 页：magi-2 仅 1080p，0.08 USD/s；generateAudio 默认 true，音频不另计费。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.sand_ai.global.official",
+      "priceId": "sand-ai-global-magi-2-second-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.sand_ai.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "71386d0842ceb7ab38132d0f4b0052c920d3b720080525a0fc7c67434e39660b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://platform.sand.ai/docs/model-pricing/"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "0.080000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "sand_ai"
+}

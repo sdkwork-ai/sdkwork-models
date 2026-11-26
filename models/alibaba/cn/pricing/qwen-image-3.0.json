@@ -1,0 +1,80 @@
+{
+  "catalogKey": "alibaba/qwen-image-3.0",
+  "currency": "CNY",
+  "modelId": "qwen-image-3.0",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-17T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-qwen-image-3-0-result-1k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "316cea9074196873cb77f505d7be716239beb705d34adc1f3c39847c30c74b76",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen-image-3-0"
+      },
+      "tierCode": "res_1k",
+      "unitPrice": "0.180000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_2k"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-10-17T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-qwen-image-3-0-result-2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "fbd0fd31b83dd9605380c2284306b9b0ff5998bc28ab49d90514cf602ede5930",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen-image-3-0"
+      },
+      "tierCode": "res_2k",
+      "unitPrice": "0.180000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

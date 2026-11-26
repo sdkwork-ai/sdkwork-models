@@ -1,0 +1,38 @@
+{
+  "catalogKey": "alibaba/qwen-audio-3.0-tts-plus",
+  "currency": "CNY",
+  "modelId": "qwen-audio-3.0-tts-plus",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "operationCode": "speech.synthesize",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-qwen-audio-3-0-tts-plus-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "unitPrice": "0.140000",
+      "unitSize": "1000",
+      "rateHash": "575331b72b27e84f302aef8f5c7fb4e87e65d1f5e352c65202f1552d04358275"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

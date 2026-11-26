@@ -1,0 +1,50 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "alibaba/wan3.0-video",
+  "codingVisible": false,
+  "colorToken": "#ff6a00",
+  "description": "Tongyi Wanxiang 3.0 all-in-one video generation model with omni-modal reference, up to 30-second output, and native audio.",
+  "displayName": "Wan 3.0 Video",
+  "familyCode": "wanx-video",
+  "inputModalities": [
+    "text",
+    "image",
+    "video",
+    "audio"
+  ],
+  "latencyP50Ms": 90000,
+  "latencyP95Ms": 240000,
+  "lifecycle": "active",
+  "modelId": "wan3.0-video",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "830.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/wan3-0-video"
+  },
+  "strengths": [
+    "All-in-one reference",
+    "30-second video",
+    "Native audio"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.950000",
+  "usageScopes": [],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.900000"
+}

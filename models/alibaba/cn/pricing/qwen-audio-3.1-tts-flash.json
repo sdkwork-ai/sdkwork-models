@@ -1,0 +1,66 @@
+{
+  "catalogKey": "alibaba/qwen-audio-3.1-tts-flash",
+  "currency": "CNY",
+  "modelId": "qwen-audio-3.1-tts-flash",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "audio_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-qwen-audio-3-1-tts-flash-audio-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "unitPrice": "1.500000",
+      "unitSize": "1000000",
+      "rateHash": "8071253576620d0757b831e58de143543da5123b8c240e66e30cafb3e458d7c5"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "audio_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-qwen-audio-3-1-tts-flash-audio-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "unitPrice": "12.000000",
+      "unitSize": "1000000",
+      "rateHash": "d9703e9ba1e89d471b99c3bb0c62e4a1cdc3463045881e3bd15432a472b45534"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

@@ -1,0 +1,38 @@
+{
+  "catalogKey": "alibaba/sambert-zhichu-v1",
+  "currency": "CNY",
+  "modelId": "sambert-zhichu-v1",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "operationCode": "speech.synthesize",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-sambert-zhichu-v1-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "unitPrice": "0.100000",
+      "unitSize": "1000",
+      "rateHash": "09eb59a0c0dde67cf9eeb126e8889635941fb3122ba8c61ebd17eebe1ea4748a"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

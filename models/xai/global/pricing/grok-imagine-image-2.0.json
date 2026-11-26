@@ -31,7 +31,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://docs.x.ai/developers/pricing"
       },
       "unitPrice": "0.040000",
@@ -66,12 +66,84 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://docs.x.ai/developers/pricing"
       },
       "unitPrice": "0.060000",
       "unitSize": "1",
       "tierCode": "medium_1k"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "low_1_5k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "notes": "官方 Imagine 定价页列出 1.5K · Low = $0.05/图；官方未标注该档生效日期，effectiveFrom 按首次观测记录。",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-grok-imagine-image-2.0-low-1-5k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "f97216e3ba106d30527fd59f29a2d2673aac672972529d0e19937e6d92bbf54f",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/developers/pricing"
+      },
+      "unitPrice": "0.050000",
+      "unitSize": "1",
+      "tierCode": "low_1_5k"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "medium_1_5k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-11-26T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "notes": "官方 Imagine 定价页列出 1.5K · Medium = $0.07/图；官方未标注该档生效日期，effectiveFrom 按首次观测记录。",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.xai.global.official",
+      "priceId": "xai-grok-imagine-image-2.0-medium-1-5k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.xai.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3be9760a5d84aad1bb1adea43c678913493fefe9052c5a820fb61050d934bb3b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://docs.x.ai/developers/pricing"
+      },
+      "unitPrice": "0.070000",
+      "unitSize": "1",
+      "tierCode": "medium_1_5k"
     },
     {
       "billability": "chargeable",
@@ -101,7 +173,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://docs.x.ai/developers/pricing"
       },
       "unitPrice": "0.060000",
@@ -136,7 +208,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://docs.x.ai/developers/pricing"
       },
       "unitPrice": "0.080000",

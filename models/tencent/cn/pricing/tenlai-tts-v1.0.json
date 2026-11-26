@@ -1,0 +1,38 @@
+{
+  "catalogKey": "tencent/tenlai-tts-v1.0",
+  "currency": "CNY",
+  "modelId": "tenlai-tts-v1.0",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "operationCode": "speech.synthesize",
+      "priceBookCode": "models.tencent.cn.official",
+      "priceId": "tencent-cn-tenlai-tts-v1-0-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.tencent.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://cloud.tencent.com/document/product/1823/130055"
+      },
+      "unitPrice": "0.250000",
+      "unitSize": "1000",
+      "rateHash": "b5c7073d4d9607350e5eee5265299c438e9f99140c9274389d34b390d1556e27"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "tencent"
+}

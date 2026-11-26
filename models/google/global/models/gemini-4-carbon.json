@@ -1,0 +1,51 @@
+{
+  "apiFormat": "google_gemini",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "google/gemini-4-carbon",
+  "codingVisible": true,
+  "contextTokens": 1048576,
+  "description": "Gemini 4 Carbon most capable Gemini 4 reasoning model, GA 2026-11-10; unified 1M context window with long decode up to 1M tokens, built for sustained agentic coding, multimodal knowledge work, scientific reasoning, and cybersecurity defense. Introductory pricing through 2026-11-30; implicit caching only, explicit caching not supported.",
+  "displayName": "Gemini 4 Carbon",
+  "familyCode": "gemini",
+  "inputModalities": [
+    "text",
+    "image",
+    "audio",
+    "video"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 1048576,
+  "maxOutputTokens": 65536,
+  "modelId": "gemini-4-carbon",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-4-carbon"
+  },
+  "strengths": [
+    "Reasoning",
+    "Coding",
+    "Agents",
+    "Long context"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "google",
+  "vendorName": "Google"
+}

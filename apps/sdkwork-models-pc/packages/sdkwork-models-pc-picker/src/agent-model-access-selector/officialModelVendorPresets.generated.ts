@@ -158,6 +158,24 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "model": "gemini-4-argon",
         "displayName": "Gemini 4 Argon",
         "sortOrder": 26
+      },
+      {
+        "catalogKey": "google/gemini-4-carbon",
+        "model": "gemini-4-carbon",
+        "displayName": "Gemini 4 Carbon",
+        "sortOrder": 27
+      },
+      {
+        "catalogKey": "google/gemini-4-hydrogen",
+        "model": "gemini-4-hydrogen",
+        "displayName": "Gemini 4 Hydrogen",
+        "sortOrder": 28
+      },
+      {
+        "catalogKey": "google/gemini-4-neon",
+        "model": "gemini-4-neon",
+        "displayName": "Gemini 4 Neon",
+        "sortOrder": 29
       }
     ],
     "sortOrder": 2,
@@ -175,25 +193,37 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "catalogKey": "alibaba/qwen3.7-plus",
         "model": "qwen3.7-plus",
         "displayName": "Qwen3.7 Plus",
-        "sortOrder": 2
+        "sortOrder": 6
+      },
+      {
+        "catalogKey": "alibaba/qwen3.8-2.4t-a95b",
+        "model": "qwen3.8-2.4t-a95b",
+        "displayName": "Qwen3.8 2.4T A95B",
+        "sortOrder": 7
       },
       {
         "catalogKey": "alibaba/qwen3.8-flash",
         "model": "qwen3.8-flash",
         "displayName": "Qwen3.8 Flash",
-        "sortOrder": 3
+        "sortOrder": 8
       },
       {
         "catalogKey": "alibaba/qwen3.8-max",
         "model": "qwen3.8-max",
         "displayName": "Qwen3.8 Max",
-        "sortOrder": 4
+        "sortOrder": 9
+      },
+      {
+        "catalogKey": "alibaba/qwen3.8-omni-flash",
+        "model": "qwen3.8-omni-flash",
+        "displayName": "Qwen3.8 Omni Flash",
+        "sortOrder": 10
       },
       {
         "catalogKey": "alibaba/qwen4-max",
         "model": "qwen4-max",
         "displayName": "Qwen4 Max",
-        "sortOrder": 5
+        "sortOrder": 11
       }
     ],
     "sortOrder": 3,
@@ -313,13 +343,13 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "catalogKey": "stepfun/step-3.7-flash",
         "model": "step-3.7-flash",
         "displayName": "Step 3.7 Flash",
-        "sortOrder": 3
+        "sortOrder": 4
       },
       {
         "catalogKey": "stepfun/step-5-preview",
         "model": "step-5-preview",
         "displayName": "Step 5 Preview",
-        "sortOrder": 4
+        "sortOrder": 5
       }
     ],
     "sortOrder": 12,
@@ -433,7 +463,7 @@ export const SDKWORK_OFFICIAL_MODEL_VENDOR_PRESETS = [
         "catalogKey": "zhipu/glm-5v-turbo",
         "model": "glm-5v-turbo",
         "displayName": "GLM-5V-Turbo",
-        "sortOrder": 13
+        "sortOrder": 14
       }
     ],
     "sortOrder": 16,

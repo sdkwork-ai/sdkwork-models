@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "alibaba/qwen-audio-3.1-asr-flash-streaming",
+  "codingVisible": false,
+  "colorToken": "#ff6a00",
+  "description": "Qwen-Audio 3.1 ASR Flash Streaming end-to-end real-time speech recognition for meetings and live captions.",
+  "displayName": "Qwen-Audio 3.1 ASR Flash Streaming",
+  "familyCode": "qwen-asr",
+  "inputModalities": [
+    "audio"
+  ],
+  "latencyP50Ms": 300,
+  "latencyP95Ms": 900,
+  "lifecycle": "active",
+  "modelId": "qwen-audio-3.1-asr-flash-streaming",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "rankScore": "810.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-recognition/"
+  },
+  "strengths": [
+    "Speech recognition",
+    "Multilingual",
+    "Low latency"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "trendScore": "0.880000",
+  "usageScopes": [],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.850000"
+}

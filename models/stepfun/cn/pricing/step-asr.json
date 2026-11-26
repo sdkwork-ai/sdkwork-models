@@ -15,7 +15,7 @@
       "priority": 100,
       "quantityStep": "1",
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
       },
       "unitPrice": "0.900000",

@@ -1,0 +1,38 @@
+{
+  "catalogKey": "bytedance/seed-asr-2.0",
+  "currency": "CNY",
+  "modelId": "seed-asr-2.0",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "stt_audio_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.transcribe",
+      "priceBookCode": "models.bytedance.cn.official",
+      "priceId": "bytedance-cn-seed-asr-2-0-stt-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://docs.volcengine.com/docs/82379/1544106"
+      },
+      "unitPrice": "0.016667",
+      "unitSize": "1",
+      "rateHash": "dbc8ab1ffed014aa6ce4f5604a0919ef965e4fe55821cf3ec8526b9ba532261b"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "bytedance"
+}

@@ -31,7 +31,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
       },
       "tierCode": "single_image_le_2_61mp",
@@ -66,7 +66,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
       },
       "tierCode": "single_image_2_61_4_63mp",

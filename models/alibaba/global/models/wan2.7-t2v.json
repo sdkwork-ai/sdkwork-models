@@ -1,0 +1,48 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "alibaba/wan2.7-t2v",
+  "codingVisible": false,
+  "colorToken": "#ff6a00",
+  "description": "Tongyi Wanxiang 2.7 text-to-video model with cinematic multi-shot storytelling, expressive acting, and native audio generation.",
+  "displayName": "Wan 2.7 Text to Video",
+  "familyCode": "wanx-video",
+  "inputModalities": [
+    "text",
+    "audio"
+  ],
+  "latencyP50Ms": 90000,
+  "latencyP95Ms": 240000,
+  "lifecycle": "active",
+  "modelId": "wan2.7-t2v",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "rankScore": "810.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://www.qwencloud.com/models/wan2.7-t2v"
+  },
+  "strengths": [
+    "Text to video",
+    "Multi-shot narrative",
+    "Native audio"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.930000",
+  "usageScopes": [],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.880000"
+}

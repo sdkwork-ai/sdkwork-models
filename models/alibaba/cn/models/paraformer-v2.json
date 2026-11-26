@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "alibaba/paraformer-v2",
+  "codingVisible": false,
+  "colorToken": "#ff6a00",
+  "description": "Paraformer v2 multilingual offline speech recognition with hotword and sample-rate support.",
+  "displayName": "Paraformer v2",
+  "familyCode": "paraformer",
+  "inputModalities": [
+    "audio"
+  ],
+  "latencyP50Ms": 300,
+  "latencyP95Ms": 900,
+  "lifecycle": "active",
+  "modelId": "paraformer-v2",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "rankScore": "700.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-recognition/"
+  },
+  "strengths": [
+    "Speech recognition",
+    "Multilingual",
+    "Low latency"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.880000",
+  "usageScopes": [],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.850000"
+}

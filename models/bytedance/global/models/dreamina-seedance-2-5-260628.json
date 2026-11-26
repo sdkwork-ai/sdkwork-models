@@ -6,7 +6,7 @@
   "catalogKey": "bytedance/dreamina-seedance-2-5-260628",
   "codingVisible": false,
   "colorToken": "#dc2626",
-  "description": "BytePlus ModelArk mainline video generation model. 480p/720p 8-bit and 1080p 10-bit, 24 fps, 4-30s, .mp4/.mov output.",
+  "description": "BytePlus ModelArk mainline video generation model. 480p/720p 8-bit and 1080p/4K 10-bit, 24 fps, 4-30s, .mp4/.mov output.",
   "displayName": "Dreamina Seedance 2.5",
   "familyCode": "dreamina-seedance",
   "inputModalities": [
@@ -29,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-11-23T00:00:00Z",
+    "observedAt": "2026-11-26T00:00:00Z",
     "sourceUrl": "https://www.byteplus.com/en/product/modelark"
   },
   "strengths": [

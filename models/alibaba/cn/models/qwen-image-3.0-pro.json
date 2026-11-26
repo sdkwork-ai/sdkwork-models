@@ -1,0 +1,47 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "alibaba/qwen-image-3.0-pro",
+  "codingVisible": false,
+  "colorToken": "#2563eb",
+  "description": "Qwen-Image 3.0 Pro text-to-image and image-editing model with dense layout generation, 10px text rendering, and photoreal detail.",
+  "displayName": "Qwen-Image 3.0 Pro",
+  "familyCode": "qwen-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 6000,
+  "latencyP95Ms": 22000,
+  "lifecycle": "active",
+  "modelId": "qwen-image-3.0-pro",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "800.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen-image-3-0-pro"
+  },
+  "strengths": [
+    "Dense layout",
+    "Text rendering",
+    "Photoreal detail"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.940000",
+  "usageScopes": [],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.900000"
+}

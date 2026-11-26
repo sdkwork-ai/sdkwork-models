@@ -1,0 +1,171 @@
+{
+  "catalogKey": "alibaba/qwen3.8-2.4t-a95b",
+  "currency": "CNY",
+  "modelId": "qwen3.8-2.4t-a95b",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-08-17T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-qwen3.8-2.4t-a95b-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "03f55b25fc85988e58d76875775f1b14a592004f14d7747d14898b0ef3687b65",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-2-4t-a95b"
+      },
+      "unitPrice": "12.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-08-17T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-qwen3.8-2.4t-a95b-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "636dffa838b510e6d476aa1ab615a97c4eb50d3ba9bd353c0d38ca6f2a2e28d5",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-2-4t-a95b"
+      },
+      "unitPrice": "36.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "implicit_cache"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-08-17T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-qwen3.8-2.4t-a95b-cache-read-implicit",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a666eb810c734ce0fab2d6babc5fbaa0b1d4231928f6b34aaebf429ff02a2606",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-2-4t-a95b"
+      },
+      "tierCode": "implicit_cache",
+      "unitPrice": "1.500000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "explicit_cache_write"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-08-17T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-qwen3.8-2.4t-a95b-cache-write",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "86e21aedcd400f9d08c8bfbbd1bdcd894cbec5ff7d82f3b4d0562f2b498139a2",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-2-4t-a95b"
+      },
+      "tierCode": "explicit_cache_write",
+      "unitPrice": "15.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "explicit_cache_read"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-08-17T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-qwen3.8-2.4t-a95b-cache-read-explicit",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "45bcd834fe377a89287b27f0c7f19aaa4f5017950d1924f94022c61490ea7c72",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-2-4t-a95b"
+      },
+      "tierCode": "explicit_cache_read",
+      "unitPrice": "1.000000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

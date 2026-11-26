@@ -1,0 +1,38 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video",
+    "audio"
+  ],
+  "catalogKey": "black_forest_labs/flux-3-max",
+  "codingVisible": false,
+  "description": "FLUX 3 Max: FLUX 3 post-trained by fal Research with Black Forest Labs, generating 5–20 second video from text, images, or keyframes with synchronized audio at up to 4K. Official docs route requests and billing through fal, so the catalog records it as catalog-only with no BFL price row.",
+  "displayName": "FLUX 3 Max",
+  "familyCode": "flux",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "catalog_only",
+  "modelId": "flux-3-max",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://docs.bfl.ai/quick_start/pricing"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "black_forest_labs",
+  "vendorName": "Black Forest Labs"
+}

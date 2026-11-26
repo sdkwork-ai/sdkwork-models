@@ -1,0 +1,36 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "runway/gpt_image_2_6_sunburst",
+  "codingVisible": false,
+  "description": "OpenAI GPT Image 2.6 Sunburst model resold through the Runway Dev API, supporting PNG, JPEG and WebP generation and reference-guided editing up to 4K, with reasoning effort controls and transparent backgrounds. Billed per image by quality and resolution; the 1:1 square rates are modeled here and wider or taller ratios bill lower, down to 2 credits, plus 1 credit per reference image.",
+  "displayName": "GPT Image 2.6 Sunburst",
+  "familyCode": "runway-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "active",
+  "modelId": "gpt_image_2_6_sunburst",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://docs.dev.runwayml.com/guides/pricing/"
+  },
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "runway",
+  "vendorName": "Runway"
+}

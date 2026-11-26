@@ -1,0 +1,80 @@
+{
+  "catalogKey": "alibaba/wan2.7-t2v",
+  "currency": "USD",
+  "modelId": "wan2.7-t2v",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-04-03T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-wan2.7-t2v-second-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "2fb5f83c663ebe3723562f42f23983c7c8a7ef0d589ff2c2a4a329d349627a26",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/wan2.7-t2v"
+      },
+      "tierCode": "res_720p",
+      "unitPrice": "0.100000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-04-03T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-wan2.7-t2v-second-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d9d68075829682d4183534f347802647eeb63a04983199fb9e7943ee0cd4e333",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/wan2.7-t2v"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "0.150000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

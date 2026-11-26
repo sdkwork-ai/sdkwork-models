@@ -25,7 +25,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-max"
       },
       "unitPrice": "8.000000",
@@ -59,7 +59,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-max"
       },
       "thresholdTokens": 128000,
@@ -88,7 +88,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-max"
       },
       "unitPrice": "32.000000",
@@ -122,7 +122,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-max"
       },
       "thresholdTokens": 128000,
@@ -151,7 +151,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-max"
       },
       "unitPrice": "0.800000",

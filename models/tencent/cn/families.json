@@ -7,6 +7,22 @@
       "familyType": "llm",
       "primaryModality": "text",
       "sortOrder": 10
+    },
+    {
+      "defaultModel": "tenlai-tts-v1.0",
+      "displayName": "Tenlai TTS",
+      "familyCode": "tenlai-tts",
+      "familyType": "audio",
+      "primaryModality": "audio",
+      "sortOrder": 20
+    },
+    {
+      "defaultModel": "tenlai-asr-v1.0",
+      "displayName": "Tenlai ASR",
+      "familyCode": "tenlai-asr",
+      "familyType": "audio",
+      "primaryModality": "audio",
+      "sortOrder": 30
     }
   ],
   "regionCode": "cn",

@@ -1,0 +1,42 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "pixverse/pixverse-v6-max-t2v",
+  "codingVisible": false,
+  "colorToken": "#f59e0b",
+  "description": "PixVerse V6 Max text-to-video on Alibaba DashScope (official model id pixverse/pixverse-v6-max-t2v); 360p–1080p, optional native audio, billed per generated second.",
+  "displayName": "PixVerse V6 Max Text to Video",
+  "familyCode": "pixverse-video",
+  "inputModalities": [
+    "text"
+  ],
+  "lifecycle": "active",
+  "modelId": "pixverse-v6-max-t2v",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/pixverse-text-to-video-api-reference"
+  },
+  "strengths": [
+    "Text to video",
+    "Native audio",
+    "360p–1080p"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "pixverse",
+  "vendorName": "PixVerse"
+}

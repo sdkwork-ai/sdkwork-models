@@ -1,0 +1,298 @@
+{
+  "catalogKey": "pixverse/pixverse-v6-max-t2v",
+  "currency": "CNY",
+  "modelId": "pixverse-v6-max-t2v",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_360p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼 pixverse/pixverse-v6-max-t2v，360P 无声（audio=false），0.180000 元/秒；官方页面更新时间 2026-11-19，生效日期按首次观测记录。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-v6-max-t2v-second-silent--360p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "29e248f6b7434f74476257b18d747215702e399c5eef551073fed741100d37f3",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "res_360p",
+      "unitPrice": "0.180000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_540p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼 pixverse/pixverse-v6-max-t2v，540P 无声（audio=false），0.270000 元/秒；官方页面更新时间 2026-11-19，生效日期按首次观测记录。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-v6-max-t2v-second-silent--540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "8b2e5fdf65cc3de31d88dba7bec074f825da3217a7340d95758d32ff4df457f2",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "res_540p",
+      "unitPrice": "0.270000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼 pixverse/pixverse-v6-max-t2v，720P 无声（audio=false），0.330000 元/秒；官方页面更新时间 2026-11-19，生效日期按首次观测记录。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-v6-max-t2v-second-silent--720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "87e2cf605f3fbccc693fbd1333a57c9c4c67f2d9eda0cb4fe1b8a84574ce9e3d",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "res_720p",
+      "unitPrice": "0.330000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼 pixverse/pixverse-v6-max-t2v，1080P 无声（audio=false），0.650000 元/秒；官方页面更新时间 2026-11-19，生效日期按首次观测记录。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-v6-max-t2v-second-silent--1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a4d6cf0241db029fc45651729f209afd37f2b417685633c4c68e96ec901b43cd",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "0.650000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "audio_res_360p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼 pixverse/pixverse-v6-max-t2v，360P 有声（audio=true），0.270000 元/秒；官方页面更新时间 2026-11-19，生效日期按首次观测记录。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-v6-max-t2v-second-audio--360p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "f4990c060296abb7675a464823f6b069ff6f17efa328135e4b4800bcc3ba419c",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "audio_res_360p",
+      "unitPrice": "0.270000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "audio_res_540p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼 pixverse/pixverse-v6-max-t2v，540P 有声（audio=true），0.330000 元/秒；官方页面更新时间 2026-11-19，生效日期按首次观测记录。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-v6-max-t2v-second-audio--540p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "1bece9a461d4558210206e31f83b96e1ac1ed3e6f1281bbf13668f8e075e63a5",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "audio_res_540p",
+      "unitPrice": "0.330000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "audio_res_720p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼 pixverse/pixverse-v6-max-t2v，720P 有声（audio=true），0.440000 元/秒；官方页面更新时间 2026-11-19，生效日期按首次观测记录。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-v6-max-t2v-second-audio--720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "887d730a52b2fe639d0185b58f5e6bf47d125a1b8b7b6cec3446d99b9298edc1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "audio_res_720p",
+      "unitPrice": "0.440000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "audio_res_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-26T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "百炼 pixverse/pixverse-v6-max-t2v，1080P 有声（audio=true），0.830000 元/秒；官方页面更新时间 2026-11-19，生效日期按首次观测记录。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.pixverse.cn.official",
+      "priceId": "pixverse-cn-pixverse-v6-max-t2v-second-audio--1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.pixverse.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "5ad324ca56d1339253efa38d423937c7683652710f5b6a1c5f9b3a1ac43281f2",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-pricing#pxt002a0h3001"
+      },
+      "tierCode": "audio_res_1080p",
+      "unitPrice": "0.830000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "pixverse"
+}

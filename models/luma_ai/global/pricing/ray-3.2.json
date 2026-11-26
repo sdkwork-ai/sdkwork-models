@@ -32,7 +32,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_540p_dur_5s",
@@ -68,7 +68,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_720p_dur_5s",
@@ -104,7 +104,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_1080p_dur_5s",
@@ -140,7 +140,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_540p_dur_10s",
@@ -176,7 +176,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_720p_dur_10s",
@@ -212,7 +212,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_1080p_dur_10s",
@@ -248,7 +248,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_360p_dur_5s",
@@ -284,7 +284,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "res_360p_dur_10s",
@@ -320,7 +320,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_360p_dur_5s",
@@ -356,7 +356,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_360p_dur_10s",
@@ -392,7 +392,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_540p_dur_5s",
@@ -428,7 +428,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_540p_dur_10s",
@@ -464,7 +464,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_720p_dur_5s",
@@ -500,7 +500,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_720p_dur_10s",
@@ -536,7 +536,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_1080p_dur_5s",
@@ -572,7 +572,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "v2v_res_1080p_dur_10s",
@@ -608,7 +608,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "reframe_res_360p",
@@ -644,7 +644,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "reframe_res_540p",
@@ -680,7 +680,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "reframe_res_720p",
@@ -716,7 +716,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://lumalabs.ai/api/pricing"
       },
       "tierCode": "reframe_res_1080p",

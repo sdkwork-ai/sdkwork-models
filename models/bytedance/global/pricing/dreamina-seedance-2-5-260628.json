@@ -31,7 +31,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://www.byteplus.com/en/product/modelark"
       },
       "tierCode": "res_480p",
@@ -66,7 +66,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://www.byteplus.com/en/product/modelark"
       },
       "tierCode": "res_720p",
@@ -101,11 +101,46 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://www.byteplus.com/en/product/modelark"
       },
       "tierCode": "res_1080p",
       "unitPrice": "0.569000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_4k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-17T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.bytedance.global.official",
+      "priceId": "bytedance-global-dreamina-seedance-2-5-260628-second-4k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.bytedance.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ab99b883cfc80721e605134a28b049a204c295f59e708ba2cc84cef0eb10757f",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.byteplus.com/en/product/modelark"
+      },
+      "tierCode": "res_4k",
+      "unitPrice": "0.914000",
       "unitSize": "1"
     }
   ],

@@ -1,0 +1,66 @@
+{
+  "catalogKey": "alibaba/qwen-audio-3.1-asr-flash-filetrans",
+  "currency": "USD",
+  "modelId": "qwen-audio-3.1-asr-flash-filetrans",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-10T00:00:00Z",
+      "meterCode": "audio_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen-audio-3.1-asr-flash-filetrans-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "9512c6dd131d439dab4adecfeba2a32641d9abf09d799d206815dfcabe099846",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen-audio-3.1-asr-flash-filetrans"
+      },
+      "unitPrice": "0.150000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-10T00:00:00Z",
+      "meterCode": "audio_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen-audio-3.1-asr-flash-filetrans-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "1ff56942166ebfa2d50c13d81d44958e17ef4d5a61e6452ba5fcab975113a31b",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen-audio-3.1-asr-flash-filetrans"
+      },
+      "unitPrice": "0.470000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

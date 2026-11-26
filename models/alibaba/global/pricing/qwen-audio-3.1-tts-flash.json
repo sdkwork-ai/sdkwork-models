@@ -1,0 +1,66 @@
+{
+  "catalogKey": "alibaba/qwen-audio-3.1-tts-flash",
+  "currency": "USD",
+  "modelId": "qwen-audio-3.1-tts-flash",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "audio_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen-audio-3.1-tts-flash-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "79134d23cf09cc5fa1a75975666bea77d1a0b7223667b1c88558cbf705ebff72",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen-audio-3.1-tts-flash"
+      },
+      "unitPrice": "0.230000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-09-18T00:00:00Z",
+      "meterCode": "audio_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen-audio-3.1-tts-flash-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d813af2c3285f79cc838ba4ccf2ff3ba77d78c04dfbb9738f7e626060ae83f50",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen-audio-3.1-tts-flash"
+      },
+      "unitPrice": "1.870000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

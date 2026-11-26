@@ -1,0 +1,66 @@
+{
+  "catalogKey": "alibaba/qwen-audio-3.1-asr-flash",
+  "currency": "CNY",
+  "modelId": "qwen-audio-3.1-asr-flash",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "audio_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-qwen-audio-3-1-asr-flash-audio-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-recognition/"
+      },
+      "unitPrice": "0.800000",
+      "unitSize": "1000000",
+      "rateHash": "8a28c7bb1f734797dd5370aa2168cae10181c5c2249208483af81247c8c14551"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "audio_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "audio.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-qwen-audio-3-1-asr-flash-audio-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-recognition/"
+      },
+      "unitPrice": "2.700000",
+      "unitSize": "1000000",
+      "rateHash": "537f0138dfcb2adc7f41183f65e8520381f10435000d3b4072f68ae9dee176dc"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

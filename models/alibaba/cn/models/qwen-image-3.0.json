@@ -1,0 +1,47 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "image"
+  ],
+  "catalogKey": "alibaba/qwen-image-3.0",
+  "codingVisible": false,
+  "colorToken": "#2563eb",
+  "description": "Qwen-Image 3.0 text-to-image and image-editing model with 4.5K token instructions, multilingual text rendering, and batch production.",
+  "displayName": "Qwen-Image 3.0",
+  "familyCode": "qwen-image",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "latencyP50Ms": 4500,
+  "latencyP95Ms": 16000,
+  "lifecycle": "active",
+  "modelId": "qwen-image-3.0",
+  "outputModalities": [
+    "image"
+  ],
+  "primaryCapability": "image",
+  "rankScore": "790.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen-image-3-0"
+  },
+  "strengths": [
+    "Text rendering",
+    "Image editing",
+    "Batch production"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.930000",
+  "usageScopes": [],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.890000"
+}

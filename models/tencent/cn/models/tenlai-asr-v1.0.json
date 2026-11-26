@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "tencent/tenlai-asr-v1.0",
+  "codingVisible": false,
+  "colorToken": "#0052d9",
+  "description": "Tenlai speech recognition for multi-speaker audio, supporting Mandarin, English and 31 dialects, billed per audio second.",
+  "displayName": "Tenlai ASR v1",
+  "familyCode": "tenlai-asr",
+  "inputModalities": [
+    "audio"
+  ],
+  "latencyP50Ms": 300,
+  "latencyP95Ms": 900,
+  "lifecycle": "active",
+  "modelId": "tenlai-asr-v1.0",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "rankScore": "735.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://cloud.tencent.com/document/product/1823/130051"
+  },
+  "strengths": [
+    "Speech recognition",
+    "Multilingual",
+    "Low latency"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.880000",
+  "usageScopes": [],
+  "vendorCode": "tencent",
+  "vendorName": "Tencent Cloud",
+  "winRate": "0.850000"
+}

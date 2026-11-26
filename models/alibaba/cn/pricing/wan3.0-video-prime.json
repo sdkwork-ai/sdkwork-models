@@ -1,0 +1,115 @@
+{
+  "catalogKey": "alibaba/wan3.0-video-prime",
+  "currency": "CNY",
+  "modelId": "wan3.0-video-prime",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_480p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-20T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-wan3-0-video-prime-second-480p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "a40bc6a043a1c79a3a85e89e01f5c6c3fd9d07fe8f6d3c95452503e4b77da812",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/wan3-0-video-prime"
+      },
+      "tierCode": "res_480p",
+      "unitPrice": "0.450000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-20T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-wan3-0-video-prime-second-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "719149d46feea693e385b9eb8430e79b35414609034f6353b9bd3898406ef888",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/wan3-0-video-prime"
+      },
+      "tierCode": "res_720p",
+      "unitPrice": "0.900000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-20T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-wan3-0-video-prime-second-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "73b090c4ce1e0a6601ec919c5147bcbfe64666979d672dcaed7362e11a682f2e",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/wan3-0-video-prime"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "1.800000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

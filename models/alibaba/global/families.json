@@ -7,6 +7,46 @@
       "familyType": "llm",
       "primaryModality": "text",
       "sortOrder": 10
+    },
+    {
+      "defaultModel": "qwen3.8-omni-flash",
+      "displayName": "Qwen Omni",
+      "familyCode": "qwen-omni",
+      "familyType": "multimodal",
+      "primaryModality": "text",
+      "sortOrder": 20
+    },
+    {
+      "defaultModel": "qwen-image-3.0",
+      "displayName": "Qwen Image",
+      "familyCode": "qwen-image",
+      "familyType": "image",
+      "primaryModality": "image",
+      "sortOrder": 30
+    },
+    {
+      "defaultModel": "wan3.0-video",
+      "displayName": "Wanxiang Video",
+      "familyCode": "wanx-video",
+      "familyType": "video",
+      "primaryModality": "video",
+      "sortOrder": 40
+    },
+    {
+      "defaultModel": "qwen-audio-3.1-tts-flash",
+      "displayName": "Qwen TTS",
+      "familyCode": "qwen-tts",
+      "familyType": "audio",
+      "primaryModality": "audio",
+      "sortOrder": 50
+    },
+    {
+      "defaultModel": "qwen-audio-3.1-asr-flash-filetrans",
+      "displayName": "Qwen ASR",
+      "familyCode": "qwen-asr",
+      "familyType": "audio",
+      "primaryModality": "audio",
+      "sortOrder": 60
     }
   ],
   "regionCode": "global",

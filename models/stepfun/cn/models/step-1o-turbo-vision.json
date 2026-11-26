@@ -1,0 +1,48 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "stepfun/step-1o-turbo-vision",
+  "codingVisible": false,
+  "colorToken": "#0369a1",
+  "contextTokens": 32768,
+  "description": "StepFun Step-1o Turbo Vision model with image and video understanding and text-only output, 32K context.",
+  "displayName": "Step-1o Turbo Vision",
+  "familyCode": "step-vision",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 32768,
+  "modelId": "step-1o-turbo-vision",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+  },
+  "strengths": [
+    "Multimodal",
+    "Image understanding",
+    "Video understanding",
+    "Fast output"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "usageScopes": [
+    "chat"
+  ],
+  "vendorCode": "stepfun",
+  "vendorName": "StepFun"
+}

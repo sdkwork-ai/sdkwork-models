@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "alibaba/cosyvoice-v3-flash",
+  "codingVisible": false,
+  "colorToken": "#ff6a00",
+  "description": "CosyVoice v3 Flash high-performance synthesis and cloning with broader minor-language support.",
+  "displayName": "CosyVoice v3 Flash",
+  "familyCode": "cosyvoice",
+  "inputModalities": [
+    "text"
+  ],
+  "latencyP50Ms": 300,
+  "latencyP95Ms": 900,
+  "lifecycle": "active",
+  "modelId": "cosyvoice-v3-flash",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "rankScore": "760.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+  },
+  "strengths": [
+    "Text to speech",
+    "Multilingual",
+    "Voice cloning"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "trendScore": "0.880000",
+  "usageScopes": [],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.850000"
+}

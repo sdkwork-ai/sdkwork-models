@@ -1,0 +1,15 @@
+{
+  "families": [
+    {
+      "defaultModel": "magi-2",
+      "displayName": "MAGI",
+      "familyCode": "magi-video",
+      "familyType": "video",
+      "primaryModality": "video",
+      "sortOrder": 10
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "1.0.0",
+  "vendorCode": "sand_ai"
+}

@@ -1,0 +1,48 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "bytedance/dreamina-seedance-2-5-flash-261115",
+  "codingVisible": false,
+  "colorToken": "#dc2626",
+  "description": "BytePlus ModelArk Seedance 2.5 Flash 261115: 480p/720p output only, 24 fps, up to 30s, up to 10 reference images, 5 reference videos and 5 reference audios per request. Roughly double the generation speed of Dreamina Seedance 2.5 at about 34% lower cost.",
+  "displayName": "Dreamina Seedance 2.5 Flash (261115)",
+  "familyCode": "dreamina-seedance",
+  "inputModalities": [
+    "text",
+    "image",
+    "video",
+    "audio"
+  ],
+  "lifecycle": "active",
+  "maxOutputSeconds": 30,
+  "modelId": "dreamina-seedance-2-5-flash-261115",
+  "outputModalities": [
+    "video",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://www.byteplus.com/en/product/modelark"
+  },
+  "strengths": [
+    "Multimodal reference-to-video",
+    "Video editing",
+    "Video extension",
+    "First/last frame to video",
+    "Text to video"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance"
+}

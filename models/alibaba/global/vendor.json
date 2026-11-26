@@ -12,8 +12,11 @@
   "billingCurrency": "USD",
   "billingJurisdiction": "GLOBAL",
   "capabilities": [
+    "audio",
     "chat",
-    "tool"
+    "image",
+    "tool",
+    "video"
   ],
   "clientApiCompatibility": {
     "claude_code": {
@@ -61,7 +64,7 @@
         "api.anthropic.claude_code"
       ],
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-max"
       },
       "supportStatus": "partial"
@@ -105,7 +108,7 @@
       "protocolCodes": [],
       "resourceCodes": [],
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
       },
       "supportStatus": "convert"
@@ -149,7 +152,7 @@
       "protocolCodes": [],
       "resourceCodes": [],
       "source": {
-        "observedAt": "2026-11-14T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://sdkwork.cloud/standards/sdkwork-models/client-api-compatibility"
       },
       "supportStatus": "convert"
@@ -162,7 +165,12 @@
   "legalName": "Alibaba Cloud",
   "marketScope": "international",
   "modelFamilies": [
-    "qwen"
+    "qwen",
+    "qwen-omni",
+    "qwen-image",
+    "wanx-video",
+    "qwen-tts",
+    "qwen-asr"
   ],
   "openSource": false,
   "operatingRegions": [
@@ -186,13 +194,14 @@
   "schemaVersion": "1.0.0",
   "sortOrder": 51,
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
+    "observedAt": "2026-11-26T00:00:00Z",
     "sourceUrl": "https://www.qwencloud.com/models/qwen3.7-max"
   },
   "supportedProtocols": [
     "anthropic_messages",
     "openai_compatible",
-    "openai_responses"
+    "openai_responses",
+    "vendor_native"
   ],
   "vendorCode": "alibaba",
   "vendorType": "commercial",

@@ -364,7 +364,7 @@
   "regionCode": "global",
   "schemaVersion": "1.0.0",
   "source": {
-    "observedAt": "2026-11-23T00:00:00Z",
+    "observedAt": "2026-11-26T00:00:00Z",
     "sourceUrl": "https://klingai.com/document-api/pricing/base/video"
   },
   "vendorCode": "kuaishou"

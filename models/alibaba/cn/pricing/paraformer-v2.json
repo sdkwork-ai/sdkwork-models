@@ -1,0 +1,38 @@
+{
+  "catalogKey": "alibaba/paraformer-v2",
+  "currency": "CNY",
+  "modelId": "paraformer-v2",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "stt_audio_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.transcribe",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-paraformer-v2-stt-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-recognition/"
+      },
+      "unitPrice": "0.004800",
+      "unitSize": "1",
+      "rateHash": "01f7cdb9867ad47eaa0276ac8511dda1c92a28b77977a1c1793c604f30a63cb6"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

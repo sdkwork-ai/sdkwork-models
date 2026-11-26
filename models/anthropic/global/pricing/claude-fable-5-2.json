@@ -25,7 +25,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/models/fable-5-2/overview"
       },
       "unitPrice": "8.000000",
@@ -53,7 +53,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/models/fable-5-2/overview"
       },
       "unitPrice": "40.000000",
@@ -87,7 +87,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/models/fable-5-2/overview"
       },
       "unitPrice": "10.000000",
@@ -122,7 +122,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/models/fable-5-2/overview"
       },
       "unitPrice": "16.000000",
@@ -151,7 +151,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/models/fable-5-2/overview"
       },
       "unitPrice": "0.200000",
@@ -179,7 +179,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/models/fable-5-2/overview"
       },
       "unitPrice": "10.000000",
@@ -213,7 +213,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/models/fable-5-2/overview"
       },
       "unitPrice": "4.000000",
@@ -248,7 +248,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://platform.claude.com/docs/en/models/fable-5-2/overview"
       },
       "unitPrice": "20.000000",

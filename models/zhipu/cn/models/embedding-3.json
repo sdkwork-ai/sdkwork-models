@@ -6,6 +6,7 @@
   "catalogKey": "zhipu/embedding-3",
   "codingVisible": false,
   "colorToken": "#64748b",
+  "contextTokens": 8192,
   "description": "Zhipu Embedding-3 text vectorization model with configurable dimensions for retrieval and semantic search.",
   "displayName": "Embedding 3",
   "familyCode": "zhipu-embedding",
@@ -15,6 +16,7 @@
   "latencyP50Ms": 200,
   "latencyP95Ms": 700,
   "lifecycle": "active",
+  "maxInputTokens": 8192,
   "modelId": "embedding-3",
   "outputModalities": [
     "embedding"
@@ -27,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-11-23T00:00:00Z",
+    "observedAt": "2026-11-26T00:00:00Z",
     "sourceUrl": "https://docs.bigmodel.cn/cn/guide/models/embedding/embedding-3"
   },
   "strengths": [

@@ -1,0 +1,115 @@
+{
+  "catalogKey": "alibaba/wan3.0-video-prime",
+  "currency": "USD",
+  "modelId": "wan3.0-video-prime",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_480p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-08-20T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-wan3.0-video-prime-second-480p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "b2ad5146f9809f0c96e83e6613170634990889282f214904c6cd4d5613cb22ac",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/wan3.0-video-prime"
+      },
+      "tierCode": "res_480p",
+      "unitPrice": "0.068000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_720p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-08-20T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-wan3.0-video-prime-second-720p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "c37dd1c1e3ef47833719bdaa88720195b57d0017ce0e82268d4adc0cff92b3b5",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/wan3.0-video-prime"
+      },
+      "tierCode": "res_720p",
+      "unitPrice": "0.140000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-08-20T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-wan3.0-video-prime-second-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "ec559ea50a909cc6957daea6e4d64bbacf07e0ef2ab72b782c412429464aaf49",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/wan3.0-video-prime"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "0.280000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

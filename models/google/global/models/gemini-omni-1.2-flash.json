@@ -1,0 +1,46 @@
+{
+  "apiFormat": "google_gemini",
+  "capabilities": [
+    "video"
+  ],
+  "catalogKey": "google/gemini-omni-1.2-flash",
+  "codingVisible": false,
+  "description": "Google Gemini Omni 1.2 Flash video generation and editing model generally available since 2026-11-05; up to 15-second 360p/720p/1080p/4K output with native audio, conversational editing, first/last-frame interpolation, and per-turn extension up to 30 seconds.",
+  "displayName": "Gemini Omni 1.2 Flash",
+  "familyCode": "gemini",
+  "inputModalities": [
+    "text",
+    "image",
+    "video"
+  ],
+  "lifecycle": "active",
+  "maxInputTokens": 131072,
+  "maxOutputTokens": 65536,
+  "modelId": "gemini-omni-1.2-flash",
+  "outputModalities": [
+    "video",
+    "text",
+    "audio"
+  ],
+  "primaryCapability": "video",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-omni-flash"
+  },
+  "strengths": [
+    "Video generation",
+    "Video editing",
+    "Native audio"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "usageScopes": [],
+  "vendorCode": "google",
+  "vendorName": "Google"
+}

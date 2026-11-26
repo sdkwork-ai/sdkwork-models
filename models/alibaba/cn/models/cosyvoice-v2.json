@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "alibaba/cosyvoice-v2",
+  "codingVisible": false,
+  "colorToken": "#ff6a00",
+  "description": "CosyVoice v2 generative speech synthesis model with real-time streaming output.",
+  "displayName": "CosyVoice v2",
+  "familyCode": "cosyvoice",
+  "inputModalities": [
+    "text"
+  ],
+  "latencyP50Ms": 300,
+  "latencyP95Ms": 900,
+  "lifecycle": "active",
+  "modelId": "cosyvoice-v2",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "rankScore": "720.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+  },
+  "strengths": [
+    "Text to speech",
+    "Multilingual",
+    "Voice cloning"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "trendScore": "0.880000",
+  "usageScopes": [],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.850000"
+}

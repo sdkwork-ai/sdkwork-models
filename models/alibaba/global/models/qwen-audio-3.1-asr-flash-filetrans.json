@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "alibaba/qwen-audio-3.1-asr-flash-filetrans",
+  "codingVisible": false,
+  "colorToken": "#ff6a00",
+  "description": "Qwen-Audio 3.1 ASR Flash Filetrans offline speech recognition for long-form transcription with speaker separation and text normalization.",
+  "displayName": "Qwen-Audio 3.1 ASR Flash Filetrans",
+  "familyCode": "qwen-asr",
+  "inputModalities": [
+    "audio"
+  ],
+  "latencyP50Ms": 1000,
+  "latencyP95Ms": 4000,
+  "lifecycle": "active",
+  "modelId": "qwen-audio-3.1-asr-flash-filetrans",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "rankScore": "812.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://www.qwencloud.com/models/qwen-audio-3.1-asr-flash-filetrans"
+  },
+  "strengths": [
+    "Long audio transcription",
+    "Speaker separation",
+    "Multilingual"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.870000",
+  "usageScopes": [],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.840000"
+}

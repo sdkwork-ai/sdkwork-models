@@ -1,0 +1,80 @@
+{
+  "catalogKey": "alibaba/qwen-image-3.0-pro",
+  "currency": "USD",
+  "modelId": "qwen-image-3.0-pro",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-07-20T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen-image-3.0-pro-result-1k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "d19b1828537a6a8f1c17c3a225b75b66968a31bcddb84268e40a923216e12a0f",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen-image-3.0-pro"
+      },
+      "tierCode": "res_1k",
+      "unitPrice": "0.040000",
+      "unitSize": "1"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_2k"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-07-20T00:00:00Z",
+      "meterCode": "image_result",
+      "minimumQuantity": "0",
+      "operationCode": "image.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen-image-3.0-pro-result-2k",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.image",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "be79d9f3ba04d424b1ded4a4c0c7cd750c4522aeb4d353d7e08d8d1a7cb4f944",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen-image-3.0-pro"
+      },
+      "tierCode": "res_2k",
+      "unitPrice": "0.075000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

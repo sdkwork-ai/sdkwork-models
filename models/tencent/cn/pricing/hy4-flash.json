@@ -28,7 +28,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://cloud.tencent.com/document/product/1823/130055"
       },
       "unitPrice": "0.500000",
@@ -56,7 +56,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://cloud.tencent.com/document/product/1823/130055"
       },
       "unitPrice": "2.000000",
@@ -84,7 +84,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://cloud.tencent.com/document/product/1823/130055"
       },
       "unitPrice": "0.020000",

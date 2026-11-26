@@ -1,0 +1,50 @@
+{
+  "apiFormat": "openai_compatible",
+  "capabilities": [
+    "chat"
+  ],
+  "catalogKey": "zhipu/glm-5.4",
+  "codingVisible": true,
+  "colorToken": "#7c2d12",
+  "contextTokens": 1000000,
+  "description": "GLM-5.4 flagship Loop Transformer model with 1M context, 128K max output and visual understanding. Official overview states it is open to GLM Coding Plan users while the public model API awaits safety evaluation.",
+  "displayName": "GLM-5.4",
+  "familyCode": "glm",
+  "inputModalities": [
+    "text",
+    "image"
+  ],
+  "lifecycle": "preview",
+  "maxInputTokens": 1000000,
+  "maxOutputTokens": 131072,
+  "modelId": "glm-5.4",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "chat",
+  "regionCode": "cn",
+  "releaseStage": "preview",
+  "routingState": "catalog_only",
+  "schemaVersion": "1.0.0",
+  "shelfState": "hidden",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/model-overview"
+  },
+  "strengths": [
+    "Flagship",
+    "Coding",
+    "Long context",
+    "Visual understanding"
+  ],
+  "supportsJsonSchema": true,
+  "supportsStreaming": true,
+  "supportsTools": true,
+  "usageScopes": [
+    "coding",
+    "chat",
+    "agent"
+  ],
+  "vendorCode": "zhipu",
+  "vendorName": "Zhipu AI"
+}

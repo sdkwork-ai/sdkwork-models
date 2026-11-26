@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "bytedance/seed-asr-2.0",
+  "codingVisible": false,
+  "colorToken": "#dc2626",
+  "description": "Doubao Seed ASR 2.0 large-model speech recognition via Volcengine, billed per audio hour.",
+  "displayName": "Seed ASR 2.0",
+  "familyCode": "audio",
+  "inputModalities": [
+    "audio"
+  ],
+  "latencyP50Ms": 300,
+  "latencyP95Ms": 900,
+  "lifecycle": "active",
+  "modelId": "seed-asr-2.0",
+  "outputModalities": [
+    "text"
+  ],
+  "primaryCapability": "audio",
+  "rankScore": "750.000000",
+  "regionCode": "cn",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://docs.volcengine.com/docs/82379/1544106"
+  },
+  "strengths": [
+    "Speech recognition",
+    "Multilingual",
+    "Dialect support"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": false,
+  "supportsTools": false,
+  "trendScore": "0.880000",
+  "usageScopes": [],
+  "vendorCode": "bytedance",
+  "vendorName": "ByteDance",
+  "winRate": "0.850000"
+}

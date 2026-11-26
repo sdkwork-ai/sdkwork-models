@@ -1,0 +1,38 @@
+{
+  "catalogKey": "alibaba/cosyvoice-v3.5-flash",
+  "currency": "CNY",
+  "modelId": "cosyvoice-v3.5-flash",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "operationCode": "speech.synthesize",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-cosyvoice-v3-5-flash-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "unitPrice": "0.080000",
+      "unitSize": "1000",
+      "rateHash": "ff07ae7387b24cdf5091d80868bd798f950bddbe8aec77ed2fa39198342bd4bc"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

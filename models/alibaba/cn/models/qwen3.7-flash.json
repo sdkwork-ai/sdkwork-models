@@ -2,6 +2,7 @@
   "apiFormat": "openai_compatible",
   "catalogKey": "alibaba/qwen3.7-flash",
   "codingVisible": true,
+  "contextTokens": 1000000,
   "description": "低延迟高性价比文本模型，1M 上下文、支持思考模式与先进工具调用；适用大规模高吞吐场景。 Superseded by Qwen3.8 Flash; kept for historical pricing and migration reference.",
   "displayName": "Qwen3.7 Flash",
   "familyCode": "qwen",
@@ -11,6 +12,8 @@
     "video"
   ],
   "lifecycle": "deprecated",
+  "maxInputTokens": 991808,
+  "maxOutputTokens": 131072,
   "modelId": "qwen3.7-flash",
   "outputModalities": [
     "text"
@@ -23,7 +26,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-23T00:00:00Z",
+    "observedAt": "2026-11-26T00:00:00Z",
     "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-flash"
   },
   "supportsJsonSchema": true,

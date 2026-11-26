@@ -1,0 +1,38 @@
+{
+  "catalogKey": "alibaba/qwen-audio-3.0-tts-flash",
+  "currency": "CNY",
+  "modelId": "qwen-audio-3.0-tts-flash",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "tts_input_character",
+      "minimumQuantity": "0",
+      "operationCode": "speech.synthesize",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-qwen-audio-3-0-tts-flash-character",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-synthesis/"
+      },
+      "unitPrice": "0.100000",
+      "unitSize": "1000",
+      "rateHash": "276fa6e9329e4f014c91e6712e5b4c95ad8bfed77f730fdb5a2fc4853be580f5"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

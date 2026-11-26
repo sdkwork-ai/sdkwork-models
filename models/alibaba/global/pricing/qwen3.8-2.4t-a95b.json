@@ -1,0 +1,171 @@
+{
+  "catalogKey": "alibaba/qwen3.8-2.4t-a95b",
+  "currency": "USD",
+  "modelId": "qwen3.8-2.4t-a95b",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-08-12T00:00:00Z",
+      "meterCode": "llm_input_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen3.8-2.4t-a95b-input",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "cb2ca37d44d8f60f33f7db377a85a1f0d9fbbae177015b3fc56a36750f680037",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen3.8-2.4t-a95b"
+      },
+      "unitPrice": "2.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [],
+      "currency": "USD",
+      "effectiveFrom": "2026-08-12T00:00:00Z",
+      "meterCode": "llm_output_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen3.8-2.4t-a95b-output",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "88fb60e9550df4d83ad4ab611562ac9de448a6ca5fa15acb9bd68152b4695f87",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen3.8-2.4t-a95b"
+      },
+      "unitPrice": "6.000000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "implicit_cache"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-08-12T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen3.8-2.4t-a95b-cache-read-implicit",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "dc12aed34328ad87aefa0b2b3dd26b2e4a4c2d6b03094b04ef1b96fb2af66a40",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen3.8-2.4t-a95b"
+      },
+      "tierCode": "implicit_cache",
+      "unitPrice": "0.250000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "explicit_cache_write"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-08-12T00:00:00Z",
+      "meterCode": "llm_cache_write_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen3.8-2.4t-a95b-cache-write",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "9b512b1eb9b1a657d88a93eebaec521f336ce785230f527f6d2ceaaaf2ec7493",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen3.8-2.4t-a95b"
+      },
+      "tierCode": "explicit_cache_write",
+      "unitPrice": "2.500000",
+      "unitSize": "1000000"
+    },
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "usage_reported",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "explicit_cache_read"
+        }
+      ],
+      "currency": "USD",
+      "effectiveFrom": "2026-08-12T00:00:00Z",
+      "meterCode": "llm_cache_read_token",
+      "minimumQuantity": "0",
+      "operationCode": "inference.generate",
+      "priceBookCode": "models.alibaba.global.official",
+      "priceId": "qwen-global-qwen3.8-2.4t-a95b-cache-read-explicit",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.chat",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "3ad68f1fa3956ac9fd73c7c15160755dea42d1310107adfbf949e181a7cf7bc5",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://www.qwencloud.com/models/qwen3.8-2.4t-a95b"
+      },
+      "tierCode": "explicit_cache_read",
+      "unitPrice": "0.170000",
+      "unitSize": "1000000"
+    }
+  ],
+  "regionCode": "global",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

@@ -1,0 +1,38 @@
+{
+  "catalogKey": "tencent/tenlai-asr-v1.0",
+  "currency": "CNY",
+  "modelId": "tenlai-asr-v1.0",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "stt_audio_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.transcribe",
+      "priceBookCode": "models.tencent.cn.official",
+      "priceId": "tencent-cn-tenlai-asr-v1-0-stt-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.tencent.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://cloud.tencent.com/document/product/1823/130055"
+      },
+      "unitPrice": "0.013200",
+      "unitSize": "1",
+      "rateHash": "66283c0b830e57d6dcf539aecbc20a7ef33b8a7fd34014aa5d99f34365c41a3f"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "tencent"
+}

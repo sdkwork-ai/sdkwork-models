@@ -6,7 +6,7 @@
   "catalogKey": "bytedance/doubao-seedance-2-5-260628",
   "codingVisible": false,
   "colorToken": "#dc2626",
-  "description": "Doubao Seedance 2.5 260628 revision, the only Seedance 2.5 id on the Volcengine Ark model list (480p/720p 8-bit, 1080p 10-bit, 24 fps, 4-30s). Replaces the previous 260623 build.",
+  "description": "Doubao Seedance 2.5 260628 revision, the only Seedance 2.5 id on the Volcengine Ark model list (480p/720p 8-bit, 1080p/4K 10-bit, 24 fps, 4-30s). Replaces the previous 260623 build.",
   "displayName": "Doubao Seedance 2.5 (260628)",
   "familyCode": "seedance",
   "inputModalities": [
@@ -29,7 +29,7 @@
   "schemaVersion": "1.0.0",
   "shelfState": "listed",
   "source": {
-    "observedAt": "2026-11-23T00:00:00Z",
+    "observedAt": "2026-11-26T00:00:00Z",
     "sourceUrl": "https://docs.volcengine.com/docs/ark/model-list?lang=zh"
   },
   "strengths": [

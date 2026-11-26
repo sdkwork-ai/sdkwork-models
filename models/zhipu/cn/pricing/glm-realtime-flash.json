@@ -15,7 +15,7 @@
       "priority": 100,
       "quantityStep": "1",
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
       },
       "unitPrice": "0.180000",
@@ -44,7 +44,7 @@
       "priority": 100,
       "quantityStep": "1",
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing"
       },
       "unitPrice": "1.200000",

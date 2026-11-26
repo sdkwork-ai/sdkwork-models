@@ -1,0 +1,46 @@
+{
+  "catalogKey": "sand_ai/magi-2",
+  "currency": "CNY",
+  "modelId": "magi-2",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [
+        {
+          "dimensionCode": "tier_code",
+          "operator": "eq",
+          "value": "res_1080p"
+        }
+      ],
+      "currency": "CNY",
+      "effectiveFrom": "2026-11-25T00:00:00Z",
+      "meterCode": "video_output_second",
+      "minimumQuantity": "0",
+      "notes": "官方中文发布口径：MAGI-2 1080p 官方刊例价 0.5 元/秒（含同步音频）。平台英文站仅公示 USD 单价，CNY 价以官方发布说明为准。",
+      "operationCode": "video.generate",
+      "priceBookCode": "models.sand_ai.cn.official",
+      "priceId": "sand-ai-cn-magi-2-second-1080p",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.sand_ai.video",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateHash": "79a76e05cf164e93038218a507a3bb359aa0bd206df8663c76d01ae2b16009ab",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://sand.ai/blog/magi-2/"
+      },
+      "tierCode": "res_1080p",
+      "unitPrice": "0.500000",
+      "unitSize": "1"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "sand_ai"
+}

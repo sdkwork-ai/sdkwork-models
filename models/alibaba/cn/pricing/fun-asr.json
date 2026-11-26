@@ -1,0 +1,38 @@
+{
+  "catalogKey": "alibaba/fun-asr",
+  "currency": "CNY",
+  "modelId": "fun-asr",
+  "prices": [
+    {
+      "billability": "chargeable",
+      "calculationMode": "per_unit",
+      "chargeTiming": "successful_result",
+      "conditions": [],
+      "currency": "CNY",
+      "effectiveFrom": "2026-07-02T00:00:00Z",
+      "meterCode": "stt_audio_minute",
+      "minimumQuantity": "0",
+      "operationCode": "audio.transcribe",
+      "priceBookCode": "models.alibaba.cn.official",
+      "priceId": "alibaba-cn-fun-asr-stt-minute",
+      "priceSide": "official",
+      "pricingScope": "model",
+      "priority": 100,
+      "productCode": "models.alibaba.audio",
+      "quantityAggregation": "sum",
+      "quantityStep": "1",
+      "rateVariant": "standard",
+      "schedule": null,
+      "source": {
+        "observedAt": "2026-11-26T00:00:00Z",
+        "sourceUrl": "https://help.aliyun.com/zh/model-studio/model-list-speech-recognition/"
+      },
+      "unitPrice": "0.013200",
+      "unitSize": "1",
+      "rateHash": "2c271047402699b9e2130e6dad104f4c55d3ed57eb47c9b99c24c7c5a3752095"
+    }
+  ],
+  "regionCode": "cn",
+  "schemaVersion": "2.0.0",
+  "vendorCode": "alibaba"
+}

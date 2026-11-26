@@ -6,27 +6,31 @@
   "catalogKey": "google/gemini-omni-1.1-flash",
   "codingVisible": false,
   "colorToken": "#1d4ed8",
-  "description": "Google Gemini Omni 1.1 Flash video generation model generally available since 2026-08-27, successor to the Omni Flash preview.",
+  "description": "Google Gemini Omni 1.1 Flash video generation model generally available since 2026-08-27. 官方 deprecations 页：2026-12-03 关停，届时请求自动路由至 gemini-omni-1.2-flash 并按 1.2 价格计费。",
   "displayName": "Gemini Omni 1.1 Flash",
   "familyCode": "gemini",
   "inputModalities": [
     "text",
-    "image"
+    "image",
+    "video"
   ],
   "latencyP50Ms": 60000,
   "latencyP95Ms": 240000,
-  "lifecycle": "active",
+  "lifecycle": "deprecated",
+  "maxInputTokens": 131072,
+  "maxOutputTokens": 65536,
   "modelId": "gemini-omni-1.1-flash",
   "outputModalities": [
     "video"
   ],
   "primaryCapability": "video",
   "regionCode": "global",
-  "releaseStage": "active",
-  "routingState": "enabled",
-  "shelfState": "listed",
+  "releaseStage": "deprecated",
+  "replacementModel": "gemini-omni-1.2-flash",
+  "routingState": "catalog_only",
+  "shelfState": "hidden",
   "source": {
-    "observedAt": "2026-11-14T00:00:00Z",
+    "observedAt": "2026-11-26T00:00:00Z",
     "sourceUrl": "https://ai.google.dev/gemini-api/docs/models/gemini"
   },
   "strengths": [

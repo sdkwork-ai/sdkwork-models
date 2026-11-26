@@ -1,6 +1,6 @@
 # SDKWork Models - Vendor & Model Architecture
 
-Generated: 2026-11-23
+Generated: 2026-11-26
 
 > 本文件由 `tools/generate-vendor-model-architecture-doc.mjs` 从模型目录生成，请勿手改。
 > 口径：模型表仅收录 `shelfState = listed` 的模型；`Context` = `contextTokens / 1000` 向下取整；
@@ -28,15 +28,16 @@ Generated: 2026-11-23
 | 15 | openai | OpenAI | No | openai_compatible, openai_responses | global | CC:unsupported / CX:supported / GC:unsupported |
 | 16 | pixverse | PixVerse | No | vendor_native | cn, global | CC:unsupported / CX:unsupported / GC:unsupported |
 | 17 | runway | Runway | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
-| 18 | stability_ai | Stability AI | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
-| 19 | stepfun | StepFun | No | anthropic_messages, openai_compatible, openai_responses, vendor_native | cn | CC:unsupported / CX:unsupported / GC:unsupported |
-| 20 | suno | Suno | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
-| 21 | tencent | Tencent Cloud | No | anthropic_messages, openai_compatible | cn | CC:unsupported / CX:unsupported / GC:unsupported |
-| 22 | typesafe | TypeSafe AI | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
-| 23 | vidu | Vidu | No | vendor_native | cn, global | CC:unsupported / CX:unsupported / GC:unsupported |
-| 24 | xai | xAI | No | openai_compatible, openai_responses, vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
-| 25 | xiaomi | Xiaomi MiMo | Yes | anthropic_messages, openai_compatible | cn, global | CC:convert / CX:convert / GC:convert |
-| 26 | zhipu | Zhipu AI | No | anthropic_messages, openai_compatible, vendor_native | cn | CC:unsupported / CX:unsupported / GC:unsupported |
+| 18 | sand_ai | Sand.ai | No | vendor_native | cn, global | CC:unsupported / CX:unsupported / GC:unsupported |
+| 19 | stability_ai | Stability AI | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
+| 20 | stepfun | StepFun | No | anthropic_messages, openai_compatible, openai_responses, vendor_native | cn | CC:unsupported / CX:unsupported / GC:unsupported |
+| 21 | suno | Suno | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
+| 22 | tencent | Tencent Cloud | No | anthropic_messages, openai_compatible, vendor_native | cn | CC:unsupported / CX:unsupported / GC:unsupported |
+| 23 | typesafe | TypeSafe AI | No | vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
+| 24 | vidu | Vidu | No | vendor_native | cn, global | CC:unsupported / CX:unsupported / GC:unsupported |
+| 25 | xai | xAI | No | openai_compatible, openai_responses, vendor_native | global | CC:unsupported / CX:unsupported / GC:unsupported |
+| 26 | xiaomi | Xiaomi MiMo | Yes | anthropic_messages, openai_compatible | cn, global | CC:convert / CX:convert / GC:convert |
+| 27 | zhipu | Zhipu AI | No | anthropic_messages, openai_compatible, vendor_native | cn | CC:unsupported / CX:unsupported / GC:unsupported |
 
 ## Model Architecture by Region
 
@@ -46,26 +47,64 @@ Generated: 2026-11-23
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
+| cosyvoice-v2 | N/A | audio | N/A |
+| cosyvoice-v3-flash | N/A | audio | N/A |
+| cosyvoice-v3-plus | N/A | audio | N/A |
+| cosyvoice-v3.5-flash | N/A | audio | N/A |
+| cosyvoice-v3.5-plus | N/A | audio | N/A |
+| fun-asr | N/A | audio | N/A |
+| paraformer-realtime-v2 | N/A | audio | N/A |
+| paraformer-v2 | N/A | audio | N/A |
+| qwen-audio-3.0-asr-flash | N/A | audio | N/A |
+| qwen-audio-3.0-tts-flash | N/A | audio | N/A |
+| qwen-audio-3.0-tts-plus | N/A | audio | N/A |
+| qwen-audio-3.1-asr-flash | N/A | audio | N/A |
+| qwen-audio-3.1-asr-flash-streaming | N/A | audio | N/A |
+| qwen-audio-3.1-tts-flash | N/A | audio | N/A |
+| qwen-audio-3.1-tts-plus | N/A | audio | N/A |
+| qwen-image-3.0 | N/A | image | N/A |
+| qwen-image-3.0-pro | N/A | image | N/A |
+| qwen3-asr-flash | N/A | audio | N/A |
+| qwen3-tts-flash | N/A | audio | N/A |
 | qwen3.7-plus | 1000K | N/A | CNY 2.00 / 8.00 |
 | qwen3.7-text-embedding | N/A | N/A | N/A |
 | qwen3.7-text-embedding-flash | N/A | N/A | N/A |
+| qwen3.8-2.4t-a95b | 1000K | chat | CNY 12.00 / 36.00 |
 | qwen3.8-flash | 1000K | chat | CNY 0.80 / 2.70 |
 | qwen3.8-max | 1000K | chat | CNY 12.00 / 36.00 |
+| qwen3.8-omni-flash | 1000K | chat | CNY 0.80 / 2.70 |
 | qwen4-max | 1000K | chat | CNY 10.00 / 30.00 |
+| sambert-zhichu-v1 | N/A | audio | N/A |
 | text-embedding-v4 | N/A | embedding | N/A |
 | wan2.6-i2v | N/A | video | N/A |
 | wan2.6-r2v | N/A | video | N/A |
 | wan2.6-t2i | N/A | image | N/A |
 | wan2.6-t2v | N/A | video | N/A |
+| wan2.7-i2v | N/A | video | N/A |
+| wan2.7-r2v | N/A | video | N/A |
+| wan2.7-t2v | N/A | video | N/A |
+| wan3.0-video | N/A | video | N/A |
+| wan3.0-video-prime | N/A | video | N/A |
 
 **Region: GLOBAL** (USD)
 
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
+| qwen-audio-3.1-asr-flash-filetrans | N/A | audio | N/A |
+| qwen-audio-3.1-tts-flash | N/A | audio | N/A |
+| qwen-image-3.0 | N/A | image | N/A |
+| qwen-image-3.0-pro | N/A | image | N/A |
 | qwen3.7-plus | 1000K | N/A | USD 0.40 / 1.60 |
+| qwen3.8-2.4t-a95b | 1000K | chat | USD 2.00 / 6.00 |
 | qwen3.8-flash | 1000K | chat | USD 0.15 / 0.47 |
 | qwen3.8-max | 1000K | chat | USD 2.00 / 6.00 |
+| qwen3.8-omni-flash | 1000K | chat | USD 0.15 / 0.47 |
 | qwen4-max | 1000K | chat | USD 1.50 / 4.50 |
+| wan2.7-i2v | N/A | video | N/A |
+| wan2.7-r2v | N/A | video | N/A |
+| wan2.7-t2v | N/A | video | N/A |
+| wan3.0-video | N/A | video | N/A |
+| wan3.0-video-prime | N/A | video | N/A |
 
 ### Anthropic (anthropic)
 
@@ -137,9 +176,11 @@ Generated: 2026-11-23
 | doubao-seedance-2-0-fast-260128 | N/A | video | N/A |
 | doubao-seedance-2-0-mini-260615 | N/A | video | N/A |
 | doubao-seedance-2-5-260628 | N/A | video | N/A |
+| doubao-seedance-2-5-flash-261115 | N/A | video | N/A |
 | doubao-seedream-5-0-flash-260915 | N/A | image | N/A |
 | doubao-seedream-5-0-pro-260628 | N/A | image | N/A |
 | doubao-seedream-5-5-261028 | N/A | image | N/A |
+| seed-asr-2.0 | N/A | audio | N/A |
 | seed-audio-1.0 | N/A | audio, sfx, music | N/A |
 | seed-music-gensong-v4 | N/A | music | N/A |
 | seed-tts-2.0-expressive | N/A | audio | N/A |
@@ -154,6 +195,7 @@ Generated: 2026-11-23
 | dreamina-seedance-2-0-fast-260128 | N/A | video | N/A |
 | dreamina-seedance-2-0-mini-260615 | N/A | video | N/A |
 | dreamina-seedance-2-5-260628 | N/A | video | N/A |
+| dreamina-seedance-2-5-flash-261115 | N/A | video | N/A |
 
 ### DeepSeek (deepseek)
 
@@ -227,9 +269,12 @@ Generated: 2026-11-23
 | gemini-3.8-live | N/A | N/A | USD 0.75 / 4.50 |
 | gemini-3.8-live-extended-thinking | N/A | N/A | USD 0.75 / 4.50 |
 | gemini-4-argon | 1048K | chat | USD 2.00 / 10.00 |
+| gemini-4-carbon | 1048K | chat | USD 2.00 / 10.00 |
+| gemini-4-hydrogen | 1048K | chat | USD 1.50 / 7.50 |
+| gemini-4-neon | 1048K | chat | USD 3.00 / 15.00 |
 | gemini-embedding-2 | 8K | embedding | N/A |
 | gemini-nano-banana-2.1 | 131K | image | USD 1.50 / 7.50 |
-| gemini-omni-1.1-flash | N/A | video | USD 1.50 / 9.00 |
+| gemini-omni-1.2-flash | N/A | video | USD 1.50 / 9.00 |
 | gemini-robotics-er-2-preview | N/A | N/A | USD 1.00 / 5.00 |
 | gemini-robotics-er-2-streaming-preview | N/A | N/A | USD 1.00 / 5.00 |
 | lyria-3-clip-preview | N/A | N/A | N/A |
@@ -409,6 +454,7 @@ Generated: 2026-11-23
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
 | pixverse-c1-t2v | N/A | video | N/A |
+| pixverse-v6-max-t2v | N/A | video | N/A |
 | pixverse-v6-t2v | N/A | video | N/A |
 
 **Region: GLOBAL** (USD)
@@ -447,6 +493,8 @@ Generated: 2026-11-23
 | gpt_image_2 | N/A | image | N/A |
 | gpt_image_2_5_flare | N/A | image | N/A |
 | gpt_image_2_5_sunburst | N/A | image | N/A |
+| gpt_image_2_6_flare | N/A | image | N/A |
+| gpt_image_2_6_sunburst | N/A | image | N/A |
 | grok_imagine_1_5 | N/A | video | N/A |
 | grok_imagine_1_5_lite | N/A | video | N/A |
 | grok_imagine_image_2 | N/A | image | N/A |
@@ -467,6 +515,7 @@ Generated: 2026-11-23
 | klingO3_pro | N/A | video | N/A |
 | klingO3_standard | N/A | video | N/A |
 | magnific_precision_upscaler_v2 | N/A | image | N/A |
+| minimax_h3_image | N/A | image | N/A |
 | muse_image | N/A | image | N/A |
 | nano_banana_2.1 | N/A | image | N/A |
 | ruby | N/A | video | N/A |
@@ -485,6 +534,20 @@ Generated: 2026-11-23
 | veo3.1_fast | N/A | video | N/A |
 | wan3 | N/A | video | N/A |
 | wan3_prime | N/A | video | N/A |
+
+### Sand.ai (sand_ai)
+
+**Region: CN** (CNY)
+
+| Model ID | Context | Modalities | Pricing (Input/Output) |
+|----------|---------|------------|------------------------|
+| magi-2 | N/A | video, audio | N/A |
+
+**Region: GLOBAL** (USD)
+
+| Model ID | Context | Modalities | Pricing (Input/Output) |
+|----------|---------|------------|------------------------|
+| magi-2 | N/A | video, audio | N/A |
 
 ### Stability AI (stability_ai)
 
@@ -508,6 +571,7 @@ Generated: 2026-11-23
 | Model ID | Context | Modalities | Pricing (Input/Output) |
 |----------|---------|------------|------------------------|
 | step-1o-audio | N/A | audio | N/A |
+| step-1o-turbo-vision | 32K | chat | CNY 2.50 / 8.00 |
 | step-3.7-flash | 256K | chat, reasoning | CNY 1.35 / 8.10 |
 | step-5-preview | 1000K | chat, reasoning | CNY 7.00 / 20.00 |
 | step-asr | N/A | audio | N/A |
@@ -549,6 +613,8 @@ Generated: 2026-11-23
 | hy-role-latest | 32K | chat | CNY 2.40 / 9.60 |
 | hy4 | 1000K | chat | CNY 6.00 / 18.00 |
 | hy4-flash | 1000K | chat | CNY 0.50 / 2.00 |
+| tenlai-asr-v1.0 | N/A | audio | N/A |
+| tenlai-tts-v1.0 | N/A | audio | N/A |
 
 ### TypeSafe AI (typesafe)
 
@@ -635,7 +701,7 @@ Generated: 2026-11-23
 | cogvideox-3 | N/A | video | N/A |
 | cogview-4-250304 | N/A | image | N/A |
 | embedding-2 | 8K | embedding | N/A |
-| embedding-3 | N/A | embedding | N/A |
+| embedding-3 | 8K | embedding | N/A |
 | glm-4-voice | 8K | audio, chat | N/A |
 | glm-5.3 | 1000K | chat | CNY 8.00 / 28.00 |
 | glm-5.3-flash | 1000K | chat | CNY 0.80 / 2.80 |
@@ -655,22 +721,22 @@ Generated: 2026-11-23
 
 | Region | Vendors | Models | Pricing Files |
 |--------|---------|--------|---------------|
-| CN | 14 | 212 | 200 |
-| GLOBAL | 21 | 380 | 365 |
+| CN | 15 | 247 | 234 |
+| GLOBAL | 22 | 401 | 385 |
 
 ### Client API Support
 
 | API | Supported | Partial | Convert | Unsupported |
 |-----|-----------|---------|---------|-------------|
-| claude_code | 1 | 1 | 2 | 22 |
-| codex | 1 | 0 | 3 | 22 |
-| gemini_cli | 1 | 0 | 3 | 22 |
+| claude_code | 1 | 1 | 2 | 23 |
+| codex | 1 | 0 | 3 | 23 |
+| gemini_cli | 1 | 0 | 3 | 23 |
 
 ### Protocol Support
 
 | Protocol | Vendors |
 |----------|---------|
-| vendor_native | 19 |
+| vendor_native | 21 |
 | openai_compatible | 14 |
 | anthropic_messages | 9 |
 | openai_responses | 6 |
@@ -681,9 +747,9 @@ Generated: 2026-11-23
 | Capability | Vendors |
 |------------|---------|
 | chat | 15 |
-| video | 14 |
+| video | 15 |
+| audio | 13 |
 | image | 13 |
-| audio | 10 |
 | reasoning | 10 |
 | music | 8 |
 | embedding | 4 |

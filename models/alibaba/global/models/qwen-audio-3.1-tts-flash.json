@@ -1,0 +1,46 @@
+{
+  "apiFormat": "vendor_native",
+  "capabilities": [
+    "audio"
+  ],
+  "catalogKey": "alibaba/qwen-audio-3.1-tts-flash",
+  "codingVisible": false,
+  "colorToken": "#ff6a00",
+  "description": "Qwen-Audio 3.1 TTS Flash low-latency speech synthesis with free-style instruction following, tag control, and robust voice cloning.",
+  "displayName": "Qwen-Audio 3.1 TTS Flash",
+  "familyCode": "qwen-tts",
+  "inputModalities": [
+    "text"
+  ],
+  "latencyP50Ms": 300,
+  "latencyP95Ms": 900,
+  "lifecycle": "active",
+  "modelId": "qwen-audio-3.1-tts-flash",
+  "outputModalities": [
+    "audio"
+  ],
+  "primaryCapability": "audio",
+  "rankScore": "815.000000",
+  "regionCode": "global",
+  "releaseStage": "active",
+  "routingState": "enabled",
+  "schemaVersion": "1.0.0",
+  "shelfState": "listed",
+  "source": {
+    "observedAt": "2026-11-26T00:00:00Z",
+    "sourceUrl": "https://www.qwencloud.com/models/qwen-audio-3.1-tts-flash"
+  },
+  "strengths": [
+    "Text to speech",
+    "Low latency",
+    "Voice cloning"
+  ],
+  "supportsJsonSchema": false,
+  "supportsStreaming": true,
+  "supportsTools": false,
+  "trendScore": "0.880000",
+  "usageScopes": [],
+  "vendorCode": "alibaba",
+  "vendorName": "Alibaba Cloud",
+  "winRate": "0.850000"
+}

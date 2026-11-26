@@ -31,7 +31,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus"
       },
       "tierCode": "tier_256k",
@@ -66,7 +66,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus"
       },
       "tierCode": "tier_256k",
@@ -101,7 +101,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus"
       },
       "tierCode": "tier_1m",
@@ -136,7 +136,7 @@
       "rateVariant": "standard",
       "schedule": null,
       "source": {
-        "observedAt": "2026-11-23T00:00:00Z",
+        "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://help.aliyun.com/zh/model-studio/qwen3-7-plus"
       },
       "tierCode": "tier_1m",

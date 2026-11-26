@@ -9,6 +9,14 @@
       "sortOrder": 10
     },
     {
+      "defaultModel": "step-1o-turbo-vision",
+      "displayName": "Step Vision",
+      "familyCode": "step-vision",
+      "familyType": "llm",
+      "primaryModality": "text",
+      "sortOrder": 15
+    },
+    {
       "defaultModel": "stepaudio-3-tts",
       "displayName": "StepAudio 3",
       "familyCode": "step-audio-3",
