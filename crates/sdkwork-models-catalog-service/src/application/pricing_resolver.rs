@@ -2,7 +2,7 @@ use chrono::{DateTime, Utc};
 
 use crate::domain::{
     BillingMeter, DecimalValue, DomainError, DomainResult, ModelPrice, ModelVendor, Money,
-    PriceSide, PricingDimensionContext,
+    PriceSide, PricingDimensionContext, PricingRateMetadata,
 };
 use crate::ports::PricingCatalog;
 
@@ -36,6 +36,67 @@ pub enum ResolvedPriceSource {
     DerivedFromOfficialReference,
 }
 
+/// Which layer finally determined the customer charge.
+///
+/// The resolver composes up to four layers in a fixed order. Recording the
+/// winning layer on the resolution (and, through it, on the rating decision)
+/// is what lets an operator answer "why was this request priced this way"
+/// without re-deriving the whole chain from the current configuration, which
+/// may already have changed.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum CustomerPriceLayer {
+    /// The plan's own default multiplier/markup over the official reference
+    /// (or an explicit customer-charge rate book) decided the price.
+    PlanReference,
+    /// A plan pricing rule (`multiplier_markup` or `unit_price_override`)
+    /// decided the price.
+    PlanRule,
+    /// A per-resource price defined on the account group replaced the plan
+    /// result for this exact (resource, operation, meter, region, provider).
+    GroupResource,
+    /// The account group's single `sale_multiplier` scaled the plan result.
+    GroupMultiplier,
+}
+
+impl CustomerPriceLayer {
+    pub fn code(self) -> &'static str {
+        match self {
+            Self::PlanReference => "plan_reference",
+            Self::PlanRule => "plan_rule",
+            Self::GroupResource => "group_resource",
+            Self::GroupMultiplier => "group_multiplier",
+        }
+    }
+}
+
+/// The resource tuple one group price is resolved against.
+#[derive(Debug, Clone, Copy)]
+pub struct GroupPriceResourceKey<'a> {
+    pub catalog_key: &'a str,
+    pub operation_code: &'a str,
+    pub meter_code: &'a str,
+    pub region_code: &'a str,
+    pub provider_code: &'a str,
+}
+
+impl GroupPriceResourceKey<'_> {
+    fn matches(
+        &self,
+        catalog_key: &str,
+        operation_code: &str,
+        meter_code: &str,
+        region_code: &str,
+        provider_code: &str,
+    ) -> bool {
+        self.catalog_key.trim() == catalog_key.trim()
+            && self.operation_code.trim() == operation_code.trim()
+            && self.meter_code.trim() == meter_code.trim()
+            && self.region_code.trim() == region_code.trim()
+            && (provider_code.trim().is_empty()
+                || self.provider_code.trim() == provider_code.trim())
+    }
+}
+
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ResolvedModelPrice {
     pub model: String,
@@ -66,6 +127,11 @@ pub struct ResolvedModelPrice {
     pub customer_charge: Money,
     pub gross_margin_per_unit: Option<crate::domain::DecimalValue>,
     pub source: ResolvedPriceSource,
+    /// Which layer finally decided `customer_charge`.
+    pub customer_price_layer: CustomerPriceLayer,
+    /// The per-resource group price that decided the customer charge, when
+    /// [`CustomerPriceLayer::GroupResource`] won. `None` on every other layer.
+    pub group_resource_price: Option<crate::domain::GroupResourcePrice>,
 }
 
 impl<'a, C: PricingCatalog> PricingResolver<'a, C> {
@@ -308,6 +374,30 @@ impl<'a, C: PricingCatalog> PricingResolver<'a, C> {
             ),
         };
         let pricing_rule = self.find_pricing_rule(&plan, &rate_dimensions, query.occurred_at)?;
+        // A plan configured `fail_closed` must not silently price a request the
+        // operator never wrote a rule for. The flag existed in the schema and
+        // was carried into the resolution but never read, so every unmatched
+        // resource quietly billed at the official reference and the strict mode
+        // an operator selected had no effect.
+        //
+        // Strict mode is only authoritative for a PERSISTED plan: an ephemeral
+        // plan (`id == 0`, constructed in memory or by a test catalog) carries
+        // the constructor default, not an operator decision, and reinterpreting
+        // that default as a refusal would turn every synthetic catalog into a
+        // pricing outage.
+        if pricing_rule.is_none() && plan.fail_closed && plan.id > 0 {
+            return Err(DomainError::new(format!(
+                "pricing plan `{}` is fail-closed and has no rule for model {} meter {} region {}",
+                plan.plan_code,
+                model.model,
+                query.billing_meter.code(),
+                region_code
+            )));
+        }
+        let mut customer_price_layer = match explicit_customer.as_ref() {
+            Some(_) => CustomerPriceLayer::PlanReference,
+            None => CustomerPriceLayer::PlanReference,
+        };
         if let Some(rule) = pricing_rule.as_ref() {
             if rule.formula_mode == "unit_price_override" {
                 if let Some(unit_price) = rule.unit_price_override.as_ref() {
@@ -324,10 +414,37 @@ impl<'a, C: PricingCatalog> PricingResolver<'a, C> {
                 customer_charge_before_sale_multiplier =
                     add_rule_markup(&multiplied, &rule.markup_amount, &rule.rule_code)?;
             }
+            customer_price_layer = CustomerPriceLayer::PlanRule;
         }
-        require_positive_multiplier("account group sale multiplier", group.sale_multiplier)?;
-        let customer_charge =
-            customer_charge_before_sale_multiplier.checked_multiply(group.sale_multiplier)?;
+        // Layer 3: a per-resource price defined on the account group. It
+        // REPLACES the composed plan result for the tuple it covers and the
+        // group multiplier is not applied on top, so the charged amount stays a
+        // single predictable operation instead of a composition of two factors.
+        let group_resource_price = self.find_group_resource_price(
+            &group,
+            tenant_id,
+            organization_id,
+            &model,
+            official_operation_code(official.rate_metadata.as_ref()),
+            &query,
+            &region_code,
+        )?;
+        let customer_charge = match group_resource_price.as_ref() {
+            Some(price) => {
+                customer_price_layer = CustomerPriceLayer::GroupResource;
+                price.apply(&customer_charge_before_sale_multiplier)?
+            }
+            None => {
+                require_positive_multiplier(
+                    "account group sale multiplier",
+                    group.sale_multiplier,
+                )?;
+                if group.sale_multiplier != DecimalValue::ONE {
+                    customer_price_layer = CustomerPriceLayer::GroupMultiplier;
+                }
+                customer_charge_before_sale_multiplier.checked_multiply(group.sale_multiplier)?
+            }
+        };
         // Gross margin is a reporting-only figure. A price book that configures
         // the upstream cost in a different currency than the official
         // reference must not fail billing because the two cannot be subtracted;
@@ -412,7 +529,70 @@ impl<'a, C: PricingCatalog> PricingResolver<'a, C> {
             customer_charge,
             gross_margin_per_unit,
             source,
+            customer_price_layer,
+            group_resource_price,
         })
+    }
+
+    /// Resolves the account-group per-resource price that covers this request.
+    ///
+    /// Selection mirrors the rate selector: only effective rows are eligible,
+    /// a provider-scoped row outranks the provider wildcard, and two rows that
+    /// are equally specific for the same tuple are ambiguous and fail closed
+    /// instead of silently picking one.
+    fn find_group_resource_price(
+        &self,
+        group: &crate::domain::UpstreamAccountGroup,
+        tenant_id: i64,
+        organization_id: i64,
+        model: &crate::domain::AiModel,
+        official_operation_code: &str,
+        query: &ResolveModelPriceQuery,
+        region_code: &str,
+    ) -> DomainResult<Option<crate::domain::GroupResourcePrice>> {
+        if group.id <= 0 {
+            return Ok(None);
+        }
+        let provider_code = query.supplier_code.as_deref().unwrap_or_default();
+        let mut candidates = self
+            .catalog
+            .list_group_resource_prices(tenant_id, organization_id, group.id)
+            .into_iter()
+            .filter(|price| price.is_effective_at(query.occurred_at))
+            .filter(|price| {
+                price.covers(
+                    &model.catalog_key,
+                    official_operation_code,
+                    query.billing_meter.code(),
+                    region_code,
+                    provider_code,
+                )
+            })
+            .collect::<Vec<_>>();
+        if candidates.is_empty() {
+            return Ok(None);
+        }
+        candidates.sort_by(|left, right| {
+            right
+                .provider_code
+                .trim()
+                .len()
+                .cmp(&left.provider_code.trim().len())
+                .then_with(|| left.effective_from.cmp(&right.effective_from))
+        });
+        if candidates.get(1).is_some_and(|next| {
+            next.provider_code.trim().len() == candidates[0].provider_code.trim().len()
+                && next.effective_from == candidates[0].effective_from
+        }) {
+            return Err(DomainError::new(format!(
+                "group resource price ambiguous for account group {} resource {} meter {} at {}",
+                group.id,
+                model.catalog_key,
+                query.billing_meter.code(),
+                query.occurred_at.to_rfc3339()
+            )));
+        }
+        Ok(candidates.into_iter().next())
     }
 
     fn find_api_key(&self, api_key_id: i64) -> DomainResult<crate::domain::GatewayApiKey> {
@@ -634,9 +814,7 @@ impl<'a, C: PricingCatalog> PricingResolver<'a, C> {
                 &plan.plan_code,
             )
             .into_iter()
-            .filter(|rule| {
-                rule.pricing_plan_id == plan.id && rule.plan_code == plan.plan_code
-            })
+            .filter(|rule| rule.pricing_plan_id == plan.id && rule.plan_code == plan.plan_code)
             .collect::<Vec<_>>();
         select_pricing_rule_for_dimensions(rules, dimensions, occurred_at, &plan.plan_code)
     }
@@ -833,9 +1011,7 @@ pub fn select_pricing_rule_for_dimensions(
 ) -> DomainResult<Option<crate::domain::PricingRule>> {
     let mut rules = rules
         .into_iter()
-        .filter(|rule| {
-            rule.scope_matches(dimensions) && rule.matches_at(dimensions, occurred_at)
-        })
+        .filter(|rule| rule.scope_matches(dimensions) && rule.matches_at(dimensions, occurred_at))
         .collect::<Vec<_>>();
     rules.sort_by(|left, right| {
         right
@@ -943,6 +1119,19 @@ fn rate_hash(price: &ModelPrice) -> &str {
         .rate_metadata
         .as_ref()
         .map(|metadata| metadata.rate_hash.as_str())
+        .unwrap_or("")
+}
+
+/// Canonical operation code of the selected official rate.
+///
+/// Group resource prices are authored against the operation the official
+/// catalog publishes, so the same value must be used when matching them. A
+/// rate without metadata (a synthetic catalog in tests) yields an empty code,
+/// which only matches a group price authored with an empty operation — an
+/// unroutable configuration the database constraint already rejects.
+fn official_operation_code(metadata: Option<&PricingRateMetadata>) -> &str {
+    metadata
+        .map(|metadata| metadata.operation_code.as_str())
         .unwrap_or("")
 }
 

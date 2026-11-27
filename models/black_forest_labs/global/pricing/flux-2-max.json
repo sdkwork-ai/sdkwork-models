@@ -7,73 +7,48 @@
       "billability": "chargeable",
       "calculationMode": "per_unit",
       "chargeTiming": "successful_result",
-      "conditions": [
-        {
-          "dimensionCode": "tier_code",
-          "operator": "eq",
-          "value": "first_megapixel"
-        }
-      ],
+      "conditions": [],
       "currency": "USD",
       "effectiveFrom": "2026-10-26T00:00:00Z",
       "meterCode": "image_megapixel",
       "minimumQuantity": "0",
-      "notes": "FLUX.2 [max] first megapixel — official offer feed.",
+      "notes": "Graduated per output megapixel: the first megapixel is billed at the first-megapixel rate and every further megapixel at the additional-megapixel rate (official offer feed).",
       "operationCode": "image.generate",
       "priceBookCode": "models.black_forest_labs.global.official",
-      "priceId": "bfl-flux-2-max-mp-first_megapixel",
+      "priceId": "bfl-flux-2-max-mp-first_megapixel-megapixel-graduated",
       "priceSide": "official",
       "pricingScope": "model",
       "priority": 100,
       "productCode": "models.black_forest_labs.image",
       "quantityAggregation": "sum",
       "quantityStep": "1",
-      "rateHash": "feb321085ba1c516691b00cfad9ac95845f6c6f2e5e0e3b7ff669215f3c2ea4a",
+      "rateHash": "189d9482dee01452e68818b9b11b38df5f9a448d91a11a7575f8868e9f610238",
       "rateVariant": "standard",
       "schedule": null,
       "source": {
         "observedAt": "2026-11-26T00:00:00Z",
         "sourceUrl": "https://bfl.ai/pricing"
       },
-      "tierCode": "first_megapixel",
       "unitPrice": "0.070000",
-      "unitSize": "1"
-    },
-    {
-      "billability": "chargeable",
-      "calculationMode": "per_unit",
-      "chargeTiming": "successful_result",
-      "conditions": [
+      "unitSize": "1",
+      "tiers": [
         {
-          "dimensionCode": "tier_code",
-          "operator": "eq",
-          "value": "additional_megapixel"
+          "tierCode": "first_megapixel",
+          "lowerBound": "0",
+          "upperBound": "1",
+          "unitSize": "1",
+          "unitPrice": "0.070000",
+          "flatAmount": "0"
+        },
+        {
+          "tierCode": "additional_megapixel",
+          "lowerBound": "1",
+          "upperBound": null,
+          "unitSize": "1",
+          "unitPrice": "0.030000",
+          "flatAmount": "0"
         }
-      ],
-      "currency": "USD",
-      "effectiveFrom": "2026-10-26T00:00:00Z",
-      "meterCode": "image_megapixel",
-      "minimumQuantity": "0",
-      "notes": "FLUX.2 [max] additional megapixels — official offer feed.",
-      "operationCode": "image.generate",
-      "priceBookCode": "models.black_forest_labs.global.official",
-      "priceId": "bfl-flux-2-max-mp-additional_megapixel",
-      "priceSide": "official",
-      "pricingScope": "model",
-      "priority": 100,
-      "productCode": "models.black_forest_labs.image",
-      "quantityAggregation": "sum",
-      "quantityStep": "1",
-      "rateHash": "181a0d7df5a32ac507c7d2d8bbb300ba2ffaacaebb2c75a000774d55ccf29659",
-      "rateVariant": "standard",
-      "schedule": null,
-      "source": {
-        "observedAt": "2026-11-26T00:00:00Z",
-        "sourceUrl": "https://bfl.ai/pricing"
-      },
-      "tierCode": "additional_megapixel",
-      "unitPrice": "0.030000",
-      "unitSize": "1"
+      ]
     }
   ],
   "regionCode": "global",

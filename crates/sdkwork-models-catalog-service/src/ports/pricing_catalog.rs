@@ -70,6 +70,22 @@ pub trait PricingCatalog {
         Vec::new()
     }
 
+    /// Returns every per-resource price an account group defines.
+    ///
+    /// Group prices are a distinct pricing layer that sits between the plan
+    /// rules and the group-wide `sale_multiplier`. The default is empty so a
+    /// catalog implementation that does not carry the layer keeps pricing
+    /// exactly as before; an implementation that does carry it overrides this
+    /// method and the resolver starts applying the layer.
+    fn list_group_resource_prices(
+        &self,
+        _tenant_id: i64,
+        _organization_id: i64,
+        _account_group_id: i64,
+    ) -> Vec<crate::domain::GroupResourcePrice> {
+        Vec::new()
+    }
+
     fn list_pricing_rules_for_plan(
         &self,
         _tenant_id: i64,

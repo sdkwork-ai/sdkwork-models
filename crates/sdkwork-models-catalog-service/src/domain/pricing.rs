@@ -229,6 +229,139 @@ impl AccountRateCard {
     }
 }
 
+/// A price defined on one account group for one resource/meter tuple.
+///
+/// The four modes are closed and mutually exclusive, mirroring the database
+/// `ck_cloudrouter_group_resource_price_payload` constraint: a row can never
+/// mix a multiplier with an override, so applying a group price is always a
+/// single deterministic operation.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct GroupResourcePrice {
+    /// Owning account group.
+    pub account_group_id: i64,
+    /// Closed set: `model` | `image` | `video` | `api` | `audio` | `other`.
+    pub resource_type: String,
+    pub catalog_key: String,
+    pub operation_code: String,
+    pub meter_code: String,
+    pub region_code: String,
+    /// Blank when the price covers every provider of the resource.
+    pub provider_code: String,
+    pub price_mode: GroupPriceMode,
+    /// `multiplier` rows carry the factor; the other modes keep it at one.
+    pub multiplier: DecimalValue,
+    /// `markup` rows carry the addend; the other modes keep it at zero.
+    pub markup_amount: Money,
+    /// `unit_price` rows carry the override; `free` rows carry zero.
+    pub unit_price_override: Option<Money>,
+    pub effective_from: DateTime<Utc>,
+    pub effective_to: Option<DateTime<Utc>>,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum GroupPriceMode {
+    Multiplier,
+    Markup,
+    UnitPrice,
+    Free,
+}
+
+impl GroupPriceMode {
+    pub fn code(self) -> &'static str {
+        match self {
+            Self::Multiplier => "multiplier",
+            Self::Markup => "markup",
+            Self::UnitPrice => "unit_price",
+            Self::Free => "free",
+        }
+    }
+
+    pub fn from_code(value: &str) -> Option<Self> {
+        match value.trim() {
+            "multiplier" => Some(Self::Multiplier),
+            "markup" => Some(Self::Markup),
+            "unit_price" => Some(Self::UnitPrice),
+            "free" => Some(Self::Free),
+            _ => None,
+        }
+    }
+}
+
+impl GroupResourcePrice {
+    pub fn is_effective_at(&self, occurred_at: DateTime<Utc>) -> bool {
+        self.effective_from <= occurred_at
+            && self
+                .effective_to
+                .is_none_or(|effective_to| occurred_at < effective_to)
+    }
+
+    /// Whether this row covers the queried tuple.
+    ///
+    /// A blank `provider_code` is the wildcard used when an operator prices a
+    /// resource without caring which upstream account serves it.
+    pub fn covers(
+        &self,
+        catalog_key: &str,
+        operation_code: &str,
+        meter_code: &str,
+        region_code: &str,
+        provider_code: &str,
+    ) -> bool {
+        self.catalog_key.trim() == catalog_key.trim()
+            && self.operation_code.trim() == operation_code.trim()
+            && self.meter_code.trim() == meter_code.trim()
+            && self.region_code.trim() == region_code.trim()
+            && (self.provider_code.trim().is_empty()
+                || self.provider_code.trim() == provider_code.trim())
+    }
+
+    /// Applies this price to a rate, returning the priced rate.
+    ///
+    /// The group price REPLACES the composed plan result instead of stacking
+    /// on top of it. Stacking would let one charged amount carry both a plan
+    /// multiplier and a group multiplier, so an operator reading the admin
+    /// table could not predict the price without composing two factors.
+    pub fn apply(&self, base: &Money) -> crate::domain::DomainResult<Money> {
+        match self.price_mode {
+            GroupPriceMode::Multiplier => {
+                if self.multiplier <= DecimalValue::ZERO {
+                    return Err(crate::domain::DomainError::new(
+                        "group resource price multiplier must be positive",
+                    ));
+                }
+                base.checked_multiply(self.multiplier)
+            }
+            GroupPriceMode::Markup => {
+                if base.currency != self.markup_amount.currency {
+                    return Err(crate::domain::DomainError::new(format!(
+                        "group resource price markup currency {} does not match the priced currency {}",
+                        self.markup_amount.currency, base.currency
+                    )));
+                }
+                base.add(&self.markup_amount)
+            }
+            GroupPriceMode::UnitPrice => {
+                let override_price = self.unit_price_override.as_ref().ok_or_else(|| {
+                    crate::domain::DomainError::new(
+                        "group resource price override mode is missing its unit price",
+                    )
+                })?;
+                if base.currency != override_price.currency {
+                    return Err(crate::domain::DomainError::new(format!(
+                        "group resource price override currency {} does not match the priced currency {}",
+                        override_price.currency, base.currency
+                    )));
+                }
+                Ok(override_price.clone())
+            }
+            GroupPriceMode::Free => Ok(Money {
+                currency: base.currency.clone(),
+                unit_price: DecimalValue::ZERO,
+            }),
+        }
+    }
+}
+
 impl PricingRule {
     /// Returns whether the rule's product scope matches the resolved runtime
     /// dimensions. Scope fields are part of the rule identity and must be
@@ -408,9 +541,7 @@ impl PricingRateMetadata {
         self.is_effective_at(occurred_at)
             && self.matches(dimensions)
             && match self.rate_variant {
-                PricingRateVariant::Standard | PricingRateVariant::Batch => {
-                    self.schedule.is_none()
-                }
+                PricingRateVariant::Standard | PricingRateVariant::Batch => self.schedule.is_none(),
                 PricingRateVariant::TimeWindow => self
                     .schedule
                     .as_ref()

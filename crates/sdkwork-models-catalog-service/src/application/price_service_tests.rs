@@ -2,17 +2,17 @@ use chrono::{NaiveDate, NaiveTime, TimeZone, Utc};
 use serde_json::json;
 
 use super::{
-    BillingStrategyKind, PriceResolutionFailureCode, PriceResolutionStatus, PriceService,
-    PricingResolver, ResolveModelPriceQuery, ResourceBillability,
+    BillingStrategyKind, CustomerPriceLayer, PriceResolutionFailureCode, PriceResolutionStatus,
+    PriceService, PricingResolver, ResolveModelPriceQuery, ResolvedModelPrice, ResourceBillability,
 };
 use crate::domain::{
-    AccountRateCard, AiModel, BillingMeter, DecimalValue, GatewayAccessPolicy, GatewayApiKey,
-    GatewayRiskRule, ModelMappingRule, ModelPrice, ModelUpstreamRoute, ModelVendor,
-    ModelVendorDefinition, Money, PriceSide, PricingDimensionContext, PricingFormula,
-    PricingFormulaTerm, PricingPlan, PricingRateCondition, PricingRateMetadata, PricingRateTier,
-    PricingRateVariant, PricingRule, PricingSchedule, PricingWeeklyWindow, QuotaPolicy,
-    ResolveModelMappingContext, ResourceDefinition, UpstreamAccountGroup,
-    UpstreamAccountGroupMetricSnapshot, UpstreamAccountRoute,
+    AccountRateCard, AiModel, BillingMeter, DecimalValue, DomainResult, GatewayAccessPolicy,
+    GatewayApiKey, GatewayRiskRule, GroupPriceMode, GroupResourcePrice, ModelMappingRule,
+    ModelPrice, ModelUpstreamRoute, ModelVendor, ModelVendorDefinition, Money, PriceSide,
+    PricingDimensionContext, PricingFormula, PricingFormulaTerm, PricingPlan, PricingRateCondition,
+    PricingRateMetadata, PricingRateTier, PricingRateVariant, PricingRule, PricingSchedule,
+    PricingWeeklyWindow, QuotaPolicy, ResolveModelMappingContext, ResourceDefinition,
+    UpstreamAccountGroup, UpstreamAccountGroupMetricSnapshot, UpstreamAccountRoute,
 };
 use crate::ports::PricingCatalog;
 
@@ -33,6 +33,7 @@ struct TestPricingCatalog {
     plans: Vec<PricingPlan>,
     rules: Vec<PricingRule>,
     rate_cards: Vec<AccountRateCard>,
+    group_resource_prices: Vec<crate::domain::GroupResourcePrice>,
     prices: Vec<ModelPrice>,
     account_routes: Vec<UpstreamAccountRoute>,
 }
@@ -64,6 +65,7 @@ impl TestPricingCatalog {
             )],
             rules: Vec::new(),
             rate_cards: Vec::new(),
+            group_resource_prices: Vec::new(),
             prices,
             account_routes: Vec::new(),
         }
@@ -129,6 +131,19 @@ impl PricingCatalog for TestPricingCatalog {
         self.prices
             .iter()
             .filter(|price| price.catalog_key == model && price.price_side == price_side)
+            .cloned()
+            .collect()
+    }
+
+    fn list_group_resource_prices(
+        &self,
+        _tenant_id: i64,
+        _organization_id: i64,
+        account_group_id: i64,
+    ) -> Vec<crate::domain::GroupResourcePrice> {
+        self.group_resource_prices
+            .iter()
+            .filter(|price| price.account_group_id == account_group_id)
             .cloned()
             .collect()
     }
@@ -1968,5 +1983,394 @@ fn expired_rates_are_never_selected() {
         message.contains("price not found")
             || message.contains("official reference price not found"),
         "unexpected error: {message}"
+    );
+}
+
+/// The catalog default plan is in-memory (id 0). A persisted, tenant-scoped
+/// plan is what the resolver treats as authoritative for strict mode, so the
+/// fail-closed tests swap it in rather than mutating the bare default.
+fn scoped_persisted_plan() -> PricingPlan {
+    let mut plan = PricingPlan::new(
+        "standard",
+        PriceSide::OfficialReference,
+        DecimalValue::ONE,
+        Money::usd("0").expect("valid zero price"),
+    );
+    plan.id = 7;
+    plan.tenant_id = 10;
+    plan.organization_id = 20;
+    plan
+}
+
+fn group_price(
+    price_mode: GroupPriceMode,
+    multiplier: &str,
+    markup: &str,
+    override_price: Option<&str>,
+) -> GroupResourcePrice {
+    GroupResourcePrice {
+        account_group_id: GROUP_ID,
+        resource_type: "model".to_owned(),
+        catalog_key: CATALOG_KEY.to_owned(),
+        operation_code: OPERATION_CODE.to_owned(),
+        meter_code: BillingMeter::LlmInputToken.code().to_owned(),
+        region_code: "cn".to_owned(),
+        provider_code: String::new(),
+        price_mode,
+        multiplier: decimal(multiplier),
+        markup_amount: Money::usd(markup).expect("valid markup"),
+        unit_price_override: override_price.map(|value| Money::usd(value).expect("valid override")),
+        effective_from: Utc
+            .with_ymd_and_hms(2026, 1, 1, 0, 0, 0)
+            .single()
+            .expect("valid timestamp"),
+        effective_to: None,
+    }
+}
+
+fn resolve_input_token(catalog: &TestPricingCatalog) -> DomainResult<ResolvedModelPrice> {
+    PricingResolver::new(catalog).resolve(ResolveModelPriceQuery {
+        api_key_id: 0,
+        account_group_id: Some(GROUP_ID),
+        model: CATALOG_KEY.to_owned(),
+        billing_meter: BillingMeter::LlmInputToken,
+        supplier_code: None,
+        account_id: None,
+        region_code: Some("cn".to_owned()),
+        default_region_code: None,
+        occurred_at: Utc
+            .with_ymd_and_hms(2026, 6, 1, 0, 0, 0)
+            .single()
+            .expect("valid timestamp"),
+    })
+}
+
+/// A group-level per-resource price replaces the plan result instead of
+/// stacking on the group multiplier, so the charged amount stays one
+/// predictable operation.
+#[test]
+fn group_resource_multiplier_replaces_the_group_sale_multiplier() {
+    let mut catalog = TestPricingCatalog::with_prices(vec![official_price(
+        BillingMeter::LlmInputToken,
+        "1000000",
+        "2",
+        metadata(
+            "rate-group-multiplier",
+            "chargeable",
+            "per_unit",
+            "0",
+            None,
+            100,
+            Vec::new(),
+        ),
+    )]);
+    catalog.groups[0].sale_multiplier = decimal("3");
+    catalog.group_resource_prices = vec![group_price(GroupPriceMode::Multiplier, "1.5", "0", None)];
+
+    let resolved = resolve_input_token(&catalog).expect("group resource price resolves");
+
+    assert_eq!(
+        "3.00",
+        resolved.customer_charge.unit_price.to_fixed_string(2),
+        "2.00 official * 1.50 group price; the 3.00x group multiplier must not also apply"
+    );
+    assert_eq!(
+        CustomerPriceLayer::GroupResource,
+        resolved.customer_price_layer
+    );
+    assert!(resolved.group_resource_price.is_some());
+}
+
+#[test]
+fn group_resource_unit_price_override_wins_over_the_plan_rule() {
+    let mut catalog = TestPricingCatalog::with_prices(vec![official_price(
+        BillingMeter::LlmInputToken,
+        "1000000",
+        "2",
+        metadata(
+            "rate-group-override",
+            "chargeable",
+            "per_unit",
+            "0",
+            None,
+            100,
+            Vec::new(),
+        ),
+    )]);
+    catalog.group_resource_prices = vec![group_price(
+        GroupPriceMode::UnitPrice,
+        "1",
+        "0",
+        Some("9.5"),
+    )];
+
+    let resolved = resolve_input_token(&catalog).expect("override resolves");
+
+    assert_eq!(
+        "9.50",
+        resolved.customer_charge.unit_price.to_fixed_string(2)
+    );
+    assert_eq!(
+        CustomerPriceLayer::GroupResource,
+        resolved.customer_price_layer
+    );
+}
+
+#[test]
+fn group_resource_markup_adds_to_the_official_price() {
+    let mut catalog = TestPricingCatalog::with_prices(vec![official_price(
+        BillingMeter::LlmInputToken,
+        "1000000",
+        "2",
+        metadata(
+            "rate-group-markup",
+            "chargeable",
+            "per_unit",
+            "0",
+            None,
+            100,
+            Vec::new(),
+        ),
+    )]);
+    catalog.group_resource_prices = vec![group_price(GroupPriceMode::Markup, "1", "0.5", None)];
+
+    let resolved = resolve_input_token(&catalog).expect("markup resolves");
+
+    assert_eq!(
+        "2.50",
+        resolved.customer_charge.unit_price.to_fixed_string(2)
+    );
+    assert_eq!(
+        CustomerPriceLayer::GroupResource,
+        resolved.customer_price_layer
+    );
+}
+
+/// A group can price one resource as free even though the official rate is
+/// chargeable. Previously the group side could only multiply, and a zero
+/// multiplier was rejected outright, so "free for this group" was unexpressible.
+#[test]
+fn group_resource_free_mode_rates_to_zero_without_failing() {
+    let mut catalog = TestPricingCatalog::with_prices(vec![official_price(
+        BillingMeter::LlmInputToken,
+        "1000000",
+        "2",
+        metadata(
+            "rate-group-free",
+            "chargeable",
+            "per_unit",
+            "0",
+            None,
+            100,
+            Vec::new(),
+        ),
+    )]);
+    catalog.group_resource_prices = vec![group_price(GroupPriceMode::Free, "1", "0", Some("0"))];
+
+    let resolved = resolve_input_token(&catalog).expect("free resolves");
+
+    assert_eq!(
+        "0.00",
+        resolved.customer_charge.unit_price.to_fixed_string(2)
+    );
+    assert_eq!(
+        CustomerPriceLayer::GroupResource,
+        resolved.customer_price_layer
+    );
+}
+
+/// The provider wildcard must not shadow a provider-scoped price for the same
+/// resource, and the provider-scoped row must win when both exist.
+#[test]
+fn provider_scoped_group_price_outranks_the_wildcard() {
+    let mut catalog = TestPricingCatalog::with_prices(vec![official_price(
+        BillingMeter::LlmInputToken,
+        "1000000",
+        "2",
+        metadata(
+            "rate-group-provider",
+            "chargeable",
+            "per_unit",
+            "0",
+            None,
+            100,
+            Vec::new(),
+        ),
+    )]);
+    let wildcard = group_price(GroupPriceMode::Multiplier, "2", "0", None);
+    let mut scoped = group_price(GroupPriceMode::Multiplier, "1.25", "0", None);
+    scoped.provider_code = SUPPLIER_CODE.to_owned();
+    catalog.group_resource_prices = vec![wildcard, scoped];
+
+    let resolved = PricingResolver::new(&catalog)
+        .resolve(ResolveModelPriceQuery {
+            api_key_id: 0,
+            account_group_id: Some(GROUP_ID),
+            model: CATALOG_KEY.to_owned(),
+            billing_meter: BillingMeter::LlmInputToken,
+            supplier_code: Some(SUPPLIER_CODE.to_owned()),
+            account_id: Some(ACCOUNT_ID),
+            region_code: Some("cn".to_owned()),
+            default_region_code: None,
+            occurred_at: Utc
+                .with_ymd_and_hms(2026, 6, 1, 0, 0, 0)
+                .single()
+                .expect("valid timestamp"),
+        })
+        .expect("provider-scoped group price resolves");
+
+    assert_eq!(
+        "2.50",
+        resolved.customer_charge.unit_price.to_fixed_string(2),
+        "2.00 official * 1.25 provider-scoped price, not the 2.00x wildcard"
+    );
+}
+
+/// Without a group resource price, the group multiplier keeps its historical
+/// behaviour and the recorded layer says so.
+#[test]
+fn group_multiplier_still_applies_and_is_recorded_as_its_own_layer() {
+    let mut catalog = TestPricingCatalog::with_prices(vec![official_price(
+        BillingMeter::LlmInputToken,
+        "1000000",
+        "2",
+        metadata(
+            "rate-group-multiplier-layer",
+            "chargeable",
+            "per_unit",
+            "0",
+            None,
+            100,
+            Vec::new(),
+        ),
+    )]);
+    catalog.groups[0].sale_multiplier = decimal("1.8");
+
+    let resolved = resolve_input_token(&catalog).expect("group multiplier resolves");
+
+    assert_eq!(
+        "3.60",
+        resolved.customer_charge.unit_price.to_fixed_string(2)
+    );
+    assert_eq!(
+        CustomerPriceLayer::GroupMultiplier,
+        resolved.customer_price_layer
+    );
+    assert!(resolved.group_resource_price.is_none());
+}
+
+/// A persisted fail-closed plan refuses to price a resource it has no rule for
+/// instead of silently billing the official reference.
+#[test]
+fn persisted_fail_closed_plan_refuses_an_unmatched_rule() {
+    let mut catalog = TestPricingCatalog::with_prices(vec![official_price(
+        BillingMeter::LlmInputToken,
+        "1000000",
+        "2",
+        metadata(
+            "rate-fail-closed",
+            "chargeable",
+            "per_unit",
+            "0",
+            None,
+            100,
+            Vec::new(),
+        ),
+    )]);
+    catalog.plans[0] = scoped_persisted_plan();
+    catalog.plans[0].fail_closed = true;
+    catalog.rules.clear();
+
+    let error = resolve_input_token(&catalog).expect_err("fail-closed plan must refuse");
+
+    assert!(
+        error.to_string().contains("fail-closed"),
+        "unexpected error: {error}"
+    );
+}
+
+/// The same plan with a matching rule prices normally.
+#[test]
+fn persisted_fail_closed_plan_prices_when_a_rule_matches() {
+    let mut catalog = TestPricingCatalog::with_prices(vec![official_price(
+        BillingMeter::LlmInputToken,
+        "1000000",
+        "2",
+        metadata(
+            "rate-fail-closed-matched",
+            "chargeable",
+            "per_unit",
+            "0",
+            None,
+            100,
+            Vec::new(),
+        ),
+    )]);
+    catalog.plans[0] = scoped_persisted_plan();
+    catalog.plans[0].fail_closed = true;
+    catalog.rules = vec![PricingRule {
+        id: 1,
+        pricing_plan_id: 7,
+        tenant_id: 10,
+        organization_id: 20,
+        rule_code: "matched-rule".to_owned(),
+        plan_code: "standard".to_owned(),
+        product_code: None,
+        operation_code: None,
+        meter_code: None,
+        provider_code: None,
+        region_code: None,
+        catalog_key: None,
+        formula_mode: "multiplier_markup".to_owned(),
+        multiplier: decimal("2"),
+        markup_amount: Money::usd("0").expect("valid zero"),
+        unit_price_override: None,
+        priority: 100,
+        effective_from: Utc
+            .with_ymd_and_hms(2026, 1, 1, 0, 0, 0)
+            .single()
+            .expect("valid timestamp"),
+        effective_to: None,
+        conditions: Vec::new(),
+        schedule: None,
+    }];
+
+    let resolved = resolve_input_token(&catalog).expect("matched rule resolves");
+
+    assert_eq!(
+        "4.00",
+        resolved.customer_charge.unit_price.to_fixed_string(2)
+    );
+    assert_eq!(CustomerPriceLayer::PlanRule, resolved.customer_price_layer);
+}
+
+/// An ephemeral plan (no persisted identity) keeps its lenient default: the
+/// constructor's strict flag is not an operator decision.
+#[test]
+fn ephemeral_plan_without_identity_is_not_treated_as_fail_closed() {
+    let catalog = TestPricingCatalog::with_prices(vec![official_price(
+        BillingMeter::LlmInputToken,
+        "1000000",
+        "2",
+        metadata(
+            "rate-ephemeral-plan",
+            "chargeable",
+            "per_unit",
+            "0",
+            None,
+            100,
+            Vec::new(),
+        ),
+    )]);
+
+    let resolved = resolve_input_token(&catalog).expect("ephemeral plan resolves");
+
+    assert_eq!(
+        "2.00",
+        resolved.customer_charge.unit_price.to_fixed_string(2)
+    );
+    assert_eq!(
+        CustomerPriceLayer::PlanReference,
+        resolved.customer_price_layer
     );
 }

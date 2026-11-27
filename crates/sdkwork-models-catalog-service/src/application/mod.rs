@@ -38,6 +38,8 @@ pub use price_service::{
     PriceService, PricingAuditSnapshot, ResolvedRateIdentity, ResourceBillability,
 };
 pub use pricing_resolver::{
-    PricingResolver, ResolveModelPriceQuery, ResolvedModelPrice, ResolvedPriceSource,
+    CustomerPriceLayer, PricingResolver, ResolveModelPriceQuery, ResolvedModelPrice,
+    ResolvedPriceSource,
     select_pricing_rule_for_dimensions,
 };
+

@@ -27,7 +27,8 @@ pub use catalog_enums::{BillingMeter, IntegrationProviderType, ModelVendor};
 pub use error::{DomainError, DomainResult};
 pub use money::{DecimalValue, Money};
 pub use pricing::{
-    AccountRateCard, ModelPrice, PriceSide, PricingDimensionContext, PricingFormula,
+    AccountRateCard, GroupPriceMode, GroupResourcePrice, ModelPrice, PriceSide,
+    PricingDimensionContext, PricingFormula,
     PricingFormulaTerm, PricingPlan, PricingPolicyRecordIdentity, PricingRateCondition,
     PricingRateMetadata, PricingRateRecordIdentity, PricingRateTier, PricingRateVariant,
     PricingRule, PricingSchedule, PricingWeeklyWindow, ScopedPricingRecordIdentity,
