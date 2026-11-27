@@ -146,6 +146,11 @@ struct SelectedItem {
 }
 
 /// HTTP client for the agents app-api Config SPI surface.
+///
+/// identity:service background-engine-config — this bridge runs in the models
+/// engine bootstrap and pushes configuration, not an end-user request; the token
+/// is supplied explicitly by the composition root via `with_auth_token` and is
+/// never read from a process `*_ACCESS_TOKEN` / `*_AUTH_TOKEN` value here.
 #[derive(Debug, Clone)]
 pub struct ModelConfigBridgeClient {
     http: reqwest::Client,
@@ -174,6 +179,15 @@ impl ModelConfigBridgeClient {
         &self.base_url
     }
 
+    /// The agents app-api origin to dial for one request.
+    ///
+    /// `APP_SDK_INTEGRATION_SPEC.md` §5.2.2: a backend calling another SDKWork
+    /// surface resolves through the shared registry component, so a healthy
+    /// registry instance wins and the configured origin is the degradation tier.
+    fn resolved_base_url(&self) -> String {
+        sdkwork_utils_rust::service_base_url::registry_base_url_or("sdkwork-agents", &self.base_url)
+    }
+
     /// Pushes an engine model configuration (materializes the provider CLI
     /// config on the agents side).
     pub async fn apply_configuration(
@@ -182,7 +196,10 @@ impl ModelConfigBridgeClient {
     ) -> Result<AppliedModelConfiguration, ApplyModelConfigurationError> {
         let mut builder = self
             .http
-            .post(format!("{}/app/v3/api/ai/model_configurations/apply", self.base_url))
+            .post(format!(
+                "{}/app/v3/api/ai/model_configurations/apply",
+                self.resolved_base_url()
+            ))
             .json(request);
         if let Some(token) = &self.auth_token {
             builder = builder.bearer_auth(token);
@@ -216,7 +233,10 @@ impl ModelConfigBridgeClient {
     ) -> Result<ModelSelectionApplyResponse, ApplyModelConfigurationError> {
         let mut builder = self
             .http
-            .post(format!("{}/app/v3/api/ai/model_selections/apply", self.base_url))
+            .post(format!(
+                "{}/app/v3/api/ai/model_selections/apply",
+                self.resolved_base_url()
+            ))
             .json(request);
         if let Some(token) = &self.auth_token {
             builder = builder.bearer_auth(token);
